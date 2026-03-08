@@ -1,0 +1,14 @@
+node_modules/
+dist/
+coverage/
+.vite/
+.idea/
+.vscode/
+.DS_Store
+.env
+target/
+backend/.m2/
+.mysql/
+frontend/test-results/
+frontend/playwright-report/
+*.tsbuildinfo

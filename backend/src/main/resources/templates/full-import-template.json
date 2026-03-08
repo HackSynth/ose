@@ -1,0 +1,88 @@
+{
+  "settings": {
+    "examDate": "2026-06-30",
+    "passingScore": 45,
+    "weeklyStudyHours": 12,
+    "learningPreference": "工作日专题学习，周末整卷模拟",
+    "reviewIntervals": [1, 3, 7, 14],
+    "dailySessionMinutes": 90
+  },
+  "knowledgeTree": [
+    {
+      "code": "SAMPLE.ARCH",
+      "name": "样例架构主题",
+      "level": 1,
+      "masteryLevel": 40,
+      "weight": 8,
+      "note": "用于整包导入模板演示",
+      "children": [
+        {
+          "code": "SAMPLE.ARCH.LAYER",
+          "name": "样例分层架构",
+          "level": 2,
+          "masteryLevel": 45,
+          "weight": 7,
+          "note": "关注职责边界",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "type": "MORNING_SINGLE",
+      "title": "样例上午题：封装",
+      "content": "以下哪项最能体现封装思想？",
+      "options": [
+        { "key": "A", "content": "隐藏实现细节，仅暴露接口" },
+        { "key": "B", "content": "全部字段 public" },
+        { "key": "C", "content": "复制相同逻辑" },
+        { "key": "D", "content": "只使用继承" }
+      ],
+      "correctAnswer": "A",
+      "explanation": "封装强调隐藏内部实现与控制访问边界。",
+      "referenceAnswer": null,
+      "year": 2026,
+      "difficulty": 2,
+      "source": "OSE 导入模板",
+      "tags": ["样例", "封装"],
+      "knowledgePoints": [
+        { "code": "SAMPLE.ARCH.LAYER", "name": "样例分层架构" }
+      ],
+      "score": 1,
+      "active": true
+    }
+  ],
+  "plan": {
+    "name": "样例导入计划",
+    "examDate": "2026-06-30",
+    "startDate": "2026-03-08",
+    "endDate": "2026-06-30",
+    "totalHours": 120,
+    "status": "ACTIVE",
+    "settingSnapshot": "模板导入计划",
+    "tasks": [
+      {
+        "phase": "FOUNDATION",
+        "taskType": "KNOWLEDGE",
+        "status": "TODO",
+        "title": "样例知识学习",
+        "description": "阅读架构知识点并整理摘要",
+        "knowledgePointName": "样例分层架构",
+        "scheduledDate": "2026-03-10",
+        "estimatedMinutes": 90,
+        "priority": 3,
+        "progress": 0
+      }
+    ]
+  },
+  "notes": [
+    {
+      "title": "样例导入笔记",
+      "content": "# 样例笔记\n\n- 关注知识点边界\n- 复盘题目要点",
+      "summary": "样例导入笔记摘要",
+      "favorite": false,
+      "links": []
+    }
+  ]
+}

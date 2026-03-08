@@ -1,0 +1,32 @@
+[
+  {
+    "type": "MORNING_SINGLE",
+    "title": "示例上午题：数据库事务",
+    "content": "在 ACID 特性中，用于保证事务执行前后数据约束一致性的是哪一项？",
+    "options": [
+      {"key": "A", "content": "原子性"},
+      {"key": "B", "content": "一致性"},
+      {"key": "C", "content": "隔离性"},
+      {"key": "D", "content": "持久性"}
+    ],
+    "correctAnswer": "B",
+    "year": 2026,
+    "difficulty": 2,
+    "source": "OSE 示例题",
+    "tags": ["数据库", "事务"],
+    "knowledgeCodes": ["DB.TXN"],
+    "score": 1
+  },
+  {
+    "type": "AFTERNOON_CASE",
+    "title": "示例下午题：需求分析",
+    "content": "围绕在线考试系统，说明如何进行用例建模与非功能需求识别。",
+    "referenceAnswer": "要点：识别参与者、主成功场景、异常流程、性能与安全约束。",
+    "year": 2026,
+    "difficulty": 2,
+    "source": "OSE 示例题",
+    "tags": ["需求分析", "案例"],
+    "knowledgeCodes": ["REQ.USECASE"],
+    "score": 15
+  }
+]

@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: ose-backend
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/ose?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai}
+    username: ${SPRING_DATASOURCE_USERNAME:ose}
+    password: ${SPRING_DATASOURCE_PASSWORD:ose123456}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+  flyway:
+    enabled: true
+  jackson:
+    time-zone: Asia/Shanghai
+    default-property-inclusion: non_null
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+app:
+  jwt:
+    secret: ${APP_JWT_SECRET:ose-super-secret-key-change-me-2026}
+    expire-minutes: ${APP_JWT_EXPIRE_MINUTES:720}
+  default-admin:
+    username: ${APP_DEFAULT_ADMIN_USERNAME:admin}
+    password: ${APP_DEFAULT_ADMIN_PASSWORD:OseAdmin@2026}
+    display-name: ${APP_DEFAULT_ADMIN_DISPLAY_NAME:备考管理员}

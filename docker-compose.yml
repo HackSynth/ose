@@ -1,0 +1,93 @@
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: ose-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-ose}
+      MYSQL_USER: ${MYSQL_USER:-ose}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-ose123456}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-root123456}
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    ports:
+      - "${MYSQL_PORT:-3306}:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -uroot -p$$MYSQL_ROOT_PASSWORD --silent"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+  backend:
+    build:
+      context: ./backend
+    container_name: ose-backend
+    restart: unless-stopped
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/${MYSQL_DATABASE:-ose}?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+      SPRING_DATASOURCE_USERNAME: ${MYSQL_USER:-ose}
+      SPRING_DATASOURCE_PASSWORD: ${MYSQL_PASSWORD:-ose123456}
+      SPRING_PROFILES_ACTIVE: docker
+      APP_JWT_SECRET: ${JWT_SECRET:-ose-super-secret-key-change-me-2026}
+      APP_JWT_EXPIRE_MINUTES: ${JWT_EXPIRE_MINUTES:-720}
+      APP_DEFAULT_ADMIN_USERNAME: ${DEFAULT_ADMIN_USERNAME:-admin}
+      APP_DEFAULT_ADMIN_PASSWORD: ${DEFAULT_ADMIN_PASSWORD:-OseAdmin@2026}
+      APP_DEFAULT_ADMIN_DISPLAY_NAME: ${DEFAULT_ADMIN_DISPLAY_NAME:-备考管理员}
+    depends_on:
+      mysql:
+        condition: service_healthy
+    ports:
+      - "${BACKEND_PORT:-8080}:8080"
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_BASE: /api
+    container_name: ose-frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "${FRONTEND_PORT:-80}:80"
+
+  backend-test:
+    image: maven:3.9.9-eclipse-temurin-17
+    working_dir: /workspace/backend
+    environment:
+      SPRING_PROFILES_ACTIVE: test
+    volumes:
+      - .:/workspace
+      - maven_cache:/root/.m2
+    command: mvn test
+    profiles: ["tools"]
+
+  frontend-test:
+    image: node:24-alpine
+    working_dir: /workspace/frontend
+    volumes:
+      - .:/workspace
+      - frontend_node_modules:/workspace/frontend/node_modules
+    command: sh -c "npm install && npm run test -- --run"
+    profiles: ["tools"]
+
+  e2e-test:
+    image: mcr.microsoft.com/playwright:v1.58.2-jammy
+    working_dir: /workspace/frontend
+    environment:
+      PLAYWRIGHT_BASE_URL: http://frontend
+      CI: "true"
+    depends_on:
+      - frontend
+    volumes:
+      - .:/workspace
+      - frontend_node_modules:/workspace/frontend/node_modules
+    command: sh -c "npm ci && npx playwright test"
+    profiles: ["tools"]
+
+volumes:
+  mysql_data:
+  maven_cache:
+  frontend_node_modules:
