@@ -1,5 +1,14 @@
 # OSE（Open Software Exam）
 
+[![CI](https://github.com/HackSynth/ose/actions/workflows/ci.yml/badge.svg)](https://github.com/HackSynth/ose/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/HackSynth/ose?display_name=tag)](https://github.com/HackSynth/ose/releases)
+[![License](https://img.shields.io/github/license/HackSynth/ose)](LICENSE)
+[![Docker Compose](https://img.shields.io/badge/Docker%20Compose-2496ED?logo=docker&logoColor=white)](docker-compose.yml)
+[![Vue 3](https://img.shields.io/badge/Vue%203-35495E?logo=vue.js&logoColor=4FC08D)](frontend/package.json)
+[![Spring Boot 3](https://img.shields.io/badge/Spring%20Boot-3.3-6DB33F?logo=springboot&logoColor=white)](backend/pom.xml)
+[![MySQL 8](https://img.shields.io/badge/MySQL-8-4479A1?logo=mysql&logoColor=white)](docker-compose.yml)
+[![Playwright](https://img.shields.io/badge/Playwright-E2E-2EAD33?logo=playwright&logoColor=white)](frontend/tests/e2e)
+
 单用户、中文优先、PC 优先的软考（软件设计师）个人备考系统。项目覆盖从目标配置、学习计划、知识树、题库、练习、错题、模拟考试、笔记到统计分析的完整闭环，并补齐了 Playwright 端到端测试、整包导入能力与备考体验增强。
 
 ## 1. 功能概览
