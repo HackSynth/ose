@@ -41,6 +41,9 @@ public class AiGenerationService {
     private static final String DISCLAIMER = "AI 生成题目仅供辅助学习，内容需人工确认后使用。";
 
     private final List<AiProviderClient> providerClients;
+    private final AiProviderService providerService;
+    private final AiProviderConfigurationResolver resolver;
+    private final AiApiKeyRotationService keyRotationService;
     private final KnowledgePointRepository knowledgePointRepository;
     private final MistakeRecordRepository mistakeRecordRepository;
     private final QuestionRepository questionRepository;
@@ -51,21 +54,32 @@ public class AiGenerationService {
     private final AppProperties appProperties;
 
     public List<AiQuestionDtos.AiProviderStatus> providers() {
-        return providerClients.stream()
-                .sorted(Comparator.comparing(item -> item.provider().name()))
-                .map(client -> new AiQuestionDtos.AiProviderStatus(
-                        client.provider(),
-                        client.isConfigured(),
-                        client.isConfigured() ? "可用" : "未配置 API Key",
-                        client.models()))
+        return providerService.listProviders().stream()
+                .map(provider -> {
+                    ResolvedAiProviderConfig config = safeResolve(provider.id());
+                    return new AiQuestionDtos.AiProviderStatus(
+                            provider.id(),
+                            provider.providerType(),
+                            provider.displayName(),
+                            config != null && config.isAvailable(),
+                            config == null ? "未配置" : config.message(),
+                            resolver.availableModels(provider.id())
+                    );
+                })
                 .toList();
     }
 
-    public List<AiQuestionDtos.AiModelConfig> models(AiProviderType provider) {
-        if (provider == null) {
-            return providerClients.stream().flatMap(item -> item.models().stream()).toList();
+    public List<AiQuestionDtos.AiModelConfig> models(AiProviderType providerType) {
+        if (providerType == null) {
+            return providerService.listProviders().stream()
+                    .flatMap(provider -> resolver.availableModels(provider.id()).stream())
+                    .toList();
         }
-        return findProvider(provider).models();
+        return providerService.listProviders().stream()
+                .filter(provider -> provider.providerType() == providerType)
+                .findFirst()
+                .map(provider -> resolver.availableModels(provider.id()))
+                .orElse(List.of());
     }
 
     public AiQuestionDtos.AiHealthResponse health() {
@@ -76,11 +90,17 @@ public class AiGenerationService {
 
     @Transactional
     public AiQuestionDtos.AiQuestionGenerationResult generate(AiQuestionDtos.AiQuestionGenerationRequest request) {
-        AiProviderClient providerClient = findProvider(request.provider());
-        if (!providerClient.isConfigured()) {
-            throw new BusinessException(providerClient.provider().name() + " 未配置 API Key，当前为优雅降级模式");
+        ResolvedAiModelSelection selection = resolveRequestedSelection(request);
+        if (selection == null) {
+            throw new BusinessException("当前没有可用的 AI Provider 或模型，请先在模型服务页完成配置");
         }
 
+        ResolvedAiProviderConfig config = resolver.resolve(selection.providerId());
+        if (!config.isAvailable()) {
+            throw new BusinessException(config.providerDisplayName() + " 不可用: " + config.message());
+        }
+
+        AiProviderClient providerClient = findProviderClient(config.providerType());
         List<KnowledgePoint> knowledgePoints = resolveKnowledgePoints(request);
         List<String> knowledgeNames = knowledgePoints.stream().map(KnowledgePoint::getName).toList();
         String systemPrompt = promptBuilder.buildSystemPrompt(request);
@@ -88,8 +108,10 @@ public class AiGenerationService {
         String jsonSchema = promptBuilder.batchSchema(request.questionType());
 
         AiGenerationRecord record = AiGenerationRecord.builder()
-                .provider(request.provider())
-                .model(resolveModel(request))
+                .providerId(selection.providerId())
+                .provider(selection.providerType())
+                .providerDisplayName(selection.providerDisplayName())
+                .model(selection.modelId())
                 .questionType(request.questionType())
                 .topicType(request.topicType().name())
                 .difficulty(request.difficulty().name())
@@ -103,14 +125,21 @@ public class AiGenerationService {
         aiGenerationRecordRepository.save(record);
 
         try {
-            AiQuestionDtos.ProviderGenerationPayload payload = providerClient.generate(request, systemPrompt, userPrompt, jsonSchema);
+            AiQuestionDtos.ProviderGenerationPayload payload = providerClient.generate(
+                    config,
+                    selection.modelId(),
+                    systemPrompt,
+                    userPrompt,
+                    jsonSchema
+            );
+            keyRotationService.recordSuccess(config.apiKeyId());
             List<String> schemaErrors = validationService.validateSchema(payload);
             List<String> businessErrors = validationService.validateBusiness(payload);
             List<String> errors = new ArrayList<>();
             errors.addAll(schemaErrors);
             errors.addAll(businessErrors);
 
-            List<AiQuestionDtos.AiQuestionDraft> drafts = toDrafts(payload, request, knowledgePoints);
+            List<AiQuestionDtos.AiQuestionDraft> drafts = toDrafts(payload, request, knowledgePoints, selection);
             record.setStatus(errors.isEmpty() ? "SUCCESS" : "REJECTED");
             record.setSuccessCount(errors.isEmpty() ? drafts.size() : 0);
             record.setResponsePayload(writeJson(payload));
@@ -121,8 +150,10 @@ public class AiGenerationService {
 
             return new AiQuestionDtos.AiQuestionGenerationResult(
                     record.getId(),
-                    request.provider(),
-                    resolveModel(request),
+                    selection.providerId(),
+                    selection.providerType(),
+                    selection.providerDisplayName(),
+                    selection.modelId(),
                     request.questionType(),
                     DISCLAIMER,
                     errors.isEmpty(),
@@ -130,11 +161,13 @@ public class AiGenerationService {
                     drafts
             );
         } catch (AiProviderException ex) {
+            keyRotationService.recordFailure(config.apiKeyId());
             record.setStatus("FAILED");
             record.setErrorMessage(ex.getMessage());
             aiGenerationRecordRepository.save(record);
             throw new BusinessException(ex.getMessage());
         } catch (Exception ex) {
+            keyRotationService.recordFailure(config.apiKeyId());
             record.setStatus("FAILED");
             record.setErrorMessage("AI 生成失败: " + ex.getMessage());
             aiGenerationRecordRepository.save(record);
@@ -144,8 +177,11 @@ public class AiGenerationService {
 
     @Transactional
     public AiQuestionDtos.AiSaveResult save(AiQuestionDtos.AiQuestionSaveRequest request) {
+        ResolvedAiModelSelection selection = resolveSaveSelection(request);
         List<Long> savedIds = new ArrayList<>();
-        List<Question> questions = request.drafts().stream().map(draft -> toQuestion(draft, request.provider(), request.model(), request.questionType())).toList();
+        List<Question> questions = request.drafts().stream()
+                .map(draft -> toQuestion(draft, selection.providerDisplayName(), selection.modelId(), request.questionType()))
+                .toList();
         questionRepository.saveAll(questions).forEach(item -> savedIds.add(item.getId()));
 
         if (request.generationId() != null) {
@@ -178,11 +214,53 @@ public class AiGenerationService {
                 )).toList();
     }
 
-    private AiProviderClient findProvider(AiProviderType providerType) {
+    private ResolvedAiModelSelection resolveRequestedSelection(AiQuestionDtos.AiQuestionGenerationRequest request) {
+        String requestedProviderId = request.providerId();
+        if ((requestedProviderId == null || requestedProviderId.isBlank()) && request.provider() != null) {
+            requestedProviderId = providerService.listProviders().stream()
+                    .filter(provider -> provider.providerType() == request.provider())
+                    .findFirst()
+                    .map(AiProviderAdminDtos.ProviderDetail::id)
+                    .orElse(null);
+        }
+        ResolvedAiModelSelection selection = resolver.resolveModelSelection(requestedProviderId, request.model(), AiModelUseCase.QUESTION_GENERATION);
+        if (selection == null) {
+            return null;
+        }
+        resolver.resolveRequestedModel(selection.providerId(), selection.modelId());
+        return selection;
+    }
+
+    private ResolvedAiModelSelection resolveSaveSelection(AiQuestionDtos.AiQuestionSaveRequest request) {
+        String providerId = request.providerId();
+        if ((providerId == null || providerId.isBlank()) && request.provider() != null) {
+            providerId = providerService.listProviders().stream()
+                    .filter(provider -> provider.providerType() == request.provider())
+                    .findFirst()
+                    .map(AiProviderAdminDtos.ProviderDetail::id)
+                    .orElse(null);
+        }
+        if (providerId == null || providerId.isBlank()) {
+            throw new BusinessException("保存 AI 题目时缺少 Provider 标识");
+        }
+        ResolvedAiProviderConfig config = resolver.resolve(providerId);
+        String modelId = resolver.resolveRequestedModel(providerId, request.model());
+        return new ResolvedAiModelSelection(providerId, config.providerType(), config.providerDisplayName(), modelId);
+    }
+
+    private AiProviderClient findProviderClient(AiProviderType providerType) {
         return providerClients.stream()
-                .filter(client -> client.provider() == providerType)
+                .filter(client -> client.providerType() == providerType)
                 .findFirst()
                 .orElseThrow(() -> new BusinessException("不支持的 AI Provider"));
+    }
+
+    private ResolvedAiProviderConfig safeResolve(String providerId) {
+        try {
+            return resolver.resolve(providerId);
+        } catch (RuntimeException ex) {
+            return null;
+        }
     }
 
     private List<KnowledgePoint> resolveKnowledgePoints(AiQuestionDtos.AiQuestionGenerationRequest request) {
@@ -209,8 +287,9 @@ public class AiGenerationService {
     }
 
     private List<AiQuestionDtos.AiQuestionDraft> toDrafts(AiQuestionDtos.ProviderGenerationPayload payload,
-                                                           AiQuestionDtos.AiQuestionGenerationRequest request,
-                                                           List<KnowledgePoint> knowledgePoints) {
+                                                          AiQuestionDtos.AiQuestionGenerationRequest request,
+                                                          List<KnowledgePoint> knowledgePoints,
+                                                          ResolvedAiModelSelection selection) {
         Map<String, Long> knowledgeNameMap = new LinkedHashMap<>();
         for (KnowledgePoint point : knowledgePoints) {
             knowledgeNameMap.put(point.getName(), point.getId());
@@ -236,16 +315,18 @@ public class AiGenerationService {
                     knowledgeIds,
                     item.knowledgePointNames(),
                     parseDifficulty(item.difficulty(), request.difficulty()),
-                    request.provider(),
-                    resolveModel(request),
+                    selection.providerId(),
+                    selection.providerType(),
+                    selection.providerDisplayName(),
+                    selection.modelId(),
                     "AI",
-                    List.of("AI生成", request.provider().name())
+                    List.of("AI生成", selection.providerDisplayName())
             );
         }).toList();
     }
 
     private Question toQuestion(AiQuestionDtos.AiQuestionDraftInput draft,
-                                AiProviderType provider,
+                                String providerDisplayName,
                                 String model,
                                 AppEnums.QuestionType questionType) {
         Question question = new Question();
@@ -265,7 +346,7 @@ public class AiGenerationService {
         }
         question.setYear(java.time.LocalDate.now().getYear());
         question.setDifficulty(toDifficultyScore(draft.difficulty()));
-        question.setSource("AI-" + provider.name() + "-" + model);
+        question.setSource("AI-" + providerDisplayName + "-" + model);
         List<String> tags = new ArrayList<>();
         tags.add("AI生成");
         if (draft.tags() != null) {
@@ -275,7 +356,7 @@ public class AiGenerationService {
         question.setScore(questionType == AppEnums.QuestionType.MORNING_SINGLE ? BigDecimal.ONE : new BigDecimal("15"));
         question.setActive(!appProperties.getAi().isEnableSaveReview());
         question.setAiGenerated(true);
-        question.setAiProvider(provider.name());
+        question.setAiProvider(providerDisplayName);
         question.setAiModel(model);
 
         if (questionType == AppEnums.QuestionType.MORNING_SINGLE && draft.options() != null) {
@@ -311,15 +392,6 @@ public class AiGenerationService {
         } catch (Exception ex) {
             return fallback;
         }
-    }
-
-    private String resolveModel(AiQuestionDtos.AiQuestionGenerationRequest request) {
-        if (request.model() != null && !request.model().isBlank()) {
-            return request.model();
-        }
-        return request.provider() == AiProviderType.OPENAI
-                ? appProperties.getAi().getOpenai().getDefaultModel()
-                : appProperties.getAi().getAnthropic().getDefaultModel();
     }
 
     private String hashPrompt(String text) {

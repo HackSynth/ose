@@ -4,16 +4,17 @@ import java.util.List;
 
 public interface AiProviderClient {
 
-    AiProviderType provider();
+    AiProviderType providerType();
 
-    boolean isConfigured();
-
-    List<AiQuestionDtos.AiModelConfig> models();
-
-    AiQuestionDtos.ProviderGenerationPayload generate(AiQuestionDtos.AiQuestionGenerationRequest request,
+    AiQuestionDtos.ProviderGenerationPayload generate(ResolvedAiProviderConfig config,
+                                                      String model,
                                                       String systemPrompt,
                                                       String userPrompt,
                                                       String jsonSchema);
 
     AiProviderHealthResult testConnection(ResolvedAiProviderConfig config);
+
+    default List<AiProviderAdminDtos.CreateModelRequest> discoverModels(ResolvedAiProviderConfig config) {
+        return List.of();
+    }
 }

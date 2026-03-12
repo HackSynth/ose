@@ -14,6 +14,7 @@ class AiPromptBuilderTest {
     @Test
     void shouldBuildMorningPromptInChinese() {
         var request = new AiQuestionDtos.AiQuestionGenerationRequest(
+                "provider-openai",
                 AiProviderType.OPENAI,
                 "gpt-4.1-mini",
                 AppEnums.QuestionType.MORNING_SINGLE,

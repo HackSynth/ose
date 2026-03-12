@@ -41,7 +41,8 @@ public final class AiQuestionDtos {
     }
 
     public record AiQuestionGenerationRequest(
-            @NotNull(message = "请选择 AI 提供商") AiProviderType provider,
+            String providerId,
+            AiProviderType provider,
             String model,
             @NotNull(message = "请选择题型") AppEnums.QuestionType questionType,
             @NotNull(message = "请选择出题场景") AiQuestionTopicType topicType,
@@ -70,7 +71,9 @@ public final class AiQuestionDtos {
             List<Long> knowledgePointIds,
             List<String> knowledgePointNames,
             AiQuestionDifficulty difficulty,
+            String providerId,
             AiProviderType provider,
+            String providerDisplayName,
             String model,
             String source,
             List<String> tags
@@ -82,7 +85,9 @@ public final class AiQuestionDtos {
 
     public record AiQuestionGenerationResult(
             Long generationId,
+            String providerId,
             AiProviderType provider,
+            String providerDisplayName,
             String model,
             AppEnums.QuestionType questionType,
             String disclaimer,
@@ -94,7 +99,8 @@ public final class AiQuestionDtos {
 
     public record AiQuestionSaveRequest(
             Long generationId,
-            @NotNull(message = "请选择提供商") AiProviderType provider,
+            String providerId,
+            AiProviderType provider,
             @NotBlank(message = "请指定模型") String model,
             @NotNull(message = "请选择题型") AppEnums.QuestionType questionType,
             @NotEmpty(message = "保存列表不能为空") @Valid List<AiQuestionDraftInput> drafts
@@ -121,7 +127,14 @@ public final class AiQuestionDtos {
     public record AiSaveResult(Long generationId, int savedCount, String status, List<Long> questionIds) {
     }
 
-    public record AiProviderStatus(AiProviderType provider, boolean configured, String statusMessage, List<AiModelConfig> models) {
+    public record AiProviderStatus(
+            String providerId,
+            AiProviderType provider,
+            String displayName,
+            boolean configured,
+            String statusMessage,
+            List<AiModelConfig> models
+    ) {
     }
 
     public record AiHealthResponse(boolean enabled, int configuredProviders, List<AiProviderStatus> providers) {

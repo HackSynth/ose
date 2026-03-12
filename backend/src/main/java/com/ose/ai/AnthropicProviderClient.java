@@ -19,36 +19,23 @@ import java.util.Map;
 @Slf4j
 public class AnthropicProviderClient implements AiProviderClient {
 
-    private final AiProviderConfigurationResolver resolver;
-    private final AiProviderCatalogService catalogService;
     private final ObjectMapper objectMapper;
+    private final AiProviderUrlBuilder urlBuilder;
 
     @Override
-    public AiProviderType provider() {
+    public AiProviderType providerType() {
         return AiProviderType.ANTHROPIC;
     }
 
     @Override
-    public boolean isConfigured() {
-        return resolver.resolve(provider()).isAvailable();
-    }
-
-    @Override
-    public List<AiQuestionDtos.AiModelConfig> models() {
-        ResolvedAiProviderConfig config = resolver.resolve(provider());
-        return catalogService.models(provider(), config.defaultModel());
-    }
-
-    @Override
-    public AiQuestionDtos.ProviderGenerationPayload generate(AiQuestionDtos.AiQuestionGenerationRequest request,
+    public AiQuestionDtos.ProviderGenerationPayload generate(ResolvedAiProviderConfig config,
+                                                             String model,
                                                              String systemPrompt,
                                                              String userPrompt,
                                                              String jsonSchema) {
-        ResolvedAiProviderConfig config = resolver.resolve(provider());
         if (!config.isAvailable()) {
             throw new AiProviderException(config.message());
         }
-        String model = config.resolveModel(request.model());
         Map<String, Object> payload = new HashMap<>();
         payload.put("model", model);
         payload.put("system", systemPrompt + "\n请严格符合以下 JSON Schema: " + jsonSchema);
@@ -61,7 +48,7 @@ public class AnthropicProviderClient implements AiProviderClient {
         for (int attempt = 0; attempt <= maxRetries; attempt++) {
             try {
                 JsonNode response = client.post()
-                        .uri("/v1/messages")
+                        .uri(urlBuilder.build(config, AiProviderUrlBuilder.Endpoint.ANTHROPIC_MESSAGES))
                         .body(payload)
                         .retrieve()
                         .body(JsonNode.class);
@@ -86,7 +73,7 @@ public class AnthropicProviderClient implements AiProviderClient {
         String model = config.defaultModel();
         try {
             buildClient(config).post()
-                    .uri("/v1/messages")
+                    .uri(urlBuilder.build(config, AiProviderUrlBuilder.Endpoint.ANTHROPIC_MESSAGES))
                     .body(Map.of(
                             "model", model,
                             "max_tokens", Math.max(8, config.maxTokens()),
@@ -97,7 +84,7 @@ public class AnthropicProviderClient implements AiProviderClient {
                     .body(JsonNode.class);
             return new AiProviderHealthResult(
                     true,
-                    provider(),
+                    providerType(),
                     model,
                     System.currentTimeMillis() - startedAt,
                     "Claude 连通性测试通过",
@@ -108,7 +95,7 @@ public class AnthropicProviderClient implements AiProviderClient {
             AiProviderException mapped = mapException(ex);
             return new AiProviderHealthResult(
                     false,
-                    provider(),
+                    providerType(),
                     model,
                     System.currentTimeMillis() - startedAt,
                     mapped.getMessage(),
@@ -118,7 +105,7 @@ public class AnthropicProviderClient implements AiProviderClient {
         } catch (Exception ex) {
             return new AiProviderHealthResult(
                     false,
-                    provider(),
+                    providerType(),
                     model,
                     System.currentTimeMillis() - startedAt,
                     "Claude 连通性测试失败，请检查网络或配置",
@@ -126,6 +113,11 @@ public class AnthropicProviderClient implements AiProviderClient {
                     AiProviderHealthStatus.FAILED
             );
         }
+    }
+
+    @Override
+    public List<AiProviderAdminDtos.CreateModelRequest> discoverModels(ResolvedAiProviderConfig config) {
+        throw new AiProviderException("Anthropic 模型发现暂不稳定，请手动维护模型列表");
     }
 
     private String extractAnthropicJson(JsonNode response) {
@@ -161,8 +153,7 @@ public class AnthropicProviderClient implements AiProviderClient {
 
     private RestClient buildClient(ResolvedAiProviderConfig config) {
         return RestClient.builder()
-                .baseUrl(config.baseUrl())
-                .defaultHeader("x-api-key", config.apiKey())
+                .defaultHeader("x-api-key", config.apiKeyValue())
                 .defaultHeader("anthropic-version", "2023-06-01")
                 .requestFactory(requestFactory(config.timeoutMs()))
                 .build();

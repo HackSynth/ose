@@ -1,45 +1,33 @@
 package com.ose.ai;
 
 import com.ose.common.config.AppProperties;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Service
-@RequiredArgsConstructor
 public class AiProviderCatalogService {
+
+    private static final String ENV_PREFIX = "env-";
 
     private final AppProperties appProperties;
 
-    public List<AiQuestionDtos.AiModelConfig> models(AiProviderType provider, String selectedDefaultModel) {
-        String configuredDefault = selectedDefaultModel == null || selectedDefaultModel.isBlank()
-                ? defaultModel(provider)
-                : selectedDefaultModel;
-        List<AiQuestionDtos.AiModelConfig> models = new ArrayList<>();
-        for (String item : modelList(provider).split(",")) {
-            String model = item.trim();
-            if (!model.isBlank()) {
-                models.add(new AiQuestionDtos.AiModelConfig(model, model, model.equals(configuredDefault)));
-            }
-        }
-        if (models.stream().noneMatch(item -> item.model().equals(configuredDefault))) {
-            models.add(0, new AiQuestionDtos.AiModelConfig(configuredDefault, configuredDefault, true));
-        }
-        return models;
+    public AiProviderCatalogService(AppProperties appProperties) {
+        this.appProperties = appProperties;
     }
 
-    public String defaultModel(AiProviderType provider) {
-        return switch (provider) {
-            case OPENAI -> appProperties.getAi().getOpenai().getDefaultModel();
+    public String defaultModel(AiProviderType providerType) {
+        return switch (providerType) {
+            case OPENAI, OPENAI_COMPATIBLE -> appProperties.getAi().getOpenai().getDefaultModel();
             case ANTHROPIC -> appProperties.getAi().getAnthropic().getDefaultModel();
         };
     }
 
-    public String defaultBaseUrl(AiProviderType provider) {
-        return switch (provider) {
-            case OPENAI -> appProperties.getAi().getOpenai().getBaseUrl();
+    public String defaultBaseUrl(AiProviderType providerType) {
+        return switch (providerType) {
+            case OPENAI, OPENAI_COMPATIBLE -> appProperties.getAi().getOpenai().getBaseUrl();
             case ANTHROPIC -> appProperties.getAi().getAnthropic().getBaseUrl();
         };
     }
@@ -52,31 +40,108 @@ public class AiProviderCatalogService {
         return appProperties.getAi().getMaxRetries();
     }
 
-    public double defaultTemperature(AiProviderType provider) {
-        return switch (provider) {
-            case OPENAI -> appProperties.getAi().getOpenai().getTemperature();
+    public double defaultTemperature(AiProviderType providerType) {
+        return switch (providerType) {
+            case OPENAI, OPENAI_COMPATIBLE -> appProperties.getAi().getOpenai().getTemperature();
             case ANTHROPIC -> appProperties.getAi().getAnthropic().getTemperature();
         };
     }
 
-    public int maxTokens(AiProviderType provider) {
-        return switch (provider) {
-            case OPENAI -> 0;
+    public int maxTokens(AiProviderType providerType) {
+        return switch (providerType) {
+            case OPENAI, OPENAI_COMPATIBLE -> 0;
             case ANTHROPIC -> appProperties.getAi().getAnthropic().getMaxTokens();
         };
     }
 
-    public String envApiKey(AiProviderType provider) {
-        return switch (provider) {
-            case OPENAI -> appProperties.getAi().getOpenai().getApiKey();
+    public String envApiKey(AiProviderType providerType) {
+        return switch (providerType) {
+            case OPENAI, OPENAI_COMPATIBLE -> appProperties.getAi().getOpenai().getApiKey();
             case ANTHROPIC -> appProperties.getAi().getAnthropic().getApiKey();
         };
     }
 
-    private String modelList(AiProviderType provider) {
-        return switch (provider) {
-            case OPENAI -> appProperties.getAi().getOpenai().getModels();
+    public List<String> envModels(AiProviderType providerType) {
+        String raw = switch (providerType) {
+            case OPENAI, OPENAI_COMPATIBLE -> appProperties.getAi().getOpenai().getModels();
             case ANTHROPIC -> appProperties.getAi().getAnthropic().getModels();
         };
+        return splitModels(raw);
+    }
+
+    public List<String> splitModels(String raw) {
+        if (raw == null || raw.isBlank()) {
+            return List.of();
+        }
+        return Arrays.stream(raw.split(","))
+                .map(String::trim)
+                .filter(item -> !item.isBlank())
+                .distinct()
+                .toList();
+    }
+
+    public List<String> splitKeys(String raw) {
+        if (raw == null || raw.isBlank()) {
+            return List.of();
+        }
+        return Arrays.stream(raw.split("[,\\n]"))
+                .map(String::trim)
+                .filter(item -> !item.isBlank())
+                .distinct()
+                .toList();
+    }
+
+    public String defaultDisplayName(AiProviderType providerType) {
+        return providerType.defaultDisplayName();
+    }
+
+    public String envProviderId(AiProviderType providerType) {
+        return ENV_PREFIX + providerType.name().toLowerCase();
+    }
+
+    public boolean isEnvProviderId(String providerId) {
+        return providerId != null && providerId.startsWith(ENV_PREFIX);
+    }
+
+    public AiProviderType envProviderType(String providerId) {
+        if (!isEnvProviderId(providerId)) {
+            return null;
+        }
+        return switch (providerId) {
+            case "env-openai" -> AiProviderType.OPENAI;
+            case "env-anthropic" -> AiProviderType.ANTHROPIC;
+            default -> null;
+        };
+    }
+
+    public List<AiProviderAdminDtos.ModelDetail> envModelDetails(AiProviderType providerType, AiProviderAdminDtos.DefaultModelsResponse defaults) {
+        List<AiProviderAdminDtos.ModelDetail> models = new ArrayList<>();
+        List<String> configured = envModels(providerType);
+        String providerId = envProviderId(providerType);
+        for (int i = 0; i < configured.size(); i++) {
+            String modelId = configured.get(i);
+            models.add(new AiProviderAdminDtos.ModelDetail(
+                    providerId + "::" + modelId,
+                    providerId,
+                    modelId,
+                    modelId,
+                    AiModelType.CHAT,
+                    List.of("env"),
+                    true,
+                    isDefault(defaults.questionGeneration(), providerId, modelId),
+                    isDefault(defaults.reviewSummary(), providerId, modelId),
+                    isDefault(defaults.practiceRecommendation(), providerId, modelId),
+                    i,
+                    null,
+                    null
+            ));
+        }
+        return models;
+    }
+
+    private boolean isDefault(AiProviderAdminDtos.DefaultModelSelection selection, String providerId, String modelId) {
+        return selection != null
+                && providerId.equals(selection.providerId())
+                && modelId.equals(selection.modelId());
     }
 }

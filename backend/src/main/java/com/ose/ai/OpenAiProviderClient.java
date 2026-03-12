@@ -33,57 +33,43 @@ public class OpenAiProviderClient implements AiProviderClient {
     private static final String CONNECTION_PROBE_SYSTEM_PROMPT = "你是连通性测试助手，只输出 JSON。";
     private static final String CONNECTION_PROBE_USER_PROMPT = "请返回 {\"ok\":true}";
 
-    private final AiProviderConfigurationResolver resolver;
-    private final AiProviderCatalogService catalogService;
     private final ObjectMapper objectMapper;
+    private final AiProviderUrlBuilder urlBuilder;
 
     @Override
-    public AiProviderType provider() {
+    public AiProviderType providerType() {
         return AiProviderType.OPENAI;
     }
 
     @Override
-    public boolean isConfigured() {
-        return resolver.resolve(provider()).isAvailable();
-    }
-
-    @Override
-    public List<AiQuestionDtos.AiModelConfig> models() {
-        ResolvedAiProviderConfig config = resolver.resolve(provider());
-        return catalogService.models(provider(), config.defaultModel());
-    }
-
-    @Override
-    public AiQuestionDtos.ProviderGenerationPayload generate(AiQuestionDtos.AiQuestionGenerationRequest request,
+    public AiQuestionDtos.ProviderGenerationPayload generate(ResolvedAiProviderConfig config,
+                                                             String model,
                                                              String systemPrompt,
                                                              String userPrompt,
                                                              String jsonSchema) {
-        ResolvedAiProviderConfig config = resolver.resolve(provider());
         if (!config.isAvailable()) {
             throw new AiProviderException(config.message());
         }
-
-        String model = config.resolveModel(request.model());
         RestClient client = buildClient(config);
         int maxRetries = Math.max(0, config.maxRetries());
 
         for (int attempt = 0; attempt <= maxRetries; attempt++) {
             try {
-                String text = requestGenerationText(client, model, config.temperature(), systemPrompt, userPrompt, jsonSchema);
+                String text = requestGenerationText(client, config, model, config.temperature(), systemPrompt, userPrompt, jsonSchema);
                 return objectMapper.readValue(text, AiQuestionDtos.ProviderGenerationPayload.class);
             } catch (AiProviderException ex) {
                 if (attempt == maxRetries || !isRetryable(ex)) {
                     throw ex;
                 }
-                log.warn("OpenAI 请求失败，准备重试: {}", ex.getMessage());
+                log.warn("{} 请求失败，准备重试: {}", label(config.providerType()), ex.getMessage());
             } catch (Exception ex) {
                 if (attempt == maxRetries) {
-                    throw new AiProviderException("OpenAI 返回结果解析失败", ex);
+                    throw new AiProviderException(label(config.providerType()) + " 返回结果解析失败", ex);
                 }
             }
         }
 
-        throw new AiProviderException("OpenAI 请求失败，请稍后重试");
+        throw new AiProviderException(label(config.providerType()) + " 请求失败，请稍后重试");
     }
 
     @Override
@@ -91,20 +77,20 @@ public class OpenAiProviderClient implements AiProviderClient {
         String model = config.defaultModel();
         long startedAt = System.currentTimeMillis();
         try {
-            OpenAiApiMode mode = probeGenerationCapability(buildClient(config), model, config.temperature());
+            OpenAiApiMode mode = probeGenerationCapability(buildClient(config), config, model, config.temperature());
             return new AiProviderHealthResult(
                     true,
-                    provider(),
+                    config.providerType(),
                     model,
                     System.currentTimeMillis() - startedAt,
-                    "OpenAI 连通性测试通过（" + mode.displayName + "）",
+                    label(config.providerType()) + " 连通性测试通过（" + mode.displayName + "）",
                     config.configSource(),
                     AiProviderHealthStatus.SUCCESS
             );
         } catch (AiProviderException ex) {
             return new AiProviderHealthResult(
                     false,
-                    provider(),
+                    config.providerType(),
                     model,
                     System.currentTimeMillis() - startedAt,
                     ex.getMessage(),
@@ -114,189 +100,228 @@ public class OpenAiProviderClient implements AiProviderClient {
         } catch (Exception ex) {
             return new AiProviderHealthResult(
                     false,
-                    provider(),
+                    config.providerType(),
                     model,
                     System.currentTimeMillis() - startedAt,
-                    "OpenAI 连通性测试失败，请检查网络或配置",
+                    label(config.providerType()) + " 连通性测试失败，请检查网络或配置",
                     config.configSource(),
                     AiProviderHealthStatus.FAILED
             );
         }
     }
 
+    @Override
+    public List<AiProviderAdminDtos.CreateModelRequest> discoverModels(ResolvedAiProviderConfig config) {
+        if (config.baseUrlMode() == AiBaseUrlMode.FULL_OVERRIDE && !config.baseUrl().contains("/models")) {
+            throw new AiProviderException("FULL_OVERRIDE 模式下无法推断模型发现地址，请手动维护模型列表");
+        }
+        JsonNode response = buildClient(config).get()
+                .uri(urlBuilder.build(config, AiProviderUrlBuilder.Endpoint.MODELS))
+                .retrieve()
+                .body(JsonNode.class);
+        List<AiProviderAdminDtos.CreateModelRequest> models = new ArrayList<>();
+        if (response != null && response.path("data").isArray()) {
+            for (JsonNode item : response.path("data")) {
+                String modelId = item.path("id").asText();
+                if (!modelId.isBlank()) {
+                    models.add(new AiProviderAdminDtos.CreateModelRequest(
+                            modelId,
+                            modelId,
+                            AiModelType.CHAT,
+                            List.of("discovered"),
+                            true,
+                            models.size()
+                    ));
+                }
+            }
+        }
+        return models;
+    }
+
     private String requestGenerationText(RestClient client,
+                                         ResolvedAiProviderConfig config,
                                          String model,
                                          double temperature,
                                          String systemPrompt,
                                          String userPrompt,
                                          String jsonSchema) {
+        if (config.baseUrlMode() == AiBaseUrlMode.FULL_OVERRIDE) {
+            return requestFullOverride(client, config, model, temperature, systemPrompt, userPrompt, jsonSchema);
+        }
+
         AiProviderException lastFailure = null;
         List<String> endpointFailures = new ArrayList<>();
 
         for (OpenAiApiMode mode : OpenAiApiMode.values()) {
             try {
-                return switch (mode) {
-                    case RESPONSES -> extractResponsesJson(client.post()
-                            .uri("/v1/responses")
-                            .body(responsesPayload(model, temperature, systemPrompt, userPrompt, jsonSchema))
-                            .retrieve()
-                            .body(JsonNode.class));
-                    case RESPONSES_PROMPT_ONLY -> extractResponsesJson(client.post()
-                            .uri("/v1/responses")
-                            .body(responsesPromptOnlyPayload(model, systemPrompt, userPrompt, jsonSchema))
-                            .retrieve()
-                            .body(JsonNode.class));
-                    case CHAT_COMPLETIONS_JSON_SCHEMA -> extractChatCompletionJson(client.post()
-                            .uri("/v1/chat/completions")
-                            .body(chatCompletionPayload(model, temperature, systemPrompt, userPrompt, jsonSchema, false))
-                            .retrieve()
-                            .body(JsonNode.class));
-                    case CHAT_COMPLETIONS_PROMPT_ONLY -> extractChatCompletionJson(client.post()
-                            .uri("/v1/chat/completions")
-                            .body(chatCompletionPayload(model, temperature, systemPrompt, userPrompt, jsonSchema, true))
-                            .retrieve()
-                            .body(JsonNode.class));
-                };
+                return invokeMode(client, config, mode, model, temperature, systemPrompt, userPrompt, jsonSchema);
             } catch (RestClientResponseException ex) {
-                AiProviderException mapped = mapException(ex);
+                AiProviderException mapped = mapException(ex, config.providerType());
                 endpointFailures.add(mode.displayName + "=" + ex.getStatusCode().value());
                 if (!shouldFallback(mode, ex)) {
                     if (mode == OpenAiApiMode.CHAT_COMPLETIONS_PROMPT_ONLY && isCompatibilityFailure(ex)) {
-                        throw buildEndpointUnavailableException("生成", endpointFailures);
+                        throw buildEndpointUnavailableException(config.providerType(), "生成", endpointFailures);
                     }
                     throw mapped;
                 }
                 lastFailure = mapped;
-                log.warn("OpenAI {} 不可用，回退到下一种兼容模式: status={}", mode.displayName, ex.getStatusCode().value());
+                log.warn("{} {} 不可用，回退到下一种兼容模式: status={}",
+                        label(config.providerType()), mode.displayName, ex.getStatusCode().value());
             } catch (AiProviderException ex) {
                 if (!shouldFallback(mode, ex)) {
                     throw ex;
                 }
                 lastFailure = ex;
-                log.warn("OpenAI {} 返回内容不可解析，回退到下一种兼容模式", mode.displayName);
+                log.warn("{} {} 返回内容不可解析，回退到下一种兼容模式", label(config.providerType()), mode.displayName);
             }
         }
 
         if (endpointFailures.size() == OpenAiApiMode.values().length) {
-            throw buildEndpointUnavailableException("生成", endpointFailures);
+            throw buildEndpointUnavailableException(config.providerType(), "生成", endpointFailures);
         }
         if (lastFailure != null) {
             throw lastFailure;
         }
-        throw new AiProviderException("OpenAI 请求失败，请稍后重试");
+        throw new AiProviderException(label(config.providerType()) + " 请求失败，请稍后重试");
     }
 
-    private OpenAiApiMode probeGenerationCapability(RestClient client, String model, double temperature) {
-        AiProviderException lastFailure = null;
-        List<String> endpointFailures = new ArrayList<>();
-
-        for (OpenAiApiMode mode : OpenAiApiMode.values()) {
-            try {
-                String text = switch (mode) {
-                    case RESPONSES -> extractResponsesJson(client.post()
-                            .uri("/v1/responses")
-                            .body(responsesPayload(
-                                    model,
-                                    temperature,
-                                    CONNECTION_PROBE_SYSTEM_PROMPT,
-                                    CONNECTION_PROBE_USER_PROMPT,
-                                    CONNECTION_PROBE_SCHEMA
-                            ))
-                            .retrieve()
-                            .body(JsonNode.class));
-                    case RESPONSES_PROMPT_ONLY -> extractResponsesJson(client.post()
-                            .uri("/v1/responses")
-                            .body(responsesPromptOnlyPayload(
-                                    model,
-                                    CONNECTION_PROBE_SYSTEM_PROMPT,
-                                    CONNECTION_PROBE_USER_PROMPT,
-                                    CONNECTION_PROBE_SCHEMA
-                            ))
-                            .retrieve()
-                            .body(JsonNode.class));
-                    case CHAT_COMPLETIONS_JSON_SCHEMA -> extractChatCompletionJson(client.post()
-                            .uri("/v1/chat/completions")
-                            .body(chatCompletionPayload(
-                                    model,
-                                    temperature,
-                                    CONNECTION_PROBE_SYSTEM_PROMPT,
-                                    CONNECTION_PROBE_USER_PROMPT,
-                                    CONNECTION_PROBE_SCHEMA,
-                                    false
-                            ))
-                            .retrieve()
-                            .body(JsonNode.class));
-                    case CHAT_COMPLETIONS_PROMPT_ONLY -> extractChatCompletionJson(client.post()
-                            .uri("/v1/chat/completions")
-                            .body(chatCompletionPayload(
-                                    model,
-                                    temperature,
-                                    CONNECTION_PROBE_SYSTEM_PROMPT,
-                                    CONNECTION_PROBE_USER_PROMPT,
-                                    CONNECTION_PROBE_SCHEMA,
-                                    true
-                            ))
-                            .retrieve()
-                            .body(JsonNode.class));
-                };
-
-                if (objectMapper.readTree(text).path("ok").asBoolean(false)) {
-                    return mode;
-                }
-                throw new AiProviderException("OpenAI 连通性测试失败，生成接口未返回预期结果");
-            } catch (RestClientResponseException ex) {
-                AiProviderException mapped = mapException(ex);
-                endpointFailures.add(mode.displayName + "=" + ex.getStatusCode().value());
-                if (!shouldFallback(mode, ex)) {
-                    if (mode == OpenAiApiMode.CHAT_COMPLETIONS_PROMPT_ONLY && isCompatibilityFailure(ex)) {
-                        throw buildEndpointUnavailableException("连通性测试", endpointFailures);
-                    }
-                    throw mapped;
-                }
-                lastFailure = mapped;
-                log.warn("OpenAI 连通性测试 {} 不可用，回退到下一种兼容模式: status={}", mode.displayName, ex.getStatusCode().value());
-            } catch (AiProviderException ex) {
-                if (!shouldFallback(mode, ex)) {
-                    throw ex;
-                }
-                lastFailure = ex;
-                log.warn("OpenAI 连通性测试 {} 返回内容不可解析，回退到下一种兼容模式", mode.displayName);
-            } catch (Exception ex) {
-                AiProviderException mapped = new AiProviderException("OpenAI 连通性测试失败，请检查模型或生成接口兼容性", ex);
-                if (!shouldFallback(mode, mapped)) {
-                    throw mapped;
-                }
-                lastFailure = mapped;
+    private String requestFullOverride(RestClient client,
+                                       ResolvedAiProviderConfig config,
+                                       String model,
+                                       double temperature,
+                                       String systemPrompt,
+                                       String userPrompt,
+                                       String jsonSchema) {
+        String url = config.baseUrl();
+        try {
+            if (url.contains("/responses")) {
+                return extractResponsesJson(client.post()
+                        .uri(url)
+                        .body(responsesPromptOnlyPayload(model, systemPrompt, userPrompt, jsonSchema))
+                        .retrieve()
+                        .body(JsonNode.class));
             }
+            return extractChatCompletionJson(client.post()
+                    .uri(url)
+                    .body(chatCompletionPayload(model, temperature, systemPrompt, userPrompt, jsonSchema, true))
+                    .retrieve()
+                    .body(JsonNode.class));
+        } catch (RestClientResponseException ex) {
+            throw mapException(ex, config.providerType());
+        }
+    }
+
+    private OpenAiApiMode probeGenerationCapability(RestClient client,
+                                                    ResolvedAiProviderConfig config,
+                                                    String model,
+                                                    double temperature) {
+        if (config.baseUrlMode() == AiBaseUrlMode.FULL_OVERRIDE) {
+            requestFullOverride(client, config, model, temperature, CONNECTION_PROBE_SYSTEM_PROMPT, CONNECTION_PROBE_USER_PROMPT, CONNECTION_PROBE_SCHEMA);
+            return OpenAiApiMode.CHAT_COMPLETIONS_PROMPT_ONLY;
         }
 
+        AiProviderException lastFailure = null;
+        List<String> endpointFailures = new ArrayList<>();
+        for (OpenAiApiMode mode : OpenAiApiMode.values()) {
+            try {
+                String text = invokeMode(
+                        client,
+                        config,
+                        mode,
+                        model,
+                        temperature,
+                        CONNECTION_PROBE_SYSTEM_PROMPT,
+                        CONNECTION_PROBE_USER_PROMPT,
+                        CONNECTION_PROBE_SCHEMA
+                );
+                JsonNode node = objectMapper.readTree(text);
+                if (node.path("ok").asBoolean(false)) {
+                    return mode;
+                }
+            } catch (RestClientResponseException ex) {
+                endpointFailures.add(mode.displayName + "=" + ex.getStatusCode().value());
+                if (!shouldFallback(mode, ex)) {
+                    throw mapException(ex, config.providerType());
+                }
+                lastFailure = mapException(ex, config.providerType());
+            } catch (Exception ex) {
+                lastFailure = new AiProviderException(label(config.providerType()) + " 返回结果解析失败", ex);
+            }
+        }
         if (endpointFailures.size() == OpenAiApiMode.values().length) {
-            throw buildEndpointUnavailableException("连通性测试", endpointFailures);
+            throw buildEndpointUnavailableException(config.providerType(), "连通性测试", endpointFailures);
         }
         if (lastFailure != null) {
             throw lastFailure;
         }
-        throw new AiProviderException("OpenAI 连通性测试失败，请检查模型或生成接口兼容性");
+        throw new AiProviderException(label(config.providerType()) + " 连通性测试失败");
+    }
+
+    private String invokeMode(RestClient client,
+                              ResolvedAiProviderConfig config,
+                              OpenAiApiMode mode,
+                              String model,
+                              double temperature,
+                              String systemPrompt,
+                              String userPrompt,
+                              String jsonSchema) {
+        return switch (mode) {
+            case RESPONSES -> extractResponsesJson(client.post()
+                    .uri(urlBuilder.build(config, AiProviderUrlBuilder.Endpoint.RESPONSES))
+                    .body(responsesPayload(model, temperature, systemPrompt, userPrompt, jsonSchema))
+                    .retrieve()
+                    .body(JsonNode.class));
+            case RESPONSES_PROMPT_ONLY -> extractResponsesJson(client.post()
+                    .uri(urlBuilder.build(config, AiProviderUrlBuilder.Endpoint.RESPONSES))
+                    .body(responsesPromptOnlyPayload(model, systemPrompt, userPrompt, jsonSchema))
+                    .retrieve()
+                    .body(JsonNode.class));
+            case CHAT_COMPLETIONS_JSON_SCHEMA -> extractChatCompletionJson(client.post()
+                    .uri(urlBuilder.build(config, AiProviderUrlBuilder.Endpoint.CHAT_COMPLETIONS))
+                    .body(chatCompletionPayload(model, temperature, systemPrompt, userPrompt, jsonSchema, false))
+                    .retrieve()
+                    .body(JsonNode.class));
+            case CHAT_COMPLETIONS_PROMPT_ONLY -> extractChatCompletionJson(client.post()
+                    .uri(urlBuilder.build(config, AiProviderUrlBuilder.Endpoint.CHAT_COMPLETIONS))
+                    .body(chatCompletionPayload(model, temperature, systemPrompt, userPrompt, jsonSchema, true))
+                    .retrieve()
+                    .body(JsonNode.class));
+        };
+    }
+
+    private RestClient buildClient(ResolvedAiProviderConfig config) {
+        return RestClient.builder()
+                .defaultHeader("Authorization", "Bearer " + config.apiKeyValue())
+                .requestFactory(requestFactory(config.timeoutMs()))
+                .build();
+    }
+
+    private SimpleClientHttpRequestFactory requestFactory(int timeoutMs) {
+        SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
+        int timeout = Math.max(1000, timeoutMs);
+        factory.setConnectTimeout(timeout);
+        factory.setReadTimeout(timeout);
+        return factory;
     }
 
     private Map<String, Object> responsesPayload(String model,
-                                                 double temperature,
-                                                 String systemPrompt,
-                                                 String userPrompt,
-                                                 String jsonSchema) {
+                                                double temperature,
+                                                String systemPrompt,
+                                                String userPrompt,
+                                                String jsonSchema) {
         Map<String, Object> payload = new HashMap<>();
         payload.put("model", model);
-        payload.put("input", List.of(
-                Map.of("role", "system", "content", List.of(Map.of("type", "input_text", "text", systemPrompt))),
-                Map.of("role", "user", "content", List.of(Map.of("type", "input_text", "text", userPrompt)))
-        ));
         payload.put("temperature", temperature);
-        payload.put("text", Map.of("format", Map.of(
-                "type", "json_schema",
-                "name", "question_batch",
-                "schema", objectToMap(jsonSchema),
-                "strict", true
-        )));
+        payload.put("instructions", systemPrompt);
+        payload.put("input", userPrompt);
+        payload.put("text", Map.of(
+                "format", Map.of(
+                        "type", "json_schema",
+                        "name", "question_generation",
+                        "strict", true,
+                        "schema", readSchema(jsonSchema)
+                )
+        ));
         return payload;
     }
 
@@ -306,7 +331,8 @@ public class OpenAiProviderClient implements AiProviderClient {
                                                            String jsonSchema) {
         Map<String, Object> payload = new HashMap<>();
         payload.put("model", model);
-        payload.put("input", systemPromptWithSchema(systemPrompt, jsonSchema) + "\n\n用户请求：\n" + userPrompt);
+        payload.put("instructions", systemPrompt + "\n请严格符合以下 JSON Schema: " + jsonSchema);
+        payload.put("input", userPrompt);
         return payload;
     }
 
@@ -320,31 +346,27 @@ public class OpenAiProviderClient implements AiProviderClient {
         payload.put("model", model);
         payload.put("temperature", temperature);
         payload.put("messages", List.of(
-                Map.of("role", "system", "content", promptOnly ? systemPromptWithSchema(systemPrompt, jsonSchema) : systemPrompt),
+                Map.of("role", "system", "content", promptOnly ? systemPrompt + "\n请严格符合以下 JSON Schema: " + jsonSchema : systemPrompt),
                 Map.of("role", "user", "content", userPrompt)
         ));
         if (!promptOnly) {
             payload.put("response_format", Map.of(
                     "type", "json_schema",
                     "json_schema", Map.of(
-                            "name", "question_batch",
-                            "schema", objectToMap(jsonSchema),
-                            "strict", true
+                            "name", "question_generation",
+                            "strict", true,
+                            "schema", readSchema(jsonSchema)
                     )
             ));
         }
         return payload;
     }
 
-    private String systemPromptWithSchema(String systemPrompt, String jsonSchema) {
-        return systemPrompt + "\n请严格符合以下 JSON Schema，并且仅输出 JSON：\n" + jsonSchema;
-    }
-
-    private Map<String, Object> objectToMap(String schema) {
+    private JsonNode readSchema(String jsonSchema) {
         try {
-            return objectMapper.readValue(schema, Map.class);
+            return objectMapper.readTree(jsonSchema);
         } catch (Exception ex) {
-            throw new AiProviderException("OpenAI Schema 配置错误", ex);
+            throw new AiProviderException("JSON Schema 解析失败", ex);
         }
     }
 
@@ -352,21 +374,19 @@ public class OpenAiProviderClient implements AiProviderClient {
         if (response == null) {
             throw new AiProviderException("OpenAI 未返回内容");
         }
-
-        JsonNode outputTextNode = response.get("output_text");
-        if (outputTextNode != null && !outputTextNode.isNull() && !outputTextNode.asText().isBlank()) {
-            return outputTextNode.asText();
-        }
-
         JsonNode output = response.path("output");
         for (JsonNode item : output) {
-            for (JsonNode content : item.path("content")) {
-                if ("output_text".equals(content.path("type").asText())) {
-                    return content.path("text").asText();
+            if ("message".equals(item.path("type").asText())) {
+                for (JsonNode content : item.path("content")) {
+                    if ("output_text".equals(content.path("type").asText())) {
+                        String value = content.path("text").asText();
+                        if (!value.isBlank()) {
+                            return value;
+                        }
+                    }
                 }
             }
         }
-
         throw new AiProviderException("OpenAI 响应中缺少结构化内容");
     }
 
@@ -374,93 +394,68 @@ public class OpenAiProviderClient implements AiProviderClient {
         if (response == null) {
             throw new AiProviderException("OpenAI 未返回内容");
         }
-
-        JsonNode contentNode = response.path("choices").path(0).path("message").path("content");
-        if (contentNode.isTextual() && !contentNode.asText().isBlank()) {
-            return contentNode.asText();
+        JsonNode choices = response.path("choices");
+        if (!choices.isArray() || choices.isEmpty()) {
+            throw new AiProviderException("OpenAI 响应中缺少 choices");
         }
-
-        for (JsonNode content : contentNode) {
-            if ("text".equals(content.path("type").asText())) {
-                String text = content.path("text").asText();
-                if (!text.isBlank()) {
-                    return text;
-                }
-            }
+        String content = choices.get(0).path("message").path("content").asText();
+        if (content == null || content.isBlank()) {
+            throw new AiProviderException("OpenAI 响应内容为空");
         }
-
-        throw new AiProviderException("OpenAI 响应中缺少结构化内容");
+        return content;
     }
 
-    private AiProviderException mapException(RestClientResponseException ex) {
+    private AiProviderException mapException(RestClientResponseException ex, AiProviderType providerType) {
         HttpStatusCode code = ex.getStatusCode();
+        String label = label(providerType);
         if (code.value() == 401 || code.value() == 403) {
-            return new AiProviderException("OpenAI 认证失败，请检查 API Key");
+            return new AiProviderException(label + " 认证失败，请检查 API Key");
         }
         if (code.value() == 429) {
-            return new AiProviderException("OpenAI 配额不足或请求过于频繁");
+            return new AiProviderException(label + " 配额不足或请求过于频繁");
         }
         if (code.value() >= 500) {
-            return new AiProviderException("OpenAI 服务暂时不可用，请稍后再试");
+            return new AiProviderException(label + " 服务暂时不可用，请稍后再试");
         }
-        log.warn("OpenAI 调用失败: status={}", code);
-        return new AiProviderException("OpenAI 请求失败: " + ex.getStatusText());
-    }
-
-    private boolean shouldFallback(OpenAiApiMode mode, RestClientResponseException ex) {
-        int status = ex.getStatusCode().value();
-        if (status == 401 || status == 403 || status == 429) {
-            return false;
-        }
-        return mode != OpenAiApiMode.CHAT_COMPLETIONS_PROMPT_ONLY;
-    }
-
-    private boolean shouldFallback(OpenAiApiMode mode, AiProviderException ex) {
-        String message = ex.getMessage() == null ? "" : ex.getMessage();
-        return mode != OpenAiApiMode.CHAT_COMPLETIONS_PROMPT_ONLY
-                && (message.contains("缺少结构化内容")
-                || message.contains("解析失败")
-                || message.contains("未返回内容")
-                || message.contains("未返回预期结果"));
+        return new AiProviderException(label + " 请求失败: " + ex.getStatusText());
     }
 
     private boolean isRetryable(AiProviderException ex) {
-        return ex.getMessage() != null && ex.getMessage().contains("暂时不可用");
+        return ex.getMessage() != null && (ex.getMessage().contains("暂时不可用") || ex.getMessage().contains("频繁"));
+    }
+
+    private boolean shouldFallback(OpenAiApiMode mode, RestClientResponseException ex) {
+        return switch (mode) {
+            case RESPONSES, RESPONSES_PROMPT_ONLY -> isCompatibilityFailure(ex);
+            case CHAT_COMPLETIONS_JSON_SCHEMA -> ex.getStatusCode().value() == 400;
+            case CHAT_COMPLETIONS_PROMPT_ONLY -> false;
+        };
+    }
+
+    private boolean shouldFallback(OpenAiApiMode mode, AiProviderException ex) {
+        return mode == OpenAiApiMode.CHAT_COMPLETIONS_JSON_SCHEMA && ex.getMessage() != null && ex.getMessage().contains("结构化内容");
     }
 
     private boolean isCompatibilityFailure(RestClientResponseException ex) {
         int status = ex.getStatusCode().value();
-        return status != 401 && status != 403 && status != 429;
+        return status == 404 || status == 405 || status == 400;
     }
 
-    private AiProviderException buildEndpointUnavailableException(String action, List<String> endpointFailures) {
-        return new AiProviderException(
-                "OpenAI " + action + "失败：当前 Base URL 的生成接口不可用，请检查网关兼容性或改用官方地址。"
-                        + "失败端点: " + String.join(", ", endpointFailures)
-        );
+    private AiProviderException buildEndpointUnavailableException(AiProviderType providerType,
+                                                                  String action,
+                                                                  List<String> endpointFailures) {
+        return new AiProviderException(label(providerType) + action + "失败，当前地址未提供兼容的标准接口: " + String.join("，", endpointFailures));
     }
 
-    private RestClient buildClient(ResolvedAiProviderConfig config) {
-        return RestClient.builder()
-                .baseUrl(config.baseUrl())
-                .defaultHeader("Authorization", "Bearer " + config.apiKey())
-                .requestFactory(requestFactory(config.timeoutMs()))
-                .build();
+    private String label(AiProviderType providerType) {
+        return providerType == AiProviderType.OPENAI_COMPATIBLE ? "OpenAI-Compatible" : "OpenAI";
     }
 
-    private SimpleClientHttpRequestFactory requestFactory(int timeoutMs) {
-        SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
-        int timeout = Math.max(1000, timeoutMs);
-        factory.setConnectTimeout(timeout);
-        factory.setReadTimeout(timeout);
-        return factory;
-    }
-
-    enum OpenAiApiMode {
+    private enum OpenAiApiMode {
         RESPONSES("responses"),
-        RESPONSES_PROMPT_ONLY("responses/prompt"),
-        CHAT_COMPLETIONS_JSON_SCHEMA("chat.completions/json_schema"),
-        CHAT_COMPLETIONS_PROMPT_ONLY("chat.completions/prompt");
+        RESPONSES_PROMPT_ONLY("responses-prompt"),
+        CHAT_COMPLETIONS_JSON_SCHEMA("chat-completions"),
+        CHAT_COMPLETIONS_PROMPT_ONLY("chat-completions-prompt");
 
         private final String displayName;
 

@@ -31,6 +31,13 @@
 - 新增后端配置中心基础设施：数据库表、加密服务、统一配置解析器、健康探测 API、`ENV / DB / HYBRID` 优先级策略
 - 已完成测试：后端加解密/保存/优先级/接口测试，前端页面交互测试，以及“配置 -> 测试 -> AI 出题”E2E 链路
 
+### 阶段 F：模型服务中心后端重构（已完成，前端页切换进行中）
+- 已完成 Cherry Studio 风格 Provider + Model 后端骨架，但按 OSE 场景裁剪成“模型服务”而非聊天工作台
+- 已新增 Provider / API Key / Model / Default Models 四类核心表与对应服务层
+- 已支持 OpenAI、Anthropic、OpenAI-Compatible、ROOT / FULL_OVERRIDE、默认模型解析、多 Key 顺序轮询、模型发现与健康检查
+- 已将 AI 出题链路切换到新解析器，支持通过 `providerId + model` 显式指定，未指定时自动回退默认模型
+- 当前状态：后端 API 与测试已完成；前端“AI 配置”页仍走兼容接口，新“模型服务”后台页将在下一阶段接入
+
 ## 里程碑 1：E2E 测试基础设施
 - 目标：补齐 Playwright 基础设施、稳定数据准备、可维护选择器与 Docker 运行入口。
 - 涉及文件/目录：`frontend/package.json`、`frontend/playwright.config.ts`、`frontend/tests/e2e/`、`frontend/src/views/**`、`frontend/src/layouts/**`、`docker-compose.yml`

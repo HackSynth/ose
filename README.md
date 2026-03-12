@@ -17,7 +17,7 @@
 - 知识体系：维护一级 / 二级 / 三级知识点，记录掌握度、权重与备注
 - 题库管理：支持上午题 / 下午题，支持筛选、导入模板、导出
 - AI 出题中心：支持 OpenAI / Claude（Anthropic）按知识点、难度、场景生成上午题/下午题，支持预览编辑、临时练习与审核后入库
-- AI 配置中心：支持 OpenAI / Claude API Key 托管、掩码展示、清空、连通性测试、ENV/DB/HYBRID 来源识别
+- 模型服务中心：后端已切换为 Cherry Studio 风格的 Provider + Model 管理体系，支持 OpenAI / Anthropic / OpenAI-Compatible、多 Key 轮询、默认模型与健康检查；当前仍保留旧配置页兼容接口
 - 练习系统：支持按知识点、随机、错题练习；上午题自动判分，下午题自评；支持薄弱知识点一键推荐练习
 - 错题复习：自动入库、错因分类、复习状态流转、下次复习时间、到期复习提醒
 - 模拟考试：创建上午卷 / 下午卷模拟，保存成绩与历史记录，并生成模考后复盘摘要
@@ -97,19 +97,54 @@ AI 相关可选环境变量：
 说明：
 - 未配置 API Key 时，AI 模块会优雅降级（仅显示“未配置”状态），不影响其他功能。
 - `AI_ENABLE_SAVE_REVIEW=true` 时，AI 入库题默认待审核（不进入可练习状态）。
-- `AI_CONFIG_MODE=HYBRID` 时，系统优先使用数据库中启用的 Provider 配置；若数据库未启用对应 Provider，则回退到环境变量。
+- `AI_CONFIG_MODE=HYBRID` 时，系统优先使用数据库中的 Provider 配置；若 Provider 配置来源为 `HYBRID` 且数据库无可用 Key，则回退到环境变量。
+- 环境变量仍只作为 OpenAI / Anthropic 的兜底来源；OpenAI-Compatible 自定义服务商需在数据库中创建 Provider。
 
-### 5.2.1 AI Provider 配置中心（后端 API）
-- `GET /api/ai/settings`：读取 OpenAI / Anthropic 配置摘要、掩码 Key、配置来源、健康状态。
-- `PUT /api/ai/settings/{provider}`：保存或更新数据库托管配置，支持显式清空 Key。
-- `POST /api/ai/settings/{provider}/test`：使用待保存或当前生效配置执行连通性测试。
-- `GET /api/ai/settings/{provider}/models`：获取建议模型列表。
+### 5.2.1 模型服务中心（后端 API）
+本轮后端已改为 Cherry Studio 风格的 Provider + Model 两层配置，但只保留 OSE 的服务治理能力，不引入桌面聊天产品的会话或插件能力。
+
+Provider API：
+- `GET /api/ai/providers`
+- `POST /api/ai/providers`
+- `PUT /api/ai/providers/{id}`
+- `DELETE /api/ai/providers/{id}`
+- `POST /api/ai/providers/{id}/enable`
+- `POST /api/ai/providers/{id}/disable`
+- `POST /api/ai/providers/{id}/test`
+
+API Key API：
+- `POST /api/ai/providers/{id}/keys`
+- `PUT /api/ai/providers/{id}/keys/{keyId}`
+- `DELETE /api/ai/providers/{id}/keys/{keyId}`
+
+Model API：
+- `GET /api/ai/providers/{id}/models`
+- `POST /api/ai/providers/{id}/models`
+- `PUT /api/ai/providers/{id}/models/{modelId}`
+- `DELETE /api/ai/providers/{id}/models/{modelId}`
+- `POST /api/ai/providers/{id}/models/discover`
+
+Default Model API：
+- `GET /api/ai/default-models`
+- `PUT /api/ai/default-models`
+
+当前仍保留 `/api/ai/settings*` 兼容接口，供旧版前端配置页继续工作；前端“模型服务”后台页将在下一阶段切换到新 API。
 
 配置来源说明：
 - `DB`：当前生效配置来自数据库。
-- `ENV`：系统处于环境变量只读模式。
-- `ENV_FALLBACK`：当前未启用数据库配置，回退使用环境变量。
+- `ENV`：当前 Provider 为环境变量只读兜底实例。
+- `HYBRID`：当前 Provider 允许数据库优先、环境变量兜底。
 - `UNAVAILABLE`：数据库与环境变量都不可用，AI 模块保持优雅降级。
+
+关键机制说明：
+- Provider 先行：必须先创建 / 启用 Provider，再添加 API Key、Base URL、模型列表。
+- 模型显式添加：只有已启用 Provider 下显式添加且启用的模型，才能被业务使用。
+- 多 Key 轮询：同一 Provider 下支持多个 API Key，MVP 采用 `SEQUENTIAL_ROUND_ROBIN`，连续失败的 Key 会被暂时跳过。
+- Base URL 双模式：
+  - `ROOT`：输入根地址，系统自动补全标准接口路径。
+  - `FULL_OVERRIDE`：输入完整接口地址，系统不再自动拼接路径。
+- 默认模型分场景：分别维护默认出题模型、默认复盘摘要模型、默认推荐练习模型；业务未显式指定时自动回退到对应默认值。
+- OpenAI-Compatible：用于接入第三方 OpenAI 协议网关或本地模型服务，需在 Provider 列表中手动创建。
 
 ### 5.2.2 AI 配置页面
 - 页面入口：左侧导航 `AI 配置`

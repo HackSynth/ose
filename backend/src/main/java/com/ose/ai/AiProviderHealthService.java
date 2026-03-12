@@ -1,6 +1,7 @@
 package com.ose.ai;
 
-import com.ose.repository.AiProviderSettingsRepository;
+import com.ose.model.AiProviderEntity;
+import com.ose.repository.AiProviderRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -12,56 +13,65 @@ import java.util.List;
 public class AiProviderHealthService {
 
     private final AiProviderConfigurationResolver resolver;
-    private final AiProviderSettingsRepository repository;
+    private final AiProviderRepository providerRepository;
+    private final AiApiKeyRotationService keyRotationService;
     private final List<AiProviderClient> providerClients;
 
     public AiProviderHealthService(AiProviderConfigurationResolver resolver,
-                                   AiProviderSettingsRepository repository,
+                                   AiProviderRepository providerRepository,
+                                   AiApiKeyRotationService keyRotationService,
                                    List<AiProviderClient> providerClients) {
         this.resolver = resolver;
-        this.repository = repository;
+        this.providerRepository = providerRepository;
+        this.keyRotationService = keyRotationService;
         this.providerClients = providerClients;
     }
 
     @Transactional
-    public AiProviderHealthResult test(AiProviderType provider,
-                                       AiProviderSettingsDtos.UpdateAiProviderSettingsRequest request) {
-        ResolvedAiProviderConfig resolved = resolver.resolve(provider, request);
+    public AiProviderHealthResult test(String providerId) {
+        ResolvedAiProviderConfig resolved = resolver.resolve(providerId);
         if (!resolved.isAvailable()) {
             AiProviderHealthResult result = new AiProviderHealthResult(
                     false,
-                    provider,
+                    resolved.providerType(),
                     resolved.defaultModel(),
                     0L,
                     resolved.message(),
                     resolved.configSource(),
                     AiProviderHealthStatus.UNAVAILABLE
             );
-            updateHealthSnapshot(provider, request, result);
+            updateHealthSnapshot(providerId, result);
             return result;
         }
 
         AiProviderClient client = providerClients.stream()
-                .filter(item -> item.provider() == provider)
+                .filter(item -> item.providerType() == resolved.providerType())
                 .findFirst()
-                .orElseThrow(() -> new AiProviderException("未找到对应的 AI Provider"));
+                .orElseThrow(() -> new AiProviderException("未找到对应的 AI Provider Client"));
         AiProviderHealthResult result = client.testConnection(resolved);
-        updateHealthSnapshot(provider, request, result);
+        if (result.success()) {
+            keyRotationService.recordSuccess(resolved.apiKeyId());
+        } else {
+            keyRotationService.recordFailure(resolved.apiKeyId());
+        }
+        updateHealthSnapshot(providerId, result);
         return result;
     }
 
-    private void updateHealthSnapshot(AiProviderType provider,
-                                      AiProviderSettingsDtos.UpdateAiProviderSettingsRequest request,
-                                      AiProviderHealthResult result) {
-        if (request != null && request.hasChanges()) {
-            return;
-        }
-        repository.findByProvider(provider).ifPresent(entity -> {
-            entity.setLastHealthStatus(result.healthStatus());
-            entity.setLastHealthMessage(truncate(result.message(), 255));
-            entity.setLastHealthCheckedAt(LocalDateTime.now());
-            repository.save(entity);
+    private void updateHealthSnapshot(String providerId, AiProviderHealthResult result) {
+        providerRepository.findById(providerId).ifPresent(entity -> {
+            entity.setHealthStatus(result.healthStatus());
+            entity.setHealthMessage(truncate(result.message(), 255));
+            entity.setLastCheckedAt(LocalDateTime.now());
+            providerRepository.save(entity);
         });
+    }
+
+    public void updateUnavailable(AiProviderEntity provider, String message) {
+        provider.setHealthStatus(AiProviderHealthStatus.UNAVAILABLE);
+        provider.setHealthMessage(truncate(message, 255));
+        provider.setLastCheckedAt(LocalDateTime.now());
+        providerRepository.save(provider);
     }
 
     private String truncate(String value, int maxLength) {

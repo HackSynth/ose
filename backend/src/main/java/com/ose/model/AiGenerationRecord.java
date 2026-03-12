@@ -17,9 +17,15 @@ public class AiGenerationRecord extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(length = 64)
+    private String providerId;
+
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 20)
     private AiProviderType provider;
+
+    @Column(length = 120)
+    private String providerDisplayName;
 
     @Column(nullable = false, length = 120)
     private String model;

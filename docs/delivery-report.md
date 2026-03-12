@@ -9,6 +9,7 @@
 - 提供整包导入模板、错误报告与重复数据处理策略
 - 增加错题复习提醒、薄弱知识点推荐练习、考试日期变更后自动重排计划、模考复盘摘要
 - 同步更新 README、实施计划与交付说明
+- 启动 Cherry Studio 风格“模型服务中心”重构，完成 Provider + Model 后端服务层与 AI 出题链路切换
 
 ## 2. 关键设计决策
 - E2E 采用 Playwright，优先覆盖真实浏览器交互链路，而非仅靠接口级测试。
@@ -183,3 +184,24 @@ PLAYWRIGHT_BASE_URL=http://127.0.0.1 npm run test:e2e
 
 ### 11.3 当前已知限制
 - Compose 版 `e2e-test` 首次运行需要拉取 Playwright 镜像，首次准备时间较长；本轮已用本机 `chromium` 完成等价浏览器验证。
+
+## 12. 模型服务中心后端阶段交付
+### 12.1 本阶段已完成
+- 新增 `ai_providers`、`ai_provider_api_keys`、`ai_models`、`ai_default_model_settings` 四张核心表，并提供旧 `ai_provider_settings` 到新结构的迁移脚本。
+- 新增 `AiProviderService`、`AiProviderHealthService`、`AiProviderConfigurationResolver`、`AiApiKeyRotationService`、`AiModelRegistryService`、`AiDefaultModelService`。
+- 新增 `/api/ai/providers*`、`/api/ai/default-models` API，支持 Provider CRUD、启停、连通性测试、模型管理、模型发现、默认模型设置。
+- 新增 `OpenAiCompatibleProviderClient`，将 OpenAI / Anthropic / OpenAI-Compatible 三类 Provider 统一纳入新的解析与调度体系。
+- 新增 `AiProviderUrlBuilder`，统一处理 `ROOT / FULL_OVERRIDE` 两种 Base URL 模式。
+- AI 出题链路已改为通过 `providerId + model` 工作，同时保留默认模型回退与兼容接口。
+
+### 12.2 为什么参考 Cherry Studio
+- Cherry Studio 在 Provider / Model 分层、Base URL 兼容、多 Key 轮询和默认模型思想上验证过可用性，适合复用其“服务治理”部分。
+- OSE 不需要桌面聊天客户端的消息管理与插件生态，因此本次只保留对 Web 管理后台有价值的配置治理能力，并把默认模型映射到“AI 出题 / AI 复盘 / AI 学习辅助”场景。
+
+### 12.3 本阶段验证
+- `docker compose run --rm backend-test`
+- 已覆盖 Provider CRUD、多 Key 轮询、Base URL ROOT / FULL_OVERRIDE、默认模型解析、Provider 测试接口、OpenAI / Anthropic / OpenAI-Compatible 路由分发、无可用模型错误处理。
+
+### 12.4 当前状态与后续
+- 后端已完成，旧 `/api/ai/settings*` 接口仍保留作为前端兼容层。
+- 下一阶段将把前端“AI 配置”页重构为新的“模型服务”管理后台，并补齐前端单测与 E2E。

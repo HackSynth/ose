@@ -19,7 +19,7 @@ public class AiQuestionController {
 
     private final AiGenerationService aiGenerationService;
 
-    @GetMapping("/providers")
+    @GetMapping("/provider-options")
     public ApiResponse<List<AiQuestionDtos.AiProviderStatus>> providers() {
         return ApiResponse.success(aiGenerationService.providers());
     }

@@ -7,9 +7,6 @@ import com.sun.net.httpserver.HttpServer;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.Mock;
-import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -20,25 +17,16 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.mockito.Mockito.when;
 
-@ExtendWith(MockitoExtension.class)
 class OpenAiProviderClientTest {
 
-    @Mock
-    private AiProviderConfigurationResolver resolver;
-
-    @Mock
-    private AiProviderCatalogService catalogService;
-
     private final ObjectMapper objectMapper = new ObjectMapper();
-
     private OpenAiProviderClient client;
     private HttpServer server;
 
     @BeforeEach
     void setUp() {
-        client = new OpenAiProviderClient(resolver, catalogService, objectMapper);
+        client = new OpenAiProviderClient(objectMapper, new AiProviderUrlBuilder());
     }
 
     @AfterEach
@@ -51,18 +39,11 @@ class OpenAiProviderClientTest {
     @Test
     void shouldFallbackToChatCompletionsWhenResponsesApiUnavailable() throws Exception {
         AtomicInteger responsesCalls = new AtomicInteger();
-        AtomicInteger responsesPromptCalls = new AtomicInteger();
         AtomicInteger chatCalls = new AtomicInteger();
         startServer(exchange -> {
             if ("/v1/responses".equals(exchange.getRequestURI().getPath())) {
-                String body = new String(exchange.getRequestBody().readAllBytes(), StandardCharsets.UTF_8);
-                if (body.contains("\"input\":\"")) {
-                    responsesPromptCalls.incrementAndGet();
-                    respond(exchange, 500, "{\"error\":{\"message\":\"responses prompt unavailable\"}}");
-                    return;
-                }
                 responsesCalls.incrementAndGet();
-                respond(exchange, 500, "{\"error\":{\"message\":\"responses unavailable\"}}");
+                respond(exchange, 404, "{\"error\":{\"message\":\"responses unavailable\"}}");
                 return;
             }
             if ("/v1/chat/completions".equals(exchange.getRequestURI().getPath())) {
@@ -93,165 +74,77 @@ class OpenAiProviderClientTest {
             respond(exchange, 404, "{}");
         });
 
-        when(resolver.resolve(AiProviderType.OPENAI)).thenReturn(resolvedConfig());
-
         AiQuestionDtos.ProviderGenerationPayload payload = client.generate(
-                new AiQuestionDtos.AiQuestionGenerationRequest(
-                        AiProviderType.OPENAI,
-                        "gpt-4.1-mini",
-                        AppEnums.QuestionType.MORNING_SINGLE,
-                        AiQuestionDtos.AiQuestionTopicType.KNOWLEDGE_POINT,
-                        List.of(1L),
-                        AiQuestionDtos.AiQuestionDifficulty.MEDIUM,
-                        1,
-                        true,
-                        true,
-                        false,
-                        "中文",
-                        AiQuestionDtos.AiStyleType.EXAM,
-                        null
-                ),
+                resolvedConfig(serverBaseUrl(), AiBaseUrlMode.ROOT),
+                "gpt-4.1-mini",
                 "system",
                 "user",
-                """
-                {"type":"object"}
-                """
+                "{\"type\":\"object\"}"
         );
 
         assertEquals(AppEnums.QuestionType.MORNING_SINGLE, payload.questionType());
-        assertEquals(1, payload.questions().size());
-        assertEquals(1, responsesCalls.get());
-        assertEquals(1, responsesPromptCalls.get());
+        assertEquals(2, responsesCalls.get());
         assertEquals(1, chatCalls.get());
     }
 
     @Test
-    void shouldProbeGenerationCapabilityInsteadOfModelEndpoint() throws Exception {
-        AtomicInteger responsesCalls = new AtomicInteger();
-        AtomicInteger responsesPromptCalls = new AtomicInteger();
-        AtomicInteger chatCalls = new AtomicInteger();
+    void shouldUseFullOverrideAddressWithoutAutoAppendingPath() throws Exception {
+        AtomicInteger fullOverrideCalls = new AtomicInteger();
         startServer(exchange -> {
-            if ("/v1/responses".equals(exchange.getRequestURI().getPath())) {
-                String body = new String(exchange.getRequestBody().readAllBytes(), StandardCharsets.UTF_8);
-                if (body.contains("\"input\":\"")) {
-                    responsesPromptCalls.incrementAndGet();
-                    respond(exchange, 500, "{\"error\":{\"message\":\"responses prompt unavailable\"}}");
-                    return;
-                }
-                responsesCalls.incrementAndGet();
-                respond(exchange, 500, "{\"error\":{\"message\":\"responses unavailable\"}}");
-                return;
-            }
-            if ("/v1/chat/completions".equals(exchange.getRequestURI().getPath())) {
-                chatCalls.incrementAndGet();
+            if ("/gateway/chat".equals(exchange.getRequestURI().getPath())) {
+                fullOverrideCalls.incrementAndGet();
                 respond(exchange, 200, chatCompletionTextResponse("{\"ok\":true}"));
                 return;
             }
             respond(exchange, 404, "{}");
         });
 
-        AiProviderHealthResult result = client.testConnection(resolvedConfig());
+        AiProviderHealthResult result = client.testConnection(resolvedConfig(serverBaseUrl() + "/gateway/chat", AiBaseUrlMode.FULL_OVERRIDE));
 
         assertTrue(result.success());
-        assertTrue(result.message().contains("chat.completions/json_schema"));
-        assertEquals(1, responsesCalls.get());
-        assertEquals(1, responsesPromptCalls.get());
-        assertEquals(1, chatCalls.get());
+        assertEquals(1, fullOverrideCalls.get());
     }
 
     @Test
-    void shouldFallbackToResponsesPromptOnlyWhenGatewayOnlySupportsStringInput() throws Exception {
-        AtomicInteger structuredResponsesCalls = new AtomicInteger();
-        AtomicInteger promptResponsesCalls = new AtomicInteger();
-        AtomicInteger chatCalls = new AtomicInteger();
+    void shouldDiscoverModelsFromModelsEndpoint() throws Exception {
         startServer(exchange -> {
-            if ("/v1/responses".equals(exchange.getRequestURI().getPath())) {
-                String body = new String(exchange.getRequestBody().readAllBytes(), StandardCharsets.UTF_8);
-                if (body.contains("\"input\":\"")) {
-                    promptResponsesCalls.incrementAndGet();
-                    respond(exchange, 200, responsesTextResponse("""
-                            {
-                              "questionType":"MORNING_SINGLE",
-                              "questions":[
-                                {
-                                  "title":"事务题",
-                                  "content":"以下关于事务隔离级别的说法，正确的是？",
-                                  "options":[
-                                    {"key":"A","content":"读未提交可避免脏读"},
-                                    {"key":"B","content":"可重复读总能避免幻读"},
-                                    {"key":"C","content":"串行化隔离级别最高"},
-                                    {"key":"D","content":"读已提交会出现脏写"}
-                                  ],
-                                  "correctAnswer":"C",
-                                  "explanation":"串行化提供最高隔离级别。",
-                                  "knowledgePointNames":["事务管理"],
-                                  "difficulty":"MEDIUM"
-                                }
-                              ]
-                            }
-                            """));
-                    return;
-                }
-                structuredResponsesCalls.incrementAndGet();
-                respond(exchange, 503, "{\"error\":{\"message\":\"structured input unsupported\"}}");
-                return;
-            }
-            if ("/v1/chat/completions".equals(exchange.getRequestURI().getPath())) {
-                chatCalls.incrementAndGet();
-                respond(exchange, 500, "{\"error\":{\"message\":\"should not use chat fallback\"}}");
+            if ("/v1/models".equals(exchange.getRequestURI().getPath())) {
+                respond(exchange, 200, """
+                        {
+                          "data":[
+                            {"id":"gpt-4.1-mini"},
+                            {"id":"gpt-4.1"}
+                          ]
+                        }
+                        """);
                 return;
             }
             respond(exchange, 404, "{}");
         });
 
-        when(resolver.resolve(AiProviderType.OPENAI)).thenReturn(resolvedConfig());
+        List<AiProviderAdminDtos.CreateModelRequest> models = client.discoverModels(resolvedConfig(serverBaseUrl(), AiBaseUrlMode.ROOT));
 
-        AiQuestionDtos.ProviderGenerationPayload payload = client.generate(
-                new AiQuestionDtos.AiQuestionGenerationRequest(
-                        AiProviderType.OPENAI,
-                        "gpt-5.2-2cx",
-                        AppEnums.QuestionType.MORNING_SINGLE,
-                        AiQuestionDtos.AiQuestionTopicType.KNOWLEDGE_POINT,
-                        List.of(1L),
-                        AiQuestionDtos.AiQuestionDifficulty.MEDIUM,
-                        1,
-                        true,
-                        true,
-                        false,
-                        "中文",
-                        AiQuestionDtos.AiStyleType.EXAM,
-                        null
-                ),
-                "system",
-                "user",
-                """
-                {"type":"object"}
-                """
-        );
-
-        assertEquals(AppEnums.QuestionType.MORNING_SINGLE, payload.questionType());
-        assertEquals(1, payload.questions().size());
-        assertEquals(1, structuredResponsesCalls.get());
-        assertEquals(1, promptResponsesCalls.get());
-        assertEquals(0, chatCalls.get());
+        assertEquals(2, models.size());
+        assertEquals("gpt-4.1-mini", models.get(0).modelId());
     }
 
-    private ResolvedAiProviderConfig resolvedConfig() {
+    private ResolvedAiProviderConfig resolvedConfig(String baseUrl, AiBaseUrlMode mode) {
         return new ResolvedAiProviderConfig(
+                "provider-openai",
                 AiProviderType.OPENAI,
+                "OpenAI",
                 true,
                 true,
-                "sk-test",
-                "sk-***test",
-                "http://127.0.0.1:" + server.getAddress().getPort(),
+                new ResolvedAiApiKey("key-1", "sk-secret-1234", "sk-***1234"),
+                baseUrl,
+                mode,
                 "gpt-4.1-mini",
-                3000,
+                1000,
                 0,
                 0.2d,
                 0,
                 AiProviderConfigSource.DB,
-                "ok",
-                List.of()
+                "ok"
         );
     }
 
@@ -267,34 +160,31 @@ class OpenAiProviderClientTest {
         server.start();
     }
 
-    private String chatCompletionTextResponse(String text) throws IOException {
-        return objectMapper.writeValueAsString(
-                java.util.Map.of(
-                        "choices",
-                        List.of(java.util.Map.of(
-                                "message",
-                                java.util.Map.of("content", text)
-                        ))
-                )
-        );
-    }
-
-    private String responsesTextResponse(String text) throws IOException {
-        return objectMapper.writeValueAsString(
-                java.util.Map.of(
-                        "output_text",
-                        text
-                )
-        );
+    private String serverBaseUrl() {
+        return "http://127.0.0.1:" + server.getAddress().getPort();
     }
 
     private void respond(HttpExchange exchange, int status, String body) throws IOException {
         byte[] bytes = body.getBytes(StandardCharsets.UTF_8);
         exchange.getResponseHeaders().add("Content-Type", "application/json");
         exchange.sendResponseHeaders(status, bytes.length);
-        try (OutputStream outputStream = exchange.getResponseBody()) {
-            outputStream.write(bytes);
+        try (OutputStream os = exchange.getResponseBody()) {
+            os.write(bytes);
         }
+    }
+
+    private String chatCompletionTextResponse(String content) {
+        return """
+                {
+                  "choices":[
+                    {
+                      "message":{
+                        "content":%s
+                      }
+                    }
+                  ]
+                }
+                """.formatted(objectMapper.valueToTree(content));
     }
 
     @FunctionalInterface

@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class AiProviderSettingsController {
 
     private final AiProviderSettingsService settingsService;
-    private final AiProviderHealthService healthService;
 
     @GetMapping
     public ApiResponse<AiProviderSettingsDtos.AiSettingsResponse> settings() {
@@ -31,9 +30,8 @@ public class AiProviderSettingsController {
     }
 
     @PostMapping("/{provider}/test")
-    public ApiResponse<AiProviderSettingsDtos.AiProviderConnectionTestResponse> test(@PathVariable AiProviderType provider,
-                                                                                     @Valid @RequestBody(required = false) AiProviderSettingsDtos.UpdateAiProviderSettingsRequest request) {
-        AiProviderHealthResult result = healthService.test(provider, request);
+    public ApiResponse<AiProviderSettingsDtos.AiProviderConnectionTestResponse> test(@PathVariable AiProviderType provider) {
+        AiProviderHealthResult result = settingsService.test(provider);
         return ApiResponse.success(new AiProviderSettingsDtos.AiProviderConnectionTestResponse(
                 result.success(),
                 result.provider(),

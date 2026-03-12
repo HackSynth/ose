@@ -2,34 +2,36 @@ package com.ose.ai;
 
 import com.ose.common.config.AppProperties;
 import com.ose.common.exception.BusinessException;
-import com.ose.model.AiProviderSettingsEntity;
-import com.ose.repository.AiProviderSettingsRepository;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Optional;
 
 @Service
-@RequiredArgsConstructor
 @Transactional(readOnly = true)
 public class AiProviderSettingsService {
 
     private final AppProperties appProperties;
-    private final AiProviderSettingsRepository repository;
-    private final AiProviderConfigurationResolver resolver;
+    private final AiProviderService providerService;
+    private final AiProviderHealthService healthService;
     private final AiSecretCryptoService cryptoService;
-    private final AiProviderCatalogService catalogService;
+
+    public AiProviderSettingsService(AppProperties appProperties,
+                                     AiProviderService providerService,
+                                     AiProviderHealthService healthService,
+                                     AiSecretCryptoService cryptoService) {
+        this.appProperties = appProperties;
+        this.providerService = providerService;
+        this.healthService = healthService;
+        this.cryptoService = cryptoService;
+    }
 
     public AiProviderSettingsDtos.AiSettingsResponse getSettings() {
-        List<AiProviderSettingsDtos.AiProviderSettingsSummary> providers = new ArrayList<>();
-        for (AiProviderType provider : AiProviderType.values()) {
-            providers.add(getProviderSummary(provider));
-        }
-        providers.sort(Comparator.comparing(item -> item.provider().name()));
+        List<AiProviderSettingsDtos.AiProviderSettingsSummary> providers = List.of(
+                getProviderSummary(AiProviderType.OPENAI),
+                getProviderSummary(AiProviderType.ANTHROPIC)
+        ).stream().sorted(Comparator.comparing(item -> item.provider().name())).toList();
         return new AiProviderSettingsDtos.AiSettingsResponse(
                 appProperties.getAi().getConfigMode(),
                 cryptoService.canPersistSecrets(),
@@ -38,112 +40,140 @@ public class AiProviderSettingsService {
         );
     }
 
-    public AiProviderSettingsDtos.AiProviderSettingsSummary getProviderSummary(AiProviderType provider) {
-        Optional<AiProviderSettingsEntity> entity = repository.findByProvider(provider);
-        ResolvedAiProviderConfig resolved = resolver.resolve(provider);
-        String baseUrl = entity.map(AiProviderSettingsEntity::getBaseUrl)
-                .filter(item -> item != null && !item.isBlank())
-                .orElse(resolved.baseUrl());
-        String defaultModel = entity.map(AiProviderSettingsEntity::getDefaultModel)
-                .filter(item -> item != null && !item.isBlank())
-                .orElse(resolved.defaultModel());
-        Integer timeoutMs = entity.map(AiProviderSettingsEntity::getTimeoutMs).orElse(resolved.timeoutMs());
-        Integer maxRetries = entity.map(AiProviderSettingsEntity::getMaxRetries).orElse(resolved.maxRetries());
-        Double temperature = entity.map(AiProviderSettingsEntity::getTemperature).orElse(resolved.temperature());
-        AiProviderHealthStatus healthStatus = entity.map(AiProviderSettingsEntity::getLastHealthStatus)
-                .orElse(resolved.isAvailable() ? AiProviderHealthStatus.UNKNOWN : AiProviderHealthStatus.UNAVAILABLE);
-        String healthMessage = entity.map(AiProviderSettingsEntity::getLastHealthMessage).orElse(resolved.message());
+    public AiProviderSettingsDtos.AiProviderSettingsSummary getProviderSummary(AiProviderType providerType) {
+        AiProviderAdminDtos.ProviderDetail detail = providerService.listProviders().stream()
+                .filter(provider -> provider.providerType() == providerType)
+                .findFirst()
+                .orElseGet(() -> new AiProviderAdminDtos.ProviderDetail(
+                        null,
+                        providerType,
+                        providerType.defaultDisplayName(),
+                        false,
+                        List.of(),
+                        AiKeyRotationStrategy.SEQUENTIAL_ROUND_ROBIN,
+                        null,
+                        AiBaseUrlMode.ROOT,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        AiProviderConfigSource.UNAVAILABLE,
+                        AiProviderHealthStatus.UNAVAILABLE,
+                        "未配置",
+                        null,
+                        null,
+                        null,
+                        false,
+                        false,
+                        List.of()
+                ));
 
+        String maskedKey = detail.apiKeys().isEmpty() ? null : detail.apiKeys().get(0).maskedKey();
         return new AiProviderSettingsDtos.AiProviderSettingsSummary(
-                provider,
-                entity.map(AiProviderSettingsEntity::isEnabled).orElse(false),
-                resolved.isAvailable(),
-                resolved.maskedKey(),
-                entity.map(AiProviderSettingsEntity::getApiKeyMask).orElse(null),
-                baseUrl,
-                defaultModel,
-                timeoutMs,
-                maxRetries,
-                temperature,
-                resolved.configSource(),
-                healthStatus,
-                healthMessage,
-                appProperties.getAi().getConfigMode() != AiConfigMode.ENV,
-                resolved.configSource() == AiProviderConfigSource.ENV || resolved.configSource() == AiProviderConfigSource.ENV_FALLBACK,
-                entity.map(item -> item.getApiKeyMask() != null && !item.getApiKeyMask().isBlank()).orElse(false)
+                providerType,
+                detail.enabled(),
+                detail.enabled() && !detail.apiKeys().isEmpty(),
+                maskedKey,
+                maskedKey,
+                detail.baseUrl(),
+                detail.defaultModel(),
+                detail.timeoutMs(),
+                detail.maxRetries(),
+                detail.temperature(),
+                detail.configSource(),
+                detail.healthStatus(),
+                detail.healthMessage(),
+                detail.editable(),
+                detail.configSource() == AiProviderConfigSource.ENV,
+                !detail.apiKeys().isEmpty()
         );
     }
 
     @Transactional
-    public AiProviderSettingsDtos.AiProviderSettingsSummary update(AiProviderType provider,
+    public AiProviderSettingsDtos.AiProviderSettingsSummary update(AiProviderType providerType,
                                                                   AiProviderSettingsDtos.UpdateAiProviderSettingsRequest request) {
-        if (appProperties.getAi().getConfigMode() == AiConfigMode.ENV) {
-            throw new BusinessException("当前配置来自环境变量；如需在页面中托管密钥，请配置数据库加密主密钥并切换到数据库模式");
-        }
+        AiProviderAdminDtos.ProviderDetail detail = providerService.listProviders().stream()
+                .filter(provider -> provider.providerType() == providerType && provider.deletable())
+                .findFirst()
+                .orElseGet(() -> providerService.create(new AiProviderAdminDtos.CreateProviderRequest(
+                        providerType.defaultDisplayName(),
+                        providerType,
+                        null,
+                        AiBaseUrlMode.ROOT,
+                        false,
+                        providerType.supportsEnvFallback() ? AiProviderConfigSource.HYBRID : AiProviderConfigSource.DB
+                )));
 
-        AiProviderSettingsEntity entity = repository.findByProvider(provider)
-                .orElseGet(() -> AiProviderSettingsEntity.builder()
-                        .provider(provider)
-                        .enabled(false)
-                        .configSource(AiProviderConfigSource.DB)
-                        .build());
-
-        boolean enabled = request.enabled() != null ? request.enabled() : entity.isEnabled();
-        entity.setEnabled(enabled);
-        entity.setBaseUrl(trimOrDefault(request.baseUrl(), entity.getBaseUrl(), catalogService.defaultBaseUrl(provider)));
-        entity.setDefaultModel(trimOrDefault(request.defaultModel(), entity.getDefaultModel(), catalogService.defaultModel(provider)));
-        entity.setTimeoutMs(request.timeoutMs() != null ? request.timeoutMs() : defaultInt(entity.getTimeoutMs(), catalogService.defaultTimeoutMs()));
-        entity.setMaxRetries(request.maxRetries() != null ? request.maxRetries() : defaultInt(entity.getMaxRetries(), catalogService.defaultMaxRetries()));
-        entity.setTemperature(request.temperature() != null ? request.temperature() : defaultDouble(entity.getTemperature(), catalogService.defaultTemperature(provider)));
-        entity.setConfigSource(AiProviderConfigSource.DB);
+        providerService.update(detail.id(), new AiProviderAdminDtos.UpdateProviderRequest(
+                null,
+                request.enabled(),
+                AiKeyRotationStrategy.SEQUENTIAL_ROUND_ROBIN,
+                request.baseUrl(),
+                AiBaseUrlMode.ROOT,
+                request.defaultModel(),
+                request.timeoutMs(),
+                request.maxRetries(),
+                request.temperature(),
+                null,
+                providerType.supportsEnvFallback() ? AiProviderConfigSource.HYBRID : AiProviderConfigSource.DB
+        ));
 
         if (request.shouldClearApiKey()) {
-            entity.setApiKeyEncrypted(null);
-            entity.setApiKeyMask(null);
+            detail.apiKeys().forEach(key -> providerService.deleteKey(detail.id(), key.id()));
         } else if (request.hasApiKeyInput()) {
-            if (!cryptoService.canPersistSecrets()) {
-                throw new BusinessException("未配置 AI_SECRET_ENCRYPTION_KEY，当前实例不能托管数据库密钥");
+            if (detail.apiKeys().isEmpty()) {
+                providerService.addKey(detail.id(), new AiProviderAdminDtos.CreateApiKeyRequest(request.apiKey(), true));
+            } else {
+                providerService.updateKey(detail.id(), detail.apiKeys().get(0).id(), new AiProviderAdminDtos.UpdateApiKeyRequest(
+                        AiProviderAdminDtos.SecretAction.REPLACE,
+                        request.apiKey(),
+                        true,
+                        detail.apiKeys().get(0).sortOrder()
+                ));
             }
-            String apiKey = request.apiKey().trim();
-            entity.setApiKeyEncrypted(cryptoService.encrypt(apiKey));
-            entity.setApiKeyMask(cryptoService.mask(apiKey));
         }
-
-        if (entity.isEnabled() && (entity.getApiKeyEncrypted() == null || entity.getApiKeyEncrypted().isBlank())) {
-            throw new BusinessException("启用数据库配置时必须提供 API Key，或保留现有已保存的 Key");
-        }
-
-        if (!entity.isEnabled() && request.shouldClearApiKey()) {
-            entity.setLastHealthStatus(AiProviderHealthStatus.UNAVAILABLE);
-            entity.setLastHealthMessage("数据库密钥已清空");
-        }
-
-        repository.save(entity);
-        return getProviderSummary(provider);
+        return getProviderSummary(providerType);
     }
 
-    public AiProviderSettingsDtos.AiProviderModelListResponse models(AiProviderType provider) {
-        ResolvedAiProviderConfig resolved = resolver.resolve(provider);
+    public AiProviderSettingsDtos.AiProviderModelListResponse models(AiProviderType providerType) {
+        AiProviderAdminDtos.ProviderDetail detail = providerService.listProviders().stream()
+                .filter(provider -> provider.providerType() == providerType)
+                .findFirst()
+                .orElse(null);
+        if (detail == null) {
+            return new AiProviderSettingsDtos.AiProviderModelListResponse(
+                    providerType,
+                    null,
+                    List.of()
+            );
+        }
         return new AiProviderSettingsDtos.AiProviderModelListResponse(
-                provider,
-                resolved.defaultModel(),
-                catalogService.models(provider, resolved.defaultModel())
+                providerType,
+                detail.defaultModel(),
+                resolverModels(detail.id())
         );
     }
 
-    private String trimOrDefault(String candidate, String current, String fallback) {
-        String value = candidate == null ? current : candidate;
-        if (value == null || value.isBlank()) {
-            return fallback;
-        }
-        return value.trim();
+    public AiProviderHealthResult test(AiProviderType providerType) {
+        AiProviderAdminDtos.ProviderDetail detail = providerService.listProviders().stream()
+                .filter(provider -> provider.providerType() == providerType)
+                .findFirst()
+                .orElseThrow(() -> new BusinessException("Provider 未配置"));
+        return healthService.test(detail.id());
     }
 
-    private int defaultInt(Integer candidate, int fallback) {
-        return candidate == null ? fallback : candidate;
-    }
-
-    private double defaultDouble(Double candidate, double fallback) {
-        return candidate == null ? fallback : candidate;
+    private List<AiQuestionDtos.AiModelConfig> resolverModels(String providerId) {
+        return providerService.listProviders().stream()
+                .filter(provider -> provider.id() != null && provider.id().equals(providerId))
+                .findFirst()
+                .map(provider -> provider.models().stream()
+                        .map(model -> new AiQuestionDtos.AiModelConfig(
+                                model.modelId(),
+                                model.displayName(),
+                                model.modelId().equals(provider.defaultModel())
+                        ))
+                        .toList())
+                .orElse(List.of());
     }
 }
