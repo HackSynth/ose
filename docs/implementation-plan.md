@@ -11,6 +11,15 @@
 - 响应式落地：题库页移动端不再压缩表格，改为卡片列表展示与操作按钮。
 - 样式收口：补齐全局变量映射到 Element Plus token，减少页面内散落的临时色值依赖风险。
 
+## UI 重构阶段 2（已完成）
+- 新增通用页面结构组件：`PageSection`（统一区块卡片）、`PageActionGroup`（统一操作区按钮布局）。
+- 全局样式补充统一规范：`business-card`、`form-action-bar`、`dialog-footer` 等基础规则集中到 `base.css`。
+- 页面接入范围：
+  - 视图：`settings`、`plans`、`knowledge`、`mistakes`、`notes`、`ai question center`
+  - 业务组件：`dashboard/*`、`exam/ExamCreateCard`、`exam/ExamListCard`、`exam/ExamHistoryCard`、`practice/PracticeFormCard`
+  - 题库子组件：筛选区、表格区、移动卡片区统一切换到通用区块组件
+- 结果：减少页面内重复卡片头部/按钮区/表单布局样式，提升后续页面改造复用效率。
+
 ## AI 出题专项（本轮新增）
 ### 阶段 A：最小可用版本（已完成）
 - 新增统一 Provider 抽象层：`AiProviderClient`、`OpenAiProviderClient`、`AnthropicProviderClient`

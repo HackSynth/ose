@@ -1,10 +1,7 @@
 <template>
-  <el-card class="business-card" shadow="never">
-    <template #header>
-      <div class="card-header">
-        <span class="card-title">错题复习提醒</span>
-        <el-button link type="primary" @click="$emit('view-all')">查看错题本</el-button>
-      </div>
+  <PageSection title="错题复习提醒">
+    <template #actions>
+      <el-button link type="primary" @click="$emit('view-all')">查看错题本</el-button>
     </template>
     
     <el-empty v-if="!reminders?.length" description="当前没有到期错题" :image-size="80" />
@@ -20,10 +17,12 @@
         <el-tag type="warning" size="small" effect="light">{{ item.nextReviewAt }}</el-tag>
       </div>
     </div>
-  </el-card>
+  </PageSection>
 </template>
 
 <script setup lang="ts">
+import PageSection from '@/components/ui/layout/PageSection.vue';
+
 defineProps<{
   reminders: any[];
 }>();
@@ -32,20 +31,6 @@ defineEmits(['view-all']);
 </script>
 
 <style scoped>
-.business-card {
-  height: 100%;
-}
-
-.card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.card-title {
-  font-weight: 700;
-  color: var(--text-primary);
-}
 
 .reminder-list {
   display: flex;
@@ -55,8 +40,8 @@ defineEmits(['view-all']);
 
 .reminder-item {
   padding: var(--space-3);
-  background: var(--bg-app);
-  border: 1px solid var(--border-light);
+  background: var(--el-fill-color-extra-light);
+  border: 1px solid var(--el-border-color-lighter);
   border-radius: var(--radius-md);
   display: flex;
   justify-content: space-between;
@@ -66,7 +51,7 @@ defineEmits(['view-all']);
 }
 
 .reminder-item:hover {
-  border-color: var(--color-primary);
+  border-color: var(--el-color-primary-light-7);
 }
 
 .reminder-main {
@@ -76,7 +61,7 @@ defineEmits(['view-all']);
 
 .reminder-title {
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--el-text-color-primary);
   font-size: 14px;
   white-space: nowrap;
   overflow: hidden;
@@ -84,7 +69,7 @@ defineEmits(['view-all']);
 }
 
 .reminder-subtitle {
-  color: var(--text-secondary);
+  color: var(--el-text-color-regular);
   font-size: 12px;
   margin-top: 4px;
 }

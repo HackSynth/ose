@@ -5,7 +5,7 @@
       description="维护软件设计师备考的上午卷（单选）与下午卷（案例），支持批量导入导出与知识点关联。"
     >
       <template #actions>
-        <div class="page-actions">
+        <PageActionGroup>
           <el-dropdown trigger="click">
             <el-button>
               导入 / 导出
@@ -27,7 +27,7 @@
           </el-upload>
 
           <el-button type="primary" @click="openCreate">新增单道题目</el-button>
-        </div>
+        </PageActionGroup>
       </template>
     </PageHeader>
 
@@ -75,6 +75,7 @@ import { ArrowDown } from '@element-plus/icons-vue';
 import { api } from '@/api';
 import { useMobile } from '@/composables/useMobile';
 import PageHeader from '@/components/ui/layout/PageHeader.vue';
+import PageActionGroup from '@/components/ui/layout/PageActionGroup.vue';
 import QuestionFilterForm from '@/components/business/questions/QuestionFilterForm.vue';
 import QuestionTableSection from '@/components/business/questions/QuestionTableSection.vue';
 import QuestionMobileList from '@/components/business/questions/QuestionMobileList.vue';
@@ -228,17 +229,4 @@ const uploadFile = async (options: UploadRequestOptions) => {
 onMounted(load);
 </script>
 
-<style scoped>
-.page-actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: var(--space-2);
-}
-
-@media (max-width: 767px) {
-  .page-actions {
-    width: 100%;
-  }
-}
-</style>
+<style scoped></style>

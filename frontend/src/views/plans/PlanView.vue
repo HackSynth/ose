@@ -5,21 +5,23 @@
       description="基于考试大纲与您的目标日期，自动生成阶段性备考计划，并支持动态重排与任务追踪。"
     >
       <template #actions>
-        <el-button 
-          data-testid="plan-rebalance-button" 
-          :loading="loading" 
-          @click="rebalance"
-        >
-          重排延期任务
-        </el-button>
-        <el-button 
-          type="primary" 
-          data-testid="plan-generate-button" 
-          :loading="loading" 
-          @click="generate"
-        >
-          重新生成全量计划
-        </el-button>
+        <PageActionGroup>
+          <el-button 
+            data-testid="plan-rebalance-button" 
+            :loading="loading" 
+            @click="rebalance"
+          >
+            重排延期任务
+          </el-button>
+          <el-button 
+            type="primary" 
+            data-testid="plan-generate-button" 
+            :loading="loading" 
+            @click="generate"
+          >
+            重新生成全量计划
+          </el-button>
+        </PageActionGroup>
       </template>
     </PageHeader>
 
@@ -29,10 +31,9 @@
       <StatCard data-testid="plan-total-hours-card" title="累计学习时长" :value="`${plan.totalHours} 小时`" hint="基于每周投入时间估算" />
     </div>
 
-    <el-card class="business-card" shadow="never">
-      <template #header>
-        <div class="card-header">
-          <span class="card-title">备考路线图任务列表</span>
+    <PageSection title="备考路线图任务列表">
+      <template #actions>
+        <div class="card-header-actions">
           <el-tag data-testid="plan-task-count" effect="plain" round>{{ plan?.tasks?.length || 0 }} 项</el-tag>
         </div>
       </template>
@@ -70,7 +71,7 @@
           </template>
         </el-table-column>
       </el-table>
-    </el-card>
+    </PageSection>
   </div>
 </template>
 
@@ -79,7 +80,9 @@ import { onMounted, ref } from 'vue';
 import { ElMessage } from 'element-plus';
 import dayjs from 'dayjs';
 import { api } from '@/api';
+import PageActionGroup from '@/components/ui/layout/PageActionGroup.vue';
 import PageHeader from '@/components/ui/layout/PageHeader.vue';
+import PageSection from '@/components/ui/layout/PageSection.vue';
 import StatCard from '@/components/business/common/StatCard.vue';
 
 const loading = ref(false);
@@ -142,15 +145,9 @@ onMounted(load);
 </script>
 
 <style scoped>
-.card-header {
+.card-header-actions {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-}
-
-.card-title {
-  font-weight: 700;
-  color: var(--text-primary);
 }
 
 .task-title-cell {
@@ -161,11 +158,11 @@ onMounted(load);
 
 .task-title {
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--el-text-color-primary);
 }
 
 .task-type {
   font-size: 11px;
-  color: var(--text-tertiary);
+  color: var(--el-text-color-secondary);
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <el-card shadow="never">
+  <PageSection>
     <el-table :data="rows" stripe v-loading="loading" style="width: 100%;">
       <el-table-column prop="title" label="题目名称" min-width="240">
         <template #default="{ row }">
@@ -45,10 +45,12 @@
     </el-table>
 
     <el-empty v-if="!loading && rows.length === 0" description="暂无题目数据" :image-size="100" />
-  </el-card>
+  </PageSection>
 </template>
 
 <script setup lang="ts">
+import PageSection from '@/components/ui/layout/PageSection.vue';
+
 defineProps<{
   rows: any[];
   loading: boolean;

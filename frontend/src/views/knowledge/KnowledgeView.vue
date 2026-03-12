@@ -5,17 +5,19 @@
       description="维护软件设计师备考知识树，细化各个章节考点，并实时追踪您的掌握度与学习笔记。"
     >
       <template #actions>
-        <el-button 
-          type="primary" 
-          data-testid="knowledge-create-root" 
-          @click="openCreate(null)"
-        >
-          新增根节点
-        </el-button>
+        <PageActionGroup>
+          <el-button 
+            type="primary" 
+            data-testid="knowledge-create-root" 
+            @click="openCreate(null)"
+          >
+            新增根节点
+          </el-button>
+        </PageActionGroup>
       </template>
     </PageHeader>
 
-    <el-card class="business-card" shadow="never">
+    <PageSection>
       <el-tree 
         data-testid="knowledge-tree" 
         :data="tree" 
@@ -44,7 +46,7 @@
           </div>
         </template>
       </el-tree>
-    </el-card>
+    </PageSection>
 
     <el-dialog 
       v-model="dialogVisible" 
@@ -99,7 +101,9 @@
 import { computed, onMounted, reactive, ref } from 'vue';
 import { ElMessage, ElMessageBox } from 'element-plus';
 import { api } from '@/api';
+import PageActionGroup from '@/components/ui/layout/PageActionGroup.vue';
 import PageHeader from '@/components/ui/layout/PageHeader.vue';
+import PageSection from '@/components/ui/layout/PageSection.vue';
 
 const tree = ref<any[]>([]);
 const dialogVisible = ref(false);
@@ -180,7 +184,7 @@ onMounted(load);
 .knowledge-tree :deep(.el-tree-node__content) {
   height: auto;
   padding: var(--space-2) 0;
-  border-bottom: 1px solid var(--bg-app);
+  border-bottom: 1px solid var(--el-border-color-lighter);
 }
 
 .tree-node {
@@ -200,26 +204,26 @@ onMounted(load);
 .node-code {
   font-size: 11px;
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--el-color-primary);
   font-family: monospace;
 }
 
 .node-name {
   font-size: 15px;
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--el-text-color-primary);
 }
 
 .node-meta {
   font-size: 12px;
-  color: var(--text-tertiary);
+  color: var(--el-text-color-secondary);
   display: flex;
   align-items: center;
   gap: var(--space-2);
 }
 
 .mastery {
-  color: var(--text-secondary);
+  color: var(--el-text-color-regular);
   font-weight: 500;
 }
 
@@ -227,12 +231,6 @@ onMounted(load);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-4);
-}
-
-.dialog-footer {
-  display: flex;
-  justify-content: flex-end;
-  gap: var(--space-3);
 }
 
 @media (max-width: 640px) {

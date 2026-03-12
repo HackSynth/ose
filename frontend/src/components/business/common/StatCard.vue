@@ -1,5 +1,5 @@
 <template>
-  <el-card class="stat-card" shadow="hover">
+  <el-card class="business-card stat-card" shadow="never">
     <div class="stat-content">
       <span class="stat-title">{{ title }}</span>
       <div class="stat-value">{{ value }}</div>
@@ -18,14 +18,7 @@ defineProps<{
 
 <style scoped>
 .stat-card {
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border-light);
-  transition: all 0.2s ease;
-}
-
-.stat-card:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  min-height: 108px;
 }
 
 .stat-content {
@@ -35,20 +28,19 @@ defineProps<{
 }
 
 .stat-title {
-  color: var(--text-secondary);
+  color: var(--el-text-color-regular);
   font-size: 14px;
   font-weight: 500;
 }
 
 .stat-value {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
-  color: var(--text-primary);
-  letter-spacing: -0.5px;
+  color: var(--el-text-color-primary);
 }
 
 .stat-hint {
-  color: var(--text-tertiary);
+  color: var(--el-text-color-secondary);
   font-size: 12px;
 }
 </style>

@@ -1,11 +1,5 @@
 <template>
-  <el-card class="business-card" shadow="never">
-    <template #header>
-      <div class="card-header">
-        <span class="card-title">可用的模拟卷</span>
-      </div>
-    </template>
-    
+  <PageSection title="可用的模拟卷">
     <el-table :data="exams" stripe data-testid="exam-list-table">
       <el-table-column prop="name" label="模拟卷名称" min-width="180">
         <template #default="{ row }">
@@ -35,10 +29,12 @@
         </template>
       </el-table-column>
     </el-table>
-  </el-card>
+  </PageSection>
 </template>
 
 <script setup lang="ts">
+import PageSection from '@/components/ui/layout/PageSection.vue';
+
 defineProps<{
   exams: any[];
 }>();
@@ -47,11 +43,6 @@ defineEmits(['start']);
 </script>
 
 <style scoped>
-.card-title {
-  font-weight: 700;
-  color: var(--text-primary);
-}
-
 .exam-name-cell {
   display: flex;
   flex-direction: column;
@@ -60,6 +51,6 @@ defineEmits(['start']);
 
 .exam-name {
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--el-text-color-primary);
 }
 </style>

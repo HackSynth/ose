@@ -1,19 +1,19 @@
 <template>
-  <div class="page-container">
-    <div class="page-header">
-      <div>
-        <h2 style="margin:0;">学习笔记</h2>
-        <p style="margin:6px 0 0;color:#64748b;">支持 Markdown、收藏、搜索和关联知识点 / 题目。</p>
-      </div>
-      <div style="display:flex;gap:8px;">
-        <el-input v-model="keyword" placeholder="搜索笔记" clearable @change="load" style="width:260px;" />
-        <el-button type="primary" @click="openCreate">新增笔记</el-button>
-      </div>
-    </div>
+  <div class="page-container" data-testid="notes-page">
+    <PageHeader
+      title="学习笔记"
+      description="支持 Markdown、收藏、搜索和关联知识点 / 题目。"
+    >
+      <template #actions>
+        <PageActionGroup>
+          <el-input v-model="keyword" placeholder="搜索笔记" clearable @change="load" class="keyword-input" />
+          <el-button type="primary" @click="openCreate">新增笔记</el-button>
+        </PageActionGroup>
+      </template>
+    </PageHeader>
 
     <div class="split-layout">
-      <el-card class="panel-card">
-        <template #header><span>笔记列表</span></template>
+      <PageSection title="笔记列表">
         <el-table :data="rows" stripe>
           <el-table-column prop="title" label="标题" min-width="220" />
           <el-table-column prop="summary" label="摘要" min-width="260" />
@@ -27,14 +27,20 @@
             </template>
           </el-table-column>
         </el-table>
-      </el-card>
-      <el-card class="panel-card">
-        <template #header><span>Markdown 预览</span></template>
-        <div v-html="previewHtml" style="min-height:320px;"></div>
-      </el-card>
+      </PageSection>
+
+      <PageSection title="Markdown 预览">
+        <div class="markdown-preview" v-html="previewHtml"></div>
+      </PageSection>
     </div>
 
-    <el-dialog v-model="visible" :title="editingId ? '编辑笔记' : '新增笔记'" width="960px">
+    <el-dialog
+      v-model="visible"
+      :title="editingId ? '编辑笔记' : '新增笔记'"
+      :width="isMobile ? '100%' : '960px'"
+      :fullscreen="isMobile"
+      destroy-on-close
+    >
       <div class="split-layout">
         <div>
           <el-form label-position="top" :model="form">
@@ -43,8 +49,8 @@
             <el-form-item label="内容（Markdown）"><el-input v-model="form.content" type="textarea" :rows="14" /></el-form-item>
             <el-form-item label="收藏"><el-switch v-model="form.favorite" /></el-form-item>
             <el-form-item label="关联项">
-              <div style="display:flex;flex-direction:column;gap:8px;width:100%;">
-                <div v-for="(link, index) in form.links" :key="index" style="display:grid;grid-template-columns:140px 1fr 80px;gap:8px;">
+              <div class="link-editor">
+                <div v-for="(link, index) in form.links" :key="index" class="link-row">
                   <el-select v-model="link.linkType">
                     <el-option label="知识点" value="KNOWLEDGE" />
                     <el-option label="题目" value="QUESTION" />
@@ -60,14 +66,17 @@
             </el-form-item>
           </el-form>
         </div>
+
         <div>
-          <div style="font-weight:600;margin-bottom:12px;">实时预览</div>
-          <div v-html="previewHtml" style="border:1px solid #e5e7eb;border-radius:12px;padding:16px;min-height:400px;background:#fff;"></div>
+          <div class="preview-title">实时预览</div>
+          <div class="preview-panel" v-html="previewHtml"></div>
         </div>
       </div>
       <template #footer>
-        <el-button @click="visible = false">取消</el-button>
-        <el-button type="primary" @click="save">保存</el-button>
+        <div class="dialog-footer">
+          <el-button @click="visible = false">取消</el-button>
+          <el-button type="primary" @click="save">保存</el-button>
+        </div>
       </template>
     </el-dialog>
   </div>
@@ -78,7 +87,12 @@ import { computed, onMounted, reactive, ref } from 'vue';
 import { marked } from 'marked';
 import { ElMessage, ElMessageBox } from 'element-plus';
 import { api } from '@/api';
+import { useMobile } from '@/composables/useMobile';
+import PageActionGroup from '@/components/ui/layout/PageActionGroup.vue';
+import PageHeader from '@/components/ui/layout/PageHeader.vue';
+import PageSection from '@/components/ui/layout/PageSection.vue';
 
+const { isMobile } = useMobile();
 const rows = ref<any[]>([]);
 const keyword = ref('');
 const visible = ref(false);
@@ -145,3 +159,49 @@ const removeNote = async (id: number) => {
 
 onMounted(load);
 </script>
+
+<style scoped>
+.keyword-input {
+  width: 260px;
+}
+
+.markdown-preview {
+  min-height: 320px;
+}
+
+.link-editor {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  width: 100%;
+}
+
+.link-row {
+  display: grid;
+  grid-template-columns: 140px 1fr 80px;
+  gap: var(--space-2);
+}
+
+.preview-title {
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+}
+
+.preview-panel {
+  border: 1px solid var(--el-border-color-lighter);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  min-height: 400px;
+  background: var(--el-bg-color);
+}
+
+@media (max-width: 767px) {
+  .keyword-input {
+    width: 100%;
+  }
+
+  .link-row {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

@@ -5,24 +5,26 @@
       description="自动沉淀错题，结合艾宾浩斯遗忘曲线，按错因与复习状态持续推进掌握程度。"
     >
       <template #actions>
-        <el-select 
-          v-model="status" 
-          data-testid="mistakes-status-filter" 
-          clearable 
-          placeholder="按复习状态筛选" 
-          style="width:200px;" 
-          @change="load"
-        >
-          <el-option label="新错题 (NEW)" value="NEW" />
-          <el-option label="准备复习 (READY)" value="READY" />
-          <el-option label="已复习 (REVIEWED)" value="REVIEWED" />
-          <el-option label="已掌握 (MASTERED)" value="MASTERED" />
-        </el-select>
-        <el-button type="primary" plain @click="load">刷新</el-button>
+        <PageActionGroup>
+          <el-select 
+            v-model="status" 
+            data-testid="mistakes-status-filter" 
+            clearable 
+            placeholder="按复习状态筛选" 
+            style="width:200px;" 
+            @change="load"
+          >
+            <el-option label="新错题 (NEW)" value="NEW" />
+            <el-option label="准备复习 (READY)" value="READY" />
+            <el-option label="已复习 (REVIEWED)" value="REVIEWED" />
+            <el-option label="已掌握 (MASTERED)" value="MASTERED" />
+          </el-select>
+          <el-button type="primary" plain @click="load">刷新</el-button>
+        </PageActionGroup>
       </template>
     </PageHeader>
 
-    <el-card class="business-card" shadow="never">
+    <PageSection>
       <el-table :data="rows" stripe data-testid="mistakes-table" style="width: 100%">
         <el-table-column prop="questionTitle" label="题目描述" min-width="280">
           <template #default="{ row }">
@@ -58,7 +60,7 @@
           </template>
         </el-table-column>
       </el-table>
-    </el-card>
+    </PageSection>
 
     <el-dialog v-model="visible" title="更新错题复习计划" width="520px" destroy-on-close>
       <el-form label-position="top" :model="form" data-testid="mistake-form">
@@ -108,6 +110,8 @@ import { onMounted, reactive, ref } from 'vue';
 import { ElMessage } from 'element-plus';
 import { api } from '@/api';
 import PageHeader from '@/components/ui/layout/PageHeader.vue';
+import PageActionGroup from '@/components/ui/layout/PageActionGroup.vue';
+import PageSection from '@/components/ui/layout/PageSection.vue';
 
 const rows = ref<any[]>([]);
 const status = ref('');
@@ -162,12 +166,6 @@ onMounted(load);
 
 .review-count {
   font-weight: 700;
-  color: var(--color-primary);
-}
-
-.dialog-footer {
-  display: flex;
-  justify-content: flex-end;
-  gap: var(--space-3);
+  color: var(--el-color-primary);
 }
 </style>

@@ -1,11 +1,5 @@
 <template>
-  <el-card class="business-card" shadow="never">
-    <template #header>
-      <div class="card-header">
-        <span class="card-title">历史记录</span>
-      </div>
-    </template>
-    
+  <PageSection title="历史记录">
     <el-table :data="attempts" stripe data-testid="exam-attempt-table">
       <el-table-column prop="examName" label="模拟卷名称" min-width="180">
         <template #default="{ row }">
@@ -44,10 +38,12 @@
         </template>
       </el-table-column>
     </el-table>
-  </el-card>
+  </PageSection>
 </template>
 
 <script setup lang="ts">
+import PageSection from '@/components/ui/layout/PageSection.vue';
+
 defineProps<{
   attempts: any[];
 }>();
@@ -56,11 +52,6 @@ defineEmits(['view']);
 </script>
 
 <style scoped>
-.card-title {
-  font-weight: 700;
-  color: var(--text-primary);
-}
-
 .exam-name-cell {
   display: flex;
   flex-direction: column;
@@ -69,7 +60,7 @@ defineEmits(['view']);
 
 .exam-name {
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--el-text-color-primary);
 }
 
 .score-value {
@@ -77,6 +68,6 @@ defineEmits(['view']);
 }
 
 .score-value.is-high {
-  color: var(--color-success);
+  color: var(--el-color-success);
 }
 </style>

@@ -5,24 +5,23 @@
       description="管理考试目标、通过阈值、学习偏好，以及整包导入导出能力。"
     >
       <template #actions>
-        <el-button data-testid="settings-health-button" @click="checkHealth">健康检查</el-button>
-        <el-button data-testid="settings-export-button" @click="exportAll">导出全量数据</el-button>
-        <el-button 
-          type="primary" 
-          data-testid="settings-save-button" 
-          :loading="saving" 
-          @click="save"
-        >
-          保存所有设置
-        </el-button>
+        <PageActionGroup>
+          <el-button data-testid="settings-health-button" @click="checkHealth">健康检查</el-button>
+          <el-button data-testid="settings-export-button" @click="exportAll">导出全量数据</el-button>
+          <el-button 
+            type="primary" 
+            data-testid="settings-save-button" 
+            :loading="saving" 
+            @click="save"
+          >
+            保存所有设置
+          </el-button>
+        </PageActionGroup>
       </template>
     </PageHeader>
 
     <el-form label-position="top" :model="form" data-testid="settings-form">
-      <el-card class="business-card" shadow="never">
-        <template #header>
-          <span class="card-title">基本备考配置</span>
-        </template>
+      <PageSection title="基本备考配置">
         <div class="form-grid">
           <el-form-item label="目标考试日期" required>
             <div data-testid="settings-exam-date">
@@ -62,13 +61,10 @@
             <el-input v-model="intervalText" placeholder="默认推荐: 1,3,7,14" />
           </div>
         </el-form-item>
-      </el-card>
+      </PageSection>
     </el-form>
 
-    <el-card class="business-card import-export-card" shadow="never" data-testid="settings-import-panel">
-      <template #header>
-        <span class="card-title">整包数据迁移 (JSON)</span>
-      </template>
+    <PageSection title="整包数据迁移 (JSON)" data-testid="settings-import-panel">
       <div class="import-layout">
         <div class="import-controls">
           <el-form-item label="重复数据处理策略" class="strategy-item">
@@ -79,7 +75,7 @@
               </el-select>
             </div>
           </el-form-item>
-          <div class="action-group">
+          <PageActionGroup>
             <el-button data-testid="settings-import-template-button" @click="downloadTemplate">下载标准模板</el-button>
             <el-upload
               :show-file-list="false"
@@ -90,7 +86,7 @@
                 上传 JSON 文件并执行导入
               </el-button>
             </el-upload>
-          </div>
+          </PageActionGroup>
         </div>
         <el-alert
           title="数据迁移说明"
@@ -100,20 +96,18 @@
           description="该功能允许您备份或恢复整个备考环境，包括知识点、题库、学习计划和笔记。导入前建议先执行“导出数据”进行备份。"
         />
       </div>
-    </el-card>
+    </PageSection>
 
     <div class="summary-grid">
-      <el-card class="business-card" shadow="never" data-testid="settings-summary">
-        <template #header><span class="card-title">计划核心参数摘要</span></template>
+      <PageSection title="计划核心参数摘要" data-testid="settings-summary">
         <div class="card-grid">
           <StatCard data-testid="settings-summary-exam-date" title="最终考试日" :value="form.examDate || '未设置'" hint="倒计时基准" />
           <StatCard data-testid="settings-summary-weekly-hours" title="周投入时间" :value="`${form.weeklyStudyHours || 0} 小时`" hint="任务强度依据" />
           <StatCard data-testid="settings-summary-intervals" title="复习节奏" :value="intervalText || '-'" hint="艾宾浩斯曲线" />
         </div>
-      </el-card>
+      </PageSection>
 
-      <el-card v-if="importResult" class="business-card" shadow="never" data-testid="settings-import-result">
-        <template #header><span class="card-title">最近导入概览</span></template>
+      <PageSection v-if="importResult" title="最近导入概览" data-testid="settings-import-result">
         <div class="card-grid">
           <StatCard title="知识点变动" :value="summaryText(importResult.knowledgePoints)" hint="新增 / 更新 / 跳过" />
           <StatCard title="题库变动" :value="summaryText(importResult.questions)" hint="新增 / 更新 / 跳过" />
@@ -131,7 +125,7 @@
             class="feedback-item"
           />
         </div>
-      </el-card>
+      </PageSection>
     </div>
   </div>
 </template>
@@ -141,6 +135,8 @@ import { onMounted, reactive, ref } from 'vue';
 import { ElMessage, type UploadRequestOptions } from 'element-plus';
 import { api } from '@/api';
 import PageHeader from '@/components/ui/layout/PageHeader.vue';
+import PageActionGroup from '@/components/ui/layout/PageActionGroup.vue';
+import PageSection from '@/components/ui/layout/PageSection.vue';
 import StatCard from '@/components/business/common/StatCard.vue';
 import { downloadJson, normalizeIntervals } from '@/utils';
 
@@ -219,11 +215,6 @@ onMounted(load);
 </script>
 
 <style scoped>
-.card-title {
-  font-weight: 700;
-  color: var(--text-primary);
-}
-
 .form-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -270,17 +261,6 @@ onMounted(load);
   text-overflow: ellipsis;
 }
 
-.action-group {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
-  flex-wrap: wrap;
-}
-
-.action-group :deep(.el-button) {
-  min-height: 40px;
-}
-
 .summary-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -297,12 +277,5 @@ onMounted(load);
 
 .feedback-item {
   border-radius: var(--radius-md);
-}
-
-@media (max-width: 768px) {
-  .action-group {
-    flex-direction: column;
-    align-items: stretch;
-  }
 }
 </style>

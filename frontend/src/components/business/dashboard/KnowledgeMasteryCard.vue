@@ -1,10 +1,5 @@
 <template>
-  <el-card class="business-card" shadow="never">
-    <template #header>
-      <div class="card-header">
-        <span class="card-title">知识域掌握度</span>
-      </div>
-    </template>
+  <PageSection title="知识域掌握度">
     <div class="mastery-list">
       <div v-for="item in knowledgeOverview" :key="item.name" class="mastery-item">
         <div class="mastery-info">
@@ -18,25 +13,18 @@
         />
       </div>
     </div>
-  </el-card>
+  </PageSection>
 </template>
 
 <script setup lang="ts">
+import PageSection from '@/components/ui/layout/PageSection.vue';
+
 defineProps<{
   knowledgeOverview: any[];
 }>();
 </script>
 
 <style scoped>
-.business-card {
-  height: 100%;
-}
-
-.card-title {
-  font-weight: 700;
-  color: var(--text-primary);
-}
-
 .mastery-list {
   display: flex;
   flex-direction: column;
@@ -52,11 +40,11 @@ defineProps<{
 .mastery-name {
   font-size: 14px;
   font-weight: 500;
-  color: var(--text-primary);
+  color: var(--el-text-color-primary);
 }
 
 .mastery-value {
   font-size: 13px;
-  color: var(--text-secondary);
+  color: var(--el-text-color-regular);
 }
 </style>

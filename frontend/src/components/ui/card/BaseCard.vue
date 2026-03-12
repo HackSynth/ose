@@ -1,5 +1,5 @@
 <template>
-  <el-card class="ui-card" :shadow="shadow" :body-style="bodyStyle">
+  <el-card class="business-card ui-card" :shadow="shadow" :body-style="bodyStyle">
     <template v-if="$slots.header" #header>
       <div class="card-header">
         <slot name="header"></slot>
@@ -19,14 +19,8 @@ withDefaults(defineProps<{
 </script>
 
 <style scoped>
-.ui-card {
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border-light);
-  background-color: var(--bg-surface);
-}
-
 .card-header {
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--el-text-color-primary);
 }
 </style>

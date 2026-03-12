@@ -1,5 +1,5 @@
 <template>
-  <el-card shadow="never" class="filter-card">
+  <PageSection class="filter-card">
     <el-form :model="filters" label-width="76px" label-position="left">
       <el-row :gutter="12">
         <el-col :xs="24" :sm="12" :md="8" :lg="6">
@@ -65,11 +65,12 @@
         </el-col>
       </el-row>
     </el-form>
-  </el-card>
+  </PageSection>
 </template>
 
 <script setup lang="ts">
 import { Search } from '@element-plus/icons-vue';
+import PageSection from '@/components/ui/layout/PageSection.vue';
 
 defineProps<{
   filters: any;

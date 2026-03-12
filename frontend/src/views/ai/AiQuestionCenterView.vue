@@ -13,7 +13,7 @@
       class="warn-alert"
     />
 
-    <el-card class="business-card" shadow="never">
+    <PageSection>
       <el-form label-position="top" :model="form">
         <div class="form-grid">
           <el-form-item label="AI 提供商">
@@ -91,16 +91,16 @@
           <el-input v-model="form.additionalRequirement" type="textarea" :rows="2" placeholder="例如强调事务隔离、UML 建模等" />
         </el-form-item>
 
-        <div class="actions">
+        <PageActionGroup>
           <el-button type="primary" :loading="generating" data-testid="ai-generate" @click="generate">提交生成</el-button>
           <el-button :disabled="!drafts.length" data-testid="ai-regenerate" @click="generate">重新生成</el-button>
           <el-button :disabled="!drafts.length" data-testid="ai-discard" @click="discard">丢弃结果</el-button>
           <el-button :disabled="!drafts.length" data-testid="ai-save" @click="saveAll">保存到题库</el-button>
-        </div>
+        </PageActionGroup>
       </el-form>
-    </el-card>
+    </PageSection>
 
-    <el-card class="business-card" shadow="never">
+    <PageSection>
       <template #header>
         <div class="preview-header">
           <span>结果预览（{{ drafts.length }} 题）</span>
@@ -177,10 +177,9 @@
           </el-form>
         </el-card>
       </div>
-    </el-card>
+    </PageSection>
 
-    <el-card class="business-card" shadow="never">
-      <template #header>生成历史</template>
+    <PageSection title="生成历史">
       <el-table :data="historyRows" size="small" data-testid="ai-history-table">
         <el-table-column prop="id" label="ID" width="80" />
         <el-table-column prop="provider" label="Provider" width="120" />
@@ -189,7 +188,7 @@
         <el-table-column prop="status" label="状态" width="120" />
         <el-table-column prop="createdAt" label="时间" width="180" />
       </el-table>
-    </el-card>
+    </PageSection>
   </div>
 </template>
 
@@ -197,7 +196,9 @@
 import { computed, onMounted, reactive, ref } from 'vue';
 import { ElMessage } from 'element-plus';
 import { api } from '@/api';
+import PageActionGroup from '@/components/ui/layout/PageActionGroup.vue';
 import PageHeader from '@/components/ui/layout/PageHeader.vue';
+import PageSection from '@/components/ui/layout/PageSection.vue';
 import type { AiQuestionProviderOption, AiProviderType } from '@/types';
 
 const generating = ref(false);
@@ -354,11 +355,6 @@ onMounted(async () => {
   margin-bottom: var(--space-4);
 }
 
-.actions {
-  display: flex;
-  gap: var(--space-3);
-}
-
 .preview-header {
   display: flex;
   justify-content: space-between;
@@ -372,7 +368,7 @@ onMounted(async () => {
 }
 
 .draft-item {
-  border: 1px solid var(--border-light);
+  border: 1px solid var(--el-border-color-lighter);
 }
 
 .draft-head {
@@ -405,7 +401,7 @@ onMounted(async () => {
   }
 
   .switch-row,
-  .actions {
+  .page-action-group {
     flex-direction: column;
     align-items: flex-start;
   }

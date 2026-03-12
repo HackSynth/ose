@@ -1,10 +1,5 @@
 <template>
-  <el-card class="business-card recent-records-card" shadow="never">
-    <template #header>
-      <div class="card-header">
-        <span class="card-title">最近记录</span>
-      </div>
-    </template>
+  <PageSection class="recent-records-card" title="最近记录">
     <el-tabs class="records-tabs">
       <el-tab-pane label="错题">
         <el-empty v-if="!recentMistakes?.length" description="暂无错题" :image-size="60" />
@@ -40,10 +35,12 @@
         </el-timeline>
       </el-tab-pane>
     </el-tabs>
-  </el-card>
+  </PageSection>
 </template>
 
 <script setup lang="ts">
+import PageSection from '@/components/ui/layout/PageSection.vue';
+
 defineProps<{
   recentMistakes: any[];
   recentExams: any[];
@@ -52,14 +49,6 @@ defineProps<{
 </script>
 
 <style scoped>
-.business-card {
-  height: 100%;
-}
-
-.card-title {
-  font-weight: 700;
-  color: var(--text-primary);
-}
 
 .records-tabs :deep(.el-tabs__nav-wrap::after) {
   height: 1px;
@@ -78,12 +67,12 @@ defineProps<{
 
 .record-title {
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--el-text-color-primary);
   font-size: 14px;
 }
 
 .record-subtitle {
   font-size: 12px;
-  color: var(--text-secondary);
+  color: var(--el-text-color-regular);
 }
 </style>

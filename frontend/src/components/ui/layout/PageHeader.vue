@@ -4,7 +4,7 @@
       <h1 class="title">{{ title }}</h1>
       <p v-if="description" class="description">{{ description }}</p>
     </div>
-    <div class="header-actions" v-if="$slots.actions">
+    <div class="header-actions page-action-group" v-if="$slots.actions">
       <slot name="actions"></slot>
     </div>
   </div>
@@ -34,21 +34,19 @@ defineProps<{
 .title {
   font-size: 24px;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--el-text-color-primary);
   margin: 0;
   line-height: 1.2;
 }
 
 .description {
   font-size: 14px;
-  color: var(--text-secondary);
+  color: var(--el-text-color-regular);
   margin: 0;
 }
 
 .header-actions {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
+  justify-content: flex-end;
 }
 
 @media (max-width: 640px) {

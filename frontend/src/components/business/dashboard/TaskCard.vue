@@ -1,8 +1,7 @@
 <template>
-  <el-card class="business-card" shadow="never">
-    <template #header>
-      <div class="card-header">
-        <span class="card-title">今日学习任务</span>
+  <PageSection title="今日学习任务">
+    <template #actions>
+      <div class="card-header-actions">
         <el-tag size="small" effect="plain" round class="task-count-tag">
           {{ tasks.length }} 项
         </el-tag>
@@ -35,29 +34,21 @@
         </div>
       </el-timeline-item>
     </el-timeline>
-  </el-card>
+  </PageSection>
 </template>
 
 <script setup lang="ts">
+import PageSection from '@/components/ui/layout/PageSection.vue';
+
 defineProps<{
   tasks: any[];
 }>();
 </script>
 
 <style scoped>
-.business-card {
-  height: 100%;
-}
-
-.card-header {
+.card-header-actions {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-}
-
-.card-title {
-  font-weight: 700;
-  color: var(--text-primary);
 }
 
 .task-timeline {
@@ -72,18 +63,18 @@ defineProps<{
 
 .task-title {
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--el-text-color-primary);
   font-size: 15px;
 }
 
 .task-title.is-done {
   text-decoration: line-through;
-  color: var(--text-tertiary);
+  color: var(--el-text-color-secondary);
 }
 
 .task-desc {
   font-size: 13px;
-  color: var(--text-secondary);
+  color: var(--el-text-color-regular);
   margin: var(--space-1) 0 0 0;
 }
 

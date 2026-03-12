@@ -30,6 +30,41 @@ body {
   margin: 0 auto;
 }
 
+.business-card {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--el-border-color-lighter);
+  background: var(--el-bg-color);
+}
+
+.business-card .el-card__header {
+  padding: 14px 16px;
+}
+
+.business-card .el-card__body {
+  padding: 16px;
+}
+
+.page-action-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.form-action-bar {
+  margin-top: var(--space-4);
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.dialog-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-2);
+}
+
 .page-header {
   display: flex;
   align-items: center;
@@ -76,5 +111,18 @@ body {
   .page-container {
     gap: var(--space-4);
     padding: var(--space-3);
+  }
+
+  .business-card .el-card__header,
+  .business-card .el-card__body {
+    padding: 12px;
+  }
+
+  .form-action-bar {
+    justify-content: flex-start;
+  }
+
+  .dialog-footer {
+    justify-content: space-between;
   }
 }

@@ -1,10 +1,5 @@
 <template>
-  <el-card class="business-card" shadow="never">
-    <template #header>
-      <div class="card-header">
-        <span class="card-title">薄弱知识点推荐练习</span>
-      </div>
-    </template>
+  <PageSection title="薄弱知识点推荐练习">
     
     <el-empty v-if="!recommendations?.length" description="当前没有推荐项" :image-size="80" />
     
@@ -22,10 +17,12 @@
         </el-button>
       </div>
     </div>
-  </el-card>
+  </PageSection>
 </template>
 
 <script setup lang="ts">
+import PageSection from '@/components/ui/layout/PageSection.vue';
+
 defineProps<{
   recommendations: any[];
 }>();
@@ -34,14 +31,6 @@ defineEmits(['practice']);
 </script>
 
 <style scoped>
-.business-card {
-  height: 100%;
-}
-
-.card-title {
-  font-weight: 700;
-  color: var(--text-primary);
-}
 
 .recommend-list {
   display: flex;
@@ -51,8 +40,8 @@ defineEmits(['practice']);
 
 .recommend-item {
   padding: var(--space-4);
-  background: var(--bg-app);
-  border: 1px solid var(--border-light);
+  background: var(--el-fill-color-extra-light);
+  border: 1px solid var(--el-border-color-lighter);
   border-radius: var(--radius-md);
   display: flex;
   justify-content: space-between;
@@ -62,7 +51,7 @@ defineEmits(['practice']);
 }
 
 .recommend-item:hover {
-  border-color: var(--color-primary);
+  border-color: var(--el-color-primary-light-7);
 }
 
 .recommend-main {
@@ -71,18 +60,18 @@ defineEmits(['practice']);
 
 .recommend-title {
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--el-text-color-primary);
   font-size: 15px;
 }
 
 .recommend-stats {
-  color: var(--text-secondary);
+  color: var(--el-text-color-regular);
   font-size: 12px;
   margin-top: 4px;
 }
 
 .recommend-reason {
-  color: var(--text-tertiary);
+  color: var(--el-text-color-secondary);
   font-size: 12px;
   margin-top: 8px;
   line-height: 1.4;

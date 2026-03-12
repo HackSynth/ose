@@ -12,6 +12,7 @@
 - 启动 Cherry Studio 风格“模型服务中心”重构，完成 Provider + Model 后端服务层与 AI 出题链路切换
 - 完成前端“模型服务”管理后台接入，支持 Provider、API Key、模型和默认模型的统一管理
 - 启动前端 UI 重构第一阶段，已完成主布局统一与题库页组件化拆分，并补齐题库页移动端展示方案
+- 完成前端 UI 重构第二阶段，新增通用 Page 结构组件并在多页面/多业务组件接入，统一表单、按钮、卡片样式规范
 
 ## 2. 关键设计决策
 - E2E 采用 Playwright，优先覆盖真实浏览器交互链路，而非仅靠接口级测试。
@@ -218,6 +219,30 @@ PLAYWRIGHT_BASE_URL=http://127.0.0.1 npm run test:e2e
 - 样式变量收口：补齐 `variables.css` 与 Element Plus token 映射，降低未定义变量风险。
 
 ### 13.2 本阶段验证
+- `cd frontend && npm run test -- --run`：通过
+- `cd frontend && npm run build`：通过
+- `cd frontend && npm run lint`：失败（当前仓库未提供 `lint` script）
+
+## 14. 前端 UI 重构第二阶段（通用结构 + 规范收敛）
+### 14.1 完成内容
+- 新增通用结构组件：
+  - `components/ui/layout/PageSection.vue`
+  - `components/ui/layout/PageActionGroup.vue`
+- 全局样式规范化：
+  - 在 `styles/base.css` 中统一 `business-card`、`form-action-bar`、`dialog-footer` 等基础样式
+  - `PageHeader` 对齐 Element Plus token，操作区统一接入按钮组容器
+- 页面接入：
+  - `settings`、`plans`、`knowledge`、`mistakes`、`notes`、`ai question center`
+- 业务组件接入：
+  - `dashboard` 卡片组件（Task/Completion/ReviewReminder/PracticeRecommend/KnowledgeMastery/RecentRecords）
+  - `exam`（ExamCreateCard/ExamListCard/ExamHistoryCard）
+  - `practice`（PracticeFormCard）
+  - `questions` 子组件（Filter/Table/MobileList）
+- 结构优化：
+  - `NoteView` 从大量内联样式重构为 `PageHeader + PageSection + PageActionGroup` 标准结构，并补齐移动端弹窗展示策略
+  - `ExamCreateCard`、`PracticeFormCard` 改为标准 `el-form + el-form-item` 写法，减少手写 label 布局
+
+### 14.2 本阶段验证
 - `cd frontend && npm run test -- --run`：通过
 - `cd frontend && npm run build`：通过
 - `cd frontend && npm run lint`：失败（当前仓库未提供 `lint` script）

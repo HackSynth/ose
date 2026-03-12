@@ -1,5 +1,5 @@
 <template>
-  <el-card shadow="never" class="mobile-list-card">
+  <PageSection class="mobile-list-card">
     <el-skeleton v-if="loading" :rows="4" animated />
 
     <el-empty v-else-if="rows.length === 0" description="暂无题目数据" :image-size="100" />
@@ -35,10 +35,12 @@
         </div>
       </el-card>
     </div>
-  </el-card>
+  </PageSection>
 </template>
 
 <script setup lang="ts">
+import PageSection from '@/components/ui/layout/PageSection.vue';
+
 defineProps<{
   rows: any[];
   loading: boolean;

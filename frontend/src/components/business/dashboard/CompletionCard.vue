@@ -1,10 +1,5 @@
 <template>
-  <el-card class="business-card" shadow="never">
-    <template #header>
-      <div class="card-header">
-        <span class="card-title">完成情况</span>
-      </div>
-    </template>
+  <PageSection title="完成情况">
     <div class="completion-container">
       <div class="progress-item">
         <div class="progress-info">
@@ -29,10 +24,12 @@
         />
       </div>
     </div>
-  </el-card>
+  </PageSection>
 </template>
 
 <script setup lang="ts">
+import PageSection from '@/components/ui/layout/PageSection.vue';
+
 defineProps<{
   week: { done: number; total: number };
   month: { done: number; total: number };
@@ -50,14 +47,6 @@ const customColors = [
 </script>
 
 <style scoped>
-.business-card {
-  height: 100%;
-}
-
-.card-title {
-  font-weight: 700;
-  color: var(--text-primary);
-}
 
 .completion-container {
   display: flex;
@@ -74,11 +63,11 @@ const customColors = [
 
 .progress-label {
   font-weight: 500;
-  color: var(--text-primary);
+  color: var(--el-text-color-primary);
 }
 
 .progress-stat {
   font-size: 13px;
-  color: var(--text-secondary);
+  color: var(--el-text-color-regular);
 }
 </style>
