@@ -51,9 +51,16 @@ class OpenAiProviderClientTest {
     @Test
     void shouldFallbackToChatCompletionsWhenResponsesApiUnavailable() throws Exception {
         AtomicInteger responsesCalls = new AtomicInteger();
+        AtomicInteger responsesPromptCalls = new AtomicInteger();
         AtomicInteger chatCalls = new AtomicInteger();
         startServer(exchange -> {
             if ("/v1/responses".equals(exchange.getRequestURI().getPath())) {
+                String body = new String(exchange.getRequestBody().readAllBytes(), StandardCharsets.UTF_8);
+                if (body.contains("\"input\":\"")) {
+                    responsesPromptCalls.incrementAndGet();
+                    respond(exchange, 500, "{\"error\":{\"message\":\"responses prompt unavailable\"}}");
+                    return;
+                }
                 responsesCalls.incrementAndGet();
                 respond(exchange, 500, "{\"error\":{\"message\":\"responses unavailable\"}}");
                 return;
@@ -114,15 +121,23 @@ class OpenAiProviderClientTest {
         assertEquals(AppEnums.QuestionType.MORNING_SINGLE, payload.questionType());
         assertEquals(1, payload.questions().size());
         assertEquals(1, responsesCalls.get());
+        assertEquals(1, responsesPromptCalls.get());
         assertEquals(1, chatCalls.get());
     }
 
     @Test
     void shouldProbeGenerationCapabilityInsteadOfModelEndpoint() throws Exception {
         AtomicInteger responsesCalls = new AtomicInteger();
+        AtomicInteger responsesPromptCalls = new AtomicInteger();
         AtomicInteger chatCalls = new AtomicInteger();
         startServer(exchange -> {
             if ("/v1/responses".equals(exchange.getRequestURI().getPath())) {
+                String body = new String(exchange.getRequestBody().readAllBytes(), StandardCharsets.UTF_8);
+                if (body.contains("\"input\":\"")) {
+                    responsesPromptCalls.incrementAndGet();
+                    respond(exchange, 500, "{\"error\":{\"message\":\"responses prompt unavailable\"}}");
+                    return;
+                }
                 responsesCalls.incrementAndGet();
                 respond(exchange, 500, "{\"error\":{\"message\":\"responses unavailable\"}}");
                 return;
@@ -140,7 +155,85 @@ class OpenAiProviderClientTest {
         assertTrue(result.success());
         assertTrue(result.message().contains("chat.completions/json_schema"));
         assertEquals(1, responsesCalls.get());
+        assertEquals(1, responsesPromptCalls.get());
         assertEquals(1, chatCalls.get());
+    }
+
+    @Test
+    void shouldFallbackToResponsesPromptOnlyWhenGatewayOnlySupportsStringInput() throws Exception {
+        AtomicInteger structuredResponsesCalls = new AtomicInteger();
+        AtomicInteger promptResponsesCalls = new AtomicInteger();
+        AtomicInteger chatCalls = new AtomicInteger();
+        startServer(exchange -> {
+            if ("/v1/responses".equals(exchange.getRequestURI().getPath())) {
+                String body = new String(exchange.getRequestBody().readAllBytes(), StandardCharsets.UTF_8);
+                if (body.contains("\"input\":\"")) {
+                    promptResponsesCalls.incrementAndGet();
+                    respond(exchange, 200, responsesTextResponse("""
+                            {
+                              "questionType":"MORNING_SINGLE",
+                              "questions":[
+                                {
+                                  "title":"事务题",
+                                  "content":"以下关于事务隔离级别的说法，正确的是？",
+                                  "options":[
+                                    {"key":"A","content":"读未提交可避免脏读"},
+                                    {"key":"B","content":"可重复读总能避免幻读"},
+                                    {"key":"C","content":"串行化隔离级别最高"},
+                                    {"key":"D","content":"读已提交会出现脏写"}
+                                  ],
+                                  "correctAnswer":"C",
+                                  "explanation":"串行化提供最高隔离级别。",
+                                  "knowledgePointNames":["事务管理"],
+                                  "difficulty":"MEDIUM"
+                                }
+                              ]
+                            }
+                            """));
+                    return;
+                }
+                structuredResponsesCalls.incrementAndGet();
+                respond(exchange, 503, "{\"error\":{\"message\":\"structured input unsupported\"}}");
+                return;
+            }
+            if ("/v1/chat/completions".equals(exchange.getRequestURI().getPath())) {
+                chatCalls.incrementAndGet();
+                respond(exchange, 500, "{\"error\":{\"message\":\"should not use chat fallback\"}}");
+                return;
+            }
+            respond(exchange, 404, "{}");
+        });
+
+        when(resolver.resolve(AiProviderType.OPENAI)).thenReturn(resolvedConfig());
+
+        AiQuestionDtos.ProviderGenerationPayload payload = client.generate(
+                new AiQuestionDtos.AiQuestionGenerationRequest(
+                        AiProviderType.OPENAI,
+                        "gpt-5.2-2cx",
+                        AppEnums.QuestionType.MORNING_SINGLE,
+                        AiQuestionDtos.AiQuestionTopicType.KNOWLEDGE_POINT,
+                        List.of(1L),
+                        AiQuestionDtos.AiQuestionDifficulty.MEDIUM,
+                        1,
+                        true,
+                        true,
+                        false,
+                        "中文",
+                        AiQuestionDtos.AiStyleType.EXAM,
+                        null
+                ),
+                "system",
+                "user",
+                """
+                {"type":"object"}
+                """
+        );
+
+        assertEquals(AppEnums.QuestionType.MORNING_SINGLE, payload.questionType());
+        assertEquals(1, payload.questions().size());
+        assertEquals(1, structuredResponsesCalls.get());
+        assertEquals(1, promptResponsesCalls.get());
+        assertEquals(0, chatCalls.get());
     }
 
     private ResolvedAiProviderConfig resolvedConfig() {
@@ -182,6 +275,15 @@ class OpenAiProviderClientTest {
                                 "message",
                                 java.util.Map.of("content", text)
                         ))
+                )
+        );
+    }
+
+    private String responsesTextResponse(String text) throws IOException {
+        return objectMapper.writeValueAsString(
+                java.util.Map.of(
+                        "output_text",
+                        text
                 )
         );
     }

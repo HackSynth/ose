@@ -141,6 +141,11 @@ public class OpenAiProviderClient implements AiProviderClient {
                             .body(responsesPayload(model, temperature, systemPrompt, userPrompt, jsonSchema))
                             .retrieve()
                             .body(JsonNode.class));
+                    case RESPONSES_PROMPT_ONLY -> extractResponsesJson(client.post()
+                            .uri("/v1/responses")
+                            .body(responsesPromptOnlyPayload(model, systemPrompt, userPrompt, jsonSchema))
+                            .retrieve()
+                            .body(JsonNode.class));
                     case CHAT_COMPLETIONS_JSON_SCHEMA -> extractChatCompletionJson(client.post()
                             .uri("/v1/chat/completions")
                             .body(chatCompletionPayload(model, temperature, systemPrompt, userPrompt, jsonSchema, false))
@@ -193,6 +198,16 @@ public class OpenAiProviderClient implements AiProviderClient {
                             .body(responsesPayload(
                                     model,
                                     temperature,
+                                    CONNECTION_PROBE_SYSTEM_PROMPT,
+                                    CONNECTION_PROBE_USER_PROMPT,
+                                    CONNECTION_PROBE_SCHEMA
+                            ))
+                            .retrieve()
+                            .body(JsonNode.class));
+                    case RESPONSES_PROMPT_ONLY -> extractResponsesJson(client.post()
+                            .uri("/v1/responses")
+                            .body(responsesPromptOnlyPayload(
+                                    model,
                                     CONNECTION_PROBE_SYSTEM_PROMPT,
                                     CONNECTION_PROBE_USER_PROMPT,
                                     CONNECTION_PROBE_SCHEMA
@@ -282,6 +297,16 @@ public class OpenAiProviderClient implements AiProviderClient {
                 "schema", objectToMap(jsonSchema),
                 "strict", true
         )));
+        return payload;
+    }
+
+    private Map<String, Object> responsesPromptOnlyPayload(String model,
+                                                           String systemPrompt,
+                                                           String userPrompt,
+                                                           String jsonSchema) {
+        Map<String, Object> payload = new HashMap<>();
+        payload.put("model", model);
+        payload.put("input", systemPromptWithSchema(systemPrompt, jsonSchema) + "\n\n用户请求：\n" + userPrompt);
         return payload;
     }
 
@@ -433,6 +458,7 @@ public class OpenAiProviderClient implements AiProviderClient {
 
     enum OpenAiApiMode {
         RESPONSES("responses"),
+        RESPONSES_PROMPT_ONLY("responses/prompt"),
         CHAT_COMPLETIONS_JSON_SCHEMA("chat.completions/json_schema"),
         CHAT_COMPLETIONS_PROMPT_ONLY("chat.completions/prompt");
 
