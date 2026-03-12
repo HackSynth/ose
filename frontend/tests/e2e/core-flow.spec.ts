@@ -52,7 +52,7 @@ test('核心备考链路可端到端跑通', async ({ page, request }) => {
     await page.getByTestId('practice-create-button').click();
 
     await expect(page.getByTestId('practice-question-title-0')).toContainText('事务一致性概念');
-    await page.getByTestId('practice-answer-group-0').getByText('A. 原子性').click();
+    await page.getByTestId('practice-answer-group-0').getByRole('radio', { name: /原子性/ }).click();
     await page.getByTestId('practice-submit-button').click();
 
     await waitForMessage(page, '练习已提交');
