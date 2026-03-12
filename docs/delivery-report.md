@@ -18,6 +18,7 @@
 - 完成前端 UI 重构第五阶段，新增通用移动端卡片列表组件并完成多表格页小屏替代展示
 - 完成前端 UI 重构第六阶段，统一练习/模考详情作答卡片交互并收口残留视觉风格
 - 完成前端 UI 重构第七阶段，新增统一页面状态反馈组件并接入仪表盘/统计/计划页面
+- 完成前端 UI 重构第八阶段，抽象页面状态逻辑、统一微交互规则并落地验收清单
 
 ## 2. 关键设计决策
 - E2E 采用 Playwright，优先覆盖真实浏览器交互链路，而非仅靠接口级测试。
@@ -63,6 +64,8 @@
 - `frontend/src/components/ui/form/PageFormGrid.vue`
 - `frontend/src/components/ui/data/MobileCardList.vue`
 - `frontend/src/components/ui/feedback/PageStateBlock.vue`
+- `frontend/src/composables/usePageState.ts`
+- `docs/ui-acceptance-checklist.md`
 - `frontend/tests/e2e/auth.spec.ts`
 - `frontend/tests/e2e/core-flow.spec.ts`
 - `frontend/tests/e2e/helpers.ts`
@@ -359,6 +362,22 @@ PLAYWRIGHT_BASE_URL=http://127.0.0.1 npm run test:e2e
   - 数据请求异常时用户可就地重试，减少刷新整页依赖
 
 ### 19.2 本阶段验证
+- `cd frontend && npm run test -- --run`：通过
+- `cd frontend && npm run build`：通过
+- `cd frontend && npm run lint`：失败（当前仓库未提供 `lint` script）
+
+## 20. 前端 UI 重构第八阶段（最终收尾）
+### 20.1 完成内容
+- 状态逻辑复用：
+  - 新增 `usePageState` 组合式逻辑，统一页面异步请求的 `loading/error` 处理模式
+  - `DashboardView`、`AnalyticsView`、`PlanView` 切换到统一状态组合式逻辑
+- 全局微交互统一：
+  - `base.css` 增加过渡时长变量，统一 `card/button/tag/input/select` 的轻量交互反馈
+  - 增加 `:focus-visible` 样式和 `prefers-reduced-motion` 兼容
+- 验收闭环：
+  - 新增 `docs/ui-acceptance-checklist.md`，沉淀可复用验收标准并标注当前结果
+
+### 20.2 本阶段验证
 - `cd frontend && npm run test -- --run`：通过
 - `cd frontend && npm run build`：通过
 - `cd frontend && npm run lint`：失败（当前仓库未提供 `lint` script）

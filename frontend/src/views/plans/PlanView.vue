@@ -114,6 +114,7 @@ import { ElMessage } from 'element-plus';
 import dayjs from 'dayjs';
 import { api } from '@/api';
 import { useMobile } from '@/composables/useMobile';
+import { usePageState } from '@/composables/usePageState';
 import MobileCardList from '@/components/ui/data/MobileCardList.vue';
 import PageStateBlock from '@/components/ui/feedback/PageStateBlock.vue';
 import PageActionGroup from '@/components/ui/layout/PageActionGroup.vue';
@@ -123,21 +124,15 @@ import StatCard from '@/components/business/common/StatCard.vue';
 
 const { isMobile } = useMobile();
 const loading = ref(false);
-const pageLoading = ref(false);
-const pageErrorMessage = ref('');
 const plan = ref<any>(null);
+const {
+  loading: pageLoading,
+  errorMessage: pageErrorMessage,
+  runWithState,
+} = usePageState();
 
 const load = async () => {
-  pageLoading.value = true;
-  pageErrorMessage.value = '';
-  try {
-    plan.value = await api.currentPlan();
-  } catch (error: any) {
-    plan.value = null;
-    pageErrorMessage.value = error?.message || '请稍后重试';
-  } finally {
-    pageLoading.value = false;
-  }
+  plan.value = await runWithState(() => api.currentPlan());
 };
 
 const generate = async () => {

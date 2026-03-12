@@ -68,6 +68,17 @@
   - `plans/PlanView`：学习计划首屏加载失败可重试，空数据展示规范化。
 - 结果：核心页面首屏反馈更完整，避免“白屏/静默失败”体验，且状态组件可继续复用到其余页面。
 
+## UI 重构阶段 8（已完成）
+- 最终代码收口：
+  - 新增 `composables/usePageState.ts`，统一页面级异步状态处理逻辑，减少重复 `try/catch + loading/error` 模板代码。
+  - `dashboard`、`analytics`、`plans` 切换到 `usePageState`，保持原有业务请求与数据流不变。
+- 微交互与可访问性统一：
+  - 在 `styles/base.css` 增加统一过渡时长变量和轻量 hover/focus 反馈。
+  - 新增 `prefers-reduced-motion` 兼容，降低动画对敏感用户的影响。
+- 验收清单落地：
+  - 新增 `docs/ui-acceptance-checklist.md`，沉淀可复用的 UI 重构验收项。
+- 结果：全站 UI 重构形成“组件规范 + 状态规范 + 验收规范”闭环，可持续迭代。
+
 ## AI 出题专项（本轮新增）
 ### 阶段 A：最小可用版本（已完成）
 - 新增统一 Provider 抽象层：`AiProviderClient`、`OpenAiProviderClient`、`AnthropicProviderClient`

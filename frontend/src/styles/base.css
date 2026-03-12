@@ -1,6 +1,8 @@
 :root {
   --el-bg-color-page: #f5f7fa;
   --el-border-radius-base: 4px;
+  --motion-fast: 160ms;
+  --motion-base: 220ms;
 }
 
 body {
@@ -34,6 +36,9 @@ body {
   border-radius: var(--radius-lg);
   border: 1px solid var(--el-border-color-lighter);
   background: var(--el-bg-color);
+  transition:
+    border-color var(--motion-fast) ease,
+    box-shadow var(--motion-base) ease;
 }
 
 .business-card .el-card__header {
@@ -101,6 +106,26 @@ body {
   font-weight: 700;
 }
 
+.business-card:hover {
+  border-color: var(--el-border-color);
+}
+
+.el-button,
+.el-tag,
+.el-input__wrapper,
+.el-select__wrapper {
+  transition:
+    background-color var(--motion-fast) ease,
+    border-color var(--motion-fast) ease,
+    color var(--motion-fast) ease,
+    box-shadow var(--motion-fast) ease;
+}
+
+:focus-visible {
+  outline: 2px solid var(--el-color-primary-light-5);
+  outline-offset: 2px;
+}
+
 @media (max-width: 960px) {
   .split-layout {
     grid-template-columns: 1fr;
@@ -124,5 +149,15 @@ body {
 
   .dialog-footer {
     justify-content: space-between;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
   }
 }

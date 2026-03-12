@@ -80,6 +80,7 @@
 import { onMounted, ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { api } from '@/api';
+import { usePageState } from '@/composables/usePageState';
 
 // UI Components
 import PageStateBlock from '@/components/ui/feedback/PageStateBlock.vue';
@@ -96,20 +97,14 @@ import RecentRecordsCard from '@/components/business/dashboard/RecentRecordsCard
 
 const router = useRouter();
 const overview = ref<any>(null);
-const loading = ref(false);
-const errorMessage = ref('');
+const {
+  loading,
+  errorMessage,
+  runWithState,
+} = usePageState();
 
 const load = async () => {
-  loading.value = true;
-  errorMessage.value = '';
-  try {
-    overview.value = await api.dashboard();
-  } catch (error: any) {
-    overview.value = null;
-    errorMessage.value = error?.message || '请稍后重试';
-  } finally {
-    loading.value = false;
-  }
+  overview.value = await runWithState(() => api.dashboard());
 };
 
 const goToPractice = (item: any) => {

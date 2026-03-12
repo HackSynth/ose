@@ -67,6 +67,7 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue';
 import { api } from '@/api';
+import { usePageState } from '@/composables/usePageState';
 import PageStateBlock from '@/components/ui/feedback/PageStateBlock.vue';
 import PageHeader from '@/components/ui/layout/PageHeader.vue';
 import PageSection from '@/components/ui/layout/PageSection.vue';
@@ -74,26 +75,29 @@ import StatCard from '@/components/business/common/StatCard.vue';
 
 const summary = ref<any>(null);
 const trends = ref<any>(null);
-const loading = ref(false);
-const errorMessage = ref('');
+const {
+  loading,
+  errorMessage,
+  runWithState,
+} = usePageState();
 
 const load = async () => {
-  loading.value = true;
-  errorMessage.value = '';
-  try {
+  const result = await runWithState(async () => {
     const [summaryData, trendsData] = await Promise.all([
       api.analyticsSummary(),
       api.analyticsTrends(),
     ]);
-    summary.value = summaryData;
-    trends.value = trendsData;
-  } catch (error: any) {
+    return { summaryData, trendsData };
+  });
+
+  if (!result) {
     summary.value = null;
     trends.value = null;
-    errorMessage.value = error?.message || '请稍后重试';
-  } finally {
-    loading.value = false;
+    return;
   }
+
+  summary.value = result.summaryData;
+  trends.value = result.trendsData;
 };
 
 const knowledgeOption = computed(() => ({
