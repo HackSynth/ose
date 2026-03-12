@@ -28,33 +28,29 @@
     </div>
 
     <div class="split-layout">
-      <el-card class="chart-card" data-testid="analytics-knowledge-chart-card">
-        <template #header><span class="chart-title">知识点练习表现</span></template>
+      <PageSection title="知识点练习表现" class="chart-section" data-testid="analytics-knowledge-chart-card">
         <div class="chart-wrapper">
           <VChart v-if="knowledgeOption" data-testid="analytics-knowledge-chart" :option="knowledgeOption" autoresize />
         </div>
-      </el-card>
-      <el-card class="chart-card" data-testid="analytics-mistake-chart-card">
-        <template #header><span class="chart-title">错题分布</span></template>
+      </PageSection>
+      <PageSection title="错题分布" class="chart-section" data-testid="analytics-mistake-chart-card">
         <div class="chart-wrapper">
           <VChart v-if="mistakeOption" data-testid="analytics-mistake-chart" :option="mistakeOption" autoresize />
         </div>
-      </el-card>
+      </PageSection>
     </div>
 
     <div class="split-layout">
-      <el-card class="chart-card" data-testid="analytics-exam-chart-card">
-        <template #header><span class="chart-title">模拟考成绩趋势</span></template>
+      <PageSection title="模拟考成绩趋势" class="chart-section" data-testid="analytics-exam-chart-card">
         <div class="chart-wrapper">
           <VChart v-if="examOption" data-testid="analytics-exam-chart" :option="examOption" autoresize />
         </div>
-      </el-card>
-      <el-card class="chart-card" data-testid="analytics-activity-chart-card">
-        <template #header><span class="chart-title">计划 / 练习趋势</span></template>
+      </PageSection>
+      <PageSection title="计划 / 练习趋势" class="chart-section" data-testid="analytics-activity-chart-card">
         <div class="chart-wrapper">
           <VChart v-if="activityOption" data-testid="analytics-activity-chart" :option="activityOption" autoresize />
         </div>
-      </el-card>
+      </PageSection>
     </div>
   </div>
 </template>
@@ -63,6 +59,7 @@
 import { computed, onMounted, ref } from 'vue';
 import { api } from '@/api';
 import PageHeader from '@/components/ui/layout/PageHeader.vue';
+import PageSection from '@/components/ui/layout/PageSection.vue';
 import StatCard from '@/components/business/common/StatCard.vue';
 
 const summary = ref<any>(null);
@@ -85,7 +82,7 @@ const knowledgeOption = computed(() => ({
   series: [{ 
     type: 'bar', 
     barWidth: '40%',
-    itemStyle: { color: '#3b82f6', borderRadius: [4, 4, 0, 0] },
+    itemStyle: { color: '#409EFF', borderRadius: [4, 4, 0, 0] },
     data: (summary.value?.knowledgeStats || []).map((item: any) => Number(item.correctRate)) 
   }],
 }));
@@ -93,6 +90,7 @@ const knowledgeOption = computed(() => ({
 const mistakeOption = computed(() => ({
   tooltip: { trigger: 'item' },
   legend: { bottom: '5%', left: 'center' },
+  color: ['#409EFF', '#67C23A', '#E6A23C', '#F56C6C', '#909399'],
   series: [{ 
     type: 'pie', 
     radius: ['40%', '70%'],
@@ -115,9 +113,9 @@ const examOption = computed(() => ({
     smooth: true, 
     symbol: 'circle',
     symbolSize: 8,
-    lineStyle: { width: 3, color: '#10b981' },
-    itemStyle: { color: '#10b981' },
-    areaStyle: { color: 'rgba(16, 185, 129, 0.1)' },
+    lineStyle: { width: 3, color: '#67C23A' },
+    itemStyle: { color: '#67C23A' },
+    areaStyle: { color: 'rgba(103, 194, 58, 0.12)' },
     data: (trends.value?.examTrend || []).map((item: any) => Number(item.value)) 
   }],
 }));
@@ -132,15 +130,15 @@ const activityOption = computed(() => ({
     { 
       name: '计划完成', 
       type: 'bar', 
-      itemStyle: { color: '#6366f1', borderRadius: [4, 4, 0, 0] },
+      itemStyle: { color: '#409EFF', borderRadius: [4, 4, 0, 0] },
       data: (trends.value?.planCompletionTrend || []).map((item: any) => Number(item.value)) 
     },
     { 
       name: '练习次数', 
       type: 'line', 
       smooth: true, 
-      lineStyle: { width: 3, color: '#f59e0b' },
-      itemStyle: { color: '#f59e0b' },
+      lineStyle: { width: 3, color: '#E6A23C' },
+      itemStyle: { color: '#E6A23C' },
       data: (trends.value?.practiceTrend || []).map((item: any) => Number(item.value)) 
     },
   ],
@@ -150,17 +148,18 @@ onMounted(load);
 </script>
 
 <style scoped>
-.chart-card {
+.chart-section {
   height: 100%;
-}
-
-.chart-title {
-  font-weight: 700;
-  color: var(--text-primary);
 }
 
 .chart-wrapper {
   height: 320px;
   width: 100%;
+}
+
+@media (max-width: 767px) {
+  .chart-wrapper {
+    height: 260px;
+  }
 }
 </style>

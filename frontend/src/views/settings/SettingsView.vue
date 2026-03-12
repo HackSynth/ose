@@ -22,7 +22,7 @@
 
     <el-form label-position="top" :model="form" data-testid="settings-form">
       <PageSection title="基本备考配置">
-        <div class="form-grid">
+        <PageFormGrid :min-item-width="220">
           <el-form-item label="目标考试日期" required>
             <div data-testid="settings-exam-date">
               <el-date-picker v-model="form.examDate" type="date" value-format="YYYY-MM-DD" style="width:100%;" placeholder="选择您的考试日期" />
@@ -43,7 +43,7 @@
               <el-input-number v-model="form.dailySessionMinutes" :min="15" :step="15" :max="480" style="width:100%;" />
             </div>
           </el-form-item>
-        </div>
+        </PageFormGrid>
         
         <el-form-item label="学习背景与偏好">
           <div data-testid="settings-learning-preference">
@@ -134,6 +134,7 @@
 import { onMounted, reactive, ref } from 'vue';
 import { ElMessage, type UploadRequestOptions } from 'element-plus';
 import { api } from '@/api';
+import PageFormGrid from '@/components/ui/form/PageFormGrid.vue';
 import PageHeader from '@/components/ui/layout/PageHeader.vue';
 import PageActionGroup from '@/components/ui/layout/PageActionGroup.vue';
 import PageSection from '@/components/ui/layout/PageSection.vue';
@@ -215,12 +216,6 @@ onMounted(load);
 </script>
 
 <style scoped>
-.form-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: var(--space-4);
-}
-
 .import-layout {
   display: flex;
   flex-direction: column;

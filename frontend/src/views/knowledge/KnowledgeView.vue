@@ -57,7 +57,7 @@
       destroy-on-close
     >
       <el-form ref="formRef" label-position="top" :model="form" :rules="rules" scroll-to-error data-testid="knowledge-form">
-        <div class="form-grid">
+        <PageFormGrid :min-item-width="220">
           <el-form-item label="编码" prop="code" required>
             <el-input v-model="form.code" data-testid="knowledge-code" placeholder="如：CS-01" />
           </el-form-item>
@@ -78,7 +78,7 @@
           <el-form-item label="考试权重 (1-10)">
             <el-input-number v-model="form.weight" data-testid="knowledge-weight" :min="1" :max="10" style="width:100%;" />
           </el-form-item>
-        </div>
+        </PageFormGrid>
         <el-form-item label="学习备注 / 考点说明">
           <el-input 
             v-model="form.note" 
@@ -105,6 +105,7 @@ import { ElMessage, ElMessageBox } from 'element-plus';
 import type { FormInstance, FormRules } from 'element-plus';
 import { api } from '@/api';
 import { useMobile } from '@/composables/useMobile';
+import PageFormGrid from '@/components/ui/form/PageFormGrid.vue';
 import PageActionGroup from '@/components/ui/layout/PageActionGroup.vue';
 import PageHeader from '@/components/ui/layout/PageHeader.vue';
 import PageSection from '@/components/ui/layout/PageSection.vue';
@@ -242,18 +243,6 @@ onMounted(load);
 .mastery {
   color: var(--el-text-color-regular);
   font-weight: 500;
-}
-
-.form-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-4);
-}
-
-@media (max-width: 640px) {
-  .form-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 767px) {

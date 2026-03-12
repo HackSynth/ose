@@ -1,7 +1,7 @@
 <template>
   <PageSection title="练习配置">
     <el-form label-position="top" :model="form" data-testid="practice-form">
-      <div class="form-grid">
+      <PageFormGrid :min-item-width="200">
         <el-form-item label="练习模式" data-testid="practice-session-type">
           <el-select v-model="form.sessionType" placeholder="模式" class="full-width">
             <el-option label="知识点专项" value="KNOWLEDGE" />
@@ -37,7 +37,7 @@
         <el-form-item label="题目数量" data-testid="practice-count">
           <el-input-number v-model="form.count" :min="1" :max="20" class="full-width" />
         </el-form-item>
-      </div>
+      </PageFormGrid>
     </el-form>
 
     <div class="form-action-bar">
@@ -49,6 +49,7 @@
 </template>
 
 <script setup lang="ts">
+import PageFormGrid from '@/components/ui/form/PageFormGrid.vue';
 import PageSection from '@/components/ui/layout/PageSection.vue';
 
 defineProps<{
@@ -61,12 +62,6 @@ defineEmits(['create']);
 </script>
 
 <style scoped>
-.form-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: var(--space-4);
-}
-
 .full-width {
   width: 100%;
 }

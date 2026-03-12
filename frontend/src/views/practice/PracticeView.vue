@@ -30,7 +30,7 @@
     />
 
     <template v-else>
-      <div class="session-container" data-testid="practice-session-card">
+      <PageSection title="练习会话" class="session-section" data-testid="practice-session-card">
         <div class="session-header-sticky">
           <div class="session-info">
             <h3 class="session-title" data-testid="practice-session-title">
@@ -44,7 +44,7 @@
               {{ session.status === 'SUBMITTED' ? '已提交' : '进行中' }}
             </el-tag>
           </div>
-          <div class="session-actions">
+          <PageActionGroup class="session-actions">
             <el-button 
               type="primary" 
               data-testid="practice-submit-button" 
@@ -53,7 +53,7 @@
             >
               提交本次练习
             </el-button>
-          </div>
+          </PageActionGroup>
         </div>
 
         <div class="records-list">
@@ -67,7 +67,7 @@
             @toggle-flag="(field) => toggleFlag(record, field)"
           />
         </div>
-      </div>
+      </PageSection>
     </template>
   </div>
 </template>
@@ -80,6 +80,8 @@ import { api } from '@/api';
 
 // UI Components
 import PageHeader from '@/components/ui/layout/PageHeader.vue';
+import PageActionGroup from '@/components/ui/layout/PageActionGroup.vue';
+import PageSection from '@/components/ui/layout/PageSection.vue';
 
 // Business Components
 import PracticeFormCard from '@/components/business/practice/PracticeFormCard.vue';
@@ -133,7 +135,7 @@ const createSession = async () => {
     session.value = await api.createPracticeSession(sessionForm);
     initAnswers();
     setTimeout(() => {
-      document.querySelector('.session-container')?.scrollIntoView({ behavior: 'smooth' });
+      document.querySelector('[data-testid="practice-session-card"]')?.scrollIntoView({ behavior: 'smooth' });
     }, 100);
   } finally {
     loading.value = false;
@@ -178,15 +180,11 @@ onMounted(loadKnowledge);
 </script>
 
 <style scoped>
-.session-container {
-  margin-top: var(--space-8);
-}
-
 .session-header-sticky {
   position: sticky;
   top: var(--header-height);
   z-index: 5;
-  background: var(--bg-app);
+  background: var(--el-bg-color);
   padding: var(--space-4) 0;
   display: flex;
   justify-content: space-between;
@@ -211,5 +209,17 @@ onMounted(loadKnowledge);
 .records-list {
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 767px) {
+  .session-header-sticky {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-3);
+  }
+
+  .session-info {
+    justify-content: space-between;
+  }
 }
 </style>

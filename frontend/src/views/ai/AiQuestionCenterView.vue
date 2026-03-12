@@ -15,7 +15,7 @@
 
     <PageSection>
       <el-form label-position="top" :model="form">
-        <div class="form-grid">
+        <PageFormGrid :min-item-width="200">
           <el-form-item label="AI 提供商">
             <el-select v-model="form.providerId" data-testid="ai-provider" @change="onProviderChange">
               <el-option
@@ -73,7 +73,7 @@
           <el-form-item label="语言">
             <el-input v-model="form.language" data-testid="ai-language" />
           </el-form-item>
-        </div>
+        </PageFormGrid>
 
         <el-form-item label="知识点（多选）">
           <el-select v-model="form.knowledgePointIds" multiple filterable data-testid="ai-knowledge" style="width:100%">
@@ -116,7 +116,7 @@
           </template>
         </el-alert>
 
-        <el-card v-for="(draft, idx) in drafts" :key="draft.draftId" class="draft-item" shadow="never">
+        <el-card v-for="(draft, idx) in drafts" :key="draft.draftId" class="business-card draft-item" shadow="never">
           <template #header>
             <div class="draft-head">
               <span>题目 {{ idx + 1 }} · <el-tag type="success" size="small">AI 生成</el-tag></span>
@@ -133,11 +133,11 @@
             </el-form-item>
 
             <template v-if="draft.questionType === 'MORNING_SINGLE'">
-              <div class="option-grid">
+              <PageFormGrid :min-item-width="240">
                 <el-form-item v-for="option in draft.options" :key="option.key" :label="`选项 ${option.key}`">
                   <el-input v-model="option.content" />
                 </el-form-item>
-              </div>
+              </PageFormGrid>
               <el-form-item label="正确答案">
                 <el-select v-model="draft.correctAnswer">
                   <el-option label="A" value="A" />
@@ -196,6 +196,7 @@
 import { computed, onMounted, reactive, ref } from 'vue';
 import { ElMessage } from 'element-plus';
 import { api } from '@/api';
+import PageFormGrid from '@/components/ui/form/PageFormGrid.vue';
 import PageActionGroup from '@/components/ui/layout/PageActionGroup.vue';
 import PageHeader from '@/components/ui/layout/PageHeader.vue';
 import PageSection from '@/components/ui/layout/PageSection.vue';
@@ -343,12 +344,6 @@ onMounted(async () => {
   margin-bottom: var(--space-4);
 }
 
-.form-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: var(--space-4);
-}
-
 .switch-row {
   display: flex;
   gap: var(--space-6);
@@ -377,29 +372,12 @@ onMounted(async () => {
   align-items: center;
 }
 
-.option-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--space-4);
-}
-
 .row-end {
   display: flex;
   justify-content: flex-end;
 }
 
-@media (max-width: 1024px) {
-  .form-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
 @media (max-width: 640px) {
-  .form-grid,
-  .option-grid {
-    grid-template-columns: 1fr;
-  }
-
   .switch-row,
   .page-action-group {
     flex-direction: column;

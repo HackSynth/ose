@@ -14,6 +14,7 @@
 - 启动前端 UI 重构第一阶段，已完成主布局统一与题库页组件化拆分，并补齐题库页移动端展示方案
 - 完成前端 UI 重构第二阶段，新增通用 Page 结构组件并在多页面/多业务组件接入，统一表单、按钮、卡片样式规范
 - 完成前端 UI 重构第三阶段，统一关键编辑弹窗校验规则与移动端全屏交互策略
+- 完成前端 UI 重构第四阶段，新增通用响应式表单栅格组件并推进统计/练习/模型服务页面结构收敛
 
 ## 2. 关键设计决策
 - E2E 采用 Playwright，优先覆盖真实浏览器交互链路，而非仅靠接口级测试。
@@ -42,13 +43,16 @@
 - `frontend/src/layouts/AppLayout.vue`
 - `frontend/src/views/auth/LoginView.vue`
 - `frontend/src/views/settings/SettingsView.vue`
+- `frontend/src/views/settings/AiSettingsView.vue`
 - `frontend/src/views/plans/PlanView.vue`
 - `frontend/src/views/knowledge/KnowledgeView.vue`
 - `frontend/src/views/practice/PracticeView.vue`
 - `frontend/src/views/mistakes/MistakeView.vue`
 - `frontend/src/views/exams/ExamView.vue`
 - `frontend/src/views/analytics/AnalyticsView.vue`
+- `frontend/src/views/ai/AiQuestionCenterView.vue`
 - `frontend/src/views/dashboard/DashboardView.vue`
+- `frontend/src/components/ui/form/PageFormGrid.vue`
 - `frontend/tests/e2e/auth.spec.ts`
 - `frontend/tests/e2e/core-flow.spec.ts`
 - `frontend/tests/e2e/helpers.ts`
@@ -268,6 +272,28 @@ PLAYWRIGHT_BASE_URL=http://127.0.0.1 npm run test:e2e
   - 小屏下统一全屏弹窗 + 内容滚动
 
 ### 15.2 本阶段验证
+- `cd frontend && npm run test -- --run`：通过
+- `cd frontend && npm run build`：通过
+- `cd frontend && npm run lint`：失败（当前仓库未提供 `lint` script）
+
+## 16. 前端 UI 重构第四阶段（表单栅格 + 页面结构收敛）
+### 16.1 完成内容
+- 新增通用组件：
+  - `components/ui/form/PageFormGrid.vue`
+  - 统一表单栅格布局（桌面多列 + 移动端单列），替代页面内重复 `form-grid` 写法
+- 表单页接入：
+  - `practice/PracticeFormCard`
+  - `exam/ExamCreateCard`
+  - `knowledge/KnowledgeView`
+  - `settings/SettingsView`
+  - `ai/AiQuestionCenterView`
+  - `settings/AiSettingsView`
+- 页面结构收敛：
+  - `AnalyticsView` 图表区统一改为 `PageSection`，图表配色统一为 Element Plus 默认色板
+  - `PracticeView` 会话区改为 `PageSection + PageActionGroup`，移动端按钮区自动重排
+  - `AiSettingsView` 顶部概览、默认模型、新增 Provider 区块改为 `PageSection`，减少页面级手写卡片结构
+
+### 16.2 本阶段验证
 - `cd frontend && npm run test -- --run`：通过
 - `cd frontend && npm run build`：通过
 - `cd frontend && npm run lint`：失败（当前仓库未提供 `lint` script）

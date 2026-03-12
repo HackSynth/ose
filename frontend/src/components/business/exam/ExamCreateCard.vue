@@ -1,7 +1,7 @@
 <template>
   <PageSection title="创建模拟卷">
     <el-form label-position="top" :model="form">
-      <div class="form-grid">
+      <PageFormGrid :min-item-width="220">
         <el-form-item label="名称" data-testid="exam-name">
           <el-input v-model="form.name" placeholder="例如：2025年上半年软件设计师模拟" />
         </el-form-item>
@@ -14,7 +14,7 @@
         <el-form-item label="时长 (分钟)" data-testid="exam-duration">
           <el-input-number v-model="form.durationMinutes" :min="30" :max="240" class="full-width" />
         </el-form-item>
-      </div>
+      </PageFormGrid>
 
       <el-form-item label="模拟说明" data-testid="exam-description">
         <el-input 
@@ -54,6 +54,7 @@
 </template>
 
 <script setup lang="ts">
+import PageFormGrid from '@/components/ui/form/PageFormGrid.vue';
 import PageSection from '@/components/ui/layout/PageSection.vue';
 
 defineProps<{
@@ -66,19 +67,7 @@ defineEmits(['create']);
 </script>
 
 <style scoped>
-.form-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: var(--space-4);
-}
-
 .full-width {
   width: 100%;
-}
-
-@media (max-width: 768px) {
-  .form-grid {
-    grid-template-columns: 1fr;
-  }
 }
 </style>

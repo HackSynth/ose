@@ -16,19 +16,17 @@
     />
 
     <div class="summary-grid">
-      <el-card class="business-card" shadow="never">
-        <template #header><span class="card-title">服务概览</span></template>
+      <PageSection title="服务概览">
         <div class="summary-content">
           <div class="summary-item">Provider：{{ providers.length }}</div>
           <div class="summary-item">启用中：{{ enabledProviders }}</div>
           <div class="summary-item">模型总数：{{ totalModels }}</div>
           <div class="summary-item">API Key：{{ totalKeys }}</div>
         </div>
-      </el-card>
+      </PageSection>
 
-      <el-card class="business-card" shadow="never">
-        <template #header><span class="card-title">默认模型</span></template>
-        <div class="default-grid">
+      <PageSection title="默认模型">
+        <PageFormGrid :min-item-width="220">
           <el-form-item label="AI 出题">
             <div data-testid="ai-default-question-generation">
               <el-select v-model="defaultForms.questionGeneration" clearable filterable style="width: 100%;">
@@ -65,21 +63,22 @@
               </el-select>
             </div>
           </el-form-item>
-        </div>
-        <el-button
-          type="primary"
-          :loading="savingDefaults"
-          data-testid="ai-default-save"
-          @click="saveDefaultModels"
-        >
-          保存默认模型
-        </el-button>
-      </el-card>
+        </PageFormGrid>
+        <PageActionGroup class="form-action-bar">
+          <el-button
+            type="primary"
+            :loading="savingDefaults"
+            data-testid="ai-default-save"
+            @click="saveDefaultModels"
+          >
+            保存默认模型
+          </el-button>
+        </PageActionGroup>
+      </PageSection>
     </div>
 
-    <el-card class="business-card create-card" shadow="never">
-      <template #header><span class="card-title">新增 Provider</span></template>
-      <div class="provider-form-grid">
+    <PageSection title="新增 Provider" class="create-card">
+      <PageFormGrid :min-item-width="220">
         <el-form-item label="显示名称">
           <div data-testid="ai-provider-create-name">
             <el-input v-model="createForm.displayName" placeholder="例如 OpenRouter 生产网关" />
@@ -124,16 +123,18 @@
             <el-switch v-model="createForm.enabled" />
           </div>
         </el-form-item>
-      </div>
-      <el-button
-        type="primary"
-        :loading="creatingProvider"
-        data-testid="ai-provider-create-submit"
-        @click="createProvider"
-      >
-        新增 Provider
-      </el-button>
-    </el-card>
+      </PageFormGrid>
+      <PageActionGroup class="form-action-bar">
+        <el-button
+          type="primary"
+          :loading="creatingProvider"
+          data-testid="ai-provider-create-submit"
+          @click="createProvider"
+        >
+          新增 Provider
+        </el-button>
+      </PageActionGroup>
+    </PageSection>
 
     <div class="provider-list">
       <el-card
@@ -197,7 +198,7 @@
           class="provider-alert"
         />
 
-        <div class="provider-form-grid">
+        <PageFormGrid :min-item-width="220">
           <el-form-item label="显示名称">
             <div :data-testid="`ai-provider-name-${provider.id}`">
               <el-input v-model="providerForms[provider.id].displayName" :disabled="!provider.editable" />
@@ -270,7 +271,7 @@
               />
             </div>
           </el-form-item>
-        </div>
+        </PageFormGrid>
 
         <el-form-item label="备注">
           <div :data-testid="`ai-provider-remark-${provider.id}`">
@@ -278,7 +279,7 @@
           </div>
         </el-form-item>
 
-        <div class="section-actions">
+        <PageActionGroup class="section-actions">
           <el-button
             type="primary"
             :loading="savingProvider[provider.id]"
@@ -288,7 +289,7 @@
           >
             保存 Provider
           </el-button>
-        </div>
+        </PageActionGroup>
 
         <div class="section-block">
           <div class="section-head">
@@ -398,7 +399,7 @@
             </div>
           </div>
 
-          <div v-if="provider.editable" class="model-form-grid">
+          <PageFormGrid v-if="provider.editable" class="model-form-grid" :min-item-width="200">
             <div :data-testid="`ai-model-create-id-${provider.id}`">
               <el-input v-model="modelForms[provider.id].modelId" placeholder="模型 ID，例如 gpt-4.1-mini" />
             </div>
@@ -416,7 +417,7 @@
             >
               新增模型
             </el-button>
-          </div>
+          </PageFormGrid>
         </div>
       </el-card>
     </div>
@@ -427,7 +428,10 @@
 import { computed, onMounted, reactive, ref, watch } from 'vue';
 import { ElMessage } from 'element-plus';
 import { api } from '@/api';
+import PageFormGrid from '@/components/ui/form/PageFormGrid.vue';
+import PageActionGroup from '@/components/ui/layout/PageActionGroup.vue';
 import PageHeader from '@/components/ui/layout/PageHeader.vue';
+import PageSection from '@/components/ui/layout/PageSection.vue';
 import type {
   AiAdminProviderDetail,
   AiBaseUrlMode,
@@ -787,21 +791,13 @@ onMounted(load);
   gap: var(--space-4);
 }
 
-.summary-content,
-.default-grid,
-.provider-form-grid,
-.model-form-grid {
+.summary-content {
   display: grid;
   gap: var(--space-4);
 }
 
 .summary-content {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.default-grid,
-.provider-form-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .summary-item,
@@ -860,7 +856,7 @@ onMounted(load);
   padding: var(--space-3);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.7);
+  background: var(--el-fill-color-light);
 }
 
 .inline-form {
@@ -886,8 +882,6 @@ onMounted(load);
 
 @media (max-width: 1024px) {
   .summary-grid,
-  .default-grid,
-  .provider-form-grid,
   .model-form-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -895,8 +889,6 @@ onMounted(load);
 
 @media (max-width: 720px) {
   .summary-grid,
-  .default-grid,
-  .provider-form-grid,
   .model-form-grid,
   .summary-content {
     grid-template-columns: 1fr;

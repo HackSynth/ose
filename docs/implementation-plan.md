@@ -30,6 +30,16 @@
 - 移动端交互统一：上述弹窗在小屏统一 `fullscreen`，内容区支持滚动，保证长表单可操作性。
 - 结果：编辑类流程的输入质量与移动端可用性显著提升，且不改变原有业务接口与数据流。
 
+## UI 重构阶段 4（已完成）
+- 新增通用表单栅格组件：`components/ui/form/PageFormGrid.vue`，统一表单项多列布局与移动端单列收敛。
+- 页面接入：
+  - `practice/PracticeFormCard`、`exam/ExamCreateCard`、`knowledge/KnowledgeView`、`settings/SettingsView`
+  - `ai/AiQuestionCenterView`、`settings/AiSettingsView`
+- 页面结构收敛：
+  - `AnalyticsView` 图表区统一改为 `PageSection`，并将图表配色收敛到 Element Plus 默认色板（`#409EFF/#67C23A/#E6A23C/#F56C6C/#909399`）。
+  - `PracticeView` 会话区统一改为 `PageSection + PageActionGroup`，移动端操作区自动纵向重排。
+- 结果：进一步减少页面级重复 `form-grid` 样式和散落卡片结构，提升全站样式一致性与后续维护效率。
+
 ## AI 出题专项（本轮新增）
 ### 阶段 A：最小可用版本（已完成）
 - 新增统一 Provider 抽象层：`AiProviderClient`、`OpenAiProviderClient`、`AnthropicProviderClient`
