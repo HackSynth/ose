@@ -27,3 +27,5 @@ app:
     request-timeout-ms: 5000
     max-retries: 0
     enable-save-review: true
+    config-mode: HYBRID
+    secret-encryption-key: test-ai-secret-key-2026

@@ -34,6 +34,8 @@ app:
     request-timeout-ms: ${AI_REQUEST_TIMEOUT_MS:30000}
     max-retries: ${AI_MAX_RETRIES:1}
     enable-save-review: ${AI_ENABLE_SAVE_REVIEW:true}
+    config-mode: ${AI_CONFIG_MODE:HYBRID}
+    secret-encryption-key: ${AI_SECRET_ENCRYPTION_KEY:}
     openai:
       api-key: ${OPENAI_API_KEY:}
       base-url: ${OPENAI_BASE_URL:https://api.openai.com}

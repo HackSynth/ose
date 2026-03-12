@@ -90,10 +90,25 @@ AI 相关可选环境变量：
 - `OPENAI_API_KEY`、`OPENAI_BASE_URL`、`OPENAI_DEFAULT_MODEL`、`OPENAI_MODELS`
 - `ANTHROPIC_API_KEY`、`ANTHROPIC_BASE_URL`、`ANTHROPIC_DEFAULT_MODEL`、`ANTHROPIC_MODELS`
 - `AI_REQUEST_TIMEOUT_MS`、`AI_MAX_RETRIES`、`AI_ENABLE_SAVE_REVIEW`
+- `AI_CONFIG_MODE`：`ENV` / `DB` / `HYBRID`
+- `AI_SECRET_ENCRYPTION_KEY`：数据库托管 API Key 时使用的服务端对称加密主密钥
 
 说明：
 - 未配置 API Key 时，AI 模块会优雅降级（仅显示“未配置”状态），不影响其他功能。
 - `AI_ENABLE_SAVE_REVIEW=true` 时，AI 入库题默认待审核（不进入可练习状态）。
+- `AI_CONFIG_MODE=HYBRID` 时，系统优先使用数据库中启用的 Provider 配置；若数据库未启用对应 Provider，则回退到环境变量。
+
+### 5.2.1 AI Provider 配置中心（后端 API）
+- `GET /api/ai/settings`：读取 OpenAI / Anthropic 配置摘要、掩码 Key、配置来源、健康状态。
+- `PUT /api/ai/settings/{provider}`：保存或更新数据库托管配置，支持显式清空 Key。
+- `POST /api/ai/settings/{provider}/test`：使用待保存或当前生效配置执行连通性测试。
+- `GET /api/ai/settings/{provider}/models`：获取建议模型列表。
+
+配置来源说明：
+- `DB`：当前生效配置来自数据库。
+- `ENV`：系统处于环境变量只读模式。
+- `ENV_FALLBACK`：当前未启用数据库配置，回退使用环境变量。
+- `UNAVAILABLE`：数据库与环境变量都不可用，AI 模块保持优雅降级。
 
 ### 5.3 一键启动
 ```bash

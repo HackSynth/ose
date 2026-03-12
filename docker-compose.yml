@@ -46,6 +46,8 @@ services:
       AI_REQUEST_TIMEOUT_MS: ${AI_REQUEST_TIMEOUT_MS:-30000}
       AI_MAX_RETRIES: ${AI_MAX_RETRIES:-1}
       AI_ENABLE_SAVE_REVIEW: ${AI_ENABLE_SAVE_REVIEW:-true}
+      AI_CONFIG_MODE: ${AI_CONFIG_MODE:-HYBRID}
+      AI_SECRET_ENCRYPTION_KEY: ${AI_SECRET_ENCRYPTION_KEY:-}
     depends_on:
       mysql:
         condition: service_healthy

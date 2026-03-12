@@ -163,3 +163,19 @@ PLAYWRIGHT_BASE_URL=http://127.0.0.1 npm run test:e2e
 - 计费/Token 精确统计字段已预留，当前未对接精确账单回传。
 - Anthropic 结构化输出当前采用 schema 指令约束，后续可升级到更强约束能力。
 - 后续可扩展：AI 解析、AI 讲题、AI 学习建议、AI 个性化复盘。
+
+## 11. AI Provider 配置中心阶段进展
+### 11.1 本阶段已完成
+- 新增 `ai_provider_settings` 表，支持数据库托管 Provider 配置。
+- 新增 `AiSecretCryptoService`，使用 `AI_SECRET_ENCRYPTION_KEY` 对数据库中的 API Key 做对称加密。
+- 新增 `AiProviderConfigurationResolver`，统一解析 `ENV / DB / HYBRID` 三种配置模式，并输出 `DB / ENV / ENV_FALLBACK / UNAVAILABLE` 来源。
+- 新增 `/api/ai/settings*` 接口，支持摘要读取、保存更新、清空 Key、连通性测试、模型建议列表。
+- 现有 OpenAI / Anthropic 出题客户端已改为通过统一解析器读取配置，不再在业务代码中分散读取环境变量。
+
+### 11.2 本阶段验证
+- `docker compose run --rm backend-test`
+- 覆盖加密/解密、Key 掩码、保存读取、clearApiKey、优先级解析、Provider 测试接口。
+
+### 11.3 当前剩余项
+- 前端 AI 配置页面与交互提示尚未提交，将在下一阶段补齐。
+- E2E 将在页面落地后串联“配置 Provider -> 测试连接 -> AI 出题”的完整链路。

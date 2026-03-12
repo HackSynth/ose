@@ -1,5 +1,6 @@
 package com.ose.common.config;
 
+import com.ose.ai.AiConfigMode;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -33,6 +34,8 @@ public class AppProperties {
         private int requestTimeoutMs = 30000;
         private int maxRetries = 1;
         private boolean enableSaveReview = true;
+        private AiConfigMode configMode = AiConfigMode.HYBRID;
+        private String secretEncryptionKey;
         private Openai openai = new Openai();
         private Anthropic anthropic = new Anthropic();
     }

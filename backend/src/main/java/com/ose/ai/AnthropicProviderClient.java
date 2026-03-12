@@ -2,16 +2,14 @@ package com.ose.ai;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.ose.common.config.AppProperties;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.http.HttpStatusCode;
+import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestClient;
 import org.springframework.web.client.RestClientResponseException;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +19,8 @@ import java.util.Map;
 @Slf4j
 public class AnthropicProviderClient implements AiProviderClient {
 
-    private final AppProperties properties;
+    private final AiProviderConfigurationResolver resolver;
+    private final AiProviderCatalogService catalogService;
     private final ObjectMapper objectMapper;
 
     @Override
@@ -31,21 +30,13 @@ public class AnthropicProviderClient implements AiProviderClient {
 
     @Override
     public boolean isConfigured() {
-        return properties.getAi().getAnthropic().getApiKey() != null && !properties.getAi().getAnthropic().getApiKey().isBlank();
+        return resolver.resolve(provider()).isAvailable();
     }
 
     @Override
     public List<AiQuestionDtos.AiModelConfig> models() {
-        String modelStr = properties.getAi().getAnthropic().getModels();
-        String defaultModel = properties.getAi().getAnthropic().getDefaultModel();
-        List<AiQuestionDtos.AiModelConfig> models = new ArrayList<>();
-        for (String item : modelStr.split(",")) {
-            String model = item.trim();
-            if (!model.isBlank()) {
-                models.add(new AiQuestionDtos.AiModelConfig(model, model, model.equals(defaultModel)));
-            }
-        }
-        return models;
+        ResolvedAiProviderConfig config = resolver.resolve(provider());
+        return catalogService.models(provider(), config.defaultModel());
     }
 
     @Override
@@ -53,25 +44,20 @@ public class AnthropicProviderClient implements AiProviderClient {
                                                              String systemPrompt,
                                                              String userPrompt,
                                                              String jsonSchema) {
-        if (!isConfigured()) {
-            throw new AiProviderException("Anthropic 未配置 API Key");
+        ResolvedAiProviderConfig config = resolver.resolve(provider());
+        if (!config.isAvailable()) {
+            throw new AiProviderException(config.message());
         }
-        String model = request.model() == null || request.model().isBlank()
-                ? properties.getAi().getAnthropic().getDefaultModel() : request.model();
+        String model = config.resolveModel(request.model());
         Map<String, Object> payload = new HashMap<>();
         payload.put("model", model);
         payload.put("system", systemPrompt + "\n请严格符合以下 JSON Schema: " + jsonSchema);
-        payload.put("temperature", properties.getAi().getAnthropic().getTemperature());
-        payload.put("max_tokens", properties.getAi().getAnthropic().getMaxTokens());
+        payload.put("temperature", config.temperature());
+        payload.put("max_tokens", config.maxTokens());
         payload.put("messages", List.of(Map.of("role", "user", "content", userPrompt)));
 
-        RestClient client = RestClient.builder()
-                .baseUrl(properties.getAi().getAnthropic().getBaseUrl())
-                .defaultHeader("x-api-key", properties.getAi().getAnthropic().getApiKey())
-                .defaultHeader("anthropic-version", "2023-06-01")
-                .requestFactory(requestFactory())
-                .build();
-        int maxRetries = Math.max(0, properties.getAi().getMaxRetries());
+        RestClient client = buildClient(config);
+        int maxRetries = Math.max(0, config.maxRetries());
         for (int attempt = 0; attempt <= maxRetries; attempt++) {
             try {
                 JsonNode response = client.post()
@@ -92,6 +78,54 @@ public class AnthropicProviderClient implements AiProviderClient {
             }
         }
         throw new AiProviderException("Claude 请求失败，请稍后重试");
+    }
+
+    @Override
+    public AiProviderHealthResult testConnection(ResolvedAiProviderConfig config) {
+        long startedAt = System.currentTimeMillis();
+        String model = config.defaultModel();
+        try {
+            buildClient(config).post()
+                    .uri("/v1/messages")
+                    .body(Map.of(
+                            "model", model,
+                            "max_tokens", Math.max(8, config.maxTokens()),
+                            "temperature", 0,
+                            "messages", List.of(Map.of("role", "user", "content", "ping"))
+                    ))
+                    .retrieve()
+                    .body(JsonNode.class);
+            return new AiProviderHealthResult(
+                    true,
+                    provider(),
+                    model,
+                    System.currentTimeMillis() - startedAt,
+                    "Claude 连通性测试通过",
+                    config.configSource(),
+                    AiProviderHealthStatus.SUCCESS
+            );
+        } catch (RestClientResponseException ex) {
+            AiProviderException mapped = mapException(ex);
+            return new AiProviderHealthResult(
+                    false,
+                    provider(),
+                    model,
+                    System.currentTimeMillis() - startedAt,
+                    mapped.getMessage(),
+                    config.configSource(),
+                    AiProviderHealthStatus.FAILED
+            );
+        } catch (Exception ex) {
+            return new AiProviderHealthResult(
+                    false,
+                    provider(),
+                    model,
+                    System.currentTimeMillis() - startedAt,
+                    "Claude 连通性测试失败，请检查网络或配置",
+                    config.configSource(),
+                    AiProviderHealthStatus.FAILED
+            );
+        }
     }
 
     private String extractAnthropicJson(JsonNode response) {
@@ -121,13 +155,22 @@ public class AnthropicProviderClient implements AiProviderClient {
         if (code.value() >= 500) {
             return new AiProviderException("Claude 服务暂时不可用，请稍后再试");
         }
-        log.warn("Anthropic 调用失败: status={}, body={}", code, ex.getResponseBodyAsString());
+        log.warn("Anthropic 调用失败: status={}", code);
         return new AiProviderException("Claude 请求失败: " + ex.getStatusText());
     }
 
-    private SimpleClientHttpRequestFactory requestFactory() {
+    private RestClient buildClient(ResolvedAiProviderConfig config) {
+        return RestClient.builder()
+                .baseUrl(config.baseUrl())
+                .defaultHeader("x-api-key", config.apiKey())
+                .defaultHeader("anthropic-version", "2023-06-01")
+                .requestFactory(requestFactory(config.timeoutMs()))
+                .build();
+    }
+
+    private SimpleClientHttpRequestFactory requestFactory(int timeoutMs) {
         SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
-        int timeout = Math.max(1000, properties.getAi().getRequestTimeoutMs());
+        int timeout = Math.max(1000, timeoutMs);
         factory.setConnectTimeout(timeout);
         factory.setReadTimeout(timeout);
         return factory;

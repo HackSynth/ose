@@ -14,4 +14,6 @@ public interface AiProviderClient {
                                                       String systemPrompt,
                                                       String userPrompt,
                                                       String jsonSchema);
+
+    AiProviderHealthResult testConnection(ResolvedAiProviderConfig config);
 }

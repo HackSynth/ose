@@ -26,6 +26,11 @@
 - 前端测试：AI 出题页面交互、provider/model 切换、预览保存
 - E2E：AI 页面生成上午题、保存题库、查看历史（mock AI 接口，不依赖真实 Key）
 
+### 阶段 E：AI Provider 配置中心（进行中）
+- 已完成后端配置中心基础设施：数据库表、加密服务、统一配置解析器、健康探测 API、`ENV / DB / HYBRID` 优先级策略
+- 已完成后端测试：密钥加解密、掩码、保存/清空、优先级解析、配置测试接口
+- 下一步补齐前端 AI 配置页面、交互测试与 E2E 链路
+
 ## 里程碑 1：E2E 测试基础设施
 - 目标：补齐 Playwright 基础设施、稳定数据准备、可维护选择器与 Docker 运行入口。
 - 涉及文件/目录：`frontend/package.json`、`frontend/playwright.config.ts`、`frontend/tests/e2e/`、`frontend/src/views/**`、`frontend/src/layouts/**`、`docker-compose.yml`
