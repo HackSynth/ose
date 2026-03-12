@@ -127,6 +127,46 @@ AI 相关可选环境变量：
 - `DB`：只使用数据库托管配置；未配置时 AI Provider 为不可用。
 - `HYBRID`：数据库启用配置优先，环境变量兜底；当两者都不可用时，AI 出题页面仍可正常打开，但生成时会给出可理解错误提示。
 
+### 5.2.3 容器已启动后如何保存 AI 配置
+如果页面提示“未配置 `AI_SECRET_ENCRYPTION_KEY`，当前实例不能托管数据库密钥”，表示当前后端还不能把 API Key 加密保存到数据库。此时有两种处理方式。
+
+方式一：启用页面托管密钥（数据库加密存储）
+1. 在项目根目录创建或编辑 `.env`：
+```bash
+cp .env.example .env
+```
+2. 设置以下变量：
+```env
+AI_CONFIG_MODE=HYBRID
+AI_SECRET_ENCRYPTION_KEY=替换为随机长字符串
+```
+可使用如下命令生成主密钥：
+```bash
+openssl rand -hex 32
+```
+3. 让后端容器重新加载环境变量：
+```bash
+docker compose up -d --force-recreate backend
+```
+4. 打开左侧导航 `AI 配置` 页面，输入 OpenAI 或 Anthropic 的 API Key 后点击“保存”，即可将密钥加密写入数据库。
+
+方式二：仅通过环境变量配置
+1. 在 `.env` 中直接配置 Provider Key：
+```env
+OPENAI_API_KEY=
+OPENAI_BASE_URL=https://api.openai.com
+OPENAI_DEFAULT_MODEL=gpt-4.1-mini
+
+ANTHROPIC_API_KEY=
+ANTHROPIC_BASE_URL=https://api.anthropic.com
+ANTHROPIC_DEFAULT_MODEL=claude-3-5-sonnet-latest
+```
+2. 重建后端容器：
+```bash
+docker compose up -d --force-recreate backend
+```
+3. 进入 `AI 配置` 页面确认配置来源显示为 `ENV` 或 `ENV_FALLBACK`。此模式下页面不会托管密钥，但 AI 出题功能可继续使用环境变量配置。
+
 ### 5.3 一键启动
 ```bash
 docker compose up -d --build
