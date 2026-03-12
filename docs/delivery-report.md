@@ -16,6 +16,7 @@
 - 完成前端 UI 重构第三阶段，统一关键编辑弹窗校验规则与移动端全屏交互策略
 - 完成前端 UI 重构第四阶段，新增通用响应式表单栅格组件并推进统计/练习/模型服务页面结构收敛
 - 完成前端 UI 重构第五阶段，新增通用移动端卡片列表组件并完成多表格页小屏替代展示
+- 完成前端 UI 重构第六阶段，统一练习/模考详情作答卡片交互并收口残留视觉风格
 
 ## 2. 关键设计决策
 - E2E 采用 Playwright，优先覆盖真实浏览器交互链路，而非仅靠接口级测试。
@@ -51,8 +52,12 @@
 - `frontend/src/views/mistakes/MistakeView.vue`
 - `frontend/src/views/exams/ExamView.vue`
 - `frontend/src/views/analytics/AnalyticsView.vue`
+- `frontend/src/views/auth/LoginView.vue`
 - `frontend/src/views/ai/AiQuestionCenterView.vue`
 - `frontend/src/views/dashboard/DashboardView.vue`
+- `frontend/src/components/business/practice/PracticeQuestionCard.vue`
+- `frontend/src/components/business/exam/ExamAttemptCard.vue`
+- `frontend/src/components/business/dashboard/CompletionCard.vue`
 - `frontend/src/components/ui/form/PageFormGrid.vue`
 - `frontend/src/components/ui/data/MobileCardList.vue`
 - `frontend/tests/e2e/auth.spec.ts`
@@ -316,6 +321,23 @@ PLAYWRIGHT_BASE_URL=http://127.0.0.1 npm run test:e2e
   - 小屏端避免表格挤压与横向滚动，点击区域更适配触屏
 
 ### 17.2 本阶段验证
+- `cd frontend && npm run test -- --run`：通过
+- `cd frontend && npm run build`：通过
+- `cd frontend && npm run lint`：失败（当前仓库未提供 `lint` script）
+
+## 18. 前端 UI 重构第六阶段（详情作答 + 视觉收口）
+### 18.1 完成内容
+- 详情作答组件统一：
+  - `PracticeQuestionCard`、`ExamAttemptCard` 操作区改为 `PageActionGroup`
+  - 统一题目卡片结构，减少不同页面的按钮布局和间距差异
+- 移动端可用性优化：
+  - 小屏下详情头部、操作区、题干区、结果区自动重排
+  - 缩减内容区内边距，提升长题干阅读与触控操作稳定性
+- 风格收口：
+  - `CompletionCard` 进度色板改为 Element Plus 默认 token 体系
+  - `LoginView` 去除装饰性渐变背景，改为后台统一浅色页面基底
+
+### 18.2 本阶段验证
 - `cd frontend && npm run test -- --run`：通过
 - `cd frontend && npm run build`：通过
 - `cd frontend && npm run lint`：失败（当前仓库未提供 `lint` script）

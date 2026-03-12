@@ -12,7 +12,7 @@
             {{ attempt.status === 'SUBMITTED' ? '已交卷' : '进行中' }}
           </el-tag>
         </div>
-        <div class="attempt-meta">
+        <PageActionGroup class="attempt-meta">
           <span v-if="attempt.status !== 'SUBMITTED'" class="timer">剩余时间: --:--</span>
           <el-button 
             type="primary" 
@@ -23,7 +23,7 @@
           >
             提交试卷
           </el-button>
-        </div>
+        </PageActionGroup>
       </div>
     </template>
 
@@ -41,7 +41,7 @@
       <el-card 
         v-for="(answer, index) in attempt.answers" 
         :key="answer.answerId" 
-        class="question-card"
+        class="business-card question-card"
         shadow="never"
         :data-testid="`exam-answer-card-${index}`"
       >
@@ -131,6 +131,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
+import PageActionGroup from '@/components/ui/layout/PageActionGroup.vue';
 
 const props = defineProps<{
   attempt: any;
@@ -172,7 +173,7 @@ const reviewModel = computed({
 .attempt-meta {
   display: flex;
   align-items: center;
-  gap: var(--space-4);
+  justify-content: flex-end;
 }
 
 .timer {
@@ -285,5 +286,41 @@ const reviewModel = computed({
   margin-top: var(--space-8);
   padding-top: var(--space-6);
   border-top: 1px solid var(--border-light);
+}
+
+@media (max-width: 767px) {
+  .attempt-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-3);
+  }
+
+  .attempt-title-info {
+    justify-content: space-between;
+  }
+
+  .attempt-meta {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .questions-list {
+    gap: var(--space-4);
+  }
+
+  .question-header {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .question-content {
+    padding: var(--space-3);
+    margin-bottom: var(--space-4);
+  }
+
+  .attempt-footer {
+    margin-top: var(--space-6);
+    padding-top: var(--space-4);
+  }
 }
 </style>

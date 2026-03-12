@@ -83,16 +83,14 @@ const onSubmit = async () => {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(circle at top left, #eff6ff 0%, #ffffff 40%),
-              radial-gradient(circle at bottom right, #f8fafc 0%, #ffffff 40%);
+  background: var(--el-bg-color-page);
   padding: var(--space-6);
 }
 
 .login-card {
   width: 100%;
   max-width: 420px;
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-lg);
+  border-radius: var(--radius-lg);
 }
 
 .login-header {
@@ -101,8 +99,7 @@ const onSubmit = async () => {
 
 .brand {
   font-size: 24px;
-  font-weight: 800;
-  letter-spacing: -0.5px;
+  font-weight: 700;
   color: var(--text-primary);
 }
 

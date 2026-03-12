@@ -50,6 +50,15 @@
   - `ai/AiQuestionCenterView`（生成历史表格 -> 移动卡片列表）
 - 结果：桌面端保留 `el-table` 信息密度，移动端改为可读可点的卡片结构，降低横向滚动与文本挤压风险。
 
+## UI 重构阶段 6（已完成）
+- 详情作答卡片收敛：
+  - `practice/PracticeQuestionCard`、`exam/ExamAttemptCard` 统一接入 `PageActionGroup` 操作区布局。
+  - 增补移动端样式：标题区、操作区、题干区和结果区在小屏下自动重排，避免按钮拥挤与文本换行错位。
+- 视觉风格收口：
+  - `dashboard/CompletionCard` 进度条颜色切换到 Element Plus 默认 token（danger/warning/success/primary）。
+  - `auth/LoginView` 去除装饰性渐变背景，改为 Element Plus 页面底色，视觉与后台页保持一致。
+- 结果：详情页和作答页在移动端交互更稳定，且全站视觉更贴近 Element Plus 默认浅蓝风格。
+
 ## AI 出题专项（本轮新增）
 ### 阶段 A：最小可用版本（已完成）
 - 新增统一 Provider 抽象层：`AiProviderClient`、`OpenAiProviderClient`、`AnthropicProviderClient`

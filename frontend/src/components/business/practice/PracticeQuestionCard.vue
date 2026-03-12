@@ -19,7 +19,7 @@
         </div>
       </div>
       <div class="question-actions" v-if="sessionStatus === 'SUBMITTED'">
-        <el-button-group>
+        <PageActionGroup>
           <el-button 
             size="small" 
             :type="record.favorite ? 'warning' : 'default'" 
@@ -41,7 +41,7 @@
           >
             {{ record.addedToReview ? '取消复习' : '加入复习' }}
           </el-button>
-        </el-button-group>
+        </PageActionGroup>
       </div>
     </div>
 
@@ -119,6 +119,8 @@
 </template>
 
 <script setup lang="ts">
+import PageActionGroup from '@/components/ui/layout/PageActionGroup.vue';
+
 defineProps<{
   record: any;
   index: number;
@@ -154,6 +156,7 @@ const resultType = (result?: string) => {
   display: flex;
   align-items: center;
   gap: var(--space-4);
+  flex-wrap: wrap;
 }
 
 .question-number {
@@ -165,6 +168,7 @@ const resultType = (result?: string) => {
 .knowledge-tags {
   display: flex;
   gap: var(--space-2);
+  flex-wrap: wrap;
 }
 
 .question-main {
@@ -243,5 +247,33 @@ const resultType = (result?: string) => {
   gap: var(--space-3);
   flex-wrap: wrap;
   align-items: center;
+}
+
+@media (max-width: 767px) {
+  .question-meta {
+    width: 100%;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+
+  .question-actions {
+    width: 100%;
+  }
+
+  .question-actions :deep(.page-action-group) {
+    width: 100%;
+  }
+
+  .question-title {
+    font-size: 16px;
+  }
+
+  .question-content {
+    padding: var(--space-3);
+  }
+
+  .result-footer {
+    gap: var(--space-2);
+  }
 }
 </style>
