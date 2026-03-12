@@ -59,6 +59,15 @@
   - `auth/LoginView` 去除装饰性渐变背景，改为 Element Plus 页面底色，视觉与后台页保持一致。
 - 结果：详情页和作答页在移动端交互更稳定，且全站视觉更贴近 Element Plus 默认浅蓝风格。
 
+## UI 重构阶段 7（已完成）
+- 新增通用状态组件：`components/ui/feedback/PageStateBlock.vue`
+  - 统一封装页面级 `loading / error / empty` 三态展示（`el-skeleton`、`el-result`、`el-empty`）。
+- 页面接入：
+  - `dashboard/DashboardView`：概览数据加载失败时可直接重试。
+  - `analytics/AnalyticsView`：统计数据加载态与错误态统一，刷新按钮支持 loading 反馈。
+  - `plans/PlanView`：学习计划首屏加载失败可重试，空数据展示规范化。
+- 结果：核心页面首屏反馈更完整，避免“白屏/静默失败”体验，且状态组件可继续复用到其余页面。
+
 ## AI 出题专项（本轮新增）
 ### 阶段 A：最小可用版本（已完成）
 - 新增统一 Provider 抽象层：`AiProviderClient`、`OpenAiProviderClient`、`AnthropicProviderClient`

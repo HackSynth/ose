@@ -11,60 +11,68 @@
       </template>
     </PageHeader>
 
-    <div class="card-grid" data-testid="dashboard-summary-cards">
-      <StatCard
-        v-for="item in overview?.summaryCards || []"
-        :key="item.label"
-        :data-testid="`dashboard-card-${item.label}`"
-        :title="item.label"
-        :value="item.value"
-        :hint="item.hint"
-      />
-      <StatCard
-        data-testid="dashboard-card-due-reviews"
-        title="待复习错题"
-        :value="overview?.dueReviewCount || 0"
-        hint="到期错题复习提醒"
-      />
-    </div>
+    <PageStateBlock
+      :loading="loading"
+      :error-message="errorMessage"
+      :empty="!overview"
+      empty-description="暂无概览数据"
+      @retry="load"
+    >
+      <div class="card-grid" data-testid="dashboard-summary-cards">
+        <StatCard
+          v-for="item in overview?.summaryCards || []"
+          :key="item.label"
+          :data-testid="`dashboard-card-${item.label}`"
+          :title="item.label"
+          :value="item.value"
+          :hint="item.hint"
+        />
+        <StatCard
+          data-testid="dashboard-card-due-reviews"
+          title="待复习错题"
+          :value="overview?.dueReviewCount || 0"
+          hint="到期错题复习提醒"
+        />
+      </div>
 
-    <div class="split-layout">
-      <TaskCard 
-        data-testid="dashboard-today-tasks"
-        :tasks="overview?.todayTasks || []" 
-      />
-      <CompletionCard 
-        data-testid="dashboard-completion"
-        :week="overview?.weekCompletion" 
-        :month="overview?.monthCompletion" 
-      />
-    </div>
+      <div class="split-layout">
+        <TaskCard 
+          data-testid="dashboard-today-tasks"
+          :tasks="overview?.todayTasks || []" 
+        />
+        <CompletionCard 
+          data-testid="dashboard-completion"
+          :week="overview?.weekCompletion" 
+          :month="overview?.monthCompletion" 
+        />
+      </div>
 
-    <div class="split-layout">
-      <ReviewReminderCard 
-        data-testid="dashboard-review-reminders"
-        :reminders="overview?.reviewReminders || []" 
-        @view-all="router.push('/mistakes')" 
-      />
-      <PracticeRecommendCard 
-        data-testid="dashboard-practice-recommendations"
-        :recommendations="overview?.practiceRecommendations || []" 
-        @practice="goToPractice" 
-      />
-    </div>
+      <div class="split-layout">
+        <ReviewReminderCard 
+          data-testid="dashboard-review-reminders"
+          :reminders="overview?.reviewReminders || []" 
+          @view-all="router.push('/mistakes')" 
+        />
+        <PracticeRecommendCard 
+          data-testid="dashboard-practice-recommendations"
+          :recommendations="overview?.practiceRecommendations || []" 
+          @practice="goToPractice" 
+        />
+      </div>
 
-    <div class="split-layout">
-      <KnowledgeMasteryCard 
-        data-testid="dashboard-knowledge-overview"
-        :knowledge-overview="overview?.knowledgeOverview || []" 
-      />
-      <RecentRecordsCard 
-        data-testid="dashboard-recent-records"
-        :recent-mistakes="overview?.recentMistakes || []" 
-        :recent-exams="overview?.recentExams || []" 
-        :recent-notes="overview?.recentNotes || []" 
-      />
-    </div>
+      <div class="split-layout">
+        <KnowledgeMasteryCard 
+          data-testid="dashboard-knowledge-overview"
+          :knowledge-overview="overview?.knowledgeOverview || []" 
+        />
+        <RecentRecordsCard 
+          data-testid="dashboard-recent-records"
+          :recent-mistakes="overview?.recentMistakes || []" 
+          :recent-exams="overview?.recentExams || []" 
+          :recent-notes="overview?.recentNotes || []" 
+        />
+      </div>
+    </PageStateBlock>
   </div>
 </template>
 
@@ -74,6 +82,7 @@ import { useRouter } from 'vue-router';
 import { api } from '@/api';
 
 // UI Components
+import PageStateBlock from '@/components/ui/feedback/PageStateBlock.vue';
 import PageHeader from '@/components/ui/layout/PageHeader.vue';
 import StatCard from '@/components/business/common/StatCard.vue';
 
@@ -87,9 +96,20 @@ import RecentRecordsCard from '@/components/business/dashboard/RecentRecordsCard
 
 const router = useRouter();
 const overview = ref<any>(null);
+const loading = ref(false);
+const errorMessage = ref('');
 
 const load = async () => {
-  overview.value = await api.dashboard();
+  loading.value = true;
+  errorMessage.value = '';
+  try {
+    overview.value = await api.dashboard();
+  } catch (error: any) {
+    overview.value = null;
+    errorMessage.value = error?.message || '请稍后重试';
+  } finally {
+    loading.value = false;
+  }
 };
 
 const goToPractice = (item: any) => {

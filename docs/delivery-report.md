@@ -17,6 +17,7 @@
 - 完成前端 UI 重构第四阶段，新增通用响应式表单栅格组件并推进统计/练习/模型服务页面结构收敛
 - 完成前端 UI 重构第五阶段，新增通用移动端卡片列表组件并完成多表格页小屏替代展示
 - 完成前端 UI 重构第六阶段，统一练习/模考详情作答卡片交互并收口残留视觉风格
+- 完成前端 UI 重构第七阶段，新增统一页面状态反馈组件并接入仪表盘/统计/计划页面
 
 ## 2. 关键设计决策
 - E2E 采用 Playwright，优先覆盖真实浏览器交互链路，而非仅靠接口级测试。
@@ -55,11 +56,13 @@
 - `frontend/src/views/auth/LoginView.vue`
 - `frontend/src/views/ai/AiQuestionCenterView.vue`
 - `frontend/src/views/dashboard/DashboardView.vue`
+- `frontend/src/views/plans/PlanView.vue`
 - `frontend/src/components/business/practice/PracticeQuestionCard.vue`
 - `frontend/src/components/business/exam/ExamAttemptCard.vue`
 - `frontend/src/components/business/dashboard/CompletionCard.vue`
 - `frontend/src/components/ui/form/PageFormGrid.vue`
 - `frontend/src/components/ui/data/MobileCardList.vue`
+- `frontend/src/components/ui/feedback/PageStateBlock.vue`
 - `frontend/tests/e2e/auth.spec.ts`
 - `frontend/tests/e2e/core-flow.spec.ts`
 - `frontend/tests/e2e/helpers.ts`
@@ -338,6 +341,24 @@ PLAYWRIGHT_BASE_URL=http://127.0.0.1 npm run test:e2e
   - `LoginView` 去除装饰性渐变背景，改为后台统一浅色页面基底
 
 ### 18.2 本阶段验证
+- `cd frontend && npm run test -- --run`：通过
+- `cd frontend && npm run build`：通过
+- `cd frontend && npm run lint`：失败（当前仓库未提供 `lint` script）
+
+## 19. 前端 UI 重构第七阶段（页面状态反馈统一）
+### 19.1 完成内容
+- 新增通用组件：
+  - `components/ui/feedback/PageStateBlock.vue`
+  - 统一封装页面级加载态（`el-skeleton`）、错误态（`el-result`）与空态（`el-empty`）
+- 页面接入：
+  - `DashboardView`：概览加载失败时给出错误提示和重试按钮
+  - `AnalyticsView`：统计加载态/失败态统一，刷新按钮支持 loading 反馈
+  - `PlanView`：计划页面首屏加载、失败重试和空状态统一
+- 交互结果：
+  - 核心页面首屏不再出现“静默空白”状态
+  - 数据请求异常时用户可就地重试，减少刷新整页依赖
+
+### 19.2 本阶段验证
 - `cd frontend && npm run test -- --run`：通过
 - `cd frontend && npm run build`：通过
 - `cd frontend && npm run lint`：失败（当前仓库未提供 `lint` script）

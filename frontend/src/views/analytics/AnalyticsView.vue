@@ -8,6 +8,7 @@
         <el-button 
           type="primary" 
           plain 
+          :loading="loading"
           data-testid="analytics-refresh-button" 
           @click="load"
         >
@@ -16,58 +17,83 @@
       </template>
     </PageHeader>
 
-    <div class="card-grid" data-testid="analytics-cards">
-      <StatCard
-        v-for="item in summary?.cards || []"
-        :key="item.label"
-        :data-testid="`analytics-card-${item.label}`"
-        :title="item.label"
-        :value="item.value"
-        :hint="item.hint"
-      />
-    </div>
+    <PageStateBlock
+      :loading="loading"
+      :error-message="errorMessage"
+      :empty="!summary && !trends"
+      empty-description="暂无统计数据"
+      @retry="load"
+    >
+      <div class="card-grid" data-testid="analytics-cards">
+        <StatCard
+          v-for="item in summary?.cards || []"
+          :key="item.label"
+          :data-testid="`analytics-card-${item.label}`"
+          :title="item.label"
+          :value="item.value"
+          :hint="item.hint"
+        />
+      </div>
 
-    <div class="split-layout">
-      <PageSection title="知识点练习表现" class="chart-section" data-testid="analytics-knowledge-chart-card">
-        <div class="chart-wrapper">
-          <VChart v-if="knowledgeOption" data-testid="analytics-knowledge-chart" :option="knowledgeOption" autoresize />
-        </div>
-      </PageSection>
-      <PageSection title="错题分布" class="chart-section" data-testid="analytics-mistake-chart-card">
-        <div class="chart-wrapper">
-          <VChart v-if="mistakeOption" data-testid="analytics-mistake-chart" :option="mistakeOption" autoresize />
-        </div>
-      </PageSection>
-    </div>
+      <div class="split-layout">
+        <PageSection title="知识点练习表现" class="chart-section" data-testid="analytics-knowledge-chart-card">
+          <div class="chart-wrapper">
+            <VChart v-if="knowledgeOption" data-testid="analytics-knowledge-chart" :option="knowledgeOption" autoresize />
+          </div>
+        </PageSection>
+        <PageSection title="错题分布" class="chart-section" data-testid="analytics-mistake-chart-card">
+          <div class="chart-wrapper">
+            <VChart v-if="mistakeOption" data-testid="analytics-mistake-chart" :option="mistakeOption" autoresize />
+          </div>
+        </PageSection>
+      </div>
 
-    <div class="split-layout">
-      <PageSection title="模拟考成绩趋势" class="chart-section" data-testid="analytics-exam-chart-card">
-        <div class="chart-wrapper">
-          <VChart v-if="examOption" data-testid="analytics-exam-chart" :option="examOption" autoresize />
-        </div>
-      </PageSection>
-      <PageSection title="计划 / 练习趋势" class="chart-section" data-testid="analytics-activity-chart-card">
-        <div class="chart-wrapper">
-          <VChart v-if="activityOption" data-testid="analytics-activity-chart" :option="activityOption" autoresize />
-        </div>
-      </PageSection>
-    </div>
+      <div class="split-layout">
+        <PageSection title="模拟考成绩趋势" class="chart-section" data-testid="analytics-exam-chart-card">
+          <div class="chart-wrapper">
+            <VChart v-if="examOption" data-testid="analytics-exam-chart" :option="examOption" autoresize />
+          </div>
+        </PageSection>
+        <PageSection title="计划 / 练习趋势" class="chart-section" data-testid="analytics-activity-chart-card">
+          <div class="chart-wrapper">
+            <VChart v-if="activityOption" data-testid="analytics-activity-chart" :option="activityOption" autoresize />
+          </div>
+        </PageSection>
+      </div>
+    </PageStateBlock>
   </div>
 </template>
 
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue';
 import { api } from '@/api';
+import PageStateBlock from '@/components/ui/feedback/PageStateBlock.vue';
 import PageHeader from '@/components/ui/layout/PageHeader.vue';
 import PageSection from '@/components/ui/layout/PageSection.vue';
 import StatCard from '@/components/business/common/StatCard.vue';
 
 const summary = ref<any>(null);
 const trends = ref<any>(null);
+const loading = ref(false);
+const errorMessage = ref('');
 
 const load = async () => {
-  summary.value = await api.analyticsSummary();
-  trends.value = await api.analyticsTrends();
+  loading.value = true;
+  errorMessage.value = '';
+  try {
+    const [summaryData, trendsData] = await Promise.all([
+      api.analyticsSummary(),
+      api.analyticsTrends(),
+    ]);
+    summary.value = summaryData;
+    trends.value = trendsData;
+  } catch (error: any) {
+    summary.value = null;
+    trends.value = null;
+    errorMessage.value = error?.message || '请稍后重试';
+  } finally {
+    loading.value = false;
+  }
 };
 
 const knowledgeOption = computed(() => ({
