@@ -12,4 +12,6 @@ public interface QuestionRepository extends JpaRepository<Question, Long>, JpaSp
     List<Question> findByTypeAndActiveTrue(AppEnums.QuestionType type);
 
     Optional<Question> findFirstByTypeAndYearAndTitle(AppEnums.QuestionType type, Integer year, String title);
+
+    boolean existsByTitleAndContent(String title, String content);
 }

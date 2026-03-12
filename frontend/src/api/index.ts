@@ -42,5 +42,11 @@ export const api = {
   exportAll: () => http.get('/export/full'),
   importAllBundle: (payload: unknown, strategy = 'OVERWRITE') => http.post(`/import/full?strategy=${strategy}`, payload),
   importAllFile: (formData: FormData, strategy = 'OVERWRITE') => http.post(`/import/full-file?strategy=${strategy}`, formData, { headers: { 'Content-Type': 'multipart/form-data' } }),
+  aiProviders: () => http.get('/ai/providers'),
+  aiModels: (params?: Record<string, unknown>) => http.get('/ai/models', { params }),
+  aiGenerateQuestions: (payload: unknown) => http.post('/ai/questions/generate', payload),
+  aiSaveQuestions: (payload: unknown) => http.post('/ai/questions/save', payload),
+  aiHistory: () => http.get('/ai/history'),
+  aiHealth: () => http.get('/ai/health'),
   health: () => http.get('/health'),
 };

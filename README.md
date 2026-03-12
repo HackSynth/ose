@@ -16,6 +16,7 @@
 - 学习计划：基于考试日期与学习参数自动生成阶段计划、周任务与日任务；保存设置后自动重排当前计划
 - 知识体系：维护一级 / 二级 / 三级知识点，记录掌握度、权重与备注
 - 题库管理：支持上午题 / 下午题，支持筛选、导入模板、导出
+- AI 出题中心：支持 OpenAI / Claude（Anthropic）按知识点、难度、场景生成上午题/下午题，支持预览编辑、临时练习与审核后入库
 - 练习系统：支持按知识点、随机、错题练习；上午题自动判分，下午题自评；支持薄弱知识点一键推荐练习
 - 错题复习：自动入库、错因分类、复习状态流转、下次复习时间、到期复习提醒
 - 模拟考试：创建上午卷 / 下午卷模拟，保存成绩与历史记录，并生成模考后复盘摘要
@@ -84,6 +85,15 @@
 cp .env.example .env
 ```
 如无特殊需求，可直接使用默认值。
+
+AI 相关可选环境变量：
+- `OPENAI_API_KEY`、`OPENAI_BASE_URL`、`OPENAI_DEFAULT_MODEL`、`OPENAI_MODELS`
+- `ANTHROPIC_API_KEY`、`ANTHROPIC_BASE_URL`、`ANTHROPIC_DEFAULT_MODEL`、`ANTHROPIC_MODELS`
+- `AI_REQUEST_TIMEOUT_MS`、`AI_MAX_RETRIES`、`AI_ENABLE_SAVE_REVIEW`
+
+说明：
+- 未配置 API Key 时，AI 模块会优雅降级（仅显示“未配置”状态），不影响其他功能。
+- `AI_ENABLE_SAVE_REVIEW=true` 时，AI 入库题默认待审核（不进入可练习状态）。
 
 ### 5.3 一键启动
 ```bash
@@ -255,6 +265,12 @@ mvn spring-boot:run
 - `POST /api/plans/generate`
 - `GET /api/knowledge-points/tree`
 - `GET /api/questions`
+- `POST /api/ai/questions/generate`
+- `POST /api/ai/questions/save`
+- `GET /api/ai/providers`
+- `GET /api/ai/models`
+- `GET /api/ai/history`
+- `GET /api/ai/health`
 - `POST /api/practice/sessions`
 - `GET /api/mistakes`
 - `GET /api/exams`

@@ -35,6 +35,17 @@ services:
       APP_DEFAULT_ADMIN_USERNAME: ${DEFAULT_ADMIN_USERNAME:-admin}
       APP_DEFAULT_ADMIN_PASSWORD: ${DEFAULT_ADMIN_PASSWORD:-OseAdmin@2026}
       APP_DEFAULT_ADMIN_DISPLAY_NAME: ${DEFAULT_ADMIN_DISPLAY_NAME:-备考管理员}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_BASE_URL: ${OPENAI_BASE_URL:-https://api.openai.com}
+      OPENAI_DEFAULT_MODEL: ${OPENAI_DEFAULT_MODEL:-gpt-4.1-mini}
+      OPENAI_MODELS: ${OPENAI_MODELS:-gpt-4.1-mini,gpt-4.1}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      ANTHROPIC_BASE_URL: ${ANTHROPIC_BASE_URL:-https://api.anthropic.com}
+      ANTHROPIC_DEFAULT_MODEL: ${ANTHROPIC_DEFAULT_MODEL:-claude-3-5-sonnet-latest}
+      ANTHROPIC_MODELS: ${ANTHROPIC_MODELS:-claude-3-5-sonnet-latest,claude-3-5-haiku-latest}
+      AI_REQUEST_TIMEOUT_MS: ${AI_REQUEST_TIMEOUT_MS:-30000}
+      AI_MAX_RETRIES: ${AI_MAX_RETRIES:-1}
+      AI_ENABLE_SAVE_REVIEW: ${AI_ENABLE_SAVE_REVIEW:-true}
     depends_on:
       mysql:
         condition: service_healthy

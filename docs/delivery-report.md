@@ -134,3 +134,32 @@ PLAYWRIGHT_BASE_URL=http://127.0.0.1 npm run test:e2e
 - 将错题复习提醒扩展为“今日复习清单”与计划任务联动。
 - 为薄弱知识点推荐增加更多维度，如最近趋势、主观题得分率、错因分布。
 - 为模考复盘摘要提供可编辑模板和复盘标签分类。
+
+## 10. AI 出题模块交付说明
+### 10.1 完成内容
+- 新增后端 `ai` 模块（Provider 抽象、Prompt 构建、结构化输出校验、生成/保存/历史/健康接口）。
+- 新增前端“AI 出题中心”页面并加入主导航，支持 provider/model、题型、场景、难度、数量、语言、风格配置。
+- 支持两类模式：临时练习集（仅预览不入库）与保存到题库（可先编辑后批量保存）。
+- 保存后的题目自动标记 `AI 生成`，记录 `provider/model` 与来源字段。
+- 新增 `ai_generation_records` 表记录生成参数、状态、错误信息、prompt hash、结果摘要。
+
+### 10.2 接入方式与取舍
+- OpenAI：使用 Responses API（HTTP）+ JSON Schema 结构化输出。
+- Anthropic：使用 Messages API（HTTP）+ schema 约束 JSON 输出。
+- SDK 取舍：本轮使用 Spring `RestClient` 统一 HTTP 调用，优先保证错误映射、代理兼容和依赖轻量；后续可替换为官方 Java SDK。
+
+### 10.3 降级与安全
+- 未配置 `OPENAI_API_KEY` / `ANTHROPIC_API_KEY` 时，`/api/ai/providers` 显示未配置状态，生成接口返回明确错误提示。
+- AI 服务不可用不会影响主系统其他功能。
+- 不落库敏感 Key，仅保存 provider/model、请求摘要、状态与错误。
+
+### 10.4 测试说明
+- 后端单元测试：Prompt Builder、Schema/业务校验、Provider 路由、错误处理。
+- 后端集成测试：Mock OpenAI、Mock Anthropic，覆盖生成 -> 保存 -> 历史链路。
+- 前端单元测试：AI 出题页表单交互、生成预览、保存动作。
+- E2E：新增 AI 页面用例，使用 mock 路由，不依赖真实 API Key。
+
+### 10.5 已知限制与扩展方向
+- 计费/Token 精确统计字段已预留，当前未对接精确账单回传。
+- Anthropic 结构化输出当前采用 schema 指令约束，后续可升级到更强约束能力。
+- 后续可扩展：AI 解析、AI 讲题、AI 学习建议、AI 个性化复盘。

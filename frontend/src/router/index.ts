@@ -12,6 +12,7 @@ const routes = [
       { path: '/plans', name: 'plans', component: () => import('@/views/plans/PlanView.vue'), meta: { title: '学习计划', menu: true } },
       { path: '/knowledge', name: 'knowledge', component: () => import('@/views/knowledge/KnowledgeView.vue'), meta: { title: '知识体系', menu: true } },
       { path: '/questions', name: 'questions', component: () => import('@/views/questions/QuestionBankView.vue'), meta: { title: '题库管理', menu: true } },
+      { path: '/ai-questions', name: 'ai-questions', component: () => import('@/views/ai/AiQuestionCenterView.vue'), meta: { title: 'AI 出题', menu: true } },
       { path: '/practice', name: 'practice', component: () => import('@/views/practice/PracticeView.vue'), meta: { title: '练习系统', menu: true } },
       { path: '/mistakes', name: 'mistakes', component: () => import('@/views/mistakes/MistakeView.vue'), meta: { title: '错题复习', menu: true } },
       { path: '/exams', name: 'exams', component: () => import('@/views/exams/ExamView.vue'), meta: { title: '模拟考试', menu: true } },

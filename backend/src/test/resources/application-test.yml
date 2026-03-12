@@ -23,3 +23,7 @@ app:
     username: admin
     password: OseAdmin@2026
     display-name: 测试管理员
+  ai:
+    request-timeout-ms: 5000
+    max-retries: 0
+    enable-save-review: true

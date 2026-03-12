@@ -4,6 +4,28 @@
 - OSE MVP 已完成：认证、仪表盘、计划、知识体系、题库、练习、错题、模拟、笔记、统计、导出、健康检查均已交付。
 - 本轮进入“质量增强 + 实用性增强”阶段，目标是在不重做既有能力的前提下补齐端到端验证、整包导入、备考体验增强，并同步完善文档与交付说明。
 
+## AI 出题专项（本轮新增）
+### 阶段 A：最小可用版本（已完成）
+- 新增统一 Provider 抽象层：`AiProviderClient`、`OpenAiProviderClient`、`AnthropicProviderClient`
+- 新增 AI 出题 API：`/api/ai/questions/generate`、`/api/ai/questions/save`、`/api/ai/providers`、`/api/ai/models`、`/api/ai/history`、`/api/ai/health`
+- 新增前端“AI 出题中心”页面，支持 provider/model 切换、参数配置、结果预览编辑、保存入库/丢弃
+
+### 阶段 B：结构化输出与校验（已完成）
+- Prompt 层强制 JSON 输出，区分上午题/下午题 schema
+- 服务端执行 schema 校验 + 业务校验（字段完整性、选项合法性、重复性）
+- 低质量题/缺失题/重复题拦截后不可保存
+
+### 阶段 C：可观测与降级（已完成）
+- 新增 `ai_generation_records` 表，记录参数、provider/model、状态、错误、prompt hash 与结果
+- API Key 缺失时优雅降级：显示未配置状态，不影响主系统功能
+- 错误信息对齐：拒答、超时、配额不足、格式错误均返回可理解提示
+
+### 阶段 D：测试补齐（已完成）
+- 后端单测：Prompt Builder、Schema/业务校验、Provider 路由、错误处理
+- 后端集成测试：Mock OpenAI / Mock Anthropic，覆盖生成 -> 预览 -> 保存链路
+- 前端测试：AI 出题页面交互、provider/model 切换、预览保存
+- E2E：AI 页面生成上午题、保存题库、查看历史（mock AI 接口，不依赖真实 Key）
+
 ## 里程碑 1：E2E 测试基础设施
 - 目标：补齐 Playwright 基础设施、稳定数据准备、可维护选择器与 Docker 运行入口。
 - 涉及文件/目录：`frontend/package.json`、`frontend/playwright.config.ts`、`frontend/tests/e2e/`、`frontend/src/views/**`、`frontend/src/layouts/**`、`docker-compose.yml`

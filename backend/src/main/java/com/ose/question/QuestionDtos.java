@@ -34,7 +34,10 @@ public final class QuestionDtos {
             List<String> tags,
             List<QuestionRelationDto> knowledgePoints,
             BigDecimal score,
-            Boolean active
+            Boolean active,
+            Boolean aiGenerated,
+            String aiProvider,
+            String aiModel
     ) {
     }
 

@@ -81,7 +81,10 @@ class DataImportServiceTest {
                         List.of("导入", "测试"),
                         List.of(new QuestionDtos.QuestionRelationDto(null, "TEST.BUNDLE.CHILD." + suffix, "测试导入子主题" + suffix)),
                         BigDecimal.ONE,
-                        true
+                        true,
+                        false,
+                        null,
+                        null
                 )),
                 new PlanDtos.PlanResponse(
                         null,
@@ -162,7 +165,10 @@ class DataImportServiceTest {
                         List.of("数据库", "事务"),
                         List.of(new QuestionDtos.QuestionRelationDto(null, "DB.TXN", "事务与并发控制")),
                         BigDecimal.ONE,
-                        true
+                        true,
+                        false,
+                        null,
+                        null
                 )),
                 null,
                 List.of(new NoteDtos.NoteView(

@@ -21,6 +21,7 @@
         <java.version>17</java.version>
         <jjwt.version>0.12.5</jjwt.version>
         <commons-csv.version>1.11.0</commons-csv.version>
+        <json-schema-validator.version>1.5.1</json-schema-validator.version>
     </properties>
 
     <dependencies>
@@ -78,6 +79,11 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-csv</artifactId>
             <version>${commons-csv.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.networknt</groupId>
+            <artifactId>json-schema-validator</artifactId>
+            <version>${json-schema-validator.version}</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>

@@ -6,7 +6,7 @@ on:
   pull_request:
 
 jobs:
-  frontend:
+  frontend-unit-build:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -23,11 +23,28 @@ jobs:
       - run: npm run test -- --run
       - run: npm run build
 
-  backend:
+  backend-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Run backend tests in Docker Maven
         run: docker compose run --rm backend-test
-      - name: Build containers
-        run: docker compose build backend frontend
+
+  e2e:
+    runs-on: ubuntu-latest
+    needs: [frontend-unit-build, backend-test]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and start services
+        run: docker compose up -d --build
+      - name: Run Playwright E2E (all specs)
+        run: docker compose --profile tools run --rm e2e-test
+      - name: Dump service logs on failure
+        if: failure()
+        run: |
+          docker compose logs backend
+          docker compose logs frontend
+          docker compose logs mysql
+      - name: Shutdown services
+        if: always()
+        run: docker compose down -v

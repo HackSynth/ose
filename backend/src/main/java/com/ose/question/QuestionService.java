@@ -217,6 +217,9 @@ public class QuestionService {
         question.setTags(String.join(",", request.tags()));
         question.setScore(request.score());
         question.setActive(request.active() == null || request.active());
+        if (question.getAiGenerated() == null) {
+            question.setAiGenerated(false);
+        }
         question.getOptions().clear();
         if (request.options() != null) {
             request.options().stream()
@@ -273,7 +276,10 @@ public class QuestionService {
                 Arrays.stream(Optional.ofNullable(question.getTags()).orElse("").split(",")).filter(tag -> !tag.isBlank()).toList(),
                 question.getKnowledgePoints().stream().map(point -> new QuestionDtos.QuestionRelationDto(point.getId(), point.getCode(), point.getName())).toList(),
                 question.getScore(),
-                question.getActive()
+                question.getActive(),
+                question.getAiGenerated(),
+                question.getAiProvider(),
+                question.getAiModel()
         );
     }
 

@@ -59,6 +59,16 @@ public class Question extends BaseEntity {
     @Column(nullable = false)
     private Boolean active;
 
+    @Column(nullable = false)
+    @Builder.Default
+    private Boolean aiGenerated = false;
+
+    @Column(length = 20)
+    private String aiProvider;
+
+    @Column(length = 120)
+    private String aiModel;
+
     @Builder.Default
     @OneToMany(mappedBy = "question", cascade = CascadeType.ALL, orphanRemoval = true)
     @OrderBy("optionKey ASC")
