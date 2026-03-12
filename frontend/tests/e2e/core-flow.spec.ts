@@ -45,8 +45,8 @@ test('核心备考链路可端到端跑通', async ({ page, request }) => {
   await test.step('完成一组上午题并自动判分', async () => {
     await page.goto('/practice');
     await expect(page.getByTestId('practice-page')).toBeVisible();
-    await selectElOption(page.getByTestId('practice-session-type'), '按知识点', page);
-    await selectElOption(page.getByTestId('practice-question-type'), '上午题', page);
+    await selectElOption(page.getByTestId('practice-session-type'), '知识点专项', page);
+    await selectElOption(page.getByTestId('practice-question-type'), '上午题 (单选)', page);
     await selectElOption(page.getByTestId('practice-knowledge-point'), 'DB.TXN - 事务与并发控制', page);
     await fillElNumber('practice-count', page, '1');
     await page.getByTestId('practice-create-button').click();
@@ -62,8 +62,8 @@ test('核心备考链路可端到端跑通', async ({ page, request }) => {
 
   await test.step('完成一组下午题并提交自评', async () => {
     await page.goto('/practice');
-    await selectElOption(page.getByTestId('practice-session-type'), '按知识点', page);
-    await selectElOption(page.getByTestId('practice-question-type'), '下午题', page);
+    await selectElOption(page.getByTestId('practice-session-type'), '知识点专项', page);
+    await selectElOption(page.getByTestId('practice-question-type'), '下午题 (案例)', page);
     await selectElOption(page.getByTestId('practice-knowledge-point'), 'REQ.USECASE - 用例建模', page);
     await fillElNumber('practice-count', page, '1');
     await page.getByTestId('practice-create-button').click();
