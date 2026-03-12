@@ -25,7 +25,7 @@
     </PageHeader>
 
     <PageSection>
-      <el-table :data="rows" stripe data-testid="mistakes-table" style="width: 100%">
+      <el-table v-if="!isMobile" :data="rows" stripe data-testid="mistakes-table" style="width: 100%">
         <el-table-column prop="questionTitle" label="题目描述" min-width="280">
           <template #default="{ row }">
             <div class="question-title-cell">{{ row.questionTitle }}</div>
@@ -60,6 +60,29 @@
           </template>
         </el-table-column>
       </el-table>
+      <MobileCardList
+        v-else
+        data-testid="mistakes-mobile-list"
+        :items="rows"
+        item-key="id"
+        empty-description="暂无错题记录"
+      >
+        <template #item="{ item: row }">
+          <div class="question-title-cell">{{ row.questionTitle }}</div>
+          <div class="mistake-meta">
+            <el-tag size="small" effect="plain">{{ row.knowledgePointName || '未归类知识点' }}</el-tag>
+            <el-tag size="small" type="info">{{ row.reasonType }}</el-tag>
+            <el-tag size="small" :type="statusType(row.reviewStatus)">{{ row.reviewStatus }}</el-tag>
+          </div>
+          <div class="mistake-extra">
+            <span>下次复习：{{ row.nextReviewAt || '-' }}</span>
+            <span>复习轮次：{{ row.reviewCount }}</span>
+          </div>
+          <PageActionGroup>
+            <el-button link type="primary" @click="openEdit(row)">编辑状态</el-button>
+          </PageActionGroup>
+        </template>
+      </MobileCardList>
     </PageSection>
 
     <el-dialog
@@ -118,6 +141,7 @@ import { ElMessage } from 'element-plus';
 import type { FormInstance, FormRules } from 'element-plus';
 import { api } from '@/api';
 import { useMobile } from '@/composables/useMobile';
+import MobileCardList from '@/components/ui/data/MobileCardList.vue';
 import PageHeader from '@/components/ui/layout/PageHeader.vue';
 import PageActionGroup from '@/components/ui/layout/PageActionGroup.vue';
 import PageSection from '@/components/ui/layout/PageSection.vue';
@@ -190,6 +214,20 @@ onMounted(load);
 .review-count {
   font-weight: 700;
   color: var(--el-color-primary);
+}
+
+.mistake-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.mistake-extra {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  color: var(--el-text-color-regular);
+  font-size: 13px;
 }
 
 @media (max-width: 767px) {

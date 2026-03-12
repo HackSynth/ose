@@ -37,7 +37,7 @@
           <el-tag data-testid="plan-task-count" effect="plain" round>{{ plan?.tasks?.length || 0 }} 项</el-tag>
         </div>
       </template>
-      <el-table :data="plan?.tasks || []" stripe data-testid="plan-task-table" style="width: 100%">
+      <el-table v-if="!isMobile" :data="plan?.tasks || []" stripe data-testid="plan-task-table" style="width: 100%">
         <el-table-column prop="scheduledDate" label="计划日期" width="120" sortable />
         <el-table-column prop="phase" label="所属阶段" width="120">
           <template #default="{ row }">
@@ -71,6 +71,31 @@
           </template>
         </el-table-column>
       </el-table>
+      <MobileCardList
+        v-else
+        data-testid="plan-task-mobile-list"
+        :items="plan?.tasks || []"
+        item-key="id"
+        empty-description="暂无计划任务"
+      >
+        <template #item="{ item: row }">
+          <div class="task-mobile-title-wrap">
+            <div class="task-mobile-title">{{ row.title }}</div>
+            <el-tag size="small" :type="phaseType(row.phase)" effect="plain">{{ row.phase }}</el-tag>
+          </div>
+          <div class="task-mobile-meta">
+            <span>计划日期：{{ row.scheduledDate }}</span>
+            <span>知识点：{{ row.knowledgePointName || '-' }}</span>
+            <span>状态：{{ row.status }}</span>
+          </div>
+          <el-progress :percentage="row.progress" :stroke-width="10" :status="row.progress === 100 ? 'success' : ''" />
+          <PageActionGroup>
+            <el-button link type="primary" size="small" @click="updateTask(row, 'IN_PROGRESS', 50)">开始</el-button>
+            <el-button link type="success" size="small" @click="updateTask(row, 'DONE', 100)">完成</el-button>
+            <el-button link type="warning" size="small" @click="delayTask(row)">延期一天</el-button>
+          </PageActionGroup>
+        </template>
+      </MobileCardList>
     </PageSection>
   </div>
 </template>
@@ -80,11 +105,14 @@ import { onMounted, ref } from 'vue';
 import { ElMessage } from 'element-plus';
 import dayjs from 'dayjs';
 import { api } from '@/api';
+import { useMobile } from '@/composables/useMobile';
+import MobileCardList from '@/components/ui/data/MobileCardList.vue';
 import PageActionGroup from '@/components/ui/layout/PageActionGroup.vue';
 import PageHeader from '@/components/ui/layout/PageHeader.vue';
 import PageSection from '@/components/ui/layout/PageSection.vue';
 import StatCard from '@/components/business/common/StatCard.vue';
 
+const { isMobile } = useMobile();
 const loading = ref(false);
 const plan = ref<any>(null);
 
@@ -148,6 +176,26 @@ onMounted(load);
 .card-header-actions {
   display: flex;
   align-items: center;
+}
+
+.task-mobile-title-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+.task-mobile-title {
+  font-weight: 600;
+  color: var(--el-text-color-primary);
+}
+
+.task-mobile-meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  color: var(--el-text-color-regular);
+  font-size: 13px;
 }
 
 .task-title-cell {

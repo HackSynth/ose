@@ -180,7 +180,7 @@
     </PageSection>
 
     <PageSection title="生成历史">
-      <el-table :data="historyRows" size="small" data-testid="ai-history-table">
+      <el-table v-if="!isMobile" :data="historyRows" size="small" data-testid="ai-history-table">
         <el-table-column prop="id" label="ID" width="80" />
         <el-table-column prop="provider" label="Provider" width="120" />
         <el-table-column prop="model" label="Model" min-width="220" />
@@ -188,6 +188,26 @@
         <el-table-column prop="status" label="状态" width="120" />
         <el-table-column prop="createdAt" label="时间" width="180" />
       </el-table>
+      <MobileCardList
+        v-else
+        data-testid="ai-history-mobile"
+        :items="historyRows"
+        item-key="id"
+        empty-description="暂无生成历史"
+      >
+        <template #item="{ item: row }">
+          <div class="history-mobile-title">
+            <span>#{{ row.id }}</span>
+            <el-tag size="small" :type="row.status === 'SUCCESS' ? 'success' : 'warning'">{{ row.status }}</el-tag>
+          </div>
+          <div class="history-mobile-meta">
+            <span>Provider：{{ row.provider }}</span>
+            <span>Model：{{ row.model }}</span>
+            <span>题型：{{ row.questionType }}</span>
+            <span>时间：{{ row.createdAt }}</span>
+          </div>
+        </template>
+      </MobileCardList>
     </PageSection>
   </div>
 </template>
@@ -196,12 +216,15 @@
 import { computed, onMounted, reactive, ref } from 'vue';
 import { ElMessage } from 'element-plus';
 import { api } from '@/api';
+import { useMobile } from '@/composables/useMobile';
+import MobileCardList from '@/components/ui/data/MobileCardList.vue';
 import PageFormGrid from '@/components/ui/form/PageFormGrid.vue';
 import PageActionGroup from '@/components/ui/layout/PageActionGroup.vue';
 import PageHeader from '@/components/ui/layout/PageHeader.vue';
 import PageSection from '@/components/ui/layout/PageSection.vue';
 import type { AiQuestionProviderOption, AiProviderType } from '@/types';
 
+const { isMobile } = useMobile();
 const generating = ref(false);
 const generationId = ref<number | null>(null);
 const providers = ref<AiQuestionProviderOption[]>([]);
@@ -375,6 +398,22 @@ onMounted(async () => {
 .row-end {
   display: flex;
   justify-content: flex-end;
+}
+
+.history-mobile-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 600;
+}
+
+.history-mobile-meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  color: var(--el-text-color-regular);
+  font-size: 13px;
 }
 
 @media (max-width: 640px) {

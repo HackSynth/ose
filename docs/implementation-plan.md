@@ -40,6 +40,16 @@
   - `PracticeView` 会话区统一改为 `PageSection + PageActionGroup`，移动端操作区自动纵向重排。
 - 结果：进一步减少页面级重复 `form-grid` 样式和散落卡片结构，提升全站样式一致性与后续维护效率。
 
+## UI 重构阶段 5（已完成）
+- 新增通用移动端列表组件：`components/ui/data/MobileCardList.vue`，统一表格页在小屏的卡片化展示。
+- 页面/组件接入：
+  - `plans/PlanView`（任务表格 -> 移动卡片列表）
+  - `mistakes/MistakeView`（错题表格 -> 移动卡片列表）
+  - `notes/NoteView`（笔记表格 -> 移动卡片列表）
+  - `exam/ExamListCard`、`exam/ExamHistoryCard`（模拟卷与历史记录表格 -> 移动卡片列表）
+  - `ai/AiQuestionCenterView`（生成历史表格 -> 移动卡片列表）
+- 结果：桌面端保留 `el-table` 信息密度，移动端改为可读可点的卡片结构，降低横向滚动与文本挤压风险。
+
 ## AI 出题专项（本轮新增）
 ### 阶段 A：最小可用版本（已完成）
 - 新增统一 Provider 抽象层：`AiProviderClient`、`OpenAiProviderClient`、`AnthropicProviderClient`

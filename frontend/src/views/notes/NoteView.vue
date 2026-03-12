@@ -14,7 +14,7 @@
 
     <div class="split-layout">
       <PageSection title="笔记列表">
-        <el-table :data="rows" stripe>
+        <el-table v-if="!isMobile" :data="rows" stripe>
           <el-table-column prop="title" label="标题" min-width="220" />
           <el-table-column prop="summary" label="摘要" min-width="260" />
           <el-table-column prop="favorite" label="收藏" width="90">
@@ -27,6 +27,27 @@
             </template>
           </el-table-column>
         </el-table>
+        <MobileCardList
+          v-else
+          data-testid="notes-mobile-list"
+          :items="rows"
+          item-key="id"
+          empty-description="暂无笔记"
+        >
+          <template #item="{ item: row }">
+            <div class="note-mobile-title-wrap">
+              <span class="note-mobile-title">{{ row.title }}</span>
+              <el-tag size="small" :type="row.favorite ? 'warning' : 'info'" effect="plain">
+                {{ row.favorite ? '已收藏' : '未收藏' }}
+              </el-tag>
+            </div>
+            <div class="note-mobile-summary">{{ row.summary || '无摘要' }}</div>
+            <PageActionGroup>
+              <el-button link type="primary" @click="openEdit(row)">编辑</el-button>
+              <el-button link type="danger" @click="removeNote(row.id)">删除</el-button>
+            </PageActionGroup>
+          </template>
+        </MobileCardList>
       </PageSection>
 
       <PageSection title="Markdown 预览">
@@ -90,6 +111,7 @@ import { ElMessage, ElMessageBox } from 'element-plus';
 import type { FormInstance, FormRules } from 'element-plus';
 import { api } from '@/api';
 import { useMobile } from '@/composables/useMobile';
+import MobileCardList from '@/components/ui/data/MobileCardList.vue';
 import PageActionGroup from '@/components/ui/layout/PageActionGroup.vue';
 import PageHeader from '@/components/ui/layout/PageHeader.vue';
 import PageSection from '@/components/ui/layout/PageSection.vue';
@@ -191,6 +213,28 @@ onMounted(load);
 
 .markdown-preview {
   min-height: 320px;
+}
+
+.note-mobile-title-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+.note-mobile-title {
+  font-weight: 600;
+  color: var(--el-text-color-primary);
+}
+
+.note-mobile-summary {
+  color: var(--el-text-color-regular);
+  font-size: 13px;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .link-editor {

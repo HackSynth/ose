@@ -15,6 +15,7 @@
 - 完成前端 UI 重构第二阶段，新增通用 Page 结构组件并在多页面/多业务组件接入，统一表单、按钮、卡片样式规范
 - 完成前端 UI 重构第三阶段，统一关键编辑弹窗校验规则与移动端全屏交互策略
 - 完成前端 UI 重构第四阶段，新增通用响应式表单栅格组件并推进统计/练习/模型服务页面结构收敛
+- 完成前端 UI 重构第五阶段，新增通用移动端卡片列表组件并完成多表格页小屏替代展示
 
 ## 2. 关键设计决策
 - E2E 采用 Playwright，优先覆盖真实浏览器交互链路，而非仅靠接口级测试。
@@ -53,6 +54,7 @@
 - `frontend/src/views/ai/AiQuestionCenterView.vue`
 - `frontend/src/views/dashboard/DashboardView.vue`
 - `frontend/src/components/ui/form/PageFormGrid.vue`
+- `frontend/src/components/ui/data/MobileCardList.vue`
 - `frontend/tests/e2e/auth.spec.ts`
 - `frontend/tests/e2e/core-flow.spec.ts`
 - `frontend/tests/e2e/helpers.ts`
@@ -294,6 +296,26 @@ PLAYWRIGHT_BASE_URL=http://127.0.0.1 npm run test:e2e
   - `AiSettingsView` 顶部概览、默认模型、新增 Provider 区块改为 `PageSection`，减少页面级手写卡片结构
 
 ### 16.2 本阶段验证
+- `cd frontend && npm run test -- --run`：通过
+- `cd frontend && npm run build`：通过
+- `cd frontend && npm run lint`：失败（当前仓库未提供 `lint` script）
+
+## 17. 前端 UI 重构第五阶段（表格页移动端卡片化）
+### 17.1 完成内容
+- 新增通用组件：
+  - `components/ui/data/MobileCardList.vue`
+  - 统一封装移动端列表卡片容器与空状态，避免各页面重复编写
+- 表格页接入：
+  - `plans/PlanView`：任务列表支持移动端卡片展示与状态操作按钮
+  - `mistakes/MistakeView`：错题列表支持移动端卡片展示与“编辑状态”操作
+  - `notes/NoteView`：笔记列表支持移动端卡片展示与编辑/删除操作
+  - `exam/ExamListCard`、`exam/ExamHistoryCard`：模拟卷与历史记录支持移动端卡片展示
+  - `ai/AiQuestionCenterView`：生成历史支持移动端卡片展示
+- 交互结果：
+  - 桌面端继续保持 `el-table` 信息密度
+  - 小屏端避免表格挤压与横向滚动，点击区域更适配触屏
+
+### 17.2 本阶段验证
 - `cd frontend && npm run test -- --run`：通过
 - `cd frontend && npm run build`：通过
 - `cd frontend && npm run lint`：失败（当前仓库未提供 `lint` script）
