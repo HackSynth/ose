@@ -51,18 +51,20 @@
     <el-dialog 
       v-model="dialogVisible" 
       :title="editingId ? '编辑知识点' : '新增知识点'" 
-      width="640px"
+      :width="isMobile ? '100%' : '640px'"
+      :fullscreen="isMobile"
+      class="edit-dialog"
       destroy-on-close
     >
-      <el-form label-position="top" :model="form" data-testid="knowledge-form">
+      <el-form ref="formRef" label-position="top" :model="form" :rules="rules" scroll-to-error data-testid="knowledge-form">
         <div class="form-grid">
-          <el-form-item label="编码" required>
+          <el-form-item label="编码" prop="code" required>
             <el-input v-model="form.code" data-testid="knowledge-code" placeholder="如：CS-01" />
           </el-form-item>
-          <el-form-item label="名称" required>
+          <el-form-item label="名称" prop="name" required>
             <el-input v-model="form.name" data-testid="knowledge-name" placeholder="知识点名称" />
           </el-form-item>
-          <el-form-item label="层级">
+          <el-form-item label="层级" prop="level">
             <el-input-number v-model="form.level" data-testid="knowledge-level" :min="1" :max="3" style="width:100%;" />
           </el-form-item>
           <el-form-item label="父节点">
@@ -100,15 +102,25 @@
 <script setup lang="ts">
 import { computed, onMounted, reactive, ref } from 'vue';
 import { ElMessage, ElMessageBox } from 'element-plus';
+import type { FormInstance, FormRules } from 'element-plus';
 import { api } from '@/api';
+import { useMobile } from '@/composables/useMobile';
 import PageActionGroup from '@/components/ui/layout/PageActionGroup.vue';
 import PageHeader from '@/components/ui/layout/PageHeader.vue';
 import PageSection from '@/components/ui/layout/PageSection.vue';
 
+const { isMobile } = useMobile();
 const tree = ref<any[]>([]);
 const dialogVisible = ref(false);
 const editingId = ref<number | null>(null);
+const formRef = ref<FormInstance>();
 const form = reactive<any>({ code: '', name: '', level: 1, masteryLevel: 50, weight: 5, note: '', parentId: null, sortOrder: 1 });
+
+const rules: FormRules = {
+  code: [{ required: true, message: '请输入编码', trigger: 'blur' }],
+  name: [{ required: true, message: '请输入名称', trigger: 'blur' }],
+  level: [{ required: true, message: '请选择层级', trigger: 'change' }],
+};
 
 const flatten = (items: any[], list: any[] = []) => {
   items.forEach((item) => {
@@ -155,6 +167,11 @@ const openEdit = (node: any) => {
 };
 
 const save = async () => {
+  const valid = await formRef.value?.validate().catch(() => false);
+  if (!valid) {
+    return;
+  }
+
   const payload = { ...form };
   if (editingId.value) {
     await api.updateKnowledge(editingId.value, payload);
@@ -236,6 +253,13 @@ onMounted(load);
 @media (max-width: 640px) {
   .form-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .edit-dialog :deep(.el-dialog__body) {
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
   }
 }
 </style>

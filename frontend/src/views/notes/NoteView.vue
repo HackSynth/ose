@@ -39,16 +39,17 @@
       :title="editingId ? '编辑笔记' : '新增笔记'"
       :width="isMobile ? '100%' : '960px'"
       :fullscreen="isMobile"
+      class="edit-dialog"
       destroy-on-close
     >
       <div class="split-layout">
         <div>
-          <el-form label-position="top" :model="form">
-            <el-form-item label="标题"><el-input v-model="form.title" /></el-form-item>
+          <el-form ref="formRef" label-position="top" :model="form" :rules="rules" scroll-to-error>
+            <el-form-item label="标题" prop="title"><el-input v-model="form.title" /></el-form-item>
             <el-form-item label="摘要"><el-input v-model="form.summary" /></el-form-item>
-            <el-form-item label="内容（Markdown）"><el-input v-model="form.content" type="textarea" :rows="14" /></el-form-item>
+            <el-form-item label="内容（Markdown）" prop="content"><el-input v-model="form.content" type="textarea" :rows="14" /></el-form-item>
             <el-form-item label="收藏"><el-switch v-model="form.favorite" /></el-form-item>
-            <el-form-item label="关联项">
+            <el-form-item label="关联项" prop="links">
               <div class="link-editor">
                 <div v-for="(link, index) in form.links" :key="index" class="link-row">
                   <el-select v-model="link.linkType">
@@ -86,6 +87,7 @@
 import { computed, onMounted, reactive, ref } from 'vue';
 import { marked } from 'marked';
 import { ElMessage, ElMessageBox } from 'element-plus';
+import type { FormInstance, FormRules } from 'element-plus';
 import { api } from '@/api';
 import { useMobile } from '@/composables/useMobile';
 import PageActionGroup from '@/components/ui/layout/PageActionGroup.vue';
@@ -100,7 +102,24 @@ const editingId = ref<number | null>(null);
 const knowledge = ref<any[]>([]);
 const questions = ref<any[]>([]);
 const exams = ref<any[]>([]);
+const formRef = ref<FormInstance>();
 const form = reactive<any>({ title: '', summary: '', content: '', favorite: false, links: [] as any[] });
+
+const rules: FormRules = {
+  title: [{ required: true, message: '请输入标题', trigger: 'blur' }],
+  content: [{ required: true, message: '请输入笔记内容', trigger: 'blur' }],
+  links: [{
+    validator: (_rule, value, callback) => {
+      const invalidLink = (value || []).find((link: any) => link.linkType && (link.targetId == null || link.targetId === ''));
+      if (invalidLink) {
+        callback(new Error('请为每条关联项选择目标对象'));
+        return;
+      }
+      callback();
+    },
+    trigger: 'change',
+  }],
+};
 
 const previewHtml = computed(() => marked.parse(form.content || '') as string);
 
@@ -142,6 +161,11 @@ const openEdit = (row: any) => {
 };
 
 const save = async () => {
+  const valid = await formRef.value?.validate().catch(() => false);
+  if (!valid) {
+    return;
+  }
+
   const payload = { ...form };
   if (editingId.value) await api.updateNote(editingId.value, payload);
   else await api.createNote(payload);
@@ -202,6 +226,11 @@ onMounted(load);
 
   .link-row {
     grid-template-columns: 1fr;
+  }
+
+  .edit-dialog :deep(.el-dialog__body) {
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
   }
 }
 </style>

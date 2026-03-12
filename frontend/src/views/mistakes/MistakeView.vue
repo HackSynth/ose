@@ -62,12 +62,19 @@
       </el-table>
     </PageSection>
 
-    <el-dialog v-model="visible" title="更新错题复习计划" width="520px" destroy-on-close>
-      <el-form label-position="top" :model="form" data-testid="mistake-form">
-        <el-form-item label="错因分类" required>
+    <el-dialog
+      v-model="visible"
+      title="更新错题复习计划"
+      :width="isMobile ? '100%' : '520px'"
+      :fullscreen="isMobile"
+      class="edit-dialog"
+      destroy-on-close
+    >
+      <el-form ref="formRef" label-position="top" :model="form" :rules="rules" scroll-to-error data-testid="mistake-form">
+        <el-form-item label="错因分类" prop="reasonType" required>
           <el-input v-model="form.reasonType" data-testid="mistake-reason-type" placeholder="例如：概念混淆、计算失误等" />
         </el-form-item>
-        <el-form-item label="复习进度" required>
+        <el-form-item label="复习进度" prop="reviewStatus" required>
           <el-select v-model="form.reviewStatus" data-testid="mistake-review-status" style="width:100%;">
             <el-option label="NEW - 新错题" value="NEW" />
             <el-option label="READY - 待复习" value="READY" />
@@ -75,7 +82,7 @@
             <el-option label="MASTERED - 已彻底掌握" value="MASTERED" />
           </el-select>
         </el-form-item>
-        <el-form-item label="计划下次复习日期" required>
+        <el-form-item label="计划下次复习日期" prop="nextReviewAt" required>
           <el-date-picker 
             v-model="form.nextReviewAt" 
             data-testid="mistake-next-review-at" 
@@ -108,16 +115,26 @@
 <script setup lang="ts">
 import { onMounted, reactive, ref } from 'vue';
 import { ElMessage } from 'element-plus';
+import type { FormInstance, FormRules } from 'element-plus';
 import { api } from '@/api';
+import { useMobile } from '@/composables/useMobile';
 import PageHeader from '@/components/ui/layout/PageHeader.vue';
 import PageActionGroup from '@/components/ui/layout/PageActionGroup.vue';
 import PageSection from '@/components/ui/layout/PageSection.vue';
 
+const { isMobile } = useMobile();
 const rows = ref<any[]>([]);
 const status = ref('');
 const visible = ref(false);
 const currentId = ref<number | null>(null);
+const formRef = ref<FormInstance>();
 const form = reactive<any>({ reasonType: '', reviewStatus: 'READY', nextReviewAt: '', note: '' });
+
+const rules: FormRules = {
+  reasonType: [{ required: true, message: '请输入错因分类', trigger: 'blur' }],
+  reviewStatus: [{ required: true, message: '请选择复习进度', trigger: 'change' }],
+  nextReviewAt: [{ required: true, message: '请选择下次复习日期', trigger: 'change' }],
+};
 
 const load = async () => {
   rows.value = await api.mistakes(status.value ? { status: status.value } : undefined) as any[];
@@ -136,6 +153,12 @@ const openEdit = (row: any) => {
 
 const save = async () => {
   if (!currentId.value) return;
+
+  const valid = await formRef.value?.validate().catch(() => false);
+  if (!valid) {
+    return;
+  }
+
   await api.updateMistake(currentId.value, form);
   ElMessage.success('错题复习记录已成功更新');
   visible.value = false;
@@ -167,5 +190,12 @@ onMounted(load);
 .review-count {
   font-weight: 700;
   color: var(--el-color-primary);
+}
+
+@media (max-width: 767px) {
+  .edit-dialog :deep(.el-dialog__body) {
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
+  }
 }
 </style>

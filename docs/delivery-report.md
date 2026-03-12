@@ -13,6 +13,7 @@
 - 完成前端“模型服务”管理后台接入，支持 Provider、API Key、模型和默认模型的统一管理
 - 启动前端 UI 重构第一阶段，已完成主布局统一与题库页组件化拆分，并补齐题库页移动端展示方案
 - 完成前端 UI 重构第二阶段，新增通用 Page 结构组件并在多页面/多业务组件接入，统一表单、按钮、卡片样式规范
+- 完成前端 UI 重构第三阶段，统一关键编辑弹窗校验规则与移动端全屏交互策略
 
 ## 2. 关键设计决策
 - E2E 采用 Playwright，优先覆盖真实浏览器交互链路，而非仅靠接口级测试。
@@ -243,6 +244,30 @@ PLAYWRIGHT_BASE_URL=http://127.0.0.1 npm run test:e2e
   - `ExamCreateCard`、`PracticeFormCard` 改为标准 `el-form + el-form-item` 写法，减少手写 label 布局
 
 ### 14.2 本阶段验证
+- `cd frontend && npm run test -- --run`：通过
+- `cd frontend && npm run build`：通过
+- `cd frontend && npm run lint`：失败（当前仓库未提供 `lint` script）
+
+## 15. 前端 UI 重构第三阶段（弹窗校验 + 移动端交互）
+### 15.1 完成内容
+- 题库题目编辑弹窗：
+  - 为 `QuestionEditorDialog` 增加 `el-form rules` 与提交前校验
+  - 按题型执行差异化字段校验（上午题答案、下午题参考答案）
+  - 小屏下统一全屏弹窗并启用内容区滚动
+- 知识点编辑弹窗：
+  - 为 `KnowledgeView` 弹窗表单增加规则（编码、名称、层级）
+  - 保存按钮统一走 `validate` 后提交
+  - 小屏下统一全屏弹窗 + 内容滚动
+- 错题编辑弹窗：
+  - 为 `MistakeView` 弹窗表单增加规则（错因、状态、下次复习日期）
+  - 保存逻辑改为先校验后提交
+  - 小屏下统一全屏弹窗 + 内容滚动
+- 笔记编辑弹窗：
+  - 为 `NoteView` 弹窗表单增加规则（标题、内容、关联项目标）
+  - 关联项存在但未选择目标时拦截保存
+  - 小屏下统一全屏弹窗 + 内容滚动
+
+### 15.2 本阶段验证
 - `cd frontend && npm run test -- --run`：通过
 - `cd frontend && npm run build`：通过
 - `cd frontend && npm run lint`：失败（当前仓库未提供 `lint` script）

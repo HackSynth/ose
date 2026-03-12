@@ -4,12 +4,13 @@
     :title="editingId ? '编辑题目详情' : '录入新题目'"
     :width="isMobile ? '100%' : '800px'"
     :fullscreen="isMobile"
+    class="editor-dialog"
     destroy-on-close
   >
-    <el-form label-position="top" :model="form">
+    <el-form ref="formRef" label-position="top" :model="form" :rules="rules" scroll-to-error>
       <el-row :gutter="20">
         <el-col :xs="24" :sm="12">
-          <el-form-item label="题型" required>
+          <el-form-item label="题型" prop="type" required>
             <el-select v-model="form.type" style="width:100%;">
               <el-option label="上午题 (单选)" value="MORNING_SINGLE" />
               <el-option label="下午题 (案例)" value="AFTERNOON_CASE" />
@@ -17,7 +18,7 @@
           </el-form-item>
         </el-col>
         <el-col :xs="24" :sm="12">
-          <el-form-item label="标题" required>
+          <el-form-item label="标题" prop="title" required>
             <el-input v-model="form.title" placeholder="简短描述题目内容" />
           </el-form-item>
         </el-col>
@@ -43,7 +44,7 @@
         </el-col>
       </el-row>
 
-      <el-form-item label="完整题干内容" required>
+      <el-form-item label="完整题干内容" prop="content" required>
         <el-input
           v-model="form.content"
           type="textarea"
@@ -59,7 +60,7 @@
           </el-form-item>
         </el-col>
         <el-col :xs="24" :sm="12">
-          <el-form-item label="关联知识点 (多选)" required>
+          <el-form-item label="关联知识点 (多选)" prop="knowledgePointIds" required>
             <el-select v-model="form.knowledgePointIds" multiple filterable style="width:100%;" placeholder="搜索知识点">
               <el-option
                 v-for="item in knowledgeOptions"
@@ -82,7 +83,7 @@
               </el-form-item>
             </el-col>
           </el-row>
-          <el-form-item label="标准答案" required>
+          <el-form-item label="标准答案" prop="correctAnswer" required>
             <el-radio-group v-model="form.correctAnswer">
               <el-radio-button label="A" />
               <el-radio-button label="B" />
@@ -102,7 +103,7 @@
       </template>
 
       <template v-else>
-        <el-form-item label="参考答案及评分要点" required>
+        <el-form-item label="参考答案及评分要点" prop="referenceAnswer" required>
           <el-input
             v-model="form.referenceAnswer"
             type="textarea"
@@ -116,26 +117,89 @@
     <template #footer>
       <div class="dialog-footer">
         <el-button @click="visible = false">取消</el-button>
-        <el-button type="primary" @click="$emit('save')">保存至题库</el-button>
+        <el-button type="primary" @click="handleSave">保存至题库</el-button>
       </div>
     </template>
   </el-dialog>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
+import type { FormInstance, FormRules } from 'element-plus';
+
 const visible = defineModel<boolean>({ required: true });
 const tagText = defineModel<string>('tagText', { required: true });
 
-defineProps<{
+const props = defineProps<{
   isMobile: boolean;
   editingId: number | null;
   form: any;
   knowledgeOptions: any[];
 }>();
 
-defineEmits<{
+const emit = defineEmits<{
   (e: 'save'): void;
 }>();
+
+const formRef = ref<FormInstance>();
+
+const rules: FormRules = {
+  type: [{ required: true, message: '请选择题型', trigger: 'change' }],
+  title: [{ required: true, message: '请输入标题', trigger: 'blur' }],
+  content: [{ required: true, message: '请输入完整题干内容', trigger: 'blur' }],
+  knowledgePointIds: [{ type: 'array', required: true, min: 1, message: '请至少选择一个关联知识点', trigger: 'change' }],
+  correctAnswer: [{
+    validator: (_rule, value, callback) => {
+      if (props.form.type !== 'MORNING_SINGLE') {
+        callback();
+        return;
+      }
+      if (!value) {
+        callback(new Error('请选择标准答案'));
+        return;
+      }
+      const options = props.form.options || [];
+      const target = options.find((item: any) => item.key === value);
+      if (!target || !String(target.content || '').trim()) {
+        callback(new Error('标准答案对应的选项内容不能为空'));
+        return;
+      }
+      callback();
+    },
+    trigger: 'change',
+  }],
+  referenceAnswer: [{
+    validator: (_rule, value, callback) => {
+      if (props.form.type !== 'AFTERNOON_CASE') {
+        callback();
+        return;
+      }
+      if (!String(value || '').trim()) {
+        callback(new Error('请输入参考答案及评分要点'));
+        return;
+      }
+      callback();
+    },
+    trigger: 'blur',
+  }],
+};
+
+const handleSave = async () => {
+  const valid = await formRef.value?.validate().catch(() => false);
+  if (!valid) {
+    return;
+  }
+
+  if (props.form.type === 'MORNING_SINGLE') {
+    const hasEmptyOptions = (props.form.options || []).some((item: any) => !String(item.content || '').trim());
+    if (hasEmptyOptions) {
+      await formRef.value?.validateField('correctAnswer').catch(() => false);
+      return;
+    }
+  }
+
+  emit('save');
+};
 </script>
 
 <style scoped>
@@ -148,9 +212,10 @@ defineEmits<{
   color: var(--el-text-color-primary);
 }
 
-.dialog-footer {
-  display: flex;
-  justify-content: flex-end;
-  gap: 12px;
+@media (max-width: 767px) {
+  .editor-dialog :deep(.el-dialog__body) {
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
+  }
 }
 </style>
