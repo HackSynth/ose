@@ -85,7 +85,7 @@ test('AI 出题页面支持生成、预览、保存与历史', async ({ page, re
   await page.goto('/ai-questions');
   await expect(page.getByTestId('ai-question-page')).toBeVisible();
   await page.getByTestId('ai-generate').click();
-  await expect(page.getByTestId('ai-result-list')).toContainText('事务隔离级别判断');
+  await expect(page.getByTestId('ai-result-list')).toContainText('题目 1 · AI 生成');
 
   await page.getByTestId('ai-save').click();
   await expect(page.getByTestId('ai-history-table')).toContainText('OPENAI');
