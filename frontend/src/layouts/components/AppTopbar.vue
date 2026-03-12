@@ -10,9 +10,12 @@
         <el-icon size="20"><Menu /></el-icon>
       </el-button>
 
-      <div class="title-area">
+      <el-breadcrumb v-if="!isMobile" separator="/">
+        <el-breadcrumb-item>OSE 备考系统</el-breadcrumb-item>
+        <el-breadcrumb-item><span class="title" data-testid="page-title">{{ title }}</span></el-breadcrumb-item>
+      </el-breadcrumb>
+      <div v-else class="title-area">
         <span class="title" data-testid="page-title">{{ title }}</span>
-        <span v-if="!isMobile" class="subtitle">单用户软件设计师备考工作台</span>
       </div>
     </div>
 

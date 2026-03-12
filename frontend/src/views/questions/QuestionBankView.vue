@@ -39,13 +39,46 @@
       @reset="onFilterReset"
     />
 
-    <QuestionMobileList
-      v-if="isMobile"
-      :rows="rows"
-      :loading="loading"
-      @edit="openEdit"
-      @remove="removeQuestion"
-    />
+    <PageSection v-if="isMobile" class="mobile-list-card">
+      <el-skeleton v-if="loading" :rows="4" animated />
+
+      <MobileCardList
+        v-else
+        :items="rows"
+        item-key="id"
+        empty-description="暂无题目数据"
+      >
+        <template #item="{ item: row }">
+          <div class="item-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <span class="item-title" style="font-weight: 600; color: var(--el-text-color-primary); line-height: 1.5;">{{ row.title }}</span>
+            <el-tag size="small" :type="row.type === 'MORNING_SINGLE' ? 'primary' : 'warning'">
+              {{ row.type === 'MORNING_SINGLE' ? '单选题' : '案例题' }}
+            </el-tag>
+          </div>
+
+          <div class="item-meta" style="margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px;">
+            <el-tag size="small" effect="plain">年份 {{ row.year || '-' }}</el-tag>
+            <el-tag size="small" effect="plain">难度 {{ row.difficulty || '-' }}</el-tag>
+          </div>
+
+          <div class="item-tags" style="margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px;">
+            <el-tag
+              v-for="kp in row.knowledgePoints"
+              :key="kp.id"
+              size="small"
+              effect="plain"
+            >
+              {{ kp.name }}
+            </el-tag>
+          </div>
+
+          <div class="item-actions" style="margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end;">
+            <el-button size="small" @click="openEdit(row)">编辑</el-button>
+            <el-button size="small" type="danger" plain @click="removeQuestion(row.id)">删除</el-button>
+          </div>
+        </template>
+      </MobileCardList>
+    </PageSection>
 
     <QuestionTableSection
       v-else
@@ -76,9 +109,10 @@ import { api } from '@/api';
 import { useMobile } from '@/composables/useMobile';
 import PageHeader from '@/components/ui/layout/PageHeader.vue';
 import PageActionGroup from '@/components/ui/layout/PageActionGroup.vue';
+import PageSection from '@/components/ui/layout/PageSection.vue';
 import QuestionFilterForm from '@/components/business/questions/QuestionFilterForm.vue';
 import QuestionTableSection from '@/components/business/questions/QuestionTableSection.vue';
-import QuestionMobileList from '@/components/business/questions/QuestionMobileList.vue';
+import MobileCardList from '@/components/ui/data/MobileCardList.vue';
 import QuestionEditorDialog from '@/components/business/questions/QuestionEditorDialog.vue';
 
 const { isMobile } = useMobile();

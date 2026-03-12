@@ -11,5 +11,5 @@ test('管理员可以通过登录页登录', async ({ page }) => {
 
   await expect(page).toHaveURL(/\/dashboard$/);
   await expect(page.getByTestId('dashboard-page')).toBeVisible();
-  await expect(page.getByTestId('current-user')).toContainText('备考管理员');
+  await expect(page.getByTestId('topbar-user-trigger')).toContainText('管理员');
 });

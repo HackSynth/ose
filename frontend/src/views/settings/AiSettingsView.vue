@@ -190,6 +190,7 @@
 
         <el-alert
           v-if="provider.healthMessage || testResults[provider.id]"
+          :data-testid="`ai-provider-alert-${provider.id}`"
           :title="testResults[provider.id]?.success ? '连通性测试通过' : 'Provider 状态'"
           :description="testResults[provider.id]?.message || provider.healthMessage || '未执行测试'"
           :type="testResults[provider.id]?.success ? 'success' : 'info'"

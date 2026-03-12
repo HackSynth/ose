@@ -1,6 +1,4 @@
 :root {
-  --el-bg-color-page: #f5f7fa;
-  --el-border-radius-base: 4px;
   --motion-fast: 160ms;
   --motion-base: 220ms;
 }
@@ -33,9 +31,6 @@ body {
 }
 
 .business-card {
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--el-border-color-lighter);
-  background: var(--el-bg-color);
   transition:
     border-color var(--motion-fast) ease,
     box-shadow var(--motion-base) ease;

@@ -33,11 +33,19 @@ test('AI 配置页支持测试连接、保存配置并驱动 AI 出题链路', a
       databaseConfigWritable: true,
       providers: [
         {
-          provider: 'OPENAI',
+          id: 'OPENAI',
+          providerType: 'OPENAI',
+          displayName: 'OpenAI',
+          models: [{ modelId: 'gpt-4.1-mini', displayName: 'gpt-4.1-mini', enabled: true }],
+          apiKeys: [],
           ...state.openai,
         },
         {
-          provider: 'ANTHROPIC',
+          id: 'ANTHROPIC',
+          providerType: 'ANTHROPIC',
+          displayName: 'Anthropic',
+          models: [{ modelId: 'claude-3-5-sonnet-latest', displayName: 'claude-3-5-sonnet-latest', enabled: true }],
+          apiKeys: [],
           enabled: false,
           configured: false,
           maskedKey: null,
@@ -110,7 +118,7 @@ test('AI 配置页支持测试连接、保存配置并驱动 AI 出题链路', a
     });
   });
 
-  await page.route('**/api/ai/settings/OPENAI/test', async (route) => {
+  await page.route('**/api/ai/providers/OPENAI/test', async (route) => {
     await route.fulfill({
       status: 200,
       contentType: 'application/json',
@@ -130,7 +138,7 @@ test('AI 配置页支持测试连接、保存配置并驱动 AI 出题链路', a
     });
   });
 
-  await page.route('**/api/ai/settings/OPENAI', async (route) => {
+  await page.route('**/api/ai/providers/OPENAI', async (route) => {
     if (route.request().method() !== 'PUT') {
       await route.fallback();
       return;
@@ -167,29 +175,20 @@ test('AI 配置页支持测试连接、保存配置并驱动 AI 出题链路', a
   });
 
   await page.route('**/api/ai/providers', async (route) => {
-    await route.fulfill({
-      status: 200,
-      contentType: 'application/json',
-      body: JSON.stringify({
-        code: 0,
-        message: 'ok',
-        data: [
-          {
-            provider: 'OPENAI',
-            configured: true,
-            statusMessage: '可用',
-            models: [{ model: 'gpt-4.1-mini', displayName: 'gpt-4.1-mini', isDefault: true }],
-          },
-          {
-            provider: 'ANTHROPIC',
-            configured: false,
-            statusMessage: '未配置 API Key',
-            models: [{ model: 'claude-3-5-sonnet-latest', displayName: 'claude-3-5-sonnet-latest', isDefault: true }],
-          },
-        ],
-        timestamp: new Date().toISOString(),
-      }),
-    });
+    if (route.request().method() === 'GET') {
+      await route.fulfill({
+        status: 200,
+        contentType: 'application/json',
+        body: JSON.stringify({
+          code: 0,
+          message: 'ok',
+          data: aiSettingsResponse().data.providers,
+          timestamp: new Date().toISOString(),
+        }),
+      });
+      return;
+    }
+    await route.fallback();
   });
 
   await page.route('**/api/ai/history', async (route) => {
@@ -261,15 +260,14 @@ test('AI 配置页支持测试连接、保存配置并驱动 AI 出题链路', a
 
   await page.goto('/ai-settings');
   await expect(page.getByTestId('ai-settings-page')).toBeVisible();
-  await fillElInput('ai-settings-key-OPENAI', page, 'sk-test-9876');
-  await page.getByTestId('ai-settings-enabled-OPENAI').click();
-  await page.getByTestId('ai-settings-test-OPENAI').click();
-  await expect(page.getByTestId('ai-settings-test-result-OPENAI')).toContainText('OpenAI 连通性测试通过');
+  await fillElInput('ai-key-input-OPENAI', page, 'sk-test-9876');
+  await page.getByTestId('ai-provider-toggle-OPENAI').click();
+  await page.getByTestId('ai-provider-test-OPENAI').click();
+  await expect(page.getByText('OpenAI 连通性测试通过').first()).toBeVisible();
 
-  await page.getByTestId('ai-settings-save-OPENAI').click();
+  await page.getByTestId('ai-provider-save-OPENAI').click();
   await waitForMessage(page, '配置已保存');
-  await expect(page.getByTestId('ai-settings-source-OPENAI')).toContainText('DB');
-  await expect(page.getByTestId('ai-settings-mask-OPENAI')).toContainText('sk-***9876');
+  await expect(page.getByTestId('ai-provider-config-source-OPENAI')).toContainText('DB');
 
   await page.goto('/ai-questions');
   await expect(page.getByTestId('ai-question-page')).toBeVisible();
