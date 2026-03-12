@@ -11,6 +11,7 @@
 - 同步更新 README、实施计划与交付说明
 - 启动 Cherry Studio 风格“模型服务中心”重构，完成 Provider + Model 后端服务层与 AI 出题链路切换
 - 完成前端“模型服务”管理后台接入，支持 Provider、API Key、模型和默认模型的统一管理
+- 启动前端 UI 重构第一阶段，已完成主布局统一与题库页组件化拆分，并补齐题库页移动端展示方案
 
 ## 2. 关键设计决策
 - E2E 采用 Playwright，优先覆盖真实浏览器交互链路，而非仅靠接口级测试。
@@ -207,3 +208,16 @@ PLAYWRIGHT_BASE_URL=http://127.0.0.1 npm run test:e2e
 ### 12.4 当前状态与后续
 - 前后端主链路已完成接入，旧 `/api/ai/settings*` 接口仍保留作为兼容层。
 - 下一阶段重点转为补齐“模型服务”页的 Playwright E2E，并继续收敛旧兼容接口。
+
+## 13. 前端 UI 重构第一阶段（layout + 题库页）
+### 13.1 完成内容
+- 主布局重构：`AppLayout` 统一为顶部栏 + 侧边栏结构，移动端使用 `Drawer` 菜单。
+- 新增布局子组件：`AppTopbar`、`MobileMenuDrawer`，并更新 `AppSidebar` 结构与滚动容器。
+- 题库页重构：拆分为筛选区、桌面表格区、移动卡片区、编辑弹窗四个业务组件。
+- 页面职责收敛：`QuestionBankView` 保留 API 调用、状态与业务动作，UI 组件负责展示。
+- 样式变量收口：补齐 `variables.css` 与 Element Plus token 映射，降低未定义变量风险。
+
+### 13.2 本阶段验证
+- `cd frontend && npm run test -- --run`：通过
+- `cd frontend && npm run build`：通过
+- `cd frontend && npm run lint`：失败（当前仓库未提供 `lint` script）

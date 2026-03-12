@@ -1,8 +1,14 @@
 :root {
-  color-scheme: light;
+  --el-bg-color-page: #f5f7fa;
+  --el-border-radius-base: 4px;
+}
+
+body {
+  margin: 0;
+  background-color: var(--el-bg-color-page);
+  color: var(--el-text-color-primary);
   font-family: var(--el-font-family);
-  background: var(--bg-app);
-  color: var(--text-primary);
+  line-height: 1.5;
 }
 
 * {
@@ -11,18 +17,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  margin: 0;
-  background: var(--bg-app);
-  color: var(--text-primary);
-  line-height: 1.5;
-}
-
 #app {
   min-height: 100vh;
 }
 
-/* --- Layout Utils --- */
 .page-container {
   display: flex;
   flex-direction: column;
@@ -52,19 +50,12 @@ body {
   gap: var(--space-6);
 }
 
-@media (max-width: 960px) {
-  .split-layout {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* --- Typography Helpers --- */
 .text-secondary {
-  color: var(--text-secondary);
+  color: var(--el-text-color-regular);
 }
 
 .text-tertiary {
-  color: var(--text-tertiary);
+  color: var(--el-text-color-secondary);
 }
 
 .font-medium {
@@ -73,4 +64,17 @@ body {
 
 .font-bold {
   font-weight: 700;
+}
+
+@media (max-width: 960px) {
+  .split-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-container {
+    gap: var(--space-4);
+    padding: var(--space-3);
+  }
 }
