@@ -1,4 +1,10 @@
 import http from './http';
+import type {
+  AiProviderConnectionTestResult,
+  AiProviderModelListResponse,
+  AiProviderType,
+  AiSettingsResponse,
+} from '@/types';
 
 export const api = {
   login: (payload: { username: string; password: string }) => http.post('/auth/login', payload),
@@ -44,6 +50,10 @@ export const api = {
   importAllFile: (formData: FormData, strategy = 'OVERWRITE') => http.post(`/import/full-file?strategy=${strategy}`, formData, { headers: { 'Content-Type': 'multipart/form-data' } }),
   aiProviders: () => http.get('/ai/providers'),
   aiModels: (params?: Record<string, unknown>) => http.get('/ai/models', { params }),
+  aiSettings: () => http.get<AiSettingsResponse>('/ai/settings'),
+  updateAiSettings: (provider: AiProviderType, payload: unknown) => http.put(`/ai/settings/${provider}`, payload),
+  testAiSettings: (provider: AiProviderType, payload?: unknown) => http.post<AiProviderConnectionTestResult>(`/ai/settings/${provider}/test`, payload ?? {}),
+  aiSettingsModels: (provider: AiProviderType) => http.get<AiProviderModelListResponse>(`/ai/settings/${provider}/models`),
   aiGenerateQuestions: (payload: unknown) => http.post('/ai/questions/generate', payload),
   aiSaveQuestions: (payload: unknown) => http.post('/ai/questions/save', payload),
   aiHistory: () => http.get('/ai/history'),

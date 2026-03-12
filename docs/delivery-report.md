@@ -171,11 +171,15 @@ PLAYWRIGHT_BASE_URL=http://127.0.0.1 npm run test:e2e
 - 新增 `AiProviderConfigurationResolver`，统一解析 `ENV / DB / HYBRID` 三种配置模式，并输出 `DB / ENV / ENV_FALLBACK / UNAVAILABLE` 来源。
 - 新增 `/api/ai/settings*` 接口，支持摘要读取、保存更新、清空 Key、连通性测试、模型建议列表。
 - 现有 OpenAI / Anthropic 出题客户端已改为通过统一解析器读取配置，不再在业务代码中分散读取环境变量。
+- 新增前端 `AI 配置` 页面，支持每个 Provider 独立保存、清空 Key、查看掩码状态与运行连通性测试。
 
 ### 11.2 本阶段验证
 - `docker compose run --rm backend-test`
+- `cd frontend && npm test -- --run`
+- `cd frontend && npm run build`
+- `cd frontend && PLAYWRIGHT_EXECUTABLE_PATH=/usr/bin/chromium PLAYWRIGHT_LAUNCH_ARGS='--no-sandbox' PLAYWRIGHT_BASE_URL=http://127.0.0.1 npm run test:e2e -- tests/e2e/ai-settings.spec.ts`
 - 覆盖加密/解密、Key 掩码、保存读取、clearApiKey、优先级解析、Provider 测试接口。
+- 覆盖 AI 配置页渲染、保存配置、不修改 Key 保留原值、清空 Key、连通性测试与页面到 AI 出题页的闭环。
 
-### 11.3 当前剩余项
-- 前端 AI 配置页面与交互提示尚未提交，将在下一阶段补齐。
-- E2E 将在页面落地后串联“配置 Provider -> 测试连接 -> AI 出题”的完整链路。
+### 11.3 当前已知限制
+- Compose 版 `e2e-test` 首次运行需要拉取 Playwright 镜像，首次准备时间较长；本轮已用本机 `chromium` 完成等价浏览器验证。

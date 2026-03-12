@@ -17,6 +17,7 @@
 - 知识体系：维护一级 / 二级 / 三级知识点，记录掌握度、权重与备注
 - 题库管理：支持上午题 / 下午题，支持筛选、导入模板、导出
 - AI 出题中心：支持 OpenAI / Claude（Anthropic）按知识点、难度、场景生成上午题/下午题，支持预览编辑、临时练习与审核后入库
+- AI 配置中心：支持 OpenAI / Claude API Key 托管、掩码展示、清空、连通性测试、ENV/DB/HYBRID 来源识别
 - 练习系统：支持按知识点、随机、错题练习；上午题自动判分，下午题自评；支持薄弱知识点一键推荐练习
 - 错题复习：自动入库、错因分类、复习状态流转、下次复习时间、到期复习提醒
 - 模拟考试：创建上午卷 / 下午卷模拟，保存成绩与历史记录，并生成模考后复盘摘要
@@ -110,6 +111,22 @@ AI 相关可选环境变量：
 - `ENV_FALLBACK`：当前未启用数据库配置，回退使用环境变量。
 - `UNAVAILABLE`：数据库与环境变量都不可用，AI 模块保持优雅降级。
 
+### 5.2.2 AI 配置页面
+- 页面入口：左侧导航 `AI 配置`
+- Provider 卡片：`OpenAI 配置`、`Anthropic / Claude 配置`
+- 支持字段：启用状态、API Key、Base URL、默认模型、请求超时、最大重试次数、温度
+- 支持动作：保存配置、清空 Key、连通性测试
+
+安全边界：
+- 前端只显示 `未配置` 或掩码值，如 `sk-***1234`，不会回显完整明文 Key。
+- 编辑时默认不回填真实 Key；留空表示保留原值，输入新值表示覆盖，点击“清空 Key”会显式删除数据库托管密钥。
+- 连通性测试只返回 `success / provider / model / latency / message / configSource`，不会返回明文 Key。
+
+模式说明：
+- `ENV`：页面只读，配置由环境变量托管。
+- `DB`：只使用数据库托管配置；未配置时 AI Provider 为不可用。
+- `HYBRID`：数据库启用配置优先，环境变量兜底；当两者都不可用时，AI 出题页面仍可正常打开，但生成时会给出可理解错误提示。
+
 ### 5.3 一键启动
 ```bash
 docker compose up -d --build
@@ -183,6 +200,11 @@ cd frontend
 npm install
 npm run test:e2e:install
 PLAYWRIGHT_BASE_URL=http://127.0.0.1 npm run test:e2e
+```
+也可直接运行新增链路：
+```bash
+cd frontend
+PLAYWRIGHT_EXECUTABLE_PATH=/usr/bin/chromium PLAYWRIGHT_LAUNCH_ARGS='--no-sandbox' PLAYWRIGHT_BASE_URL=http://127.0.0.1 npm run test:e2e -- tests/e2e/ai-settings.spec.ts
 ```
 说明：
 - 本地运行前请确保前端、后端、MySQL 已启动并可访问。

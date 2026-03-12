@@ -10,7 +10,6 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Lob;
 import jakarta.persistence.Table;
 import jakarta.persistence.UniqueConstraint;
 import lombok.AllArgsConstructor;
@@ -43,8 +42,7 @@ public class AiProviderSettingsEntity extends BaseEntity {
     @Column(nullable = false)
     private boolean enabled;
 
-    @Lob
-    @Column(name = "api_key_encrypted")
+    @Column(name = "api_key_encrypted", columnDefinition = "longtext")
     private String apiKeyEncrypted;
 
     @Column(name = "api_key_mask", length = 32)
