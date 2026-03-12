@@ -18,6 +18,7 @@ import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVPrinter;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.jpa.domain.Specification;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -93,7 +94,13 @@ public class QuestionService {
 
     @Transactional
     public void delete(Long id) {
-        questionRepository.deleteById(id);
+        Question question = questionRepository.findById(id).orElseThrow(() -> new NotFoundException("题目不存在"));
+        try {
+            questionRepository.delete(question);
+            questionRepository.flush();
+        } catch (DataIntegrityViolationException ex) {
+            throw new BusinessException("题目已被练习或模考记录引用，无法删除");
+        }
     }
 
     @Transactional
