@@ -7,6 +7,7 @@ import {
   loginByApi,
   prepareStableData,
   selectElOption,
+  selectElRadioOption,
   selectMultipleElOptions,
   waitForMessage,
 } from './helpers';
@@ -52,11 +53,11 @@ test('核心备考链路可端到端跑通', async ({ page, request }) => {
     await page.getByTestId('practice-create-button').click();
 
     await expect(page.getByTestId('practice-question-title-0')).toContainText('事务一致性概念');
-    await page.getByTestId('practice-answer-group-0').getByRole('radio', { name: /原子性/ }).click();
+    await selectElRadioOption(page.getByTestId('practice-answer-group-0'), /A\.\s*原子性/);
     await page.getByTestId('practice-submit-button').click();
 
     await waitForMessage(page, '练习已提交');
-    await expect(page.getByTestId('practice-result-0')).toContainText('WRONG');
+    await expect(page.getByTestId('practice-result-0')).toContainText('错误');
     await expect(page.getByTestId('practice-auto-score-0')).toContainText('0');
   });
 
@@ -87,12 +88,13 @@ test('核心备考链路可端到端跑通', async ({ page, request }) => {
     const examName = `E2E 模考 ${Date.now()}`;
     await page.goto('/exams');
     await expect(page.getByTestId('exams-page')).toBeVisible();
+    await page.getByTestId('exam-create-button').click();
     await fillElInput('exam-name', page, examName);
     await selectElOption(page.getByTestId('exam-type'), '上午卷', page);
     await fillElNumber('exam-duration', page, '90');
     await fillElInput('exam-description', page, 'E2E 自动化创建的上午卷。');
     await selectMultipleElOptions(page.getByTestId('exam-question-ids'), ['面向对象特性辨析', '事务一致性概念'], page);
-    await page.getByTestId('exam-create-button').click();
+    await page.getByRole('button', { name: '立即创建模拟卷' }).click();
     await waitForMessage(page, '模拟卷已创建');
 
     const examRow = page.locator('.el-table__row').filter({ hasText: examName }).first();
@@ -101,20 +103,20 @@ test('核心备考链路可端到端跑通', async ({ page, request }) => {
 
     await expect(page.getByTestId('exam-attempt-card')).toBeVisible();
     const answerRows = await page.locator('[data-testid^="exam-answer-card-"]').all();
-    for (const row of answerRows) {
-      const title = await row.locator('strong').textContent();
+    for (const [index, row] of answerRows.entries()) {
+      const title = await row.getByTestId(`exam-question-title-${index}`).textContent();
       if (title?.includes('面向对象特性辨析')) {
-        await row.getByText('A. 隐藏对象内部实现细节，仅暴露稳定接口').click();
+        await selectElRadioOption(row.getByTestId(`exam-answer-group-${index}`), /A\.\s*隐藏对象内部实现细节/);
       } else if (title?.includes('事务一致性概念')) {
-        await row.getByText('B. 一致性').click();
+        await selectElRadioOption(row.getByTestId(`exam-answer-group-${index}`), /B\.\s*一致性/);
       }
     }
     await fillElInput('exam-self-review', page, '本次模考主要验证自动化链路。');
     await page.getByTestId('exam-submit-button').click();
 
     await waitForMessage(page, '已交卷');
-    await expect(page.getByTestId('exam-attempt-status')).toContainText('SUBMITTED');
-    await expect(page.getByTestId('exam-attempt-card')).toContainText('自动得分');
+    await expect(page.getByTestId('exam-attempt-status')).toContainText('已交卷');
+    await expect(page.getByTestId('exam-attempt-card')).toContainText('系统评分');
   });
 
   await test.step('验证统计页数据展示', async () => {
@@ -130,7 +132,7 @@ test('核心备考链路可端到端跑通', async ({ page, request }) => {
     const downloadPromise = page.waitForEvent('download');
     await page.getByTestId('settings-export-button').click();
     const download = await downloadPromise;
-    expect(download.suggestedFilename()).toBe('ose-export.json');
+    expect(download.suggestedFilename()).toBe('ose-full-backup.json');
     const downloadPath = await download.path();
     expect(downloadPath).toBeTruthy();
     const payload = await fs.readFile(downloadPath!, 'utf-8');

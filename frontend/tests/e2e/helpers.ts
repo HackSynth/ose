@@ -112,6 +112,12 @@ export async function selectMultipleElOptions(trigger: Locator, optionTexts: str
   await page.keyboard.press('Escape');
 }
 
+export async function selectElRadioOption(group: Locator, optionText: string | RegExp) {
+  const option = group.locator('.el-radio').filter({ hasText: optionText }).first();
+  await expect(option).toBeVisible();
+  await option.click();
+}
+
 export async function waitForMessage(page: Page, partialText: string) {
   const message = page.locator('.el-message').filter({ hasText: partialText }).last();
   try {
