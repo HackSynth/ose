@@ -1,54 +1,76 @@
 :root {
   color-scheme: light;
-  font-family: Inter, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif;
-  background: #f5f7fb;
-  color: #1f2937;
+  font-family: var(--el-font-family);
+  background: var(--bg-app);
+  color: var(--text-primary);
 }
 
 * {
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   margin: 0;
-  background: #f5f7fb;
+  background: var(--bg-app);
+  color: var(--text-primary);
+  line-height: 1.5;
 }
 
 #app {
   min-height: 100vh;
 }
 
+/* --- Layout Utils --- */
 .page-container {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--space-6);
+  padding: var(--space-6);
+  max-width: var(--content-max-width);
+  margin: 0 auto;
 }
 
 .page-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
 }
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
-}
-
-.panel-card {
-  border-radius: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-4);
 }
 
 .split-layout {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-  gap: 16px;
+  gap: var(--space-6);
 }
 
 @media (max-width: 960px) {
   .split-layout {
     grid-template-columns: 1fr;
   }
+}
+
+/* --- Typography Helpers --- */
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-tertiary {
+  color: var(--text-tertiary);
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-bold {
+  font-weight: 700;
 }

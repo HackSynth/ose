@@ -1,51 +1,95 @@
 <template>
   <div class="page-container" data-testid="knowledge-page">
-    <div class="page-header">
-      <div>
-        <h2 style="margin:0;">知识体系</h2>
-        <p style="margin:6px 0 0;color:#64748b;">维护软件设计师备考知识树，并记录掌握度与备注。</p>
-      </div>
-      <el-button type="primary" data-testid="knowledge-create-root" @click="openCreate(null)">新增根节点</el-button>
-    </div>
+    <PageHeader 
+      title="知识体系" 
+      description="维护软件设计师备考知识树，细化各个章节考点，并实时追踪您的掌握度与学习笔记。"
+    >
+      <template #actions>
+        <el-button 
+          type="primary" 
+          data-testid="knowledge-create-root" 
+          @click="openCreate(null)"
+        >
+          新增根节点
+        </el-button>
+      </template>
+    </PageHeader>
 
-    <el-card class="panel-card">
-      <el-tree data-testid="knowledge-tree" :data="tree" node-key="id" default-expand-all :props="{ label: 'name', children: 'children' }">
+    <el-card class="business-card" shadow="never">
+      <el-tree 
+        data-testid="knowledge-tree" 
+        :data="tree" 
+        node-key="id" 
+        default-expand-all 
+        :props="{ label: 'name', children: 'children' }"
+        class="knowledge-tree"
+      >
         <template #default="{ data }">
-          <div :data-testid="`knowledge-node-${data.code}`" style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
-            <div style="display:flex;flex-direction:column;gap:4px;">
-              <strong>{{ data.name }}</strong>
-              <span style="font-size:12px;color:#64748b;">{{ data.code }} · L{{ data.level }} · 掌握度 {{ data.masteryLevel }}%</span>
+          <div :data-testid="`knowledge-node-${data.code}`" class="tree-node">
+            <div class="node-info">
+              <span class="node-code">{{ data.code }}</span>
+              <span class="node-name">{{ data.name }}</span>
+              <div class="node-meta">
+                <span class="meta-item">L{{ data.level }}</span>
+                <span class="meta-item">权重: {{ data.weight }}</span>
+                <el-divider direction="vertical" />
+                <span class="meta-item mastery">掌握度: {{ data.masteryLevel }}%</span>
+              </div>
             </div>
-            <div style="display:flex;gap:8px;">
-              <el-tag type="success">权重 {{ data.weight }}</el-tag>
-              <el-button link type="primary" @click.stop="openCreate(data.id)">新增子节点</el-button>
-              <el-button link @click.stop="openEdit(data)">编辑</el-button>
-              <el-button link type="danger" @click.stop="removeNode(data.id)">删除</el-button>
+            <div class="node-actions">
+              <el-button link type="primary" size="small" @click.stop="openCreate(data.id)">子节点</el-button>
+              <el-button link size="small" @click.stop="openEdit(data)">编辑</el-button>
+              <el-button link type="danger" size="small" @click.stop="removeNode(data.id)">删除</el-button>
             </div>
           </div>
         </template>
       </el-tree>
     </el-card>
 
-    <el-dialog v-model="dialogVisible" :title="editingId ? '编辑知识点' : '新增知识点'" width="640px">
+    <el-dialog 
+      v-model="dialogVisible" 
+      :title="editingId ? '编辑知识点' : '新增知识点'" 
+      width="640px"
+      destroy-on-close
+    >
       <el-form label-position="top" :model="form" data-testid="knowledge-form">
-        <div class="card-grid">
-          <el-form-item label="编码"><el-input v-model="form.code" data-testid="knowledge-code" /></el-form-item>
-          <el-form-item label="名称"><el-input v-model="form.name" data-testid="knowledge-name" /></el-form-item>
-          <el-form-item label="层级"><el-input-number v-model="form.level" data-testid="knowledge-level" :min="1" :max="3" style="width:100%;" /></el-form-item>
+        <div class="form-grid">
+          <el-form-item label="编码" required>
+            <el-input v-model="form.code" data-testid="knowledge-code" placeholder="如：CS-01" />
+          </el-form-item>
+          <el-form-item label="名称" required>
+            <el-input v-model="form.name" data-testid="knowledge-name" placeholder="知识点名称" />
+          </el-form-item>
+          <el-form-item label="层级">
+            <el-input-number v-model="form.level" data-testid="knowledge-level" :min="1" :max="3" style="width:100%;" />
+          </el-form-item>
           <el-form-item label="父节点">
-            <el-select v-model="form.parentId" data-testid="knowledge-parent" clearable style="width:100%;">
-              <el-option v-for="item in flatNodes" :key="item.id" :label="`${item.code} - ${item.name}`" :value="item.id" />
+            <el-select v-model="form.parentId" data-testid="knowledge-parent" clearable style="width:100%;" placeholder="顶级节点">
+              <el-option v-for="item in flatNodes" :key="item.id" :label="`[${item.code}] ${item.name}`" :value="item.id" />
             </el-select>
           </el-form-item>
-          <el-form-item label="掌握度"><el-input-number v-model="form.masteryLevel" data-testid="knowledge-mastery" :min="0" :max="100" style="width:100%;" /></el-form-item>
-          <el-form-item label="权重"><el-input-number v-model="form.weight" data-testid="knowledge-weight" :min="1" :max="10" style="width:100%;" /></el-form-item>
+          <el-form-item label="当前掌握度 (%)">
+            <el-slider v-model="form.masteryLevel" data-testid="knowledge-mastery" :min="0" :max="100" show-input />
+          </el-form-item>
+          <el-form-item label="考试权重 (1-10)">
+            <el-input-number v-model="form.weight" data-testid="knowledge-weight" :min="1" :max="10" style="width:100%;" />
+          </el-form-item>
         </div>
-        <el-form-item label="备注"><el-input v-model="form.note" data-testid="knowledge-note" type="textarea" :rows="3" /></el-form-item>
+        <el-form-item label="学习备注 / 考点说明">
+          <el-input 
+            v-model="form.note" 
+            data-testid="knowledge-note" 
+            type="textarea" 
+            :rows="4" 
+            placeholder="记录下该知识点的核心考法、公式或容易混淆的地方..."
+          />
+        </el-form-item>
       </el-form>
       <template #footer>
-        <el-button @click="dialogVisible = false">取消</el-button>
-        <el-button type="primary" data-testid="knowledge-save" @click="save">保存</el-button>
+        <div class="dialog-footer">
+          <el-button @click="dialogVisible = false">取消</el-button>
+          <el-button type="primary" data-testid="knowledge-save" @click="save">保存知识点</el-button>
+        </div>
       </template>
     </el-dialog>
   </div>
@@ -55,6 +99,7 @@
 import { computed, onMounted, reactive, ref } from 'vue';
 import { ElMessage, ElMessageBox } from 'element-plus';
 import { api } from '@/api';
+import PageHeader from '@/components/ui/layout/PageHeader.vue';
 
 const tree = ref<any[]>([]);
 const dialogVisible = ref(false);
@@ -92,7 +137,16 @@ const openCreate = (parentId: number | null) => {
 
 const openEdit = (node: any) => {
   editingId.value = node.id;
-  Object.assign(form, node, { sortOrder: 1 });
+  Object.assign(form, {
+    code: node.code,
+    name: node.name,
+    level: node.level,
+    masteryLevel: node.masteryLevel,
+    weight: node.weight,
+    note: node.note || '',
+    parentId: node.parentId,
+    sortOrder: node.sortOrder || 1
+  });
   dialogVisible.value = true;
 };
 
@@ -103,17 +157,87 @@ const save = async () => {
   } else {
     await api.createKnowledge(payload);
   }
-  ElMessage.success('知识点已保存');
+  ElMessage.success('知识体系已成功更新');
   dialogVisible.value = false;
   await load();
 };
 
 const removeNode = async (id: number) => {
-  await ElMessageBox.confirm('删除后不可恢复，确认继续？', '删除确认', { type: 'warning' });
+  await ElMessageBox.confirm(
+    '删除该节点将同时移除其所有子节点及其关联的统计数据，是否确认？', 
+    '危险操作确认', 
+    { confirmButtonText: '确认删除', cancelButtonText: '取消', type: 'warning' }
+  );
   await api.deleteKnowledge(id);
-  ElMessage.success('已删除');
+  ElMessage.success('知识点已成功移除');
   await load();
 };
 
 onMounted(load);
 </script>
+
+<style scoped>
+.knowledge-tree :deep(.el-tree-node__content) {
+  height: auto;
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--bg-app);
+}
+
+.tree-node {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-right: var(--space-4);
+}
+
+.node-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.node-code {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-primary);
+  font-family: monospace;
+}
+
+.node-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.node-meta {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.mastery {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.dialog-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+}
+
+@media (max-width: 640px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

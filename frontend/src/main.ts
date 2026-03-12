@@ -5,6 +5,8 @@ import 'element-plus/dist/index.css';
 import VChart from 'vue-echarts';
 import App from './App.vue';
 import router from './router';
+import './styles/variables.css';
+import './styles/element-plus-override.css';
 import './styles/base.css';
 import './plugins/echarts';
 
