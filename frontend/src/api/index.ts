@@ -6,6 +6,8 @@ import type {
   AiSettingsResponse,
 } from '@/types';
 
+const AI_REQUEST_TIMEOUT_MS = 90000;
+
 export const api = {
   login: (payload: { username: string; password: string }) => http.post('/auth/login', payload),
   me: () => http.get('/auth/me'),
@@ -52,9 +54,13 @@ export const api = {
   aiModels: (params?: Record<string, unknown>) => http.get('/ai/models', { params }),
   aiSettings: () => http.get<AiSettingsResponse>('/ai/settings'),
   updateAiSettings: (provider: AiProviderType, payload: unknown) => http.put(`/ai/settings/${provider}`, payload),
-  testAiSettings: (provider: AiProviderType, payload?: unknown) => http.post<AiProviderConnectionTestResult>(`/ai/settings/${provider}/test`, payload ?? {}),
+  testAiSettings: (provider: AiProviderType, payload?: unknown) => http.post<AiProviderConnectionTestResult>(
+    `/ai/settings/${provider}/test`,
+    payload ?? {},
+    { timeout: AI_REQUEST_TIMEOUT_MS },
+  ),
   aiSettingsModels: (provider: AiProviderType) => http.get<AiProviderModelListResponse>(`/ai/settings/${provider}/models`),
-  aiGenerateQuestions: (payload: unknown) => http.post('/ai/questions/generate', payload),
+  aiGenerateQuestions: (payload: unknown) => http.post('/ai/questions/generate', payload, { timeout: AI_REQUEST_TIMEOUT_MS }),
   aiSaveQuestions: (payload: unknown) => http.post('/ai/questions/save', payload),
   aiHistory: () => http.get('/ai/history'),
   aiHealth: () => http.get('/ai/health'),
