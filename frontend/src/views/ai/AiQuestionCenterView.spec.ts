@@ -79,8 +79,22 @@ describe('AiQuestionCenterView', () => {
   beforeEach(() => {
     vi.clearAllMocks();
     apiMock.aiProviders.mockResolvedValue([
-      { provider: 'OPENAI', configured: true, models: [{ model: 'gpt-4.1-mini', displayName: 'gpt-4.1-mini', isDefault: true }] },
-      { provider: 'ANTHROPIC', configured: true, models: [{ model: 'claude-3-5-sonnet-latest', displayName: 'claude-3-5-sonnet-latest', isDefault: true }] },
+      {
+        providerId: 'env-openai',
+        provider: 'OPENAI',
+        displayName: 'OpenAI（ENV）',
+        configured: true,
+        statusMessage: '可用',
+        models: [{ model: 'gpt-4.1-mini', displayName: 'gpt-4.1-mini', isDefault: true }],
+      },
+      {
+        providerId: 'env-anthropic',
+        provider: 'ANTHROPIC',
+        displayName: 'Anthropic（ENV）',
+        configured: true,
+        statusMessage: '可用',
+        models: [{ model: 'claude-3-5-sonnet-latest', displayName: 'claude-3-5-sonnet-latest', isDefault: true }],
+      },
     ]);
     apiMock.knowledgeTree.mockResolvedValue([{ id: 1, code: 'DB.TXN', name: '事务管理', children: [] }]);
     apiMock.aiHistory.mockResolvedValue([]);
@@ -115,6 +129,11 @@ describe('AiQuestionCenterView', () => {
     await flushPromises();
 
     expect(apiMock.aiGenerateQuestions).toHaveBeenCalledTimes(1);
+    expect(apiMock.aiGenerateQuestions).toHaveBeenCalledWith(expect.objectContaining({
+      providerId: 'env-openai',
+      provider: 'OPENAI',
+      model: 'gpt-4.1-mini',
+    }));
     expect(wrapper.text()).toContain('结果预览（1 题）');
 
     await wrapper.get('[data-testid="ai-save"]').trigger('click');
@@ -128,7 +147,7 @@ describe('AiQuestionCenterView', () => {
     await flushPromises();
 
     const providerSelect = wrapper.get('[data-testid="ai-provider"]');
-    await providerSelect.setValue('ANTHROPIC');
+    await providerSelect.setValue('env-anthropic');
     await flushPromises();
 
     expect(wrapper.get('[data-testid="ai-model"]').element).toBeTruthy();

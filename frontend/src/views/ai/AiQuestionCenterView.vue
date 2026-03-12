@@ -17,15 +17,15 @@
       <el-form label-position="top" :model="form">
         <div class="form-grid">
           <el-form-item label="AI 提供商">
-            <el-select v-model="form.provider" data-testid="ai-provider" @change="onProviderChange">
+            <el-select v-model="form.providerId" data-testid="ai-provider" @change="onProviderChange">
               <el-option
                 v-for="item in providers"
-                :key="item.provider"
-                :label="item.provider"
-                :value="item.provider"
+                :key="item.providerId"
+                :label="item.displayName"
+                :value="item.providerId"
                 :disabled="!item.configured"
               >
-                <span>{{ item.provider }}</span>
+                <span>{{ item.displayName }}</span>
                 <span style="float:right;color:var(--text-tertiary)">{{ item.configured ? '已配置' : '未配置' }}</span>
               </el-option>
             </el-select>
@@ -198,10 +198,11 @@ import { computed, onMounted, reactive, ref } from 'vue';
 import { ElMessage } from 'element-plus';
 import { api } from '@/api';
 import PageHeader from '@/components/ui/layout/PageHeader.vue';
+import type { AiQuestionProviderOption, AiProviderType } from '@/types';
 
 const generating = ref(false);
 const generationId = ref<number | null>(null);
-const providers = ref<any[]>([]);
+const providers = ref<AiQuestionProviderOption[]>([]);
 const modelsByProvider = ref<Record<string, any[]>>({});
 const knowledgeTree = ref<any[]>([]);
 const drafts = ref<any[]>([]);
@@ -209,7 +210,8 @@ const validationErrors = ref<string[]>([]);
 const historyRows = ref<any[]>([]);
 
 const form = reactive<any>({
-  provider: 'OPENAI',
+  providerId: '',
+  provider: 'OPENAI' as AiProviderType,
   model: '',
   questionType: 'MORNING_SINGLE',
   topicType: 'KNOWLEDGE_POINT',
@@ -233,18 +235,22 @@ const flatten = (items: any[], list: any[] = []) => {
 };
 
 const knowledgeOptions = computed(() => flatten(knowledgeTree.value, []));
-const modelOptions = computed(() => modelsByProvider.value[form.provider] || []);
+const activeProvider = computed(() => providers.value.find((item) => item.providerId === form.providerId) || null);
+const modelOptions = computed(() => modelsByProvider.value[form.providerId] || []);
 
 const loadProviders = async () => {
-  providers.value = await api.aiProviders() as any[];
+  providers.value = await api.aiProviders();
   for (const provider of providers.value) {
-    modelsByProvider.value[provider.provider] = provider.models || [];
+    modelsByProvider.value[provider.providerId] = provider.models || [];
   }
   const firstConfigured = providers.value.find((item) => item.configured);
-  if (firstConfigured && !providers.value.some((item) => item.provider === form.provider && item.configured)) {
-    form.provider = firstConfigured.provider;
+  if (firstConfigured && !providers.value.some((item) => item.providerId === form.providerId && item.configured)) {
+    form.providerId = firstConfigured.providerId;
   }
-  form.model = (modelsByProvider.value[form.provider] || [])[0]?.model || '';
+  if (activeProvider.value) {
+    form.provider = activeProvider.value.provider;
+  }
+  form.model = (modelsByProvider.value[form.providerId] || [])[0]?.model || '';
 };
 
 const loadKnowledge = async () => {
@@ -259,7 +265,10 @@ const loadHistory = async () => {
 };
 
 const onProviderChange = () => {
-  form.model = (modelsByProvider.value[form.provider] || [])[0]?.model || '';
+  if (activeProvider.value) {
+    form.provider = activeProvider.value.provider;
+  }
+  form.model = (modelsByProvider.value[form.providerId] || [])[0]?.model || '';
 };
 
 const generate = async () => {
@@ -284,6 +293,7 @@ const saveAll = async () => {
   if (!drafts.value.length) return;
   const payload = {
     generationId: generationId.value,
+    providerId: form.providerId,
     provider: form.provider,
     model: form.model,
     questionType: form.questionType,

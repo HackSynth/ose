@@ -10,6 +10,7 @@
 - 增加错题复习提醒、薄弱知识点推荐练习、考试日期变更后自动重排计划、模考复盘摘要
 - 同步更新 README、实施计划与交付说明
 - 启动 Cherry Studio 风格“模型服务中心”重构，完成 Provider + Model 后端服务层与 AI 出题链路切换
+- 完成前端“模型服务”管理后台接入，支持 Provider、API Key、模型和默认模型的统一管理
 
 ## 2. 关键设计决策
 - E2E 采用 Playwright，优先覆盖真实浏览器交互链路，而非仅靠接口级测试。
@@ -193,6 +194,7 @@ PLAYWRIGHT_BASE_URL=http://127.0.0.1 npm run test:e2e
 - 新增 `OpenAiCompatibleProviderClient`，将 OpenAI / Anthropic / OpenAI-Compatible 三类 Provider 统一纳入新的解析与调度体系。
 - 新增 `AiProviderUrlBuilder`，统一处理 `ROOT / FULL_OVERRIDE` 两种 Base URL 模式。
 - AI 出题链路已改为通过 `providerId + model` 工作，同时保留默认模型回退与兼容接口。
+- 前端原“AI 配置”页已切换为新的“模型服务”管理后台，并修复 AI 出题页 Provider 选项接口，避免误调用后台管理接口。
 
 ### 12.2 为什么参考 Cherry Studio
 - Cherry Studio 在 Provider / Model 分层、Base URL 兼容、多 Key 轮询和默认模型思想上验证过可用性，适合复用其“服务治理”部分。
@@ -203,5 +205,5 @@ PLAYWRIGHT_BASE_URL=http://127.0.0.1 npm run test:e2e
 - 已覆盖 Provider CRUD、多 Key 轮询、Base URL ROOT / FULL_OVERRIDE、默认模型解析、Provider 测试接口、OpenAI / Anthropic / OpenAI-Compatible 路由分发、无可用模型错误处理。
 
 ### 12.4 当前状态与后续
-- 后端已完成，旧 `/api/ai/settings*` 接口仍保留作为前端兼容层。
-- 下一阶段将把前端“AI 配置”页重构为新的“模型服务”管理后台，并补齐前端单测与 E2E。
+- 前后端主链路已完成接入，旧 `/api/ai/settings*` 接口仍保留作为兼容层。
+- 下一阶段重点转为补齐“模型服务”页的 Playwright E2E，并继续收敛旧兼容接口。

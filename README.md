@@ -17,7 +17,7 @@
 - 知识体系：维护一级 / 二级 / 三级知识点，记录掌握度、权重与备注
 - 题库管理：支持上午题 / 下午题，支持筛选、导入模板、导出
 - AI 出题中心：支持 OpenAI / Claude（Anthropic）按知识点、难度、场景生成上午题/下午题，支持预览编辑、临时练习与审核后入库
-- 模型服务中心：后端已切换为 Cherry Studio 风格的 Provider + Model 管理体系，支持 OpenAI / Anthropic / OpenAI-Compatible、多 Key 轮询、默认模型与健康检查；当前仍保留旧配置页兼容接口
+- 模型服务中心：前后端均已切换为 Cherry Studio 风格的 Provider + Model 管理体系，支持 OpenAI / Anthropic / OpenAI-Compatible、多 Key 轮询、默认模型与健康检查
 - 练习系统：支持按知识点、随机、错题练习；上午题自动判分，下午题自评；支持薄弱知识点一键推荐练习
 - 错题复习：自动入库、错因分类、复习状态流转、下次复习时间、到期复习提醒
 - 模拟考试：创建上午卷 / 下午卷模拟，保存成绩与历史记录，并生成模考后复盘摘要
@@ -128,7 +128,7 @@ Default Model API：
 - `GET /api/ai/default-models`
 - `PUT /api/ai/default-models`
 
-当前仍保留 `/api/ai/settings*` 兼容接口，供旧版前端配置页继续工作；前端“模型服务”后台页将在下一阶段切换到新 API。
+当前主界面已使用新的 `/api/ai/providers*` 与 `/api/ai/default-models` 管理接口；`/api/ai/settings*` 仍保留为兼容层，便于平滑回退。
 
 配置来源说明：
 - `DB`：当前生效配置来自数据库。
@@ -146,11 +146,11 @@ Default Model API：
 - 默认模型分场景：分别维护默认出题模型、默认复盘摘要模型、默认推荐练习模型；业务未显式指定时自动回退到对应默认值。
 - OpenAI-Compatible：用于接入第三方 OpenAI 协议网关或本地模型服务，需在 Provider 列表中手动创建。
 
-### 5.2.2 AI 配置页面
-- 页面入口：左侧导航 `AI 配置`
-- Provider 卡片：`OpenAI 配置`、`Anthropic / Claude 配置`
-- 支持字段：启用状态、API Key、Base URL、默认模型、请求超时、最大重试次数、温度
-- 支持动作：保存配置、清空 Key、连通性测试
+### 5.2.2 模型服务页面
+- 页面入口：左侧导航 `模型服务`
+- 支持对象：Provider、API Key、模型列表、场景默认模型
+- 支持 Provider 类型：`OpenAI`、`Anthropic`、`OpenAI-Compatible`
+- 支持动作：新增 / 编辑 / 删除 Provider，启停、连通性测试、模型自动发现、API Key 增删改、默认模型切换
 
 安全边界：
 - 前端只显示 `未配置` 或掩码值，如 `sk-***1234`，不会回显完整明文 Key。
@@ -183,7 +183,7 @@ openssl rand -hex 32
 ```bash
 docker compose up -d --force-recreate backend
 ```
-4. 打开左侧导航 `AI 配置` 页面，输入 OpenAI 或 Anthropic 的 API Key 后点击“保存”，即可将密钥加密写入数据库。
+4. 打开左侧导航 `模型服务` 页面，进入目标 Provider 卡片新增 API Key，并按需补充模型或默认模型，即可将密钥加密写入数据库。
 
 方式二：仅通过环境变量配置
 1. 在 `.env` 中直接配置 Provider Key：
@@ -200,7 +200,7 @@ ANTHROPIC_DEFAULT_MODEL=claude-3-5-sonnet-latest
 ```bash
 docker compose up -d --force-recreate backend
 ```
-3. 进入 `AI 配置` 页面确认配置来源显示为 `ENV` 或 `ENV_FALLBACK`。此模式下页面不会托管密钥，但 AI 出题功能可继续使用环境变量配置。
+3. 进入 `模型服务` 页面确认对应 Provider 来源显示为 `ENV`、`HYBRID` 或 `ENV_FALLBACK`。此模式下页面会按模式展示只读或数据库优先状态，AI 出题功能仍可继续使用可用配置。
 
 ### 5.3 一键启动
 ```bash
