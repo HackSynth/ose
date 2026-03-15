@@ -22,7 +22,7 @@ public class LoggingInterceptor implements HandlerInterceptor, WebMvcConfigurer 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
         request.setAttribute(START_TIME_ATTR, System.currentTimeMillis());
-        log.info "[{}] {} {}", request.getMethod(), request.getRequestURI(), request.getQueryString() != null ? "?" + request.getQueryString() : "";
+        log.info("[{}] {} {}", request.getMethod(), request.getRequestURI(), request.getQueryString() != null ? "?" + request.getQueryString() : "");
         return true;
     }
 
@@ -31,7 +31,7 @@ public class LoggingInterceptor implements HandlerInterceptor, WebMvcConfigurer 
         Long startTime = (Long) request.getAttribute(START_TIME_ATTR);
         if (startTime != null) {
             long duration = System.currentTimeMillis() - startTime;
-            log.info "[{}] {} {} - {}ms", request.getMethod(), request.getRequestURI(), response.getStatus(), duration);
+            log.info("[{}] {} {} - {}ms", request.getMethod(), request.getRequestURI(), response.getStatus(), duration);
         }
     }
 }

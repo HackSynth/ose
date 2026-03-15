@@ -1,4 +1,4 @@
-import { ref } from 'vue';
+import { ref, type Ref } from 'vue';
 import { ElMessage } from 'element-plus';
 import type { AxiosError } from 'axios';
 
@@ -9,9 +9,9 @@ export interface UseRequestOptions {
 }
 
 export interface UseRequestReturn<T> {
-  loading: boolean;
-  error: Error | null;
-  data: T | null;
+  loading: Ref<boolean>;
+  error: Ref<Error | null>;
+  data: Ref<T | null>;
   execute: (...args: unknown[]) => Promise<T | null>;
 }
 
