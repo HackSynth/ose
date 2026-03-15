@@ -1,4 +1,4 @@
-import { ref, type Ref } from 'vue';
+import { ref, type Ref, unref } from 'vue';
 import { ElMessage } from 'element-plus';
 import type { AxiosError } from 'axios';
 
@@ -8,22 +8,15 @@ export interface UseRequestOptions {
   successMessage?: string;
 }
 
-export interface UseRequestReturn<T> {
-  loading: Ref<boolean>;
-  error: Ref<Error | null>;
-  data: Ref<T | null>;
-  execute: (...args: unknown[]) => Promise<T | null>;
-}
-
 export function useRequest<T>(
   requestFn: (...args: unknown[]) => Promise<T>,
   options: UseRequestOptions = {}
-): UseRequestReturn<T> {
+) {
   const { showError = true, showSuccess = false, successMessage } = options;
 
-  const loading = ref(false);
-  const error = ref<Error | null>(null);
-  const data = ref<T | null>(null);
+  const loading = ref(false) as Ref<boolean>;
+  const error = ref<Error | null>(null) as Ref<Error | null>;
+  const data = ref<T | null>(null) as Ref<T | null>;
 
   const execute = async (...args: unknown[]): Promise<T | null> => {
     loading.value = true;
