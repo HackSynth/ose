@@ -1,0 +1,47 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 33 100% 97%;
+  --foreground: 240 28% 14%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 28% 14%;
+  --border: 24 60% 90%;
+  --destructive: 0 72% 51%;
+}
+
+* { @apply border-border; }
+html { scroll-behavior: smooth; }
+body {
+  @apply min-h-screen bg-warm text-navy antialiased;
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer components {
+  .ose-page {
+    @apply relative min-h-screen overflow-hidden bg-warm;
+  }
+
+  .ose-orb {
+    @apply pointer-events-none absolute rounded-full opacity-60 blur-2xl;
+  }
+
+  .ose-card {
+    @apply rounded-[1.25rem] border border-white/70 bg-white/90 shadow-soft backdrop-blur transition duration-300 hover:-translate-y-1 hover:shadow-lift;
+  }
+
+  .ose-input {
+    @apply rounded-2xl border-orange-100 bg-white px-4 py-3 text-navy shadow-sm outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/15;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
