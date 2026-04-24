@@ -1,0 +1,19 @@
+﻿{
+  "$schema": "https://raw.githubusercontent.com/nicegui-dev/tauri-schema/refs/heads/main/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "OSE default capabilities",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "shell:allow-spawn",
+    "shell:allow-execute",
+    "shell:allow-stdin-write",
+    "shell:allow-kill",
+    "process:allow-exit",
+    "process:allow-restart",
+    {
+      "identifier": "shell:allow-open",
+      "allow": [{ "url": "https://**" }]
+    }
+  ]
+}
