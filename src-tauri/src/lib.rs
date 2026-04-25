@@ -1,4 +1,5 @@
 use std::{
+    env,
     fs,
     io::{BufRead, BufReader, Write},
     net::TcpStream,
@@ -60,8 +61,8 @@ pub fn run() {
                 #[cfg(not(debug_assertions))]
                 thread::spawn(move || match start_next_server(&app_handle) {
                     Ok(port) => {
-                        let url = format!("http://localhost:{port}");
-                        if let Err(error) = window.navigate(url.parse().expect("valid localhost URL")) {
+                        let url = format!("http://127.0.0.1:{port}");
+                        if let Err(error) = window.navigate(url.parse().expect("valid local URL")) {
                             show_error_page(&window, &format!("加载桌面服务失败：{error}"));
                         }
                     }
@@ -97,10 +98,10 @@ fn start_next_server(app: &AppHandle) -> Result<u16, String> {
         .arg(&start_script)
         .current_dir(&standalone_dir)
         .env("PORT", port.to_string())
-        .env("HOSTNAME", "localhost")
+        .env("HOSTNAME", "127.0.0.1")
         .env("DATABASE_URL", database_url)
-        .env("AUTH_URL", format!("http://localhost:{port}"))
-        .env("NEXTAUTH_URL", format!("http://localhost:{port}"))
+        .env("AUTH_URL", format!("http://127.0.0.1:{port}"))
+        .env("NEXTAUTH_URL", format!("http://127.0.0.1:{port}"))
         .env("NODE_ENV", "production")
         .stdout(Stdio::piped())
         .stderr(Stdio::piped())
@@ -121,7 +122,7 @@ fn start_next_server(app: &AppHandle) -> Result<u16, String> {
         runtime.data_dir = Some(data_dir);
     }
 
-    if wait_until_ready(port, Duration::from_secs(15)) {
+    if wait_until_ready(port, Duration::from_secs(60)) {
         Ok(port)
     } else {
         stop_next_server(app);
@@ -149,18 +150,37 @@ fn resolve_data_dir(app: &AppHandle) -> Result<PathBuf, String> {
 }
 
 fn resolve_standalone_dir(app: &AppHandle) -> Result<PathBuf, String> {
-    let resource_dir = app.path().resource_dir().ok();
-    let bundled = resource_dir
-        .as_ref()
-        .map(|path| path.join("binaries").join("standalone"));
+    let mut candidates = Vec::new();
 
-    if let Some(path) = bundled.filter(|path| path.exists()) {
-        return Ok(path);
+    if let Ok(resource_dir) = app.path().resource_dir() {
+        candidates.push(resource_dir.join("binaries").join("standalone"));
+        candidates.push(resource_dir.join("resources").join("binaries").join("standalone"));
     }
 
-    std::env::current_dir()
-        .map(|path| path.join("binaries").join("standalone"))
-        .map_err(|error| format!("获取 standalone 目录失败：{error}"))
+    if let Ok(exe_path) = env::current_exe() {
+        if let Some(exe_dir) = exe_path.parent() {
+            candidates.push(exe_dir.join("resources").join("binaries").join("standalone"));
+            candidates.push(exe_dir.join("binaries").join("standalone"));
+        }
+    }
+
+    if let Ok(current_dir) = env::current_dir() {
+        candidates.push(current_dir.join("resources").join("binaries").join("standalone"));
+        candidates.push(current_dir.join("binaries").join("standalone"));
+    }
+
+    for path in &candidates {
+        if path.join("start.js").exists() {
+            return Ok(path.clone());
+        }
+    }
+
+    let checked = candidates
+        .iter()
+        .map(|path| path.display().to_string())
+        .collect::<Vec<_>>()
+        .join("；");
+    Err(format!("获取 standalone 目录失败，已检查：{checked}"))
 }
 
 fn pick_port() -> Result<u16, String> {
@@ -188,7 +208,7 @@ fn health_check(port: u16) -> bool {
         return false;
     };
     let _ = stream.set_read_timeout(Some(Duration::from_secs(2)));
-    let request = "GET /api/ai/status HTTP/1.1\r\nHost: localhost\r\nConnection: close\r\n\r\n";
+    let request = "GET /api/ai/status HTTP/1.1\r\nHost: 127.0.0.1\r\nConnection: close\r\n\r\n";
     if stream.write_all(request.as_bytes()).is_err() {
         return false;
     }
@@ -223,6 +243,7 @@ fn show_error_page(window: &WebviewWindow, message: &str) {
         .replace('<', "&lt;")
         .replace('>', "&gt;")
         .replace('"', "&quot;")
+        .replace('\\', "&#92;")
         .replace('`', "&#96;");
     let script = format!(
         "document.body.innerHTML = `<main style=\"font-family: system-ui; padding: 40px; line-height: 1.7\"><h1>OSE 桌面服务启动失败</h1><p>{escaped}</p></main>`;"

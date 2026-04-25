@@ -33,6 +33,39 @@ function copyFile(source, target) {
   fs.copyFileSync(source, target);
 }
 
+function packageDir(packageName) {
+  if (packageName.startsWith("@")) {
+    const [scope, name] = packageName.split("/");
+    return path.join(root, "node_modules", scope, name);
+  }
+
+  return path.join(root, "node_modules", packageName);
+}
+
+function copyPackageClosure(packageNames) {
+  const seen = new Set();
+  const queue = [...packageNames];
+
+  while (queue.length > 0) {
+    const packageName = queue.shift();
+    if (seen.has(packageName)) continue;
+    seen.add(packageName);
+
+    const source = packageDir(packageName);
+    const packageJsonPath = path.join(source, "package.json");
+    if (!fs.existsSync(packageJsonPath)) continue;
+
+    copyDir(source, path.join(standaloneTarget, "node_modules", ...packageName.split("/")));
+
+    const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"));
+    for (const deps of [packageJson.dependencies, packageJson.optionalDependencies, packageJson.peerDependencies]) {
+      for (const dependencyName of Object.keys(deps ?? {})) {
+        queue.push(dependencyName);
+      }
+    }
+  }
+}
+
 function detectTargetTriple() {
   const archMap = { x64: "x86_64", arm64: "aarch64" };
   const arch = archMap[process.arch] ?? process.arch;
@@ -56,7 +89,7 @@ function writeStartScript() {
 const path = require("node:path");
 
 process.env.PORT = process.env.PORT || "3000";
-process.env.HOSTNAME = process.env.HOSTNAME || "localhost";
+process.env.HOSTNAME = process.env.HOSTNAME || "127.0.0.1";
 
 const prismaBin = process.platform === "win32"
   ? path.join(__dirname, "node_modules", ".bin", "prisma.cmd")
@@ -95,8 +128,8 @@ function main() {
   copyDir(path.join(root, "public"), path.join(standaloneTarget, "public"));
   copyDir(path.join(root, "src", "prisma", "migrations"), path.join(standaloneTarget, "src", "prisma", "migrations"));
   copyFile(schemaPath, path.join(standaloneTarget, "src", "prisma", "schema.prisma"));
-  copyDir(path.join(root, "node_modules", "prisma"), path.join(standaloneTarget, "node_modules", "prisma"));
   copyDir(path.join(root, "node_modules", "@prisma"), path.join(standaloneTarget, "node_modules", "@prisma"));
+  copyPackageClosure(["prisma"]);
   copyFile(path.join(root, "node_modules", ".bin", "prisma"), path.join(standaloneTarget, "node_modules", ".bin", "prisma"));
   copyFile(path.join(root, "node_modules", ".bin", "prisma.cmd"), path.join(standaloneTarget, "node_modules", ".bin", "prisma.cmd"));
   writeStartScript();
