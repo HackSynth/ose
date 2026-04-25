@@ -30,10 +30,11 @@ COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 COPY --from=builder /app/src/prisma ./src/prisma
 COPY --from=builder /app/node_modules/.prisma ./node_modules/.prisma
+RUN chown -R nextjs:nodejs /app
 
 USER nextjs
 EXPOSE 3000
 ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
 
-CMD ["sh", "-c", "npx prisma migrate deploy --schema src/prisma/schema.prisma && node server.js"]
+CMD ["sh", "-c", "./node_modules/.bin/prisma migrate deploy --schema src/prisma/schema.prisma && node server.js"]
