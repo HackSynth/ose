@@ -15,10 +15,10 @@ export function LandingActions() {
   }, []);
 
   return (
-    <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+    <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
       <Button asChild size="lg">
         <Link href="/register">
-          Start studying
+          开始备考
           <ArrowRight className="h-4 w-4" aria-hidden="true" />
         </Link>
       </Button>
@@ -26,7 +26,7 @@ export function LandingActions() {
         <Button asChild variant="secondary" size="lg">
           <a href="#features">
             <BookOpen className="h-4 w-4" aria-hidden="true" />
-            Explore features
+            查看功能
           </a>
         </Button>
       ) : null}
