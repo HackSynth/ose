@@ -4,7 +4,7 @@ import { join } from "node:path";
 
 const BASE_URL = process.env.OSE_BASE_URL || "http://localhost:3000";
 const OUT_DIR = "docs/assets/screenshots";
-const VIEWPORT = { width: 1440, height: 900 };
+const VIEWPORT = { width: 1440, height: 1100 };
 const DEMO = {
   email: process.env.OSE_DEMO_EMAIL || "demo@ose.dev",
   password: process.env.OSE_DEMO_PASSWORD || "demo123456",
@@ -13,12 +13,12 @@ const DEMO = {
 
 const targets = [
   { path: "/", file: "landing.png", auth: false, fullPage: true },
-  { path: "/dashboard", file: "dashboard.png", auth: true, fullPage: true },
-  { path: "/practice", file: "practice.png", auth: true, fullPage: true },
-  { path: "/analysis", file: "analysis.png", auth: true, fullPage: true },
-  { path: "/plan", file: "plan.png", auth: true, fullPage: true },
-  { path: "/knowledge", file: "knowledge.png", auth: true, fullPage: true },
-  { path: "/exam", file: "exam.png", auth: true, fullPage: true },
+  { path: "/dashboard", file: "dashboard.png", auth: true, fullPage: false },
+  { path: "/practice", file: "practice.png", auth: true, fullPage: false },
+  { path: "/analysis", file: "analysis.png", auth: true, fullPage: false },
+  { path: "/plan", file: "plan.png", auth: true, fullPage: false },
+  { path: "/knowledge", file: "knowledge.png", auth: true, fullPage: false },
+  { path: "/exam", file: "exam.png", auth: true, fullPage: false },
 ];
 
 async function ensureUser() {
