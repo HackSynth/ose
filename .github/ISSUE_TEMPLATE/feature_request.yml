@@ -1,0 +1,34 @@
+name: '✨ Feature Request'
+description: Suggest a feature or improvement.
+title: 'feat: '
+labels: ['enhancement', 'needs-triage']
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Feature Description / 功能描述
+      description: What should OSE support?
+    validations:
+      required: true
+  - type: textarea
+    id: scenario
+    attributes:
+      label: Use Case / 使用场景
+      description: Who needs this and when?
+    validations:
+      required: true
+  - type: textarea
+    id: implementation
+    attributes:
+      label: Suggested Implementation / 建议实现方案
+      description: Optional technical or UX approach.
+  - type: dropdown
+    id: willing
+    attributes:
+      label: Willing to Submit a PR? / 是否愿意提交 PR
+      options:
+        - 'Yes / 是'
+        - 'Maybe / 可能'
+        - 'No / 否'
+    validations:
+      required: true

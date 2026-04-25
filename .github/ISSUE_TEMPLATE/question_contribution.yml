@@ -1,0 +1,42 @@
+name: '📚 题库贡献'
+description: Contribute question bank content.
+title: 'data: '
+labels: ['data', 'question-bank', 'needs-review']
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: 题目类型
+      options:
+        - 选择题
+        - 案例分析
+    validations:
+      required: true
+  - type: input
+    id: topic
+    attributes:
+      label: 知识点
+      placeholder: '例如：软件工程 / 数据库设计 / 计算机网络'
+    validations:
+      required: true
+  - type: textarea
+    id: content
+    attributes:
+      label: 题目内容
+      description: 请提供题干或案例背景。
+    validations:
+      required: true
+  - type: textarea
+    id: options
+    attributes:
+      label: 选项和答案
+      description: 选择题请填写 A/B/C/D 和正确答案；案例题请填写子问题和参考答案。
+    validations:
+      required: true
+  - type: textarea
+    id: explanation
+    attributes:
+      label: 解析
+      description: 请说明考点、推理过程和评分点。
+    validations:
+      required: true

@@ -1,22 +1,22 @@
+version: '3.8'
+
 services:
   ose:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: ose:local
-    container_name: ose
-    restart: unless-stopped
-    env_file:
-      - .env
-    environment:
-      DATABASE_URL: file:/app/data/ose.db
-      AUTH_URL: http://localhost:3000
-      PORT: 3000
-      HOSTNAME: 0.0.0.0
+    build: .
     ports:
-      - "3000:3000"
+      - '3000:3000'
+    environment:
+      - DATABASE_URL=file:/data/ose.db
+      - NEXTAUTH_URL=http://localhost:3000
+      - NEXTAUTH_SECRET=change-me-in-production
+      - AUTH_URL=http://localhost:3000
+      - AUTH_SECRET=change-me-in-production
+      # AI configuration is optional.
+      - AI_PROVIDER=claude
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
     volumes:
-      - ose-data:/app/data
+      - ose-data:/data
+    restart: unless-stopped
 
 volumes:
   ose-data:

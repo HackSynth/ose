@@ -1,0 +1,7 @@
+node_modules
+.next
+src-tauri/target
+prisma/migrations
+src/prisma/migrations
+src-tauri/binaries
+out

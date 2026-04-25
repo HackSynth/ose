@@ -1,0 +1,288 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-${{ github.ref_name }}
+  cancel-in-progress: true
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  DATABASE_URL: file:./ci-release.db
+  NEXTAUTH_URL: http://localhost:3000
+  NEXTAUTH_SECRET: release-secret
+  AUTH_URL: http://localhost:3000
+  AUTH_SECRET: release-secret
+  NEXT_PUBLIC_EXAM_DATE: 2026-05-23
+
+jobs:
+  build:
+    name: Build ${{ matrix.name }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: Windows x64
+            os: windows-2022
+            artifact-name: release-assets-windows-x64
+          - name: macOS universal
+            os: macos-14
+            artifact-name: release-assets-macos-universal
+          - name: Linux x64
+            os: ubuntu-22.04
+            artifact-name: release-assets-linux-x64
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Add macOS universal targets
+        if: runner.os == 'macOS'
+        run: |
+          rustup target add aarch64-apple-darwin x86_64-apple-darwin
+
+      - name: Cache Rust
+        uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: src-tauri
+
+      - name: Install Linux system dependencies
+        if: runner.os == 'Linux'
+        shell: bash
+        run: |
+          set -euxo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            build-essential \
+            pkg-config \
+            curl \
+            wget \
+            file \
+            patchelf \
+            libssl-dev \
+            rpm \
+            xdg-utils \
+            libgtk-3-dev \
+            librsvg2-dev \
+            libayatana-appindicator3-dev
+          sudo apt-get install -y --no-install-recommends libwebkit2gtk-4.1-dev \
+            || sudo apt-get install -y --no-install-recommends libwebkit2gtk-4.0-dev
+          sudo apt-get install -y --no-install-recommends libsoup-3.0-dev \
+            || sudo apt-get install -y --no-install-recommends libsoup2.4-dev
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate Tauri icons
+        run: npm run tauri:icons
+
+      - name: Build Tauri app for macOS
+        if: runner.os == 'macOS'
+        run: npm run tauri:build -- --target universal-apple-darwin
+
+      - name: Build Tauri app for Windows
+        if: runner.os == 'Windows'
+        run: npm run tauri:build
+
+      - name: Build Tauri app for Linux
+        if: runner.os == 'Linux'
+        run: npm run tauri:build -- --bundles appimage,deb,rpm
+
+      - name: Prepare Windows assets
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          New-Item -ItemType Directory -Force -Path release-assets | Out-Null
+          $version = $env:GITHUB_REF_NAME
+
+          $msi = Get-ChildItem -Path 'src-tauri/target/release/bundle' -Recurse -Include *.msi -ErrorAction SilentlyContinue | Select-Object -First 1
+          if ($null -ne $msi) {
+            $dest = "OSE-$version-Windows-x64.msi"
+            Copy-Item $msi.FullName (Join-Path release-assets $dest) -Force
+            $sigPath = "$($msi.FullName).sig"
+            if (Test-Path $sigPath) {
+              Copy-Item $sigPath (Join-Path release-assets "$dest.sig") -Force
+            }
+          } else {
+            Write-Warning 'No Windows MSI installer found'
+          }
+
+          $nsis = Get-ChildItem -Path 'src-tauri/target/release/bundle' -Recurse -Include *.exe -ErrorAction SilentlyContinue |
+            Where-Object { $_.FullName -like '*\bundle\*' } |
+            Select-Object -First 1
+          if ($null -ne $nsis) {
+            Copy-Item $nsis.FullName (Join-Path release-assets "OSE-$version-Windows-x64-Setup.exe") -Force
+          }
+
+          $exeCandidates = @(
+            'src-tauri/target/release/ose.exe',
+            'src-tauri/target/x86_64-pc-windows-msvc/release/ose.exe'
+          )
+          $exePath = $exeCandidates | Where-Object { Test-Path $_ } | Select-Object -First 1
+          if ($null -eq $exePath) {
+            throw 'Portable exe not found'
+          }
+
+          $portableDir = 'release-assets/OSE-Portable'
+          $resourcesDir = Join-Path $portableDir 'resources'
+          $standaloneSource = 'src-tauri/binaries/standalone'
+          $standaloneTarget = Join-Path $resourcesDir 'binaries/standalone'
+          New-Item -ItemType Directory -Force -Path $portableDir | Out-Null
+          New-Item -ItemType Directory -Force -Path (Split-Path $standaloneTarget) | Out-Null
+          Copy-Item $exePath (Join-Path $portableDir 'OSE.exe') -Force
+
+          if (Test-Path 'src-tauri/target/release/resources') {
+            Copy-Item 'src-tauri/target/release/resources' $resourcesDir -Recurse -Force
+          }
+          if (!(Test-Path (Join-Path $standaloneSource 'start.js'))) {
+            throw "Next.js standalone sidecar not found at $standaloneSource"
+          }
+          Copy-Item $standaloneSource $standaloneTarget -Recurse -Force
+
+          @(
+            '# OSE portable build marker',
+            'portable=true'
+          ) | Set-Content -Path (Join-Path $portableDir 'portable.ini') -Encoding UTF8
+
+          @"
+          OSE Windows Portable
+
+          1. Keep OSE.exe, portable.ini, and the resources directory together.
+          2. Node.js 20+ must be installed and available in PATH.
+          3. User data is stored in the system app data directory.
+          4. The bundled Next.js standalone server lives in resources/binaries/standalone.
+          "@ | Set-Content -Path (Join-Path $portableDir 'README.txt') -Encoding UTF8
+
+          Compress-Archive -Path "$portableDir/*" -DestinationPath "release-assets/OSE-$version-Windows-x64-Portable.zip" -Force
+          Remove-Item -Recurse -Force $portableDir
+
+      - name: Prepare macOS assets
+        if: runner.os == 'macOS'
+        shell: bash
+        run: |
+          set -euxo pipefail
+          mkdir -p release-assets
+          VERSION="${GITHUB_REF_NAME}"
+
+          APP_PATH=""
+          DMG_PATH=""
+          for path in \
+            "src-tauri/target/universal-apple-darwin/release/bundle/macos" \
+            "src-tauri/target/universal-apple-darwin/release/bundle/dmg" \
+            "src-tauri/target/release/bundle/macos" \
+            "src-tauri/target/release/bundle/dmg"; do
+            if [ -d "$path" ]; then
+              [ -z "$APP_PATH" ] && APP_PATH=$(find "$path" -maxdepth 1 -name "*.app" -type d | head -1 || true)
+              [ -z "$DMG_PATH" ] && DMG_PATH=$(find "$path" -maxdepth 1 -name "*.dmg" -type f | head -1 || true)
+            fi
+          done
+
+          if [ -n "$DMG_PATH" ]; then
+            cp "$DMG_PATH" "release-assets/OSE-${VERSION}-macOS-universal.dmg"
+          fi
+
+          if [ -n "$APP_PATH" ]; then
+            ditto -c -k --sequesterRsrc --keepParent "$APP_PATH" "release-assets/OSE-${VERSION}-macOS-universal.zip"
+          else
+            echo "No macOS .app found" >&2
+            exit 1
+          fi
+
+      - name: Prepare Linux assets
+        if: runner.os == 'Linux'
+        shell: bash
+        run: |
+          set -euxo pipefail
+          mkdir -p release-assets
+          VERSION="${GITHUB_REF_NAME}"
+
+          APPIMAGE=$(find src-tauri/target/release/bundle -name "*.AppImage" | head -1 || true)
+          if [ -n "$APPIMAGE" ]; then
+            cp "$APPIMAGE" "release-assets/OSE-${VERSION}-Linux-x86_64.AppImage"
+          else
+            echo "No AppImage found" >&2
+          fi
+
+          DEB=$(find src-tauri/target/release/bundle -name "*.deb" | head -1 || true)
+          if [ -n "$DEB" ]; then
+            cp "$DEB" "release-assets/OSE-${VERSION}-Linux-x86_64.deb"
+          else
+            echo "No .deb found" >&2
+          fi
+
+          RPM=$(find src-tauri/target/release/bundle -name "*.rpm" | head -1 || true)
+          if [ -n "$RPM" ]; then
+            cp "$RPM" "release-assets/OSE-${VERSION}-Linux-x86_64.rpm"
+          else
+            echo "No .rpm found" >&2
+          fi
+
+      - name: List prepared assets
+        shell: bash
+        run: ls -la release-assets
+
+      - name: Upload release artifacts to workflow
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.artifact-name }}
+          path: release-assets/*
+          if-no-files-found: error
+
+      - name: List generated bundles for debugging
+        if: always()
+        shell: bash
+        run: find src-tauri/target -maxdepth 5 -type f 2>/dev/null || true
+
+  publish-release:
+    name: Publish GitHub Release
+    runs-on: ubuntu-22.04
+    needs: build
+    steps:
+      - name: Download built release artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: release-assets-*
+          path: release-assets
+          merge-multiple: true
+
+      - name: List downloaded release artifacts
+        shell: bash
+        run: ls -la release-assets
+
+      - name: Upload Release Assets
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: OSE ${{ github.ref_name }}
+          prerelease: false
+          generate_release_notes: true
+          body: |
+            ## OSE ${{ github.ref_name }}
+
+            Open-source AI-powered exam preparation platform for China's Software Professional Qualification Exam.
+
+            ### Downloads
+
+            - Windows: `OSE-${{ github.ref_name }}-Windows-x64.msi`, `OSE-${{ github.ref_name }}-Windows-x64-Setup.exe`, or `OSE-${{ github.ref_name }}-Windows-x64-Portable.zip`
+            - macOS: `OSE-${{ github.ref_name }}-macOS-universal.dmg` or `OSE-${{ github.ref_name }}-macOS-universal.zip`
+            - Linux: `OSE-${{ github.ref_name }}-Linux-x86_64.AppImage`, `.deb`, or `.rpm`
+
+            Windows portable builds require Node.js 20+ in PATH because the Next.js standalone server is launched locally.
+          files: release-assets/*

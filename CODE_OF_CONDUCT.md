@@ -1,23 +1,73 @@
-﻿# 行为准则
+# Contributor Covenant Code of Conduct
 
-为了营造友好、开放、专业的协作环境，OSE 项目采用以下行为准则。
+## Our Pledge
 
-## 我们鼓励
+We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, caste, color, religion, or sexual identity and orientation.
 
-- 尊重不同经验水平、背景和观点。
-- 使用建设性的语言反馈问题和方案。
-- 聚焦事实、代码和用户价值。
-- 主动帮助新贡献者理解项目上下文。
+We pledge to act and interact in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community.
 
-## 不可接受的行为
+## Our Standards
 
-- 人身攻击、骚扰、歧视或侮辱性表达。
-- 公开泄露他人隐私信息。
-- 恶意刷屏、挑衅或持续偏离主题。
-- 其他破坏社区安全感和协作效率的行为。
+Examples of behavior that contributes to a positive environment for our community include:
 
-## 执行方式
+- Demonstrating empathy and kindness toward other people.
+- Being respectful of differing opinions, viewpoints, and experiences.
+- Giving and gracefully accepting constructive feedback.
+- Accepting responsibility and apologizing to those affected by our mistakes.
+- Focusing on what is best not just for us as individuals, but for the overall community.
 
-维护者可以对违反行为准则的内容进行提醒、隐藏、关闭讨论、限制参与或移交平台处理。
+Examples of unacceptable behavior include:
 
-如需报告问题，请通过 `SECURITY.md` 中的联系方式或项目维护者公开渠道联系。报告时请尽量提供上下文、链接、截图或时间线。
+- The use of sexualized language or imagery, and sexual attention or advances of any kind.
+- Trolling, insulting or derogatory comments, and personal or political attacks.
+- Public or private harassment.
+- Publishing others' private information without explicit permission.
+- Other conduct which could reasonably be considered inappropriate in a professional setting.
+
+## Enforcement Responsibilities
+
+Community leaders are responsible for clarifying and enforcing our standards of acceptable behavior and will take appropriate and fair corrective action in response to any behavior that they deem inappropriate, threatening, offensive, or harmful.
+
+Community leaders have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct.
+
+## Scope
+
+This Code of Conduct applies within all community spaces, and also applies when an individual is officially representing the community in public spaces.
+
+## Enforcement
+
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement at `conduct@ose.dev`. All complaints will be reviewed and investigated promptly and fairly.
+
+All community leaders are obligated to respect the privacy and security of the reporter of any incident.
+
+## Enforcement Guidelines
+
+Community leaders will follow these Community Impact Guidelines in determining consequences:
+
+### 1. Correction
+
+Community Impact: Use of inappropriate language or other behavior deemed unprofessional or unwelcome.
+
+Consequence: A private, written warning providing clarity around the nature of the violation and an explanation of why the behavior was inappropriate.
+
+### 2. Warning
+
+Community Impact: A violation through a single incident or series of actions.
+
+Consequence: A warning with consequences for continued behavior. No interaction with the people involved for a specified period of time.
+
+### 3. Temporary Ban
+
+Community Impact: A serious violation of community standards, including sustained inappropriate behavior.
+
+Consequence: A temporary ban from any sort of interaction or public communication with the community for a specified period of time.
+
+### 4. Permanent Ban
+
+Community Impact: Demonstrating a pattern of violation of community standards, including sustained inappropriate behavior, harassment of an individual, or aggression toward or disparagement of classes of individuals.
+
+Consequence: A permanent ban from any sort of public interaction within the community.
+
+## Attribution
+
+This Code of Conduct is adapted from the Contributor Covenant, version 2.1, available at https://www.contributor-covenant.org/version/2/1/code_of_conduct/.

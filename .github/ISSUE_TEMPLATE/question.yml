@@ -1,0 +1,19 @@
+name: '❓ Question'
+description: Ask a usage, development, or deployment question.
+title: 'question: '
+labels: ['question']
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Question / 问题描述
+      description: What do you need help with?
+    validations:
+      required: true
+  - type: textarea
+    id: attempted
+    attributes:
+      label: What Have You Tried? / 已尝试的方案
+      description: Include docs, commands, config, or logs you already checked.
+    validations:
+      required: true

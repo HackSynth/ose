@@ -1,0 +1,44 @@
+name: '🐛 Bug Report'
+description: Report a reproducible bug in OSE.
+title: 'bug: '
+labels: ['bug', 'needs-triage']
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description / 描述
+      description: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction Steps / 复现步骤
+      placeholder: "1. Go to...\n2. Click...\n3. See error..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior / 期望行为
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior / 实际行为
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment / 环境信息
+      description: OS, browser, Node.js version, deployment mode.
+      placeholder: "OS: Windows 11\nBrowser: Chrome 124\nNode: 20.x\nDeployment: local/Docker/Vercel/Tauri"
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots / 截图
+      description: Drag and drop screenshots or logs here if available.

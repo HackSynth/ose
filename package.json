@@ -2,22 +2,65 @@
   "name": "ose",
   "version": "0.1.0",
   "private": false,
+  "description": "Open-source AI-powered exam preparation platform for China's Software Professional Qualification Exam",
+  "author": "OSE Contributors",
+  "license": "AGPL-3.0",
+  "homepage": "https://github.com/hacksynth/ose",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hacksynth/ose.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hacksynth/ose/issues"
+  },
+  "keywords": [
+    "software-exam",
+    "ruankao",
+    "exam-preparation",
+    "ai-powered",
+    "education",
+    "nextjs",
+    "open-source",
+    "self-hosted"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint .",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
+    "typecheck": "tsc --noEmit",
+    "test": "echo \"No tests configured yet\"",
+    "db:migrate": "prisma migrate dev",
+    "db:seed": "prisma db seed",
+    "db:reset": "prisma migrate reset",
+    "db:studio": "prisma studio",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
     "prisma:studio": "prisma studio",
     "tauri:dev": "tauri dev",
     "tauri:build": "tauri build",
     "tauri:prepare": "node scripts/prepare-sidecar.js",
-    "tauri:icons": "tauri icon src-tauri/icons/app-icon.png"
+    "tauri:icons": "tauri icon src-tauri/icons/app-icon.png",
+    "prepare": "husky && npx prisma generate"
   },
   "prisma": {
     "schema": "src/prisma/schema.prisma",
     "seed": "tsx src/prisma/seed.ts"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,css,md}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.91.0",
@@ -46,6 +89,8 @@
     "tailwind-merge": "^3.5.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^20.5.0",
+    "@commitlint/config-conventional": "^20.5.0",
     "@tauri-apps/cli": "^2.10.1",
     "@types/bcryptjs": "^2.4.6",
     "@types/node": "^20.14.10",
@@ -54,31 +99,14 @@
     "autoprefixer": "^10.5.0",
     "eslint": "^9.39.4",
     "eslint-config-next": "^15.5.15",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
     "postcss": "^8.5.10",
+    "prettier": "^3.8.3",
     "prisma": "^6.19.3",
     "tailwindcss": "^3.4.19",
     "tailwindcss-animate": "^1.0.7",
     "tsx": "^4.21.0",
     "typescript": "^5.5.3"
-  },
-  "description": "Open Software Exam，一个开源的软考软件设计师备考系统。",
-  "license": "MIT",
-  "keywords": [
-    "software-exam",
-    "nextjs",
-    "prisma",
-    "ai",
-    "education"
-  ],
-  "engines": {
-    "node": ">=20"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/hacksynth/ose.git"
-  },
-  "bugs": {
-    "url": "https://github.com/hacksynth/ose/issues"
-  },
-  "homepage": "https://github.com/hacksynth/ose#readme"
+  }
 }

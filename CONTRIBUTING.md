@@ -1,58 +1,141 @@
-﻿# 贡献指南
+# Contributing to OSE / 参与 OSE 贡献
 
-感谢你愿意参与 OSE（Open Software Exam）！本项目欢迎 bug 修复、功能改进、文档补充、题库内容完善和体验优化。
+## Welcome / 欢迎
 
-## 开始之前
+Thank you for your interest in OSE. We are building an open, self-hostable, AI-powered exam preparation platform for China's Software Professional Qualification Exam. Good contributions include code, question data, documentation, design feedback, deployment recipes, and careful bug reports.
 
-- 请先阅读 `README.md`，确认本地环境可以正常启动。
-- 提交较大的功能前，建议先创建 Issue 说明动机、方案和影响范围。
-- 涉及 AI、鉴权、数据库迁移的改动，请在 PR 中写清楚验证方式。
+感谢你关注 OSE。我们希望把 OSE 打造成一个开放、可自部署、AI 驱动的软考备考平台。代码、题库、文档、设计建议、部署经验和高质量 Bug 报告都非常有价值。
 
-## 本地开发
+## Ways to Contribute / 贡献方式
+
+- **Report bugs / 报告 Bug**: use the Bug Report issue template and include reproduction steps.
+- **Request features / 提交功能建议**: describe the scenario, expected workflow, and possible implementation.
+- **Contribute code / 贡献代码**: pick a good first issue or propose a focused change.
+- **Contribute question data / 贡献题库数据**: add multiple-choice questions, case analysis questions, explanations, and knowledge tags.
+- **Improve docs / 改进文档**: clarify setup, deployment, AI provider configuration, and exam domain knowledge.
+- **Translate / 翻译**: help with English UI copy, Chinese documentation, and future i18n resources.
+
+## Development Setup / 开发环境搭建
+
+Prerequisites:
+
+- Node.js 20 recommended, Node.js 18+ supported by the project metadata.
+- npm 10+.
+- Git.
+- Optional: Rust toolchain for Tauri desktop builds.
+
+Setup:
 
 ```bash
-npm install
+git clone https://github.com/hacksynth/ose.git
+cd ose
 cp .env.example .env
-npm run prisma:migrate
+npm install
+npx prisma migrate dev
+npx prisma db seed
 npm run dev
 ```
 
-常用检查命令：
+Useful commands:
 
 ```bash
-npm run prisma:generate
 npm run lint
+npm run typecheck
 npm run build
+npm run db:studio
+npm run tauri:dev
 ```
 
-## 提交规范
+## Project Structure / 项目结构
 
-建议使用简洁清晰的提交信息：
+```text
+src/
+  app/                 Next.js App Router pages and API routes
+  app/api/             Backend API endpoints
+  components/          Reusable UI and feature components
+  components/ui/       shadcn/ui-style primitives
+  lib/                 Business logic, auth, AI providers, analytics
+  prisma/              Prisma schema, migrations, and seed data
+src-tauri/             Tauri desktop shell and bundle configuration
+docs/                  User, contributor, and deployment documentation
+.github/              Issue templates, workflows, and community files
+```
 
-- `feat: add ai question generation`
-- `fix: handle empty practice result`
-- `docs: update deployment guide`
-- `chore: update ci workflow`
+## Coding Standards / 编码规范
 
-## Pull Request 要求
+- Use TypeScript strict mode. Avoid `any` unless the boundary is genuinely dynamic.
+- Run ESLint and Prettier before submitting a PR.
+- Keep server-only logic in `src/lib` or API routes; keep interactive UI in client components.
+- Prefer existing UI primitives in `src/components/ui`.
+- Name React components in `PascalCase`, hooks as `useSomething`, utilities in `camelCase`, and constants in `SCREAMING_SNAKE_CASE` when global.
+- Keep database access behind Prisma and avoid raw SQL unless there is a strong reason.
+- Use Conventional Commits:
 
-请确保 PR：
+```text
+feat: add question search
+fix: handle desktop IPv4 startup
+docs: improve self-hosting guide
+data: add 2024 multiple-choice questions
+```
 
-- 聚焦一个主题，避免混入无关重构。
-- 包含必要的文档、迁移或示例配置更新。
-- 通过 `npm run lint` 和 `npm run build`。
-- 若新增 Prisma schema，请提交对应迁移目录。
-- 不提交 `.env`、数据库文件、日志或构建产物。
+PR expectations:
 
-## 代码风格
+- One focused change per PR.
+- Link related issues.
+- Include screenshots for visible UI changes.
+- Confirm lint, typecheck, build, and relevant manual tests.
+- Explain migrations or breaking changes clearly.
 
-- 使用 TypeScript，保持类型清晰。
-- 优先复用现有组件和工具函数。
-- UI 保持 SproutSpace 温暖风格与中文界面。
-- 修复问题时尽量处理根因，不做过度抽象。
+## Question Bank Contribution Guide / 题库贡献指南
 
-## 题库与内容贡献
+Question data should be accurate, traceable, and mapped to the knowledge hierarchy.
 
-- 题目、解析和案例内容应准确、原创或确认可开源使用。
-- 请避免直接复制受版权保护的真题全文。
-- 解析需说明正确答案依据，并指出常见误区。
+For multiple-choice questions, include:
+
+- Stable question code, e.g. `SD-2024-AM-001`.
+- Knowledge topic ID or topic title.
+- Stem, four options, correct option, explanation, difficulty, and source.
+
+Example:
+
+```json
+{
+  "code": "SD-2024-AM-001",
+  "type": "SINGLE_CHOICE",
+  "topic": "Software Engineering",
+  "stem": "Which model emphasizes iterative risk analysis?",
+  "options": [
+    { "label": "A", "content": "Waterfall" },
+    { "label": "B", "content": "Spiral" },
+    { "label": "C", "content": "V-Model" },
+    { "label": "D", "content": "Prototype" }
+  ],
+  "answer": "B",
+  "explanation": "The spiral model combines iteration with explicit risk analysis.",
+  "difficulty": "MEDIUM",
+  "source": "Contributor"
+}
+```
+
+For case analysis questions, include scenario background, sub-questions, reference answers, score points, and scoring rubric. See [docs/question-format.md](docs/question-format.md) for the full format.
+
+Quality requirements:
+
+- Do not submit copyrighted exam content unless it is legally redistributable.
+- Avoid ambiguous wording.
+- Provide explanations for every answer.
+- Tag at least one knowledge point.
+- Keep formatting plain Markdown where possible.
+
+## First Good Issues / 新手任务建议
+
+Good first contributions usually have a small surface area:
+
+- Improve docs for one deployment path.
+- Add explanations to existing knowledge points.
+- Add a small batch of original practice questions.
+- Add a UI empty state or loading state.
+- Add unit tests for one API route.
+- Improve mobile spacing on one practice page.
+
+See [.github/GOOD_FIRST_ISSUES.md](.github/GOOD_FIRST_ISSUES.md) for a curated list.

@@ -1,32 +1,45 @@
-﻿# 安全政策
+# Security Policy
 
-感谢你帮助 OSE 保持安全。
+## Supported Versions
 
-## 报告漏洞
+OSE is pre-1.0 software. Security fixes are applied to the `main` branch and the latest tagged release when practical.
 
-如果你发现安全问题，请不要直接公开披露。请通过以下方式联系维护者：
+| Version | Supported |
+| ------- | --------- |
+| 0.1.x   | Yes       |
 
-- 在仓库启用 GitHub Security Advisories 后，优先使用私有安全报告。
-- 如果尚未启用，请通过维护者公开邮箱或私有渠道联系。
+## Reporting a Vulnerability
 
-报告中建议包含：
+Please do not open a public GitHub issue for security vulnerabilities.
 
-- 漏洞影响范围和复现步骤。
-- 相关路由、API、配置或依赖版本。
-- 可能的修复建议或临时缓解方案。
+Email the maintainers at `security@ose.dev` with:
 
-## 处理预期
+- A clear description of the issue.
+- Steps to reproduce or a proof of concept.
+- Impact assessment, including affected routes or deployment modes.
+- Your contact information and preferred disclosure timeline.
 
-维护者会尽快确认报告，并在完成评估和修复后协调披露。请给维护者合理时间处理，避免在修复前公开可利用细节。
+If `security@ose.dev` is not yet active, use a private GitHub security advisory or contact the repository owner directly.
 
-## 支持版本
+## Response Process
 
-当前项目处于早期迭代阶段，仅维护 `main` 分支的最新版本。
+1. We acknowledge reports within 72 hours when possible.
+2. We validate the issue and estimate severity.
+3. We prepare a fix, test it, and coordinate disclosure.
+4. We publish release notes and credit the reporter unless anonymity is requested.
 
-## 敏感信息
+## Scope
 
-请不要提交：
+In scope:
 
-- `.env` 或真实 API Key。
-- 真实用户数据、数据库文件或日志。
-- 可用于绕过鉴权的 token、cookie、session 信息。
+- Authentication and authorization bugs.
+- API routes that leak user data.
+- Injection, SSRF, XSS, CSRF, and unsafe file handling.
+- AI provider key leakage or insecure storage.
+- Docker, Tauri, and deployment configuration vulnerabilities.
+
+Out of scope:
+
+- Social engineering.
+- Vulnerabilities in unsupported forks.
+- Denial-of-service reports without a practical mitigation path.
