@@ -1,0 +1,956 @@
+{
+  "msg": "成功",
+  "status": "0",
+  "data": {
+    "data": {
+      "question": [
+        {
+          "index": 1,
+          "belong_page": 1,
+          "question_id": 524101,
+          "question_title": "<img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  id=\"zongheng-ccp-host\" src=\"https://alidocs.dingtalk.com/core/api/resources/img/5eecdaf48460cde58ef270b6e134c9f2810fcec324d3c1ef75b8339e1c4c2483d08509556868857aa156a98577f418d55d8c510952191c95df79b3d4f3c35195b49b82ee8dcf4a7d794c5a60db35bc4e6873c5b310314230?tmpCode=clientPreviewSheet\" width=\"242.6666666666667\" height=\"68.8/\"/>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "524101",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "fault.swf",
+            "flash\\fault.swf",
+            "swshare\\flash\\fault.swf",
+            "\\swshare\\flash\\fault.swf"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 2,
+          "belong_page": 1,
+          "question_id": 524102,
+          "question_title": "<p>在详细设计结束后，以下选项中不是重点审查内容的是()。<br/> &nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "524102",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["数据流图", "软件界面", "算法", "数据结构"],
+          "sort_son": "0"
+        },
+        {
+          "index": 3,
+          "belong_page": 1,
+          "question_id": 524103,
+          "question_title": "<p>若一个有向图具有拓扑排序序列，则该图的邻接矩阵必定为()矩阵。<br/> &nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "524103",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["对称", "一般", "三角", "稀疏"],
+          "sort_son": "0"
+        },
+        {
+          "index": 4,
+          "belong_page": 1,
+          "question_id": 524104,
+          "question_title": "<p>以下软件工程行为中，()不能提高软件的可维护性<br/> &nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "524104",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "尽可能利用硬件的特点",
+            "尽可能在软件开发过程中保证各阶段文档的正确性",
+            "重视程序的结构设计，使程序具有较好的层次结构",
+            "在进行概要设计时，应加强模块间的联系"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 5,
+          "belong_page": 1,
+          "question_id": 524105,
+          "question_title": "<p>访问Web服务器默认使用的端口号是()。<br/> &nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "524105",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>80</p>", "<p>110</p>", "<p>53</p>", "<p>23</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 6,
+          "belong_page": 1,
+          "question_id": 524106,
+          "question_title": "<p>在数据流图中()不属于系统待开发的内容。<br/> &nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "524106",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["数据存储", "数据加工", "外部实体", "数据流"],
+          "sort_son": "0"
+        },
+        {
+          "index": 7,
+          "belong_page": 1,
+          "question_id": 524107,
+          "question_title": "<p>字典是Python语言中的一个复合数据类型，现定义字典dict1如下，则不正确的语句为()。dict1={name&#39;:&#39;David&#39;,&#39;age&#39;.10,&#39;class&#39;:&#39;first}<br/> &nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "524107",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "dict1[&#39;age&#39;]=15",
+            "del dict1[1]",
+            "del dict1",
+            "print(dict1 [&#39;name&#39;])"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 8,
+          "belong_page": 1,
+          "question_id": 524108,
+          "question_title": "以下关于单链表存储结构特征的叙述中，错误的是( )。<p>&nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "524108",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "可随机访问表中的任一元素结点",
+            "在表中任意位置插入和删除都不用移动其他元素结点",
+            "表中结点所占用存储空间的地址不必是连续的",
+            "所需空间与结点个数成正比"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 9,
+          "belong_page": 1,
+          "question_id": 524109,
+          "question_title": "<p>两个函数依赖集F和G等价是指()。<br/> &nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "524109",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["F=G", "F+=G+", "F→G", "G→F"],
+          "sort_son": "0"
+        },
+        {
+          "index": 10,
+          "belong_page": 1,
+          "question_id": 524110,
+          "question_title": "<p>与RISC相比，不属于CISC特征的是()。<br/> &nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "524110",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["执行一条指令用的时钟周期多", "指令类型多", "寻址方式多", "指令长度固定"],
+          "sort_son": "0"
+        },
+        {
+          "index": 11,
+          "belong_page": 1,
+          "question_id": 524111,
+          "question_title": "<p>在操作系统中，进程调度的主要目的是()。<br/> &nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "524111",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "减少进程的等待时间",
+            "提高计算机的运行速度",
+            "合理分配CPU时间，提高CPU利用率",
+            "增加系统的吞吐量"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 12,
+          "belong_page": 1,
+          "question_id": 524112,
+          "question_title": "<p>访问控制的策略主要分为三类，正确的是()。<br/> &nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "524112",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "基于时间的访问控制、自主访问控制和强制访问控制",
+            "自主访问控制、强制访问控制和基于角色的访问控制",
+            "强制访问控制、基于角色的访问控制和基于时间的访问控制",
+            "基于角色的访问控制、基于时间的访问控制和自主访问控制"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 13,
+          "belong_page": 1,
+          "question_id": 524120,
+          "question_title": "<p>以中断控制方式在CPU与外设之间交换数据的特点中不包括()<br/> &nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "524120",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "CPU主动查询外设状态",
+            "CPU与外设并行工作",
+            "及时响应突发事件",
+            "需要保存和恢复现场"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 14,
+          "belong_page": 1,
+          "question_id": 524122,
+          "question_title": "<p>在平衡二叉树中，要求每个结点的左右子树高度差不超过1，那么高度为5的平衡二叉树最少有()个节点。<br/> &nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "524122",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["15", "16", "12", "11"],
+          "sort_son": "0"
+        },
+        {
+          "index": 15,
+          "belong_page": 1,
+          "question_id": 524123,
+          "question_title": "<p>“开发了一个没有人真正需要的软件系统”属于()风险。<br/> &nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "524123",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["商业", "技术", "管理", "项目"],
+          "sort_son": "0"
+        },
+        {
+          "index": 16,
+          "belong_page": 1,
+          "question_id": 524124,
+          "question_title": "<p>对面向对象软件从不同层次进行测试。测试一组协同工作的类之间的相互作用，属于()。<br/> &nbsp; &nbsp;</p><p><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "524124",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["算法", "系统", "模板", "类"],
+          "sort_son": "0"
+        },
+        {
+          "index": 17,
+          "belong_page": 1,
+          "question_id": 524125,
+          "question_title": "<p>在C/C++程序中，若函数fun无返回值、无参数，对该函数的正确声明是()。<br/> &nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "524125",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["void fun(void, ... )", "void fun(...).", "fun(void);", "void fun(void);"],
+          "sort_son": "0"
+        },
+        {
+          "index": 18,
+          "belong_page": 1,
+          "question_id": 524126,
+          "question_title": "<p>在C/C++程序中，若函数fun无返回值、无参数，对该函数的正确声明是()。<br/> &nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "524126",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["void fun(void, ... )", "void fun(...).", "fun(void);", "void fun(void);"],
+          "sort_son": "0"
+        },
+        {
+          "index": 19,
+          "belong_page": 1,
+          "question_id": 524127,
+          "question_title": "<p>关系型数据库的参考完整性约束可以通过( )来实现。<br/> &nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "524127",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["主键", "候选键", "超键", "外键"],
+          "sort_son": "0"
+        },
+        {
+          "index": 20,
+          "belong_page": 1,
+          "question_id": 524128,
+          "question_title": "<p>采用栈将一个算术表达式的中缀形式转换为后缀形式，设暂存运算符的栈S初始时为空，将算术表达式&quot;17+(45-5*7)/9&quot;转换为后级式“17 45 5 7*-9/+”的过程中，栈S中最多有( )个元素。<br/> &nbsp; &nbsp;</p><p style=\"text-align: left;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "524128",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>6</p>", "<p>4</p>", "<p>5</p>", "<p>2</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 21,
+          "belong_page": 1,
+          "question_id": 524129,
+          "question_title": "<p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20250728/1753670762367591.png\" title=\"1753670762367591.png\" alt=\"image.png\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "524129",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>14036</p>", "<p>1748</p>", "<p>4096</p>", "<p>1024</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 22,
+          "belong_page": 1,
+          "question_id": 524130,
+          "question_title": "<p>设某线性表的元素存储在有序顺序表A[1..20]中，表中元素互异，即A[1]、A[2]、…、A[20]互不相同，用折半查找(即二分查找向下取整)在A中查找key，若key等于A[12]，则査找过程中参与比较的元素依次为A[10]、()。<br/> &nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "524130",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["A[15]、A[12]", "A[14]、A[12]", "A[16]、A[12]", "A[17]、A[12]"],
+          "sort_son": "0"
+        },
+        {
+          "index": 23,
+          "belong_page": 1,
+          "question_id": 524131,
+          "question_title": "<p>以下选项中()不属于信息安全的基本要素。<br/> &nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "524131",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["可重用性", "完整性", "可控性", "保密性"],
+          "sort_son": "0"
+        },
+        {
+          "index": 24,
+          "belong_page": 1,
+          "question_id": 524132,
+          "question_title": "<p>()适合于面向对象的开发方法，是一种以用户需求为动力，以对象作为驱动的模型。<br/> &nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "524132",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["统一过程模型", "瀑布模型", "喷泉模型", "螺旋模型"],
+          "sort_son": "0"
+        },
+        {
+          "index": 25,
+          "belong_page": 1,
+          "question_id": 524133,
+          "question_title": "希望用最快的速度挑选出1000个无序元素中前10个最大的元素，则最好选择()排序算法<p>&nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "524133",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["冒泡", "基数", "堆", "快速"],
+          "sort_son": "0"
+        },
+        {
+          "index": 26,
+          "belong_page": 1,
+          "question_id": 524134,
+          "question_title": "<p>()操作可以对SQL访问控制进行授权。<br/> &nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "524134",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["DROP", "REVOKE", "GRANT", "DELETE"],
+          "sort_son": "0"
+        },
+        {
+          "index": 27,
+          "belong_page": 1,
+          "question_id": 524135,
+          "question_title": "<p>在Windows操作系统下，要获取某个网络开放端口所对应的应用程序信息，可以使用命令（） &nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "524135",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["ipconfig", "traceroute", "netstat", "nslookup"],
+          "sort_son": "0"
+        },
+        {
+          "index": 28,
+          "belong_page": 1,
+          "question_id": 524136,
+          "question_title": "<p>甲公司发布了一款名为“智慧助手”的智能手机应用，其竟争对手乙公司紧随其后开发并发布了一故名为&quot;智能帮手”的应用，其界面设计和功能与“智慧助手”基本一致。以下叙述中，正确的是( )。<br/> &nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "524136",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "乙公司没有侵犯甲公司的任何知识产权",
+            "乙公司侵犯了甲公司的专利权",
+            "乙公司侵犯了甲公司的商标权",
+            "乙公司侵犯了甲公司的著作权"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 29,
+          "belong_page": 1,
+          "question_id": 524137,
+          "question_title": "<p>根据权值集合{0.30，0.25,0.25,0.12，0.08}构造的哈夫曼树中，每个权值对应哈夫曼树中的一个叶结点，()。<br/> &nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "524137",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "从根结点到权值0.12和0.08所表示的叶结点路径长度相同",
+            "从根结点到权值0.30所表示的叶结点路径最长",
+            "从根结点到所有叶结点的路径长度相同",
+            "从根结点到权值0.25所表示的两个叶结点路径长度不同"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 30,
+          "belong_page": 1,
+          "question_id": 524138,
+          "question_title": "<p>对于一个n阶的对称矩阵A，将其下三角区域（含主对角线）的元素按行存储在一维数组中，设元素A[i][y]存放在S[k]中，且S[1]=A[0][0]，则R与i，y（i&lt;=y）的对应关系是（）<br/> &nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "524138",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "K=i（i+1）/2+y-1 ",
+            "k=i（i+1）/2+y+1",
+            "K=i（i-1）/2+y-1 ",
+            "k=i（i-1）/2+y-1"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 31,
+          "belong_page": 1,
+          "question_id": 524139,
+          "question_title": "对业务流程进行建模的最适合的UML图是()。<p>&nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "524139",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["用例图", "活动图", "部署图", "交互图"],
+          "sort_son": "0"
+        },
+        {
+          "index": 32,
+          "belong_page": 1,
+          "question_id": 524140,
+          "question_title": "<p>要在O(nlgn)时间内，对数据进行稳定排序，则应选择()排序算法,<br/> &nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "524140",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["快速", "归并", "堆", "直接插入"],
+          "sort_son": "0"
+        },
+        {
+          "index": 33,
+          "belong_page": 1,
+          "question_id": 524141,
+          "question_title": "<p>排序算法的稳定性是指（）。 &nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "524141",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "经过排序后，能使关键字相同的元素保持原顺序中的相对位置不变",
+            "经过排序后，能使关键字相同的元素保持原顺序中的相对位置改变",
+            "排序算法的性能与被排序元素个数关系不大",
+            "排序算法的性能与被排序元素个数关系密切"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 34,
+          "belong_page": 1,
+          "question_id": 524142,
+          "question_title": "<p>以下不稳定的排序算法是（）。 &nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "524142",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["冒泡排序", "直接插入排序", "希尔排序", "归并排序"],
+          "sort_son": "0"
+        },
+        {
+          "index": 35,
+          "belong_page": 1,
+          "question_id": 524143,
+          "question_title": "<p>为实现快速排序算法，待排序列适合采用（ ）。 &nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "524143",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["顺序存储&nbsp;", "链式存储", "散列存储", "索引存储"],
+          "sort_son": "0"
+        },
+        {
+          "index": 36,
+          "belong_page": 1,
+          "question_id": 524144,
+          "question_title": "<p>统一过程模型的四个阶段中，在( )阶段进行需求分析和架构演进。<br/> &nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "524144",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["移交", "精化", "构建", "起始"],
+          "sort_son": "0"
+        }
+      ],
+      "summary": {
+        "radio": {
+          "total_question": 36,
+          "total_score": 0
+        },
+        "multiple": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "judge": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "fill": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "program": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "qanda": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "cloze": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "budingxiang": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "material": {
+          "total_question": 0,
+          "total_score": 0
+        }
+      },
+      "examine": {
+        "id": 18955,
+        "title": "2024年11月软件设计师选择题（回忆版）",
+        "len_time": {
+          "time": 120
+        },
+        "total_question": 36,
+        "total_score": 36,
+        "submit_limit_num": "0",
+        "machine_type": "1"
+      },
+      "answer_activity_start_time": 1585828800,
+      "checkProcess": 1,
+      "process": {
+        "is_delete": false
+      },
+      "train_id": 0
+    },
+    "pagination": {
+      "curPage": 1,
+      "pageSize": 1200,
+      "total": 36,
+      "hasNextPage": false
+    },
+    "totalOrder": [
+      {
+        "index": 1,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 524101
+      },
+      {
+        "index": 2,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 524102
+      },
+      {
+        "index": 3,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 524103
+      },
+      {
+        "index": 4,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 524104
+      },
+      {
+        "index": 5,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 524105
+      },
+      {
+        "index": 6,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 524106
+      },
+      {
+        "index": 7,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 524107
+      },
+      {
+        "index": 8,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 524108
+      },
+      {
+        "index": 9,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 524109
+      },
+      {
+        "index": 10,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 524110
+      },
+      {
+        "index": 11,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 524111
+      },
+      {
+        "index": 12,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 524112
+      },
+      {
+        "index": 13,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 524120
+      },
+      {
+        "index": 14,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 524122
+      },
+      {
+        "index": 15,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 524123
+      },
+      {
+        "index": 16,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 524124
+      },
+      {
+        "index": 17,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 524125
+      },
+      {
+        "index": 18,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 524126
+      },
+      {
+        "index": 19,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 524127
+      },
+      {
+        "index": 20,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 524128
+      },
+      {
+        "index": 21,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 524129
+      },
+      {
+        "index": 22,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 524130
+      },
+      {
+        "index": 23,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 524131
+      },
+      {
+        "index": 24,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 524132
+      },
+      {
+        "index": 25,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 524133
+      },
+      {
+        "index": 26,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 524134
+      },
+      {
+        "index": 27,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 524135
+      },
+      {
+        "index": 28,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 524136
+      },
+      {
+        "index": 29,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 524137
+      },
+      {
+        "index": 30,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 524138
+      },
+      {
+        "index": 31,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 524139
+      },
+      {
+        "index": 32,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 524140
+      },
+      {
+        "index": 33,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 524141
+      },
+      {
+        "index": 34,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 524142
+      },
+      {
+        "index": 35,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 524143
+      },
+      {
+        "index": 36,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 524144
+      }
+    ]
+  }
+}

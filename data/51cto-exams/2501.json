@@ -1,0 +1,190 @@
+{
+  "msg": "成功",
+  "status": "0",
+  "data": {
+    "data": {
+      "question": [
+        {
+          "index": 1,
+          "belong_page": 1,
+          "question_id": 36129,
+          "question_title": "<p><span style=\"font-family: 宋体;\">试题一（</span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt;\">15</span><span style=\"font-family: 宋体;\">分）</span><br/></p><p class=\"MsoNormal\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">阅读下列说明和图，回答问题，将解答填入答题纸的对应栏内。</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p><p class=\"MsoNormal\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">【说明】</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p><p class=\"MsoNormal\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">&nbsp;<span style=\"font-family: 宋体;\">某巴士维修连锁公司欲开发巴士维修系统，以维护与维修相关的信息，该系统的主要能如下：</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">1</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">）</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">记录巴士</span>ID<span style=\"font-family: 宋体;\">和维修问题。巴士到车库进行维修，系统将巴士基本信息和</span><span style=\"font-family: Times New Roman;\">ID</span><span style=\"font-family: 宋体;\">记录在巴士列表文件中，将待维修机械问题记录在维修记录文件中，并生成维修订单。</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">2</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">）</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">确定所需部件，根据维修订单确定维修所需部件，并在部件清单中进行标记。</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">3</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">）</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">完成维修，机械师根据维修记录文件中的待维修机械问题，完成对巴士的维修，登记维修情况；将机械问题维修情况记录在维修记录文件中，将所用部件记录在部件清单中，并将所用部件清单发送库存管理系统以对部件使用情况进行监控，巴士司机可查看已维修机械问题。</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">4</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">）</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">记录维修工时，将机械师提供的维修工时记录在人事档案中，将维修总结发送给主管进行绩效考核。</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">5</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">）</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">计算维修总成本。计算部件清单中实际所用部件、人事档案中所用维修工时的总成本；将维修工时和所用部件成本详细信息给会计进行计费。</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p><p class=\"MsoNormal\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">现采用结构化方法对巴士维修系统进行分析与设计，获得如图</span>1<span style=\"font-family: 宋体;\">所示的上下文数据流图1和图</span><span style=\"font-family: Times New Roman;\">2</span><span style=\"font-family: 宋体;\">所示的</span><span style=\"font-family: Times New Roman;\">0</span><span style=\"font-family: 宋体;\">层数据流图。</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p><p class=\"MsoNormal\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\"><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201801/168319a60f237ca6bf233340055eb2cf7ee6ed.png\"/></span></span></p><p class=\"MsoNormal\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\"><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201801/54ee4ea53faf82bacff12861d1525d0a7e3a5d.png\"/></span></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">【问题</span>1<span style=\"font-family: 宋体;\">】（</span><span style=\"font-family: Times New Roman;\">5</span><span style=\"font-family: 宋体;\">分） </span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">使用说明中的词语，给出图</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">1</span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">中的实体</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">E1</span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">～</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">E5</span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">的名称。</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: 宋体;\">【问题</span><span style=\"text-indent: 20.7pt; font-family: &quot;Times New Roman&quot;; font-size: 10.5pt;\">2</span><span style=\"font-family: 宋体;\">】（</span><span style=\"font-family: Times New Roman;\">4</span><span style=\"font-family: 宋体;\">分）</span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\"><br/></span></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">使用说明中的词语，给出图</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">2</span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">中的数据存储</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">D1</span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">～</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">D4</span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">的名称</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: 宋体;\">【问题</span><span style=\"text-indent: 20.7pt; font-family: &quot;Times New Roman&quot;; font-size: 10.5pt;\">3</span><span style=\"font-family: 宋体;\">】（</span><span style=\"font-family: Times New Roman;\">4</span><span style=\"font-family: 宋体;\">分）</span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\"><br/></span></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">说明图</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">2</span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">中所存在的问题。</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">【问题</span>4<span style=\"font-family: 宋体;\">】（</span><span style=\"font-family: Times New Roman;\">2</span><span style=\"font-family: 宋体;\">分） </span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">根据说明和图中术语，采用补充数据流的方式，改正图</span>2<span style=\"font-family: 宋体;\">中的问题。要求给出所补充数据流的名称、起点和终点。</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p><p class=\"MsoNormal\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\"><br/></span></span></p>",
+          "question_type": 5,
+          "answer_type": 5,
+          "material_text": "",
+          "score": 15,
+          "new_parent_id": "36129",
+          "show_type_name": "问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["<p>见解析</p>"],
+          "option": null,
+          "sort_son": "0"
+        },
+        {
+          "index": 2,
+          "belong_page": 1,
+          "question_id": 72948,
+          "question_title": "<p>阅读下列说明和图，回答问题1至问题3,将解答填入答题纸的对应栏内。</p><p>【说明】</p><p>某家电销售电子商务公司拟开发一套信息管理系统，以方便对公司的员工、家电销售、家电厂商和客户等进行管理。</p><p>【需求分析】</p><p>（1）系统需要维护电子商务公司的员工信息、客户信息、家电信息和家电厂商信息等。员工信息主要包括：工号、姓名、性别、岗位、身份证号、电话、住址，其中岗位包括部门经理和客服等。客户信息主要包括：客户ID、姓名、身份证号、电话，住址、账户余额。家电信息主要包括：家电条码、家电名称、价格、出厂日期、所属厂商。家电厂商信息包括：厂商ID、厂商名称、电话、法人代表信息、厂址。</p><p>（2）电子商务公司根据销售情况，由部门经理向家电厂商订购各类家电。每个家电厂商只能由一名部门经理负责。</p><p>（3）客户通过浏览电子商务公司网站查询家电信息，与客服沟通获得优惠后，在线购买。</p><p>【概念模型设计】</p><p>根据需求阶段收集的信息，设计的实体联系图（不完整）如图所示。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"http://s2.51cto.com/images/20190114/1547442254867453.jpg\" title=\"1547442254867453.jpg\" alt=\"1.jpg\"/></p><p>&nbsp;</p><p>【逻辑结构设计】</p><p>根据概念模型设计阶段完成的实体联系图，得出如下关系模式〔不完整）</p><p>客户（客户ID、姓名、身份证号、电话、住址、账户余额）</p><p>员工（工号、姓名、性别、岗位、身份证号、电话、住址）</p><p>家电（家电条码、家电名称、价格、出厂日期、 （1） ）</p><p>家电厂商（厂商ID、厂商名称、电话、法人代表信息、厂址、 （2） ）</p><p>购买（订购单号、 （3） 、金额）</p><p>&nbsp;【问题1】&nbsp;</p><p>补充实体联系图中的联系和联系的类型。</p><p>【问题2】</p><p>根据图，将逻辑结构设计阶段生成的关系模式中的空（1）~（3）补充完整。 用下划线指出&quot;家电&quot;、&quot;家电厂商&quot;和&quot;购买&quot;关系模式的主键。</p><p>【问题3】</p><p>电子商务公司的主营业务是销售各类家电，对账户有佘额的客户，还可以联合第二方基金公司提供理财服务，为此设立客户经理岗位。客户通过电子商务公司的客户经理和基金公司的基金经理进行理财。每名客户只有一名客户经理和一名基金经理负责&#39;客户经理和基金经理均可负责多名客户。请根据该要求，对图进行修改，画出修改后 的实体间联系和联系的类型。</p>",
+          "question_type": 5,
+          "answer_type": 5,
+          "material_text": "",
+          "score": 15,
+          "new_parent_id": "72948",
+          "show_type_name": "问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>【问题1】<br/><img style=\"max-width:100%;height:auto\"  src=\"http://s2.51cto.com/images/20190114/1547442310983594.jpg\" title=\"1547442310983594.jpg\" alt=\"1.jpg\"/><br/></p><p>【问题2】</p><p>【参考答案】</p><p>（1）厂商ID</p><p>（2）部门经理工号 或 经理工号 或 员工工号</p><p>（3）客户ID、客服工号、家电条码</p><img style=\"max-width:100%;height:auto\"  src=\"http://s2.51cto.com/images/20190114/1547442359983607.jpg\" title=\"1547442359983607.jpg\" alt=\"1.jpg\"/><br/>【问题3】<p><img style=\"max-width:100%;height:auto\"  src=\"http://s2.51cto.com/images/20190114/1547442391292577.jpg\" title=\"1547442391292577.jpg\" alt=\"1.jpg\"/></p><br/>"
+          ],
+          "option": null,
+          "sort_son": "0"
+        },
+        {
+          "index": 3,
+          "belong_page": 1,
+          "question_id": 36140,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\" style=\"text-indent: 20.8pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\"><br/></span></span></p><p>试题三（15分）</p><p>阅读下列说明和图，回答问题，将解答填入答题纸的对应栏内。</p><p>【说明】</p><p>某高校图书馆欲建设一个图书馆管理系统，目前已经完成了需求分析阶段的工作，功能需求均使用用例进行描述，其中用例“借书(Check Out 800ks)”的详细描述如下。</p><p>&nbsp;&nbsp; &nbsp;参与者：读者＜Patron＞</p><p>&nbsp;&nbsp; &nbsp;典型事件流：</p><p>&nbsp;&nbsp; &nbsp;1．输入读者ID：</p><p>&nbsp;&nbsp; &nbsp;2．确认该读者能够借阅图书，并记录读者ID；</p><p>&nbsp;&nbsp; &nbsp;3．输入所要借阅的图书ID；</p><p>&nbsp;&nbsp; &nbsp;4．根据图书目录中的图书ID确认该书可以借阅，计算归还时间，生成借阅记录；</p><p>&nbsp;&nbsp; &nbsp;5．通知读者图书归还时间；</p><p>&nbsp;&nbsp; &nbsp;重复步骤3～5，直到读者结束借阅图书。</p><p>&nbsp;&nbsp; &nbsp;备选事件流：</p><p>&nbsp;&nbsp; &nbsp;2a．若读者不能借阅图书，说明读者违反了图书馆的借书制度(例如，没有支付借书费用等)。</p><p>&nbsp;&nbsp; &nbsp;①告知读者不能借阅，并说明拒绝借阅的原因；</p><p>&nbsp;&nbsp; &nbsp;②本用例结束。</p><p>&nbsp;&nbsp; &nbsp;4a．读者要借阅的书无法外借。</p><p>&nbsp;&nbsp; &nbsp;①告知读者本书无法借阅；</p><p>&nbsp;&nbsp; &nbsp;②回到步骤3。</p><p>说明：图书的归还时间与读者身份有关。如果读者是教师，图书可以借阅一年：如果是学生，则只能借阅3个月，读者ID中包含读者身份信息，现采用面向对象方法开发该系统，得到如图1所示的系统类模型(部分)；以及如图2所示的系统操作。“CheckOut(bookID).(借书)“通信图”(或协作图)。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201801/43302764235605d9979193f7f1aafea0d985b6.png\"/></p><p><br/></p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201801/72f72e832bdbf1762d1285a417222ffb6c8931.png\"/></p><p>【问题1】（5分）</p><p>根据说明中的描述，以及图1和图2，给出图1中C1-C4处所对应的类名(类名使用图1和图2中给出的英文词汇)。</p><p>【问题2】（5分）</p><p>根据说明中的描述，以及图1和图2，给出图2中M1-M4处所对应的方法名(方法名使用图1和图2中给出的英文词汇)。</p><p>【问题3】（5分）</p><p>用例“借书”的备选事件流4a中，根据借书制度来判定读者能否借阅图书，随着图书馆的借书制度会不断地扩充，并需要根据图书馆的实际运行情况来调整具体使用哪些制度，为满足这一要求，在原有类设计的基础上，可以采用何种设计模式?简要说明原因。</p><p class=\"MsoNormal\" style=\"text-indent: 20.8pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\"></span></span></p>",
+          "question_type": 5,
+          "answer_type": 5,
+          "material_text": "",
+          "score": 15,
+          "new_parent_id": "36140",
+          "show_type_name": "问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["<p>见解析</p>"],
+          "option": null,
+          "sort_son": "0"
+        },
+        {
+          "index": 4,
+          "belong_page": 1,
+          "question_id": 36143,
+          "question_title": "<p><strong style=\"text-indent: 20.8pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\"></span></span></strong></p><p>试题四</p><p>阅读下列说明和C代码，回答下列问题。</p><p>[说明]</p><p>&nbsp;&nbsp; &nbsp;采用归并排序对n个元素进行递增排序时，首先将n个元素的数组分成各含n/2个元素的两个子数组，然后用归并排序对两个子数组进行递归排序，最后合并两个已经排序的子数组得到排序结果。</p><p>&nbsp;&nbsp; &nbsp;下面的C代码是对上述归并算法的实现，其中的常量和变量说明如下：</p><p>&nbsp;&nbsp; &nbsp;arr:待排序数组</p><p>&nbsp;&nbsp; &nbsp;P,q,r:一个子数组的位置从P到q，另一个子数组的位置从q+1到r</p><p>&nbsp;&nbsp; &nbsp;begin,end:待排序数组的起止位量</p><p>&nbsp;&nbsp; &nbsp;left,right:临时存放待合并的两个子数组</p><p>&nbsp;&nbsp; &nbsp;n1,n2:两个子数组的长度</p><p>&nbsp;&nbsp; &nbsp;i,j,k:循环变量</p><p>&nbsp;&nbsp; &nbsp;mid:临耐变量</p><p>&nbsp;&nbsp; &nbsp;[C代码]</p><p>&nbsp;&nbsp; &nbsp;#inciude＜stdio, h＞</p><p>&nbsp;&nbsp; &nbsp;#include＜stdlib, h＞</p><p>&nbsp;&nbsp; &nbsp;Define MAX 65536</p><p>&nbsp;&nbsp; &nbsp;void merge(int arr [ ],int p,int q,int r) {</p><p>&nbsp;&nbsp; &nbsp;int * left,* right;</p><p>&nbsp;&nbsp; &nbsp;int n1,n2,I,j,k;</p><p>&nbsp;&nbsp; &nbsp;n1=q-p+1;</p><p>&nbsp;&nbsp; &nbsp;n2=r-q;</p><p>&nbsp;&nbsp; &nbsp;If(left=(int *)malloc((n1+1) * sizeof(int)))=NULL) {</p><p>&nbsp;&nbsp; &nbsp;Perror( &quot;malloc error&quot; );</p><p>&nbsp;&nbsp; &nbsp;exit11</p><p>&nbsp;&nbsp; &nbsp;}</p><p>&nbsp;&nbsp; &nbsp;If((right = (int *)malloc((n2+1) * sizeof(int)))=NULL)</p><p>&nbsp;&nbsp; &nbsp;Perror(&quot;malloc error&quot;);</p><p>&nbsp;&nbsp; &nbsp;exit 11;</p><p>&nbsp;&nbsp; &nbsp;}</p><p>&nbsp;&nbsp; &nbsp;for(i=0;i＜n1;i++){</p><p>&nbsp;&nbsp; &nbsp;left[i]=arr [p+i];</p><p>&nbsp;&nbsp; &nbsp;}</p><p>&nbsp;&nbsp; &nbsp;left[i]=MAX;</p><p>&nbsp;&nbsp; &nbsp;for(i=0;i＜n2;i++){</p><p>&nbsp;&nbsp; &nbsp;right[i]=arr[q+i+1]</p><p>&nbsp;&nbsp; &nbsp;}</p><p>&nbsp;&nbsp; &nbsp;right[i]=MAX;</p><p>&nbsp;&nbsp; &nbsp;i=0;j=0;</p><p>&nbsp;&nbsp; &nbsp;For(k=p;______;k++){</p><p>&nbsp;&nbsp; &nbsp;If(left[i]＞right[j] {</p><p>&nbsp;&nbsp; &nbsp;______</p><p>&nbsp;&nbsp; &nbsp;j++;</p><p>&nbsp;&nbsp; &nbsp;}else{</p><p>&nbsp;&nbsp; &nbsp;arr[k1]=left[i];</p><p>&nbsp;&nbsp; &nbsp;i++;</p><p>&nbsp;&nbsp; &nbsp;}</p><p>&nbsp;&nbsp; &nbsp;}</p><p>&nbsp;&nbsp; &nbsp;}</p><p>&nbsp;&nbsp; &nbsp;Void merge Sort(int arr[ ], int begin, int end) {</p><p>&nbsp;&nbsp; &nbsp;int mid;</p><p>&nbsp;&nbsp; &nbsp;if(______){</p><p>&nbsp;&nbsp; &nbsp;mid=(begin + end)/2;</p><p>&nbsp;&nbsp; &nbsp;merge Sort(arr,begin,mid);</p><p>&nbsp;&nbsp; &nbsp;______;</p><p>&nbsp;&nbsp; &nbsp;Merge(arr,begin,mid,end);</p><p>&nbsp;&nbsp; &nbsp;}</p><p>&nbsp;&nbsp; &nbsp;}<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230221/1676967920890444.png\" title=\"1676967920890444.png\" alt=\"image.png\"/></p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230221/1676967906555241.png\" title=\"1676967906555241.png\" alt=\"image.png\"/></p><br/>",
+          "question_type": 5,
+          "answer_type": 5,
+          "material_text": "",
+          "score": 15,
+          "new_parent_id": "36143",
+          "show_type_name": "问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["<p>见解析</p>"],
+          "option": null,
+          "sort_son": "0"
+        },
+        {
+          "index": 5,
+          "belong_page": 1,
+          "question_id": 36145,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\" style=\"text-indent: 20.8pt;\"><strong><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">试题五（</span>15<span style=\"font-family: 宋体;\">分）</span></span></strong><strong><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt;\"></span></strong></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><br/></span></p><p>阅读下列说明和C++代码，回答问题，将答案填入相应横线处。</p><p>【说明】</p><p>某实验室欲建立一个实验室环境监测系统，能够显示实验室的温度、湿度以及洁净度等环境数据。当获取到最新的环境测量数据时，显示的环境数据能够更新现在采用观察者(observer)模式来开发该系统，观察者模式的类图如下图所示。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201801/76c561a082b35888cdc551a2789cfb01666b35.png\"/></p><p>&nbsp;【C++代码】</p><p>#include &lt;iostream&gt;</p><p>#include &lt;vector&gt;</p><p>using namespace std;</p><p>class Observer {</p><p>public:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;virtual void update(float temp, float humidity, float cleanness)=0;</p><p>};</p><p>class Subject {</p><p>public:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;virtual void registerObserver(Observer* o) = 0; //注册对主题感兴趣的观察者</p><p>&nbsp;&nbsp;&nbsp;&nbsp;virtual void removeObserver(Observer* o) = 0; //删除观察者</p><p>&nbsp;&nbsp;&nbsp;&nbsp;virtual void notifyObservers() = 0;//当主题发生变化时通知观察者</p><p>};</p><p>class EnvironmentData : public&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（1） &nbsp;&nbsp;&nbsp;&nbsp;{</p><p>private:</p><p>vector&lt;Observer*&gt; observers;</p><p>float temperature, humidity, cleanness;</p><p>public:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;void registerObserver(Observer* o) { observers.push_back(o); }</p><p>&nbsp;&nbsp;&nbsp;&nbsp;void removeObserver(Observer* o) { /* 代码省略 */ }</p><p>&nbsp;&nbsp;&nbsp;&nbsp;void notifyObservers() {</p><p>for(vector&lt;Observer*&gt;::const_iterator it = observers.begin(); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;it != observers.end(); it++)</p><p>{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（2） &nbsp;&nbsp;&nbsp;; }</p><p>}</p><p>Void measurementsChanged() {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（3） &nbsp;&nbsp;&nbsp;; }</p><p>void setMeasurements(float temperature, float humidity, float cleanness) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;this-&gt;temperature = temperature;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;this-&gt;humidity = humidity;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;this-&gt;cleanness = cleanness;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（4） &nbsp;&nbsp;&nbsp;;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;}</p><p>};</p><p>class CurrentConditionsDisplay : public&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（5） &nbsp;&nbsp;&nbsp;{</p><p>private: &nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;float temperature, humidity, cleanness;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;Subject* envData;</p><p>public:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;CurrentConditionsDisplay(Subject* envData) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this-&gt;envData = envData;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（6） &nbsp;&nbsp;; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>}</p><p>void update(float temperature, float humidity, float cleanness) &nbsp;{this-&gt;temperature = temperature;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;this-&gt;humidity = humidity;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;this-&gt;cleanness = cleanness;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;display();</p><p>}</p><p>void display() { /* 代码省略 */ }</p><p>};</p><p>int main() {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;EnvironmentData* envData = new EnvironmentData();</p><p>&nbsp;&nbsp;&nbsp;&nbsp;CurrentConditionsDisplay* currentDisplay = new CurrentConditionsDisplay(envData);</p><p>&nbsp;&nbsp;&nbsp;&nbsp;envData-&gt;setMeasurements(80, 65, 30.4f);</p><p>&nbsp;&nbsp;&nbsp;&nbsp;return 0;</p><p>}</p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"></p>",
+          "question_type": 5,
+          "answer_type": 5,
+          "material_text": "",
+          "score": 15,
+          "new_parent_id": "36145",
+          "show_type_name": "问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["<p>见解析</p>"],
+          "option": null,
+          "sort_son": "0"
+        }
+      ],
+      "summary": {
+        "radio": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "multiple": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "judge": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "fill": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "program": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "qanda": {
+          "total_question": 5,
+          "total_score": 0
+        },
+        "cloze": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "budingxiang": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "material": {
+          "total_question": 0,
+          "total_score": 0
+        }
+      },
+      "examine": {
+        "id": 2501,
+        "title": "2014年5月软件设计师案例分析",
+        "len_time": {
+          "time": 0
+        },
+        "total_question": 5,
+        "total_score": 75,
+        "submit_limit_num": "0",
+        "machine_type": "2"
+      },
+      "answer_activity_start_time": 1585828800,
+      "checkProcess": 1,
+      "process": {
+        "is_delete": false
+      },
+      "train_id": 0
+    },
+    "pagination": {
+      "curPage": 1,
+      "pageSize": 1200,
+      "total": 5,
+      "hasNextPage": false
+    },
+    "totalOrder": [
+      {
+        "index": 1,
+        "question_type": 5,
+        "belong_page": 1,
+        "question_id": 36129
+      },
+      {
+        "index": 2,
+        "question_type": 5,
+        "belong_page": 1,
+        "question_id": 72948
+      },
+      {
+        "index": 3,
+        "question_type": 5,
+        "belong_page": 1,
+        "question_id": 36140
+      },
+      {
+        "index": 4,
+        "question_type": 5,
+        "belong_page": 1,
+        "question_id": 36143
+      },
+      {
+        "index": 5,
+        "question_type": 5,
+        "belong_page": 1,
+        "question_id": 36145
+      }
+    ]
+  }
+}

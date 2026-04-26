@@ -1,0 +1,223 @@
+{
+  "msg": "成功",
+  "status": "0",
+  "data": {
+    "data": {
+      "question": [
+        {
+          "index": 1,
+          "belong_page": 1,
+          "question_id": 95287,
+          "question_title": "<p>阅读下列说明和图，回答问题1至问题4,将解答填入答题纸的对应栏内。</p><p>[说明]</p><p>学校欲开发一学生跟踪系统， 以更自动化、更全面地对学生在校情况(到课情况和健康状态等相关信息)进行管理和追踪，使家长能及时了解子女的到课情况和健康状态，并在有健康问题时及时与医护机构对接。该系统的主要功能是:</p><p>(1)采集学生状态。通过学生卡传感器，采集学生心率、体温(摄氏度)等健康指标及其所在位置等信息并记录。每张学生卡有唯一的标识 (ID) 与一个学生对应。</p><p>(2)健康状态告警。在学生健康状态出现问题时，系统向班主任、家长和医护机构健康服务系统发出健康状态警告，由医护机构健康服务系统通知相关医生进行处理。</p><p>(3) 到课检查。综合比对学生状态、课表以及所处校园场所之间的信息对学生到课情况进行判定。对旷课学生，向其家长和班主任发送旷课警告。</p><p>(4)在校情况汇总。定期汇总在校情况，并将报告发送给家长和班主任。</p><p>(5)家长注册。家长注册使用该系统，指定自己子女，经学校管理人员审核后，向家长发送注册结果。</p><p>(6)基础信息管理。学校管理人员对学生及其所用学生卡和班主任、课表(班级、上课时间及场所等)、校园场所(名称和所在位置区域)等基础信息进行管理，对家长注册申请进行审核，将家长ID加入学生信息记录中使家长与其子女进行关联，一个学生至少有一个家长，可以有多个家长。课表信息包括班级、班主任、时间和位置等。</p><p>现采用结构化方法对学生跟踪系统进行分析与设计，获得如图1-1所示的上下文数据流图和图1-2所示的0层数据流图。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1559272494940762.jpg\" alt=\"1.jpg\" src=\"https://s2.51cto.com/images/20190531/1559272494940762.jpg\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1559272567547338.jpg\" alt=\"1.jpg\" src=\"https://s2.51cto.com/images/20190531/1559272567547338.jpg\"/>[问题1] (5分)</p><p>使用说明中的词语，给出图1-1中的实体E1~E5的名称。</p><p>[问题2] (4分)</p><p>使用说明中的词语，给出图1-2中的数据存储D1~D4的名称。</p><p>[问题3] (3分)</p><p>根据说明和图中术语，补充图1-2 中缺失的数据流及其起点和终点(三条即可)。</p><p>[问题4] (3分)</p><p>根据说明中术语，说明图1-1 中数据流“学生状态”和“学生信息”的组成。</p>",
+          "question_type": 5,
+          "answer_type": 5,
+          "material_text": "",
+          "score": 15,
+          "new_parent_id": "95287",
+          "show_type_name": "问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>1、E1:学生，E2:学校管理人员，E3:班主任，E4:家长，E5:医护机构。</p><p>2、D1:学生状态信息，D2:学生信息，D3:校园场所信息，D4:课表。</p><p>3、D4→P3 课表；D3→P3 校园场所；P6→D2 注册信息。</p><p>4、要满足上述系统需求，并有有效管理查询数据。</p><p>（1）学生状态的组成为：学生编号、学生卡号、各种健康状态信息、医护机构编号</p><p>（2）学生信息的组成为：学生基本信息、学生卡号、班主任编号、家长编号（一名主要联系人）。</p>"
+          ],
+          "option": null,
+          "sort_son": "0"
+        },
+        {
+          "index": 2,
+          "belong_page": 1,
+          "question_id": 95288,
+          "question_title": "<p>阅读下列说明，回答问题1至问题3,将解答填入答题纸的对应栏内。</p><p>[说明]</p><p>禁创业孵化基地管理若干孵化公司和创业公司，为规范管理创业项目投资业务，需要开发一个信息系统。请根据下述需求描述完成该系统的数据库设计。</p><p>[需求描述]</p><p>(1)记录孵化公司和创业公司的信息。孵化公司信息包括公司代码、公司名称、法人代表名称、注册地址和一个电话:创业公司信息包括公司代码、公司名称和一个电话。</p><p>孵化公司和创业公司的公司代码编码不同。</p><p>(2)统一管理孵化公司和创业公司的员工。员工信息包括工号、身份证号、姓名、</p><p>性别、所属公司代码和一个手机号，工号唯一标识每位员工。</p><p>(3)记录投资方信息，投资方信息包括投资方编号、投资方名称和-个电话。</p><p>(4)投资方和创业公司之间依靠孵化公司牵线建立创业项目合作关系，具体实施由孵化公司的一位员工负责协调投资方和创业公司的一个创业项目。一个创业项目只属于个创业公司，但可以接受若干投资方的投资。创业项目信息包括项目编号、创业公司代码、</p><p>投资方编号和孵化公司员工工号。</p><p>]概念模型设计]</p><p>根据需求阶段收集的信息，设计的实体联系图(不完整)如图2-1所示。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20190531/1559272615887511.jpg\" title=\"1559272615887511.jpg\" alt=\"1.jpg\"/></p><p>[逻辑结构设计]</p><p>根据概念模型设计阶段完成的实体联系图，得出如下关系模式(不完整):</p><p>孵化公司(公司代码，公司名称， 法人代表名称，注册地址，电话)</p><p>创业公司(公司代码，公司名称，电话)</p><p>员工(工号，身份证号，姓名，性别，(a) ，手机号)</p><p>投资方(投资方编号、投资方名称，电话)</p><p>项目(项目编号，创业公司代码(b)，孵化公司员工工号)</p><p>[问题1](5分)</p><p>根据问题描述，补充图2-1的实体联系图。</p><p>[问题2] (4分)</p><p>补充逻辑结构设计结果中的(a)、 (b)两处空峡及完整性约束关系。</p><p>[问题3](6分)</p><p>若创业项目的信息还需要包括投资额和投资时间，那么:</p><p>(1)是否需要增加新的实体来存储投资额和投资时间?</p><p>(2)如果增加新的实体，请给出新实体的关系模式，并对图2-1进行补充，如果不需要增加新的实体，请将“投资额”和“投资时间&quot;两个属性补充井连线到图2-1合适的对象上，并对变化的关系模式进行修改。</p>",
+          "question_type": 5,
+          "answer_type": 5,
+          "material_text": "",
+          "score": 15,
+          "new_parent_id": "95288",
+          "show_type_name": "问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>1、补充完整的ER图为</p><p><img style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20190531/1559272633866182.jpg\" title=\"1559272633866182.jpg\" alt=\"1.jpg\"/></p><p>2、a：孵化公司代码，创业公司代码， &nbsp; &nbsp; b：投资方编号</p><p>3、不需要创建新实体，修改项目关系模式为：</p><p>项目（项目编号，创业公司代码，投资方编号，孵化公司员工工号，投资额，投资时间）</p><br/><img style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20190531/1559272688865990.jpg\" title=\"1559272688865990.jpg\" alt=\"1.jpg\"/>"
+          ],
+          "option": null,
+          "sort_son": "0"
+        },
+        {
+          "index": 3,
+          "belong_page": 1,
+          "question_id": 95289,
+          "question_title": "<p>阅读下列说明和图，回答问题 1 至问题 3,将解答填入答题纸的对应栏内。&nbsp;</p><p>【说明】&nbsp;</p><p>某图书公司欲开发一个基于 Web 的书籍销售系统，为顾客(Customer)提供在线购买书籍 (Books)的功能，同时对公司书籍的库存及销售情况进行管理。系统的主要功能描述如下：&nbsp;</p><p>（1）首次使用系统时，顾客需要在系统中注册(Register detail)。顾客填写注册信息表要求 的信息，包括姓名(name)、收货地址(address)、电子邮箱(email)等，系统将为其生成一个注</p><p>册码。&nbsp;</p><p>（2）注册成功的顾客可以登录系统在线购买书籍(Buy books)。购买时可以浏览书籍 信息， 包括书名(title)、作者(author)、内容简介(introduction)等。如果某种书籍的库存量为 0，那 么顾客无法查询到该书籍的信息。顾客选择所需购买的书籍及购买数量 (quantities),若购买 数量超过库存量，提示库存不足；若购买数量小于库存量，系统将显示验证界面，要求顾 客输入注册码。注册码验证正确后，自动生成订单(Order),否则， 提示验证错误。如果顾客 需要，可以选择打印订单(Printorder)。&nbsp;</p><p>（3）派送人员(Dispatcher)每天早晨从系统中获取当日的派送列表信息(Produce picklist),按 照收货地址派送顾客订购的书籍。&nbsp;</p><p>（4）用于销售的书籍由公司的采购人员(Buyer)进行采购(Reorderbooks)。采购人员每天从 系统中获取库存量低于再次订购量的书籍信息，对这些书籍进行再次购买，以保证充足的 库存量。新书籍到货时，采购人员向在线销售目录(Catalog)中添加新的书籍信息(Addbooks)。&nbsp;</p><p>（5）采购人员裉据书籍的销售情况，对销量较低的书籍设置折扣或促销活动(Promote books)。&nbsp;</p><p>（6）当新书籍到货时，仓库管理员(Warehouseman)接收书籍，更新库存(Update stock)。&nbsp;</p><p>现采用面向对象方法开发书籍销售系统，得到如图 3-1 所示的用例图和图 3-2 所示的初始 类图(部分)。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20190531/1559272717435931.jpg\" title=\"1559272717435931.jpg\" alt=\"1.jpg\"/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20190531/1559272730770879.jpg\" title=\"1559272730770879.jpg\" alt=\"1.jpg\"/></p><p>【问题 1】（6 分） 根据说明中的描述，给出图 3-1 中 A1?A3 所对应的参与者名称和 U1?U3 处所对应 的用 例名称。&nbsp;</p><p>【问题 2】（6 分） 根据说明中的描述，给出图 3-1 中用例 U3 的用例描述。（用例描述中必须包括基本事 件 流和所有的备选事件流）。</p><p>【问题 3】（3 分） 根据说明中的描述，给出图 3-2 中 C1?C3 所对应的类名。</p>",
+          "question_type": 5,
+          "answer_type": 5,
+          "material_text": "",
+          "score": 15,
+          "new_parent_id": "95289",
+          "show_type_name": "问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>问题1.</p><p>A1.采购人员 或者Buyer</p><p>A2.仓库管理员 或者 Warehouseman</p><p>A3.派送人员 或者 Dispatcher</p><p>U1:注册 或者 Register detail</p><p>U2:打印订单 或者 Printorder</p><p>U3:购买书籍 或者 Buy books</p><p>问题2.</p><p>参考者：顾客(Customer)</p><p>基本事件流:</p><p>1.顾客登录系统</p><p>2.顾客浏览书籍信息</p><p>3.系统检测书籍的库存量</p><p>4.顾客选择购买的书籍及购买数量&nbsp;</p><p>5.系统检测购买数量</p><p>6.系统显示验证界面</p><p>7.顾客输入注册码</p><p>8.系统生成订单</p><p><br/></p><p>备选事件流：</p><p>3a.如果书籍库存量为0，顾客无法查询到该书籍的信息</p><p>5a.若购买数量超过库存量，提示库存量不足</p><p>7a.如果注册码验证错误，提示验证错误</p><p>8a.如果顾客需要，可以选择打印订单</p><p><br/></p><p>问题3.</p><p>C1:顾客 或者 Customer &nbsp; C2:订单 或者 Order &nbsp; &nbsp;&nbsp;</p><p>C3:书籍 或者 Books</p>"
+          ],
+          "option": null,
+          "sort_son": "0"
+        },
+        {
+          "index": 4,
+          "belong_page": 1,
+          "question_id": 95290,
+          "question_title": "<p>阅读下列说明和 C 代码，回答问题 1 至 3，将解答写在答题纸的对应栏内&nbsp;</p><p>【说明】&nbsp;</p><p>n 皇后问题描述为：在一个 nXn 的棋盘上摆放 n 个皇后，要求任意两个皇后不能冲突, 即 任意两个皇后不在同一行、同一列或者同一斜线上。</p><p>算法的基本思想如下：&nbsp;</p><p>将第 i 个皇后摆放在第 i 行，i 从 1 开始，每个皇后都从第 1 列开始尝试。尝试时判断 在 该列摆放皇后是否与前面的皇后有冲突，如果没有冲突，则在该列摆放皇后，并考虑摆 放 下一个皇后；如果有冲突，则考虑下一列。如果该行没有合适的位置，回溯到上一个皇后 考虑在原来位置的下一个位置上继续尝试摆放皇后，……，直到找到所有合理摆放方案。&nbsp;</p><p>【C 代码】 下面是算法的 C 语言实现。&nbsp;</p><p>（1）常量和变量说明</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20190531/1559272819322041.jpg\" title=\"1559272819322041.jpg\" alt=\"1.jpg\"/></p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20190531/1559272827144584.jpg\" title=\"1559272827144584.jpg\" alt=\"2.jpg\"/><br/></p><p>【问题 1】（8 分） 根据题干说明，填充 C 代码中的空（1）〜（4）。&nbsp;<br/><br/></p><p>【问题 2】（3 分） 根据题干说明和 C 代码，算法采用的设计策略为 &nbsp;<br/></p><p>【问题 3】（4 分） 当 n=4 时，有 （6） 种摆放方式，分别为 （7） 。</p><p>有2种摆法</p>",
+          "question_type": 5,
+          "answer_type": 5,
+          "material_text": "",
+          "score": 15,
+          "new_parent_id": "95290",
+          "show_type_name": "问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>【问题 1】&nbsp;</p><p>（1）queen[i]==queen[j]</p><p>（2）1&nbsp;</p><p>（3）Place(j)&amp;&amp;j&lt;=n</p><p>（4）Nqueen(j+1)</p><p>【问题 2】</p><p>（5）回溯法</p><p>【问题 3】</p><p>有2种摆法</p><p>分别为2413，3142</p>"
+          ],
+          "option": null,
+          "sort_son": "0"
+        },
+        {
+          "index": 5,
+          "belong_page": 1,
+          "question_id": 95291,
+          "question_title": "<p><br/></p><p>阅读下列说明和 Java 代码，将应填入（n）处的字句写在答题纸的对应栏内。&nbsp;</p><p>【说明】&nbsp;</p><p>某软件公司欲开发一款汽车竞速类游戏，需要模拟长轮胎和短轮胎急刹车时在路面上 留 下的不同痕迹，并考虑后续能模拟更多种轮胎急刹车时的痕迹。现采用策略（Strategy） 设 计模式来实现该需求，所设计的类图如图 5-1 所示。</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20190531/1559273026652966.jpg\" title=\"1559273026652966.jpg\" alt=\"1.jpg\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20190531/1559273031757291.jpg\" title=\"1559273031757291.jpg\" alt=\"2.jpg\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20190531/1559273036658726.jpg\" title=\"1559273036658726.jpg\" alt=\"3.jpg\"/><br/>",
+          "question_type": 5,
+          "answer_type": 5,
+          "material_text": "",
+          "score": 15,
+          "new_parent_id": "95291",
+          "show_type_name": "问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>1.void stop()</p><p>2.BrakeBehavior</p><p>3.wheel.stop()</p><p>4.wheel=behavior</p><p>5.brake()</p>"
+          ],
+          "option": null,
+          "sort_son": "0"
+        },
+        {
+          "index": 6,
+          "belong_page": 1,
+          "question_id": 95292,
+          "question_title": "<p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  width=\"649\" height=\"441\" title=\"1560431776728806.png\" alt=\"图片1.png\" src=\"https://s2.51cto.com/images/20190613/1560431776728806.png\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1560431856982643.png\" alt=\"图片2.png\" src=\"https://s2.51cto.com/images/20190613/1560431856982643.png\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1560431888297114.png\" alt=\"图片3.png\" src=\"https://s2.51cto.com/images/20190613/1560431888297114.png\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1560431908416611.png\" alt=\"图片4.png\" src=\"https://s2.51cto.com/images/20190613/1560431908416611.png\"/></p>",
+          "question_type": 5,
+          "answer_type": 5,
+          "material_text": "",
+          "score": 10,
+          "new_parent_id": "95292",
+          "show_type_name": "问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>(1) Virtual void stop( )=0</p><p>(2) BrakeBehavior*</p><p>(3) Wheel-&gt;stop(&nbsp;)</p><p>(4)wheel=behavior</p><p>(5) brake(&nbsp;)</p><p><br/></p>"
+          ],
+          "option": null,
+          "sort_son": "0"
+        }
+      ],
+      "summary": {
+        "radio": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "multiple": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "judge": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "fill": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "program": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "qanda": {
+          "total_question": 6,
+          "total_score": 0
+        },
+        "cloze": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "budingxiang": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "material": {
+          "total_question": 0,
+          "total_score": 0
+        }
+      },
+      "examine": {
+        "id": 5816,
+        "title": "2019年5月软件设计师案例分析",
+        "len_time": {
+          "time": 0
+        },
+        "total_question": 6,
+        "total_score": 85,
+        "submit_limit_num": "0",
+        "machine_type": "2"
+      },
+      "answer_activity_start_time": 1585828800,
+      "checkProcess": 1,
+      "process": {
+        "is_delete": false
+      },
+      "train_id": 0
+    },
+    "pagination": {
+      "curPage": 1,
+      "pageSize": 1200,
+      "total": 6,
+      "hasNextPage": false
+    },
+    "totalOrder": [
+      {
+        "index": 1,
+        "question_type": 5,
+        "belong_page": 1,
+        "question_id": 95287
+      },
+      {
+        "index": 2,
+        "question_type": 5,
+        "belong_page": 1,
+        "question_id": 95288
+      },
+      {
+        "index": 3,
+        "question_type": 5,
+        "belong_page": 1,
+        "question_id": 95289
+      },
+      {
+        "index": 4,
+        "question_type": 5,
+        "belong_page": 1,
+        "question_id": 95290
+      },
+      {
+        "index": 5,
+        "question_type": 5,
+        "belong_page": 1,
+        "question_id": 95291
+      },
+      {
+        "index": 6,
+        "question_type": 5,
+        "belong_page": 1,
+        "question_id": 95292
+      }
+    ]
+  }
+}

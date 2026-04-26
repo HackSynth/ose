@@ -1,0 +1,2008 @@
+{
+  "msg": "成功",
+  "status": "0",
+  "data": {
+    "data": {
+      "question": [
+        {
+          "index": 1,
+          "belong_page": 1,
+          "question_id": 36730,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\" style=\"text-indent: 23.7pt; margin-left: 0pt; mso-para-margin-left: 0.0000gd; mso-char-indent-count: 2.0000;\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">在程序执行过程中，</span>Cache <span style=\"font-family: 宋体;\">与主存的地址映射是由（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">1</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">）完成的。</span></span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36730",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>操作系统</p>", "<p>程序员调度</p>", "<p>硬件自动</p>", "<p>用户软件</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 2,
+          "belong_page": 1,
+          "question_id": 36731,
+          "question_title": "<p><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">某四级指令流水线分别完成取指、取数、运算、保存结果四步操作。若完成上述操作的时间依次为</span> 8ns<span style=\"font-family: 宋体;\">、</span><span style=\"font-family: Times New Roman;\">9ns</span><span style=\"font-family: 宋体;\">、 </span><span style=\"font-family: Times New Roman;\">4ns</span><span style=\"font-family: 宋体;\">、</span><span style=\"font-family: Times New Roman;\">8ns</span><span style=\"font-family: 宋体;\">，则该流水线的操作周期应至少为（</span></span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">2</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）</span>ns <span style=\"font-family: 宋体;\">。</span></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36731",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>4</p>", "<p>8</p>", "<p>9</p>", "<p>33</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 3,
+          "belong_page": 1,
+          "question_id": 36732,
+          "question_title": "<p><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">内存按字节编址。若用存储容量为</span> 32Kx8bit <span style=\"font-family: 宋体;\">的存储器芯片构成地址从 </span><span style=\"font-family: Times New Roman;\">A</span></span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">0000</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">H <span style=\"font-family: 宋体;\">到 </span><span style=\"font-family: Times New Roman;\">DFFFFH</span><span style=\"font-family: 宋体;\">的内存，则至少需要（&nbsp;</span></span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）片芯片。</span></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36732",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>4</p>", "<p>8</p>", "<p>16</p>", "<p>32</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 4,
+          "belong_page": 1,
+          "question_id": 36733,
+          "question_title": "<p><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">计算机系统的主存主要是由（</span></span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）构成的。</span></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36733",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>DRAM</p>", "<p>SRAM</p>", "<p>Cache</p>", "<p>EEPROM</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 5,
+          "belong_page": 1,
+          "question_id": 36734,
+          "question_title": "<p><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">以下关于海明码的叙述中，正确的是（</span></span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">5</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）。</span></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36734",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>海明码利用奇偶性进行检错和纠错</p>",
+            "<p>海明码的码距为&nbsp;1</p>",
+            "<p>海明码可以检错但不能纠错</p>",
+            "<p>海明码中数据位的长度与校验位的长度必须相同</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 6,
+          "belong_page": 1,
+          "question_id": 36735,
+          "question_title": "<p><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">计算机运行过程中，</span>CPU <span style=\"font-family: 宋体;\">需要与外设进行数据交换。采用（</span></span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">6</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">&nbsp;<span style=\"font-family: 宋体;\">）控制技术时，</span> CPU <span style=\"font-family: 宋体;\">与外设可并行工作。</span></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36735",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>程序查询方式和中断方式</p>",
+            "<p>中断方式和&nbsp;DMA&nbsp;方式</p>",
+            "<p>程序查询方式和&nbsp;DMA&nbsp;方式</p>",
+            "<p>程序查询方式、中断方式和&nbsp;DMA&nbsp;方式</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 7,
+          "belong_page": 1,
+          "question_id": 36736,
+          "question_title": "<p><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">与</span> HTTP <span style=\"font-family: 宋体;\">相比，</span><span style=\"font-family: Times New Roman;\">HTTPS </span><span style=\"font-family: 宋体;\">协议对传输的内容进行加密，更加安全。</span><span style=\"font-family: Times New Roman;\">HTTPS </span><span style=\"font-family: 宋体;\">基于（</span></span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">7</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">&nbsp;<span style=\"font-family: 宋体;\">）安全协议，其默认端口是（</span></span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">8</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">&nbsp;<span style=\"font-family: 宋体;\">）。</span></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36736",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>RSA</p>",
+            "<p>DES&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+            "<p>SSL</p>",
+            "<p>SSH</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 8,
+          "belong_page": 1,
+          "question_id": 36737,
+          "question_title": "<p><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">与</span> HTTP <span style=\"font-family: 宋体;\">相比，</span><span style=\"font-family: Times New Roman;\">HTTPS </span><span style=\"font-family: 宋体;\">协议对传输的内容进行加密，更加安全。</span><span style=\"font-family: Times New Roman;\">HTTPS </span><span style=\"font-family: 宋体;\">基于（</span></span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">7</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">&nbsp;<span style=\"font-family: 宋体;\">）安全协议，其默认端口是（</span></span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">8</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">&nbsp;<span style=\"font-family: 宋体;\">）。</span></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36737",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>1023</p>", "<p>443</p>", "<p>80</p>", "<p>8080</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 9,
+          "belong_page": 1,
+          "question_id": 36738,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">下列攻击行为中，属于典型被动攻击的是（</span> </span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">9</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">）。</span></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36738",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>拒绝服务攻击</p>",
+            "<p>会话拦截</p>",
+            "<p>系统干涉</p>",
+            "<p>修改数据命令</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 10,
+          "belong_page": 1,
+          "question_id": 36739,
+          "question_title": "<p><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">不属于入侵检测技术。</span></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36739",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>专家系统</p>", "<p>模型检测</p>", "<p>简单匹配</p>", "<p>漏洞扫描</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 11,
+          "belong_page": 1,
+          "question_id": 36740,
+          "question_title": "<p><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">以下关于防火墙功能特性的叙述中，不正确的是（</span></span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">11</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">&nbsp;<span style=\"font-family: 宋体;\">）。</span></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36740",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>控制进出网络的数据包和数据流向</p>",
+            "<p>提供流量信息的日志和审计</p>",
+            "<p>隐藏内部&nbsp;IP&nbsp;以及网络结构细节</p>",
+            "<p>提供漏洞扫描功能</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 12,
+          "belong_page": 1,
+          "question_id": 36741,
+          "question_title": "<p><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">某软件公司项目组的程序员在程序编写完成后均按公司规定撰写文档，并上交公司存档。</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">情形下，该软件文档著作权应由（</span></span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">12</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">&nbsp;<span style=\"font-family: 宋体;\">）享有。</span></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36741",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>程序员&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+            "<p>公司与项目组共同</p>",
+            "<p>公司&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+            "<p>项目组全体人员</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 13,
+          "belong_page": 1,
+          "question_id": 36742,
+          "question_title": "<p><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">我国商标法规定了申请注册的商标不得使用的文字和图形，其中包括县级以上行政区的地名</span>(<span style=\"font-family: 宋体;\">文字</span><span style=\"font-family: Times New Roman;\">)</span><span style=\"font-family: 宋体;\">。以下商标注册申请，经审查，能获准注册的商标是（</span></span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">13</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">&nbsp;<span style=\"font-family: 宋体;\">）。</span></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36742",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>青岛（市）</p><p><br/></p>",
+            "<p>黄山（市）</p><p><br/></p>",
+            "<p>海口（市）</p><p><br/></p>",
+            "<p>长沙（市）</p><p><br/></p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 14,
+          "belong_page": 1,
+          "question_id": 36743,
+          "question_title": "<p><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">李某购买了一张有注册商标的应用软件光盘，则李某享有（</span></span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">14</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">&nbsp;<span style=\"font-family: 宋体;\">）。</span></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36743",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>注册商标专用权</p>",
+            "<p>该光盘的所有权</p>",
+            "<p>该软件的著作权</p>",
+            "<p>该软件的所有权</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 15,
+          "belong_page": 1,
+          "question_id": 36744,
+          "question_title": "<p><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">某医院预约系统的部分需求为：患者可以查看医院发布的专家特长介绍及其就诊时间：系统记录患者信息，患者预约特定时间就诊。用</span> DFD <span style=\"font-family: 宋体;\">对其进行功能建模时，患者是（</span></span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">15 回答此空</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">&nbsp;<span style=\"font-family: 宋体;\">）；用</span> ERD<span style=\"font-family: 宋体;\">对其进行数据建模时，患者是（</span></span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">16</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">&nbsp;<span style=\"font-family: 宋体;\">）。</span></span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36744",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>外部实体</p>", "<p>加工</p>", "<p>数据流</p>", "<p>数据存储</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 16,
+          "belong_page": 1,
+          "question_id": 36745,
+          "question_title": "<p><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">某医院预约系统的部分需求为：患者可以查看医院发布的专家特长介绍及其就诊时间：系统记录患者信息，患者预约特定时间就诊。用</span> DFD <span style=\"font-family: 宋体;\">对其进行功能建模时，患者是（</span></span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">15</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">&nbsp;<span style=\"font-family: 宋体;\">）；用</span> ERD<span style=\"font-family: 宋体;\">对其进行数据建模时，患者是（</span></span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">16</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">&nbsp;<span style=\"font-family: 宋体;\">）。</span></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36745",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>实体</p>", "<p>属性</p>", "<p>联系</p>", "<p>弱实体</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 17,
+          "belong_page": 1,
+          "question_id": 36746,
+          "question_title": "<p><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">某软件项目的活动图如下图所示，其中顶点表示项目里程碑，链接顶点的边表示包含的活动，变色数字表示活动的持续时间（天）。完成该项目的最少时间为（</span></span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">17</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">&nbsp;<span style=\"font-family: 宋体;\">）天。由于某种原因，现在需要同一个开发人员完成</span> BC <span style=\"font-family: 宋体;\">和 </span><span style=\"font-family: Times New Roman;\">BD</span><span style=\"font-family: 宋体;\">，则完成该项目的最少时间为（</span></span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">18</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">&nbsp;<span style=\"font-family: 宋体;\">）天。</span></span><br/></p><p><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\"><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/1471e7019c7d75c71bd262d91ee2a62e65c2dd.png\"/></span></span></p><p class=\"MsoNormal\"><br/></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36746",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>11</p>", "<p>18</p>", "<p>20</p>", "<p>21</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 18,
+          "belong_page": 1,
+          "question_id": 36747,
+          "question_title": "<p><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">某软件项目的活动图如下图所示，其中顶点表示项目里程碑，链接顶点的边表示包含的活动，变色数字表示活动的持续时间（天）。完成该项目的最少时间为（</span></span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">17</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">&nbsp;<span style=\"font-family: 宋体;\">）天。由于某种原因，现在需要同一个开发人员完成</span> BC <span style=\"font-family: 宋体;\">和 </span><span style=\"font-family: Times New Roman;\">BD</span><span style=\"font-family: 宋体;\">，则完成该项目的最少时间为（</span></span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">请作答此空</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）天。</span></span><br/></p><p><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\"><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/914e61a41dc95e48d3d27502a80b08240313f8.png\"/></span></span></p><p class=\"MsoNormal\"><br/></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36747",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>11</p>", "<p>18</p>", "<p>20</p>", "<p>21</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 19,
+          "belong_page": 1,
+          "question_id": 36748,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">某企业财务系统的需求中，属于功能需求的是（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">19</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;<span style=\"font-family: 宋体;\">）。</span></span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36748",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>每个月特定的时间发放员工工资</p>",
+            "<p>系统的响应时间不超过&nbsp;3&nbsp;秒</p>",
+            "<p>系统的计算精度符合财务规则的要求</p>",
+            "<p>系统可以允许&nbsp;100&nbsp;个用户同事查询自己的工资</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 20,
+          "belong_page": 1,
+          "question_id": 36749,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">更适合用来开发操作系统的编程语言是（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">20</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">&nbsp;<span style=\"font-family: 宋体;\">）。</span></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36749",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>C/C++</p>",
+            "<p>Java</p>",
+            "<p>Python&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+            "<p>JavaScript</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 21,
+          "belong_page": 1,
+          "question_id": 36750,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">以下关于程序设计语言的叙述中，不正确的是（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">21</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;<span style=\"font-family: 宋体;\">）。</span></span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36750",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>脚本语言中不使用变量和函数</p>",
+            "<p>标记语言常用于描述格式化和链接</p>",
+            "<p>脚本语言采用解释方式实现</p>",
+            "<p>编译型语言的执行效率更高</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 22,
+          "belong_page": 1,
+          "question_id": 36751,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">将高级语言源程序通过编译或解释方式进行翻译时，可以先生成与源程序等价的某种中间代码。以下关于中间代码的叙途中，正确的是（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">22</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"> <span style=\"font-family: 宋体;\">）。</span></span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36751",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>中间代码常采用符号表来表示</p>",
+            "<p>后缀式和三地址码是常用的中间代码</p>",
+            "<p>对中间代码进行优化要依据运行程序的机器特性</p>",
+            "<p>中间代码不能跨平台</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 23,
+          "belong_page": 1,
+          "question_id": 36752,
+          "question_title": "<p><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">计算机系统的层次结构如下圈所示，基于硬件之上的软件可分为</span> a<span style=\"font-family: 宋体;\">、</span><span style=\"font-family: Times New Roman;\">b </span><span style=\"font-family: 宋体;\">和 </span><span style=\"font-family: Times New Roman;\">c </span><span style=\"font-family: 宋体;\">三个层次。图中</span><span style=\"font-family: Times New Roman;\">a</span><span style=\"font-family: 宋体;\">、</span><span style=\"font-family: Times New Roman;\">b </span><span style=\"font-family: 宋体;\">和 </span><span style=\"font-family: Times New Roman;\">c </span><span style=\"font-family: 宋体;\">分别表示（</span></span><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\">23</span><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\">&nbsp;<span style=\"font-family: 宋体;\">）。</span></span></p><p><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\"><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/963c27f9422c2632ce71099a59177457fad819.png\"/></span></span></p><p class=\"MsoNormal\"><br/></p><p class=\"MsoNormal\" style=\"text-indent: 23.7pt; mso-char-indent-count: 2.0000;\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36752",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>操作系统、系统软件和应用软件</p>",
+            "<p>操作系统、应用软件和系统软件</p>",
+            "<p>应用软件、系统软件和操作系统&nbsp;</p>",
+            "<p>应用软件、操作系统和系统软件</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 24,
+          "belong_page": 1,
+          "question_id": 36753,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">下图所示的</span> PCB<span style=\"font-family: 宋体;\">（进程控制块）的组织方式是（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">24</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">），图中（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">25</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）。</span></span></p><p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\"><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/b91747b16a20bf167434816929c59d47016798.png\"/></span></span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36753",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>链接方式</p>", "<p>索引方式</p>", "<p>顺序方式</p>", "<p>Hash</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 25,
+          "belong_page": 1,
+          "question_id": 36754,
+          "question_title": "<p><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">下图所示的</span> PCB<span style=\"font-family: 宋体;\">（进程控制块）的组织方式是（</span></span><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\">24</span><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">），图中（</span></span><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\">25</span><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）。</span></span></p><p><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\"><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/442ff9d07934033a07d968b5d1a803dbd62d14.png\"/></span></span></p><p class=\"MsoNormal\"><br/></p><p class=\"MsoNormal\" style=\"text-indent: 23.7pt; mso-char-indent-count: 2.0000;\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36754",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>有&nbsp;1&nbsp;个运行进程、2&nbsp;个就绪进程、4&nbsp;个阻塞进程</p>",
+            "<p>有&nbsp;2&nbsp;个运行进程、3&nbsp;个就绪进程、2&nbsp;个阻塞进程</p>",
+            "<p>有&nbsp;1&nbsp;个运行进程、3&nbsp;个就绪进程、3&nbsp;个阻塞进程</p>",
+            "<p>有&nbsp;1&nbsp;个运行进程、4&nbsp;个就绪进程、2&nbsp;个阻塞进程</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 26,
+          "belong_page": 1,
+          "question_id": 36755,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">某文件系统采用多级索引结构。若磁盘块的大小为</span> lK <span style=\"font-family: 宋体;\">字节，每个块号占 </span><span style=\"font-family: Times New Roman;\">3 </span><span style=\"font-family: 宋体;\">字节，那么采用二级索引时的文件最大长度为（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">26</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">K</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">字节。</span></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36755",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>1024</p>",
+            "<p>2048</p>",
+            "<p>116281&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+            "<p>232562</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 27,
+          "belong_page": 1,
+          "question_id": 36756,
+          "question_title": "<p><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">某操作系统采用分页存储管理方式，下图给出了进程</span> A <span style=\"font-family: 宋体;\">和进程 </span><span style=\"font-family: Times New Roman;\">B </span><span style=\"font-family: 宋体;\">的页表结构。如果物理页的大小为 </span><span style=\"font-family: Times New Roman;\">lK </span><span style=\"font-family: 宋体;\">字节，那么进程 </span><span style=\"font-family: Times New Roman;\">A </span><span style=\"font-family: 宋体;\">中逻辑地址为 </span><span style=\"font-family: Times New Roman;\">1024 (</span><span style=\"font-family: 宋体;\">十进制</span><span style=\"font-family: Times New Roman;\">)</span><span style=\"font-family: 宋体;\">用变量存放在（作答此空</span></span><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）号物理内存页中。假设进程</span> A <span style=\"font-family: 宋体;\">的逻辑页 </span><span style=\"font-family: Times New Roman;\">4 </span><span style=\"font-family: 宋体;\">与进程 </span><span style=\"font-family: Times New Roman;\">B </span><span style=\"font-family: 宋体;\">的逻辑页 </span><span style=\"font-family: Times New Roman;\">5 </span><span style=\"font-family: 宋体;\">要共享物理页 </span><span style=\"font-family: Times New Roman;\">4</span><span style=\"font-family: 宋体;\">，那么应该在进程 </span><span style=\"font-family: Times New Roman;\">A </span><span style=\"font-family: 宋体;\">页表的逻辑页 </span><span style=\"font-family: Times New Roman;\">4 </span><span style=\"font-family: 宋体;\">和进程 </span><span style=\"font-family: Times New Roman;\">B </span><span style=\"font-family: 宋体;\">页表的逻辑页 </span><span style=\"font-family: Times New Roman;\">5 </span><span style=\"font-family: 宋体;\">对应的物理页处分别填（</span></span><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\">28</span><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）。</span></span></p><p class=\"MsoNormal\"><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/e1a730790f464b7cffd8681859d54f8061897b.png\"/></p><p class=\"MsoNormal\" style=\"text-indent: 23.7pt; mso-char-indent-count: 2.0000;\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36756",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>8</p>", "<p>3</p>", "<p>5</p>", "<p>2</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 28,
+          "belong_page": 1,
+          "question_id": 36757,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\" style=\"text-indent: 23.7pt; mso-char-indent-count: 2.0000;\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">某操作系统采用分页存储管理方式，下图给出了进程</span> A <span style=\"font-family: 宋体;\">和进程 </span><span style=\"font-family: Times New Roman;\">B </span><span style=\"font-family: 宋体;\">的页表结构。如果物理页的大小为 </span><span style=\"font-family: Times New Roman;\">lK </span><span style=\"font-family: 宋体;\">字节，那么进程 </span><span style=\"font-family: Times New Roman;\">A </span><span style=\"font-family: 宋体;\">中逻辑地址为 </span><span style=\"font-family: Times New Roman;\">1024 (</span><span style=\"font-family: 宋体;\">十进制</span><span style=\"font-family: Times New Roman;\">)</span><span style=\"font-family: 宋体;\">用变量存放在（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">27</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">）号物理内存页中。假设进程</span> A <span style=\"font-family: 宋体;\">的逻辑页 </span><span style=\"font-family: Times New Roman;\">4 </span><span style=\"font-family: 宋体;\">与进程 </span><span style=\"font-family: Times New Roman;\">B </span><span style=\"font-family: 宋体;\">的逻辑页 </span><span style=\"font-family: Times New Roman;\">5 </span><span style=\"font-family: 宋体;\">要共享物理页 </span><span style=\"font-family: Times New Roman;\">4</span><span style=\"font-family: 宋体;\">，那么应该在进程 </span><span style=\"font-family: Times New Roman;\">A </span><span style=\"font-family: 宋体;\">页表的逻辑页 </span><span style=\"font-family: Times New Roman;\">4 </span><span style=\"font-family: 宋体;\">和进程 </span><span style=\"font-family: Times New Roman;\">B </span><span style=\"font-family: 宋体;\">页表的逻辑页 </span><span style=\"font-family: Times New Roman;\">5 </span><span style=\"font-family: 宋体;\">对应的物理页处分别填（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">28</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">）。</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p><p class=\"MsoNormal\" style=\"text-indent: 23.7pt; mso-char-indent-count: 2.0000;\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\"><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/5882360040820ed53c4871dfedbaad2552506b.png\"/></span></span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36757",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>4、4</p>",
+            "<p>4、5&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+            "<p>5、4</p>",
+            "<p>5/5</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 29,
+          "belong_page": 1,
+          "question_id": 36758,
+          "question_title": "<p><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">用白盒测试方法对如下图所示的流程图进行测试。若要满足分支覆盖，则至少要（</span></span><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\">29</span><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）个测试用例，正确的测试用例对是（</span></span><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\">30</span><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）（测试用例的格式为（</span>A,B,X;X<span style=\"font-family: 宋体;\">））。</span></span><br/></p><p><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\"><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/d42017a19e4f818786463656d5f30fd2156afe.png\"/></span></span></p><p class=\"MsoNormal\" style=\"text-indent: 23.7pt; mso-char-indent-count: 2.0000;\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36758",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>1（29）</p>", "<p>2（29）</p>", "<p>3（29）</p>", "<p>4（29）</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 30,
+          "belong_page": 1,
+          "question_id": 36759,
+          "question_title": "<p>用自盒测试方法对如下图所示的流程图进行测试。若要满足分支覆盖，则至少要（29）个测试用例，正确的测试用例对是（请作答此空）（测试用例的格式为（A,B,X;X））。<br/></p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/e22612e082a18b07a629088fa3bb3bd4533a0d.png\"/></p><p><br/></p><p>&nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36759",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>（1,3,3;3）和（5,2,15;3）</p>",
+            "<p>（1,1,5;5）和（5,2,20;9）</p>",
+            "<p>（2,3,10;5）和（5,2,18;3）</p>",
+            "<p>（2,2,16;16）和（5,2,15;9）</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 31,
+          "belong_page": 1,
+          "question_id": 36760,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 12pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">配置管理贯穿软件开发的整个过程。以下内容中，不属于配置管理的是（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">31</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）。</span></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36760",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>版本控制</p>",
+            "<p>风险管理</p>",
+            "<p>变更管理</p>",
+            "<p>配置状态报告</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 32,
+          "belong_page": 1,
+          "question_id": 36761,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">极限编程（</span>XP<span style=\"font-family: 宋体;\">）的十二个最佳实践不包括（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">32</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）。</span></span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36761",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>小型发布</p>", "<p>结队编程</p>", "<p>持续集成</p>", "<p>精心设计</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 33,
+          "belong_page": 1,
+          "question_id": 36762,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">以下关于管道过滤器体系结构的</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">优点</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">的叙述中，不</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">正确</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">的是（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">33</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">）。</span></span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36762",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>软件构件具有良好的高内聚、低藕合的特点</p>",
+            "<p>支持重用</p>",
+            "<p>支持并行执行</p>",
+            "<p>提高性能</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 34,
+          "belong_page": 1,
+          "question_id": 36763,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">模块</span> A <span style=\"font-family: 宋体;\">将学生信息，即学生姓名、学号、手机号等放到一个结构体中，传递给模块 </span><span style=\"font-family: Times New Roman;\">B</span><span style=\"font-family: 宋体;\">。模块 </span><span style=\"font-family: Times New Roman;\">A </span><span style=\"font-family: 宋体;\">和 </span><span style=\"font-family: Times New Roman;\">B </span><span style=\"font-family: 宋体;\">之间的藕合类型为（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">34</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）藕合。</span></span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36763",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>数据</p>", "<p>标记</p>", "<p>控制</p>", "<p>内容</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 35,
+          "belong_page": 1,
+          "question_id": 36764,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">某模块内涉及多个功能，这些功能必须以特定的次序执行，则该模块的内聚类型为（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">35</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）内聚。</span></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36764",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>实践</p>", "<p>过程</p>", "<p>信息</p>", "<p>功能</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 36,
+          "belong_page": 1,
+          "question_id": 36765,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">系统交付用户使用后，为了改进系统的图形输出而对系统进行修改的维护行为属于（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">36</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）维护。</span></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36765",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>改正性</p>", "<p>适应性</p>", "<p>改善性</p>", "<p>预防性</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 37,
+          "belong_page": 1,
+          "question_id": 36766,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">在面向对象方法中，将逻辑上相关的数据以及行为绑定在一起，使信息对使用者隐蔽称为（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">37</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）。当类中的属性或方法被设计为</span> private <span style=\"font-family: 宋体;\">时，（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">38</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）可以对其进行访问。</span></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36766",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>抽象</p>",
+            "<p>继承</p>",
+            "<p>封装&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+            "<p>多态</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 38,
+          "belong_page": 1,
+          "question_id": 36767,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">在面向对象方法中，将逻辑上相关的数据以及行为绑定在一起，使信息对使用者隐蔽称为（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">37</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）。当类中的属性或方法被设计为</span> private <span style=\"font-family: 宋体;\">时，（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">38</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）可以对其进行访问。</span></span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36767",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>应用程序中所有方法&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+            "<p>只有此类中定义的方法</p>",
+            "<p>只有此类中定义的&nbsp;public&nbsp;方法</p>",
+            "<p>同一个包中的类中定义的方法</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 39,
+          "belong_page": 1,
+          "question_id": 36768,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">采用继承机制创建子类时，子类中（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">39</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）。</span></span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36768",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>只能有父类中的属性</p>",
+            "<p>只能有父类中的行为</p>",
+            "<p>只能新增行为</p>",
+            "<p>可以有新的属性和行为</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 40,
+          "belong_page": 1,
+          "question_id": 36769,
+          "question_title": "<p><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">面向对象分析过程中，从给定需求描述中选择（</span></span><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\">40</span><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）来识别对象。</span></span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36769",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>动词短语</p>",
+            "<p>名词短语</p>",
+            "<p>形容词&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+            "<p>副词</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 41,
+          "belong_page": 1,
+          "question_id": 36770,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">如图所示的</span> UML <span style=\"font-family: 宋体;\">类图中，</span><span style=\"font-family: Times New Roman;\">Shop </span><span style=\"font-family: 宋体;\">和 </span><span style=\"font-family: Times New Roman;\">Magazine </span><span style=\"font-family: 宋体;\">之间为（请作答此空</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">）关系，</span>Magazine <span style=\"font-family: 宋体;\">和 </span><span style=\"font-family: Times New Roman;\">Page </span><span style=\"font-family: 宋体;\">之间为（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">42</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">）关系。</span>UML <span style=\"font-family: 宋体;\">类图</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">通常</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">不用于对（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">43</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">）进行建模。</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\"><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/55b613e40afcdf87b27220209de115167a8c4b.png\"/></span></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36770",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>关联</p>", "<p>依赖</p>", "<p>组合</p>", "<p>继承</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 42,
+          "belong_page": 1,
+          "question_id": 36771,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">如图所示的</span> UML <span style=\"font-family: 宋体;\">类图中，</span><span style=\"font-family: Times New Roman;\">Shop </span><span style=\"font-family: 宋体;\">和 </span><span style=\"font-family: Times New Roman;\">Magazine </span><span style=\"font-family: 宋体;\">之间为（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）关系，</span>Magazine <span style=\"font-family: 宋体;\">和 </span><span style=\"font-family: Times New Roman;\">Page </span><span style=\"font-family: 宋体;\">之间为（</span></span>请作答此空 <span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）关系。</span>UML <span style=\"font-family: 宋体;\">类图</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">通常</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">不用于对（ </span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）进行建模。</span></span><br/></p><p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\"><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/62b8e9b4950f906c217937289b17bd8c98cacf.png\"/></span></span></p><p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\"><br/></span></span></p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36771",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>关联&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+            "<p>依赖</p>",
+            "<p>组合</p>",
+            "<p>继承</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 43,
+          "belong_page": 1,
+          "question_id": 36772,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">如图所示的</span> UML <span style=\"font-family: 宋体;\">类图中，</span><span style=\"font-family: Times New Roman;\">Shop </span><span style=\"font-family: 宋体;\">和 </span><span style=\"font-family: Times New Roman;\">Magazine </span><span style=\"font-family: 宋体;\">之间为（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">41</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）关系，</span>Magazine <span style=\"font-family: 宋体;\">和 </span><span style=\"font-family: Times New Roman;\">Page </span><span style=\"font-family: 宋体;\">之间为（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">42</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）关系。</span>UML <span style=\"font-family: 宋体;\">类图</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">通常</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">不用于对（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">43</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）进行建模。</span></span><br/></p><p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\"><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/57311de916228d699e147314f767aa26340727.png\"/></span></span></p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36772",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>系统的词汇</p>",
+            "<p>简单的协作</p>",
+            "<p>逻辑数据库模式</p>",
+            "<p>对象快照</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 44,
+          "belong_page": 1,
+          "question_id": 36773,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">自动售货机根据库存、存放货币量、找零能力、所选项目等不同，在货币存入并进行选择时具有如下行为：交付产品不找零</span> <span style=\"font-family: 宋体;\">：交付产品找零：存入货币不足而不提供任何产品；库存不足而不提供任何产品。这一业务需求适合采用（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">44</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）模式设计实现，其类图如下图所示，其中（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">45</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）是客户程序使用的主要接口，可用状态来对其进行配置。此模式为（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">46</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">），体现的最主要的意图是（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">47</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）。</span></span><br/></p><p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\"><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/b54d44e44c0e3ef52c603574e4ce2c2772a113.png\"/></span></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36773",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>观察者（Obeserver）&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+            "<p>状态（State）</p>",
+            "<p>策略（Stratehy）</p>",
+            "<p>访问者（Visitor）</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 45,
+          "belong_page": 1,
+          "question_id": 36774,
+          "question_title": "<p><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">自动售货机根据库存、存放货币量、找零能力、所选项目等不同，在货币存入并进行选择时具有如下行为：交付产品不找零</span> <span style=\"font-family: 宋体;\">：交付产品找零：存入货币不足而不提供任何产品；库存不足而不提供任何产品。这一业务需求适合采用（</span></span><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\">44</span><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）模式设计实现，其类图如下图所示，其中（</span></span><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\">45</span><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）是客户程序使用的主要接口，可用状态来对其进行配置。此模式为（</span></span><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\">46</span><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">），体现的最主要的意图是（</span></span><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\">47</span><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）。</span></span><br/></p><p><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\"><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/116d63363c03007cc2302578611de352e9cd96.png\"/></span></span></p><p class=\"MsoNormal\" style=\"text-indent: 23.7pt; mso-char-indent-count: 2.0000;\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36774",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>VendingMachineState&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+            "<p>Buy</p>",
+            "<p>VendingDepositState&nbsp;</p>",
+            "<p>VendingStockState</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 46,
+          "belong_page": 1,
+          "question_id": 36775,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">自动售货机根据库存、存放货币量、找零能力、所选项目等不同，在货币存入并进行选择时具有如下行为：交付产品不找零</span> <span style=\"font-family: 宋体;\">：交付产品找零：存入货币不足而不提供任何产品；库存不足而不提供任何产品。这一业务需求适合采用（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">44</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）模式设计实现，其类图如下图所示，其中（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">45</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）是客户程序使用的主要接口，可用状态来对其进行配置。此模式为（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">46</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">），体现的最主要的意图是（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">47</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）。</span></span><br/></p><p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\"><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/992c4c3623286f314fe619d89a9a3f1004ed81.png\"/></span></span></p><p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\"><br/></span></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36775",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>创建型对象模式&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+            "<p>结构型对象模式</p>",
+            "<p>行为型类模式&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+            "<p>行为型对象模式</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 47,
+          "belong_page": 1,
+          "question_id": 36776,
+          "question_title": "<p><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">自动售货机根据库存、存放货币量、找零能力、所选项目等不同，在货币存入并进行选择时具有如下行为：交付产品不找零</span> <span style=\"font-family: 宋体;\">：交付产品找零：存入货币不足而不提供任何产品；库存不足而不提供任何产品。这一业务需求适合采用（</span></span><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\">44</span><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）模式设计实现，其类图如下图所示，其中（</span></span><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\">45</span><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）是客户程序使用的主要接口，可用状态来对其进行配置。此模式为（</span></span><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\">46</span><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">），体现的最主要的意图是（</span></span><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\">47</span><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）。</span></span><br/></p><p><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\"><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/112110354bbae0cc338848e8a6a6f54830ab11.png\"/></span></span></p><p class=\"MsoNormal\" style=\"text-indent: 23.7pt; mso-char-indent-count: 2.0000;\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36776",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>当一个对象状态改变时所有依赖它的对象得到通知并自动更新</p>",
+            "<p>在不破坏封装性的前提下，捕获对象的内部状态并在对象之外保存</p>",
+            "<p>一个对象在其内部状态改变时改变其行为</p>",
+            "<p>将请求封装为对象从而可以使用不同的请求对客户进行参数化</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 48,
+          "belong_page": 1,
+          "question_id": 36777,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">编译过程中进行的语法分析主要是分析（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">48</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）。</span></span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36777",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>源程序中的标识符是否合法</p>",
+            "<p>程序语句的含义是否合法</p>",
+            "<p>程序语句的结构是否合法</p>",
+            "<p>表达式的类型是否合法</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 49,
+          "belong_page": 1,
+          "question_id": 36778,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">某确定的有限自动机（</span>DFA<span style=\"font-family: 宋体;\">）的状态转换图如下图所示（</span><span style=\"font-family: Times New Roman;\">0 </span><span style=\"font-family: 宋体;\">是初态，</span><span style=\"font-family: Times New Roman;\">4 </span><span style=\"font-family: 宋体;\">是终态），则该 </span><span style=\"font-family: Times New Roman;\">DFA</span><span style=\"font-family: 宋体;\">能识别（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">49</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）。</span></span><br/></p><p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\"><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/032ca03781da72b1d53956e187aa8daf55ab7e.png\"/></span></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36778",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>aaab</p>", "<p>abab</p>", "<p>bbba</p>", "<p>abba</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 50,
+          "belong_page": 1,
+          "question_id": 36779,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">函数</span> main<span style=\"font-family: 宋体;\">（ ） 、</span><span style=\"font-family: Times New Roman;\">f</span><span style=\"font-family: 宋体;\">（ ）的定义如下所示。调用函数 </span><span style=\"font-family: Times New Roman;\">f</span><span style=\"font-family: 宋体;\">（ ）时，第一个参数采用传值 </span><span style=\"font-family: Times New Roman;\">(call</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"> </span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">by value)<span style=\"font-family: 宋体;\">方式，第二个参数采用传引用</span><span style=\"font-family: Times New Roman;\">(call by referen</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">ce</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">)<span style=\"font-family: 宋体;\">方式，则函数 </span><span style=\"font-family: Times New Roman;\">main</span><span style=\"font-family: 宋体;\">（ ）执行后输出的值为（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">50</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">）。</span></span></p><p class=\"MsoNormal\"><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201804/172deed29db6e14c8ec533c7d93966338684e1.jpg\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36779",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>10</p>", "<p>19</p>", "<p>20</p>", "<p>29</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 51,
+          "belong_page": 1,
+          "question_id": 36780,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">采用三级结构</span>/<span style=\"font-family: 宋体;\">两级映像的数据库体系结构，如果对数据库的一张表创建聚簇索引，改变的是数据库的（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">51</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）。</span></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36780",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>用户模式</p>", "<p>外模式</p>", "<p>模式</p>", "<p>内模式</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 52,
+          "belong_page": 1,
+          "question_id": 36781,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">某企业的培训关系模式</span> R(<span style=\"font-family: 宋体;\">培训科目，培训师，学生，成绩，时间，教室</span><span style=\"font-family: Times New Roman;\">)</span><span style=\"font-family: 宋体;\">， </span><span style=\"font-family: Times New Roman;\">R </span><span style=\"font-family: 宋体;\">的函数依赖集 </span><span style=\"font-family: Times New Roman;\">F={</span><span style=\"font-family: 宋体;\">培训科目→培训师，</span><span style=\"font-family: Times New Roman;\">(</span><span style=\"font-family: 宋体;\">学生，培训科目</span><span style=\"font-family: Times New Roman;\">)</span><span style=\"font-family: 宋体;\">→成绩，</span><span style=\"font-family: Times New Roman;\">(</span><span style=\"font-family: 宋体;\">时间，教室</span><span style=\"font-family: Times New Roman;\">)</span><span style=\"font-family: 宋体;\">→培训科目，</span><span style=\"font-family: Times New Roman;\">(</span><span style=\"font-family: 宋体;\">时间，培训师</span><span style=\"font-family: Times New Roman;\">)</span><span style=\"font-family: 宋体;\">→教室，</span><span style=\"font-family: Times New Roman;\">(</span><span style=\"font-family: 宋体;\">时间，学生</span><span style=\"font-family: Times New Roman;\">)</span><span style=\"font-family: 宋体;\">→教室</span><span style=\"font-family: Times New Roman;\">}</span><span style=\"font-family: 宋体;\">。关系模式 </span><span style=\"font-family: Times New Roman;\">R </span><span style=\"font-family: 宋体;\">的主键为（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">52</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">），其规范化程度最高达到（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">53</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）。</span></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36781",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>（学生，培训科目）</p>",
+            "<p>（时间，教室）</p>",
+            "<p>（时间，培训师）</p>",
+            "<p>（时间，学生）</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 53,
+          "belong_page": 1,
+          "question_id": 36782,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">某企业的培训关系模式</span> R(<span style=\"font-family: 宋体;\">培训科目，培训师，学生，成绩，时间，教室</span><span style=\"font-family: Times New Roman;\">)</span><span style=\"font-family: 宋体;\">， </span><span style=\"font-family: Times New Roman;\">R </span><span style=\"font-family: 宋体;\">的函数依赖集 </span><span style=\"font-family: Times New Roman;\">F={</span><span style=\"font-family: 宋体;\">培训科目→培训师，</span><span style=\"font-family: Times New Roman;\">(</span><span style=\"font-family: 宋体;\">学生，培训科目</span><span style=\"font-family: Times New Roman;\">)</span><span style=\"font-family: 宋体;\">→成绩，</span><span style=\"font-family: Times New Roman;\">(</span><span style=\"font-family: 宋体;\">时间，教室</span><span style=\"font-family: Times New Roman;\">)</span><span style=\"font-family: 宋体;\">→培训科目，</span><span style=\"font-family: Times New Roman;\">(</span><span style=\"font-family: 宋体;\">时间，培训师</span><span style=\"font-family: Times New Roman;\">)</span><span style=\"font-family: 宋体;\">→教室，</span><span style=\"font-family: Times New Roman;\">(</span><span style=\"font-family: 宋体;\">时间，学生</span><span style=\"font-family: Times New Roman;\">)</span><span style=\"font-family: 宋体;\">→教室</span><span style=\"font-family: Times New Roman;\">}</span><span style=\"font-family: 宋体;\">。关系模式 </span><span style=\"font-family: Times New Roman;\">R </span><span style=\"font-family: 宋体;\">的主键为（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">52</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">），其规范化程度最高达到（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">53</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）。</span></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36782",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>1NF</p>", "<p>2NF</p>", "<p>3NF</p>", "<p>BCNF</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 54,
+          "belong_page": 1,
+          "question_id": 36783,
+          "question_title": "<p><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">设关系模式</span> R<span style=\"font-family: 宋体;\">（</span><span style=\"font-family: Times New Roman;\">U</span><span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">F</span><span style=\"font-family: 宋体;\">），其中</span><span style=\"font-family: Times New Roman;\">: U= {A</span><span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">B,C,D,E } </span><span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">F={A</span><span style=\"font-family: 宋体;\">→</span><span style=\"font-family: Times New Roman;\">B</span><span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">DE</span><span style=\"font-family: 宋体;\">→</span><span style=\"font-family: Times New Roman;\">B</span><span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">CB</span><span style=\"font-family: 宋体;\">→</span><span style=\"font-family: Times New Roman;\">E</span><span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">E</span><span style=\"font-family: 宋体;\">→</span><span style=\"font-family: Times New Roman;\">A</span><span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">B</span><span style=\"font-family: 宋体;\">→</span><span style=\"font-family: Times New Roman;\">D}</span><span style=\"font-family: 宋体;\">。（请作答此空</span></span><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）为关系模式</span> R <span style=\"font-family: 宋体;\">的候选关键字。分解（</span></span><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\">55</span><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）是无损连接，并保持函数依赖的。</span></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36783",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>AB</p>", "<p>DE</p>", "<p>DB</p>", "<p>CE</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 55,
+          "belong_page": 1,
+          "question_id": 36784,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\" style=\"text-indent: 23.7pt; mso-char-indent-count: 2.0000;\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">设关系模式</span> R<span style=\"font-family: 宋体;\">（</span><span style=\"font-family: Times New Roman;\">U</span><span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">F</span><span style=\"font-family: 宋体;\">），其中</span><span style=\"font-family: Times New Roman;\">: U= {A</span><span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">B,C,D,E } </span><span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">F={A</span><span style=\"font-family: 宋体;\">→</span><span style=\"font-family: Times New Roman;\">B</span><span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">DE</span><span style=\"font-family: 宋体;\">→</span><span style=\"font-family: Times New Roman;\">B</span><span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">CB</span><span style=\"font-family: 宋体;\">→</span><span style=\"font-family: Times New Roman;\">E</span><span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">E</span><span style=\"font-family: 宋体;\">→</span><span style=\"font-family: Times New Roman;\">A</span><span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">B</span><span style=\"font-family: 宋体;\">→</span><span style=\"font-family: Times New Roman;\">D}</span><span style=\"font-family: 宋体;\">。（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">54</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">）为关系模式</span> R <span style=\"font-family: 宋体;\">的候选关键字。分解（作答此空</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">）是无损连接。</span></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36784",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>ρ={&nbsp;R1(AC),R2(ED),R3(B)&nbsp;}</p>",
+            "<p>ρ={&nbsp;R1(AC),R2(E),R3(DB)&nbsp;}</p>",
+            "<p>ρ={&nbsp;R1(AC),R2(ED),R3(AB)&nbsp;}</p>",
+            "<p>ρ={&nbsp;R1(ABC),R2(ED),R3(ACE)&nbsp;}</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 56,
+          "belong_page": 1,
+          "question_id": 36785,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">在基于</span> Web <span style=\"font-family: 宋体;\">的电子商务应用中，访问存储于数据库中的业务对象的常用方式之一是（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">56</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）。</span></span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36785",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>JDBC</p>", "<p>XML</p>", "<p>CGI</p>", "<p>COM</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 57,
+          "belong_page": 1,
+          "question_id": 36786,
+          "question_title": "<p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/36a87c60480f8d375516271c544f21f7e085b8.png\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36786",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>A</p>", "<p>B</p>", "<p>C</p>", "<p>D</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 58,
+          "belong_page": 1,
+          "question_id": 36787,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">假设某消息中只包含</span> 7 <span style=\"font-family: 宋体;\">个字符</span><span style=\"font-family: Times New Roman;\">{a,b,c,d,e,f,g}</span><span style=\"font-family: 宋体;\">，</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">这</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;7 <span style=\"font-family: 宋体;\">个字符在消息中出现的次数为</span><span style=\"font-family: Times New Roman;\">{5,24,8,17,34,4,13}</span><span style=\"font-family: 宋体;\">，利用哈夫曼树（最优二叉树）为该消息中的字符构造符合前缀编码要求</span></span><span style=\"text-indent: 0pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">的不等长编码。各字符的编码长度分别为（</span></span><span style=\"text-indent: 0pt; font-family: 宋体; font-size: 10.5pt;\">58</span><span style=\"text-indent: 0pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）。</span></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36787",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>a:4,b:2,c:3,d:3,e:2,f:4,g:3</p>",
+            "<p>a:6,b:2,c:5,d:3,e:1,f:6,g:4</p>",
+            "<p>a:3,b:3,c:3,d:3,e:3,f:2,g:3</p>",
+            "<p>a:2,b:6,c:3,d:5,e:6,f:1,g:4</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 59,
+          "belong_page": 1,
+          "question_id": 36788,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">设某二叉树采用二叉链表表示（即结点的两个指针分别指示左、右孩子）。当该二叉树包含</span> k <span style=\"font-family: 宋体;\">个节点时，其二叉链表节点中必有（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">59</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）个空的</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">孩子</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">指针。</span></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36788",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>k-1</p>", "<p>K</p>", "<p>k+1</p>", "<p>2k</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 60,
+          "belong_page": 1,
+          "question_id": 36789,
+          "question_title": "<p><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">以下关于无向连通图G</span><span style=\"font-family: 宋体;\">的叙述中，不正确的是（</span></span><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\">60</span><span style=\"text-indent: 23.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）。</span></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36789",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>G&nbsp;中任意两个顶点之间均有边存在</p>",
+            "<p>G&nbsp;中任意两个顶点之间存在路径</p>",
+            "<p>从&nbsp;G&nbsp;中任意顶点出发可遍历图中所有顶点</p>",
+            "<p>G&nbsp;的临接矩阵是对称矩阵</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 61,
+          "belong_page": 1,
+          "question_id": 36790,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\" style=\"text-indent: 23.7pt; mso-char-indent-count: 2.0000;\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">两个递增序列</span> A <span style=\"font-family: 宋体;\">和 </span><span style=\"font-family: Times New Roman;\">B </span><span style=\"font-family: 宋体;\">的长度分别为 </span><span style=\"font-family: Times New Roman;\">m </span><span style=\"font-family: 宋体;\">和 </span><span style=\"font-family: Times New Roman;\">n(m&lt;n </span><span style=\"font-family: 宋体;\">且 </span><span style=\"font-family: Times New Roman;\">m </span><span style=\"font-family: 宋体;\">与 </span><span style=\"font-family: Times New Roman;\">n </span><span style=\"font-family: 宋体;\">接近</span><span style=\"font-family: Times New Roman;\">)</span><span style=\"font-family: 宋体;\">，将二者归井为一个长度为 </span><span style=\"font-family: Times New Roman;\">m+n </span><span style=\"font-family: 宋体;\">的递增序列。当元素关系为（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">61</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">），归并过程中元素的比较次数最少。</span></span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36790",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>a1&lt;a2&lt;…&lt;am-1&lt;am&lt;b1&lt;b2&lt;…&lt;bn-1&lt;bn</p>",
+            "<p>b1&lt;b2&lt;…&lt;bn-1&lt;bn&lt;a1&lt;a2&lt;…&lt;am-1&lt;am</p>",
+            "<p>a1&lt;b1&lt;a2&lt;b2&lt;…&lt;am-1&lt;bm-1&lt;am&lt;bm&lt;bm+1&lt;…&lt;bn-1&lt;bn</p>",
+            "<p>b1&lt;b2&lt;…&lt;bm-1&lt;bm&lt;a1&lt;a2&lt;…&lt;am-1&lt;am&lt;bm+1&lt;…&lt;bn-1&lt;bn</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 62,
+          "belong_page": 1,
+          "question_id": 36791,
+          "question_title": "<p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/a3a22047062a0e1ef9506155390b4e65e6d134.png\" width=\"578\" height=\"240\"/><br/>（请回答62问）<br/></p><p>&nbsp;</p><p class=\"MsoNormal\" style=\"text-indent: 23.7pt; mso-char-indent-count: 2.0000;\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36791",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>A</p>", "<p>B</p>", "<p>C</p>", "<p>D</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 63,
+          "belong_page": 1,
+          "question_id": 36792,
+          "question_title": "<p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/043fbc06855f55d2f4b31346e249210b732ad4.png\"/><br/>作答(63)空</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36792",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>A</p>", "<p>B</p>", "<p>C</p>", "<p>D</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 64,
+          "belong_page": 1,
+          "question_id": 36793,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">现需要对一个基本有序的数组进行排序。此时最适宜采用的算法为（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">64</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）排算法，时间复杂度为（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">65</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）。</span></span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36793",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>插入</p>",
+            "<p>快速</p>",
+            "<p>归并&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+            "<p>堆</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 65,
+          "belong_page": 1,
+          "question_id": 36794,
+          "question_title": "<p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/918832326811ffd8f1434927fb6384bc6a7c17.png\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36794",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>（65）A</p>", "<p>（65）B</p>", "<p>（65）C</p>", "<p>（65）D</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 66,
+          "belong_page": 1,
+          "question_id": 36795,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">相比于</span> TCP <span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">UDP </span><span style=\"font-family: 宋体;\">的优势为（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">66</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">）。</span></span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36795",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>可靠传输</p>", "<p>开销较小</p>", "<p>拥塞控制</p>", "<p>流量控制</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 67,
+          "belong_page": 1,
+          "question_id": 36796,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">若一台服务器只开放了</span> 25 <span style=\"font-family: 宋体;\">和 </span><span style=\"font-family: Times New Roman;\">110 </span><span style=\"font-family: 宋体;\">两个端口，那么这台服务器可以提供（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">67</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）服务。</span></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36796",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>E-Mail</p>",
+            "<p>WEB&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+            "<p>DNS&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+            "<p>FTP</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 68,
+          "belong_page": 1,
+          "question_id": 36797,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">SNM P <span style=\"font-family: 宋体;\">是一种异步请求</span><span style=\"font-family: Times New Roman;\">/</span><span style=\"font-family: 宋体;\">响应协议，采用（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">68</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">）协议进行封装。</span></span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36797",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>IP</p>", "<p>ICMP</p>", "<p>TCP</p>", "<p>UDP</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 69,
+          "belong_page": 1,
+          "question_id": 36798,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">在一台安装好</span> TCP/IP <span style=\"font-family: 宋体;\">协议的计算机上，当网络连接不可用时，为了测试编写好的网络程序，通常使用的目的主机 </span><span style=\"font-family: Times New Roman;\">IP </span><span style=\"font-family: 宋体;\">地址为（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">69</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">）。</span></span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36798",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>0.0.0.0&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+            "<p>127.0.0.1</p>",
+            "<p>10.0.0.1&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+            "<p>210.225.21.255/24</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 70,
+          "belong_page": 1,
+          "question_id": 36799,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">测试网络连通性通常采用的命令是（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">70</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">）。</span></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36799",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>Nestat</p>", "<p>Ping</p>", "<p>msconfig</p>", "<p>cmd</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 71,
+          "belong_page": 1,
+          "question_id": 36800,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\">The development of the Semantic Web proceeds in steps, each step building a layer on</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">top of another. The pragmatic justification for this approach is that it is easier to</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">achieve <span style=\"font-family: 宋体;\">（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">71</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）</span>on small steps, whereas it is much harder to get everyone on board if</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">too much is attempted. Usually there are several research groups moving in different</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">directions; this <span style=\"font-family: 宋体;\">（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">72</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）</span> of ideas is a major driving force for scientific progress.</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">However<span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">from an engineering perspective there is a need to standardize. So, if most</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">researchers agree on certain issues and disagree on others, it makes sense to fix the</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">point of agreement. This way, even if the more ambitious research efforts should fai1<span style=\"font-family: 宋体;\">，</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">there wil1 be at least<span style=\"font-family: 宋体;\">（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">73</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）</span>positive outcomes.Once a <span style=\"font-family: 宋体;\">（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">74</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）</span>has been established <span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">many more groups and companies will adopt it</span><span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">instead of waiting to see which of the alternative research lines will be successful</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">in the end. The nature of the Semantic Web is such that companies and single users must</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">build tools<span style=\"font-family: 宋体;\">， </span><span style=\"font-family: Times New Roman;\">add content</span><span style=\"font-family: 宋体;\">， </span><span style=\"font-family: Times New Roman;\">and use that content. We cannot wait until the full Semantic</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">Web vision materializes-it may take another ten years for it to be realized to its full<span style=\"font-family: 宋体;\">（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">75</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）</span>(as envisioned today, of course).</span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36800",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>Conflicts （问题71）</p>",
+            "<p>Consensus&nbsp;（问题71）</p>",
+            "<p>Success&nbsp;（问题71）</p>",
+            "<p>disagreement&nbsp;（问题71）</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 72,
+          "belong_page": 1,
+          "question_id": 36801,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\">The development of the Semantic Web proceeds in steps, each step building a layer on</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">top of another. The pragmatic justification for this approach is that it is easier to</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">achieve <span style=\"font-family: 宋体;\">（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">71</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）</span>on small steps, whereas it is much harder to get everyone on board if</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">too much is attempted. Usually there are several research groups moving in different</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">directions; this <span style=\"font-family: 宋体;\">（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">72</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）</span> of ideas is a major driving force for scientific progress.</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">However<span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">from an engineering perspective there is a need to standardize. So, if most</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">researchers agree on certain issues and disagree on others, it makes sense to fix the</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">point of agreement. This way, even if the more ambitious research efforts should fai1<span style=\"font-family: 宋体;\">，</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">there wil1 be at least<span style=\"font-family: 宋体;\">（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">73</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）</span>positive outcomes.Once a <span style=\"font-family: 宋体;\">（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">74</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）</span>has been established <span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">many more groups and companies will adopt it</span><span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">instead of waiting to see which of the alternative research lines will be successful</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">in the end. The nature of the Semantic Web is such that companies and single users must</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">build tools<span style=\"font-family: 宋体;\">， </span><span style=\"font-family: Times New Roman;\">add content</span><span style=\"font-family: 宋体;\">， </span><span style=\"font-family: Times New Roman;\">and use that content. We cannot wait until the full Semantic</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">Web vision materializes-it may take another ten years for it to be realized to its full<span style=\"font-family: 宋体;\">（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">75</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）</span>(as envisioned today, of course).</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36801",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>Competition</p>",
+            "<p>Agreement</p>",
+            "<p>Cooperation</p>",
+            "<p>collaboration</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 73,
+          "belong_page": 1,
+          "question_id": 36802,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\">The development of the Semantic Web proceeds in steps, each step building a layer on</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">top of another. The pragmatic justification for this approach is that it is easier to</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">achieve <span style=\"font-family: 宋体;\">（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">71</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）</span>on small steps, whereas it is much harder to get everyone on board if</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">too much is attempted. Usually there are several research groups moving in different</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">directions; this <span style=\"font-family: 宋体;\">（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">72</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）</span> of ideas is a major driving force for scientific progress.</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">However<span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">from an engineering perspective there is a need to standardize. So, if most</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">researchers agree on certain issues and disagree on others, it makes sense to fix the</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">point of agreement. This way, even if the more ambitious research efforts should fai1<span style=\"font-family: 宋体;\">，</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">there wil1 be at least<span style=\"font-family: 宋体;\">（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">73</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）</span>positive outcomes.Once a <span style=\"font-family: 宋体;\">（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">74</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）</span>has been established <span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">many more groups and companies will adopt it</span><span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">instead of waiting to see which of the alternative research lines will be successful</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">in the end. The nature of the Semantic Web is such that companies and single users must</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">build tools<span style=\"font-family: 宋体;\">， </span><span style=\"font-family: Times New Roman;\">add content</span><span style=\"font-family: 宋体;\">， </span><span style=\"font-family: Times New Roman;\">and use that content. We cannot wait until the full Semantic</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">Web vision materializes-it may take another ten years for it to be realized to its full<span style=\"font-family: 宋体;\">（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">75</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）</span>(as envisioned today, of course).</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36802",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>Total&nbsp;&nbsp;&nbsp;&nbsp;（73）</p>",
+            "<p>Complete（73）</p>",
+            "<p>Partial&nbsp;&nbsp;&nbsp;&nbsp;（73）</p>",
+            "<p>entire（73）</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 74,
+          "belong_page": 1,
+          "question_id": 36803,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\">The development of the Semantic Web proceeds in steps, each step building a layer on</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">top of another. The pragmatic justification for this approach is that it is easier to</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">achieve <span style=\"font-family: 宋体;\">（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">71</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）</span>on small steps, whereas it is much harder to get everyone on board if</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">too much is attempted. Usually there are several research groups moving in different</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">directions; this <span style=\"font-family: 宋体;\">（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">72</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）</span> of ideas is a major driving force for scientific progress.</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">However<span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">from an engineering perspective there is a need to standardize. So, if most</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">researchers agree on certain issues and disagree on others, it makes sense to fix the</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">point of agreement. This way, even if the more ambitious research efforts should fai1<span style=\"font-family: 宋体;\">，</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">there wil1 be at least<span style=\"font-family: 宋体;\">（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">73</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）</span>positive outcomes.Once a <span style=\"font-family: 宋体;\">（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">74请回答此空</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）</span>has been established <span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">many more groups and companies will adopt it</span><span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">instead of waiting to see which of the alternative research lines will be successful</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">in the end. The nature of the Semantic Web is such that companies and single users must</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">build tools<span style=\"font-family: 宋体;\">， </span><span style=\"font-family: Times New Roman;\">add content</span><span style=\"font-family: 宋体;\">， </span><span style=\"font-family: Times New Roman;\">and use that content. We cannot wait until the full Semantic</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">Web vision materializes-it may take another ten years for it to be realized to its full<span style=\"font-family: 宋体;\">（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">75</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）</span>(as envisioned today, of course).</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36803",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>Technology</p>", "<p>Standard</p>", "<p>Pattern</p>", "<p>model</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 75,
+          "belong_page": 1,
+          "question_id": 36804,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\">The development of the Semantic Web proceeds in steps, each step building a layer on</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">top of another. The pragmatic justification for this approach is that it is easier to</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">achieve <span style=\"font-family: 宋体;\">（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">71</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）</span>on small steps, whereas it is much harder to get everyone on board if</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">too much is attempted. Usually there are several research groups moving in different</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">directions; this <span style=\"font-family: 宋体;\">（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">72</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）</span> of ideas is a major driving force for scientific progress.</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">However<span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">from an engineering perspective there is a need to standardize. So, if most</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">researchers agree on certain issues and disagree on others, it makes sense to fix the</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">point of agreement. This way, even if the more ambitious research efforts should fai1<span style=\"font-family: 宋体;\">，</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">there wil1 be at least<span style=\"font-family: 宋体;\">（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">73</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）</span>positive outcomes.Once a <span style=\"font-family: 宋体;\">（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">74</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）</span>has been established <span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">many more groups and companies will adopt it</span><span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">instead of waiting to see which of the alternative research lines will be successful</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">in the end. The nature of the Semantic Web is such that companies and single users must</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">build tools<span style=\"font-family: 宋体;\">， </span><span style=\"font-family: Times New Roman;\">add content</span><span style=\"font-family: 宋体;\">， </span><span style=\"font-family: Times New Roman;\">and use that content. We cannot wait until the full Semantic</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">Web vision materializes-it may take another ten years for it to be realized to its full<span style=\"font-family: 宋体;\">（请作答此空</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）</span>(as envisioned today, of course).</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36804",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>Area&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+            "<p>Goal</p>",
+            "<p>Object&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+            "<p>Extent</p>"
+          ],
+          "sort_son": "0"
+        }
+      ],
+      "summary": {
+        "radio": {
+          "total_question": 75,
+          "total_score": 0
+        },
+        "multiple": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "judge": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "fill": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "program": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "qanda": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "cloze": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "budingxiang": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "material": {
+          "total_question": 0,
+          "total_score": 0
+        }
+      },
+      "examine": {
+        "id": 2553,
+        "title": "2017年11月软件设计师选择题",
+        "len_time": {
+          "time": 0
+        },
+        "total_question": 75,
+        "total_score": 75,
+        "submit_limit_num": "0",
+        "machine_type": "1"
+      },
+      "answer_activity_start_time": 1585828800,
+      "checkProcess": 1,
+      "process": {
+        "is_delete": false
+      },
+      "train_id": 0
+    },
+    "pagination": {
+      "curPage": 1,
+      "pageSize": 1200,
+      "total": 75,
+      "hasNextPage": false
+    },
+    "totalOrder": [
+      {
+        "index": 1,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36730
+      },
+      {
+        "index": 2,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36731
+      },
+      {
+        "index": 3,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36732
+      },
+      {
+        "index": 4,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36733
+      },
+      {
+        "index": 5,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36734
+      },
+      {
+        "index": 6,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36735
+      },
+      {
+        "index": 7,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36736
+      },
+      {
+        "index": 8,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36737
+      },
+      {
+        "index": 9,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36738
+      },
+      {
+        "index": 10,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36739
+      },
+      {
+        "index": 11,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36740
+      },
+      {
+        "index": 12,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36741
+      },
+      {
+        "index": 13,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36742
+      },
+      {
+        "index": 14,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36743
+      },
+      {
+        "index": 15,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36744
+      },
+      {
+        "index": 16,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36745
+      },
+      {
+        "index": 17,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36746
+      },
+      {
+        "index": 18,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36747
+      },
+      {
+        "index": 19,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36748
+      },
+      {
+        "index": 20,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36749
+      },
+      {
+        "index": 21,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36750
+      },
+      {
+        "index": 22,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36751
+      },
+      {
+        "index": 23,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36752
+      },
+      {
+        "index": 24,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36753
+      },
+      {
+        "index": 25,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36754
+      },
+      {
+        "index": 26,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36755
+      },
+      {
+        "index": 27,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36756
+      },
+      {
+        "index": 28,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36757
+      },
+      {
+        "index": 29,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36758
+      },
+      {
+        "index": 30,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36759
+      },
+      {
+        "index": 31,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36760
+      },
+      {
+        "index": 32,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36761
+      },
+      {
+        "index": 33,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36762
+      },
+      {
+        "index": 34,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36763
+      },
+      {
+        "index": 35,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36764
+      },
+      {
+        "index": 36,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36765
+      },
+      {
+        "index": 37,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36766
+      },
+      {
+        "index": 38,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36767
+      },
+      {
+        "index": 39,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36768
+      },
+      {
+        "index": 40,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36769
+      },
+      {
+        "index": 41,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36770
+      },
+      {
+        "index": 42,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36771
+      },
+      {
+        "index": 43,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36772
+      },
+      {
+        "index": 44,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36773
+      },
+      {
+        "index": 45,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36774
+      },
+      {
+        "index": 46,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36775
+      },
+      {
+        "index": 47,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36776
+      },
+      {
+        "index": 48,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36777
+      },
+      {
+        "index": 49,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36778
+      },
+      {
+        "index": 50,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36779
+      },
+      {
+        "index": 51,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36780
+      },
+      {
+        "index": 52,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36781
+      },
+      {
+        "index": 53,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36782
+      },
+      {
+        "index": 54,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36783
+      },
+      {
+        "index": 55,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36784
+      },
+      {
+        "index": 56,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36785
+      },
+      {
+        "index": 57,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36786
+      },
+      {
+        "index": 58,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36787
+      },
+      {
+        "index": 59,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36788
+      },
+      {
+        "index": 60,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36789
+      },
+      {
+        "index": 61,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36790
+      },
+      {
+        "index": 62,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36791
+      },
+      {
+        "index": 63,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36792
+      },
+      {
+        "index": 64,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36793
+      },
+      {
+        "index": 65,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36794
+      },
+      {
+        "index": 66,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36795
+      },
+      {
+        "index": 67,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36796
+      },
+      {
+        "index": 68,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36797
+      },
+      {
+        "index": 69,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36798
+      },
+      {
+        "index": 70,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36799
+      },
+      {
+        "index": 71,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36800
+      },
+      {
+        "index": 72,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36801
+      },
+      {
+        "index": 73,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36802
+      },
+      {
+        "index": 74,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36803
+      },
+      {
+        "index": 75,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36804
+      }
+    ]
+  }
+}

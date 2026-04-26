@@ -1,0 +1,1963 @@
+{
+  "msg": "成功",
+  "status": "0",
+  "data": {
+    "data": {
+      "question": [
+        {
+          "index": 1,
+          "belong_page": 1,
+          "question_id": 47889,
+          "question_title": "<p>浮点数的表示分为阶和尾数两部分。两个浮点数相加时，需要先对阶，即（ ）(n 为阶差的绝对值)。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47889",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>将大阶向小阶对齐，同时将尾数左移 n 位</p>",
+            "<p>将大阶向小阶对齐，同时将尾数右移 n 位</p>",
+            "<p>将小阶向大阶对齐，同时将尾数左移 n 位</p>",
+            "<p>将小阶向大阶对齐，同时将尾数右移 n 位</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 2,
+          "belong_page": 1,
+          "question_id": 47894,
+          "question_title": "<p>流水线的吞吐率是指单位时间流水线处理的任务数，如果各段流水的操作时间不同，则流水线的吞吐率是（ ）的倒数。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47894",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>最短流水段操作时间间</p>",
+            "<p>各段流水的操作时间总和</p>",
+            "<p>最长流水段操作时间</p>",
+            "<p>流水段数乘以最长流水段操作时间</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 3,
+          "belong_page": 1,
+          "question_id": 47895,
+          "question_title": "<p>网络管理员通过命令行方式对路由器进行管理，要确保 ID，口令和会话话内存的保密性，应采取的访问方式是（ ）。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47895",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>控制台</p>", "<p>AUX</p>", "<p>TELNET</p>", "<p>SSH</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 4,
+          "belong_page": 1,
+          "question_id": 47899,
+          "question_title": "<p>攻击者通过发送一个目的主机已经接收过的报文来达到攻击目的，这种攻击方式属于 ( )攻击。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47899",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>重放</p>", "<p>拒绝服务</p>", "<p>数据截获</p>", "<p>数据流分析</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 5,
+          "belong_page": 1,
+          "question_id": 157530,
+          "question_title": "<p>以下有关计算机软件著作权的叙述中，正确的是( )。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "157530",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>非法进行拷贝、发布或更改软件的人被称为软件盗版者</p>",
+            "<p>《计算机软件保护条例》是国家知识产权局颁布的，用来保护软件著作权人的权益</p>",
+            "<p>软件著作权属于软件开发者，软件著作权自软件开发完成之日起产生</p>",
+            "<p>用户购买了具有版权的软件，则具有对该软件的使用权和复制权</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 6,
+          "belong_page": 1,
+          "question_id": 47901,
+          "question_title": "<p>王某是某公司的软件设计师，完成某项软件开发后按公司规定进行软件归档。以下有关 该软件的著作权的叙述中，正确的是( )。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47901",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>著作权应由公司和王某共同享有</p>",
+            "<p>著作权应由公司享有</p>",
+            "<p>著作权应由王某享有</p>",
+            "<p>除署名权以外，著作权的其它权利由王某享有</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 7,
+          "belong_page": 1,
+          "question_id": 47902,
+          "question_title": "<p>著作权中，( )的保护期不受限制。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47902",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>发表权</p>", "<p>发行权</p>", "<p>署名权</p>", "<p>展览权</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 8,
+          "belong_page": 1,
+          "question_id": 47903,
+          "question_title": "<p>数据字典是结构化分析的一个重要输出。数据字典的条目不包括( )。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47903",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>属性</p>", "<p>数据流</p>", "<p>数据项</p>", "<p>基本加工</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 9,
+          "belong_page": 1,
+          "question_id": 47904,
+          "question_title": "<p>某商店业务处理系统中，基本加工&quot;检查订货单&quot;的描述为:若订货单金额大于 5000 元， 且欠款时间超过 60 天，则不予批准；若订货单金额大于 5000 元,且欠款时间不超过 60 天， 则发出批准书和发货单；若订货单金额小于或等于 5000 元，则发出批准书和发货单，若欠款时间超过 60 天，则还要发催款通知书。现采用决策表表示该基本加工，则条件取值的组合数最少是( )。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47904",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>2<br/></p>", "<p>3</p>", "<p>4</p>", "<p>5</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 10,
+          "belong_page": 1,
+          "question_id": 47905,
+          "question_title": "<p>某软件项目的活动图如下图所示,其中顶点表示项目里程碑,连接顶点的边表示包含的活 动,边上的数字表示活动的持续天数，则完成该项目的最少时间为(请作答此空 )天。活动 EH 和 IJ 的松弛时间分别为(&nbsp; )天。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1536150652228948.jpg\" alt=\"1.jpg\" src=\"http://s2.51cto.com/images/20180905/1536150652228948.jpg\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47905",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>17</p>", "<p>19</p>", "<p>20</p>", "<p>22<br/></p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 11,
+          "belong_page": 1,
+          "question_id": 47906,
+          "question_title": "<p>某软件项目的活动图如下图所示,其中顶点表示项目里程碑,连接顶点的边表示包含的活 动,边上的数字表示活动的持续天数，则完成该项目的最少时间为(&nbsp; )天。活动 EH 和 IJ 的松弛时间分别为(请作答此空)天。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1536150686398524.jpg\" alt=\"1.jpg\" src=\"http://s2.51cto.com/images/20180905/1536150686398524.jpg\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47906",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>3 和 3</p>", "<p>3 和 6</p>", "<p>5 和 3</p>", "<p>5 和 6</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 12,
+          "belong_page": 1,
+          "question_id": 47907,
+          "question_title": "<p>工作量估算模型 COCOMO II 的层次结构中,估算选择不包括(&nbsp; )。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47907",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>对象点</p>", "<p>功能点</p>", "<p>用例数</p>", "<p>源代码行</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 13,
+          "belong_page": 1,
+          "question_id": 47908,
+          "question_title": "<p>( )是一种函数式编程语言。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47908",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>Lisp</p>", "<p>Prolog</p>", "<p>Python</p>", "<p>Java/C++</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 14,
+          "belong_page": 1,
+          "question_id": 151377,
+          "question_title": "将高级语言源程序翻译为可在计算机上执行的形式有多种不同的方式，其中( )。&nbsp;",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "151377",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>编译方式和解释方式都生成逻辑上与源程序等价的目标程序</p>",
+            "<p>编译方式和解释方式都不生成逻辑上与源程序等价的目标程序</p>",
+            "<p>编译方式生成逻辑上与源程序等价的目标程序,解释方式不生成</p>",
+            "<p>解释方式生成逻辑上与源程序等价的目标程序,编译方式不生成</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 15,
+          "belong_page": 1,
+          "question_id": 47910,
+          "question_title": "<p>对于后缀表达式 a b c - + d *(其中,-、+、*表示二元算术运算减、加、乘),与该后缀式等价的语法树为( &nbsp;)。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47910",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p><img style=\"max-width:100%;height:auto\" title=\"1536151082369904.jpg\" alt=\"1.jpg\" src=\"http://s2.51cto.com/images/20180905/1536151082369904.jpg\"/></p>",
+            "<p><img style=\"max-width:100%;height:auto\" title=\"1536151099881432.jpg\" alt=\"2.jpg\" src=\"http://s2.51cto.com/images/20180905/1536151099881432.jpg\"/></p>",
+            "<p><img style=\"max-width:100%;height:auto\" title=\"1536151117496044.jpg\" alt=\"1.jpg\" src=\"http://s2.51cto.com/images/20180905/1536151117496044.jpg\"/></p>",
+            "<p><img style=\"max-width:100%;height:auto\" title=\"1536151130541474.jpg\" alt=\"1.jpg\" src=\"http://s2.51cto.com/images/20180905/1536151130541474.jpg\"/></p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 16,
+          "belong_page": 1,
+          "question_id": 47911,
+          "question_title": "<p>假设铁路自动售票系统有 n 个售票终端，该系统为每个售票终端创建一个进程 Pi(i=1,2,…,n)管理车票销售过程。假设 Tj(j=1,2,…,m)单元存放某日某趟车的车票剩余票数，Temp 为 Pi进程的临时工作单元，x 为某用户的购票张数。Pi进程的工作流程如下图所示， 用 P 操作和Ⅴ操作实现进程间的同步与互斥。初始化时系统应将信号量 S 赋值为(请作答此空)。 图中(a)、(b)和(c)处应分别填入(&nbsp; )。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1536151189173384.jpg\" alt=\"1.jpg\" src=\"http://s2.51cto.com/images/20180905/1536151189173384.jpg\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47911",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>n-1</p>", "<p>0</p>", "<p>1</p>", "<p>2</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 17,
+          "belong_page": 1,
+          "question_id": 47912,
+          "question_title": "<p>假设铁路自动售票系统有 n 个售票终端，该系统为每个售票终端创建一个进程 Pi(i=1,2,…,n)管理车票销售过程。假设 Tj(j=1,2,…,m)单元存放某日某趟车的车票剩余票数，Temp 为 Pi进程的临时工作单元，x 为某用户的购票张数。Pi进程的工作流程如下图所示， 用 P 操作和Ⅴ操作实现进程间的同步与互斥。初始化时系统应将信号量 S 赋值为(&nbsp; )。 图中(a)、(b)和(c)处应分别填入(请作答此空)。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1536151248263256.jpg\" alt=\"1.jpg\" src=\"http://s2.51cto.com/images/20180905/1536151248263256.jpg\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47912",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>V(S)、P(S)和 P(S)</p>",
+            "<p>P(S)、P(S)和 V(S)</p>",
+            "<p>V(S)、V(S)和 P(S)</p>",
+            "<p>P(S)、V(S)和 V(S)</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 18,
+          "belong_page": 1,
+          "question_id": 47913,
+          "question_title": "<p>若系统在将( )文件修改的结果写回磁盘时发生崩溃,则对系统的影响相对较大。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47913",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>目录</p>", "<p>空闲块</p>", "<p>用户程序</p>", "<p>用户数据</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 19,
+          "belong_page": 1,
+          "question_id": 47914,
+          "question_title": "<p>I/O 设备管理软件一般分为 4 个层次,如下图所示。图中①②③分别对应( )。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1536151324189876.jpg\" alt=\"1.jpg\" src=\"http://s2.51cto.com/images/20180905/1536151324189876.jpg\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47914",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>设备驱动程序、虚设备管理、与设备无关的系统软件</p>",
+            "<p>设备驱动程序、与设备无关的系统软件、虚设备管理</p>",
+            "<p>与设备无关的系统软件、中断处理程序、设备驱动程序</p>",
+            "<p>与设备无关的系统软件、设备驱动程序、中断处理程序</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 20,
+          "belong_page": 1,
+          "question_id": 47915,
+          "question_title": "<p>若某文件系统的目录结构如下图所示,假设用户要访问文件 rw.dll，且当前工作目录为 swtools,则该文件的全文件名为(请作答此空),相对路径和绝对路径分别为(&nbsp; )。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1536151390979866.jpg\" alt=\"1.jpg\" src=\"https://s1.51ctocdn.cn//images/20180905/1536151390979866.jpg\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47915",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>rw.dll</p>",
+            "<p>flash/rw.dll</p>",
+            "<p>/swtools/flash/rw.dll</p>",
+            "<p>/Programe file/Skey/rw.dll</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 21,
+          "belong_page": 1,
+          "question_id": 47916,
+          "question_title": "<p>&nbsp;</p><p>&nbsp;</p><p>若某文件系统的目录结构如下图所示,假设用户要访问文件 rw.dll，且当前工作目录为 swtools,则该文件的全文件名为(&nbsp; ),相对路径和绝对路径分别为(请作答此空)。<br/></p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1536151858485782.jpg\" alt=\"1.jpg\" src=\"https://s1.51ctocdn.cn//images/20180905/1536151858485782.jpg\"/>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47916",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>/swtools/flash/和/flash/</p>",
+            "<p>flash/和/swtools/flash/</p>",
+            "<p>/swtools/flash/和 flash/</p>",
+            "<p>/flash/和 swtools/flash/</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 22,
+          "belong_page": 1,
+          "question_id": 47917,
+          "question_title": "<p>以下关于增量模型的叙述中,不正确的是( )。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47917",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>容易理解,管理成本低</p>",
+            "<p>核心的产品往往首先开发,因此经历最充分的&quot;测试&quot;</p>",
+            "<p>第一个可交付版本所需要的成本低,时间少</p>",
+            "<p>一开始用户需求不清晰,对开发进度和质量有影响</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 23,
+          "belong_page": 1,
+          "question_id": 47918,
+          "question_title": "<p>能力成熟度模型集成(CMMI)是若干过程模型的综合和改进。连续式模型和阶段式模型是 CMMI 提供的两种表示方法。连续式模型包括 6 个过程域能力等级( Capability Level,CL), 其中( )的共性目标是过程将可标识的输入工作产品转换成可标识的输出工作产品,以实现支持过程域的特定目标。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47918",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>CL1(已执行的)&nbsp;</p>",
+            "<p>CL2(已管理的)</p>",
+            "<p>CL3(已定义的)</p>",
+            "<p>CL4(定量管理的)</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 24,
+          "belong_page": 1,
+          "question_id": 47919,
+          "question_title": "<p>软件维护工具不包括( )工具。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47919",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>版本控制</p>", "<p>配置管理</p>", "<p>文档分析</p>", "<p>逆向工程</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 25,
+          "belong_page": 1,
+          "question_id": 47920,
+          "question_title": "<p>概要设计文档的内容不包括( )。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47920",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>体系结构设计</p>",
+            "<p>数据库设计</p>",
+            "<p>模块内算法设计</p>",
+            "<p>逻辑数据结构设计</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 26,
+          "belong_page": 1,
+          "question_id": 47921,
+          "question_title": "<p>耦合是模块之间的相对独立性(互相连接的紧密程度)的度量。耦合程度不取决( )。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47921",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>调用模块的方式</p>",
+            "<p>各个模块之间接口的复杂程度</p>",
+            "<p>通过接口的信息类型</p>",
+            "<p>模块提供的功能数</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 27,
+          "belong_page": 1,
+          "question_id": 47922,
+          "question_title": "<p>对下图所示的程序流程图进行判定覆盖测试,则至少需要（请作答此空）个测试用例。采用 McCabe 度量法计算其环路复杂度为（ ）。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1536151632186832.jpg\" alt=\"1.jpg\" src=\"http://s2.51cto.com/images/20180905/1536151632186832.jpg\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47922",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>2</p>", "<p>3</p>", "<p>4<br/></p>", "<p>5</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 28,
+          "belong_page": 1,
+          "question_id": 47923,
+          "question_title": "<p>对下图所示的程序流程图进行判定覆盖测试,则至少需要（ ）个测试用例。采用 McCabe 度量法计算其环路复杂度为（请作答此空）。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1536151662822605.jpg\" alt=\"1.jpg\" src=\"http://s2.51cto.com/images/20180905/1536151662822605.jpg\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47923",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>2</p>", "<p>3</p>", "<p>4</p>", "<p>5</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 29,
+          "belong_page": 1,
+          "question_id": 47924,
+          "question_title": "<p>软件调试的任务就是根据测试时所发现的错误,找出原因和具体的位置,进行改正。其常用的方法中,(&nbsp; &nbsp;)是指从测试所暴露的问题出发,收集所有正确或不正确的数据,分析它们之间的关系,提出假想的错误原因,用这些数据来证明或反驳,从而查出错误所在。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47924",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>试探法</p>", "<p>回溯法</p>", "<p>归纳法</p>", "<p>演绎法</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 30,
+          "belong_page": 1,
+          "question_id": 47925,
+          "question_title": "<p>对象的( )标识了该对象的所有属性(通常是静态的)以及每个属性的当前值(通常是动态的)。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47925",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>状态</p>", "<p>唯一ID</p>", "<p>行为</p>", "<p>语义</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 31,
+          "belong_page": 1,
+          "question_id": 47926,
+          "question_title": "<p>在下列机制中,(请作答此空)是指过程调用和响应调用所需执行的代码在运行时加以结合；而 (&nbsp; )是过程调用和响应调用所需执行的代码在编译时加以结合。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47926",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>消息传递</p>", "<p>类型检查</p>", "<p>静态绑定</p>", "<p>动态绑定</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 32,
+          "belong_page": 1,
+          "question_id": 47927,
+          "question_title": "<p>在下列机制中,()是指过程调用和响应调用所需执行的代码在运行时加以结合；而 (请作答此空)是过程调用和响应调用所需执行的代码在编译时加以结合。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47927",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>消息传递</p>", "<p>类型检查</p>", "<p>静态绑定</p>", "<p>动态绑定</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 33,
+          "belong_page": 1,
+          "question_id": 47949,
+          "question_title": "<p>同一消息可以调用多种不同类的对象的方法,这些类有某个相同的超类,这种现象是（ ）。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47949",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>类型转换</p>", "<p>映射</p>", "<p>单态</p>", "<p>多态</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 34,
+          "belong_page": 1,
+          "question_id": 47950,
+          "question_title": "<p>如下所示的图为 UML 的（请作答此空），用于展示某汽车导航系统中（ ）。 Mapping 对象获 取汽车当前位置（ GPS Location）的消息为(&nbsp; )。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1536199803712410.jpg\" alt=\"1.jpg\" src=\"http://s2.51cto.com/images/20180906/1536199803712410.jpg\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47950",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>类图</p>", "<p>组件图</p>", "<p>通信图</p>", "<p>部署图</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 35,
+          "belong_page": 1,
+          "question_id": 47951,
+          "question_title": "<p>如下所示的图为 UML 的（ ），用于展示某汽车导航系统中（请作答此空）。 Mapping 对象获 取汽车当前位置（ GPS Location）的消息为(&nbsp; )。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1536199990836813.jpg\" alt=\"1.jpg\" src=\"http://s2.51cto.com/images/20180906/1536199990836813.jpg\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47951",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>对象之间的消息流及其顺序</p>",
+            "<p>完成任务所进行的活动流</p>",
+            "<p>对象的状态转换及其事件顺序</p>",
+            "<p>对象之间消息的时间顺序</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 36,
+          "belong_page": 1,
+          "question_id": 47952,
+          "question_title": "<p>如下所示的图为 UML 的（ ），用于展示某汽车导航系统中（ ）。 Mapping 对象获 取汽车当前位置（ GPS Location）的消息为( 请作答此空)。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1536200007701708.jpg\" alt=\"1.jpg\" src=\"http://s2.51cto.com/images/20180906/1536200007701708.jpg\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47952",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>1: getGraphic()</p>",
+            "<p>2: getCarPos()</p>",
+            "<p>1.1: CurrentArea()</p>",
+            "<p>2. 1: getCarLocation()</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 37,
+          "belong_page": 1,
+          "question_id": 47953,
+          "question_title": "<p>假设现在要创建一个 Web应用框架,基于此框架能够创建不同的具体 Web应用,比如博客、 新闻网站和网上商店等;并可以为每个 Web 应用创建不同的主题样式,如浅色或深色等。这一 业务需求的类图设计适合采用(请作答此空)模式(如下图所示)。其中( )是客户程序使用的 主要接口,维护对主题类型的引用。此模式为( ),体现的最主要的意图是( )。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1536200124123741.jpg\" alt=\"1.jpg\" src=\"http://s2.51cto.com/images/20180906/1536200124123741.jpg\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47953",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>观察者(Observer)</p>",
+            "<p>访问者(Visitor)</p>",
+            "<p>策略(Strategy)&nbsp;</p>",
+            "<p>桥接(Bridge)</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 38,
+          "belong_page": 1,
+          "question_id": 47954,
+          "question_title": "<p>假设现在要创建一个 Web应用框架,基于此框架能够创建不同的具体 Web应用,比如博客、 新闻网站和网上商店等;并可以为每个 Web 应用创建不同的主题样式,如浅色或深色等。这一 业务需求的类图设计适合采用(如下图所示)模式( )。其中( 请作答此空)是客户程序使用的 主要接口,维护对主题类型的引用。此模式为( ),体现的最主要的意图是( )。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1536200157625479.jpg\" alt=\"1.jpg\" src=\"http://s2.51cto.com/images/20180906/1536200157625479.jpg\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47954",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>Webapplication</p>", "<p>Blog</p>", "<p>Theme</p>", "<p>Light</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 39,
+          "belong_page": 1,
+          "question_id": 47955,
+          "question_title": "<p>假设现在要创建一个 Web应用框架,基于此框架能够创建不同的具体 Web应用,比如博客、 新闻网站和网上商店等;并可以为每个 Web 应用创建不同的主题样式,如浅色或深色等。这一 业务需求的类图设计适合采用(如下图所示)模式( )。其中(&nbsp; )是客户程序使用的 主要接口,维护对主题类型的引用。此模式为(请作答此空),体现的最主要的意图是(&nbsp; )。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1536200195634584.jpg\" alt=\"1.jpg\" src=\"http://s2.51cto.com/images/20180906/1536200195634584.jpg\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47955",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>创建型对象模式</p>",
+            "<p>结构型对象模式</p>",
+            "<p>行为型类模式</p>",
+            "<p>行为型对象模式</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 40,
+          "belong_page": 1,
+          "question_id": 47956,
+          "question_title": "<p>假设现在要创建一个 Web应用框架,基于此框架能够创建不同的具体 Web应用,比如博客、 新闻网站和网上商店等;并可以为每个 Web 应用创建不同的主题样式,如浅色或深色等。这一 业务需求的类图设计适合采用(如下图所示)模式( )。其中( )是客户程序使用的 主要接口,维护对主题类型的引用。此模式为(&nbsp; ),体现的最主要的意图是(请作答此空)。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1536200366443214.jpg\" alt=\"1.jpg\" src=\"http://s2.51cto.com/images/20180906/1536200366443214.jpg\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47956",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>将抽象部分与其实现部分分离,使它们都可以独立地变化</p>",
+            "<p>动态地给一个对象添加一些额外的职责</p>",
+            "<p>为其他对象提供一种代理以控制对这个对象的访问</p>",
+            "<p>将一个类的接口转换成客户希望的另外一个接口。</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 41,
+          "belong_page": 1,
+          "question_id": 47957,
+          "question_title": "<p>下图所示为一个不确定有限自动机(NFA)的状态转换图。该 NFA 识别的字符串集合可用正规式( )描述。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1536200387330133.jpg\" alt=\"1.jpg\" src=\"http://s2.51cto.com/images/20180906/1536200387330133.jpg\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47957",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>ab*a</p>", "<p>(ab)*a</p>", "<p>a*ba</p>", "<p>a(ba)*</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 42,
+          "belong_page": 1,
+          "question_id": 47958,
+          "question_title": "<p>简单算术表达式的结构可以用下面的上下文无关文法进行描述(E 为开始符号),( ) 是符合该文法的句子。</p><p>E→T|E+T</p><p>T→F|T*F</p><p>F→-F|N</p><p>N→0|1|2|3|4|5|6|7|8|9</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47958",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>2--3*4</p>", "<p>2+-3*4</p>", "<p>(2+3)*4</p>", "<p>2*4-3</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 43,
+          "belong_page": 1,
+          "question_id": 47959,
+          "question_title": "<p>语法制导翻译是一种( )方法。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47959",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>动态语义分析</p>",
+            "<p>中间代码优化</p>",
+            "<p>静态语义分析</p>",
+            "<p>目标代码优化</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 44,
+          "belong_page": 1,
+          "question_id": 47963,
+          "question_title": "<p>给定教师关系 Teacher(T_no, T_name, Dept_name,Tel),其中属性 T_no、 T_name、Dept_name 和 Tel 的含义分别为教师号、教师姓名、学院名和电话号码。用 SQL 创建一个&quot;给定学院名求该学院的教师数&quot;的函数如下:</p><p>Create function Dept_count(Dept_name varchar(20))</p><p>()</p><p>begain</p><p>(请作答此空)</p><p>select count(*)into d_count</p><p>from Teacher</p><p>where Teacher.Dept_ name= Dept_name</p><p>return d_count</p><p>end</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47963",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>returns integer</p>",
+            "<p>returns d_count integer</p>",
+            "<p>&nbsp;declare integer</p>",
+            "<p>declare d_count integer</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 45,
+          "belong_page": 1,
+          "question_id": 47964,
+          "question_title": "<p>给定教师关系 Teacher(T_no, T_name, Dept_name,Tel),其中属性 T_no、 T_name、Dept_name 和 Tel 的含义分别为教师号、教师姓名、学院名和电话号码。用 SQL 创建一个&quot;给定学院名求该学院的教师数&quot;的函数如下:</p><p>Create function Dept_count(Dept_name varchar(20))</p><p>(请作答此空)</p><p>begin</p><p>( )</p><p>select count(*)into d_count</p><p>from Teacher</p><p>where Teacher.Dept_ name= Dept_name</p><p>return d_count</p><p>end</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47964",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>returns integer</p>",
+            "<p>returns d_count integer</p>",
+            "<p>declare integer</p>",
+            "<p>declare d_count integer</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 46,
+          "belong_page": 1,
+          "question_id": 47965,
+          "question_title": "<p>某集团公司下属有多个超市,每个超市的所有销售数据最终要存入公司的数据仓库中。假设该公司高管需要从时间、地区和商品种类三个维度来分析某家电商品的销售数据,那么最适合采用( )来完成</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47965",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>Data Extraction</p>", "<p>OLAP</p>", "<p>OLTP</p>", "<p>ETL</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 47,
+          "belong_page": 1,
+          "question_id": 47966,
+          "question_title": "<p>队列的特点是先进先出,若用循环单链表表示队列,则( )。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47966",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>入队列和出队列操作都不需要遍历链表</p>",
+            "<p>入队列和出队列操作都需要遍历链表</p>",
+            "<p>入队列操作需要遍历链表而出队列操作不需要</p>",
+            "<p>入队列操作不需要遍历链表而出队列操作需要</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 48,
+          "belong_page": 1,
+          "question_id": 47967,
+          "question_title": "<p>设有 n 阶三对角矩阵A,即非零元素都位于主对角线以及与主对角线平行且紧邻的两条对 角线上,现对该矩阵进行按行压缩存储,若其压储空间用数组 B 表示,A 的元素下标从 0 开 始,B 的元素下标从 1 开始。已知 A[0,0]存储在 B[1],A[n-1,n-1]存储在 B[3n-2],那么非零元素 A[i,j](0≤i&lt;n,0≤j&lt;n,|i-j|≤1)存储在 B[( )]。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47967",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>2i+j-1</p>", "<p>2i+j</p>", "<p>2i+j+1</p>", "<p>3i-j+1</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 49,
+          "belong_page": 1,
+          "question_id": 47969,
+          "question_title": "<p>对下面的二叉树进行顺序存储(用数组 MEM 表示),已知结点 A、B、C 在 MEM 中对应元素的 下标分别为 1、2、3,那么结点 D、E、F 对应的数组元素下标为( )。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1536200834700636.jpg\" alt=\"1.jpg\" src=\"https://s1.51ctocdn.cn//images/20180906/1536200834700636.jpg\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47969",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>4、5、6</p>", "<p>4、7、10</p>", "<p>6、7、8</p>", "<p>6、7、14</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 50,
+          "belong_page": 1,
+          "question_id": 47973,
+          "question_title": "<p>用哈希表存储元素时,需要进行冲突(碰撞)处理,冲突是指( )。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47973",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>关键字被依次映射到地址编号连续的存储位置</p>",
+            "<p>关键字不同的元素被映射到相同的存储位置</p>",
+            "<p>关键字相同的元素被映射到不同的存储位置</p>",
+            "<p>关键字被映射到哈希表之外的位置</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 51,
+          "belong_page": 1,
+          "question_id": 47975,
+          "question_title": "<p>现需要申请一些场地举办一批活动,每个活动有开始时间和结束时间。在同一个场地,如果一个活动结束之前,另一个活动开始,即两个活动冲突。若活动 A 从 1 时间开始,5 时间结束,活动 B 从 5 时间开始,8 时间结束,则活动 A 和 B 不冲突。现要计算 n 个活动需要的最少场地数。</p><p>求解该问题的基本思路如下(假设需要场地数为 m,活动数为 n,场地集合为 P1，P2,…,Pm),初始条件 Pi均无活动安排:</p><p>(1)采用快速排序算法对 n 个活动的开始时间从小到大排序,得到活动 a1，a2,…，an。对每个活动 ai，i 从 1 到 n,重复步骤(2)、(3)和(4)；</p><p>(2)从 p1开始,判断 ai与 P1的最后一个活动是否冲突,若冲突,考虑下一个场地 P2,…；</p><p>(3)一旦发现 ai与某个 Pj的最后一个活动不冲突,则将 ai安排到 Pj,考虑下一个活动；</p><p>(4)若 ai与所有己安排活动的 Pj的最后一个活动均冲突,则将 ai安排到一个新的场地,考虑下一个活动；</p><p>(5)将 n 减去没有安排活动的场地数即可得到所用的最少场地数算法首先采用了快速排序算法进行排序,其算法设计策略是(请作答此空 )；后面步骤采用的算法设计策略是( )。整个算法的时间复杂度是( &nbsp;)。下表给出了 n=11 的活动集合,根据上述算法,得到最少的场地数为( &nbsp;)。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1536208775431709.jpg\" alt=\"1.jpg\" src=\"http://s2.51cto.com/images/20180906/1536208775431709.jpg\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47975",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>分治</p>", "<p>动态规划</p>", "<p>贪心</p>", "<p>回溯</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 52,
+          "belong_page": 1,
+          "question_id": 47976,
+          "question_title": "<p>现需要申请一些场地举办一批活动,每个活动有开始时间和结束时间。在同一个场地,如果一个活动结束之前,另一个活动开始,即两个活动冲突。若活动 A 从 1 时间开始,5 时间结束,活动 B 从 5 时间开始,8 时间结束,则活动 A 和 B 不冲突。现要计算 n 个活动需要的最少场地数。</p><p>求解该问题的基本思路如下(假设需要场地数为 m,活动数为 n,场地集合为 P1，P2,…,Pm),初始条件 Pi均无活动安排:</p><p>(1)采用快速排序算法对 n 个活动的开始时间从小到大排序,得到活动 a1，a2,…，an。对每个活动 ai，i 从 1 到 n,重复步骤(2)、(3)和(4)；</p><p>(2)从 p1开始,判断 ai与 P1的最后一个活动是否冲突,若冲突,考虑下一个场地 P2,…；</p><p>(3)一旦发现 ai与某个 Pj的最后一个活动不冲突,则将 ai安排到 Pj,考虑下一个活动；</p><p>(4)若 ai与所有己安排活动的 Pj的最后一个活动均冲突,则将 ai安排到一个新的场地,考虑下一个活动；</p><p>(5)将 n 减去没有安排活动的场地数即可得到所用的最少场地数算法首先采用了快速排序算法进行排序,其算法设计策略是（ )；后面步骤采用的算法设计策略是(请作答此空)。整个算法的时间复杂度是( &nbsp;)。下表给出了 n=11 的活动集合,根据上述算法,得到最少的场地数为( &nbsp;)。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1536201218131556.jpg\" alt=\"1.jpg\" src=\"http://s2.51cto.com/images/20180906/1536201218131556.jpg\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47976",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>分治</p>", "<p>动态规划</p>", "<p>贪心</p>", "<p>回溯</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 53,
+          "belong_page": 1,
+          "question_id": 47977,
+          "question_title": "<p>现需要申请一些场地举办一批活动,每个活动有开始时间和结束时间。在同一个场地,如果一个活动结束之前,另一个活动开始,即两个活动冲突。若活动 A 从 1 时间开始,5 时间结束,活动 B 从 5 时间开始,8 时间结束,则活动 A 和 B 不冲突。现要计算 n 个活动需要的最少场地数。</p><p>求解该问题的基本思路如下(假设需要场地数为 m,活动数为 n,场地集合为 P1，P2,…,Pm),初始条件 Pi均无活动安排:</p><p>(1)采用快速排序算法对 n 个活动的开始时间从小到大排序,得到活动 a1，a2,…，an。对每个活动 ai，i 从 1 到 n,重复步骤(2)、(3)和(4)；</p><p>(2)从 p1开始,判断 ai与 P1的最后一个活动是否冲突,若冲突,考虑下一个场地 P2,…；</p><p>(3)一旦发现 ai与某个 Pj的最后一个活动不冲突,则将 ai安排到 Pj,考虑下一个活动；</p><p>(4)若 ai与所有己安排活动的 Pj的最后一个活动均冲突,则将 ai安排到一个新的场地,考虑下一个活动；</p><p>(5)将 n 减去没有安排活动的场地数即可得到所用的最少场地数算法首先采用了快速排序算法进行排序,其算法设计策略是（ )；后面步骤采用的算法设计策略是( )。整个算法的时间复杂度是(请作答此空)。下表给出了 n=11 的活动集合,根据上述算法,得到最少的场地数为( )。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1536201290340776.jpg\" alt=\"1.jpg\" src=\"https://s1.51ctocdn.cn//images/20180906/1536201290340776.jpg\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47977",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>Θ(lgn)</p>", "<p>Θ(n)</p>", "<p>Θ(nlgn)</p>", "<p>Θ(n^2)</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 54,
+          "belong_page": 1,
+          "question_id": 47979,
+          "question_title": "<p>现需要申请一些场地举办一批活动,每个活动有开始时间和结束时间。在同一个场地,如果一个活动结束之前,另一个活动开始,即两个活动冲突。若活动 A 从 1 时间开始,5 时间结束,活动 B 从 5 时间开始,8 时间结束,则活动 A 和 B 不冲突。现要计算 n 个活动需要的最少场地数。</p><p>求解该问题的基本思路如下(假设需要场地数为 m,活动数为 n,场地集合为 P1，P2,…,Pm),初始条件 Pi均无活动安排:</p><p>(1)采用快速排序算法对 n 个活动的开始时间从小到大排序,得到活动 a1，a2,…，an。对每个活动 ai，i 从 1 到 n,重复步骤(2)、(3)和(4)；</p><p>(2)从 p1开始,判断 ai与 P1的最后一个活动是否冲突,若冲突,考虑下一个场地 P2,…；</p><p>(3)一旦发现 ai与某个 Pj的最后一个活动不冲突,则将 ai安排到 Pj,考虑下一个活动；</p><p>(4)若 ai与所有己安排活动的 Pj的最后一个活动均冲突,则将 ai安排到一个新的场地,考虑下一个活动；</p><p>(5)将 n 减去没有安排活动的场地数即可得到所用的最少场地数算法首先采用了快速排序算法进行排序,其算法设计策略是（ ）；后面步骤采用的算法设计策略是( )。整个算法的时间复杂度是( )。下表给出了 n=11 的活动集合,根据上述算法,得到最少的场地数为(请作答此空)。<br/></p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1536201312849652.jpg\" alt=\"1.jpg\" src=\"http://s2.51cto.com/images/20180906/1536201312849652.jpg\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47979",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>4</p>", "<p>5</p>", "<p>6</p>", "<p>7</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 55,
+          "belong_page": 1,
+          "question_id": 47980,
+          "question_title": "<p>下列网络互连设备中,属于物理层的是( )。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47980",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>交换机</p>", "<p>中继器</p>", "<p>路由器</p>", "<p>网桥</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 56,
+          "belong_page": 1,
+          "question_id": 47982,
+          "question_title": "<p>在地址 htp:/ www.dailynews.com.cn/channel/welcome.htm 中,www.dailynews.com.cn 表示( 请作答此空), welcome. htm 表示( )。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47982",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>协议类型</p>", "<p>主机</p>", "<p>网页文件名</p>", "<p>路径</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 57,
+          "belong_page": 1,
+          "question_id": 47984,
+          "question_title": "<p>在地址 http://www.dailynews.com.cn/channel/welcome.htm 中,www.dailynews.com.cn 表示( &nbsp;), welcome. htm 表示( 请作答此空)。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47984",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>协议类型</p>", "<p>主机域名</p>", "<p>网页文件名</p>", "<p>路径</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 58,
+          "belong_page": 1,
+          "question_id": 47985,
+          "question_title": "<p>在 Linux 中,要更改一个文件的权限设置可使用( )命令。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47985",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>attrib</p>", "<p>modify</p>", "<p>chmod</p>", "<p>change</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 59,
+          "belong_page": 1,
+          "question_id": 47986,
+          "question_title": "<p>主域名服务器在接收到域名请求后,首先查询的是( )。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47986",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>本地 hosts 文件</p>",
+            "<p>转发域名服务器</p>",
+            "<p>本地缓存</p>",
+            "<p>授权域名服务器</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 60,
+          "belong_page": 1,
+          "question_id": 47990,
+          "question_title": "<p>Creating a clear map of where the project is going is an important first step.It lets you identify risks,clarify objectives,and determine if the project even makes sense.The only thing more important than the release plan is not to take it too seriously.Release planning is creating a game plan for your Web project（请作答此空）what you think you want your Web site to be.The plan is a guide for the content,design elements,and functionality of a Web site to be released to the public,to partners,or internally.It also（ ）how long the project will take and how much it will cost.What the plan is not is a functional（ ）that defines the project in detail or that produces a budget you can take to the bank.Basically you use a release Plan to do an initial sanity check of the project&#39;s（ ）and worthiness.Release Plans are useful road maps,but don&#39;t think of them as guides to the interstate road system.Instead,think of them as the（ ）used by early explorers-half rumor and guess and half hope and expectation.It&#39;s always a good idea to have a map of where a project is headed.</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47990",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>constructing</p>",
+            "<p>designing</p>",
+            "<p>implementing</p>",
+            "<p>outlining</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 61,
+          "belong_page": 1,
+          "question_id": 47991,
+          "question_title": "<p>Creating a clear map of where the project is going is an important first step. It lets you identify risks, clarify objectives, and determine if the project even makes sense. The only thing more important than the release plan is not to take it too seriously. Pelease planning is creating a game plan for your Web project ( ) what you think you want your Web site to be. The plan is a guide for the content, design elements, and functionality of a Web site to be released to the public, to partners, or internally. It also ( 请作答此空) how long the project will take and how much it will cost. What the plan is not is a functional ( )that defines the project in detail or that produces a budget you can take to the bank. Basically you use a release Plan to do an initial sanity check of the project&#39;s ( &nbsp;) and worthiness. Release Plans are useful road maps, but don&#39;t think of them as guides to the interstate road system. Instead, think of them as the ( &nbsp;) used by early explorers--half umor and guess and half hope and expectation. It&#39;s always a good idea to have a map of where a project is headed</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47991",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>defines</p>", "<p>calculates</p>", "<p>estimates</p>", "<p>knows</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 62,
+          "belong_page": 1,
+          "question_id": 47993,
+          "question_title": "<p>Creating a clear map of where the project is going is an important first step. It lets you identify risks, clarify objectives, and determine if the project even makes sense. The only thing more important than the release plan is not to take it too seriously. Pelease planning is creating a game plan for your Web project ( &nbsp;) what you think you want your Web site to be. The plan is a guide for the content, design elements, and functionality of a Web site to be released to the public, to partners, or internally. It also ( &nbsp;) how long the project will take and how much it will cost. What the plan is not is a functional (请作答此空 )that defines the project in detail or that produces a budget you can take to the bank. Basically you use a release Plan to do an initial sanity check of the project&#39;s ( &nbsp;) and worthiness. Release Plans are useful road maps, but don&#39;t think of them as guides to the interstate road system. Instead, think of them as the ( &nbsp;) used by early explorers--half umor and guess and half hope and expectation. It&#39;s always a good idea to have a map of where a project is headed</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47993",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>specification</p>",
+            "<p>structure</p>",
+            "<p>requirement</p>",
+            "<p>implementation</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 63,
+          "belong_page": 1,
+          "question_id": 47994,
+          "question_title": "<p>Creating a clear map of where the project is going is an important first step. It lets you identify risks, clarify objectives, and determine if the project even makes sense. The only thing more important than the release plan is not to take it too seriously. Pelease planning is creating a game plan for your Web project ( &nbsp;) what you think you want your Web site to be. The plan is a guide for the content, design elements, and functionality of a Web site to be released to the public, to partners, or internally. It also ( &nbsp;) how long the project will take and how much it will cost. What the plan is not is a functional ( &nbsp;)that defines the project in detail or that produces a budget you can take to the bank. Basically you use a release Plan to do an initial sanity check of the project&#39;s (请作答此空 ) and worthiness. Release Plans are useful road maps, but don&#39;t think of them as guides to the interstate road system. Instead, think of them as the ( ) used by early explorers--half umor and guess and half hope and expectation. It&#39;s always a good idea to have a map of where a project is headed</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47994",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>correctness</p>",
+            "<p>modifiability</p>",
+            "<p>feasibility</p>",
+            "<p>traceability</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 64,
+          "belong_page": 1,
+          "question_id": 47995,
+          "question_title": "<p>Creating a clear map of where the project is going is an important first step. It lets you identify risks, clarify objectives, and determine if the project even makes sense. The only thing more important than the release plan is not to take it too seriously. Pelease planning is creating a game plan for your Web project ( ) what you think you want your Web site to be. The plan is a guide for the content, design elements, and functionality of a Web site to be released to the public, to partners, or internally. It also ( ) how long the project will take and how much it will cost. What the plan is not is a functional ( )that defines the project in detail or that produces a budget you can take to the bank. Basically you use a release Plan to do an initial sanity check of the project&#39;s ( ) and worthiness. Release Plans are useful road maps, but don&#39;t think of them as guides to the interstate road system. Instead, think of them as the (请作答此空) used by early explorers--half rumor and guess and half hope and expectation. It&#39;s always a good idea to have a map of where a project is headed</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "47995",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>navigators</p>", "<p>maps</p>", "<p>guidance</p>", "<p>goals</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 65,
+          "belong_page": 1,
+          "question_id": 48904,
+          "question_title": "<p>给定关系模式 R&lt;U,F&gt;;其中 U 为属性集，F 是 U 上的一组函数依赖，那么 Armstroog 公理系统的增广律是指（ ）。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "48904",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>若 X→Y，X→Z，则 X→YZ 为 F 所蕴涵</p>",
+            "<p>若 X→Y，WY→Z，则 XW→Z 为 F 所蕴涵</p>",
+            "<p>若 X→Y，Y→Z 为 F 所蕴涵，则 X→Z 为 F 所蕴涵</p>",
+            "<p>若 X→Y，为 F 所蕴涵，且 Z包含于属性集U,则入 XZ→YZ 为 F 所蕴涵</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 66,
+          "belong_page": 1,
+          "question_id": 50945,
+          "question_title": "<p>对有 n 个结点、e 条边且采用数组表示法(即邻接矩阵存储)的无向图进行深度优先遍历, 时间复杂度为( )。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "50945",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>O(n^2)</p>", "<p>O(e^2)</p>", "<p>O(n+e)</p>", "<p>O(n*e)</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 67,
+          "belong_page": 1,
+          "question_id": 50946,
+          "question_title": "<p>计算机运行过程中，遇到突发率件，要求 CPU 暂时停止正在运行的程序，转去为突发事件服务，服务完毕，再自动返回原程序继续执行，这个过程称为（ ）。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "50946",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>阻塞</p>",
+            "<p>中断<br/></p>",
+            "<p>动态绑定<br/></p>",
+            "<p>静态绑定<br/></p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 68,
+          "belong_page": 1,
+          "question_id": 50947,
+          "question_title": "<p>计算机运行过程中，遇到突发率件，要求 CPU 暂时停止正在运行的程序，转去为突发事件服务，服务完毕，再自动返回原程序继续执行，处理过程中保存现场的目的是（ ）。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "50947",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>防止丢失数据</p>",
+            "<p>防止对其他部件造成影响</p>",
+            "<p>返回去维续执行原程序</p>",
+            "<p>为中断处理程序提供数据</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 69,
+          "belong_page": 1,
+          "question_id": 50948,
+          "question_title": "<p>海明码是一种纠错码，其方法是为需要校验的数据位增加若干校验位，使得校验位的值决定于某些被校位的数据，当被校数据出错时，可根据校验位的值的变化找到出错位，从而纠正错误。对于 32 位的数据，至少需要加（请作答此空）个校验位才能构成海明码。</p><p>以 10 位数据为例，其海明码表示为 D9D8D7D6D5D4P4D3D2D1P3D0P2P1中，其中 Di（0≤i≤9）表示数据位，Pj（1 ≤j≤4）表示校验位，数据位 D9由 P4、P3和 P2进行校验（从右至左 D9的位序为 14，即等于 8＋4＋2，因此用第 8 位的 P4、第 4 位的 P3和第 2 位的 P2校验），数据位 D5 由（ ）进行校验</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "50948",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>3</p>", "<p>4</p>", "<p>5</p>", "<p>6</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 70,
+          "belong_page": 1,
+          "question_id": 50949,
+          "question_title": "<p>海明码是一种纠错码，其方法是为需要校验的数据位增加若干校验位，使得校验位的值决定于某些被校位的数据，当被校数据出错时，可根据校验位的值的变化找到出错位，从而纠正错误。以 10 位数据为例，其海明码表示为 D9D8D7D6D5D4P4D3D2D1P3D0P2P1中，其中 Di（0≤i≤9）表示数据位，Pj（1 ≤j≤4）表示校验位，数据位 D9由 P4、P3和 P2进行校验（从右至左 D9的位序为 14，即等于 8＋4＋2，因此用第 8 位的 P4、第 4 位的 P3和第 2 位的 P2校验），数据位 D5 由（ ）进行校验。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "50949",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>P4P1</p>", "<p>P4P2</p>", "<p>P4P3P1</p>", "<p>P3P2P1</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 71,
+          "belong_page": 1,
+          "question_id": 50950,
+          "question_title": "<p>在安全通信中，S 将所发送的信息使用（请作答此空 ）进行数字签名，T 收到该消息后可利用（ ）验证该消息的真实性。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "50950",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>S 的公钥</p>", "<p>S 的私钥</p>", "<p>T 的公钥</p>", "<p>T 的私钥</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 72,
+          "belong_page": 1,
+          "question_id": 50951,
+          "question_title": "<p>在安全通信中，S将所发送的信息进行数字签名，T收到该消息后可利用（ ）验证该消息的真实性。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "50951",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>S 的公钥</p>", "<p>S 的私钥</p>", "<p>T 的公钥</p>", "<p>T 的私钥</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 73,
+          "belong_page": 1,
+          "question_id": 50952,
+          "question_title": "<p>在网络安全管理中,加强内防内控可采取的策略有( &nbsp;)。<br/>①控制终端接入数量<br/>②终端访问授权，防止合法终端越权访问<br/>③加强终端的安全检查与策略管理<br/>④加强员工上网行为管理与违规审计</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "50952",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>②③</p>", "<p>②④</p>", "<p>①②③④</p>", "<p>②③④</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 74,
+          "belong_page": 1,
+          "question_id": 50953,
+          "question_title": "<p>给定关系 R(A,B,C,D,E)与 S(B,C,F,G),那么与表达式π2,4,6,7(Ơ2&lt; 7(R▷◁S))等价的 SQL&nbsp;SELECT(作答此空) FROM R, S WHERE ( )；</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "50953",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>R.B，D，F，G</p>",
+            "<p>R.B，E，S.C，F，G</p>",
+            "<p>R.B，R.D，S.C，F</p>",
+            "<p>R.B，R.C，S.C，F</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 75,
+          "belong_page": 1,
+          "question_id": 50954,
+          "question_title": "<p>给定关系 R(A,B,C,D,E)与 S(B,C,F,G),那么与表达式π2,4,6,7(Ơ2&lt; 7(R▷◁S))等价的 SQL&nbsp;SELECT(&nbsp; ) FROM R, S WHERE ( 请回答此空)；</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "50954",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>R.B=S.B OR R.C=S.C OR R.B &lt;S.G</p>",
+            "<p>R.B=S.B OR R.C=S.C OR R.B &lt;S.C</p>",
+            "<p>R.B=S.B AND R.C=S.C AND R.B &lt;S.G</p>",
+            "<p>R.B=S.B AND R.C=S.C AND R.B &lt;S.C</p>"
+          ],
+          "sort_son": "0"
+        }
+      ],
+      "summary": {
+        "radio": {
+          "total_question": 75,
+          "total_score": 0
+        },
+        "multiple": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "judge": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "fill": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "program": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "qanda": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "cloze": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "budingxiang": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "material": {
+          "total_question": 0,
+          "total_score": 0
+        }
+      },
+      "examine": {
+        "id": 3671,
+        "title": "2018年5月软件设计师选择题",
+        "len_time": {
+          "time": 0
+        },
+        "total_question": 75,
+        "total_score": 75,
+        "submit_limit_num": "0",
+        "machine_type": "1"
+      },
+      "answer_activity_start_time": 1585828800,
+      "checkProcess": 1,
+      "process": {
+        "is_delete": false
+      },
+      "train_id": 0
+    },
+    "pagination": {
+      "curPage": 1,
+      "pageSize": 1200,
+      "total": 75,
+      "hasNextPage": false
+    },
+    "totalOrder": [
+      {
+        "index": 1,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47889
+      },
+      {
+        "index": 2,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47894
+      },
+      {
+        "index": 3,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47895
+      },
+      {
+        "index": 4,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47899
+      },
+      {
+        "index": 5,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 157530
+      },
+      {
+        "index": 6,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47901
+      },
+      {
+        "index": 7,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47902
+      },
+      {
+        "index": 8,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47903
+      },
+      {
+        "index": 9,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47904
+      },
+      {
+        "index": 10,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47905
+      },
+      {
+        "index": 11,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47906
+      },
+      {
+        "index": 12,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47907
+      },
+      {
+        "index": 13,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47908
+      },
+      {
+        "index": 14,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 151377
+      },
+      {
+        "index": 15,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47910
+      },
+      {
+        "index": 16,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47911
+      },
+      {
+        "index": 17,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47912
+      },
+      {
+        "index": 18,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47913
+      },
+      {
+        "index": 19,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47914
+      },
+      {
+        "index": 20,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47915
+      },
+      {
+        "index": 21,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47916
+      },
+      {
+        "index": 22,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47917
+      },
+      {
+        "index": 23,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47918
+      },
+      {
+        "index": 24,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47919
+      },
+      {
+        "index": 25,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47920
+      },
+      {
+        "index": 26,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47921
+      },
+      {
+        "index": 27,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47922
+      },
+      {
+        "index": 28,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47923
+      },
+      {
+        "index": 29,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47924
+      },
+      {
+        "index": 30,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47925
+      },
+      {
+        "index": 31,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47926
+      },
+      {
+        "index": 32,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47927
+      },
+      {
+        "index": 33,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47949
+      },
+      {
+        "index": 34,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47950
+      },
+      {
+        "index": 35,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47951
+      },
+      {
+        "index": 36,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47952
+      },
+      {
+        "index": 37,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47953
+      },
+      {
+        "index": 38,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47954
+      },
+      {
+        "index": 39,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47955
+      },
+      {
+        "index": 40,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47956
+      },
+      {
+        "index": 41,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47957
+      },
+      {
+        "index": 42,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47958
+      },
+      {
+        "index": 43,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47959
+      },
+      {
+        "index": 44,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47963
+      },
+      {
+        "index": 45,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47964
+      },
+      {
+        "index": 46,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47965
+      },
+      {
+        "index": 47,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47966
+      },
+      {
+        "index": 48,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47967
+      },
+      {
+        "index": 49,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47969
+      },
+      {
+        "index": 50,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47973
+      },
+      {
+        "index": 51,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47975
+      },
+      {
+        "index": 52,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47976
+      },
+      {
+        "index": 53,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47977
+      },
+      {
+        "index": 54,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47979
+      },
+      {
+        "index": 55,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47980
+      },
+      {
+        "index": 56,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47982
+      },
+      {
+        "index": 57,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47984
+      },
+      {
+        "index": 58,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47985
+      },
+      {
+        "index": 59,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47986
+      },
+      {
+        "index": 60,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47990
+      },
+      {
+        "index": 61,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47991
+      },
+      {
+        "index": 62,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47993
+      },
+      {
+        "index": 63,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47994
+      },
+      {
+        "index": 64,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 47995
+      },
+      {
+        "index": 65,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 48904
+      },
+      {
+        "index": 66,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 50945
+      },
+      {
+        "index": 67,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 50946
+      },
+      {
+        "index": 68,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 50947
+      },
+      {
+        "index": 69,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 50948
+      },
+      {
+        "index": 70,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 50949
+      },
+      {
+        "index": 71,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 50950
+      },
+      {
+        "index": 72,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 50951
+      },
+      {
+        "index": 73,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 50952
+      },
+      {
+        "index": 74,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 50953
+      },
+      {
+        "index": 75,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 50954
+      }
+    ]
+  }
+}

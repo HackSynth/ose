@@ -1,0 +1,223 @@
+{
+  "msg": "成功",
+  "status": "0",
+  "data": {
+    "data": {
+      "question": [
+        {
+          "index": 1,
+          "belong_page": 1,
+          "question_id": 50955,
+          "question_title": "<p>阅读下列说明，回答问题 1 至问题 4，将解答填入答题纸的对应栏内。<br/>【说明】<br/>某医疗护理机构为老年人或有护理需求者提供专业护理，现欲开发一基于 web 的医疗管理系统，以改善医疗护理效率，该系统的主要要功能如下：<br/>（1）通用信息查询，客户提交通用信息查询请求，查询通用信息表，返回查询结果。<br/>（2）医生聘用。医生提出应聘／辞职申请，交由主管进行聘用/解聘审批，更新医生表，并给医生反馈聘用/解聘结果：删除解聘医生的出诊安排。<br/>（3）预约处理。医生安排出诊时间，存入医生出诊时间表，根据客户提交的预约查询请求，查询在职医生及其出诊时间等预约所需数据并返回：创建预约，提交预约请求，在预约表中新增预约记录，更新所约医生出诊时间并给医生发送预约通知；给客户反馈预约结果。<br/>（4）药品管理。医生提交处方，根据药品名称从药品数据中查询相关药品库存信息，开出药品，更新对应药品的库存以及预约表中的治疗信息；给医生发送“药品已开出”反馈。<br/>（5）报表创建。根据主管提交的报表查询请求（报表类型和时间段），从预约数据、通用信息、药品库存数据、医生以及医生出诊时间中进行查询，生成报表返回给主管。<br/>现采用结构化方法对医疗管理系统进行分析与设计，获得如图 1-1 所示的上下文数据流图和图 1-2 所示的 0 层数据流图。<img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1537524688279459.png\" alt=\"111.png\" src=\"https://s1.51ctocdn.cn//images/20180921/1537524688279459.png\"/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1537524693798940.png\" alt=\"2222.png\" src=\"https://s1.51ctocdn.cn//images/20180921/1537524693798940.png\"/><br/>【问题 1】（3 分）<br/>使用说明中的词语，给出图 1－1 中的实体 E1～E3 的名称。 <br/>【问题 2】（5 分）<br/>使用说明中的词语，给出图 1－2 中的数据存储 D1～D5 的名称。<br/>【问题 3】（4 分） 使用说明和图中术语，补充图 1－2 中缺失的数据流及其起点和终点。 <br/>【问题 4】（3 分） 使用说明中的词语，说明“预约处理”可以分解为哪些子加工，并说明建模图 1－1 和图 1－2 是如何保持数据流图平衡。<br/><br/><br/><br/><br/><br/></p>",
+          "question_type": 5,
+          "answer_type": 5,
+          "material_text": "",
+          "score": 15,
+          "new_parent_id": "50955",
+          "show_type_name": "问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>【问题 1】E1：客户&nbsp; E2：医生&nbsp;E3：主管<br/>【问题 2】D1：通用信息表&nbsp; D2：预约表&nbsp;&nbsp; D3：在职医生表&nbsp;&nbsp;&nbsp;<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; D4：出诊时间表&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;D5：药品库存信息表<br/>【问题 3】数据流名称：删除解聘医生的预约信息&nbsp;&nbsp; <br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 起点：P2&nbsp;&nbsp;&nbsp; 终点：D2<br/>数据流名称：删除解聘医生的出诊安排&nbsp;&nbsp; 起点：P2&nbsp;&nbsp;&nbsp; 终点：D4<br/>数据流名称：查询相关药品库存信息&nbsp;&nbsp; 起点：D5&nbsp;&nbsp;&nbsp; 终点：P4<br/>数据流名称：更新治疗信息&nbsp;&nbsp; 起点： P4&nbsp;&nbsp; 终点：D2<br/><br/>【问题 4】<br/>“预约处理”可以分为预约就诊、安排出诊时间两个子加工。<br/>父图与子图要在数据流的数量与流向上保持一致。</p>"
+          ],
+          "option": null,
+          "sort_son": "0"
+        },
+        {
+          "index": 2,
+          "belong_page": 1,
+          "question_id": 50956,
+          "question_title": "<p>阅读下列说明，回答问题 1 至问题 3，将解答填入答题纸的对应栏内。<br/>【说明】<br/>某海外代购公司为扩展公司业务，需要开发一个信息化管理系统。请根据公司现有业务及需求完成该系统的数据库设计。<br/>【需求描述】<br/>（1）记录公司员工信息。员工信息包括工号、身份证号、姓名、性别和一个手机号，工号唯一标识每位员工，员工分为代购员和配送员。<br/>（2）记录采购的商品信息。商品信息包括商品名称、所在超市名称、采购价格、销售价格和商品介绍，系统内部用商品条码唯一标识每种商品。一种商品只在一家超市代购。<br/>（3）记录顾客信息。顾客信息包括顾客真实姓名、身份证号（清关缴税用）、一个手机号和一个收货地址，系统自动生成唯一的顾客编号。<br/>（4）记录托运公司信息。托运公司信息包括托运公司名称、电话和地址，系统自动生成唯一的托运公司编号。<br/>（5）顾客登录系统之后，可以下订单购买商品。订单支付成功后，系统记录唯一的支付凭证编号，顾客需要在订单里指定运送方式：空运或海运。<br/>（6）代购员根据顾客的订单在超市采购对应商品，一份订单所含的多个商品可能由多名代购员从不同超市采购。<br/>（7）采购完的商品交由配送员根据顾客订单组合装箱，然后交给托运公司运送。托运公司按顾客订单核对商品名称和数量，然后按顾客的地址进行运送。<br/>【概念模型设计】<br/>根据需求阶段收集的信息，设计的实体联系图（不完整）如图 2－1 所示。<img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1537525096261080.png\" alt=\"3333.png\" src=\"http://s2.51cto.com/images/20180921/1537525096261080.png\"/><br/><br/><br/><br/>【逻辑结构设计】<br/><br/>根据概念模型设计阶段完成的实体联系图，得出如下关系模式（不完整）：<br/>员工（工号，身份证号，姓名，性别，手机号）<br/>商品（条码，商品名称，所在超市名称，采购价格，销售价格，商品介绍）<br/>顾客（编号，姓名，身份证号，手机号，收货地址）<br/>托运公司（托运公司编号，托运公司名称，电话，地址）<br/>订单（订单 ID，（a），商品数量，运送方式，支付凭证编号）<br/>代购（代购 ID，代购员工号，（b））<br/>运送（运送 ID，配送员工号，托运公司编号，订单 ID，发运时间）<br/>【问题 1】（3 分）<br/>根据问题描述，补充图 2－1 的实体联系图。<br/>【问题 2】（6 分）<br/>补充逻辑结构设计结果中的（a）、（b）两处空缺。<br/>【问题 3】（6 分）<br/>为方便顾客，允许顾客在系统中保存多组收货地址。请根据此需求，增加“顾客地址”弱实体，对图 2－1 进行补充，并修改“运送”关系模式。</p>",
+          "question_type": 5,
+          "answer_type": 5,
+          "material_text": "",
+          "score": 15,
+          "new_parent_id": "50956",
+          "show_type_name": "问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>【问题 1】<img style=\"max-width:100%;height:auto\"  title=\"1537525200463573.png\" alt=\"4444.png\" src=\"http://s2.51cto.com/images/20180921/1537525200463573.png\"/><br/>【问题 2】<br/>（a）商品条码、顾客编号<br/>（b）订单ID<br/>【问题 3】<img style=\"max-width:100%;height:auto\"  title=\"1537525319160587.png\" alt=\"5555.png\" src=\"http://s2.51cto.com/images/20180921/1537525319160587.png\"/>运送关系模式新增联系，与顾客地址。<br/></p>"
+          ],
+          "option": null,
+          "sort_son": "0"
+        },
+        {
+          "index": 3,
+          "belong_page": 1,
+          "question_id": 50957,
+          "question_title": "<p>阅读下列说明，回答问题 1 至问题 3，将解答填入答题纸的对应栏内。<br/>【说明】<br/>某 ETC（ Electronic Toll Collection，不停车收费）系统在高速公路沿线的特定位置上设置一个横跨道路上空的龙门架（ Toll gantry），龙门架下包括 6条车道（ Trafficlanes），每条车道上安装有雷达传感器（ Radar sensor）、无线传输器（ Radio transceiver）和数码相机（Digital&nbsp; Camera）等用于不停车收费的设备，以完成正常行驶速度下的收费工作。该系统的基本工作过程如下：<br/>（1）每辆汽车上安装有车载器，驾驶员（ Driver）将一张具有唯一识别码的磁卡插入车载器中。磁卡中还包含有驾驶员账户的当前信用记录。<br/>（2）当汽车通过某条车道时，不停车收费设备识别车载器内的特有编码，判断车型，将收集到的相关信息发送到该路段所属的区域系统（ Regional center）中，计算通行费用创建收费交易（Transaction），从驾驶员的专用账户中扣除通行费用。如果驾驶员账户透支，则记录透支账户交易信息。区域系统再将交易后的账户信息发送到维护驾驶员账户信息的中心系统（ Central&nbsp; system）<br/>（3）车载器中的磁卡可以使用邮局的付款机进行充值。充值信息会传送至中心系统，以更新驾驶员账户的余额。<br/>（4）当没有安装车载器或者车载器发生故障的车辆通过车道时，车道上的数码相机将对车辆进行拍照，并将车辆照片及拍摄时间发送到区域系统，记录失败的交易信息；并将该交易信息发送到中心系统。<br/>（5）区域系统会获取不停车收费设备所记录的交通事件（ Traffic<br/>events）；交通广播电台（ Traffic<br/>advice center）根据这些交通事件进行路况分析并播报路况。<br/>现采用面向对象方法对上述系统进行分析与设计，得到如表 3－1 所示的用例列表以及如图 3－1 所示的用例图和图 3－2 所示的分析类图。<img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1537525420635451.png\" alt=\"66666.png\" src=\"http://s2.51cto.com/images/20180921/1537525420635451.png\"/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1537525450758334.png\" alt=\"7777.png\" src=\"http://s2.51cto.com/images/20180921/1537525450758334.png\"/>【问题 1】（4 分）<br/>根据说明中的描述，给出图 3－1 中 A1～A4 所对应的参与者名称。<br/>【问题 2】（5 分）<br/>根据说明中的描述及表 3－1，给出图 3－1 中 U1－U5 所对应的用例名称。<br/>【问题 3】（6 分）<br/>根据说明中的描述，给出图 3－2 中 C1~C6 所对应的类名。</p>",
+          "question_type": 5,
+          "answer_type": 5,
+          "material_text": "",
+          "score": 15,
+          "new_parent_id": "50957",
+          "show_type_name": "问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>【问题 1】<br/>A1:Central system/Driver<br/>A2:Driver/Central system<br/>A3:Regional center/Traffic advice center<br/>A4:Traffic advice center/Regional center<br/><br/>【问题 2】<br/>U1:Underpaid transaction/Record Illegal use<br/>U2:Record Illegal use/Underpaid transaction<br/>U3:Create transaction<br/>U4:Record traffic event<br/>U5:Charge card<br/><br/>【问题 3】<br/>C1:Center system <br/>C2: Toll gantry<br/>C3: Traffic lanes<br/>C4:Radar sensor/Radio transceiver/Digital Camera<br/>C5:Radio transceiver/Radar sensor/Digital Camera<br/>C6: Digital Camera/Radar sensor/Radio&nbsp; transceiver</p>"
+          ],
+          "option": null,
+          "sort_son": "0"
+        },
+        {
+          "index": 4,
+          "belong_page": 1,
+          "question_id": 50958,
+          "question_title": "<p><br/></p><p><br/></p><p><br/></p><p>阅读下列说明和 C 代码，回答问题 1 和问题 2，将解答填入答题纸的对应栏内。<br/>【说明】<br/>某公司购买长钢条，将其切割后进行出售。切割钢条的成本可以忽略不计，钢条的长度为整英寸。已知价格表 P，其中中 Pi（i＝1，2，...，m）表示长度为 i 英寸的钢条的价格。现要求解使销售收益最大的切割方案。求解此切割方案的算法基本思想如下：<br/>假设长钢条的长度为 n 英寸，最佳切割方案的最左边切割段长度为 i 英寸，则继续求解剩余长度为 n－i 英寸钢条的最佳切割方案。考虑所有可能的 i，得到的最大收益 rn对应的切割方案即为最佳切割方案。rn的递归定义如下：<br/>rn =max1≤ i ≤n(pi +rn-i)<br/>对此递归式，给出自顶向下和自底向上两种实现方式<br/></p><p>&nbsp;</p>【C 代码】<br/><br/>/*常量和变量说明<br/>n：长钢条的长度<br/>P[]：价格数组<br/>*/<br/>#define LEN 100<br/>int Top_Down_ Cut_Rod(int P[]，int n)｛/*自顶向下*/<br/>int r=0;<br/>int i;<br/>if(n==0){<br/>retum 0;<br/>}<br/>for(i=1;（1）;i++){<br/>int tmp=p[i]+Top_Down_ Cut_Rod(p,n-i);<br/>r=(r&gt;=tmp)?r：tmp；<br/>}<br/>return r；<br/>}<br/>int Bottom_Up_Cut_Rod(int p[],int n){ /*自底向上*/<br/>int r[LEN]={0};<br/>int temp=0;<br/>int i,j;<br/>for(j=1;j&lt;=n;j++){<br/>temp=0;<br/>for(i=1;(2);i++){<br/>temp=(3);<br/>}<br/>（4）<br/>}<br/>return r[n];<br/>}<br/><br/>【问题 1】（8 分）<br/>根据说明，填充 C 代码中的空（1）～（4）。<br/>【问题 2】（7 分）<br/>根据说明和 C 代码，算法采用的设计策略为（5）。<br/>求解 rn时，自顶向下方法的时间复杂度为（6）；自底向上方法的时间复杂度为（7）（用O 表示）。",
+          "question_type": 5,
+          "answer_type": 5,
+          "material_text": "",
+          "score": 15,
+          "new_parent_id": "50958",
+          "show_type_name": "问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>【问题 1】<br/>(1)i&lt;=n<br/>(2)i&lt;=j<br/>(3)temp=（temp&gt;=p[i]+r[j-1]）?temp:（p[i]+r[j-1]）<br/>(4)r[j]=temp<br/>【问题 2】<br/>(5)动态规划<br/>(6)O（2n）<br/>(7)O（n2）</p>"
+          ],
+          "option": null,
+          "sort_son": "0"
+        },
+        {
+          "index": 5,
+          "belong_page": 1,
+          "question_id": 50959,
+          "question_title": "<p>阅读下列说明和 C++代码,将应填入(n)处的字句写在答题纸的对应栏内。<br/>【说明】<br/>生成器( Builder)模式的意图是将一个复杂对象的构建与它的表示分离,使得同样的构建过程可以创建不同的表示。图 5-1 所示为其类图。<img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1537526118291466.png\" alt=\"888888.png\" src=\"http://s2.51cto.com/images/20180921/1537526118291466.png\"/><br/>【C++代码】<br/>#include &lt;iostream&gt;<br/>#include &lt;string&gt;<br/>using namespace std;<br/>class Product {<br/>private:&nbsp; &nbsp;&nbsp;<br/>string partA, partB;<br/>public:<br/>Product() {&nbsp;&nbsp; }<br/>&nbsp; &nbsp; &nbsp;void<br/>setPartA(const string&amp; s) { PartA = s;}<br/>&nbsp;&nbsp;&nbsp;&nbsp; void<br/>setPartB(const string&amp; s) { PartB = s;}<br/>//&nbsp; 其余代码省略<br/>};<br/>class Builder {<br/>public:<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （1）&nbsp;&nbsp; ;<br/>virtual void buildPartB()=0;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （2）&nbsp;&nbsp; ;<br/>};<br/>class ConcreteBuilder1 : public Builder {<br/>private:<br/>Product*&nbsp;&nbsp; product;<br/>public:<br/>ConcreteBuilder1() {product = new Product();&nbsp;&nbsp;&nbsp;&nbsp; }<br/>&nbsp;&nbsp;&nbsp; void<br/>buildPartA() {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （3）&nbsp;&nbsp;&nbsp;&nbsp; (&quot;Component A&quot;); }<br/>&nbsp;&nbsp;&nbsp; void<br/>buildPartB() {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （4）&nbsp;&nbsp;&nbsp;&nbsp; (&quot;Component B&quot;); }<br/>Product* getResult() { return product; }<br/>//&nbsp; 其余代码省略<br/>};<br/>class ConcreteBuilder2 : public Builder {&nbsp; &nbsp;&nbsp;<br/>/*&nbsp;&nbsp;&nbsp; 代码省略&nbsp;&nbsp;&nbsp; */<br/>};<br/>class Director {<br/>private:&nbsp;<br/>Builder* builder;<br/>public:&nbsp; &nbsp;<br/>Director(Builder* pBuilder) { builder= pBuilder;}<br/>&nbsp;&nbsp;&nbsp;&nbsp; void<br/>construct() {<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; （5）&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp; &nbsp; &nbsp;<br/>//&nbsp; 其余代码省略<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br/>//&nbsp; 其余代码省略<br/>};<br/>int main() {<br/>Director* director1 = new Director(new ConcreteBuilder1());&nbsp;<br/>director1-&gt;construct();&nbsp; &nbsp;<br/>delete director1;&nbsp; &nbsp;&nbsp;<br/>return 0;</p>",
+          "question_type": 5,
+          "answer_type": 5,
+          "material_text": "",
+          "score": 15,
+          "new_parent_id": "50959",
+          "show_type_name": "问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>(1) virtual void buildPartA() = 0<br/>(2) virtual Product * getResult() = 0<br/>(3) product-&gt;setPartA<br/>(4) product-&gt;setPartB<br/>(5) builder-&gt;buildPartA();&nbsp; &nbsp; &nbsp; &nbsp;<br/>builder-&gt;buildPartB();&nbsp; &nbsp; &nbsp; &nbsp;<br/>Product* p = builder-&gt;getResult();</p>"
+          ],
+          "option": null,
+          "sort_son": "0"
+        },
+        {
+          "index": 6,
+          "belong_page": 1,
+          "question_id": 50960,
+          "question_title": "<p>阅读下列说明和 Java 代码,将应填入(n)处的字句写在答题纸的对应栏内。<br/>【说明】<br/>生成器( Builder)模式的意图是将一个复杂对象的构建与它的表示分离,使得同样的构建过程可以创建不同的表示。图 6-1 所示为其类图。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1537526540410868.png\" alt=\"99999.png\" src=\"https://s1.51ctocdn.cn//images/20180921/1537526540410868.png\"/><br/><br/>【说明】<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp; 生成器（Builder）模式的意图是将一个复杂对象的构建与它的表示分离，使得同样的构建过程可以创建不同的表示。图5-1所示为其类图。<br/><br/>&nbsp;<br/><br/>【Java代码】<br/>import java.util.*;<br/>class Product {&nbsp; &nbsp; &nbsp; &nbsp;<br/>private String partA;&nbsp; &nbsp; &nbsp; &nbsp;<br/>private String partB;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br/>public Product() {}&nbsp; &nbsp; &nbsp;&nbsp;<br/>public void setPartA(String s) { partA = s; }&nbsp; &nbsp; &nbsp; &nbsp;<br/>public void setPartB(String s) { partB = s; }<br/>}<br/>interface Builder {&nbsp; &nbsp;<br/>public&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （1）&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp; &nbsp;&nbsp;<br/>public void buildPartB();&nbsp; &nbsp; &nbsp;&nbsp;<br/>public&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （2）&nbsp;&nbsp;&nbsp;&nbsp; ;<br/>}<br/>class ConcreteBuilder1 implements Builder {&nbsp; &nbsp; &nbsp; &nbsp;<br/>private Product product;&nbsp; &nbsp; &nbsp; &nbsp;<br/>public ConcreteBuilder1() { product = new Product();&nbsp;&nbsp; }&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br/>public void buildPartA() {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>（3）&nbsp;&nbsp;<br/>(&quot;Component A&quot;); }<br/>public void buildPartB() {&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;（4）&nbsp;&nbsp; (&quot;Component B&quot;); }&nbsp; &nbsp; &nbsp;&nbsp;<br/>public Product getResult() { return product;}<br/>}<br/>class ConcreteBuilder2 implements Builder {&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br/>//&nbsp; 代码省略<br/>}<br/>class Director {&nbsp; &nbsp; &nbsp; &nbsp;<br/>private Builder builder;&nbsp; &nbsp; &nbsp; &nbsp;<br/>public Director(Builder builder) {this.builder = builder; }<br/>public void construct() {<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; （5）&nbsp;&nbsp;&nbsp;&nbsp; ;<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //&nbsp; 代码省略&nbsp; &nbsp; &nbsp;&nbsp;<br/>}<br/>}<br/>class Test {&nbsp; &nbsp; &nbsp;&nbsp;<br/>public static void main(String[] args) {<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Director director1 = new<br/>Director(new ConcreteBuilder1());<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; director1.construct();&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br/>}</p>",
+          "question_type": 5,
+          "answer_type": 5,
+          "material_text": "",
+          "score": 15,
+          "new_parent_id": "50960",
+          "show_type_name": "问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p><br/></p><p>(1) void buildPart A()</p>(2)&nbsp; Product getResult()&nbsp;<br/>(3)product.setPartA<br/>(4）product.setPartB<br/>(5)builder.buildPartA();&nbsp; &nbsp;<br/>builder.buildPartB();&nbsp;&nbsp;<br/>&nbsp; Product p=builder.getResult();"
+          ],
+          "option": null,
+          "sort_son": "0"
+        }
+      ],
+      "summary": {
+        "radio": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "multiple": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "judge": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "fill": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "program": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "qanda": {
+          "total_question": 6,
+          "total_score": 0
+        },
+        "cloze": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "budingxiang": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "material": {
+          "total_question": 0,
+          "total_score": 0
+        }
+      },
+      "examine": {
+        "id": 3672,
+        "title": "2018年5月软件设计师案例分析",
+        "len_time": {
+          "time": 0
+        },
+        "total_question": 6,
+        "total_score": 90,
+        "submit_limit_num": "0",
+        "machine_type": "2"
+      },
+      "answer_activity_start_time": 1585828800,
+      "checkProcess": 1,
+      "process": {
+        "is_delete": false
+      },
+      "train_id": 0
+    },
+    "pagination": {
+      "curPage": 1,
+      "pageSize": 1200,
+      "total": 6,
+      "hasNextPage": false
+    },
+    "totalOrder": [
+      {
+        "index": 1,
+        "question_type": 5,
+        "belong_page": 1,
+        "question_id": 50955
+      },
+      {
+        "index": 2,
+        "question_type": 5,
+        "belong_page": 1,
+        "question_id": 50956
+      },
+      {
+        "index": 3,
+        "question_type": 5,
+        "belong_page": 1,
+        "question_id": 50957
+      },
+      {
+        "index": 4,
+        "question_type": 5,
+        "belong_page": 1,
+        "question_id": 50958
+      },
+      {
+        "index": 5,
+        "question_type": 5,
+        "belong_page": 1,
+        "question_id": 50959
+      },
+      {
+        "index": 6,
+        "question_type": 5,
+        "belong_page": 1,
+        "question_id": 50960
+      }
+    ]
+  }
+}

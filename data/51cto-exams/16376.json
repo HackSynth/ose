@@ -1,0 +1,1928 @@
+{
+  "msg": "成功",
+  "status": "0",
+  "data": {
+    "data": {
+      "question": [
+        {
+          "index": 1,
+          "belong_page": 1,
+          "question_id": 364504,
+          "question_title": "<p>计算机中，系统总线用于（1）连接。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "364504",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>接口和外设</p>",
+            "<p>运算器，控制器和寄存器</p>",
+            "<p>主存及外设部件</p>",
+            "<p>DMA控制器和中断控制器</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 2,
+          "belong_page": 1,
+          "question_id": 365536,
+          "question_title": "在由高速缓存，主存和硬盘构成的三级存储体系中，CPU执行指令时需要读取数据，那么DMA控制器和中断cpu发出的数据地址是（2）。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365536",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["高速缓存地址", "主存物理地址", "硬盘的扇区地址", "虚拟地址"],
+          "sort_son": "0"
+        },
+        {
+          "index": 3,
+          "belong_page": 1,
+          "question_id": 365537,
+          "question_title": "<p>设信息位是8位，用海明码来发现并纠正1位出错的情况，则校验位的位数至少为（3）。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365537",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>1</p>", "<p>2</p>", "<p>4</p>", "<p>8</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 4,
+          "belong_page": 1,
+          "question_id": 365538,
+          "question_title": "中断向量提供的是&nbsp; ( 4 )&nbsp; 。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365538",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "中断源的设备地址",
+            "中断服务程序的入口地址",
+            "传递数据的超始地址",
+            "主程序的断点地址"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 5,
+          "belong_page": 1,
+          "question_id": 365539,
+          "question_title": "<p>计算机系统中，定点数常采用补码表示，以下关于补码表示的叙述中，错误的是 ( 5 )&nbsp; 。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365539",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>补码零的表示是唯一的</p>",
+            "<p>可以将减法运算转化为加法运算</p>",
+            "<p>符号位可以与数值位一起参加运算</p>",
+            "<p>与真值的对应关系简单且直观</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 6,
+          "belong_page": 1,
+          "question_id": 364509,
+          "question_title": "<p>设指令流水线将一条指令的执行分为取指，分析，执行三段，已知取指时间是2ns，分析时间需2ns.执行时间为1nS，则执行完1000条指令所需时间为。（6）</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "364509",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>1004ns</p>", "<p>1998ns</p>", "<p>2003ns</p>", "<p>2008ns</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 7,
+          "belong_page": 1,
+          "question_id": 365540,
+          "question_title": "<p>在OSI参考模型中，负责对应用层消息进行压缩，加密功能的层次为&nbsp; ( 7 )&nbsp; 。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365540",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["传输层", "会话层", "表示层", "应用层"],
+          "sort_son": "0"
+        },
+        {
+          "index": 8,
+          "belong_page": 1,
+          "question_id": 365542,
+          "question_title": "<p>PKI体系中，由SSL/TSL实现HTTPS应用.浏览器和服务器之间用于加密HTTP消息的方式是&nbsp; ( 8 )&nbsp; 。如果服务器证书被撇销那么所产生的后果是（9）。</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365541",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "对方公钥+公钥加密",
+            "本方公钥+公钥加密",
+            "会话密钥+公钥加密",
+            "会话密钥+对称加密"
+          ],
+          "sort_son": "1"
+        },
+        {
+          "index": 9,
+          "belong_page": 1,
+          "question_id": 365543,
+          "question_title": "<p>PKI体系中，由SSL/TSL实现HTTPS应用.浏览器和服务器之间用于加密HTTP消息的方式是&nbsp; ( 8 )&nbsp; 。如果服务器证书被撇销那么所产生的后果是（9）。</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365541",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "服务器不能执行加解密",
+            "服务器不能执行签名",
+            "客户端无法再信任服务器",
+            "客户端无法发送加密信息给服务器"
+          ],
+          "sort_son": "2"
+        },
+        {
+          "index": 10,
+          "belong_page": 1,
+          "question_id": 365544,
+          "question_title": "<p>以下关于入侵防御系统功能的描述中，不正确的是&nbsp; ( 10 )&nbsp; 。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365544",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>监测并分析用户和系统统的网络活动</p>",
+            "<p>匹配特征库识别已知的网络功击行为</p>",
+            "<p>联动入侵捡测系统使其阻断网络功击行为</p>",
+            "<p>检测僵尸网络，木马控制等僵尸主机行为</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 11,
+          "belong_page": 1,
+          "question_id": 365545,
+          "question_title": "web应用防火墙无法有效防止&nbsp; (&nbsp; 11&nbsp; )&nbsp; 。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365545",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["登录口令暴力破解", "恶意注册", "抢票机器人", "流氓软件"],
+          "sort_son": "0"
+        },
+        {
+          "index": 12,
+          "belong_page": 1,
+          "question_id": 365546,
+          "question_title": "著作权中，（12）的保护期不受期限限制。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365546",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["发表权", "发行权", "展览权", "署名权"],
+          "sort_son": "0"
+        },
+        {
+          "index": 13,
+          "belong_page": 1,
+          "question_id": 365547,
+          "question_title": "国际上为保护计算机软件知识产权不受侵犯所采用的主要方式是实施&nbsp; (&nbsp; 13 )&nbsp; 。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365547",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["合同法", "物权法", "版权法", "刑法"],
+          "sort_son": "0"
+        },
+        {
+          "index": 14,
+          "belong_page": 1,
+          "question_id": 365548,
+          "question_title": "<p>以下关于计算机软件著作权的叙述中，不正确的是&nbsp; (&nbsp; 14 )&nbsp; 。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365548",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>软件著作权人可以许可他人行使其软件著作权，并有权获得报酬</p>",
+            "<p>软件著作权人可以全部或者部分转让其软件著作权，并有权获得报酬</p>",
+            "<p>软件著作权属于自然人的，该自然人死亡后，在软件著作权的保护期内、继承人能继承软件著作权的所有权力</p>",
+            "<p>为了学习和研究软件内含的设计思想和原理，通过安装、显示、传输或者存储软件等??使用软件的，可以不经软件著作权人许可，不向其支付报酬</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 15,
+          "belong_page": 1,
+          "question_id": 365549,
+          "question_title": "以上关于数据流图中基本加工的叙述，不正确的是&nbsp; (&nbsp; 15 )&nbsp; 。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365549",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "对每一个基本加工，必须有一个加工规格说明",
+            "加工规格说明必须描述把输入数据流变换为输出数据流的加工规则",
+            "加工规格说明需要给出实现加工的细节",
+            "决策树、决策表可以用来表示加工规格说明"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 16,
+          "belong_page": 1,
+          "question_id": 365550,
+          "question_title": "以下关于好的软件设计原则的叙述中，不正确的是&nbsp; (&nbsp; 16 )&nbsp; 。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365550",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["模块化", "提高模块独立性", "集中化", "提高抽象层次"],
+          "sort_son": "0"
+        },
+        {
+          "index": 17,
+          "belong_page": 1,
+          "question_id": 365553,
+          "question_title": "<p>下图是一个软件项目的活动图，其中顶点表示项目里程碑，连接顶点的边表示活动，则里程碑&nbsp; (&nbsp; 17 )&nbsp; 在关键路径上。关键路径长度为&nbsp; (&nbsp; 18 )&nbsp; 天。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230614/1686674995282057.png\" title=\"1686674995282057.png\" alt=\"2085917-20220810164732177-97210550.png\" width=\"510\" height=\"281\"/></p><br/>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365552",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>B</p>", "E", "G", "I"],
+          "sort_son": "1"
+        },
+        {
+          "index": 18,
+          "belong_page": 1,
+          "question_id": 365554,
+          "question_title": "<p>下图是一个软件项目的活动图，其中顶点表示项目里程碑，连接顶点的边表示活动，则里程碑&nbsp; (&nbsp; 17 )&nbsp; 在关键路径上。关键路径长度为&nbsp; (&nbsp; 18 )&nbsp; 天。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230614/1686674995282057.png\" title=\"1686674995282057.png\" alt=\"2085917-20220810164732177-97210550.png\" width=\"510\" height=\"281\"/></p><br/>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365552",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["15", "17", "19", "23"],
+          "sort_son": "2"
+        },
+        {
+          "index": 19,
+          "belong_page": 1,
+          "question_id": 365555,
+          "question_title": "由8位成员组成的开发团队中，一共有&nbsp; (&nbsp; 19 )&nbsp; 条沟通路径 。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365555",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["64", "56", "32", "28"],
+          "sort_son": "0"
+        },
+        {
+          "index": 20,
+          "belong_page": 1,
+          "question_id": 365556,
+          "question_title": "<p>对布尔表达式“a or ((cb&lt;c) and d)”求值时， (&nbsp; 20 ) 时可进行短路计算 。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365556",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["a为true", "b为true&nbsp;", "c为true", "d为true"],
+          "sort_son": "0"
+        },
+        {
+          "index": 21,
+          "belong_page": 1,
+          "question_id": 365557,
+          "question_title": "设有正规式s=(0｜10)*，则其所描述正规集中字符体的特点是&nbsp; (&nbsp; 21 )&nbsp; &nbsp;。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365557",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["长度必须是偶数", "长度必须是奇数", "0不能连续出现", "1不能连续出现"],
+          "sort_son": "0"
+        },
+        {
+          "index": 22,
+          "belong_page": 1,
+          "question_id": 365558,
+          "question_title": "<p>设函数foo和hoo的定义如下图所示，在函数foo中调用函数hoo，hoo的第一个参数采用传引用方式.(call&nbsp;by&nbsp;reference)，第二个参数传值方式（call&nbsp;by&nbsp;value)，那么函数foo中的print(a，b)将输出&nbsp;&nbsp;(&nbsp;&nbsp;22 )&nbsp;&nbsp;。</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230614/1686675353146127.png\" title=\"1686675353146127.png\" alt=\"image.png\" width=\"438\" height=\"158\"/><br/>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365558",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>8，5</p>", "<p>39，5</p>", "<p>8，40</p>", "<p>39，40</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 23,
+          "belong_page": 1,
+          "question_id": 365559,
+          "question_title": "<p>●&nbsp;某文件管理系统采用位示图.(bitmap)来记录磁盘的使用情况，若计算机系统的字长为64位，磁盘容量为512GB，物理块的大小为4MB，那么位示图的大小为&nbsp;&nbsp;(&nbsp;&nbsp;23 )&nbsp;&nbsp;个字。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365559",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>1024</p>", "<p>2048</p>", "<p>4096</p>", "<p>9600</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 24,
+          "belong_page": 1,
+          "question_id": 365560,
+          "question_title": "<p>磁盘调度分为移臂调度和旋转调度两类，在移臂调度的算法中，（24）算法可能会随时改变移动臂的运行方向。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365560",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "单向扫描和先来先服务",
+            "电梯调度和先来先服务",
+            "电梯调度和最短寻道时间优先",
+            "先来先服务和最短寻道时间优先"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 25,
+          "belong_page": 1,
+          "question_id": 365561,
+          "question_title": "<p>在支持多线程的操作系统中，假设进程P创建了t1、t2、t3线程，那么（25）。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365561",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>该进程的代码段不能被 t1、t2、t3共享</p>",
+            "<p>该进程的全局变量只能被t共享</p>",
+            "<p>该进程中t1、t2、t3的栈指针不能被共享</p>",
+            "<p>该进程中t1的栈指针可以被t2、t3共享</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 26,
+          "belong_page": 1,
+          "question_id": 365563,
+          "question_title": "<p>进程P1、P2、 P3、P4、P5和P6的前趋势图如下所示, 若用PV操作控制进程P1、P2、P3、P4、P5和P6并发执行的过程，需要设置8个信号量S1、S2、S3、S4、S5、S6、S7和S8，且信号量 S1~S8 的初值都等于零。下面P1~P6的进程执行过程中，①和②处应分别填写&nbsp; (&nbsp; 26 )&nbsp; ；③和④处应分别填写&nbsp; (&nbsp; 27 )&nbsp; ；⑤和⑥处应分别填写&nbsp; (&nbsp; 28 )&nbsp; 。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230614/1686675676543519.png\" title=\"1686675676543519.png\" alt=\"image.png\" width=\"497\" height=\"167\"/><br/></p><p>begin</p><p>S1,S2,S3,S4,S5,S6,S7,S8:semaphore; //定义信号量</p><p>S1:=0;S2:=0;S3:=0;S4:=0;S5:=0;&nbsp;S6:=0;S7:=0;S8=0</p><p>Cobegin<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230614/1686675777979929.png\" title=\"1686675777979929.png\" alt=\"image.png\"/><br/></p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365562",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "P (S1) P (S2) 和V(S3)V(S4)",
+            "P(S1) P(S2)和V(S1)V(S2)",
+            "V (S3)V(S4)和P(S1) P (S2)",
+            "&nbsp;V(S3)V(S4)和P(S2)P(S3)"
+          ],
+          "sort_son": "1"
+        },
+        {
+          "index": 27,
+          "belong_page": 1,
+          "question_id": 365564,
+          "question_title": "<p>进程P1、P2、 P3、P4、P5和P6的前趋势图如下所示, 若用PV操作控制进程P1、P2、P3、P4、P5和P6并发执行的过程，需要设置8个信号量S1、S2、S3、S4、S5、S6、S7和S8，且信号量 S1~S8 的初值都等于零。下面P1~P6的进程执行过程中，①和②处应分别填写&nbsp; (&nbsp; 26 )&nbsp; ；③和④处应分别填写&nbsp; (&nbsp; 27 )&nbsp; ；⑤和⑥处应分别填写&nbsp; (&nbsp; 28 )&nbsp; 。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230614/1686675676543519.png\" title=\"1686675676543519.png\" alt=\"image.png\" width=\"497\" height=\"167\"/><br/></p><p>begin</p><p>S1,S2,S3,S4,S5,S6,S7,S8:semaphore; //定义信号量</p><p>S1:=0;S2:=0;S3:=0;S4:=0;S5:=0;&nbsp;S6:=0;S7:=0;S8=0</p><p>Cobegin<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230614/1686675777979929.png\" title=\"1686675777979929.png\" alt=\"image.png\"/><br/></p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365562",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "V (S5) 和P(S4) P (S5)",
+            "V (S3) 和P (S4) V(S5)",
+            "P(S5)和V(S4)V(S5)",
+            "P(S3)和P(S4) P(S5)"
+          ],
+          "sort_son": "2"
+        },
+        {
+          "index": 28,
+          "belong_page": 1,
+          "question_id": 365565,
+          "question_title": "<p>进程P1、P2、 P3、P4、P5和P6的前趋势图如下所示, 若用PV操作控制进程P1、P2、P3、P4、P5和P6并发执行的过程，需要设置8个信号量S1、S2、S3、S4、S5、S6、S7和S8，且信号量 S1~S8 的初值都等于零。下面P1~P6的进程执行过程中，①和②处应分别填写&nbsp; (&nbsp; 26 )&nbsp; ；③和④处应分别填写&nbsp; (&nbsp; 27 )&nbsp; ；⑤和⑥处应分别填写&nbsp; (&nbsp; 28 )&nbsp; 。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230614/1686675676543519.png\" title=\"1686675676543519.png\" alt=\"image.png\" width=\"497\" height=\"167\"/><br/></p><p>begin</p><p>S1,S2,S3,S4,S5,S6,S7,S8:semaphore; //定义信号量</p><p>S1:=0;S2:=0;S3:=0;S4:=0;S5:=0;&nbsp;S6:=0;S7:=0;S8=0</p><p>Cobegin<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230614/1686675777979929.png\" title=\"1686675777979929.png\" alt=\"image.png\"/><br/></p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365562",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["V(S6)和V(S8)", "P (S6)和P(S7)", "P(S6) 和V(S8)", "P(S6)和P(S8)"],
+          "sort_son": "3"
+        },
+        {
+          "index": 29,
+          "belong_page": 1,
+          "question_id": 365566,
+          "question_title": "以下关于增量模型优点的叙述中，不正确的是&nbsp; (&nbsp; 29 )&nbsp; &nbsp;。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365566",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "能够在较短的时间提交一个可用的产品系统",
+            "可以尽早让用户熟悉系统",
+            "优先级高的功能首先交付，这些功能将接受更多的测试",
+            "系统的设计更加容易"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 30,
+          "belong_page": 1,
+          "question_id": 365567,
+          "question_title": "以下敏捷开发方法中，&nbsp; ( 30 ) 使用迭代的方法，把一段短的时间(如30天)的迭代称为一个冲刺，并按照需求优先级来实现产品。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365567",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["极限编程(XP)", "水晶法(Crystal)", "并列争球法(Scrum)", "自适应软件开发(ASD)"],
+          "sort_son": "0"
+        },
+        {
+          "index": 31,
+          "belong_page": 1,
+          "question_id": 365568,
+          "question_title": "<p>若模块A通过控制参数来传递信息给模块B，从而确定执行模块B中的哪部分语句。则这两个模块的耦合类型是&nbsp; (&nbsp; 31 )&nbsp; 耦合。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365568",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>数据</p>", "<p>标记</p>", "<p>控制</p>", "<p>公共</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 32,
+          "belong_page": 1,
+          "question_id": 365569,
+          "question_title": "在设计中实现可移植性设计的规则不包括，&nbsp; (&nbsp; 32 )&nbsp; &nbsp;。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365569",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "将设备相关程序和设备无关程序分开设计",
+            "可使用特定环境的专用功能",
+            "采用平台无关的程序设计语言",
+            "不使用依赖于某一平台的类库"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 33,
+          "belong_page": 1,
+          "question_id": 365570,
+          "question_title": "<p>以下关于管道-过滤器软件体系结构风格优点的叙述中，不正确的是&nbsp; (&nbsp; 33 )&nbsp; &nbsp;。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365570",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "构件具有良好的高内聚、低耦合的特点&nbsp;&nbsp;",
+            "支持软件复用",
+            "支持并行执行&nbsp;",
+            "适合交互处理应用"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 34,
+          "belong_page": 1,
+          "question_id": 365572,
+          "question_title": "<p>以下流程图中，至少需要&nbsp; (&nbsp; 34 )&nbsp; 个测试用例才能覆盖所有路径。采用 McCabe方法计算程序复杂度为&nbsp; (&nbsp; 35 )&nbsp; 。</p><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230614/1686676342211788.png\" title=\"1686676342211788.png\" alt=\"image.png\" width=\"602\" height=\"663\"/>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365571",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["3", "4", "5", "6"],
+          "sort_son": "1"
+        },
+        {
+          "index": 35,
+          "belong_page": 1,
+          "question_id": 365573,
+          "question_title": "<p>以下流程图中，至少需要&nbsp; (&nbsp; 34 )&nbsp; 个测试用例才能覆盖所有路径。采用 McCabe方法计算程序复杂度为&nbsp; (&nbsp; 35 )&nbsp; 。</p><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230614/1686676342211788.png\" title=\"1686676342211788.png\" alt=\"image.png\" width=\"602\" height=\"663\"/>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365571",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["2", "3", "4", "5"],
+          "sort_son": "2"
+        },
+        {
+          "index": 36,
+          "belong_page": 1,
+          "question_id": 365574,
+          "question_title": "<p>在软件系统交付给用户使用后，为了使用户界面更友好，对系统的图形输出进行改进，该行为属于&nbsp; (&nbsp; 36 )&nbsp; 维护。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365574",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>改正性</p>", "<p>适应性</p>", "<p>改善性</p>", "<p>预防性</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 37,
+          "belong_page": 1,
+          "question_id": 365579,
+          "question_title": "<p>采用面向对象方法开发学生成绩管理系统，学生的姓名、性别、出生日期、期末考试成绩、查看成绩操作均被&nbsp; ( 37 ) 在学生对象中。系统中定义不同类，不同类的对象之间通过&nbsp; ( 38 ) 进行通信。</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365578",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["封装", "继承", "多态", "信息"],
+          "sort_son": "1"
+        },
+        {
+          "index": 38,
+          "belong_page": 1,
+          "question_id": 365580,
+          "question_title": "<p>采用面向对象方法开发学生成绩管理系统，学生的姓名、性别、出生日期、期末考试成绩、查看成绩操作均被&nbsp; ( 37 ) 在学生对象中。系统中定义不同类，不同类的对象之间通过&nbsp; ( 38 ) 进行通信。</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365578",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["继承", "多态", "消息", "重载"],
+          "sort_son": "2"
+        },
+        {
+          "index": 39,
+          "belong_page": 1,
+          "question_id": 365581,
+          "question_title": "<p>对采用面向对象方法开发的系统进行测试时，通常从不同层次进行测试。测试类中定义的每个方法属于&nbsp; (&nbsp; 39 )&nbsp; 层。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365581",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>算法</p>", "<p>类</p>", "<p>模板</p>", "<p>系统</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 40,
+          "belong_page": 1,
+          "question_id": 365582,
+          "question_title": "在面向对象系统设计中，如果重用了一个包中的某个类，那么就要重用该包中所的类，这属于&nbsp; (&nbsp; 40 ) 原则。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365582",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["共同封闭", "共同重用&nbsp;", "开放-封闭", "接口分离"],
+          "sort_son": "0"
+        },
+        {
+          "index": 41,
+          "belong_page": 1,
+          "question_id": 365586,
+          "question_title": "UML，序列图用于建模&nbsp; (&nbsp; 41 ) ，如下所示序列图中，可能的消息顺序是 (&nbsp; 42 )。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230614/1686676937286088.png\" title=\"1686676937286088.png\" alt=\"image.png\" width=\"449\" height=\"339\"/>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365585",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "系统在它的周边环境的语境中所提供的外部可见服务",
+            "某一时刻一组对象以及它们之间的关系",
+            "系统内从一个活动到另一个活动的流程",
+            "以时间顺序组织的对象之间的交互活动"
+          ],
+          "sort_son": "1"
+        },
+        {
+          "index": 42,
+          "belong_page": 1,
+          "question_id": 365587,
+          "question_title": "UML，序列图用于建模&nbsp; (&nbsp; 41 ) ，如下所示序列图中，可能的消息顺序是 (&nbsp; 42 )。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230614/1686676937286088.png\" title=\"1686676937286088.png\" alt=\"image.png\" width=\"449\" height=\"339\"/>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365585",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["a→b→c→a→b", "c→b→a→c→b&nbsp;", "a→b→a→b→c", "a→b→c→a→b→c"],
+          "sort_son": "2"
+        },
+        {
+          "index": 43,
+          "belong_page": 1,
+          "question_id": 365588,
+          "question_title": "UML包图展现由模型本身分解而成的组织单元及其依赖关系，以下关于包图的叙述中，不正确的是&nbsp; (&nbsp; 43 )&nbsp; 中。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365588",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "可以拥有类、接口构件、节点",
+            "一个元素可以被多个包拥有",
+            "一个包可以嵌套其他包",
+            "一个包内元素不能重名"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 44,
+          "belong_page": 1,
+          "question_id": 365591,
+          "question_title": "<p>在某招聘系统中，要求实现求职简历自动生成功能。简历的基本内容包括求职xx的姓名、性别、年龄及工作经历等。希望每份简历中的工作经历有所不同，并尽量减少程序中的重复代码。针对此需求，设计如下所示类图。该设计采用了&nbsp;&nbsp;(&nbsp;&nbsp;44&nbsp;)&nbsp;&nbsp;,由&nbsp;xx实例指定创建对象的种类，声明一个复制自身的接口，并且通过复制这些&nbsp;Resume&nbsp;xx&nbsp;WorkExperience&nbsp;的对象来创建新的对象。该模式属于&nbsp;&nbsp;(&nbsp;&nbsp;45&nbsp;)&nbsp;&nbsp;模式。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230614/1686677173362597.png\" title=\"1686677173362597.png\" alt=\"image.png\" width=\"474\" height=\"198\"/></p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365590",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "单例（Singleton）",
+            "抽象工厂（Abstract Factory）",
+            "生成器（Builder）",
+            "原型（Prototype）"
+          ],
+          "sort_son": "1"
+        },
+        {
+          "index": 45,
+          "belong_page": 1,
+          "question_id": 365592,
+          "question_title": "<p>在某招聘系统中，要求实现求职简历自动生成功能。简历的基本内容包括求职xx的姓名、性别、年龄及工作经历等。希望每份简历中的工作经历有所不同，并尽量减少程序中的重复代码。针对此需求，设计如下所示类图。该设计采用了&nbsp;&nbsp;(&nbsp;&nbsp;44&nbsp;)&nbsp;&nbsp;,由&nbsp;xx实例指定创建对象的种类，声明一个复制自身的接口，并且通过复制这些&nbsp;Resume&nbsp;xx&nbsp;WorkExperience&nbsp;的对象来创建新的对象。该模式属于&nbsp;&nbsp;(&nbsp;&nbsp;45&nbsp;)&nbsp;&nbsp;模式。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230614/1686677173362597.png\" title=\"1686677173362597.png\" alt=\"image.png\" width=\"474\" height=\"198\"/></p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365590",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["混合型", "行为型", "结构型", "创建型"],
+          "sort_son": "2"
+        },
+        {
+          "index": 46,
+          "belong_page": 1,
+          "question_id": 365595,
+          "question_title": "某旅游公司欲开发一套软件系统，要求能根据季节，节假日等推出不同的旅行定价包，如淡季打折、一口价等。实现该要求适合采用&nbsp; (&nbsp; 46 )&nbsp; 模式，该模式的主要意图是&nbsp; (&nbsp; 47 )&nbsp; 。",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365594",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "策略(Strategy)&nbsp;",
+            "状态 (State)&nbsp;&nbsp;",
+            "观察者(Observer)&nbsp; &nbsp;",
+            "命令(command)"
+          ],
+          "sort_son": "1"
+        },
+        {
+          "index": 47,
+          "belong_page": 1,
+          "question_id": 365596,
+          "question_title": "某旅游公司欲开发一套软件系统，要求能根据季节，节假日等推出不同的旅行定价包，如淡季打折、一口价等。实现该要求适合采用&nbsp; (&nbsp; 46 )&nbsp; 模式，该模式的主要意图是&nbsp; (&nbsp; 47 )&nbsp; 。",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365594",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "将一个请求封装为对象，从而可以用不同的请求对客户进行参数化",
+            "当一个对象的状态发生改变时，依赖于它的对象都得到通知并被自动更新",
+            "允许一个对象在其内部状态改变时改变它的行为",
+            "定义一系列的算法，把它们一个个封装起来，并且使它们可以相互替换"
+          ],
+          "sort_son": "2"
+        },
+        {
+          "index": 48,
+          "belong_page": 1,
+          "question_id": 365597,
+          "question_title": "&nbsp;Python 中采用，&nbsp; (&nbsp; 48 )&nbsp; 方法来获得一个对象的类型。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365597",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["str（）", "type（）", "id（）", "object（）"],
+          "sort_son": "0"
+        },
+        {
+          "index": 49,
+          "belong_page": 1,
+          "question_id": 365598,
+          "question_title": "在 Python 语言中，语句x=&nbsp; (&nbsp; 49 )&nbsp; 不能定义一个元组。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365598",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["(1，2，1，2)&nbsp;", "1，2，1，2&nbsp;", "&nbsp;tuple（）", "（1）"],
+          "sort_son": "0"
+        },
+        {
+          "index": 50,
+          "belong_page": 1,
+          "question_id": 365599,
+          "question_title": "<p>关于 Python 语言的叙述中，不正确的是 (&nbsp; 50 )&nbsp; 。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365599",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>for 语句可以用于在序列(如列表、元组和字符串)上进行迭代访问</p>",
+            "<p>循环结构如for和while后可以加else语句</p>",
+            "<p>可以用 if...else 和 switch...case 语句表示选择结构</p>",
+            "<p>支持嵌套循环B</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 51,
+          "belong_page": 1,
+          "question_id": 365600,
+          "question_title": "在数据库应用系统的开发过程中，开发人员需要通过视图层、逻辑个层次上的抽象来对用户屏蔽系统的复杂性，简化用户与系统的交互过程错误的是&nbsp; (&nbsp; 51 )&nbsp; 。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365600",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "视图层是最高层次的抽象",
+            "逻辑层是比视图层更低一层的抽象",
+            "物理层是最低层次的抽象",
+            "物理层是比逻辑层更高一层的抽象"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 52,
+          "belong_page": 1,
+          "question_id": 365601,
+          "question_title": "<p>&nbsp;给定关系模式&nbsp;R(U,F)，其中U&nbsp;为属性集，F是U上的一组函数，则根据Armstrong公理，合并规则是指&nbsp;&nbsp;(&nbsp;52&nbsp;)&nbsp;&nbsp;。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365601",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "若Y∈X∈U，则X-&gt;Y为F所蕴含",
+            "若X-&gt;Y，Y-&gt;Z，则X-&gt;Y为F所蕴含",
+            "若X-&gt;Y，Z∈Y，则X-&gt;Z 为F所蕴含",
+            "若X-&gt;Y，X-&gt;Z，则X-&gt;YZ为F所蕴含"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 53,
+          "belong_page": 1,
+          "question_id": 365605,
+          "question_title": "给定关系模式R(U,F)，U={A,B,C,D)，函数依赖集F={AB-&gt;C,CD-&gt;B)。关系模式R&nbsp; ( 53 )&nbsp; ，主属性和非主属性的个数分别为&nbsp; ( 54 ) 。",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365604",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "只有1个候选关键字ACB",
+            "只有1个候选关键字 BCD",
+            "有2个候选关键字ABD和ACD",
+            "有2个候选关键字ACB和BCD"
+          ],
+          "sort_son": "1"
+        },
+        {
+          "index": 54,
+          "belong_page": 1,
+          "question_id": 365606,
+          "question_title": "给定关系模式R(U,F)，U={A,B,C,D)，函数依赖集F={AB-&gt;C,CD-&gt;B)。关系模式R&nbsp; ( 53 )&nbsp; ，主属性和非主属性的个数分别为&nbsp; ( 54 ) 。",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365604",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["4和0", "3和1", "2和2", "1和3"],
+          "sort_son": "2"
+        },
+        {
+          "index": 55,
+          "belong_page": 1,
+          "question_id": 365608,
+          "question_title": "<p>如果将 Students 表的插入权限赋予用户 User1，并允许其将该权限授予他人，那么正确的SQL 语句如下:</p><p>GRANT&nbsp; &nbsp;( 55 )&nbsp; TABLE Students TO User1&nbsp; &nbsp;(&nbsp; 56 )&nbsp; 。</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365607",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["INSERT", "INSERT ON", "UPDATE", "UPDATE ON"],
+          "sort_son": "1"
+        },
+        {
+          "index": 56,
+          "belong_page": 1,
+          "question_id": 365609,
+          "question_title": "<p>如果将 Students 表的插入权限赋予用户 User1，并允许其将该权限授予他人，那么正确的SQL 语句如下:</p><p>GRANT&nbsp; &nbsp;( 55 )&nbsp; TABLE Students TO User1&nbsp; &nbsp;(&nbsp; 56 )&nbsp; 。</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365607",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["FOR ALL", "PUBLIC", "WITH GRANT OPTION&nbsp;", "WITH CHECK OPTION"],
+          "sort_son": "2"
+        },
+        {
+          "index": 57,
+          "belong_page": 1,
+          "question_id": 365610,
+          "question_title": "<p>利用栈对算术表达式10*(40-30/5)+20求值时，存放操作数的栈(初始为空)的容量至少为&nbsp; (&nbsp; 57 )&nbsp; ，才能满足暂存该表达式中的运算数或运算结果的要求。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365610",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>2</p>", "<p>3</p>", "<p>4</p>", "<p>5</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 58,
+          "belong_page": 1,
+          "question_id": 365611,
+          "question_title": "设有5个字符，根据其使用频率为其构造哈夫曼编码。以下编码方案中，&nbsp; (&nbsp; 58 )&nbsp; &nbsp;是不可能的。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365611",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "{111，110，101，100，0}",
+            "{0000，0001，001，01，1}",
+            "{11，10，01，001，000}",
+            "{11，10，011，010，000}"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 59,
+          "belong_page": 1,
+          "question_id": 365612,
+          "question_title": "设有向图G 具有n个顶点、e条弧，采用邻接表存储，则完成广度优先遍历的时间复杂度为&nbsp; (&nbsp; 59 )&nbsp; 。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365612",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["O(n+e)", "&nbsp;O(n^2)", "O(e^2)", "O(n*e)"],
+          "sort_son": "0"
+        },
+        {
+          "index": 60,
+          "belong_page": 1,
+          "question_id": 365613,
+          "question_title": "<p>对某有序表进行二分查找时，进行比较的关键字序列不可能是&nbsp; (&nbsp; 60 )&nbsp; 。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365613",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>42,61,90,85,77</p>",
+            "<p>42,90.85,61,77</p>",
+            "<p>90,85,61,77,42</p>",
+            "<p>90,85,77,61,42</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 61,
+          "belong_page": 1,
+          "question_id": 365614,
+          "question_title": "设由三棵树构成的森林中，第一棵树、第二棵树和第三棵树的结点总数分别为 n1、n2 和n3。将该森林转换为一棵二叉树，那么该二叉树的右子树包含 (&nbsp; 61 )&nbsp; 个结点。。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365614",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["n1&nbsp;", "n1+n2", "n3", "n2+n3"],
+          "sort_son": "0"
+        },
+        {
+          "index": 62,
+          "belong_page": 1,
+          "question_id": 365617,
+          "question_title": "<p>对一组数据进行排序，要求排序算法的时间复杂度为 O(nlgn)，且要求排序是稳定的，则可采用&nbsp; (&nbsp; 62 )&nbsp; 算法。若要求排序算法的时间复杂度为 O(nlgn)，且在原数据上进行，即空间复杂度为 O(1)，则可采用&nbsp; (&nbsp; 63 )&nbsp; 算法。</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365616",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["直接插入排序", "堆排序", "快速排序", "归并排序"],
+          "sort_son": "1"
+        },
+        {
+          "index": 63,
+          "belong_page": 1,
+          "question_id": 365618,
+          "question_title": "<p>对一组数据进行排序，要求排序算法的时间复杂度为 O(nlgn)，且要求排序是稳定的，则可采用&nbsp; (&nbsp; 62 )&nbsp; 算法。若要求排序算法的时间复杂度为 O(nlgn)，且在原数据上进行，即空间复杂度为 O(1)，则可采用&nbsp; (&nbsp; 63 )&nbsp; 算法。</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365616",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["直接插入排序&nbsp;", "堆排序", "快速排序", "归并排序"],
+          "sort_son": "2"
+        },
+        {
+          "index": 64,
+          "belong_page": 1,
+          "question_id": 365620,
+          "question_title": "<p><br/></p><p>采用 Kruskal 算法求解下图的最小生成树，采用的算法设计策略是(&nbsp; 64 )&nbsp; 。该最小生成树的权值是&nbsp; (&nbsp; 65 )&nbsp; 。</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230614/1686678482927488.png\" title=\"1686678482927488.png\" alt=\"image.png\" width=\"349\" height=\"230\"/><br/>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365619",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["分治法", "动态规划法", "贪心算法", "回溯算法"],
+          "sort_son": "1"
+        },
+        {
+          "index": 65,
+          "belong_page": 1,
+          "question_id": 365621,
+          "question_title": "<p><br/></p><p>采用 Kruskal 算法求解下图的最小生成树，采用的算法设计策略是(&nbsp; 64 )&nbsp; 。该最小生成树的权值是&nbsp; (&nbsp; 65 )&nbsp; 。</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230614/1686678482927488.png\" title=\"1686678482927488.png\" alt=\"image.png\" width=\"349\" height=\"230\"/><br/>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365619",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["14", "16", "20", "32"],
+          "sort_son": "2"
+        },
+        {
+          "index": 66,
+          "belong_page": 1,
+          "question_id": 365622,
+          "question_title": "www 的控制协议是&nbsp; (&nbsp; 66 )&nbsp; 。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365622",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["FTP", "HTTP", "SSL", "DNS"],
+          "sort_son": "0"
+        },
+        {
+          "index": 67,
+          "belong_page": 1,
+          "question_id": 365625,
+          "question_title": "在Linux 操作系统中通常使用&nbsp; &nbsp;(&nbsp; 67&nbsp; ) ，作为 Web 服务器，其默认的 Web站目录为&nbsp; (&nbsp; 68&nbsp; ) 。",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365624",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["IIS", "Apache", "NFS&nbsp;", "MYSQL"],
+          "sort_son": "1"
+        },
+        {
+          "index": 68,
+          "belong_page": 1,
+          "question_id": 365626,
+          "question_title": "在Linux 操作系统中通常使用&nbsp; &nbsp;(&nbsp; 67&nbsp; ) ，作为 Web 服务器，其默认的 Web站目录为&nbsp; (&nbsp; 68&nbsp; ) 。",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365624",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["/etc/httpd&nbsp;", "&nbsp;/var/log/httpd", "/etc/home", "/home/httpd"],
+          "sort_son": "2"
+        },
+        {
+          "index": 69,
+          "belong_page": 1,
+          "question_id": 365627,
+          "question_title": "SNMP使用的传输层协议是&nbsp; (&nbsp; 69 )&nbsp; 。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365627",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["UDP", "TCP", "IP&nbsp;&nbsp;", "ICMP"],
+          "sort_son": "0"
+        },
+        {
+          "index": 70,
+          "belong_page": 1,
+          "question_id": 365628,
+          "question_title": "某电脑无法打开任意网页，但是互联网即时聊天软件使用正常，造成该故障的原因可能是&nbsp; (&nbsp; 70 )&nbsp; 。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365628",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["IP地址配置错误", "DNS 配置错误", "网卡故障", "链路故障"],
+          "sort_son": "0"
+        },
+        {
+          "index": 71,
+          "belong_page": 1,
+          "question_id": 365631,
+          "question_title": "<p>●&nbsp;Low-code&nbsp;and&nbsp;no&nbsp;code&nbsp;software&nbsp;development&nbsp;solutions&nbsp;have&nbsp;emerged&nbsp;as&nbsp;viable&nbsp;and&nbsp;convenient&nbsp;</p><p>alternatives&nbsp;to&nbsp;the&nbsp;traditional&nbsp;development&nbsp;process.&nbsp;&nbsp;&nbsp;&nbsp;</p><p>Low-code&nbsp;is&nbsp;a&nbsp;rapid&nbsp;application&nbsp;development&nbsp;(RAD)&nbsp;approach&nbsp;that&nbsp;enables&nbsp;automated&nbsp;code&nbsp;generation</p><p>&nbsp;through&nbsp;&nbsp;（1）&nbsp;building&nbsp;blocks&nbsp;like&nbsp;drag-and-drop&nbsp;and&nbsp;pull-down&nbsp;menu&nbsp;interfaces.&nbsp;</p><p>This（2）allows&nbsp;low-code&nbsp;users&nbsp;to&nbsp;focus&nbsp;on&nbsp;the&nbsp;differentiator&nbsp;rather&nbsp;than&nbsp;the&nbsp;common&nbsp;denominator&nbsp;of&nbsp;</p><p>programming.&nbsp;Low-code&nbsp;is&nbsp;a&nbsp;balanced&nbsp;middle&nbsp;ground&nbsp;between&nbsp;manual&nbsp;coding&nbsp;and&nbsp;no-code&nbsp;as&nbsp;its&nbsp;users&nbsp;can&nbsp;still&nbsp;add&nbsp;code&nbsp;over&nbsp;auto-generated&nbsp;code.While&nbsp;in&nbsp;low-code&nbsp;there&nbsp;is&nbsp;some&nbsp;handholding&nbsp;done&nbsp;by&nbsp;developers&nbsp;in&nbsp;the&nbsp;</p><p>form&nbsp;of&nbsp;scripting&nbsp;or&nbsp;manual&nbsp;coding,&nbsp;no-code&nbsp;has&nbsp;a&nbsp;completely（3）&nbsp;approach,&nbsp;with&nbsp;100%&nbsp;dependence&nbsp;on&nbsp;visual&nbsp;</p><p>tools.</p><p>A&nbsp;low-code&nbsp;application&nbsp;platform&nbsp;(LCAP)&nbsp;—&nbsp;also&nbsp;called&nbsp;a&nbsp;low-code&nbsp;development&nbsp;platform&nbsp;(LCDP)&nbsp;—&nbsp;contains&nbsp;an&nbsp;integrated&nbsp;development&nbsp;environment&nbsp;(IDE)&nbsp;with&nbsp;（4）features&nbsp;like&nbsp;APIs,&nbsp;code&nbsp;templates,&nbsp;reusable&nbsp;</p><p>plug-in&nbsp;modules&nbsp;and&nbsp;graphical&nbsp;connectors&nbsp;to&nbsp;automate&nbsp;a&nbsp;significant&nbsp;percentage&nbsp;of&nbsp;the&nbsp;application&nbsp;development</p><p>&nbsp;process.&nbsp;LCAPs&nbsp;are&nbsp;typically&nbsp;available&nbsp;as&nbsp;cloud-based&nbsp;Platform-as-a-Service&nbsp;(PaaS)&nbsp;solutions.</p><p>A&nbsp;low-code&nbsp;platform&nbsp;works&nbsp;on&nbsp;the&nbsp;principle&nbsp;of&nbsp;lowering&nbsp;complexity&nbsp;by&nbsp;using&nbsp;visual&nbsp;tools and&nbsp;techniques&nbsp;</p><p>like&nbsp;process&nbsp;modeling,&nbsp;where&nbsp;users&nbsp;employ&nbsp;visual&nbsp;tools&nbsp;to&nbsp;define&nbsp;workflows,business&nbsp;rules,&nbsp;user&nbsp;interfaces&nbsp;</p><p>and&nbsp;the&nbsp;like.&nbsp;Behind&nbsp;the&nbsp;scenes,&nbsp;the&nbsp;complete&nbsp;workflow,automatically&nbsp;converted&nbsp;into&nbsp;code.&nbsp;LCAPs&nbsp;are&nbsp;used&nbsp;predominantly&nbsp;by&nbsp;professional&nbsp;developers,automate&nbsp;the&nbsp;generic&nbsp;aspects&nbsp;of&nbsp;coding&nbsp;to&nbsp;redirect&nbsp;effort&nbsp;on&nbsp;the&nbsp;last&nbsp;mile&nbsp;</p><p>of( &nbsp;75) &nbsp;.</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365630",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["visual&nbsp;", "component-based", "object-oriented", "<p>structural</p>"],
+          "sort_son": "1"
+        },
+        {
+          "index": 72,
+          "belong_page": 1,
+          "question_id": 365632,
+          "question_title": "<p>●&nbsp;Low-code&nbsp;and&nbsp;no&nbsp;code&nbsp;software&nbsp;development&nbsp;solutions&nbsp;have&nbsp;emerged&nbsp;as&nbsp;viable&nbsp;and&nbsp;convenient&nbsp;</p><p>alternatives&nbsp;to&nbsp;the&nbsp;traditional&nbsp;development&nbsp;process.&nbsp;&nbsp;&nbsp;&nbsp;</p><p>Low-code&nbsp;is&nbsp;a&nbsp;rapid&nbsp;application&nbsp;development&nbsp;(RAD)&nbsp;approach&nbsp;that&nbsp;enables&nbsp;automated&nbsp;code&nbsp;generation</p><p>&nbsp;through&nbsp;&nbsp;（1）&nbsp;building&nbsp;blocks&nbsp;like&nbsp;drag-and-drop&nbsp;and&nbsp;pull-down&nbsp;menu&nbsp;interfaces.&nbsp;</p><p>This（2）allows&nbsp;low-code&nbsp;users&nbsp;to&nbsp;focus&nbsp;on&nbsp;the&nbsp;differentiator&nbsp;rather&nbsp;than&nbsp;the&nbsp;common&nbsp;denominator&nbsp;of&nbsp;</p><p>programming.&nbsp;Low-code&nbsp;is&nbsp;a&nbsp;balanced&nbsp;middle&nbsp;ground&nbsp;between&nbsp;manual&nbsp;coding&nbsp;and&nbsp;no-code&nbsp;as&nbsp;its&nbsp;users&nbsp;can&nbsp;still&nbsp;add&nbsp;code&nbsp;over&nbsp;auto-generated&nbsp;code.While&nbsp;in&nbsp;low-code&nbsp;there&nbsp;is&nbsp;some&nbsp;handholding&nbsp;done&nbsp;by&nbsp;developers&nbsp;in&nbsp;the&nbsp;</p><p>form&nbsp;of&nbsp;scripting&nbsp;or&nbsp;manual&nbsp;coding,&nbsp;no-code&nbsp;has&nbsp;a&nbsp;completely（3）&nbsp;approach,&nbsp;with&nbsp;100%&nbsp;dependence&nbsp;on&nbsp;visual&nbsp;</p><p>tools.</p><p>A&nbsp;low-code&nbsp;application&nbsp;platform&nbsp;(LCAP)&nbsp;—&nbsp;also&nbsp;called&nbsp;a&nbsp;low-code&nbsp;development&nbsp;platform&nbsp;(LCDP)&nbsp;—&nbsp;contains&nbsp;an&nbsp;integrated&nbsp;development&nbsp;environment&nbsp;(IDE)&nbsp;with&nbsp;（4）features&nbsp;like&nbsp;APIs,&nbsp;code&nbsp;templates,&nbsp;reusable&nbsp;</p><p>plug-in&nbsp;modules&nbsp;and&nbsp;graphical&nbsp;connectors&nbsp;to&nbsp;automate&nbsp;a&nbsp;significant&nbsp;percentage&nbsp;of&nbsp;the&nbsp;application&nbsp;development</p><p>&nbsp;process.&nbsp;LCAPs&nbsp;are&nbsp;typically&nbsp;available&nbsp;as&nbsp;cloud-based&nbsp;Platform-as-a-Service&nbsp;(PaaS)&nbsp;solutions.</p><p>A&nbsp;low-code&nbsp;platform&nbsp;works&nbsp;on&nbsp;the&nbsp;principle&nbsp;of&nbsp;lowering&nbsp;complexity&nbsp;by&nbsp;using&nbsp;visual&nbsp;tools and&nbsp;techniques&nbsp;</p><p>like&nbsp;process&nbsp;modeling,&nbsp;where&nbsp;users&nbsp;employ&nbsp;visual&nbsp;tools&nbsp;to&nbsp;define&nbsp;workflows,business&nbsp;rules,&nbsp;user&nbsp;interfaces&nbsp;</p><p>and&nbsp;the&nbsp;like.&nbsp;Behind&nbsp;the&nbsp;scenes,&nbsp;the&nbsp;complete&nbsp;workflow,automatically&nbsp;converted&nbsp;into&nbsp;code.&nbsp;LCAPs&nbsp;are&nbsp;used&nbsp;predominantly&nbsp;by&nbsp;professional&nbsp;developers,automate&nbsp;the&nbsp;generic&nbsp;aspects&nbsp;of&nbsp;coding&nbsp;to&nbsp;redirect&nbsp;effort&nbsp;on&nbsp;the&nbsp;last&nbsp;mile&nbsp;</p><p>of( &nbsp;75) &nbsp;.</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365630",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["block&nbsp;", "automation", "function", "method"],
+          "sort_son": "2"
+        },
+        {
+          "index": 73,
+          "belong_page": 1,
+          "question_id": 365633,
+          "question_title": "<p>●&nbsp;Low-code&nbsp;and&nbsp;no&nbsp;code&nbsp;software&nbsp;development&nbsp;solutions&nbsp;have&nbsp;emerged&nbsp;as&nbsp;viable&nbsp;and&nbsp;convenient&nbsp;</p><p>alternatives&nbsp;to&nbsp;the&nbsp;traditional&nbsp;development&nbsp;process.&nbsp;&nbsp;&nbsp;&nbsp;</p><p>Low-code&nbsp;is&nbsp;a&nbsp;rapid&nbsp;application&nbsp;development&nbsp;(RAD)&nbsp;approach&nbsp;that&nbsp;enables&nbsp;automated&nbsp;code&nbsp;generation</p><p>&nbsp;through&nbsp;&nbsp;（1）&nbsp;building&nbsp;blocks&nbsp;like&nbsp;drag-and-drop&nbsp;and&nbsp;pull-down&nbsp;menu&nbsp;interfaces.&nbsp;</p><p>This（2）allows&nbsp;low-code&nbsp;users&nbsp;to&nbsp;focus&nbsp;on&nbsp;the&nbsp;differentiator&nbsp;rather&nbsp;than&nbsp;the&nbsp;common&nbsp;denominator&nbsp;of&nbsp;</p><p>programming.&nbsp;Low-code&nbsp;is&nbsp;a&nbsp;balanced&nbsp;middle&nbsp;ground&nbsp;between&nbsp;manual&nbsp;coding&nbsp;and&nbsp;no-code&nbsp;as&nbsp;its&nbsp;users&nbsp;can&nbsp;still&nbsp;add&nbsp;code&nbsp;over&nbsp;auto-generated&nbsp;code.While&nbsp;in&nbsp;low-code&nbsp;there&nbsp;is&nbsp;some&nbsp;handholding&nbsp;done&nbsp;by&nbsp;developers&nbsp;in&nbsp;the&nbsp;</p><p>form&nbsp;of&nbsp;scripting&nbsp;or&nbsp;manual&nbsp;coding,&nbsp;no-code&nbsp;has&nbsp;a&nbsp;completely（3）&nbsp;approach,&nbsp;with&nbsp;100%&nbsp;dependence&nbsp;on&nbsp;visual&nbsp;</p><p>tools.</p><p>A&nbsp;low-code&nbsp;application&nbsp;platform&nbsp;(LCAP)&nbsp;—&nbsp;also&nbsp;called&nbsp;a&nbsp;low-code&nbsp;development&nbsp;platform&nbsp;(LCDP)&nbsp;—&nbsp;contains&nbsp;an&nbsp;integrated&nbsp;development&nbsp;environment&nbsp;(IDE)&nbsp;with&nbsp;（4）features&nbsp;like&nbsp;APIs,&nbsp;code&nbsp;templates,&nbsp;reusable&nbsp;</p><p>plug-in&nbsp;modules&nbsp;and&nbsp;graphical&nbsp;connectors&nbsp;to&nbsp;automate&nbsp;a&nbsp;significant&nbsp;percentage&nbsp;of&nbsp;the&nbsp;application&nbsp;development</p><p>&nbsp;process.&nbsp;LCAPs&nbsp;are&nbsp;typically&nbsp;available&nbsp;as&nbsp;cloud-based&nbsp;Platform-as-a-Service&nbsp;(PaaS)&nbsp;solutions.</p><p>A&nbsp;low-code&nbsp;platform&nbsp;works&nbsp;on&nbsp;the&nbsp;principle&nbsp;of&nbsp;lowering&nbsp;complexity&nbsp;by&nbsp;using&nbsp;visual&nbsp;tools and&nbsp;techniques&nbsp;</p><p>like&nbsp;process&nbsp;modeling,&nbsp;where&nbsp;users&nbsp;employ&nbsp;visual&nbsp;tools&nbsp;to&nbsp;define&nbsp;workflows,business&nbsp;rules,&nbsp;user&nbsp;interfaces&nbsp;</p><p>and&nbsp;the&nbsp;like.&nbsp;Behind&nbsp;the&nbsp;scenes,&nbsp;the&nbsp;complete&nbsp;workflow,automatically&nbsp;converted&nbsp;into&nbsp;code.&nbsp;LCAPs&nbsp;are&nbsp;used&nbsp;predominantly&nbsp;by&nbsp;professional&nbsp;developers,automate&nbsp;the&nbsp;generic&nbsp;aspects&nbsp;of&nbsp;coding&nbsp;to&nbsp;redirect&nbsp;effort&nbsp;on&nbsp;the&nbsp;last&nbsp;mile&nbsp;</p><p>of( &nbsp;75) &nbsp;.</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365630",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["modern", "hands-off", "generic", "labor-free"],
+          "sort_son": "3"
+        },
+        {
+          "index": 74,
+          "belong_page": 1,
+          "question_id": 365634,
+          "question_title": "<p>●&nbsp;Low-code&nbsp;and&nbsp;no&nbsp;code&nbsp;software&nbsp;development&nbsp;solutions&nbsp;have&nbsp;emerged&nbsp;as&nbsp;viable&nbsp;and&nbsp;convenient&nbsp;</p><p>alternatives&nbsp;to&nbsp;the&nbsp;traditional&nbsp;development&nbsp;process.&nbsp;&nbsp;&nbsp;&nbsp;</p><p>Low-code&nbsp;is&nbsp;a&nbsp;rapid&nbsp;application&nbsp;development&nbsp;(RAD)&nbsp;approach&nbsp;that&nbsp;enables&nbsp;automated&nbsp;code&nbsp;generation</p><p>&nbsp;through&nbsp;&nbsp;（1）&nbsp;building&nbsp;blocks&nbsp;like&nbsp;drag-and-drop&nbsp;and&nbsp;pull-down&nbsp;menu&nbsp;interfaces.&nbsp;</p><p>This（2）allows&nbsp;low-code&nbsp;users&nbsp;to&nbsp;focus&nbsp;on&nbsp;the&nbsp;differentiator&nbsp;rather&nbsp;than&nbsp;the&nbsp;common&nbsp;denominator&nbsp;of&nbsp;</p><p>programming.&nbsp;Low-code&nbsp;is&nbsp;a&nbsp;balanced&nbsp;middle&nbsp;ground&nbsp;between&nbsp;manual&nbsp;coding&nbsp;and&nbsp;no-code&nbsp;as&nbsp;its&nbsp;users&nbsp;can&nbsp;still&nbsp;add&nbsp;code&nbsp;over&nbsp;auto-generated&nbsp;code.While&nbsp;in&nbsp;low-code&nbsp;there&nbsp;is&nbsp;some&nbsp;handholding&nbsp;done&nbsp;by&nbsp;developers&nbsp;in&nbsp;the&nbsp;</p><p>form&nbsp;of&nbsp;scripting&nbsp;or&nbsp;manual&nbsp;coding,&nbsp;no-code&nbsp;has&nbsp;a&nbsp;completely（3）&nbsp;approach,&nbsp;with&nbsp;100%&nbsp;dependence&nbsp;on&nbsp;visual&nbsp;</p><p>tools.</p><p>A&nbsp;low-code&nbsp;application&nbsp;platform&nbsp;(LCAP)&nbsp;—&nbsp;also&nbsp;called&nbsp;a&nbsp;low-code&nbsp;development&nbsp;platform&nbsp;(LCDP)&nbsp;—&nbsp;contains&nbsp;an&nbsp;integrated&nbsp;development&nbsp;environment&nbsp;(IDE)&nbsp;with&nbsp;（4）features&nbsp;like&nbsp;APIs,&nbsp;code&nbsp;templates,&nbsp;reusable&nbsp;</p><p>plug-in&nbsp;modules&nbsp;and&nbsp;graphical&nbsp;connectors&nbsp;to&nbsp;automate&nbsp;a&nbsp;significant&nbsp;percentage&nbsp;of&nbsp;the&nbsp;application&nbsp;development</p><p>&nbsp;process.&nbsp;LCAPs&nbsp;are&nbsp;typically&nbsp;available&nbsp;as&nbsp;cloud-based&nbsp;Platform-as-a-Service&nbsp;(PaaS)&nbsp;solutions.</p><p>A&nbsp;low-code&nbsp;platform&nbsp;works&nbsp;on&nbsp;the&nbsp;principle&nbsp;of&nbsp;lowering&nbsp;complexity&nbsp;by&nbsp;using&nbsp;visual&nbsp;tools and&nbsp;techniques&nbsp;</p><p>like&nbsp;process&nbsp;modeling,&nbsp;where&nbsp;users&nbsp;employ&nbsp;visual&nbsp;tools&nbsp;to&nbsp;define&nbsp;workflows,business&nbsp;rules,&nbsp;user&nbsp;interfaces&nbsp;</p><p>and&nbsp;the&nbsp;like.&nbsp;Behind&nbsp;the&nbsp;scenes,&nbsp;the&nbsp;complete&nbsp;workflow,automatically&nbsp;converted&nbsp;into&nbsp;code.&nbsp;LCAPs&nbsp;are&nbsp;used&nbsp;predominantly&nbsp;by&nbsp;professional&nbsp;developers,automate&nbsp;the&nbsp;generic&nbsp;aspects&nbsp;of&nbsp;coding&nbsp;to&nbsp;redirect&nbsp;effort&nbsp;on&nbsp;the&nbsp;last&nbsp;mile&nbsp;</p><p>of( &nbsp;75) &nbsp;.</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365630",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["reusable", "built-in", "existed", "well-konwn"],
+          "sort_son": "4"
+        },
+        {
+          "index": 75,
+          "belong_page": 1,
+          "question_id": 365635,
+          "question_title": "<p>●&nbsp;Low-code&nbsp;and&nbsp;no&nbsp;code&nbsp;software&nbsp;development&nbsp;solutions&nbsp;have&nbsp;emerged&nbsp;as&nbsp;viable&nbsp;and&nbsp;convenient&nbsp;</p><p>alternatives&nbsp;to&nbsp;the&nbsp;traditional&nbsp;development&nbsp;process.&nbsp;&nbsp;&nbsp;&nbsp;</p><p>Low-code&nbsp;is&nbsp;a&nbsp;rapid&nbsp;application&nbsp;development&nbsp;(RAD)&nbsp;approach&nbsp;that&nbsp;enables&nbsp;automated&nbsp;code&nbsp;generation</p><p>&nbsp;through&nbsp;&nbsp;（1）&nbsp;building&nbsp;blocks&nbsp;like&nbsp;drag-and-drop&nbsp;and&nbsp;pull-down&nbsp;menu&nbsp;interfaces.&nbsp;</p><p>This（2）allows&nbsp;low-code&nbsp;users&nbsp;to&nbsp;focus&nbsp;on&nbsp;the&nbsp;differentiator&nbsp;rather&nbsp;than&nbsp;the&nbsp;common&nbsp;denominator&nbsp;of&nbsp;</p><p>programming.&nbsp;Low-code&nbsp;is&nbsp;a&nbsp;balanced&nbsp;middle&nbsp;ground&nbsp;between&nbsp;manual&nbsp;coding&nbsp;and&nbsp;no-code&nbsp;as&nbsp;its&nbsp;users&nbsp;can&nbsp;still&nbsp;add&nbsp;code&nbsp;over&nbsp;auto-generated&nbsp;code.While&nbsp;in&nbsp;low-code&nbsp;there&nbsp;is&nbsp;some&nbsp;handholding&nbsp;done&nbsp;by&nbsp;developers&nbsp;in&nbsp;the&nbsp;</p><p>form&nbsp;of&nbsp;scripting&nbsp;or&nbsp;manual&nbsp;coding,&nbsp;no-code&nbsp;has&nbsp;a&nbsp;completely（3）&nbsp;approach,&nbsp;with&nbsp;100%&nbsp;dependence&nbsp;on&nbsp;visual&nbsp;</p><p>tools.</p><p>A&nbsp;low-code&nbsp;application&nbsp;platform&nbsp;(LCAP)&nbsp;—&nbsp;also&nbsp;called&nbsp;a&nbsp;low-code&nbsp;development&nbsp;platform&nbsp;(LCDP)&nbsp;—&nbsp;contains&nbsp;an&nbsp;integrated&nbsp;development&nbsp;environment&nbsp;(IDE)&nbsp;with&nbsp;（4）features&nbsp;like&nbsp;APIs,&nbsp;code&nbsp;templates,&nbsp;reusable&nbsp;</p><p>plug-in&nbsp;modules&nbsp;and&nbsp;graphical&nbsp;connectors&nbsp;to&nbsp;automate&nbsp;a&nbsp;significant&nbsp;percentage&nbsp;of&nbsp;the&nbsp;application&nbsp;development</p><p>&nbsp;process.&nbsp;LCAPs&nbsp;are&nbsp;typically&nbsp;available&nbsp;as&nbsp;cloud-based&nbsp;Platform-as-a-Service&nbsp;(PaaS)&nbsp;solutions.</p><p>A&nbsp;low-code&nbsp;platform&nbsp;works&nbsp;on&nbsp;the&nbsp;principle&nbsp;of&nbsp;lowering&nbsp;complexity&nbsp;by&nbsp;using&nbsp;visual&nbsp;tools and&nbsp;techniques&nbsp;</p><p>like&nbsp;process&nbsp;modeling,&nbsp;where&nbsp;users&nbsp;employ&nbsp;visual&nbsp;tools&nbsp;to&nbsp;define&nbsp;workflows,business&nbsp;rules,&nbsp;user&nbsp;interfaces&nbsp;</p><p>and&nbsp;the&nbsp;like.&nbsp;Behind&nbsp;the&nbsp;scenes,&nbsp;the&nbsp;complete&nbsp;workflow,automatically&nbsp;converted&nbsp;into&nbsp;code.&nbsp;LCAPs&nbsp;are&nbsp;used&nbsp;predominantly&nbsp;by&nbsp;professional&nbsp;developers,automate&nbsp;the&nbsp;generic&nbsp;aspects&nbsp;of&nbsp;coding&nbsp;to&nbsp;redirect&nbsp;effort&nbsp;on&nbsp;the&nbsp;last&nbsp;mile&nbsp;</p><p>of( &nbsp;75) &nbsp;.</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "365630",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["delivery", "automation", "development", "success"],
+          "sort_son": "5"
+        }
+      ],
+      "summary": {
+        "radio": {
+          "total_question": 75,
+          "total_score": 0
+        },
+        "multiple": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "judge": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "fill": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "program": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "qanda": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "cloze": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "budingxiang": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "material": {
+          "total_question": 0,
+          "total_score": 0
+        }
+      },
+      "examine": {
+        "id": 16376,
+        "title": "2023年5月软件设计师选择题",
+        "len_time": {
+          "time": 0
+        },
+        "total_question": 75,
+        "total_score": 75,
+        "submit_limit_num": "0",
+        "machine_type": "1"
+      },
+      "answer_activity_start_time": 1585828800,
+      "checkProcess": 1,
+      "process": {
+        "is_delete": false
+      },
+      "train_id": 0
+    },
+    "pagination": {
+      "curPage": 1,
+      "pageSize": 1200,
+      "total": 75,
+      "hasNextPage": false
+    },
+    "totalOrder": [
+      {
+        "index": 1,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 364504
+      },
+      {
+        "index": 2,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365536
+      },
+      {
+        "index": 3,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365537
+      },
+      {
+        "index": 4,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365538
+      },
+      {
+        "index": 5,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365539
+      },
+      {
+        "index": 6,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 364509
+      },
+      {
+        "index": 7,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365540
+      },
+      {
+        "index": 8,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 365542
+      },
+      {
+        "index": 9,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 365543
+      },
+      {
+        "index": 10,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365544
+      },
+      {
+        "index": 11,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365545
+      },
+      {
+        "index": 12,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365546
+      },
+      {
+        "index": 13,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365547
+      },
+      {
+        "index": 14,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365548
+      },
+      {
+        "index": 15,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365549
+      },
+      {
+        "index": 16,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365550
+      },
+      {
+        "index": 17,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 365553
+      },
+      {
+        "index": 18,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 365554
+      },
+      {
+        "index": 19,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365555
+      },
+      {
+        "index": 20,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365556
+      },
+      {
+        "index": 21,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365557
+      },
+      {
+        "index": 22,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365558
+      },
+      {
+        "index": 23,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365559
+      },
+      {
+        "index": 24,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365560
+      },
+      {
+        "index": 25,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365561
+      },
+      {
+        "index": 26,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 365563
+      },
+      {
+        "index": 27,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 365564
+      },
+      {
+        "index": 28,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 365565
+      },
+      {
+        "index": 29,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365566
+      },
+      {
+        "index": 30,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365567
+      },
+      {
+        "index": 31,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365568
+      },
+      {
+        "index": 32,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365569
+      },
+      {
+        "index": 33,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365570
+      },
+      {
+        "index": 34,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 365572
+      },
+      {
+        "index": 35,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 365573
+      },
+      {
+        "index": 36,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365574
+      },
+      {
+        "index": 37,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 365579
+      },
+      {
+        "index": 38,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 365580
+      },
+      {
+        "index": 39,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365581
+      },
+      {
+        "index": 40,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365582
+      },
+      {
+        "index": 41,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 365586
+      },
+      {
+        "index": 42,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 365587
+      },
+      {
+        "index": 43,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365588
+      },
+      {
+        "index": 44,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 365591
+      },
+      {
+        "index": 45,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 365592
+      },
+      {
+        "index": 46,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 365595
+      },
+      {
+        "index": 47,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 365596
+      },
+      {
+        "index": 48,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365597
+      },
+      {
+        "index": 49,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365598
+      },
+      {
+        "index": 50,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365599
+      },
+      {
+        "index": 51,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365600
+      },
+      {
+        "index": 52,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365601
+      },
+      {
+        "index": 53,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 365605
+      },
+      {
+        "index": 54,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 365606
+      },
+      {
+        "index": 55,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 365608
+      },
+      {
+        "index": 56,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 365609
+      },
+      {
+        "index": 57,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365610
+      },
+      {
+        "index": 58,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365611
+      },
+      {
+        "index": 59,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365612
+      },
+      {
+        "index": 60,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365613
+      },
+      {
+        "index": 61,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365614
+      },
+      {
+        "index": 62,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 365617
+      },
+      {
+        "index": 63,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 365618
+      },
+      {
+        "index": 64,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 365620
+      },
+      {
+        "index": 65,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 365621
+      },
+      {
+        "index": 66,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365622
+      },
+      {
+        "index": 67,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 365625
+      },
+      {
+        "index": 68,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 365626
+      },
+      {
+        "index": 69,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365627
+      },
+      {
+        "index": 70,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 365628
+      },
+      {
+        "index": 71,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 365631
+      },
+      {
+        "index": 72,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 365632
+      },
+      {
+        "index": 73,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 365633
+      },
+      {
+        "index": 74,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 365634
+      },
+      {
+        "index": 75,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 365635
+      }
+    ]
+  }
+}

@@ -1,0 +1,351 @@
+{
+  "msg": "成功",
+  "status": "0",
+  "data": {
+    "data": {
+      "question": [
+        {
+          "index": 1,
+          "belong_page": 1,
+          "question_id": 535797,
+          "question_title": "<p>【考生回忆版】</p><p>在SQL查询中，用于过滤分组后数据的子句是()。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "535797",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["GROUP BY", "HAVING", "ORDER BY", "WHEREB"],
+          "sort_son": "0"
+        },
+        {
+          "index": 2,
+          "belong_page": 1,
+          "question_id": 535798,
+          "question_title": "<p>【考生回忆版】</p><p>VLAN 技术基于MAC地址实现逻辑分组，工作在OSI参考</p><p>模型的()。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "535798",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["传输层", "数据链路层", "网络层", "物理层"],
+          "sort_son": "0"
+        },
+        {
+          "index": 3,
+          "belong_page": 1,
+          "question_id": 535799,
+          "question_title": "<p>【考生回忆版】</p><p>以下序列中，满足大顶堆条件的是()。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "535799",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "50，38，40，28，43，16，25，19",
+            "50，37，45，25，16，40，35，19",
+            "45，25，15，16，24，20，7，10",
+            "55，43，45，48，52，29，75，15"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 4,
+          "belong_page": 1,
+          "question_id": 535800,
+          "question_title": "<p>【考生回忆版】</p><p>黑盒测试的主要依据是()。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "535800",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["代码复杂度", "软件需求规格说明书", "设计文档", "程序内部逻辑"],
+          "sort_son": "0"
+        },
+        {
+          "index": 5,
+          "belong_page": 1,
+          "question_id": 535805,
+          "question_title": "<p>【考生回忆版】</p><p>软件公司的软件设计师王某根据工作安排参与了某软件项目的开发，项目进行中王某辞职并将相关开发任务交接给同事李某，因此项目负责人将该软件开发人员名单的王某变更为李某，该软件开发完成后王某也不再署名。那么，该项目负责人的行为()。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "535805",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>不构成侵权，因为王某不是软件著作权</p><p></p>",
+            "侵犯了王某的软件著作权",
+            "侵犯了王某作为开发者的署名权",
+            "不构成侵权，因为王某已不是项目组成员"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 6,
+          "belong_page": 1,
+          "question_id": 535804,
+          "question_title": "<p>【考生回忆版】</p><p>下列关于报文摘要的叙述中，错误的是()。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "535804",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "在物联网环境中，可以为资源受限的传感器生成轻量级摘要",
+            "对电子文档生成摘要，接收方用私钥解密",
+            "对发送方报文生成的摘要值，接收方应重新计算并与原始摘要比对",
+            "报文摘要仅用于验证完整性，传输数据仍需TLS加密"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 7,
+          "belong_page": 1,
+          "question_id": 535803,
+          "question_title": "【考生回忆版】<p>()是评估软件可维护性的关键度量</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "535803",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["用户数量", "功能点数量", "数据库容量", "平均修复时间(MTTR)"],
+          "sort_son": "0"
+        },
+        {
+          "index": 8,
+          "belong_page": 1,
+          "question_id": 535802,
+          "question_title": "<p>【考生回忆版】</p><p>使用SPOOLing技术的主要目的是()。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "535802",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "将独占设备虚拟为共享设备",
+            "提高进程并发度",
+            "加快内存访问速度",
+            "提高CPU利用率"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 9,
+          "belong_page": 1,
+          "question_id": 535801,
+          "question_title": "【考生回忆版】<br/>以下()不是面向对象设计的基本原则。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "535801",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["过程优先", "单一职责", "依赖倒置", "开放-封闭"],
+          "sort_son": "0"
+        },
+        {
+          "index": 10,
+          "belong_page": 1,
+          "question_id": 356034,
+          "question_title": "<p>以下关于软件著作权产生时间的叙述中，正确的是（6)。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "356034",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>软件著作权产生自软件首次公开发表时</p>",
+            "<p>软件著作权产生自开发者有开发意图时</p>",
+            "<p>软件著作权产生自软件开发完成之日起</p>",
+            "<p>软件著作权产生自软件著作权登记时</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 11,
+          "belong_page": 1,
+          "question_id": 537694,
+          "question_title": "【考生回忆版】<br/><p>考点1.内容耦合<br/>考点2.一个函数不能同时使用位置参数和关键字参数<br/>考点3.投影<br/>考点4.使子类拥有父类的属性和方法<br/>考点5.漫游<br/>考点6.提高数据查询速度<br/>考点7.route<br/>考点8.快速迭代交付<br/>考点9.MFLOPS<br/>考点10.软件必须采用成熟的技术体系进行开发<br/>考点11.识别最长任务链</p>考点12.优化界面交互<br/>考点13.员工和项目",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "537694",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["暂无1", "暂无2", "暂无3", "暂无4"],
+          "sort_son": "0"
+        }
+      ],
+      "summary": {
+        "radio": {
+          "total_question": 11,
+          "total_score": 0
+        },
+        "multiple": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "judge": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "fill": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "program": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "qanda": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "cloze": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "budingxiang": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "material": {
+          "total_question": 0,
+          "total_score": 0
+        }
+      },
+      "examine": {
+        "id": 19205,
+        "title": "2025下软设选择题（回忆版）",
+        "len_time": {
+          "time": 0
+        },
+        "total_question": 11,
+        "total_score": 11,
+        "submit_limit_num": "0",
+        "machine_type": "1"
+      },
+      "answer_activity_start_time": 1585828800,
+      "checkProcess": 1,
+      "process": {
+        "is_delete": false
+      },
+      "train_id": 0
+    },
+    "pagination": {
+      "curPage": 1,
+      "pageSize": 1200,
+      "total": 11,
+      "hasNextPage": false
+    },
+    "totalOrder": [
+      {
+        "index": 1,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 535797
+      },
+      {
+        "index": 2,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 535798
+      },
+      {
+        "index": 3,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 535799
+      },
+      {
+        "index": 4,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 535800
+      },
+      {
+        "index": 5,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 535805
+      },
+      {
+        "index": 6,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 535804
+      },
+      {
+        "index": 7,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 535803
+      },
+      {
+        "index": 8,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 535802
+      },
+      {
+        "index": 9,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 535801
+      },
+      {
+        "index": 10,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 356034
+      },
+      {
+        "index": 11,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 537694
+      }
+    ]
+  }
+}

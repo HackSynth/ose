@@ -1,0 +1,223 @@
+{
+  "msg": "成功",
+  "status": "0",
+  "data": {
+    "data": {
+      "question": [
+        {
+          "index": 1,
+          "belong_page": 1,
+          "question_id": 190583,
+          "question_title": "<p>【说明】</p><p>某公司欲开发一款二手车物流系统，以有效提升物流分发效率，改系统的主要功能是：</p><p>（1）订单管理。系统抓取线索，将车辆交易系统中的交易信息抓取为线索，帮买顾问看到有买车线索后，会打电话询问买家是否需要物流，若需要。帮买顾问就将这个线索发起为订单，并在存储系统中存储，然后系统帮买家寻找物流商进行承运。</p><p>（2）路线管理。帮买顾问对物流商的路线进行管理，存储的路线信息包括：路线类型、物流商、起止地点。路线分为三种：固定路线、包车路线、竞拍体系。其中固定路线和包车路线是合约制，包车路线的发车时间由公司自行管理，是订单的首选途径。</p><p>（3）合约管理。帮买顾问根据公司与物流商确定的合约，对合约内容进行设置，合约信息包括物流商信息、路线起止城市、价格、有效期等。<br/></p><p>（4）寻找物流商。系统根据订单的类型（保卖车、全国购和普通二手军）、起止城市，需要的服务模式（买家接、送到买家等）进行自动派发或以竞拍体系方式选择合适的物流商。即:有新订单时，若为保卖车或全国购，则直接分配到竞拍体系中：否则，若符合固定路线和/或包车路线，系统自动分配给合约物流商，若不符合固定路线和包车路线，系统将订单信息分配到竞拍体系中.竞拍体系接收到订单后，将订单信息推送给有相关路线的物流商，物流商对订单进行竞拍出价，最优报价的物流商中标。最后，给承运商的物流商发送物流消息，更新订单的物流信息，给车辆交易系统发送物流信息。</p><p>（5）物流商注册:物流商账号的注册开通。</p><p>现采用结构化方法对二手车物流系统进行分析与设计,获得如图1-1所示的上下文数据流图和图1-2所示的0层数据流图。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210429/1619661298440708.png\" title=\"1619661298440708.png\" alt=\"image.png\"/><br/></p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210429/1619661317434101.png\" title=\"1619661317434101.png\" alt=\"image.png\"/></p><p>问题1：使用说明中的词语，给出图1-1中的实体E1-E3名称;</p><p>问题2：使用说明中的词语，给出图1-2中的数据存储，D1-D5名称；</p><p>问题3：根据说明和图中术语，补充图1-2中缺失的数据流及其起点和终点；</p><p>问题4：根据说明采用结构化语言对“P5寻找物流商”的加工逻辑进行描述。</p>",
+          "question_type": 5,
+          "answer_type": 5,
+          "material_text": "",
+          "score": 10,
+          "new_parent_id": "190583",
+          "show_type_name": "问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>问题1：</p><p>E1:系统帮买商</p><p>E2: 车辆交易系统</p><p>E3: 物流商</p><p>问题2：</p><p>D1: 交易线索信息表</p><p>D2:订单信息表</p><p>D3:路线信息表</p><p>D4:合约信息表</p><p>D5:物流商信息表</p><p>问题3：</p><p>发送物流信息：起点P5 终点E2</p><p>自动分配：起点P5 终点E3</p><p>更新物流信息：起点P5 终点D2</p><p>问题4：</p><p>略</p>"
+          ],
+          "option": null,
+          "sort_son": "0"
+        },
+        {
+          "index": 2,
+          "belong_page": 1,
+          "question_id": 190588,
+          "question_title": "<p>【说明】</p><p>公司拟开发新入职员工的技能培训管理系统以便使新员工快速胜任新岗位。</p><p>1.&nbsp;部门信息包括：部门号、名称、部门负责人、电话等，部门号唯一标识部门关系中的每一个元组，一个部门有多个员工，但一名员工只属于一个部门，每个部门只有一名负责人，负责部门工作。</p><p>2.&nbsp;员工信息包括员工号、姓名、部门号、岗位、基本工资、电话、家庭住址等，其中员工号是唯一标示员工关系中的每一个元组。岗位有新入职员工，培训师、部门负责人等不同岗位设置不同的基本工资，新入职员工要选择多门课程进行培训，并通过考试取得课程成绩，一名培训师可以讲授多门课程、一门课程可由多名培训师讲授。</p><p>3.课程信息包括课程号，课程名称、学时等；其中课程号唯一标识课程关系的每一个元组。</p><p>关系模式设计</p><p>部门（部门号，部门名，部门负责人，电话）</p><p>员工（员工号，姓名，部门号，&nbsp;d ，电话，家庭住址）</p><p>课程（ (e) ，课程名称，学时）</p><p>讲授（课程号，培训师，培训地点）</p><p>培训（课程号，（f））</p><p>根据需求阶段收集的信息，设计的实体联系图如图2-1所示<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210429/1619661455968084.png\" title=\"1619661455968084.png\" alt=\"image.png\"/></p><p><br/>问题1：</p><p>（1）补充图2-1中的空（a）-（c）</p><p>（2）图2-1中是否存在缺失联系，若存在，则说明所缺失的联系和联系类型</p><p>问题2：</p><p>根据题意，将关系模式中的空（d）-（f）补充完整</p><p>问题3：</p><p>员工关系模式的主键为（g），外键为（h），讲授关系模式的主键为（i），外键为（j）</p><p>问题4：</p><p>员工关系是否存在传递依赖？用100字以内的文字说明理由</p>",
+          "question_type": 5,
+          "answer_type": 5,
+          "material_text": "",
+          "score": 10,
+          "new_parent_id": "190588",
+          "show_type_name": "问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>问题1：</p><p>（1）a: 部门负责人 b: 培训师 c: 新员工</p><p>（2）存在缺失数据流, 部门和员工之间：1:m (一个部门对应多有员工)</p><p>问题2：</p><p>d: 岗位基本工资</p><p>e: 课程号</p><p>f: 员工号或课程成绩</p><p>问题3：</p><p>员工关系表：g: 主键：员工号外健： 部门号</p><p>讲授关系模式：i 主健：课程号 培训师 外健： 课程号、培训师</p><p>问题4：</p><p>答：存在传递依赖</p>"
+          ],
+          "option": null,
+          "sort_son": "0"
+        },
+        {
+          "index": 3,
+          "belong_page": 1,
+          "question_id": 190590,
+          "question_title": "<p>【说明】</p><p>某牙科诊所拟开发一套信息系统，用于管理病人基本信息和就诊信息。诊所工作人员包括：医护人员（Dentalstaff）、接待人员（Receptionist）和办公人员（officestaff）等，系统主要功能需求描述如下：</p><p>1、记录病人基本信息( Maintain patient info)。初次就诊的病人,由接待员将病人基本信息录入系统。病人基本信息包括病人姓名、身份证号、出生日期、性别、首次就诊时间和最后一次就诊时间等。每位病人与其医保信息( MedicalInsurance)关联。</p><p>2、记录就诊信息( Record office visit info)。病人在诊所的每一次就诊,由接待员将就诊信息( Office Visit)录入系统。就诊信息包括就诊时间、就诊费用、支付代码、病人支付费用和医保支付费用等。</p><p>3、记录治疗信息( Record dental procedure),病人在就诊时,可能需要接受多项治疗，每项治疗( Procedure)可能由多位医护人员为其服务。治疗信息包括:治疗项目名称，治疗项目描述、治疗的牙齿和费用等。治疗信息由每位参与治疗的医护人员分别向系统中录入。</p><p>4、打印发票( Print invoices)。发票( Invoice)由办公人员打印。发票分为两种，给医保机构的发票( InsuranceInvoice)和给病人的发票( PatientInvoice)。两种发票内容相同，只是支付的费用不同。当收到治疗费用后，办公人员在系统中更新支付状态（Enterpayment）。</p><p>5、记录医护人员信息( Maintain dental staff info)。办公人员将医护人员信息录入系统。医护人员信息包括姓名、职位、身份证号、家庭住址和联系电话等。</p><p>6、医护人员可以查询并打印其参与的治疗项目相关信息( Search and print procedureinto）。</p><p><br/></p><p>现采用面向对象方法开发该系统，得到如图 3-1 所示的用例图和 3-2 所示的初始类图。</p><p><br/></p><p>【问题1】（6分）</p><p>根据说明中的描述，给出图 3-1中 A1~A3 所对应的参与者名称和 U1~U3所对应的用例名称。</p><p>【问题2】（5分）</p><p>根据说明中的描述，给出图 3-2中 C1~C5 所对应的类名</p><p>【问题3】（4分）</p><p>根据说明中的描述，给出图 3-2 中类 C4、C5、 Patient和DentalStaff 的必要属性。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210429/1619661525943349.png\" title=\"1619661525943349.png\" alt=\"image.png\"/></p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210429/1619661542981035.png\" title=\"1619661542981035.png\" alt=\"image.png\"/></p>",
+          "question_type": 5,
+          "answer_type": 5,
+          "material_text": "",
+          "score": 10,
+          "new_parent_id": "190590",
+          "show_type_name": "问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>问题1：</p><p>A1:Receptionist(接待人员）</p><p>A2:Dentalstaff(医护人员)</p><p>A3:officestaff(办公人员)</p><p>U1: Maintain patient info （记录病人基本信息）</p><p>U2: Record office visit info （记录就诊信息）</p><p>U3: Print invoices （打印发票）</p><p>问题2.<br/>C1: Patient Invoice （病人发票）<br/>C2:Insurance Invoice （医保发票）<br/>C3: Invoice （发票）<br/>C4: Procedure （治疗）<br/>C5:Office Visit （就诊信息）</p><p>C4: 治疗项目名称，治疗项目描述、治疗的牙齿和费用、医护人员身份证号、就诊信息。<br/>C5: 就诊时间、就诊费用、支付代码、病人支付费用和医保支付费用、病人身份证号等。<br/>Patient:病人姓名、身份证号、出生日期、性别、医保编号。<br/>Dental staff: 姓名、职位、身份证号、家庭住址、联系电话。<br/><br/></p>"
+          ],
+          "option": null,
+          "sort_son": "0"
+        },
+        {
+          "index": 4,
+          "belong_page": 1,
+          "question_id": 190593,
+          "question_title": "<p>阅读下列说明和C代码,回答问题1至问题3,将解答写在答题纸的对应栏内。</p><p>【说明】</p><p>0-1背包问题定义为:给定1个物品的价值v[1....i]、重量w[1....i]和背包容量T,每个</p><p>物品装到背包里或者不装到背包里,求最优的装包方案,使得所得到的价值最大。</p><p>0-1背创问题具有最优子结构性质,定义c为最优装包方案所获得的最大价值</p><p>则可得到如下所示的递归式。<br/></p><p><br/></p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 若i=0或T=0</p><p>C[i][T]= &nbsp; &nbsp; C[i-1][T] &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;若T&lt;w[i]</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;max(c[i-1][T-w[i]]+v[i],c[i-1][T]) &nbsp; &nbsp; &nbsp; 若i&gt;0且T≥w[i]</p><p><br/>【C代码】<br/></p><p>下面是算法的C语言实现</p><p>(1)常量和变量说明</p><p>T:背包容量</p><p>V[]:价值数组</p><p>W[]:重量数组</p><p>C[][]:c[i][j]表示前i个物品在背包容量为j的情况下最优装包方案所能获得的最大价值</p><p>(2)C程序</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210429/1619661651922071.png\" title=\"1619661651922071.png\" alt=\"image.png\"/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210429/1619661657240967.png\" title=\"1619661657240967.png\" alt=\"image.png\"/></p><p>【问题1】(8分)</p><p>根据说明和C代码,填充C代码中的空(1)~(4)</p><p>【问题2】(4分)</p><p>根据说明和C代码,算法采用了(5)设计策略。在求解过程中,采用了(6)(自底向上或者自顶向下)的方式。</p><p>【问题3】(3分)</p><p>若5项物品的价值数组和重量数组分别为v[]={0,1,6,18,22,28}和w[]={0,1,2,5,6,7},背包容量为T=11,则获得的最大价值为(7)。</p>",
+          "question_type": 5,
+          "answer_type": 5,
+          "material_text": "",
+          "score": 10,
+          "new_parent_id": "190593",
+          "show_type_name": "问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>问题1:</p><p>1:c[i][j]</p><p>2: i&gt;0 &amp;&amp; j &gt;= w[i]</p><p>3: Calculate_Max_Value(v,w,i-1,j-w[i]) +v[i]</p><p>4: c[i][j]=temp</p><p><br/></p><p>问题2:</p><p>动态规划</p><p>自顶向下</p><p>问题3:</p><p>40</p>"
+          ],
+          "option": null,
+          "sort_son": "0"
+        },
+        {
+          "index": 5,
+          "belong_page": 1,
+          "question_id": 190594,
+          "question_title": "<p>试题五 <br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230819/1692434993304983.png\" title=\"1692434993304983.png\" alt=\"image.png\"/></p><p>import java.util.*</p><p>interface Observer{</p><p>&nbsp; &nbsp; public (1)；</p><p>}</p><p>&nbsp;</p><p>interface Subject{</p><p>&nbsp; &nbsp; public void Attach(Observer obs);</p><p>&nbsp; &nbsp; public void Detach(Observer obs);</p><p>&nbsp; &nbsp; public void Notify();</p><p>&nbsp; &nbsp; public void setStatus(int staus);</p><p>&nbsp; &nbsp; public int getStatus();</p><p>}</p><p>&nbsp;</p><p>class OfficeDoc implements Subject{</p><p>&nbsp; &nbsp; private List&lt; (2) &gt; myObs;</p><p>&nbsp; &nbsp; private String mySubjectName;</p><p>&nbsp; &nbsp; private int m_status;</p><p>&nbsp;</p><p>&nbsp; &nbsp; public OfficeDoc (String name){</p><p>&nbsp; &nbsp; &nbsp; &nbsp; mySubjectName=name;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; this.myObs=new Arraylist&lt;Observer&gt;();</p><p>&nbsp; &nbsp; &nbsp; &nbsp; m_status=0;</p><p>&nbsp; &nbsp; }</p><p>&nbsp; &nbsp; public void Attach(Observer obs);{this.myObs.add(obs);}</p><p>&nbsp; &nbsp; public void Detach(Observer obs);{this.myObs.remove(obs);}</p><p>&nbsp; &nbsp; public void Notify(){</p><p>&nbsp; &nbsp; &nbsp; &nbsp; for(Observer obs:this.myObs){</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (3);</p><p>&nbsp; &nbsp; &nbsp; &nbsp; }</p><p>&nbsp; &nbsp; }</p><p>&nbsp; &nbsp; public void setStatus(int status;){</p><p>&nbsp; &nbsp; &nbsp; &nbsp; m_status=status;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; System out.println(&quot;SetStatus Subject[&quot;+mySubjectName+&quot;]status:&quot;+status);</p><p>&nbsp; &nbsp; }</p><p>&nbsp; &nbsp; public int getStatus(){return m_status;}</p><p>}</p><p>class DocExplorer implements Observer{</p><p>&nbsp; &nbsp; private String myObsName;</p><p>&nbsp; &nbsp; public DocExplorer(String name, (4) sub){</p><p>&nbsp; &nbsp; &nbsp; &nbsp; myObsName=name;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; sub (5);</p><p>&nbsp; &nbsp; }</p><p>&nbsp; &nbsp; public void update(){</p><p>&nbsp; &nbsp; &nbsp; &nbsp; System.out.println(&quot;update observer[&quot;+myObsName+&quot;]&quot; ) ;</p><p>&nbsp; &nbsp; }</p><p>]</p><p>class ObserverTest{</p><p>&nbsp; &nbsp; public static void main(String []args) {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; System.out.println(&quot;Hello World!&quot; ) ;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; Observer observerA=new DocExplorer(&quot;observerA&quot;,subjectA);</p><p>&nbsp; &nbsp; &nbsp; &nbsp; subjectA.serStatus(1);</p><p>&nbsp; &nbsp; &nbsp; &nbsp; subjectA.Notify();</p><p>&nbsp; &nbsp; }</p><p>}</p><p><br/></p>",
+          "question_type": 5,
+          "answer_type": 5,
+          "material_text": "",
+          "score": 10,
+          "new_parent_id": "190594",
+          "show_type_name": "问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>（1）void update();</p><p>（2）Observer;</p><p>（3）obs.update();</p><p>（4）Subject;</p><p>（5）Attach(this);</p>"
+          ],
+          "option": null,
+          "sort_son": "0"
+        },
+        {
+          "index": 6,
+          "belong_page": 1,
+          "question_id": 190597,
+          "question_title": "<p>阅读下列说明和Java代码，将应填入（n）处的字句写在答题纸的对应栏内。</p><p>【说明】</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;某文件管理系统中定义了类OfficeDoc和DocExplorer，当类OfficeDoc发生变化时，类DocExplorer的所有对象都要更新其自身的状态，现采用观察者（Observer）设计模式来实现该需求，所设计的类图如图6-1所示。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210429/1619661821303061.png\" title=\"1619661821303061.png\" alt=\"image.png\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210429/1619661847406415.png\" title=\"1619661847406415.png\" alt=\"image.png\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210429/1619661853321874.png\" title=\"1619661853321874.png\" alt=\"image.png\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210429/1619661860605849.png\" title=\"1619661860605849.png\" alt=\"image.png\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210429/1619661866841159.png\" title=\"1619661866841159.png\" alt=\"image.png\"/></p>",
+          "question_type": 5,
+          "answer_type": 5,
+          "material_text": "",
+          "score": 10,
+          "new_parent_id": "190597",
+          "show_type_name": "问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>1: void update()</p><p>2: Observer</p><p>3: obs.update()</p><p>4: Subject</p><p>5: Attach(this)</p>"
+          ],
+          "option": null,
+          "sort_son": "0"
+        }
+      ],
+      "summary": {
+        "radio": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "multiple": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "judge": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "fill": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "program": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "qanda": {
+          "total_question": 6,
+          "total_score": 0
+        },
+        "cloze": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "budingxiang": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "material": {
+          "total_question": 0,
+          "total_score": 0
+        }
+      },
+      "examine": {
+        "id": 8105,
+        "title": "2019年11月软件设计师案例分析",
+        "len_time": {
+          "time": 0
+        },
+        "total_question": 6,
+        "total_score": 60,
+        "submit_limit_num": "0",
+        "machine_type": "2"
+      },
+      "answer_activity_start_time": 1585828800,
+      "checkProcess": 1,
+      "process": {
+        "is_delete": false
+      },
+      "train_id": 0
+    },
+    "pagination": {
+      "curPage": 1,
+      "pageSize": 1200,
+      "total": 6,
+      "hasNextPage": false
+    },
+    "totalOrder": [
+      {
+        "index": 1,
+        "question_type": 5,
+        "belong_page": 1,
+        "question_id": 190583
+      },
+      {
+        "index": 2,
+        "question_type": 5,
+        "belong_page": 1,
+        "question_id": 190588
+      },
+      {
+        "index": 3,
+        "question_type": 5,
+        "belong_page": 1,
+        "question_id": 190590
+      },
+      {
+        "index": 4,
+        "question_type": 5,
+        "belong_page": 1,
+        "question_id": 190593
+      },
+      {
+        "index": 5,
+        "question_type": 5,
+        "belong_page": 1,
+        "question_id": 190594
+      },
+      {
+        "index": 6,
+        "question_type": 5,
+        "belong_page": 1,
+        "question_id": 190597
+      }
+    ]
+  }
+}

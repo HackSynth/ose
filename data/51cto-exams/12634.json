@@ -1,0 +1,459 @@
+{
+  "msg": "成功",
+  "status": "0",
+  "data": {
+    "data": {
+      "question": [
+        {
+          "index": 1,
+          "belong_page": 1,
+          "question_id": 316321,
+          "question_title": "<p>【问题1】 (4分)</p><p>使用说明中的词语，给出图1-1中的实体E1~E4的名称。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>试题一(共15分)</p><p>阅读下列说明和图，回答问题1至问题4,将解答填入答题纸的对应栏内。</p><p>【说明】某现代农业种植基地为进一步提升农作物种植过程的智能化，欲开发智慧农业平台，集管理和销售于一体，该平台的主要功能有：</p><p>1. 信息维护。农业专家对农作物、环境等监测数据的监控处理规则进行维护。</p><p>2. 数据采集。获取传感器上传的农作物长势、土壤详情、气候等连续监测数据，解析后将监测信息进行数据处理、可视化和存储等操作。</p><p>3. 数据处理。对实时监测信息根据监控处理规则进行监测分析，将分析结果进行可视化并进行存储、远程控制；对历史监测信息进行综合统计和预测，将预测信息进行可视化和存储。</p><p>4. 远程控制。根据监控处理规则对分析结果进行判定，依据判定结果自动对控制器进行远程控制。平台也可以根据农业人员提供的控制信息对控制器进行远程控制。</p><p>5. 可视化。实时向农业人员展示监测信息；实时给农业专家展示统计分析结果和预测信息或根据农业专家请求进行展示。</p><p>现采用结构化方法对智慧农业平台进行分析与设计，获得如图1-1所示的上下文数据流图和图1-2所示的0层数据流图。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20211123/1637653315580578.png\" title=\"1637653315580578.png\" alt=\"image.png\"/><br/></p><p>图1-1上下文数据流图</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20211123/1637653326190095.png\" title=\"1637653326190095.png\" alt=\"image.png\"/><br/></p><p>图1-2&nbsp;0层数据流图</p><p><br/></p>",
+          "score": 1,
+          "new_parent_id": "316320",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["<p>E1: 传感器； E2：农业专家；E3:农业人员；E4:控制器</p>"],
+          "option": null,
+          "sort_son": "1"
+        },
+        {
+          "index": 2,
+          "belong_page": 1,
+          "question_id": 316322,
+          "question_title": "<p>【问题2】(4分)</p><p>使用说明中的词语，给出图1-2中的数据存储D1~D4的名称。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>试题一(共15分)</p><p>阅读下列说明和图，回答问题1至问题4,将解答填入答题纸的对应栏内。</p><p>【说明】某现代农业种植基地为进一步提升农作物种植过程的智能化，欲开发智慧农业平台，集管理和销售于一体，该平台的主要功能有：</p><p>1. 信息维护。农业专家对农作物、环境等监测数据的监控处理规则进行维护。</p><p>2. 数据采集。获取传感器上传的农作物长势、土壤详情、气候等连续监测数据，解析后将监测信息进行数据处理、可视化和存储等操作。</p><p>3. 数据处理。对实时监测信息根据监控处理规则进行监测分析，将分析结果进行可视化并进行存储、远程控制；对历史监测信息进行综合统计和预测，将预测信息进行可视化和存储。</p><p>4. 远程控制。根据监控处理规则对分析结果进行判定，依据判定结果自动对控制器进行远程控制。平台也可以根据农业人员提供的控制信息对控制器进行远程控制。</p><p>5. 可视化。实时向农业人员展示监测信息；实时给农业专家展示统计分析结果和预测信息或根据农业专家请求进行展示。</p><p>现采用结构化方法对智慧农业平台进行分析与设计，获得如图1-1所示的上下文数据流图和图1-2所示的0层数据流图。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20211123/1637653315580578.png\" title=\"1637653315580578.png\" alt=\"image.png\"/><br/></p><p>图1-1上下文数据流图</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20211123/1637653326190095.png\" title=\"1637653326190095.png\" alt=\"image.png\"/><br/></p><p>图1-2&nbsp;0层数据流图</p><p><br/></p>",
+          "score": 1,
+          "new_parent_id": "316320",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["<p>D1：监控处理规则文件 D2：监测信息表 D3: 分析结果文件 D4：预测信息表</p>"],
+          "option": null,
+          "sort_son": "2"
+        },
+        {
+          "index": 3,
+          "belong_page": 1,
+          "question_id": 316323,
+          "question_title": "<p>【问题3】(4分)</p><p>根据说明和图中术语，补充图1-2中缺失的数据流及其起点和终点。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>试题一(共15分)</p><p>阅读下列说明和图，回答问题1至问题4,将解答填入答题纸的对应栏内。</p><p>【说明】某现代农业种植基地为进一步提升农作物种植过程的智能化，欲开发智慧农业平台，集管理和销售于一体，该平台的主要功能有：</p><p>1. 信息维护。农业专家对农作物、环境等监测数据的监控处理规则进行维护。</p><p>2. 数据采集。获取传感器上传的农作物长势、土壤详情、气候等连续监测数据，解析后将监测信息进行数据处理、可视化和存储等操作。</p><p>3. 数据处理。对实时监测信息根据监控处理规则进行监测分析，将分析结果进行可视化并进行存储、远程控制；对历史监测信息进行综合统计和预测，将预测信息进行可视化和存储。</p><p>4. 远程控制。根据监控处理规则对分析结果进行判定，依据判定结果自动对控制器进行远程控制。平台也可以根据农业人员提供的控制信息对控制器进行远程控制。</p><p>5. 可视化。实时向农业人员展示监测信息；实时给农业专家展示统计分析结果和预测信息或根据农业专家请求进行展示。</p><p>现采用结构化方法对智慧农业平台进行分析与设计，获得如图1-1所示的上下文数据流图和图1-2所示的0层数据流图。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20211123/1637653315580578.png\" title=\"1637653315580578.png\" alt=\"image.png\"/><br/></p><p>图1-1上下文数据流图</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20211123/1637653326190095.png\" title=\"1637653326190095.png\" alt=\"image.png\"/><br/></p><p>图1-2&nbsp;0层数据流图</p><p><br/></p>",
+          "score": 1,
+          "new_parent_id": "316320",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>起点 D1，终点P4 ， 监测规则</p><p>起点 E2，终点P5 ，请求</p><p>起点P3, 终点P5 ，分析结果</p><p>起点P3，终点P5 ，预测信息</p>"
+          ],
+          "option": null,
+          "sort_son": "3"
+        },
+        {
+          "index": 4,
+          "belong_page": 1,
+          "question_id": 316324,
+          "question_title": "<p>【问题4】(3分)</p><p>根据说明，“数据处理”可以分解为哪些子加工?进一步进行分解时，需要注意哪三种常见的错误?</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>试题一(共15分)</p><p>阅读下列说明和图，回答问题1至问题4,将解答填入答题纸的对应栏内。</p><p>【说明】某现代农业种植基地为进一步提升农作物种植过程的智能化，欲开发智慧农业平台，集管理和销售于一体，该平台的主要功能有：</p><p>1. 信息维护。农业专家对农作物、环境等监测数据的监控处理规则进行维护。</p><p>2. 数据采集。获取传感器上传的农作物长势、土壤详情、气候等连续监测数据，解析后将监测信息进行数据处理、可视化和存储等操作。</p><p>3. 数据处理。对实时监测信息根据监控处理规则进行监测分析，将分析结果进行可视化并进行存储、远程控制；对历史监测信息进行综合统计和预测，将预测信息进行可视化和存储。</p><p>4. 远程控制。根据监控处理规则对分析结果进行判定，依据判定结果自动对控制器进行远程控制。平台也可以根据农业人员提供的控制信息对控制器进行远程控制。</p><p>5. 可视化。实时向农业人员展示监测信息；实时给农业专家展示统计分析结果和预测信息或根据农业专家请求进行展示。</p><p>现采用结构化方法对智慧农业平台进行分析与设计，获得如图1-1所示的上下文数据流图和图1-2所示的0层数据流图。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20211123/1637653315580578.png\" title=\"1637653315580578.png\" alt=\"image.png\"/><br/></p><p>图1-1上下文数据流图</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20211123/1637653326190095.png\" title=\"1637653326190095.png\" alt=\"image.png\"/><br/></p><p>图1-2&nbsp;0层数据流图</p><p><br/></p>",
+          "score": 1,
+          "new_parent_id": "316320",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["<p>数据处理加工分为数据分析，可视化与存储</p><p>黑洞、奇迹、灰洞</p>"],
+          "option": null,
+          "sort_son": "4"
+        },
+        {
+          "index": 5,
+          "belong_page": 1,
+          "question_id": 316326,
+          "question_title": "<p>【问题1】 (6分)</p><p>根据问题描述，补充3个联系，完善图2-1的实体联系图。联系名可用联系1、联系2和联系3代替，联系的类型为1:1、1:n和m:n (或1:1、1:*和*.*)。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>试题二(共15分)</p><p>回答问题1至问题4，将解答填入答题纸的对应栏内</p><p>【说明】</p><p>某汽车维修公司为了便于管理车辆的维修情况，拟开发一 套汽车维修管理系统，请根据下述需求描述完成该系统的数据库设计。</p><p>【需求描述】</p><p>(1)客户信息包括:客户号、客户名、客户性质、折扣率、联系人、联系电话。客户性质有个人或单位。客户号唯一标识客户关系中的每一个元组。</p><p>(2)车辆信息包括：车牌号、车型、颜色和车辆类别。一个客户至少有一辆车，一辆车只属于一个客户。</p><p>(3)员工信息包括：员工号、员工名、岗位、电话、家庭住址。其中，员工号唯一标识员工关系中的每一个元组。岗位有业务员、维修工、主管。业务员根据车辆的故障情况填写维修单。</p><p>(4)部门信息包括：部门号、名称、主管和电话，其中部门号唯一-确定 部门关系的每一个元组。 每个部门只有一名主管，但每个部门有多名员工，每名员工只属于一个部门。</p><p>(5)维修单信息包括：维修单号、车牌号、维修内容、工时。维修单号唯一标识维修单关系中的每一个元组。一个维修工可接多张维修单，但一张维修单只对应一个维修工。</p><p>【概念模型设计】根据需求阶段收集的信息，设计的实体联系图(不完整)如图2-1所示。</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20211123/1637653427864159.png\" title=\"1637653427864159.png\" alt=\"image.png\"/><br/><p>【逻辑结构设计】</p><p>根据概念模型设计阶段完成的实体联系图，得出如下关系模式(不完整)：</p><p>客户(客户号，客户名，(a)；折扣率，联系人，联系电话)</p><p>车辆(车牌号，(b)，车型，颜色，车辆类别)</p><p>员工(员工号，员工名，岗位，(c) ，电话，家庭住址)</p><p>部门(部门号，名称，主管，电话)</p><p>维修单(维修单号，(d)， 维修内容， 工时)</p>",
+          "score": 6,
+          "new_parent_id": "316325",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>联系1：客户和车辆，1：n</p><p>联系2：部门和员工，1：n</p><p>联系3：维修工和维修单，1：n</p>"
+          ],
+          "option": null,
+          "sort_son": "1"
+        },
+        {
+          "index": 6,
+          "belong_page": 1,
+          "question_id": 316327,
+          "question_title": "<p>【问题2】(4分)</p><p>根据题意，将关系模式中的空(a) ~(d)的属性补充完整，并填入答题纸对应的位置上。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>试题二(共15分)</p><p>回答问题1至问题4，将解答填入答题纸的对应栏内</p><p>【说明】</p><p>某汽车维修公司为了便于管理车辆的维修情况，拟开发一 套汽车维修管理系统，请根据下述需求描述完成该系统的数据库设计。</p><p>【需求描述】</p><p>(1)客户信息包括:客户号、客户名、客户性质、折扣率、联系人、联系电话。客户性质有个人或单位。客户号唯一标识客户关系中的每一个元组。</p><p>(2)车辆信息包括：车牌号、车型、颜色和车辆类别。一个客户至少有一辆车，一辆车只属于一个客户。</p><p>(3)员工信息包括：员工号、员工名、岗位、电话、家庭住址。其中，员工号唯一标识员工关系中的每一个元组。岗位有业务员、维修工、主管。业务员根据车辆的故障情况填写维修单。</p><p>(4)部门信息包括：部门号、名称、主管和电话，其中部门号唯一-确定 部门关系的每一个元组。 每个部门只有一名主管，但每个部门有多名员工，每名员工只属于一个部门。</p><p>(5)维修单信息包括：维修单号、车牌号、维修内容、工时。维修单号唯一标识维修单关系中的每一个元组。一个维修工可接多张维修单，但一张维修单只对应一个维修工。</p><p>【概念模型设计】根据需求阶段收集的信息，设计的实体联系图(不完整)如图2-1所示。</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20211123/1637653427864159.png\" title=\"1637653427864159.png\" alt=\"image.png\"/><br/><p>【逻辑结构设计】</p><p>根据概念模型设计阶段完成的实体联系图，得出如下关系模式(不完整)：</p><p>客户(客户号，客户名，(a)；折扣率，联系人，联系电话)</p><p>车辆(车牌号，(b)，车型，颜色，车辆类别)</p><p>员工(员工号，员工名，岗位，(c) ，电话，家庭住址)</p><p>部门(部门号，名称，主管，电话)</p><p>维修单(维修单号，(d)， 维修内容， 工时)</p>",
+          "score": 6,
+          "new_parent_id": "316325",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["<p>a：客户性质 b：客户号 c：部门号 d：车牌号，员工号</p>"],
+          "option": null,
+          "sort_son": "2"
+        },
+        {
+          "index": 7,
+          "belong_page": 1,
+          "question_id": 316328,
+          "question_title": "<p>【问题3】(2分)</p><p>分别给出车辆关系和维修单关系的主键与外键。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>试题二(共15分)</p><p>回答问题1至问题4，将解答填入答题纸的对应栏内</p><p>【说明】</p><p>某汽车维修公司为了便于管理车辆的维修情况，拟开发一 套汽车维修管理系统，请根据下述需求描述完成该系统的数据库设计。</p><p>【需求描述】</p><p>(1)客户信息包括:客户号、客户名、客户性质、折扣率、联系人、联系电话。客户性质有个人或单位。客户号唯一标识客户关系中的每一个元组。</p><p>(2)车辆信息包括：车牌号、车型、颜色和车辆类别。一个客户至少有一辆车，一辆车只属于一个客户。</p><p>(3)员工信息包括：员工号、员工名、岗位、电话、家庭住址。其中，员工号唯一标识员工关系中的每一个元组。岗位有业务员、维修工、主管。业务员根据车辆的故障情况填写维修单。</p><p>(4)部门信息包括：部门号、名称、主管和电话，其中部门号唯一-确定 部门关系的每一个元组。 每个部门只有一名主管，但每个部门有多名员工，每名员工只属于一个部门。</p><p>(5)维修单信息包括：维修单号、车牌号、维修内容、工时。维修单号唯一标识维修单关系中的每一个元组。一个维修工可接多张维修单，但一张维修单只对应一个维修工。</p><p>【概念模型设计】根据需求阶段收集的信息，设计的实体联系图(不完整)如图2-1所示。</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20211123/1637653427864159.png\" title=\"1637653427864159.png\" alt=\"image.png\"/><br/><p>【逻辑结构设计】</p><p>根据概念模型设计阶段完成的实体联系图，得出如下关系模式(不完整)：</p><p>客户(客户号，客户名，(a)；折扣率，联系人，联系电话)</p><p>车辆(车牌号，(b)，车型，颜色，车辆类别)</p><p>员工(员工号，员工名，岗位，(c) ，电话，家庭住址)</p><p>部门(部门号，名称，主管，电话)</p><p>维修单(维修单号，(d)， 维修内容， 工时)</p>",
+          "score": 6,
+          "new_parent_id": "316325",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>车辆关系的主键：车牌号 &nbsp;外键：客户号</p><p>维修单关系的主键：维修单号 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;外键：车牌号，员工号</p>"
+          ],
+          "option": null,
+          "sort_son": "3"
+        },
+        {
+          "index": 8,
+          "belong_page": 1,
+          "question_id": 316329,
+          "question_title": "<p>【问题4】(3分)</p><p>如果一张维修单涉及多项维修内容，需要多个维修工来处理，那么哪个联系类型会发生何种变化?你认为应该如何解决这一问题?</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>试题二(共15分)</p><p>回答问题1至问题4，将解答填入答题纸的对应栏内</p><p>【说明】</p><p>某汽车维修公司为了便于管理车辆的维修情况，拟开发一 套汽车维修管理系统，请根据下述需求描述完成该系统的数据库设计。</p><p>【需求描述】</p><p>(1)客户信息包括:客户号、客户名、客户性质、折扣率、联系人、联系电话。客户性质有个人或单位。客户号唯一标识客户关系中的每一个元组。</p><p>(2)车辆信息包括：车牌号、车型、颜色和车辆类别。一个客户至少有一辆车，一辆车只属于一个客户。</p><p>(3)员工信息包括：员工号、员工名、岗位、电话、家庭住址。其中，员工号唯一标识员工关系中的每一个元组。岗位有业务员、维修工、主管。业务员根据车辆的故障情况填写维修单。</p><p>(4)部门信息包括：部门号、名称、主管和电话，其中部门号唯一-确定 部门关系的每一个元组。 每个部门只有一名主管，但每个部门有多名员工，每名员工只属于一个部门。</p><p>(5)维修单信息包括：维修单号、车牌号、维修内容、工时。维修单号唯一标识维修单关系中的每一个元组。一个维修工可接多张维修单，但一张维修单只对应一个维修工。</p><p>【概念模型设计】根据需求阶段收集的信息，设计的实体联系图(不完整)如图2-1所示。</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20211123/1637653427864159.png\" title=\"1637653427864159.png\" alt=\"image.png\"/><br/><p>【逻辑结构设计】</p><p>根据概念模型设计阶段完成的实体联系图，得出如下关系模式(不完整)：</p><p>客户(客户号，客户名，(a)；折扣率，联系人，联系电话)</p><p>车辆(车牌号，(b)，车型，颜色，车辆类别)</p><p>员工(员工号，员工名，岗位，(c) ，电话，家庭住址)</p><p>部门(部门号，名称，主管，电话)</p><p>维修单(维修单号，(d)， 维修内容， 工时)</p>",
+          "score": 6,
+          "new_parent_id": "316325",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>维修工和维修单之间的联系类型会发生变化，从1：n变成m:n 。</p><p>修改维修单关系模式主键为维修单号，员工号。将员工号，维修内容独立出来形成一张表。</p>"
+          ],
+          "option": null,
+          "sort_son": "4"
+        },
+        {
+          "index": 9,
+          "belong_page": 1,
+          "question_id": 316331,
+          "question_title": "<p>【问题1】(3分)</p><p>根据说明中的描述，给出图3-1中U1~U3所对应的用例名。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>试题三(共15分)</p><p>阅读下列说明和图，回答问题1至问题3，将解答填入答题纸的对应栏内。</p><p>【说明】</p><p>某游戏公司欲开发一款吃金币游戏。 游戏的背景为一种回廊式迷宫 (Maze), 在迷宫的不同位置上设置有墙。迷宫中有两种类型的机器人(Robos)：小精灵(PacMan)和幽灵(Ghost)。游戏的目的就是控制小精灵在迷宫内游走，吞吃迷宫路径上的金币，且不能被幽灵抓到。幽灵在迷宫中游走，并会吃掉遇到的小精灵。机器人游走时，以单位距离的倍数计算游走路径的长度。当迷宫中至少存在一个小精灵和一个幽灵时，游戏开始。</p><p>机器人上有两种传感器，使机器人具有一定的感知能力。这两种传感器分别是：</p><p>(1)前向传感器(FrontSensor)， 探测在机器人当前位置的左边、右边和前方是否有墙(机器人遇到墙时，必须改变游走方向)。机器人根据前向传感器的探测结果，决定朝哪个方向运动。</p><p>(2)近距离传感器(ProxiSesor), 探测在机器人的视线范围内(正前方)是否存在隐藏的金币或幽灵。近距离传感器并不报告探测到的对象是否正在移动以及朝哪个方向移动。但是如果近距离传感器的连续两次探测结果表明被探测对象处于不同的位置，则可以推导出该对象在移动。</p><p>另外，每个机器人都设置有一个计时器(Timer), 用于支持执行预先定义好的定时事件。</p><p>机器人的动作包括:原地向左或向右旋转90°;向前或向后移动。</p><p>建立迷宫:用户可以使用编辑器(Editor) 编写迷宫文件，建立用户自定义的迷宫。将迷宫文件导入游戏系统建立用户自定义的迷宫。</p><p>现采用面对家分析与设计方法开发该游戏，得到如图3-1所示的用例图以及图3-2所示的初始类图。</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20211123/1637653556536087.png\" title=\"1637653556536087.png\" alt=\"image.png\"/><br/><p>图3-1用例图<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20211123/1637653567812029.png\" title=\"1637653567812029.png\" alt=\"image.png\"/><br/></p><p>图3-2初始类图</p><p><br/></p>",
+          "score": 8,
+          "new_parent_id": "316330",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["<p>U1 编写迷宫文件 U2导入迷宫文件； U3 设置计时器</p>"],
+          "option": null,
+          "sort_son": "1"
+        },
+        {
+          "index": 10,
+          "belong_page": 1,
+          "question_id": 316332,
+          "question_title": "<p>【问题2】(4分)</p><p>图3-1中用例U1~U3分别与哪个(哪些)用例之间有关系，是何种关系?</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>试题三(共15分)</p><p>阅读下列说明和图，回答问题1至问题3，将解答填入答题纸的对应栏内。</p><p>【说明】</p><p>某游戏公司欲开发一款吃金币游戏。 游戏的背景为一种回廊式迷宫 (Maze), 在迷宫的不同位置上设置有墙。迷宫中有两种类型的机器人(Robos)：小精灵(PacMan)和幽灵(Ghost)。游戏的目的就是控制小精灵在迷宫内游走，吞吃迷宫路径上的金币，且不能被幽灵抓到。幽灵在迷宫中游走，并会吃掉遇到的小精灵。机器人游走时，以单位距离的倍数计算游走路径的长度。当迷宫中至少存在一个小精灵和一个幽灵时，游戏开始。</p><p>机器人上有两种传感器，使机器人具有一定的感知能力。这两种传感器分别是：</p><p>(1)前向传感器(FrontSensor)， 探测在机器人当前位置的左边、右边和前方是否有墙(机器人遇到墙时，必须改变游走方向)。机器人根据前向传感器的探测结果，决定朝哪个方向运动。</p><p>(2)近距离传感器(ProxiSesor), 探测在机器人的视线范围内(正前方)是否存在隐藏的金币或幽灵。近距离传感器并不报告探测到的对象是否正在移动以及朝哪个方向移动。但是如果近距离传感器的连续两次探测结果表明被探测对象处于不同的位置，则可以推导出该对象在移动。</p><p>另外，每个机器人都设置有一个计时器(Timer), 用于支持执行预先定义好的定时事件。</p><p>机器人的动作包括:原地向左或向右旋转90°;向前或向后移动。</p><p>建立迷宫:用户可以使用编辑器(Editor) 编写迷宫文件，建立用户自定义的迷宫。将迷宫文件导入游戏系统建立用户自定义的迷宫。</p><p>现采用面对家分析与设计方法开发该游戏，得到如图3-1所示的用例图以及图3-2所示的初始类图。</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20211123/1637653556536087.png\" title=\"1637653556536087.png\" alt=\"image.png\"/><br/><p>图3-1用例图<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20211123/1637653567812029.png\" title=\"1637653567812029.png\" alt=\"image.png\"/><br/></p><p>图3-2初始类图</p><p><br/></p>",
+          "score": 8,
+          "new_parent_id": "316330",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p><br/></p><p>U1和U2与建立迷宫用例是包含关系；</p><p>U3与操作机器人是包含关系</p>"
+          ],
+          "option": null,
+          "sort_son": "2"
+        },
+        {
+          "index": 11,
+          "belong_page": 1,
+          "question_id": 316333,
+          "question_title": "<p>【问题3】 (8分)</p><p>根据说明中的描述，给出图3-2中C1~C8所对应的类名。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>试题三(共15分)</p><p>阅读下列说明和图，回答问题1至问题3，将解答填入答题纸的对应栏内。</p><p>【说明】</p><p>某游戏公司欲开发一款吃金币游戏。 游戏的背景为一种回廊式迷宫 (Maze), 在迷宫的不同位置上设置有墙。迷宫中有两种类型的机器人(Robos)：小精灵(PacMan)和幽灵(Ghost)。游戏的目的就是控制小精灵在迷宫内游走，吞吃迷宫路径上的金币，且不能被幽灵抓到。幽灵在迷宫中游走，并会吃掉遇到的小精灵。机器人游走时，以单位距离的倍数计算游走路径的长度。当迷宫中至少存在一个小精灵和一个幽灵时，游戏开始。</p><p>机器人上有两种传感器，使机器人具有一定的感知能力。这两种传感器分别是：</p><p>(1)前向传感器(FrontSensor)， 探测在机器人当前位置的左边、右边和前方是否有墙(机器人遇到墙时，必须改变游走方向)。机器人根据前向传感器的探测结果，决定朝哪个方向运动。</p><p>(2)近距离传感器(ProxiSesor), 探测在机器人的视线范围内(正前方)是否存在隐藏的金币或幽灵。近距离传感器并不报告探测到的对象是否正在移动以及朝哪个方向移动。但是如果近距离传感器的连续两次探测结果表明被探测对象处于不同的位置，则可以推导出该对象在移动。</p><p>另外，每个机器人都设置有一个计时器(Timer), 用于支持执行预先定义好的定时事件。</p><p>机器人的动作包括:原地向左或向右旋转90°;向前或向后移动。</p><p>建立迷宫:用户可以使用编辑器(Editor) 编写迷宫文件，建立用户自定义的迷宫。将迷宫文件导入游戏系统建立用户自定义的迷宫。</p><p>现采用面对家分析与设计方法开发该游戏，得到如图3-1所示的用例图以及图3-2所示的初始类图。</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20211123/1637653556536087.png\" title=\"1637653556536087.png\" alt=\"image.png\"/><br/><p>图3-1用例图<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20211123/1637653567812029.png\" title=\"1637653567812029.png\" alt=\"image.png\"/><br/></p><p>图3-2初始类图</p><p><br/></p>",
+          "score": 8,
+          "new_parent_id": "316330",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>C1 机器人(Robos) ；C2 计时器(Timer)；C3 小精灵(PacMan)；C4 幽灵(Ghost)</p><p>C5 传感器 C6 前向传感器(FrontSensor) C7 近距离传感器(ProxiSesor)</p><p>C8 迷宫 (Maze)</p><p>其中 C3与C4 可换； C6与C7可换</p>"
+          ],
+          "option": null,
+          "sort_son": "3"
+        },
+        {
+          "index": 12,
+          "belong_page": 1,
+          "question_id": 316335,
+          "question_title": "<p>【问题1】(8分)</p><p>&nbsp;&nbsp;根据说明和&nbsp;C代码，填充C代码中的空&nbsp;(1)~&nbsp;(4)。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>试题四（共15分）</p><p>&nbsp;&nbsp;阅读下列说明和C代码，回答问题1至问题3,将解答写答题纸的对应栏内。</p><p>【说明】</p><p>&nbsp;&nbsp;生物学上通常采用编辑距离来定义两个物种DNA序列的相似性，从而刻画物种之间的进化关系。具体来说，编辑距离是指将一个字符串变换为另一个字符所需要的最小操作次数。操作有三种，分别为:插入一个字符、删除一个字符以及将一个字符修改为另一个字符。</p><p>&nbsp;用字符数组str1和str2分别表示长度分别为len1和len2的字符串，定义二维数组d记录求解编辑距离的子问题最优解，则该二维数组可以递归定义为：</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20211123/1637653660831880.png\" title=\"1637653660831880.png\" alt=\"image.png\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20211123/1637653670952686.png\" title=\"1637653670952686.png\" alt=\"image.png\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20211123/1637653709139710.png\" title=\"1637653709139710.png\" alt=\"image.png\"/>",
+          "score": 1,
+          "new_parent_id": "316334",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>（1）d[0][j]=j</p><p>&nbsp;(2)str1[i-1]==str2[j-1]</p><p>&nbsp;(3)d[i-1][j-1]+1</p><p>&nbsp;(4) d[len1][len2]</p>"
+          ],
+          "option": null,
+          "sort_son": "1"
+        },
+        {
+          "index": 13,
+          "belong_page": 1,
+          "question_id": 316336,
+          "question_title": "<p>【问题2】&nbsp;(4分)</p><p>&nbsp;&nbsp;根据说明和C代码，算法采用了(5)设计策略，时间复杂度为(6)(用O符号表示，两个字符串的长度分别用m和n表示)。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>试题四（共15分）</p><p>&nbsp;&nbsp;阅读下列说明和C代码，回答问题1至问题3,将解答写答题纸的对应栏内。</p><p>【说明】</p><p>&nbsp;&nbsp;生物学上通常采用编辑距离来定义两个物种DNA序列的相似性，从而刻画物种之间的进化关系。具体来说，编辑距离是指将一个字符串变换为另一个字符所需要的最小操作次数。操作有三种，分别为:插入一个字符、删除一个字符以及将一个字符修改为另一个字符。</p><p>&nbsp;用字符数组str1和str2分别表示长度分别为len1和len2的字符串，定义二维数组d记录求解编辑距离的子问题最优解，则该二维数组可以递归定义为：</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20211123/1637653660831880.png\" title=\"1637653660831880.png\" alt=\"image.png\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20211123/1637653670952686.png\" title=\"1637653670952686.png\" alt=\"image.png\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20211123/1637653709139710.png\" title=\"1637653709139710.png\" alt=\"image.png\"/>",
+          "score": 1,
+          "new_parent_id": "316334",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["<p>动态规划法 O(m*n)</p>"],
+          "option": null,
+          "sort_son": "2"
+        },
+        {
+          "index": 14,
+          "belong_page": 1,
+          "question_id": 316337,
+          "question_title": "<p>【问题3】(3分)</p><p>&nbsp;&nbsp;已知两个字符串A=&quot;CTGA&quot;和B=&quot;ACGCTA&quot;,根据说明和C代码，可得出这两个字符串的编辑距离为(7)。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>试题四（共15分）</p><p>&nbsp;&nbsp;阅读下列说明和C代码，回答问题1至问题3,将解答写答题纸的对应栏内。</p><p>【说明】</p><p>&nbsp;&nbsp;生物学上通常采用编辑距离来定义两个物种DNA序列的相似性，从而刻画物种之间的进化关系。具体来说，编辑距离是指将一个字符串变换为另一个字符所需要的最小操作次数。操作有三种，分别为:插入一个字符、删除一个字符以及将一个字符修改为另一个字符。</p><p>&nbsp;用字符数组str1和str2分别表示长度分别为len1和len2的字符串，定义二维数组d记录求解编辑距离的子问题最优解，则该二维数组可以递归定义为：</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20211123/1637653660831880.png\" title=\"1637653660831880.png\" alt=\"image.png\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20211123/1637653670952686.png\" title=\"1637653670952686.png\" alt=\"image.png\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20211123/1637653709139710.png\" title=\"1637653709139710.png\" alt=\"image.png\"/>",
+          "score": 1,
+          "new_parent_id": "316334",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["<p>4</p>"],
+          "option": null,
+          "sort_son": "3"
+        },
+        {
+          "index": 15,
+          "belong_page": 1,
+          "question_id": 316338,
+          "question_title": "<p>试题五（共15分）</p><p>&nbsp;&nbsp; 阅读下列说明和C++代码，将应填入(n)处的字句写在答题纸的对应栏内。</p><p>【说明】</p><p>享元(flyweight)模式主要用于减少创建对象的数量，以降低内存占用，提高性能。现要开发一个网络围棋程序，允许多个玩家联机下棋。由于只有一台服务器，为节省内存空间，采用享元模式实现该程序，得到如图5-1所示的类图。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20211123/1637654284692503.png\" title=\"1637654284692503.png\" alt=\"image.png\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20211123/1637654315111354.png\" title=\"1637654315111354.png\" alt=\"image.png\"/>&nbsp;</p><p></p>",
+          "question_type": 5,
+          "answer_type": 5,
+          "material_text": "<p>试题五（共15分）</p><p>&nbsp;&nbsp; 阅读下列说明和C++代码，将应填入(n)处的字句写在答题纸的对应栏内。</p><p>【说明】</p><p>享元(flyweight)模式主要用于减少创建对象的数量，以降低内存占用，提高性能。现要开发一个网络围棋程序，允许多个玩家联机下棋。由于只有一台服务器，为节省内存空间，采用享元模式实现该程序，得到如图5-1所示的类图。</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20211123/1637653823222318.png\" title=\"1637653823222318.png\" alt=\"image.png\"/><br/><br/>",
+          "score": 15,
+          "new_parent_id": "316338",
+          "show_type_name": "问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>(1) virtual void Draw(){}<br/> (2) Piece*</p><p>(3)Piece*</p><p>(4) piece-&gt;Draw()</p><p>(5) piece-&gt;Draw()</p>"
+          ],
+          "option": null,
+          "sort_son": "0"
+        },
+        {
+          "index": 16,
+          "belong_page": 1,
+          "question_id": 316339,
+          "question_title": "<p>&nbsp;试题六（共15分）</p><p>&nbsp;&nbsp;阅读下列说明和Java代码，将应填入(n)&nbsp;处的字句写在答题纸的对应栏内。</p><p>【说明】</p><p>&nbsp;&nbsp;享元(flyweight)模式主要用于减少创建对象的数量，以降低内存占用，提高性能。现要开发一个网络围棋程序，允许多个玩家联机下棋。由于只有一台服务器，为节省内存空间，采用享元模式实现该程序，得到如图6-1所示的类图。</p><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20211123/1637653983544236.png\" title=\"1637653983544236.png\" alt=\"image.png\"/><br/><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20211123/1637654026256757.png\" title=\"1637654026256757.png\" alt=\"image.png\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20211123/1637654044355943.png\" title=\"1637654044355943.png\" alt=\"image.png\"/><br/></p>",
+          "question_type": 5,
+          "answer_type": 5,
+          "material_text": "",
+          "score": 10,
+          "new_parent_id": "316339",
+          "show_type_name": "问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>(1)protected abstract void draw( )</p><p>&nbsp;&nbsp;&nbsp;或</p><p>public abstract void draw( )<br/>(2)Piece</p><p>(3) Piece</p><p>(4)piece.draw()</p><p>(5)piece.draw( )</p>"
+          ],
+          "option": null,
+          "sort_son": "0"
+        }
+      ],
+      "summary": {
+        "radio": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "multiple": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "judge": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "fill": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "program": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "qanda": {
+          "total_question": 16,
+          "total_score": 0
+        },
+        "cloze": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "budingxiang": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "material": {
+          "total_question": 0,
+          "total_score": 0
+        }
+      },
+      "examine": {
+        "id": 12634,
+        "title": "2021年11月软件设计师案例分析",
+        "len_time": {
+          "time": 0
+        },
+        "total_question": 16,
+        "total_score": 80,
+        "submit_limit_num": "0",
+        "machine_type": "2"
+      },
+      "answer_activity_start_time": 1585828800,
+      "checkProcess": 1,
+      "process": {
+        "is_delete": false
+      },
+      "train_id": 0
+    },
+    "pagination": {
+      "curPage": 1,
+      "pageSize": 1200,
+      "total": 16,
+      "hasNextPage": false
+    },
+    "totalOrder": [
+      {
+        "index": 1,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 316321
+      },
+      {
+        "index": 2,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 316322
+      },
+      {
+        "index": 3,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 316323
+      },
+      {
+        "index": 4,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 316324
+      },
+      {
+        "index": 5,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 316326
+      },
+      {
+        "index": 6,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 316327
+      },
+      {
+        "index": 7,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 316328
+      },
+      {
+        "index": 8,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 316329
+      },
+      {
+        "index": 9,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 316331
+      },
+      {
+        "index": 10,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 316332
+      },
+      {
+        "index": 11,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 316333
+      },
+      {
+        "index": 12,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 316335
+      },
+      {
+        "index": 13,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 316336
+      },
+      {
+        "index": 14,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 316337
+      },
+      {
+        "index": 15,
+        "question_type": 5,
+        "belong_page": 1,
+        "question_id": 316338
+      },
+      {
+        "index": 16,
+        "question_type": 5,
+        "belong_page": 1,
+        "question_id": 316339
+      }
+    ]
+  }
+}
