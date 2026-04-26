@@ -13,6 +13,9 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 RUN npx prisma generate
 RUN npm run build
+RUN mkdir -p /app/seed \
+  && DATABASE_URL=file:/app/seed/ose.db npx prisma migrate deploy --schema src/prisma/schema.prisma \
+  && DATABASE_URL=file:/app/seed/ose.db npx tsx src/prisma/seed.ts
 
 FROM base AS runner
 WORKDIR /app
@@ -29,12 +32,12 @@ COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 COPY --from=builder /app/src/prisma ./src/prisma
+COPY --from=builder /app/scripts/docker-start.sh ./scripts/docker-start.sh
 COPY --from=builder /app/node_modules/.prisma ./node_modules/.prisma
-# Bake the question-bank seed into the image. Only the converted JSON is
-# needed at runtime; the raw 51CTO exam scrapes (data/51cto-exams/) and the
-# AI classification map (data/51cto-classifications.json) are build-time
-# artefacts and stay out of the image.
-COPY --from=builder /app/data/51cto-seed.json ./data/51cto-seed.json
+# Bake a migrated, pre-seeded SQLite database into the image. First boot only
+# copies this file into the mounted data volume instead of importing thousands
+# of rows at container startup.
+COPY --from=builder /app/seed ./seed
 RUN chown -R nextjs:nodejs /app
 
 USER nextjs
@@ -42,8 +45,7 @@ EXPOSE 3000
 ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
 
-# On first boot: apply migrations, then run the seeder once and drop a marker
-# in the data volume so subsequent restarts skip the (~30s) seed step. To
-# force a re-seed (e.g. after pulling a new question-bank version), delete
-# /data/.seeded inside the volume.
-CMD ["sh", "-c", "./node_modules/.bin/prisma migrate deploy --schema src/prisma/schema.prisma && { [ -f /data/.seeded ] || ./node_modules/.bin/tsx src/prisma/seed.ts && touch /data/.seeded; } && node server.js"]
+# On first boot, copy the pre-seeded database into the mounted data volume.
+# Existing databases are never overwritten; future images can still apply new
+# migrations before starting the app.
+CMD ["sh", "scripts/docker-start.sh"]
