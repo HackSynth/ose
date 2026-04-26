@@ -1,25 +1,69 @@
 'use client';
 
 import { useEffect, useRef, useState, type KeyboardEvent } from 'react';
-import { Bot, Maximize2, Minimize2, Send, X } from 'lucide-react';
+import { Bot, Maximize2, Minimize2, Plus, Send, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { MarkdownRenderer } from '@/components/markdown-renderer';
 import { useAIStatus } from '@/components/ai-status-context';
 import { cn } from '@/lib/utils';
+import { OSE_AI_CONTINUE_EVENT } from '@/lib/ai-chat-client';
 import { AI_CHAT_MAX_MESSAGES } from '@/lib/constants';
 
 type Message = { role: 'user' | 'assistant'; content: string };
+type ChatSession = {
+  id: string;
+  title: string;
+  messages: Message[];
+  createdAt: string;
+  updatedAt: string;
+};
+
+const initialMessages: Message[] = [
+  {
+    role: 'assistant',
+    content: '你好，我是 OSE 智能助手。可以问我软考知识点、刷题方法或备考规划。',
+  },
+];
+
+function isMessage(value: unknown): value is Message {
+  return (
+    typeof value === 'object' &&
+    value !== null &&
+    'role' in value &&
+    'content' in value &&
+    ['user', 'assistant'].includes(String((value as { role: unknown }).role)) &&
+    typeof (value as { content: unknown }).content === 'string'
+  );
+}
+
+function normalizeSession(value: unknown): ChatSession | null {
+  if (typeof value !== 'object' || value === null) return null;
+  const session = value as {
+    id?: unknown;
+    title?: unknown;
+    messages?: unknown;
+    createdAt?: unknown;
+    updatedAt?: unknown;
+  };
+  if (typeof session.id !== 'string' || typeof session.title !== 'string') return null;
+  return {
+    id: session.id,
+    title: session.title,
+    messages: Array.isArray(session.messages)
+      ? session.messages.filter(isMessage)
+      : initialMessages,
+    createdAt: typeof session.createdAt === 'string' ? session.createdAt : '',
+    updatedAt: typeof session.updatedAt === 'string' ? session.updatedAt : '',
+  };
+}
 
 export function AIAssistant() {
   const [open, setOpen] = useState(false);
   const [maximized, setMaximized] = useState(false);
   const status = useAIStatus();
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      role: 'assistant',
-      content: '你好，我是 OSE 智能助手。可以问我软考知识点、刷题方法或备考规划。',
-    },
-  ]);
+  const [sessions, setSessions] = useState<ChatSession[]>([]);
+  const [activeSessionId, setActiveSessionId] = useState<string | null>(null);
+  const [messages, setMessages] = useState<Message[]>(initialMessages);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const bottomRef = useRef<HTMLDivElement>(null);
@@ -31,6 +75,92 @@ export function AIAssistant() {
 
   useEffect(() => () => activeControllerRef.current?.abort(), []);
 
+  useEffect(() => {
+    async function onContinueChat(event: Event) {
+      const detail = (event as CustomEvent<{ title?: unknown; messages?: unknown }>).detail;
+      const nextMessages = Array.isArray(detail?.messages)
+        ? detail.messages.filter(isMessage).slice(-AI_CHAT_MAX_MESSAGES)
+        : [];
+      if (!nextMessages.length) return;
+      const title =
+        typeof detail?.title === 'string' && detail.title.trim() ? detail.title.trim() : '继续对话';
+      cancel();
+      setOpen(true);
+      setActiveSessionId(null);
+      setInput('');
+      setMessages(nextMessages);
+      await saveSession(nextMessages, title, null);
+    }
+
+    window.addEventListener(OSE_AI_CONTINUE_EVENT, onContinueChat);
+    return () => window.removeEventListener(OSE_AI_CONTINUE_EVENT, onContinueChat);
+  });
+
+  useEffect(() => {
+    let active = true;
+    async function loadSessions() {
+      const response = await fetch('/api/ai/chat/sessions').catch(() => null);
+      if (!response?.ok) return;
+      const data = (await response.json().catch(() => ({}))) as { sessions?: unknown[] };
+      const nextSessions = Array.isArray(data.sessions)
+        ? data.sessions
+            .map(normalizeSession)
+            .filter((session): session is ChatSession => Boolean(session))
+        : [];
+      if (!active) return;
+      setSessions(nextSessions);
+      const latest = nextSessions[0];
+      if (latest) {
+        setActiveSessionId(latest.id);
+        setMessages(latest.messages.length ? latest.messages : initialMessages);
+      }
+    }
+    loadSessions();
+    return () => {
+      active = false;
+    };
+  }, []);
+
+  async function saveSession(
+    nextMessages: Message[],
+    titleSeed: string,
+    sessionId = activeSessionId
+  ) {
+    const hasUserMessage = nextMessages.some((message) => message.role === 'user');
+    if (!hasUserMessage) return sessionId;
+    const url = sessionId ? `/api/ai/chat/sessions/${sessionId}` : '/api/ai/chat/sessions';
+    const response = await fetch(url, {
+      method: sessionId ? 'PATCH' : 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ title: titleSeed, messages: nextMessages }),
+    }).catch(() => null);
+    if (!response?.ok) return sessionId;
+    const data = (await response.json().catch(() => ({}))) as { session?: unknown };
+    const saved = normalizeSession(data.session);
+    if (!saved) return sessionId;
+    setActiveSessionId(saved.id);
+    setSessions((prev) =>
+      [saved, ...prev.filter((session) => session.id !== saved.id)].slice(0, 20)
+    );
+    return saved.id;
+  }
+
+  function newSession() {
+    cancel();
+    setActiveSessionId(null);
+    setInput('');
+    setMessages(initialMessages);
+  }
+
+  function switchSession(sessionId: string) {
+    const session = sessions.find((item) => item.id === sessionId);
+    if (!session) return;
+    cancel();
+    setActiveSessionId(session.id);
+    setInput('');
+    setMessages(session.messages.length ? session.messages : initialMessages);
+  }
+
   async function send() {
     const text = input.trim();
     if (!text || loading || !status.configured) return;
@@ -40,10 +170,12 @@ export function AIAssistant() {
     );
     setMessages([...nextMessages, { role: 'assistant', content: '' }]);
     setLoading(true);
+    const sessionId = await saveSession(nextMessages, text);
 
     activeControllerRef.current?.abort();
     const controller = new AbortController();
     activeControllerRef.current = controller;
+    let assistantContent = '';
 
     try {
       const response = await fetch('/api/ai/chat', {
@@ -54,6 +186,13 @@ export function AIAssistant() {
       });
       if (!response.ok || !response.body) {
         const data = await response.json().catch(() => ({}));
+        const failedMessages = [
+          ...nextMessages,
+          {
+            role: 'assistant' as const,
+            content: data.message || 'AI 服务暂时不可用，请稍后再试。',
+          },
+        ];
         setMessages((prev) =>
           prev.map((message, index) =>
             index === prev.length - 1
@@ -61,6 +200,7 @@ export function AIAssistant() {
               : message
           )
         );
+        await saveSession(failedMessages, text, sessionId);
         return;
       }
       const reader = response.body.getReader();
@@ -69,21 +209,32 @@ export function AIAssistant() {
         const { done, value } = await reader.read();
         if (done) break;
         const chunk = decoder.decode(value, { stream: true });
+        assistantContent += chunk;
         setMessages((prev) =>
           prev.map((message, index) =>
             index === prev.length - 1 ? { ...message, content: message.content + chunk } : message
           )
         );
       }
+      await saveSession(
+        [...nextMessages, { role: 'assistant', content: assistantContent }],
+        text,
+        sessionId
+      );
     } catch (error) {
       if ((error as { name?: string })?.name === 'AbortError') return;
       // Append to (not overwrite) the assistant message — preserves any partial stream already received.
+      const notice = '\n\n> 网络异常，回复可能不完整。';
       setMessages((prev) =>
         prev.map((message, index) => {
           if (index !== prev.length - 1) return message;
-          const notice = '\n\n> 网络异常，回复可能不完整。';
           return { ...message, content: (message.content || '') + notice };
         })
+      );
+      await saveSession(
+        [...nextMessages, { role: 'assistant', content: `${assistantContent}${notice}` }],
+        text,
+        sessionId
       );
     } finally {
       if (activeControllerRef.current === controller) activeControllerRef.current = null;
@@ -124,6 +275,31 @@ export function AIAssistant() {
               <p className="text-xs font-bold text-muted">
                 {status.configured ? `当前供应商：${status.provider}` : '未配置 AI API Key'}
               </p>
+              <div className="mt-2 flex max-w-[230px] items-center gap-2 md:max-w-[300px]">
+                <select
+                  className="h-9 min-w-0 flex-1 rounded-xl border border-orange-100 bg-white px-3 text-xs font-bold text-navy outline-none focus:ring-4 focus:ring-primary/20"
+                  value={activeSessionId ?? ''}
+                  onChange={(event) => switchSession(event.target.value)}
+                  disabled={loading || !sessions.length}
+                  aria-label="选择历史会话"
+                >
+                  <option value="">历史会话</option>
+                  {sessions.map((session) => (
+                    <option key={session.id} value={session.id}>
+                      {session.title}
+                    </option>
+                  ))}
+                </select>
+                <button
+                  type="button"
+                  onClick={newSession}
+                  disabled={loading}
+                  aria-label="新建会话"
+                  className="rounded-full p-2 hover:bg-primary-soft disabled:pointer-events-none disabled:opacity-50"
+                >
+                  <Plus className="h-4 w-4" />
+                </button>
+              </div>
             </div>
             <div className="flex items-center gap-1">
               <button

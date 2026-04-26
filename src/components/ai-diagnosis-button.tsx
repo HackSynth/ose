@@ -1,35 +1,39 @@
-"use client";
+'use client';
 
-import { useEffect, useRef, useState } from "react";
-import { Bot, Loader2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { MarkdownRenderer } from "@/components/markdown-renderer";
-import { useAIStatus } from "@/components/ai-status-context";
+import { useEffect, useRef, useState } from 'react';
+import { Bot, Loader2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { ContinueAIChatButton } from '@/components/continue-ai-chat-button';
+import { MarkdownRenderer } from '@/components/markdown-renderer';
+import { useAIStatus } from '@/components/ai-status-context';
 
 export function AIDiagnosisButton() {
   const status = useAIStatus();
   const [loading, setLoading] = useState(false);
-  const [content, setContent] = useState("");
+  const [content, setContent] = useState('');
   const controllerRef = useRef<AbortController | null>(null);
 
   useEffect(() => () => controllerRef.current?.abort(), []);
 
   async function run() {
     if (!status.configured) {
-      setContent("AI 未配置，请先在个人中心填入 API Key。");
+      setContent('AI 未配置，请先在个人中心填入 API Key。');
       return;
     }
     setLoading(true);
-    setContent("");
+    setContent('');
     controllerRef.current?.abort();
     const controller = new AbortController();
     controllerRef.current = controller;
     try {
-      const response = await fetch("/api/ai/diagnosis", { method: "POST", signal: controller.signal });
+      const response = await fetch('/api/ai/diagnosis', {
+        method: 'POST',
+        signal: controller.signal,
+      });
       if (!response.ok || !response.body) {
         const data = await response.json().catch(() => ({}));
-        setContent(data.message || "AI 服务暂时不可用，请稍后再试。");
+        setContent(data.message || 'AI 服务暂时不可用，请稍后再试。');
         return;
       }
       const reader = response.body.getReader();
@@ -40,13 +44,38 @@ export function AIDiagnosisButton() {
         setContent((prev) => prev + decoder.decode(value, { stream: true }));
       }
     } catch (error) {
-      if ((error as { name?: string })?.name === "AbortError") return;
-      setContent("网络异常，请稍后再试。");
+      if ((error as { name?: string })?.name === 'AbortError') return;
+      setContent('网络异常，请稍后再试。');
     } finally {
       if (controllerRef.current === controller) controllerRef.current = null;
       setLoading(false);
     }
   }
 
-  return <div><Button onClick={run} disabled={loading || !status.configured} title={!status.configured ? "AI 未配置，请先在个人中心填入 API Key" : undefined}>{loading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Bot className="h-4 w-4" />}{loading ? "AI 正在分析..." : "AI 智能诊断"}</Button>{content ? <Card className="mt-5 bg-softYellow/60 p-6 hover:translate-y-0"><MarkdownRenderer content={content} /></Card> : null}</div>;
+  return (
+    <div>
+      <Button
+        onClick={run}
+        disabled={loading || !status.configured}
+        title={!status.configured ? 'AI 未配置，请先在个人中心填入 API Key' : undefined}
+      >
+        {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Bot className="h-4 w-4" />}
+        {loading ? 'AI 正在分析...' : 'AI 智能诊断'}
+      </Button>
+      {content ? (
+        <Card className="mt-5 bg-softYellow/60 p-6 hover:translate-y-0">
+          <div className="mb-4 flex justify-end">
+            <ContinueAIChatButton
+              title="AI 学情诊断"
+              messages={[
+                { role: 'user', content: '请根据我的做题数据进行 AI 智能诊断。' },
+                { role: 'assistant', content },
+              ]}
+            />
+          </div>
+          <MarkdownRenderer content={content} />
+        </Card>
+      ) : null}
+    </div>
+  );
 }
