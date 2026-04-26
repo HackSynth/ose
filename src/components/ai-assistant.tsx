@@ -105,16 +105,20 @@ export function AIAssistant() {
   }
 
   return (
-    <div className="fixed bottom-5 right-5 z-50">
+    <div className={cn('fixed z-50', open && maximized ? 'inset-0' : 'bottom-5 right-5')}>
       {open ? (
         <div
           className={cn(
             'mb-4 flex h-[500px] w-[calc(100vw-2.5rem)] flex-col rounded-[1.5rem] border border-orange-100 bg-warm shadow-lift transition-all duration-200 md:w-[380px]',
-            maximized &&
-              'h-[calc(100vh-2.5rem)] w-[calc(100vw-2.5rem)] md:h-[min(760px,calc(100vh-2.5rem))] md:w-[min(880px,calc(100vw-2.5rem))]'
+            maximized && 'mb-0 h-screen w-screen rounded-none border-0 md:h-screen md:w-screen'
           )}
         >
-          <div className="flex items-center justify-between rounded-t-[1.5rem] bg-white/90 p-4">
+          <div
+            className={cn(
+              'flex items-center justify-between rounded-t-[1.5rem] bg-white/90 p-4',
+              maximized && 'rounded-none'
+            )}
+          >
             <div>
               <p className="font-black text-navy">OSE 智能助手</p>
               <p className="text-xs font-bold text-muted">
@@ -189,13 +193,15 @@ export function AIAssistant() {
           </div>
         </div>
       ) : null}
-      <button
-        onClick={() => setOpen((value) => !value)}
-        className="flex h-14 w-14 items-center justify-center rounded-full bg-primary text-white shadow-lift transition hover:scale-105 hover:bg-primary-dark"
-        aria-label={open ? '收起 OSE 智能助手' : '打开 OSE 智能助手'}
-      >
-        <Bot className="h-7 w-7" />
-      </button>
+      {!maximized ? (
+        <button
+          onClick={() => setOpen((value) => !value)}
+          className="flex h-14 w-14 items-center justify-center rounded-full bg-primary text-white shadow-lift transition hover:scale-105 hover:bg-primary-dark"
+          aria-label={open ? '收起 OSE 智能助手' : '打开 OSE 智能助手'}
+        >
+          <Bot className="h-7 w-7" />
+        </button>
+      ) : null}
     </div>
   );
 }
