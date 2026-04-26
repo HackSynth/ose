@@ -1,12 +1,17 @@
-import { prisma } from "@/lib/prisma";
-import { getChinaDateKey, getContinuousDays, getNextExamCountdown, getRecentDateKeys } from "@/lib/stats";
-import { loadKnowledgeTree } from "@/lib/knowledge-stats";
+import { prisma } from '@/lib/prisma';
+import {
+  getChinaDateKey,
+  getContinuousDays,
+  getNextExamCountdown,
+  getRecentDateKeys,
+} from '@/lib/stats';
+import { getChoiceAnswerEvents, loadKnowledgeTree } from '@/lib/knowledge-stats';
 import {
   MEDIUM_MASTERY_THRESHOLD,
   PASS_MASTERY_THRESHOLD,
   RECENT_TREND_DAYS_ANALYSIS,
   WEAK_TOPICS_LIMIT,
-} from "@/lib/constants";
+} from '@/lib/constants';
 
 export type KnowledgeAnalysis = {
   id: string;
@@ -18,16 +23,16 @@ export type KnowledgeAnalysis = {
   avgTime: number;
   recentAccuracy: number;
   mastery: number;
-  status: "危险" | "薄弱" | "一般" | "良好" | "未学习";
+  status: '危险' | '薄弱' | '一般' | '良好' | '未学习';
   children?: KnowledgeAnalysis[];
 };
 
-function statusByMastery(mastery: number, count: number): KnowledgeAnalysis["status"] {
-  if (count === 0) return "未学习";
-  if (mastery < 40) return "危险";
-  if (mastery < 60) return "薄弱";
-  if (mastery < 80) return "一般";
-  return "良好";
+function statusByMastery(mastery: number, count: number): KnowledgeAnalysis['status'] {
+  if (count === 0) return '未学习';
+  if (mastery < 40) return '危险';
+  if (mastery < 60) return '薄弱';
+  if (mastery < 80) return '一般';
+  return '良好';
 }
 
 function calcMastery(count: number, accuracy: number, recentAccuracy: number) {
@@ -61,7 +66,11 @@ function merge(a: PerKpStat, b: PerKpStat): PerKpStat {
   };
 }
 
-function rollup(descendantsOf: (id: string) => string[], perKp: Map<string, PerKpStat>, rootId: string) {
+function rollup(
+  descendantsOf: (id: string) => string[],
+  perKp: Map<string, PerKpStat>,
+  rootId: string
+) {
   let stat = emptyStat();
   for (const id of descendantsOf(rootId)) {
     const bucket = perKp.get(id);
@@ -70,9 +79,14 @@ function rollup(descendantsOf: (id: string) => string[], perKp: Map<string, PerK
   return stat;
 }
 
-function toAnalysis(id: string, name: string, stat: PerKpStat): Omit<KnowledgeAnalysis, "children"> {
+function toAnalysis(
+  id: string,
+  name: string,
+  stat: PerKpStat
+): Omit<KnowledgeAnalysis, 'children'> {
   const accuracy = stat.count === 0 ? 0 : Math.round((stat.correct / stat.count) * 100);
-  const recentAccuracy = stat.recentTotal === 0 ? accuracy : Math.round((stat.recentCorrect / stat.recentTotal) * 100);
+  const recentAccuracy =
+    stat.recentTotal === 0 ? accuracy : Math.round((stat.recentCorrect / stat.recentTotal) * 100);
   const avgTime = stat.count === 0 ? 0 : Math.round(stat.totalTime / stat.count);
   const mastery = calcMastery(stat.count, accuracy, recentAccuracy);
   return {
@@ -93,38 +107,32 @@ export async function getUserAnalysis(userId: string) {
   const trendKeys = getRecentDateKeys(RECENT_TREND_DAYS_ANALYSIS);
   const recent7Keys = new Set(trendKeys.slice(-7));
 
-  const [roots, answerRows, wrongRows, totalKnowledgePoints, totalQuestionsResult, correctResult, tree] = await Promise.all([
+  const [roots, answerRows, wrongRows, totalKnowledgePoints, tree] = await Promise.all([
     prisma.knowledgePoint.findMany({
       where: { parentId: null },
-      orderBy: { sortOrder: "asc" },
-      include: { children: { orderBy: { sortOrder: "asc" }, select: { id: true, name: true } } },
+      orderBy: { sortOrder: 'asc' },
+      include: { children: { orderBy: { sortOrder: 'asc' }, select: { id: true, name: true } } },
     }),
-    prisma.userAnswer.findMany({
-      where: { userId },
-      select: {
-        isCorrect: true,
-        timeSpent: true,
-        createdAt: true,
-        question: { select: { knowledgePointId: true } },
-      },
-      orderBy: { createdAt: "asc" },
-    }),
+    getChoiceAnswerEvents(userId),
     prisma.wrongNote.groupBy({
-      by: ["questionId"],
+      by: ['questionId'],
       where: { userId },
       _count: { _all: true },
     }),
     prisma.knowledgePoint.count(),
-    prisma.userAnswer.count({ where: { userId } }),
-    prisma.userAnswer.count({ where: { userId, isCorrect: true } }),
     loadKnowledgeTree(),
   ]);
 
   const wrongQuestionIds = wrongRows.map((row) => row.questionId);
   const wrongQuestionKps = wrongQuestionIds.length
-    ? await prisma.question.findMany({ where: { id: { in: wrongQuestionIds } }, select: { id: true, knowledgePointId: true } })
+    ? await prisma.question.findMany({
+        where: { id: { in: wrongQuestionIds } },
+        select: { id: true, knowledgePointId: true },
+      })
     : [];
-  const kpByQuestion = new Map(wrongQuestionKps.map((question) => [question.id, question.knowledgePointId]));
+  const kpByQuestion = new Map(
+    wrongQuestionKps.map((question) => [question.id, question.knowledgePointId])
+  );
 
   const perKp = new Map<string, PerKpStat>();
   const getBucket = (id: string) => {
@@ -140,7 +148,7 @@ export async function getUserAnalysis(userId: string) {
   const last5ByKp = new Map<string, boolean[]>();
 
   for (const row of answerRows) {
-    const kpId = row.question.knowledgePointId;
+    const kpId = row.knowledgePointId;
     const bucket = getBucket(kpId);
     bucket.count += 1;
     if (row.isCorrect) bucket.correct += 1;
@@ -172,19 +180,28 @@ export async function getUserAnalysis(userId: string) {
   }
 
   const knowledgePoints: KnowledgeAnalysis[] = roots.map((root) => {
-    const children = root.children.map((child) => toAnalysis(child.id, child.name, rollup(tree.descendantsOf, perKp, child.id)));
-    return { ...toAnalysis(root.id, root.name, rollup(tree.descendantsOf, perKp, root.id)), children };
+    const children = root.children.map((child) =>
+      toAnalysis(child.id, child.name, rollup(tree.descendantsOf, perKp, child.id))
+    );
+    return {
+      ...toAnalysis(root.id, root.name, rollup(tree.descendantsOf, perKp, root.id)),
+      children,
+    };
   });
 
-  const totalQuestions = totalQuestionsResult;
-  const correct = correctResult;
+  const totalQuestions = answerRows.length;
+  const correct = answerRows.filter((row) => row.isCorrect).length;
   const overallAccuracy = totalQuestions ? Math.round((correct / totalQuestions) * 100) : 0;
   const weightedTopics = knowledgePoints.filter((kp) => kp.count > 0);
   const weightedCountTotal = weightedTopics.reduce((sum, kp) => sum + kp.count, 0);
   const overallMastery = weightedCountTotal
-    ? Math.round(weightedTopics.reduce((sum, kp) => sum + kp.mastery * kp.count, 0) / weightedCountTotal)
+    ? Math.round(
+        weightedTopics.reduce((sum, kp) => sum + kp.mastery * kp.count, 0) / weightedCountTotal
+      )
     : 0;
-  const studiedKnowledgePoints = knowledgePoints.flatMap((kp) => [kp, ...(kp.children ?? [])]).filter((kp) => kp.count > 0).length;
+  const studiedKnowledgePoints = knowledgePoints
+    .flatMap((kp) => [kp, ...(kp.children ?? [])])
+    .filter((kp) => kp.count > 0).length;
   const weakPoints = knowledgePoints
     .flatMap((kp) => (kp.children?.length ? kp.children : [kp]))
     .filter((kp) => kp.count > 0)
@@ -200,7 +217,9 @@ export async function getUserAnalysis(userId: string) {
     };
   });
   const last7 = trend.slice(-7);
-  const recentDailyAvg = last7.length ? Math.round((last7.reduce((sum, day) => sum + day.count, 0) / last7.length) * 10) / 10 : 0;
+  const recentDailyAvg = last7.length
+    ? Math.round((last7.reduce((sum, day) => sum + day.count, 0) / last7.length) * 10) / 10
+    : 0;
   let recent7Count = 0;
   let recent7Correct = 0;
   for (const key of recent7Keys) {
@@ -210,12 +229,20 @@ export async function getUserAnalysis(userId: string) {
     recent7Correct += bucket.correct;
   }
   const recentAccuracy = recent7Count ? Math.round((recent7Correct / recent7Count) * 100) : 0;
-  const regularity = studyDaysSet.size >= 20 ? "规律" : studyDaysSet.size >= 10 ? "一般" : "不够规律";
+  const regularity =
+    studyDaysSet.size >= 20 ? '规律' : studyDaysSet.size >= 10 ? '一般' : '不够规律';
   const predictedAMScore = Math.round((overallMastery / 100) * 75);
-  const passProbability = overallMastery >= PASS_MASTERY_THRESHOLD ? "高" : overallMastery >= MEDIUM_MASTERY_THRESHOLD ? "中" : "低";
+  const passProbability =
+    overallMastery >= PASS_MASTERY_THRESHOLD
+      ? '高'
+      : overallMastery >= MEDIUM_MASTERY_THRESHOLD
+        ? '中'
+        : '低';
   const exam = getNextExamCountdown();
   const totalWrong = wrongRows.reduce((sum, row) => sum + row._count._all, 0);
-  const unmasteredCount = await prisma.wrongNote.count({ where: { userId, markedMastered: false } });
+  const unmasteredCount = await prisma.wrongNote.count({
+    where: { userId, markedMastered: false },
+  });
   const streakDates = answerRows.map((row) => row.createdAt);
 
   return {
@@ -238,6 +265,9 @@ export async function getUserAnalysis(userId: string) {
     knowledgePoints,
     weakPoints,
     trend,
-    longTimeTopics: knowledgePoints.filter((kp) => kp.avgTime > 90).sort((a, b) => b.avgTime - a.avgTime).slice(0, WEAK_TOPICS_LIMIT),
+    longTimeTopics: knowledgePoints
+      .filter((kp) => kp.avgTime > 90)
+      .sort((a, b) => b.avgTime - a.avgTime)
+      .slice(0, WEAK_TOPICS_LIMIT),
   };
 }
