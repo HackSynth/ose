@@ -1,10 +1,11 @@
 'use client';
 
 import { useState, type FormEvent } from 'react';
-import { CalendarDays, Loader2 } from 'lucide-react';
+import { Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { OSEDatePicker } from '@/components/ose-date-picker';
 
 export function ProfileForms({
   initialName,
@@ -107,13 +108,11 @@ export function ProfileForms({
       <form onSubmit={updateExamDate} className="rounded-3xl bg-white p-5 shadow-soft">
         <Label htmlFor="targetExamDate">目标考试时间</Label>
         <div className="mt-3 flex flex-col gap-3 sm:flex-row">
-          <div className="ose-date-field flex-1">
-            <CalendarDays className="h-5 w-5 shrink-0 text-primary" />
-            <input
+          <div className="flex-1">
+            <OSEDatePicker
               id="targetExamDate"
-              type="date"
               value={targetExamDate}
-              onChange={(event) => setTargetExamDate(event.target.value)}
+              onChange={setTargetExamDate}
             />
           </div>
           <Button disabled={loadingExamDate}>

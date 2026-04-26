@@ -6,6 +6,7 @@ import { Loader2, Wand2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { OSESelect } from '@/components/ose-select';
 import { showToast } from '@/lib/toast-client';
 
 type Exam = {
@@ -101,19 +102,19 @@ export function GenerateExamButton() {
         >
           <div className="space-y-2">
             <Label>组卷类型</Label>
-            <select
-              className="ose-select"
+            <OSESelect
               value={sessionType}
-              onChange={(event) => {
-                const value = event.target.value as 'AM' | 'PM' | 'FULL';
+              options={[
+                { value: 'AM', label: '上午 (AM)' },
+                { value: 'PM', label: '下午 (PM)' },
+                { value: 'FULL', label: '全真 (FULL)' },
+              ]}
+              onChange={(nextValue) => {
+                const value = nextValue as 'AM' | 'PM' | 'FULL';
                 setSessionType(value);
                 setCount(value === 'PM' ? 4 : 20);
               }}
-            >
-              <option value="AM">上午 (AM)</option>
-              <option value="PM">下午 (PM)</option>
-              <option value="FULL">全真 (FULL)</option>
-            </select>
+            />
           </div>
           <div className="space-y-2">
             <Label>题数（1-100）</Label>

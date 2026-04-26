@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { OSESelect } from '@/components/ose-select';
 
 type Settings = {
   provider: string | null;
@@ -246,21 +247,14 @@ export function AISettingsCard() {
         <div className="grid gap-4 md:grid-cols-2">
           <div className="space-y-2">
             <Label htmlFor="ai-provider">供应商</Label>
-            <select
-              id="ai-provider"
-              className="ose-select"
+            <OSESelect
               value={settings.provider ?? ''}
-              onChange={(event) =>
-                setSettings((prev) => ({ ...prev, provider: event.target.value || null }))
-              }
+              options={PROVIDERS}
               disabled={busy}
-            >
-              {PROVIDERS.map((option) => (
-                <option key={option.value} value={option.value}>
-                  {option.label}
-                </option>
-              ))}
-            </select>
+              onChange={(provider) =>
+                setSettings((prev) => ({ ...prev, provider: provider || null }))
+              }
+            />
           </div>
           <div className="space-y-2">
             <Label htmlFor="ai-model">模型名称</Label>

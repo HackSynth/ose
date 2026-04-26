@@ -16,6 +16,7 @@ import { Card } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
 import { AIExplainButton } from '@/components/ai-explain-button';
 import { MarkdownRenderer } from '@/components/markdown-renderer';
+import { OSESelect } from '@/components/ose-select';
 import { showToast } from '@/lib/toast-client';
 import { WRONG_NOTE_PREVIEW_LENGTH } from '@/lib/constants';
 
@@ -201,6 +202,17 @@ export function WrongNotesClient() {
       }))
       .filter((group) => group.root && byId.has(group.root.id));
   }, [data?.topics]);
+  const topicSelectGroups = useMemo(
+    () =>
+      topicGroups.map((group) => ({
+        label: group.root.name,
+        options: [
+          { value: group.root.id, label: `${group.root.name}（整体）` },
+          ...group.children.map((child) => ({ value: child.id, label: child.name })),
+        ],
+      })),
+    [topicGroups]
+  );
 
   return (
     <main className="mx-auto mt-8 max-w-7xl space-y-6">
@@ -237,41 +249,30 @@ export function WrongNotesClient() {
         <div className="grid gap-4 md:grid-cols-3">
           <label className="space-y-2">
             <span className="text-sm font-black text-navy">知识点</span>
-            <select
-              className="ose-select"
+            <OSESelect
               value={topic}
-              onChange={(event) => {
-                setTopic(event.target.value);
+              options={[{ value: '', label: '全部知识点' }]}
+              groups={topicSelectGroups}
+              onChange={(nextTopic) => {
+                setTopic(nextTopic);
                 setPage(1);
               }}
-            >
-              <option value="">全部知识点</option>
-              {topicGroups.map((group) => (
-                <optgroup key={group.root.id} label={group.root.name}>
-                  <option value={group.root.id}>{group.root.name}（整体）</option>
-                  {group.children.map((child) => (
-                    <option key={child.id} value={child.id}>
-                      {child.name}
-                    </option>
-                  ))}
-                </optgroup>
-              ))}
-            </select>
+            />
           </label>
           <label className="space-y-2">
             <span className="text-sm font-black text-navy">状态</span>
-            <select
-              className="ose-select"
+            <OSESelect
               value={status}
-              onChange={(event) => {
-                setStatus(event.target.value);
+              options={[
+                { value: 'all', label: '全部' },
+                { value: 'unmastered', label: '未掌握' },
+                { value: 'mastered', label: '已掌握' },
+              ]}
+              onChange={(nextStatus) => {
+                setStatus(nextStatus);
                 setPage(1);
               }}
-            >
-              <option value="all">全部</option>
-              <option value="unmastered">未掌握</option>
-              <option value="mastered">已掌握</option>
-            </select>
+            />
           </label>
         </div>
       </Card>

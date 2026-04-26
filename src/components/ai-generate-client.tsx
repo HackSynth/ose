@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { Bot, Loader2, PencilLine, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import { OSESelect } from '@/components/ose-select';
 import { cn } from '@/lib/utils';
 import { useAIStatus } from '@/components/ai-status-context';
 
@@ -211,17 +212,12 @@ export function AIGenerateClient({
               </div>
               <label className="block font-black text-navy">
                 生成数量
-                <select
-                  className="ose-select mt-2"
-                  value={count}
-                  onChange={(event) => setCount(Number(event.target.value))}
-                >
-                  {counts.map((item) => (
-                    <option key={item} value={item}>
-                      {item}题
-                    </option>
-                  ))}
-                </select>
+                <OSESelect
+                  value={String(count)}
+                  options={counts.map((item) => ({ value: String(item), label: `${item}题` }))}
+                  triggerClassName="mt-2"
+                  onChange={(nextValue) => setCount(Number(nextValue))}
+                />
               </label>
             </div>
           </div>
@@ -229,17 +225,12 @@ export function AIGenerateClient({
           <div className="grid gap-6 md:grid-cols-2">
             <label className="block font-black text-navy">
               题型方向
-              <select
-                className="ose-select mt-2"
+              <OSESelect
                 value={caseType}
-                onChange={(event) => setCaseType(event.target.value)}
-              >
-                {caseTypes.map((item) => (
-                  <option key={item} value={item}>
-                    {item}
-                  </option>
-                ))}
-              </select>
+                options={caseTypes.map((item) => ({ value: item, label: item }))}
+                triggerClassName="mt-2"
+                onChange={setCaseType}
+              />
             </label>
             <div>
               <p className="mb-2 font-black text-navy">难度等级</p>

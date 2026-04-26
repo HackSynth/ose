@@ -2,16 +2,20 @@
 
 import { useState, type FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
-import { CalendarDays, Loader2 } from 'lucide-react';
+import { Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
+import { OSEDatePicker } from '@/components/ose-date-picker';
+import { OSESelect } from '@/components/ose-select';
 
 const preferences = ['侧重薄弱环节', '全面复习', '真题为主', '理论优先'];
+const dailyTimeOptions = ['30分钟', '1小时', '2小时', '3小时以上'];
 
 export function PlanGenerateForm({ defaultDate }: { defaultDate: string }) {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [selected, setSelected] = useState<string[]>(['侧重薄弱环节']);
+  const [dailyTime, setDailyTime] = useState('1小时');
   const [error, setError] = useState('');
 
   async function submit(event: FormEvent<HTMLFormElement>) {
@@ -31,7 +35,7 @@ export function PlanGenerateForm({ defaultDate }: { defaultDate: string }) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           targetDate,
-          dailyTime: formData.get('dailyTime'),
+          dailyTime,
           preferences: selected,
         }),
       });
@@ -53,19 +57,15 @@ export function PlanGenerateForm({ defaultDate }: { defaultDate: string }) {
       <div className="grid gap-4 md:grid-cols-2">
         <label className="space-y-2">
           <Label>目标考试日期</Label>
-          <span className="ose-date-field">
-            <CalendarDays className="h-5 w-5 shrink-0 text-primary" />
-            <input name="targetDate" type="date" defaultValue={defaultDate} required />
-          </span>
+          <OSEDatePicker name="targetDate" defaultValue={defaultDate} required />
         </label>
         <label className="space-y-2">
           <Label>每日学习时间</Label>
-          <select name="dailyTime" className="ose-select" defaultValue="1小时">
-            <option>30分钟</option>
-            <option>1小时</option>
-            <option>2小时</option>
-            <option>3小时以上</option>
-          </select>
+          <OSESelect
+            value={dailyTime}
+            options={dailyTimeOptions.map((option) => ({ value: option, label: option }))}
+            onChange={setDailyTime}
+          />
         </label>
       </div>
       <div>

@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, type KeyboardEvent } from 'react';
 import { Bot, Maximize2, Minimize2, Plus, Send, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { MarkdownRenderer } from '@/components/markdown-renderer';
+import { OSESelect } from '@/components/ose-select';
 import { useAIStatus } from '@/components/ai-status-context';
 import { cn } from '@/lib/utils';
 import { OSE_AI_CONTINUE_EVENT } from '@/lib/ai-chat-client';
@@ -276,20 +277,17 @@ export function AIAssistant() {
                 {status.configured ? `当前供应商：${status.provider}` : '未配置 AI API Key'}
               </p>
               <div className="mt-2 flex max-w-[230px] items-center gap-2 md:max-w-[300px]">
-                <select
-                  className="ose-select h-9 min-w-0 flex-1 py-2 text-xs"
+                <OSESelect
                   value={activeSessionId ?? ''}
-                  onChange={(event) => switchSession(event.target.value)}
+                  options={sessions.map((session) => ({
+                    value: session.id,
+                    label: session.title,
+                  }))}
+                  placeholder="历史会话"
                   disabled={loading || !sessions.length}
-                  aria-label="选择历史会话"
-                >
-                  <option value="">历史会话</option>
-                  {sessions.map((session) => (
-                    <option key={session.id} value={session.id}>
-                      {session.title}
-                    </option>
-                  ))}
-                </select>
+                  triggerClassName="h-9 min-w-0 flex-1 py-2 text-xs"
+                  onChange={switchSession}
+                />
                 <button
                   type="button"
                   onClick={newSession}
