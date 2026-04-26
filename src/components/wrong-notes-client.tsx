@@ -238,7 +238,7 @@ export function WrongNotesClient() {
           <label className="space-y-2">
             <span className="text-sm font-black text-navy">知识点</span>
             <select
-              className="ose-input w-full"
+              className="ose-select"
               value={topic}
               onChange={(event) => {
                 setTopic(event.target.value);
@@ -261,7 +261,7 @@ export function WrongNotesClient() {
           <label className="space-y-2">
             <span className="text-sm font-black text-navy">状态</span>
             <select
-              className="ose-input w-full"
+              className="ose-select"
               value={status}
               onChange={(event) => {
                 setStatus(event.target.value);

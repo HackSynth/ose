@@ -11,8 +11,12 @@
   --destructive: 0 72% 51%;
 }
 
-* { @apply border-border; }
-html { scroll-behavior: smooth; }
+* {
+  @apply border-border;
+}
+html {
+  scroll-behavior: smooth;
+}
 body {
   @apply min-h-screen bg-warm text-navy antialiased;
   font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
@@ -34,11 +38,37 @@ body {
   .ose-input {
     @apply rounded-2xl border-orange-100 bg-white px-4 py-3 text-navy shadow-sm outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/15;
   }
+
+  .ose-select {
+    @apply ose-input h-12 w-full cursor-pointer appearance-none pr-11 text-sm font-extrabold;
+    background-image:
+      linear-gradient(45deg, transparent 50%, hsl(19 88% 54%) 50%),
+      linear-gradient(135deg, hsl(19 88% 54%) 50%, transparent 50%);
+    background-position:
+      calc(100% - 22px) 52%,
+      calc(100% - 16px) 52%;
+    background-size:
+      6px 6px,
+      6px 6px;
+    background-repeat: no-repeat;
+  }
+
+  .ose-date-field {
+    @apply flex h-12 items-center gap-3 rounded-2xl border border-orange-100 bg-white px-4 text-navy shadow-sm transition focus-within:border-primary focus-within:ring-4 focus-within:ring-primary/15;
+  }
+
+  .ose-date-field input {
+    @apply h-full min-w-0 flex-1 bg-transparent text-sm font-extrabold outline-none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, type FormEvent } from 'react';
-import { Loader2 } from 'lucide-react';
+import { CalendarDays, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -107,12 +107,15 @@ export function ProfileForms({
       <form onSubmit={updateExamDate} className="rounded-3xl bg-white p-5 shadow-soft">
         <Label htmlFor="targetExamDate">目标考试时间</Label>
         <div className="mt-3 flex flex-col gap-3 sm:flex-row">
-          <Input
-            id="targetExamDate"
-            type="date"
-            value={targetExamDate}
-            onChange={(event) => setTargetExamDate(event.target.value)}
-          />
+          <div className="ose-date-field flex-1">
+            <CalendarDays className="h-5 w-5 shrink-0 text-primary" />
+            <input
+              id="targetExamDate"
+              type="date"
+              value={targetExamDate}
+              onChange={(event) => setTargetExamDate(event.target.value)}
+            />
+          </div>
           <Button disabled={loadingExamDate}>
             {loadingExamDate ? <Loader2 className="h-4 w-4 animate-spin" /> : null}保存
           </Button>

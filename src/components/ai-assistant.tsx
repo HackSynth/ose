@@ -277,7 +277,7 @@ export function AIAssistant() {
               </p>
               <div className="mt-2 flex max-w-[230px] items-center gap-2 md:max-w-[300px]">
                 <select
-                  className="h-9 min-w-0 flex-1 rounded-xl border border-orange-100 bg-white px-3 text-xs font-bold text-navy outline-none focus:ring-4 focus:ring-primary/20"
+                  className="ose-select h-9 min-w-0 flex-1 py-2 text-xs"
                   value={activeSessionId ?? ''}
                   onChange={(event) => switchSession(event.target.value)}
                   disabled={loading || !sessions.length}
