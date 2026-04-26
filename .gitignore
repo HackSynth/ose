@@ -19,6 +19,7 @@ pnpm-debug.log*
 *.tsbuildinfo
 src/prisma/*.db
 src/prisma/*.db-journal
+src/prisma/*.db.bak.*
 .DS_Store
 Thumbs.db
 

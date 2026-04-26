@@ -1,0 +1,2023 @@
+{
+  "msg": "成功",
+  "status": "0",
+  "data": {
+    "data": {
+      "question": [
+        {
+          "index": 1,
+          "belong_page": 1,
+          "question_id": 36638,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\" style=\"background: rgb(255, 255, 255); text-indent: 0pt; margin-left: 21pt;\"><span style=\"font-family: 宋体; font-size: 10.5pt;\">V</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">LIW <span style=\"font-family: 宋体;\">是（</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">1</span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）的简称。</span></span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36638",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>复杂指令系统计算机</p>",
+            "<p>超大规模集成电路</p>",
+            "<p>单指令流多数据流</p>",
+            "<p>超长指令字</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 2,
+          "belong_page": 1,
+          "question_id": 36639,
+          "question_title": "<p><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">主存与</span> Cache <span style=\"font-family: 宋体;\">的地址映射方式中，（</span></span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">2</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）方式可以实现主存任意一块装入</span> Cache <span style=\"font-family: 宋体;\">中任意位置，只有装满才需要替换。</span></span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36639",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>全相联</p>", "<p>直接映射</p>", "<p>组相联</p>", "<p>串并联</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 3,
+          "belong_page": 1,
+          "question_id": 36640,
+          "question_title": "<p><span style=\"text-indent: 0pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">如果</span>“</span><span style=\"text-indent: 0pt; font-family: 宋体; font-size: 10.5pt;\">2X<span style=\"font-family: 宋体;\">”的补码是“</span><span style=\"font-family: Times New Roman;\">90H</span><span style=\"font-family: 宋体;\">”，那么 </span><span style=\"font-family: Times New Roman;\">X </span><span style=\"font-family: 宋体;\">的真值是（</span></span><span style=\"text-indent: 0pt; font-family: 宋体; font-size: 10.5pt;\">3</span><span style=\"text-indent: 0pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">）</span></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36640",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>72&nbsp;</p>", "<p>-56</p>", "<p>56</p>", "<p>1&nbsp;1&nbsp;1</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 4,
+          "belong_page": 1,
+          "question_id": 36641,
+          "question_title": "<p><span style=\"font-family: 宋体;\">移位指令中的（</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">4</span><span style=\"font-family: 宋体;\">）指令的操作结果相当于对操作数进行乘</span><span style=\"font-family: Times New Roman;\">2</span><span style=\"font-family: 宋体;\">操作。</span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36641",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>算术左移</p>",
+            "<p>逻辑右移</p>",
+            "<p>算术右移</p>",
+            "<p>带进位循环左移</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 5,
+          "belong_page": 1,
+          "question_id": 36642,
+          "question_title": "<p><span style=\"font-family: 宋体;\">内存按字节编址，从</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">A1000H</span><span style=\"font-family: 宋体;\">到</span><span style=\"font-family: Times New Roman;\">B13FFH</span><span style=\"font-family: 宋体;\">的区域的存储容量为（</span><span style=\"font-family: Times New Roman;\">5</span><span style=\"font-family: 宋体;\">）</span><span style=\"font-family: Times New Roman;\">KB</span><span style=\"font-family: 宋体;\">。</span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36642",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>32&nbsp;</p>", "<p>34</p>", "<p>65&nbsp;</p>", "<p>67</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 6,
+          "belong_page": 1,
+          "question_id": 36643,
+          "question_title": "<p><span style=\"font-family: 宋体;\">以下关于总线的叙述中，不正确的是（</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">6</span><span style=\"font-family: 宋体;\">）。</span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36643",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>并行总线适合近距离高速数据传输</p>",
+            "<p>串行总线适合长距离数据传输</p>",
+            "<p>单总线结构在一个总线上适应不同种类的设备，设计简单且性能很高</p>",
+            "<p>专用总线在设计上可以与连接设备实现最佳匹配</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 7,
+          "belong_page": 1,
+          "question_id": 36644,
+          "question_title": "<p><span style=\"font-family: 宋体;\">以下关于网络层次与主要设备对应关系的叙述中，配对正确的是（</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">7</span><span style=\"font-family: 宋体;\">）。</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36644",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>网络层——集线器</p>",
+            "<p>数据链路层——网桥</p>",
+            "<p>传输层——路由器</p>",
+            "<p>会话层——防火墙</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 8,
+          "belong_page": 1,
+          "question_id": 36645,
+          "question_title": "<p><span style=\"font-family: 宋体;\">传输经过</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">SSL</span><span style=\"font-family: 宋体;\">加密的网页所采用的协议是（</span><span style=\"font-family: Times New Roman;\">8</span><span style=\"font-family: 宋体;\">）。</span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36645",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>HTTP</p>", "<p>HTTPS</p>", "<p>S-HTTP</p>", "<p>HTTP-S</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 9,
+          "belong_page": 1,
+          "question_id": 36646,
+          "question_title": "<p><span style=\"font-family: 宋体;\">为了攻击远程主机，通常利用（</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">9</span><span style=\"font-family: 宋体;\">）技术检测远程主机状态。</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36646",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>病毒查杀</p>", "<p>端口扫描</p>", "<p>QQ聊天</p>", "<p>身份认证</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 10,
+          "belong_page": 1,
+          "question_id": 36647,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\">某软件公司参与开发管理系统软件的程序员张某，辞职到另一公司任职，于是该项目负责人将该管理系统软件上开发者的署名更改为李某（接张某工作）。该项目负责人的行为（</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">10</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">）。</span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36647",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>侵犯了张某开发者身份权（署名权）</p>",
+            "<p>不构成侵权，因为程序员张某不是软件著作权人</p>",
+            "<p>只是行使管理者的权利，不构成侵权</p>",
+            "<p>不构成侵权，因为程序员张某现已不是项目组成员</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 11,
+          "belong_page": 1,
+          "question_id": 36648,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">美国某公司与中国某企业谈技术合作，合同约定使用</span>l<span style=\"font-family: 宋体;\">项美国专利（获得批准并在有效期内），该项技术未在中国和其他国家申请专利。依照该专利生产的产品（</span><span style=\"font-family: Times New Roman;\">11</span><span style=\"font-family: 宋体;\">）需要向美国公司支付这件美国专利的许可使用费。</span></span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36648",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>在中国销售，中国企业</p>",
+            "<p>如果返销美国，中国企业不</p>",
+            "<p>在其他国家销售，中国企业</p>",
+            "<p>在中国销售，中国企业不</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 12,
+          "belong_page": 1,
+          "question_id": 36649,
+          "question_title": "<p><span style=\"font-family: 宋体;\">以下媒体文件格式中，（</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">12</span><span style=\"font-family: 宋体;\">）是视频文件格式。</span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36649",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>WAV</p>", "<p>BMP</p>", "<p>MP3</p>", "<p>MOV</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 13,
+          "belong_page": 1,
+          "question_id": 36650,
+          "question_title": "<p><span style=\"font-family: 宋体;\">以下软件产品中，属于图像编辑处理工具的软件是（</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">13</span><span style=\"font-family: 宋体;\">）。</span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36650",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>Powerpoint</p>", "<p>Photoshop</p>", "<p>Premiere</p>", "<p>Acrobat</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 14,
+          "belong_page": 1,
+          "question_id": 36651,
+          "question_title": "<p><span style=\"font-family: 宋体;\">使用</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">150DPI</span><span style=\"font-family: 宋体;\">的扫描分辨率扫描一幅</span><span style=\"font-family: Times New Roman;\">3</span><span style=\"font-family: 宋体;\">×</span><span style=\"font-family: Times New Roman;\">4</span><span style=\"font-family: 宋体;\">英寸的彩色照片，得到原始的</span><span style=\"font-family: Times New Roman;\">24</span><span style=\"font-family: 宋体;\">位真彩色图像的数据量是（</span><span style=\"font-family: Times New Roman;\">14</span><span style=\"font-family: 宋体;\">）</span><span style=\"font-family: Times New Roman;\">Byte</span><span style=\"font-family: 宋体;\">。</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36651",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>1800</p>", "<p>90000</p>", "<p>270000</p>", "<p>810000</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 15,
+          "belong_page": 1,
+          "question_id": 36652,
+          "question_title": "<p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/6192a8968e26ad9bf702358dc63da1a8bc69ff.png\"/></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36652",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>15</p>", "<p>21</p>", "<p>22</p>", "<p>24</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 16,
+          "belong_page": 1,
+          "question_id": 36653,
+          "question_title": "<p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/a6fb92612f6d9495f878542862847ab2cb1745.png\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36653",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>0</p>", "<p>2</p>", "<p>3</p>", "<p>5</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 17,
+          "belong_page": 1,
+          "question_id": 36654,
+          "question_title": "<p><span style=\"font-family: 宋体;\">在结构化分析中，用数据流图描述（</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">17 回答该空</span><span style=\"font-family: 宋体;\">）。当采用数据流图对一个图书馆管理系统进行分析时，（</span><span style=\"font-family: Times New Roman;\">18</span><span style=\"font-family: 宋体;\">）是一个外部实体。</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36654",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>数据对象之间的关系，用于对数据建模</p>",
+            "<p>数据在系统中如何被传送或变换，以及如何对数据流进行变换的功能或子功能，用于对功能建模</p>",
+            "<p>系统对外部事件如何响应，如何动作，用于对行为建模</p>",
+            "<p>数据流图中的各个组成部分</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 18,
+          "belong_page": 1,
+          "question_id": 36655,
+          "question_title": "<p><span style=\"font-family: 宋体;\">在结构化分析中，用数据流图描述（</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">17</span><span style=\"font-family: 宋体;\">）。当采用数据流图对一个图书馆管理系统进行分析时，（</span><span style=\"font-family: Times New Roman;\">18</span><span style=\"font-family: 宋体;\">）是一个外部实体。</span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36655",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>读者 (问题18)</p>",
+            "<p>图书&nbsp;&nbsp;(问题18)</p>",
+            "<p>借书证&nbsp;&nbsp;(问题18)</p>",
+            "<p>借阅&nbsp;&nbsp;(问题18)</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 19,
+          "belong_page": 1,
+          "question_id": 36656,
+          "question_title": "<p><span style=\"font-family: 宋体;\">软件开发过程中，需求分析阶段的输出不包括（</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">19</span><span style=\"font-family: 宋体;\">）。</span><br/></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36656",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>数据流图</p>",
+            "<p>实体联系图</p>",
+            "<p>数据字典</p>",
+            "<p>软件体系结构图</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 20,
+          "belong_page": 1,
+          "question_id": 36657,
+          "question_title": "<p><span style=\"font-family: 宋体;\">以下关于高级程序设计语言实现的编译和解释方式的叙述中，正确的是（</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">20</span><span style=\"font-family: 宋体;\">）。</span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36657",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>编译程序不参与用户程序的运行控制，而解释程序则参与</p>",
+            "<p>编译程序可以用高级语言编写，而解释程序只能用汇编语言编写</p>",
+            "<p>编译方式处理源程序时不进行优化，而解释方式则进行优化</p>",
+            "<p>编译方式不生成源程序的目标程序，而解释方式则生成</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 21,
+          "belong_page": 1,
+          "question_id": 36658,
+          "question_title": "<p><span style=\"font-family: 宋体;\">以下关于脚本语言的叙述中，正确的是（</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">21</span><span style=\"font-family: 宋体;\">）。</span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36658",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>脚本语言是通用的程序设计语言</p>",
+            "<p>脚本语言更适合应用在系统级程序开发中</p>",
+            "<p>脚本语言主要采用解释方式实现</p>",
+            "<p>脚本语言中不能定义函数和调用函数</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 22,
+          "belong_page": 1,
+          "question_id": 36659,
+          "question_title": "<p><span style=\"font-family: 宋体;\">将高级语言源程序先转化为一种中间代码是现代编译器的常见处理方式。常用的中间代码有后缀式、（</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">22</span><span style=\"font-family: 宋体;\">）、树等。</span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36659",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>前缀码</p>", "<p>三地址码</p>", "<p>符号表</p>", "<p>补码和移码</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 23,
+          "belong_page": 1,
+          "question_id": 36660,
+          "question_title": "<p><span style=\"font-family: 宋体;\">当用户通过键盘或鼠标进入某应用系统时，通常最先获得键盘或鼠标输入信息的是（</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">23</span><span style=\"font-family: 宋体;\">）程序。</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36660",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>命令解释</p>", "<p>中断处理</p>", "<p>用户登录</p>", "<p>系统调用</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 24,
+          "belong_page": 1,
+          "question_id": 36661,
+          "question_title": "<p><span style=\"font-family: 宋体;\">在</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">Windows</span><span style=\"font-family: 宋体;\">操作系统中，当用户双击“</span><span style=\"font-family: Times New Roman;\">IMG_20160122_103.jpg</span><span style=\"font-family: 宋体;\">”文件名时，系统会自动通过建立的（</span><span style=\"font-family: Times New Roman;\">24</span><span style=\"font-family: 宋体;\">）来决定使用什么程序打开该图像文件。</span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36661",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>文件</p>", "<p>文件关联</p>", "<p>文件目录</p>", "<p>临时文件</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 25,
+          "belong_page": 1,
+          "question_id": 40505,
+          "question_title": "<p><span style=\"font-family:宋体\">某磁盘有</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">100</span><span style=\"font-family:宋体\">个磁道，磁头从一个磁道移至另一个磁道需要</span><span style=\"font-family:Calibri\">6ms</span><span style=\"font-family:宋体\">。文件在磁盘上非连续存放，逻辑上相邻数据块的平均距离为</span><span style=\"font-family:Calibri\">10</span><span style=\"font-family:宋体\">个磁道，每块的旋转延迟时间及传输时间分别为</span><span style=\"font-family:Calibri\">100ms</span><span style=\"font-family:宋体\">和</span><span style=\"font-family:Calibri\">20ms</span><span style=\"font-family:宋体\">，则读取一个</span><span style=\"font-family:Calibri\">100</span><span style=\"font-family:宋体\">块的文件需要（</span><span style=\"font-family:Calibri\">25</span><span style=\"font-family:宋体\">）</span><span style=\"font-family:Calibri\">ms</span><span style=\"font-family:宋体\">。</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "40505",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>12060&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+            "<p>12600&nbsp;&nbsp;&nbsp;</p>",
+            "<p>18000</p>",
+            "<p>186000</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 26,
+          "belong_page": 1,
+          "question_id": 36663,
+          "question_title": "<p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/a85736b9285ac58c51f65473da6e9cca69c70b.png\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36663",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>V（S1）P（S2）和V（S3） （问题26）</p>",
+            "<p>P（S1）V（S2）和V（S3） （问题26）</p>",
+            "<p>V（S1）V（S2）和V（S3） （问题26）</p>",
+            "<p>P（S1）P（S2）和V（S3） （问题26）</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 27,
+          "belong_page": 1,
+          "question_id": 40507,
+          "question_title": "<p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201805/a47393e586d3ec3ce1e4241022469f53c695fb.png\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "40507",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>P（S2）和P（S4）</p>",
+            "<p>P（S2）和V（S4）</p>",
+            "<p>V（S2）和P（S4）</p>",
+            "<p>V（S2）和V（S4）</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 28,
+          "belong_page": 1,
+          "question_id": 36665,
+          "question_title": "<p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/973097b23cd6f2bef68183ee0fe0f18f384a26.png\"/>请填写28空</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36665",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>P（S4）和V（S4）V（S5）</p>",
+            "<p>V（S5）和P（S4）P（S5）</p>",
+            "<p>V（S3）和V（S4）V（S5）</p>",
+            "<p>P（S3）和P（S4）V（P5）</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 29,
+          "belong_page": 1,
+          "question_id": 40509,
+          "question_title": "<p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201805/d552b0940ac550ae20c1872f09378768bf7dc5.png\"/></p><p class=\"MsoNormal\" style=\"text-indent:20.7000pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "40509",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>公共</p>", "<p>控制</p>", "<p>标记</p>", "<p>数据</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 30,
+          "belong_page": 1,
+          "question_id": 36667,
+          "question_title": "<p><span style=\"font-family: 宋体;\">以下关于增量开发模型的叙述中，不正确的是（</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">30</span><span style=\"font-family: 宋体;\">）。</span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36667",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>不必等到整个系统开发完成就可以使用</p>",
+            "<p>可以使用较早的增量构件作为原型，从而获得稍后的增量构件需求</p>",
+            "<p>优先级最高的服务先交付，这样最重要的服务接受最多的测试</p>",
+            "<p>有利于进行好的模块划分</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 31,
+          "belong_page": 1,
+          "question_id": 36668,
+          "question_title": "<p><span style=\"font-family: 宋体;\">在设计软件的模块结构时，（</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">31</span><span style=\"font-family: 宋体;\">）不能改进设计质量。</span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36668",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>模块的作用范围应在其控制范围之内</p>",
+            "<p>模块的大小适中</p>",
+            "<p>避免或减少使用病态连接（从中部进入或访问一个模块）</p>",
+            "<p>模块的功能越单纯越好</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 32,
+          "belong_page": 1,
+          "question_id": 36669,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">软件体系结构的各种风格中，仓库风格包含一个数据仓库和若干个其他构件。数据仓库位于该体系结构的中心，其他构件访问该数据仓库并对其中的数据进行增、删、改等操作。以下关于该风格的叙述中，不正确的是（</span>32<span style=\"font-family: 宋体;\">）</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">、</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">（</span>33<span style=\"font-family: 宋体;\">）不属于仓库风格。</span></span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36669",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>支持可更改性和可维护性 （问题32）</p>",
+            "<p>具有可复用的知识源&nbsp;（问题32）</p>",
+            "<p>支持容错性和健壮性&nbsp;（问题32）</p>",
+            "<p>测试简单&nbsp;（问题32）</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 33,
+          "belong_page": 1,
+          "question_id": 36670,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">软件体系结构的各种风格中，仓库风格包含一个数据仓库和若干个其他构件。数据仓库位于该体系结构的中心，其他构件访问该数据仓库并对其中的数据进行增、删、改等操作。以下关于该风格的叙述中，不正确的是（</span>32<span style=\"font-family: 宋体;\">）</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">、</span></span><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">（</span>33<span style=\"font-family: 宋体;\">）不属于仓库风格。</span></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36670",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>数据库系统</p>", "<p>超文本系统</p>", "<p>黑板系统</p>", "<p>编译器</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 34,
+          "belong_page": 1,
+          "question_id": 36671,
+          "question_title": "<p><span style=\"font-family: 宋体;\">下图（</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">a</span><span style=\"font-family: 宋体;\">）所示为一个模块层次结构的例子，图（</span><span style=\"font-family: Times New Roman;\">b</span><span style=\"font-family: 宋体;\">）所示为对其进行集成测试的顺序，则此测试采用了（</span><span style=\"font-family: Times New Roman;\">34</span><span style=\"font-family: 宋体;\">）测试策略。该测试策略的优点不包括（</span><span style=\"font-family: Times New Roman;\">35</span><span style=\"font-family: 宋体;\">）。</span></p><p><span style=\"font-family: 宋体;\"><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/46e2a6b9708089a4245832b4be99c3f5bd1be5.png\"/></span></p><p class=\"MsoNormal\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36671",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>自底向上</p>",
+            "<p>自顶向下</p>",
+            "<p>三明治&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+            "<p>一次性</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 35,
+          "belong_page": 1,
+          "question_id": 36672,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\"><span style=\"font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">下图（</span><span style=\"font-family: 宋体;\">a）所示为一个模块层次结构的例子，图（</span><span style=\"font-family: Times New Roman;\">b</span><span style=\"font-family: 宋体;\">）所示为对其进行集成测试的顺序，则此测试采用了（</span><span style=\"font-family: Times New Roman;\">34</span><span style=\"font-family: 宋体;\">）测试策略。该测试策略的优点不包括（</span><span style=\"font-family: Times New Roman;\">35</span><span style=\"font-family: 宋体;\">）。</span></span></p><p class=\"MsoNormal\"><span style=\"font-size: 10.5pt;\"><span style=\"font-family: 宋体;\"><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/54e1c1985460c990407777c1eda6a15bbf9ca1.png\"/></span></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36672",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>较早地验证了主要的控制和判断点</p>",
+            "<p>较早地验证了底层模块</p>",
+            "<p>测试的并行程度较高</p>",
+            "<p>较少的驱动模块和桩模块的编写工作量</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 36,
+          "belong_page": 1,
+          "question_id": 36673,
+          "question_title": "<p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/a6c745c219d88c838dc1866b4444255a4b9d0e.png\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36673",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>1</p>", "<p>2</p>", "<p>3</p>", "<p>4</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 37,
+          "belong_page": 1,
+          "question_id": 36674,
+          "question_title": "<p><span style=\"font-family: 宋体;\">在面向对象方法中，（</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">37</span><span style=\"font-family: 宋体;\">）是父类和子类之间共享数据和方法的机制。子类在原有父类接口的基础上，用适合于自己要求的实现去置换父类中的相应实现称为（</span><span style=\"font-family: Times New Roman;\">38</span><span style=\"font-family: 宋体;\">）。</span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36674",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>封装</p>", "<p>继承</p>", "<p>覆盖&nbsp;</p>", "<p>多态</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 38,
+          "belong_page": 1,
+          "question_id": 36675,
+          "question_title": "<p><span style=\"font-family: 宋体;\">在面向对象方法中，（</span><span style=\"font-family: 宋体;\">）是父类和子类之间共享数据和方法的机制。子类在原有父类接口的基础上，用适合于自己要求的实现去置换父类中的相应实现称为（ 请作答此空</span><span style=\"font-family: 宋体;\">）</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36675",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>封装</p>", "<p>继承</p>", "<p>覆盖&nbsp;</p>", "<p>多态</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 39,
+          "belong_page": 1,
+          "question_id": 36676,
+          "question_title": "<p><span style=\"font-family: 宋体;\">在</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">UML</span><span style=\"font-family: 宋体;\">用例图中，参与者表示（</span><span style=\"font-family: Times New Roman;\">39</span><span style=\"font-family: 宋体;\">）</span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36676",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>人、硬件或其他系统可以扮演的角色</p>",
+            "<p>可以完成多种动作的相同用户</p>",
+            "<p>不管角色的实际物理用户</p>",
+            "<p>带接口的物理系统或者硬件设计</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 40,
+          "belong_page": 1,
+          "question_id": 36677,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\">UML</span><span style=\"font-family: 宋体;\">中关联是一个结构关系，描述了一组链两个类之间（</span><span style=\"font-family: Times New Roman;\">40</span><span style=\"font-family: 宋体;\">）关联。</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36677",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>不能有多个</p>",
+            "<p>可以有多个由不同角色标识的</p>",
+            "<p>可以有任意多个</p>",
+            "<p>的多个关联必须聚合成一个</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 41,
+          "belong_page": 1,
+          "question_id": 36678,
+          "question_title": "<p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/a64a8b127ae39e4eb8080531c0be7eac58d27e.png\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36678",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>序列图（41）</p>",
+            "<p>状态图（41）</p>",
+            "<p>通信图（41）</p>",
+            "<p>活动图（41）</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 42,
+          "belong_page": 1,
+          "question_id": 36679,
+          "question_title": "<p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/65f4f5b77e65ff4c4a6818571b888d48e5052b.png\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36679",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>合并分叉</p>",
+            "<p>分支</p>",
+            "<p>合并汇合&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+            "<p>流</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 43,
+          "belong_page": 1,
+          "question_id": 40523,
+          "question_title": "<p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201805/b92e8e142a673ec1865922a627863258974766.png\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "40523",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>分支条件</p>", "<p>监护表达式</p>", "<p>动作名</p>", "<p>流名称</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 44,
+          "belong_page": 1,
+          "question_id": 36681,
+          "question_title": "<p><span style=\"font-family: 宋体;\">为图形用户界面（</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">GUI</span><span style=\"font-family: 宋体;\">）组件定义不同平台的并行类层次结构，适合采用（</span><span style=\"font-family: Times New Roman;\">44</span><span style=\"font-family: 宋体;\">）模式。</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36681",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>享元（Flyweight）</p>",
+            "<p>抽象工厂（Abstract&nbsp;Factory）</p>",
+            "<p>外观（Facade）</p>",
+            "<p>装饰器（Decorator）</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 45,
+          "belong_page": 1,
+          "question_id": 36682,
+          "question_title": "<p><span style=\"font-family: 宋体;\">（</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">45</span><span style=\"font-family: 宋体;\">）设计模式将一个请求封装为一个对象，从而使得可以用不同的请求对客户进行参数化，对请求排队或记录请求日志，以及支持可撤销的操作。</span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36682",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>命令（Command）</p>",
+            "<p>责任链（Chain&nbsp;of&nbsp;Responsibility）</p>",
+            "<p>观察者（Observer）</p>",
+            "<p>策略（Strategy）</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 46,
+          "belong_page": 1,
+          "question_id": 36683,
+          "question_title": "<p><span style=\"font-family: 宋体;\">（</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">46</span><span style=\"font-family: 宋体;\">）设计模式最适合用于发布</span><span style=\"font-family: Times New Roman;\">/</span><span style=\"font-family: 宋体;\">订阅消息模型，即当订阅者注册一个主题后，此主题有新消息到来时订阅者就会收到通知。</span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36683",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>适配器（Adapter）</p>",
+            "<p>通知（Notifier）</p>",
+            "<p>观察者（Observer）</p>",
+            "<p>状态（State）</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 47,
+          "belong_page": 1,
+          "question_id": 36684,
+          "question_title": "<p><span style=\"font-family: 宋体;\">因使用大量的对象而造成很大的存储开销时，适合采用（</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">47</span><span style=\"font-family: 宋体;\">）模式进行对象共享，以减少对象数量从而达到较少的内存占用并提升性能。</span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36684",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>组合（Composite）</p>",
+            "<p>享元（Flyweight）</p>",
+            "<p>迭代器（Iterator）</p>",
+            "<p>备忘（Memento）</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 48,
+          "belong_page": 1,
+          "question_id": 36685,
+          "question_title": "<p><span style=\"font-family: 宋体;\">移进</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">--</span><span style=\"font-family: 宋体;\">归约分析法是编译程序（或解释程序）对高级语言源程序进行语法分析的一种方法，属于（</span><span style=\"font-family: Times New Roman;\">48</span><span style=\"font-family: 宋体;\">）的语法分析方法。</span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36685",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>自顶向下（或自上而下）</p>",
+            "<p>自底向上（或自下而上）</p>",
+            "<p>自左向右</p>",
+            "<p>自右向左</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 49,
+          "belong_page": 1,
+          "question_id": 36686,
+          "question_title": "<p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/c3f0e4649765ed356f5949f6a5b1ae98340b00.png\"/></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36686",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>aabb</p>", "<p>abab</p>", "<p>baba</p>", "<p>abba</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 50,
+          "belong_page": 1,
+          "question_id": 36687,
+          "question_title": "<p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/653f764858274308d52900f1bd8627e156af6a.png\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36687",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>1</p>", "<p>6</p>", "<p>11</p>", "<p>12</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 51,
+          "belong_page": 1,
+          "question_id": 36688,
+          "question_title": "<p><span style=\"font-family: 宋体;\">数据的物理独立性和逻辑独立性分别是通过修改（</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">51</span><span style=\"font-family: 宋体;\">）来完成的。</span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36688",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>外模式与内模式之间的映像、模式与内模式之间的映像</p>",
+            "<p>外模式与内模式之间的映像、外模式与模式之间的映像</p>",
+            "<p>外模式与模式之间的映像、模式与内模式之间的映像</p>",
+            "<p>模式与内模式之间的映像、外模式与模式之间的映像</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 52,
+          "belong_page": 1,
+          "question_id": 36689,
+          "question_title": "<p><span style=\"font-family: 宋体;\">关系规范化在数据库设计的（</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">52</span><span style=\"font-family: 宋体;\">）阶段进行。</span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36689",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>需求分析</p>", "<p>概念设计</p>", "<p>逻辑设计</p>", "<p>物理设计</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 53,
+          "belong_page": 1,
+          "question_id": 36690,
+          "question_title": "<p>若给定的关系模式为R，U=(A,B,C)，F={AB→C,C→B}，则关系R（ ）</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36690",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>有2个候选关键字AC和BC，并且有3个主属性</p>",
+            "<p>有2个候选关键字AC和AB，并且有3个主属性</p>",
+            "<p>只有一个候选关键字AC，并且有1个非主属性和2个主属性</p>",
+            "<p>只有一个候选关键字AB，并且有1个非主属性和2个主属性</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 54,
+          "belong_page": 1,
+          "question_id": 36691,
+          "question_title": "<p><span style=\"font-family: 宋体;\">某公司数据库中的元件关系模式为</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">P</span><span style=\"font-family: 宋体;\">（元件号，元件名称，供应商，供应商所在地，库存量），函数依赖集</span><span style=\"font-family: Times New Roman;\">F</span><span style=\"font-family: 宋体;\">如下所示：</span><br/></p><p class=\"MsoNormal\" style=\"text-indent: 0pt; margin-left: 0pt; mso-para-margin-left: 0.0000gd; mso-char-indent-count: 0.0000;\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">&nbsp;F={<span style=\"font-family: 宋体;\">元件号→元件名称，（元件号，供应商）→库存量，供应商→供应商所在地</span><span style=\"font-family: Times New Roman;\">}</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">，</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">元件关系的主键为（</span>54<span style=\"font-family: 宋体;\">），该关系存在冗余以及插入异常和删除异常等问题。为了解决这一问题需要将元件关系分解（</span><span style=\"font-family: Times New Roman;\">55</span><span style=\"font-family: 宋体;\">），分解后的关系模式可以达到（</span><span style=\"font-family: Times New Roman;\">56</span><span style=\"font-family: 宋体;\">）。</span></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36691",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>元件号，元件名称</p>",
+            "<p>元件号，供应商</p>",
+            "<p>元件号，供应商所在地</p>",
+            "<p>供应商，供应商所在地</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 55,
+          "belong_page": 1,
+          "question_id": 36692,
+          "question_title": "<p><span style=\"font-family: 宋体;\">某公司数据库中的元件关系模式为</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">P</span><span style=\"font-family: 宋体;\">（元件号，元件名称，供应商，供应商所在地，库存量），函数依赖集</span><span style=\"font-family: Times New Roman;\">F</span><span style=\"font-family: 宋体;\">如下所示：</span><br/></p><p class=\"MsoNormal\" style=\"text-indent: 0pt; margin-left: 0pt; mso-para-margin-left: 0.0000gd; mso-char-indent-count: 0.0000;\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">&nbsp;F={<span style=\"font-family: 宋体;\">元件号→元件名称，（元件号，供应商）→库存量，供应商→供应商所在地</span><span style=\"font-family: Times New Roman;\">}</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">，</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">元件关系的主键为（</span>54<span style=\"font-family: 宋体;\">），该关系存在冗余以及插入异常和删除异常等问题。为了解决这一问题需要将元件关系分解（</span><span style=\"font-family: Times New Roman;\">55</span><span style=\"font-family: 宋体;\">），分解后的关系模式可以达到（</span><span style=\"font-family: Times New Roman;\">56</span><span style=\"font-family: 宋体;\">）。</span></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36692",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>元件1（元件号，元件名称，库存量）、元件2（供应商，供应商所在地）</p>",
+            "<p>元件1（元件号，元件名称）、元件2（供应商，供应商所在地，库存量）</p>",
+            "<p>元件1（元件号，元件名称）、元件2（元件号，供应商，库存量）、元件3（供应商，供应商所在地）</p>",
+            "<p>元件1（元件号，元件名称）、元件2（元件号，库存量）、元件3（供应商，供应商所在地）、元件4（供应商所在地，库存量）</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 56,
+          "belong_page": 1,
+          "question_id": 36693,
+          "question_title": "<p><span style=\"font-family: 宋体;\">某公司数据库中的元件关系模式为</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">P</span><span style=\"font-family: 宋体;\">（元件号，元件名称，供应商，供应商所在地，库存量），函数依赖集</span><span style=\"font-family: Times New Roman;\">F</span><span style=\"font-family: 宋体;\">如下所示：</span><br/></p><p class=\"MsoNormal\" style=\"text-indent: 0pt; margin-left: 0pt; mso-para-margin-left: 0.0000gd; mso-char-indent-count: 0.0000;\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">&nbsp;F={<span style=\"font-family: 宋体;\">元件号→元件名称，（元件号，供应商）→库存量，供应商→供应商所在地</span><span style=\"font-family: Times New Roman;\">}</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">，</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">元件关系的主键为（</span>54<span style=\"font-family: 宋体;\">），该关系存在冗余以及插入异常和删除异常等问题。为了解决这一问题需要将元件关系分解（</span><span style=\"font-family: Times New Roman;\">55</span><span style=\"font-family: 宋体;\">），分解后的关系模式可以达到（</span><span style=\"font-family: Times New Roman;\">56</span><span style=\"font-family: 宋体;\">）。</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36693",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>1NF&nbsp; &nbsp;(问题56)</p>",
+            "<p>2NF&nbsp;&nbsp;&nbsp;(问题56)</p>",
+            "<p>3NF&nbsp;&nbsp;(问题56)</p>",
+            "<p>4NF&nbsp;&nbsp;(问题56)</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 57,
+          "belong_page": 1,
+          "question_id": 36694,
+          "question_title": "<p><span style=\"font-family: 宋体;\">若元素以</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">a</span><span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">b</span><span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">c</span><span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">d</span><span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">e</span><span style=\"font-family: 宋体;\">的顺序进入一个初始为空的栈中，每个元素进栈、出栈各</span><span style=\"font-family: Times New Roman;\">1</span><span style=\"font-family: 宋体;\">次，要求出栈的第一个元素为</span><span style=\"font-family: Times New Roman;\">d</span><span style=\"font-family: 宋体;\">，则合法的出栈序列共有（</span><span style=\"font-family: Times New Roman;\">57</span><span style=\"font-family: 宋体;\">）种。</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36694",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>4</p>", "<p>5</p>", "<p>6</p>", "<p>24</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 58,
+          "belong_page": 1,
+          "question_id": 36695,
+          "question_title": "<p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/e23a637119375941ec1877976cd710bab50cda.png\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36695",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>23&nbsp;31&nbsp;17&nbsp;19&nbsp;11&nbsp;27&nbsp;13&nbsp;90&nbsp;61</p>",
+            "<p>23&nbsp;17&nbsp;19&nbsp;31&nbsp;27&nbsp;90&nbsp;61&nbsp;11&nbsp;13</p>",
+            "<p>23&nbsp;17&nbsp;27&nbsp;19&nbsp;31&nbsp;13&nbsp;11&nbsp;90&nbsp;61</p>",
+            "<p>23&nbsp;31&nbsp;90&nbsp;61&nbsp;27&nbsp;17&nbsp;19&nbsp;11&nbsp;13</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 59,
+          "belong_page": 1,
+          "question_id": 36696,
+          "question_title": "<p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/0869318069cb625d15f816fa76cc998a3817bc.png\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36696",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>A</p>", "<p>B</p>", "<p>C</p>", "<p>D</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 60,
+          "belong_page": 1,
+          "question_id": 36697,
+          "question_title": "<p><span style=\"font-family: 宋体;\">在</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">13</span><span style=\"font-family: 宋体;\">个元素构成的有序表</span><span style=\"font-family: Times New Roman;\">A[1..13]</span><span style=\"font-family: 宋体;\">中进行折半查找（或称为二分查找，向下取整）。那么以下叙述中，错误的是（</span><span style=\"font-family: Times New Roman;\">60</span><span style=\"font-family: 宋体;\">）。</span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36697",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>无论要查找哪个元素，都是先与A[7]进行比较</p>",
+            "<p>若要查找的元素等于A[9]，则分别需与A[7]、A[11]、A[9]进行比较</p>",
+            "<p>无论要查找的元素是否在A[]中，最多与表中的4个元素比较即可</p>",
+            "<p>若待查找的元素不在A[]中，最少需要与表中的3个元素进行比较</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 61,
+          "belong_page": 1,
+          "question_id": 36698,
+          "question_title": "<p><span style=\"font-family: 宋体;\">以下关于图的遍历的叙述中，正确的是（</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">61</span><span style=\"font-family: 宋体;\">）</span><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36698",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>图的遍历是从给定的源点出发对每一个顶点仅访问一次的过程</p>",
+            "<p>图的深度优先遍历方法不适用于无向图</p>",
+            "<p>使用队列对图进行广度优先遍历</p>",
+            "<p>图中有回路时则无法进行遍历</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 62,
+          "belong_page": 1,
+          "question_id": 36699,
+          "question_title": "<p>请作答（62）<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/659c4e4250e0e46c8e76631e66dca35b25f940.png\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36699",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>11</p>", "<p>14&nbsp;&nbsp;&nbsp;</p>", "<p>15&nbsp;</p>", "<p>16.67</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 63,
+          "belong_page": 1,
+          "question_id": 36700,
+          "question_title": "<p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/168980f72a578cd1c42074a7884e40978e3b8f.png\"/></p><p>作答63空<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/f86bcf519b3fd552897009321fac706d3e88f9.png\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36700",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>A</p>", "<p>B</p>", "<p>C</p>", "<p>D</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 64,
+          "belong_page": 1,
+          "question_id": 36701,
+          "question_title": "<p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/e6a595645322bb41e5a787cec98f626a15d344.png\"/><br/>作答64空<br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36701",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>11&nbsp;&nbsp;</p>", "<p>14&nbsp;</p>", "<p>15&nbsp;</p>", "<p>16.67</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 65,
+          "belong_page": 1,
+          "question_id": 36702,
+          "question_title": "<p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/c1818517810b7037af70742aef36694c6a62fb.png\"/></p><p>作答65空<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/45b510c635c9eab26314890884049adb8ddab9.png\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36702",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>A</p>", "<p>B</p>", "<p>C</p>", "<p>D</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 66,
+          "belong_page": 1,
+          "question_id": 36703,
+          "question_title": "<p><span style=\"font-family: 宋体;\">默认情况下，</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">FTP</span><span style=\"font-family: 宋体;\">服务器的控制端口为（回答此空&nbsp;</span><span style=\"font-family: Times New Roman;\">66</span><span style=\"font-family: 宋体;\">），上传文件时的端口为（</span><span style=\"font-family: Times New Roman;\">67</span><span style=\"font-family: 宋体;\">）。</span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36703",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>大于1024的端口</p>", "<p>20</p>", "<p>80</p>", "<p>21</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 67,
+          "belong_page": 1,
+          "question_id": 36704,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\">默认情况下，</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">FTP</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">服务器的控制端口为（请作答此空</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">），上传文件时的端口为（ </span><span style=\"font-family: 宋体; font-size: 10.5pt;\">）。</span><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36704",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>大于1024的端口</p>", "<p>20&nbsp;</p>", "<p>80&nbsp;</p>", "<p>21</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 68,
+          "belong_page": 1,
+          "question_id": 36705,
+          "question_title": "<p><span style=\"font-family: 宋体;\">使用</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">ping</span><span style=\"font-family: 宋体;\">命令可以进行网络检测，在进行一系列检测时，按照由近及远原则</span><span style=\"font-family: Times New Roman;\">,</span><span style=\"font-family: 宋体;\">首先执行的是（</span><span style=\"font-family: Times New Roman;\">68</span><span style=\"font-family: 宋体;\">）。</span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36705",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>ping默认网关</p>",
+            "<p>ping本地IP</p>",
+            "<p>ping127.0.0.1</p>",
+            "<p>ping远程主机</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 69,
+          "belong_page": 1,
+          "question_id": 36706,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\">某</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">PC</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">的</span><span style=\"font-family: Times New Roman; font-size: 10.5pt;\">Internet</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">协议属性参数如下图所示，默认网关的</span><span style=\"font-family: Times New Roman; font-size: 10.5pt;\">IP</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">地址是（</span><span style=\"font-family: Times New Roman; font-size: 10.5pt;\">69</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">）。</span><br/></p><p><span style=\"font-family: 宋体; font-size: 10.5pt;\"><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/826406031b9590e4f1e875a1ab5d625e0be5d2.png\"/></span></p><p class=\"MsoNormal\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36706",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>8.8.8.8</p>",
+            "<p>202.117.115.3</p>",
+            "<p>192.168.2.254</p>",
+            "<p>202.117.115.18</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 70,
+          "belong_page": 1,
+          "question_id": 36707,
+          "question_title": "<p><span style=\"font-family: 宋体;\">在下图的</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">SNMP</span><span style=\"font-family: 宋体;\">配置中，能够响应</span><span style=\"font-family: Times New Roman;\">Manager2</span><span style=\"font-family: 宋体;\">的</span><span style=\"font-family: Times New Roman;\">getRequest</span><span style=\"font-family: 宋体;\">请求的是（</span><span style=\"font-family: Times New Roman;\">70</span><span style=\"font-family: 宋体;\">）。</span></p><p><span style=\"font-family: 宋体;\"><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/527ce4d80c6fb631d2b5469e5c6a691fe92793.png\"/></span></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36707",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>Agent1</p>",
+            "<p>Agent2&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+            "<p>Agent3</p>",
+            "<p>Agent4</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 71,
+          "belong_page": 1,
+          "question_id": 36708,
+          "question_title": "<p><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; background-color: #FFFFFF;\">In the fields of physical security and information security, access control is the selective restriction of access to a place or other resource. The act of accessing may mean consuming, entering, or using. Permission to access a resource is called authorization </span><span style=\"font-family: 宋体;\">（授权）．</span><br/></p><p class=\"MsoNormal\" style=\"background: rgb(255, 255, 255); line-height: 25.5pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-fareast-font-family: 宋体;\">An access control mechanism <span style=\"font-family: 宋体;\">（</span><span style=\"font-family: Times New Roman;\">71</span><span style=\"font-family: 宋体;\">） </span><span style=\"font-family: Times New Roman;\">between a user (or a process executing on behalf of a user) and system resources, such as applications, operating systems, firewalls, routers, files, and databases. The system must first authenticate</span><span style=\"font-family: 宋体;\">（验证）</span><span style=\"font-family: Times New Roman;\">a user seeking access. Typically the authentication function determines whether the user is </span><span style=\"font-family: 宋体;\">（</span><span style=\"font-family: Times New Roman;\">72</span><span style=\"font-family: 宋体;\">） </span><span style=\"font-family: Times New Roman;\">to access the system at all. Then the access control function determines if the specific requested access by this user is permitted. A security administrator maintains an authorization database that specifies what type of access to which resources is allowed for this user. The access control function consults this database to determine whether to</span><span style=\"font-family: 宋体;\">（</span><span style=\"font-family: Times New Roman;\">73</span><span style=\"font-family: 宋体;\">）</span><span style=\"font-family: Times New Roman;\">access. An auditing function monitors and keeps a record of user accesses to system resources.</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-fareast-font-family: 宋体;\"></span></p><p class=\"MsoNormal\" style=\"background: rgb(255, 255, 255); line-height: 25.5pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-fareast-font-family: 宋体;\">In practice, a number of<span style=\"font-family: 宋体;\">（</span><span style=\"font-family: Times New Roman;\">74</span><span style=\"font-family: 宋体;\">）</span><span style=\"font-family: Times New Roman;\">may cooperatively share the access control function. All operating systems have at least a rudimentary</span><span style=\"font-family: 宋体;\">（基本的）</span><span style=\"font-family: Times New Roman;\">, and in many cases a quite robust, access control component. Add-on security packages can add to the</span><span style=\"font-family: 宋体;\">（</span><span style=\"font-family: Times New Roman;\">75</span><span style=\"font-family: 宋体;\">）</span><span style=\"font-family: Times New Roman;\">access control capabilities of the OS. Particular applications or utilities, such as a database management system, also incorporate access control functions. External devices, such as firewalls, can also provide access control services.</span></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36708",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>cooperates (问题71)</p>",
+            "<p>coordinates&nbsp; &nbsp;&nbsp;(问题71)</p>",
+            "<p>connects&nbsp;&nbsp;&nbsp;(问题71)</p>",
+            "<p>mediates&nbsp;&nbsp;(问题71)</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 72,
+          "belong_page": 1,
+          "question_id": 36709,
+          "question_title": "<p><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; background-color: #FFFFFF;\">In the fields of physical security and information security, access control is the selective restriction of access to a place or other resource. The act of accessing may mean consuming, entering, or using. Permission to access a resource is called authorization </span><span style=\"font-family: 宋体;\">（授权）．</span><br/></p><p class=\"MsoNormal\" style=\"background: rgb(255, 255, 255); line-height: 25.5pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-fareast-font-family: 宋体;\">An access control mechanism <span style=\"font-family: 宋体;\">（</span><span style=\"font-family: Times New Roman;\">71</span><span style=\"font-family: 宋体;\">） </span><span style=\"font-family: Times New Roman;\">between a user (or a process executing on behalf of a user) and system resources, such as applications, operating systems, firewalls, routers, files, and databases. The system must first authenticate</span><span style=\"font-family: 宋体;\">（验证）</span><span style=\"font-family: Times New Roman;\">a user seeking access. Typically the authentication function determines whether the user is </span><span style=\"font-family: 宋体;\">（</span><span style=\"font-family: Times New Roman;\">72</span><span style=\"font-family: 宋体;\">） </span><span style=\"font-family: Times New Roman;\">to access the system at all. Then the access control function determines if the specific requested access by this user is permitted. A security administrator maintains an authorization database that specifies what type of access to which resources is allowed for this user. The access control function consults this database to determine whether to</span><span style=\"font-family: 宋体;\">（</span><span style=\"font-family: Times New Roman;\">73</span><span style=\"font-family: 宋体;\">）</span><span style=\"font-family: Times New Roman;\">access. An auditing function monitors and keeps a record of user accesses to system resources.</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-fareast-font-family: 宋体;\"></span></p><p class=\"MsoNormal\" style=\"background: rgb(255, 255, 255); line-height: 25.5pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-fareast-font-family: 宋体;\">In practice, a number of<span style=\"font-family: 宋体;\">（</span><span style=\"font-family: Times New Roman;\">74</span><span style=\"font-family: 宋体;\">）</span><span style=\"font-family: Times New Roman;\">may cooperatively share the access control function. All operating systems have at least a rudimentary</span><span style=\"font-family: 宋体;\">（基本的）</span><span style=\"font-family: Times New Roman;\">, and in many cases a quite robust, access control component. Add-on security packages can add to the</span><span style=\"font-family: 宋体;\">（</span><span style=\"font-family: Times New Roman;\">75</span><span style=\"font-family: 宋体;\">）</span><span style=\"font-family: Times New Roman;\">access control capabilities of the OS. Particular applications or utilities, such as a database management system, also incorporate access control functions. External devices, such as firewalls, can also provide access control services.</span></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36709",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>denied&nbsp; &nbsp; （问题72）</p>",
+            "<p>permitted&nbsp;&nbsp;（问题72）</p>",
+            "<p>prohibited&nbsp;&nbsp;&nbsp;&nbsp;（问题72）</p>",
+            "<p>rejected&nbsp;（问题72）</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 73,
+          "belong_page": 1,
+          "question_id": 36710,
+          "question_title": "<p><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; background-color: #FFFFFF;\">In the fields of physical security and information security, access control is the selective restriction of access to a place or other resource. The act of accessing may mean consuming, entering, or using. Permission to access a resource is called authorization </span><span style=\"font-family: 宋体;\">（授权）．</span><br/></p><p class=\"MsoNormal\" style=\"background: rgb(255, 255, 255); line-height: 25.5pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-fareast-font-family: 宋体;\">An access control mechanism <span style=\"font-family: 宋体;\">（</span><span style=\"font-family: Times New Roman;\">71</span><span style=\"font-family: 宋体;\">） </span><span style=\"font-family: Times New Roman;\">between a user (or a process executing on behalf of a user) and system resources, such as applications, operating systems, firewalls, routers, files, and databases. The system must first authenticate</span><span style=\"font-family: 宋体;\">（验证）</span><span style=\"font-family: Times New Roman;\">a user seeking access. Typically the authentication function determines whether the user is </span><span style=\"font-family: 宋体;\">（</span><span style=\"font-family: Times New Roman;\">72</span><span style=\"font-family: 宋体;\">） </span><span style=\"font-family: Times New Roman;\">to access the system at all. Then the access control function determines if the specific requested access by this user is permitted. A security administrator maintains an authorization database that specifies what type of access to which resources is allowed for this user. The access control function consults this database to determine whether to</span><span style=\"font-family: 宋体;\">（请作答此空</span><span style=\"font-family: 宋体;\">）</span><span style=\"font-family: Times New Roman;\">access. An auditing function monitors and keeps a record of user accesses to system resources.</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-fareast-font-family: 宋体;\"></span></p><p class=\"MsoNormal\" style=\"background: rgb(255, 255, 255); line-height: 25.5pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-fareast-font-family: 宋体;\">In practice, a number of<span style=\"font-family: 宋体;\">（</span><span style=\"font-family: Times New Roman;\">74</span><span style=\"font-family: 宋体;\">）</span><span style=\"font-family: Times New Roman;\">may cooperatively share the access control function. All operating systems have at least a rudimentary</span><span style=\"font-family: 宋体;\">（基本的）</span><span style=\"font-family: Times New Roman;\">, and in many cases a quite robust, access control component. Add-on security packages can add to the</span><span style=\"font-family: 宋体;\">（</span><span style=\"font-family: Times New Roman;\">75</span><span style=\"font-family: 宋体;\">）</span><span style=\"font-family: Times New Roman;\">access control capabilities of the OS. Particular applications or utilities, such as a database management system, also incorporate access control functions. External devices, such as firewalls, can also provide access control services.</span></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36710",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>open&nbsp;&nbsp;&nbsp;</p>",
+            "<p>monitor&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+            "<p>grant&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+            "<p>seek</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 74,
+          "belong_page": 1,
+          "question_id": 36711,
+          "question_title": "<p><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt;\">●</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">&nbsp;</span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt;\">In the fields of physical security and information security, access control is the selective restriction of access to a place or other resource. The act of accessing may mean consuming, entering, or using. Permission to access a resource is called authorization <span style=\"font-family: 宋体;\">（授权）．</span></span><br/></p><p class=\"MsoNormal\" style=\"background: rgb(255, 255, 255); line-height: 25.5pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-fareast-font-family: 宋体;\">An access control mechanism <span style=\"font-family: 宋体;\">（</span><span style=\"font-family: Times New Roman;\">71</span><span style=\"font-family: 宋体;\">） </span><span style=\"font-family: Times New Roman;\">between a user (or a process executing on behalf of a user) and system resources, such as applications, operating systems, firewalls, routers, files, and databases. The system must first authenticate</span><span style=\"font-family: 宋体;\">（验证）</span><span style=\"font-family: Times New Roman;\">a user seeking access. Typically the authentication function determines whether the user is </span><span style=\"font-family: 宋体;\">（</span><span style=\"font-family: Times New Roman;\">72</span><span style=\"font-family: 宋体;\">） </span><span style=\"font-family: Times New Roman;\">to access the system at all. Then the access control function determines if the specific requested access by this user is permitted. A security administrator maintains an authorization database that specifies what type of access to which resources is allowed for this user. The access control function consults this database to determine whether to</span><span style=\"font-family: 宋体;\">（</span><span style=\"font-family: Times New Roman;\">73</span><span style=\"font-family: 宋体;\">）</span><span style=\"font-family: Times New Roman;\">access. An auditing function monitors and keeps a record of user accesses to system resources.</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-fareast-font-family: 宋体;\"></span></p><p class=\"MsoNormal\" style=\"background: rgb(255, 255, 255); line-height: 25.5pt;\"><span style=\"font-size: 10.5pt;\"><span face=\"Times New Roman\">In practice, a number of</span><span style=\"font-family: 宋体;\">（</span><span face=\"Times New Roman\">作答此空</span><span style=\"font-family: 宋体;\">）</span><span style=\"font-family: &quot;Times New Roman&quot;;\">may cooperatively share the access control function. All operating systems have at least a rudimentary</span><span style=\"font-family: 宋体;\">（基本的）</span><span style=\"font-family: &quot;Times New Roman&quot;;\">, and in many cases a quite robust, access control component. Add-on security packages can add to the</span><span style=\"font-family: 宋体;\">（</span><span style=\"font-family: &quot;Times New Roman&quot;;\">75</span><span style=\"font-family: 宋体;\">）</span><span style=\"font-family: &quot;Times New Roman&quot;;\">access control capabilities of the OS. Particular applications or utilities, such as a database management system, also incorporate access control functions. External devices, such as firewalls, can also provide access control services.</span></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36711",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>components&nbsp;</p>",
+            "<p>users&nbsp;&nbsp;&nbsp;</p>",
+            "<p>mechanisms</p>",
+            "<p>algorithms&nbsp;</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 75,
+          "belong_page": 1,
+          "question_id": 36712,
+          "question_title": "<p><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; background-color: #FFFFFF;\">In the fields of physical security and information security, access control is the selective restriction of access to a place or other resource. The act of accessing may mean consuming, entering, or using. Permission to access a resource is called authorization </span><span style=\"font-family: 宋体;\">（授权）．</span><br/></p><p class=\"MsoNormal\" style=\"background: rgb(255, 255, 255); line-height: 25.5pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-fareast-font-family: 宋体;\">An access control mechanism <span style=\"font-family: 宋体;\">（</span><span style=\"font-family: Times New Roman;\">71</span><span style=\"font-family: 宋体;\">） </span><span style=\"font-family: Times New Roman;\">between a user (or a process executing on behalf of a user) and system resources, such as applications, operating systems, firewalls, routers, files, and databases. The system must first authenticate</span><span style=\"font-family: 宋体;\">（验证）</span><span style=\"font-family: Times New Roman;\">a user seeking access. Typically the authentication function determines whether the user is </span><span style=\"font-family: 宋体;\">（</span><span style=\"font-family: Times New Roman;\">72</span><span style=\"font-family: 宋体;\">） </span><span style=\"font-family: Times New Roman;\">to access the system at all. Then the access control function determines if the specific requested access by this user is permitted. A security administrator maintains an authorization database that specifies what type of access to which resources is allowed for this user. The access control function consults this database to determine whether to</span><span style=\"font-family: 宋体;\">（</span><span style=\"font-family: Times New Roman;\">73</span><span style=\"font-family: 宋体;\">）</span><span style=\"font-family: Times New Roman;\">access. An auditing function monitors and keeps a record of user accesses to system resources.</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-fareast-font-family: 宋体;\"></span></p><p class=\"MsoNormal\" style=\"background: rgb(255, 255, 255); line-height: 25.5pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-fareast-font-family: 宋体;\">In practice, a number of<span style=\"font-family: 宋体;\">（</span><span style=\"font-family: Times New Roman;\">74</span><span style=\"font-family: 宋体;\">）</span><span style=\"font-family: Times New Roman;\">may cooperatively share the access control function. All operating systems have at least a rudimentary</span><span style=\"font-family: 宋体;\">（基本的）</span><span style=\"font-family: Times New Roman;\">, and in many cases a quite robust, access control component. Add-on security packages can add to the</span><span style=\"font-family: 宋体;\">（</span><span style=\"font-family: Times New Roman;\">75</span><span style=\"font-family: 宋体;\">）</span><span style=\"font-family: Times New Roman;\">access control capabilities of the OS. Particular applications or utilities, such as a database management system, also incorporate access control functions. External devices, such as firewalls, can also provide access control services.</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-fareast-font-family: 宋体;\"></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36712",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>remote&nbsp;<br/></p>",
+            "<p>native</p>",
+            "<p>controlled&nbsp;&nbsp;</p>",
+            "<p>automated</p>"
+          ],
+          "sort_son": "0"
+        }
+      ],
+      "summary": {
+        "radio": {
+          "total_question": 75,
+          "total_score": 0
+        },
+        "multiple": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "judge": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "fill": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "program": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "qanda": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "cloze": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "budingxiang": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "material": {
+          "total_question": 0,
+          "total_score": 0
+        }
+      },
+      "examine": {
+        "id": 2548,
+        "title": "2016年5月软件设计师选择题",
+        "len_time": {
+          "time": 0
+        },
+        "total_question": 75,
+        "total_score": 75,
+        "submit_limit_num": "0",
+        "machine_type": "1"
+      },
+      "answer_activity_start_time": 1585828800,
+      "checkProcess": 1,
+      "process": {
+        "is_delete": false
+      },
+      "train_id": 0
+    },
+    "pagination": {
+      "curPage": 1,
+      "pageSize": 1200,
+      "total": 75,
+      "hasNextPage": false
+    },
+    "totalOrder": [
+      {
+        "index": 1,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36638
+      },
+      {
+        "index": 2,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36639
+      },
+      {
+        "index": 3,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36640
+      },
+      {
+        "index": 4,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36641
+      },
+      {
+        "index": 5,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36642
+      },
+      {
+        "index": 6,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36643
+      },
+      {
+        "index": 7,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36644
+      },
+      {
+        "index": 8,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36645
+      },
+      {
+        "index": 9,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36646
+      },
+      {
+        "index": 10,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36647
+      },
+      {
+        "index": 11,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36648
+      },
+      {
+        "index": 12,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36649
+      },
+      {
+        "index": 13,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36650
+      },
+      {
+        "index": 14,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36651
+      },
+      {
+        "index": 15,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36652
+      },
+      {
+        "index": 16,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36653
+      },
+      {
+        "index": 17,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36654
+      },
+      {
+        "index": 18,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36655
+      },
+      {
+        "index": 19,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36656
+      },
+      {
+        "index": 20,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36657
+      },
+      {
+        "index": 21,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36658
+      },
+      {
+        "index": 22,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36659
+      },
+      {
+        "index": 23,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36660
+      },
+      {
+        "index": 24,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36661
+      },
+      {
+        "index": 25,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 40505
+      },
+      {
+        "index": 26,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36663
+      },
+      {
+        "index": 27,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 40507
+      },
+      {
+        "index": 28,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36665
+      },
+      {
+        "index": 29,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 40509
+      },
+      {
+        "index": 30,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36667
+      },
+      {
+        "index": 31,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36668
+      },
+      {
+        "index": 32,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36669
+      },
+      {
+        "index": 33,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36670
+      },
+      {
+        "index": 34,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36671
+      },
+      {
+        "index": 35,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36672
+      },
+      {
+        "index": 36,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36673
+      },
+      {
+        "index": 37,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36674
+      },
+      {
+        "index": 38,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36675
+      },
+      {
+        "index": 39,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36676
+      },
+      {
+        "index": 40,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36677
+      },
+      {
+        "index": 41,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36678
+      },
+      {
+        "index": 42,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36679
+      },
+      {
+        "index": 43,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 40523
+      },
+      {
+        "index": 44,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36681
+      },
+      {
+        "index": 45,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36682
+      },
+      {
+        "index": 46,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36683
+      },
+      {
+        "index": 47,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36684
+      },
+      {
+        "index": 48,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36685
+      },
+      {
+        "index": 49,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36686
+      },
+      {
+        "index": 50,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36687
+      },
+      {
+        "index": 51,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36688
+      },
+      {
+        "index": 52,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36689
+      },
+      {
+        "index": 53,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36690
+      },
+      {
+        "index": 54,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36691
+      },
+      {
+        "index": 55,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36692
+      },
+      {
+        "index": 56,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36693
+      },
+      {
+        "index": 57,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36694
+      },
+      {
+        "index": 58,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36695
+      },
+      {
+        "index": 59,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36696
+      },
+      {
+        "index": 60,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36697
+      },
+      {
+        "index": 61,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36698
+      },
+      {
+        "index": 62,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36699
+      },
+      {
+        "index": 63,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36700
+      },
+      {
+        "index": 64,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36701
+      },
+      {
+        "index": 65,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36702
+      },
+      {
+        "index": 66,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36703
+      },
+      {
+        "index": 67,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36704
+      },
+      {
+        "index": 68,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36705
+      },
+      {
+        "index": 69,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36706
+      },
+      {
+        "index": 70,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36707
+      },
+      {
+        "index": 71,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36708
+      },
+      {
+        "index": 72,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36709
+      },
+      {
+        "index": 73,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36710
+      },
+      {
+        "index": 74,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36711
+      },
+      {
+        "index": 75,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36712
+      }
+    ]
+  }
+}

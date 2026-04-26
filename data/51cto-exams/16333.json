@@ -1,0 +1,442 @@
+{
+  "msg": "成功",
+  "status": "0",
+  "data": {
+    "data": {
+      "question": [
+        {
+          "index": 1,
+          "belong_page": 1,
+          "question_id": 363505,
+          "question_title": "<p>[问题1] (4分)</p><p>&nbsp;&nbsp;使用说明中的词语，给出图1-1中实体E1~E4的名称。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>试题一(15分)</p><p>&nbsp;&nbsp;阅读下列说明和图，回答问题1至问题4，将解答填入答题纸的对应栏内。</p><p>[说明]</p><p>&nbsp;&nbsp;某公司欲开发一款外卖订餐系统，集多家外卖平台和商户为一体，为用户提供在线浏览餐品、订餐和配送等服务。该系统的主要功能是：</p><p>1.入驻管理。用户注册：商户申请入驻，设置按时间段接单数量阈值等。系统存储商户/用户信息。</p><p>2.餐品管理。商户对餐品的基本信息和优惠信息进行发布、修改、删除。系统存储相关信息。</p><p>3.订餐。用户浏览商户餐单，选择餐品及数量后提交订餐请求。系统存储订餐订单。</p><p>4.订单处理。收到订餐请求后，向外卖平台请求配送。外卖平台接到请求后发布配送单，由平台骑手接单，外卖平台根据是否有骑手接单返回接单状态。若外卖平台接单成功，系统给支付系统发送支付请求，接收支付状态。支付成功，更新订单状态为已接单，向商户发送订餐请求并由商户打印订单，给用户发送订单状态；若支付失败，更新订单状态为下单失败，向外卖平台请求取消配送，向用户发送下单失败。若系统接到外卖平台返回接单失败或超时未返回接单状态，则更新订单状态为下单失败，向用户发送下单失败。</p><p>5.配送。商户备餐后，由骑手取餐配送给用户。送达后由用户扫描骑手出示的订单上的配送码后确认送达，订单状态更改为已送达，并发送给商户。</p><p>6.订单评价。用户可以对订单餐品、骑手配送服务进行评价，推送给对应的商户、所在外卖平台，商户和外卖平台对用户的评价进行回复。系统存储评价。</p><p>现采用结构化方法对外卖订餐系统进行分析与设计，获得如图1-1所示的上下文数据流图和图1-2所示的0层数据流图。<br/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230425/1682353982867172.jpg\" title=\"1682353982867172.jpg\" alt=\"1111.jpg\" width=\"549\" height=\"359\"/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230524/1684898458747869.png\" title=\"1684898458747869.png\" alt=\"image.png\" width=\"678\" height=\"465\"/></p>",
+          "score": 4,
+          "new_parent_id": "363504",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["<p>E1:商户</p><p>E2:外卖平台</p><p>E3:用户</p><p>E4:支付系统</p>"],
+          "option": null,
+          "sort_son": "1"
+        },
+        {
+          "index": 2,
+          "belong_page": 1,
+          "question_id": 363506,
+          "question_title": "<p>[问题2]&nbsp;(4分)</p><p>&nbsp;&nbsp;使用说明中的词语，给出图1-2中的数据存储D1-D4 的名称。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>试题一(15分)</p><p>&nbsp;&nbsp;阅读下列说明和图，回答问题1至问题4，将解答填入答题纸的对应栏内。</p><p>[说明]</p><p>&nbsp;&nbsp;某公司欲开发一款外卖订餐系统，集多家外卖平台和商户为一体，为用户提供在线浏览餐品、订餐和配送等服务。该系统的主要功能是：</p><p>1.入驻管理。用户注册：商户申请入驻，设置按时间段接单数量阈值等。系统存储商户/用户信息。</p><p>2.餐品管理。商户对餐品的基本信息和优惠信息进行发布、修改、删除。系统存储相关信息。</p><p>3.订餐。用户浏览商户餐单，选择餐品及数量后提交订餐请求。系统存储订餐订单。</p><p>4.订单处理。收到订餐请求后，向外卖平台请求配送。外卖平台接到请求后发布配送单，由平台骑手接单，外卖平台根据是否有骑手接单返回接单状态。若外卖平台接单成功，系统给支付系统发送支付请求，接收支付状态。支付成功，更新订单状态为已接单，向商户发送订餐请求并由商户打印订单，给用户发送订单状态；若支付失败，更新订单状态为下单失败，向外卖平台请求取消配送，向用户发送下单失败。若系统接到外卖平台返回接单失败或超时未返回接单状态，则更新订单状态为下单失败，向用户发送下单失败。</p><p>5.配送。商户备餐后，由骑手取餐配送给用户。送达后由用户扫描骑手出示的订单上的配送码后确认送达，订单状态更改为已送达，并发送给商户。</p><p>6.订单评价。用户可以对订单餐品、骑手配送服务进行评价，推送给对应的商户、所在外卖平台，商户和外卖平台对用户的评价进行回复。系统存储评价。</p><p>现采用结构化方法对外卖订餐系统进行分析与设计，获得如图1-1所示的上下文数据流图和图1-2所示的0层数据流图。<br/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230425/1682353982867172.jpg\" title=\"1682353982867172.jpg\" alt=\"1111.jpg\" width=\"549\" height=\"359\"/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230524/1684898458747869.png\" title=\"1684898458747869.png\" alt=\"image.png\" width=\"678\" height=\"465\"/></p>",
+          "score": 4,
+          "new_parent_id": "363504",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>D1:商户/用户信息</p><p>D2:订餐订单信息</p><p>D3:餐品的基本信息与优惠信息</p><p>D4:评价信息</p>"
+          ],
+          "option": null,
+          "sort_son": "2"
+        },
+        {
+          "index": 3,
+          "belong_page": 1,
+          "question_id": 363507,
+          "question_title": "[问题3] (4分)<p>&nbsp;根据说明和图中术语，补充图1-2中缺失的数据流及其起点和终点</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>试题一(15分)</p><p>&nbsp;&nbsp;阅读下列说明和图，回答问题1至问题4，将解答填入答题纸的对应栏内。</p><p>[说明]</p><p>&nbsp;&nbsp;某公司欲开发一款外卖订餐系统，集多家外卖平台和商户为一体，为用户提供在线浏览餐品、订餐和配送等服务。该系统的主要功能是：</p><p>1.入驻管理。用户注册：商户申请入驻，设置按时间段接单数量阈值等。系统存储商户/用户信息。</p><p>2.餐品管理。商户对餐品的基本信息和优惠信息进行发布、修改、删除。系统存储相关信息。</p><p>3.订餐。用户浏览商户餐单，选择餐品及数量后提交订餐请求。系统存储订餐订单。</p><p>4.订单处理。收到订餐请求后，向外卖平台请求配送。外卖平台接到请求后发布配送单，由平台骑手接单，外卖平台根据是否有骑手接单返回接单状态。若外卖平台接单成功，系统给支付系统发送支付请求，接收支付状态。支付成功，更新订单状态为已接单，向商户发送订餐请求并由商户打印订单，给用户发送订单状态；若支付失败，更新订单状态为下单失败，向外卖平台请求取消配送，向用户发送下单失败。若系统接到外卖平台返回接单失败或超时未返回接单状态，则更新订单状态为下单失败，向用户发送下单失败。</p><p>5.配送。商户备餐后，由骑手取餐配送给用户。送达后由用户扫描骑手出示的订单上的配送码后确认送达，订单状态更改为已送达，并发送给商户。</p><p>6.订单评价。用户可以对订单餐品、骑手配送服务进行评价，推送给对应的商户、所在外卖平台，商户和外卖平台对用户的评价进行回复。系统存储评价。</p><p>现采用结构化方法对外卖订餐系统进行分析与设计，获得如图1-1所示的上下文数据流图和图1-2所示的0层数据流图。<br/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230425/1682353982867172.jpg\" title=\"1682353982867172.jpg\" alt=\"1111.jpg\" width=\"549\" height=\"359\"/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230524/1684898458747869.png\" title=\"1684898458747869.png\" alt=\"image.png\" width=\"678\" height=\"465\"/></p>",
+          "score": 4,
+          "new_parent_id": "363504",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>P3到E3的“餐单”；</p><p>P3到P4的“订单请求”；</p><p>P4到D2的“订单状态”；</p><p>P5到E3的“配送码”</p>"
+          ],
+          "option": null,
+          "sort_son": "3"
+        },
+        {
+          "index": 4,
+          "belong_page": 1,
+          "question_id": 363508,
+          "question_title": "<p>[问题4]（3分）根据说明，采用结构化语言对“订单处理”的加工逻辑进行描述。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>试题一(15分)</p><p>&nbsp;&nbsp;阅读下列说明和图，回答问题1至问题4，将解答填入答题纸的对应栏内。</p><p>[说明]</p><p>&nbsp;&nbsp;某公司欲开发一款外卖订餐系统，集多家外卖平台和商户为一体，为用户提供在线浏览餐品、订餐和配送等服务。该系统的主要功能是：</p><p>1.入驻管理。用户注册：商户申请入驻，设置按时间段接单数量阈值等。系统存储商户/用户信息。</p><p>2.餐品管理。商户对餐品的基本信息和优惠信息进行发布、修改、删除。系统存储相关信息。</p><p>3.订餐。用户浏览商户餐单，选择餐品及数量后提交订餐请求。系统存储订餐订单。</p><p>4.订单处理。收到订餐请求后，向外卖平台请求配送。外卖平台接到请求后发布配送单，由平台骑手接单，外卖平台根据是否有骑手接单返回接单状态。若外卖平台接单成功，系统给支付系统发送支付请求，接收支付状态。支付成功，更新订单状态为已接单，向商户发送订餐请求并由商户打印订单，给用户发送订单状态；若支付失败，更新订单状态为下单失败，向外卖平台请求取消配送，向用户发送下单失败。若系统接到外卖平台返回接单失败或超时未返回接单状态，则更新订单状态为下单失败，向用户发送下单失败。</p><p>5.配送。商户备餐后，由骑手取餐配送给用户。送达后由用户扫描骑手出示的订单上的配送码后确认送达，订单状态更改为已送达，并发送给商户。</p><p>6.订单评价。用户可以对订单餐品、骑手配送服务进行评价，推送给对应的商户、所在外卖平台，商户和外卖平台对用户的评价进行回复。系统存储评价。</p><p>现采用结构化方法对外卖订餐系统进行分析与设计，获得如图1-1所示的上下文数据流图和图1-2所示的0层数据流图。<br/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230425/1682353982867172.jpg\" title=\"1682353982867172.jpg\" alt=\"1111.jpg\" width=\"549\" height=\"359\"/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230524/1684898458747869.png\" title=\"1684898458747869.png\" alt=\"image.png\" width=\"678\" height=\"465\"/></p>",
+          "score": 3,
+          "new_parent_id": "363504",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>收到订餐请求后，向外卖平台请求配送;</p><p>外卖平台接到请求后发布配送单，由平台骑手接单;</p><p>外卖平台根据是否有骑手接单返回接单状态;</p><p>IF(外卖平台接单成功)THEN{</p><p>系统给支付系统发送支付请求，接收支付状态;</p><p>IF(支付成功)THEN{</p><p>更新订单状态为已接单;</p><p>向商户发送订餐请求并由商户打印订单;</p><p>给用户发送订单状态;}</p><p>ELSE{</p><p>更新订单状态为下单失败;</p><p>向外卖平台请求取消配送;</p><p>向用户发送下单失败;</p><p>}ENDIF</p><p>}ELSE IF(系统接到外卖平台返回接单失败或超时未返回接单状态)THEN{</p><p>更新订单状态为下单失败;</p><p>向用户发送下单失败;</p><p>}ENDIF</p>"
+          ],
+          "option": null,
+          "sort_son": "4"
+        },
+        {
+          "index": 5,
+          "belong_page": 1,
+          "question_id": 363511,
+          "question_title": "<p>[问题1]&nbsp;(4分)</p><p>&nbsp;&nbsp;根据问题描述，补充图2-1的实体联系图（不增加新的实体）。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>试题二(20分)</p><p>&nbsp;&nbsp;按照下列图表，填写答题纸的对应栏内。</p><p>【说明】</p><p>&nbsp;&nbsp;为了提高接种工作，提高效率，并为了抗击疫情提供疫苗接种数据支撑，需要开发一个信息系统，下述需求完成该系统的数据库设计。</p><p>（1）记录疫苗供应商的信息，包括供应商名称、地址和一个电话。</p><p>（2）记录接种医院的信息，包括医院名称、地址和一个电话。</p><p>（3）记录接种者个人信息，包括姓名、身份证号和一个电话。</p><p>（4）记录接种者疫苗接种信息，包括接种医院信息，被接种者信息，疫苗供应商名称和接种日期，为了提高免疫力，接种者可能需要进行多次疫苗接种，（每天最多接种一次，每次都可以在全市任意一家医院进行疫苗接种）。</p><p>【概念模型设计】</p><p>阶段的信息，设计的实体联系图（不完整）如图2-1所示。</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230425/1682354213715102.jpg\" title=\"1682354213715102.jpg\" alt=\"1111.jpg\" width=\"476\" height=\"493\"/><p>【逻辑结构设计】</p><p>根据概念模型设计阶段完成的实体联系图，得出如下关系模式（不完整）</p><p>供应商（供应商名称、地址、电话）</p><p>医院（医院名称、地址、电话）</p><p>供货（供应商名称，（a），供货内容）</p><p>被接种者（姓名、身份证号、电话）</p><p>接种（接种者身份证号，（b），医院名称、供应商名称）</p>",
+          "score": 4,
+          "new_parent_id": "363510",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>【问题1】（4分）</p><img style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230425/1682354257581658.jpg\" title=\"1682354257581658.jpg\" alt=\"1111.jpg\" width=\"512\" height=\"389\"/>"
+          ],
+          "option": null,
+          "sort_son": "1"
+        },
+        {
+          "index": 6,
+          "belong_page": 1,
+          "question_id": 363512,
+          "question_title": "<p>[问题2] (4分）</p><p>&nbsp;&nbsp;补充逻辑结构设计结果中的（a）（b）两处空缺，并标注主键和外健完整性约束。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>试题二(20分)</p><p>&nbsp;&nbsp;按照下列图表，填写答题纸的对应栏内。</p><p>【说明】</p><p>&nbsp;&nbsp;为了提高接种工作，提高效率，并为了抗击疫情提供疫苗接种数据支撑，需要开发一个信息系统，下述需求完成该系统的数据库设计。</p><p>（1）记录疫苗供应商的信息，包括供应商名称、地址和一个电话。</p><p>（2）记录接种医院的信息，包括医院名称、地址和一个电话。</p><p>（3）记录接种者个人信息，包括姓名、身份证号和一个电话。</p><p>（4）记录接种者疫苗接种信息，包括接种医院信息，被接种者信息，疫苗供应商名称和接种日期，为了提高免疫力，接种者可能需要进行多次疫苗接种，（每天最多接种一次，每次都可以在全市任意一家医院进行疫苗接种）。</p><p>【概念模型设计】</p><p>阶段的信息，设计的实体联系图（不完整）如图2-1所示。</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230425/1682354213715102.jpg\" title=\"1682354213715102.jpg\" alt=\"1111.jpg\" width=\"476\" height=\"493\"/><p>【逻辑结构设计】</p><p>根据概念模型设计阶段完成的实体联系图，得出如下关系模式（不完整）</p><p>供应商（供应商名称、地址、电话）</p><p>医院（医院名称、地址、电话）</p><p>供货（供应商名称，（a），供货内容）</p><p>被接种者（姓名、身份证号、电话）</p><p>接种（接种者身份证号，（b），医院名称、供应商名称）</p>",
+          "score": 4,
+          "new_parent_id": "363510",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>[问题2](4分）</p><p>（a）医院名称</p><p>（b）接种日期</p><p>供货关系，主键：(供货商名称，医院名称)，外键：供货商名称，医院名称；</p><p>接种关系，主键：（接种者身份证号，接种日期），外键：接种者身份证号，供应商名称，医院名称。</p>"
+          ],
+          "option": null,
+          "sort_son": "2"
+        },
+        {
+          "index": 7,
+          "belong_page": 1,
+          "question_id": 363513,
+          "question_title": "<p>[问题3] (7分)</p><p>若医院还兼有核酸检测的业务，检测时可能需要进行多次核酸检测（每天最多检测一次），但每次都可以在全市任意一家医院进行检测。</p><p>请在图2-1中增加“被检测者”实体及相应的属性。医院与被检测者之间的“检测”联系及必要的属性，并给出新增加的关系模式。</p><p>“被检测者”实体包括姓名。身份证号、地址和一个电话。“检测”联系需要包括检测日期和检测结果等。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>试题二(20分)</p><p>&nbsp;&nbsp;按照下列图表，填写答题纸的对应栏内。</p><p>【说明】</p><p>&nbsp;&nbsp;为了提高接种工作，提高效率，并为了抗击疫情提供疫苗接种数据支撑，需要开发一个信息系统，下述需求完成该系统的数据库设计。</p><p>（1）记录疫苗供应商的信息，包括供应商名称、地址和一个电话。</p><p>（2）记录接种医院的信息，包括医院名称、地址和一个电话。</p><p>（3）记录接种者个人信息，包括姓名、身份证号和一个电话。</p><p>（4）记录接种者疫苗接种信息，包括接种医院信息，被接种者信息，疫苗供应商名称和接种日期，为了提高免疫力，接种者可能需要进行多次疫苗接种，（每天最多接种一次，每次都可以在全市任意一家医院进行疫苗接种）。</p><p>【概念模型设计】</p><p>阶段的信息，设计的实体联系图（不完整）如图2-1所示。</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230425/1682354213715102.jpg\" title=\"1682354213715102.jpg\" alt=\"1111.jpg\" width=\"476\" height=\"493\"/><p>【逻辑结构设计】</p><p>根据概念模型设计阶段完成的实体联系图，得出如下关系模式（不完整）</p><p>供应商（供应商名称、地址、电话）</p><p>医院（医院名称、地址、电话）</p><p>供货（供应商名称，（a），供货内容）</p><p>被接种者（姓名、身份证号、电话）</p><p>接种（接种者身份证号，（b），医院名称、供应商名称）</p>",
+          "score": 7,
+          "new_parent_id": "363510",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p><img style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230425/1682354330675547.jpg\" title=\"1682354330675547.jpg\" alt=\"1111.jpg\" width=\"469\" height=\"341\"/><br/>新增关系模式</p><p>被检测者（身份证号，姓名，地址，电话）</p><p>检测（被检测者身份证号，检测日期，医院名称，检测结果）</p>"
+          ],
+          "option": null,
+          "sort_son": "3"
+        },
+        {
+          "index": 8,
+          "belong_page": 1,
+          "question_id": 363516,
+          "question_title": "<p>[问题1]（6分）</p><p>根据说明中的描述，给出图3-1中U1～U6所对应的用例名。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>试题三(20分)</p><p>阅读下列说明和图，回答问题1至问题3，将解答填入答题纸的对应栏内。</p><p>【说明】</p><p>某公司的人事部门拥有一个地址簿（AddressBookSystem），管理系统ddressBookSystem），<br/>于管理公司所有员工的地址记录（PersonAddress）。员工的地址记录包括：姓名、住址、城市、省份、邮政编码以及联系电话等信息。</p><p>管理员可以完成对地址簿中地址记录的管理操作，包括：</p><p>（1）维护地址记录。根据公司的人员变动情况，对地址记录进行添加、修改、删除等操作;</p><p>（2）排序。按照员工姓氏的字典顺序或邮政编码对地址簿的所有记录进行排序。</p><p>（3）打印地址记录。以邮件标签的格式打印一个地址簿中的所有记录。为便于管理，管理员在系统中为公司的不同部门建立单独的地址簿。系统会记录管理员对每个地址簿的修改操作，包括：</p><p>（1）创建地址簿。新建个地址簿并保存。</p><p>（2）打开地址簿。打开一个已有的地址簿。</p><p>（3）修改地址簿。对打开的地址簿进行修改并保存。</p><p>系统将提供一个GUI（图形用户界面）实现对地址簿的各种操作。</p><p>现采用面向对象方法分析并设计该地址簿管理系统，得到如图3-1所示的用例图和图3-2所示的类图。<br/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230425/1682354496899162.jpg\" title=\"1682354496899162.jpg\" alt=\"1111.jpg\"/></p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230425/1682354491686476.jpg\" title=\"1682354491686476.jpg\" alt=\"2222.jpg\"/></p><br/>",
+          "score": 6,
+          "new_parent_id": "363515",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>U1：按字典排序；</p><p>U2：按邮政编码排序</p><p>U3：创建地址簿</p><p>U4：修改地址簿</p><p>U5：打开地址簿</p><p>U6：保存</p><p>（U1与U2可互换）</p>"
+          ],
+          "option": null,
+          "sort_son": "1"
+        },
+        {
+          "index": 9,
+          "belong_page": 1,
+          "question_id": 363517,
+          "question_title": "<p>[问题2]（5分）</p><p>根据说明中的描述，给出图3-2中类AddressBook的主要属性和方法以及类Pernoddress的主要属性（可以使用说明中的文字）。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>试题三(20分)</p><p>阅读下列说明和图，回答问题1至问题3，将解答填入答题纸的对应栏内。</p><p>【说明】</p><p>某公司的人事部门拥有一个地址簿（AddressBookSystem），管理系统ddressBookSystem），<br/>于管理公司所有员工的地址记录（PersonAddress）。员工的地址记录包括：姓名、住址、城市、省份、邮政编码以及联系电话等信息。</p><p>管理员可以完成对地址簿中地址记录的管理操作，包括：</p><p>（1）维护地址记录。根据公司的人员变动情况，对地址记录进行添加、修改、删除等操作;</p><p>（2）排序。按照员工姓氏的字典顺序或邮政编码对地址簿的所有记录进行排序。</p><p>（3）打印地址记录。以邮件标签的格式打印一个地址簿中的所有记录。为便于管理，管理员在系统中为公司的不同部门建立单独的地址簿。系统会记录管理员对每个地址簿的修改操作，包括：</p><p>（1）创建地址簿。新建个地址簿并保存。</p><p>（2）打开地址簿。打开一个已有的地址簿。</p><p>（3）修改地址簿。对打开的地址簿进行修改并保存。</p><p>系统将提供一个GUI（图形用户界面）实现对地址簿的各种操作。</p><p>现采用面向对象方法分析并设计该地址簿管理系统，得到如图3-1所示的用例图和图3-2所示的类图。<br/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230425/1682354496899162.jpg\" title=\"1682354496899162.jpg\" alt=\"1111.jpg\"/></p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230425/1682354491686476.jpg\" title=\"1682354491686476.jpg\" alt=\"2222.jpg\"/></p><br/>",
+          "score": 5,
+          "new_parent_id": "363515",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>AddressBook,属性：部门编号，姓名、住址、城市、省份、邮政编码以及联系电话；</p><p>AddressBook方法：添加、创建、打开、修改、删除，保存等</p><p>PersonAddress属性：姓名、住址、城市、省份、邮政编码、联系电话。</p>"
+          ],
+          "option": null,
+          "sort_son": "2"
+        },
+        {
+          "index": 10,
+          "belong_page": 1,
+          "question_id": 363518,
+          "question_title": "<p>[问题3]（4分）</p><p>根据说明中的描述以及图3-1所示的用例图，请说明《include》关系和《extend》关系的含义是什么？</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>试题三(20分)</p><p>阅读下列说明和图，回答问题1至问题3，将解答填入答题纸的对应栏内。</p><p>【说明】</p><p>某公司的人事部门拥有一个地址簿（AddressBookSystem），管理系统ddressBookSystem），<br/>于管理公司所有员工的地址记录（PersonAddress）。员工的地址记录包括：姓名、住址、城市、省份、邮政编码以及联系电话等信息。</p><p>管理员可以完成对地址簿中地址记录的管理操作，包括：</p><p>（1）维护地址记录。根据公司的人员变动情况，对地址记录进行添加、修改、删除等操作;</p><p>（2）排序。按照员工姓氏的字典顺序或邮政编码对地址簿的所有记录进行排序。</p><p>（3）打印地址记录。以邮件标签的格式打印一个地址簿中的所有记录。为便于管理，管理员在系统中为公司的不同部门建立单独的地址簿。系统会记录管理员对每个地址簿的修改操作，包括：</p><p>（1）创建地址簿。新建个地址簿并保存。</p><p>（2）打开地址簿。打开一个已有的地址簿。</p><p>（3）修改地址簿。对打开的地址簿进行修改并保存。</p><p>系统将提供一个GUI（图形用户界面）实现对地址簿的各种操作。</p><p>现采用面向对象方法分析并设计该地址簿管理系统，得到如图3-1所示的用例图和图3-2所示的类图。<br/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230425/1682354496899162.jpg\" title=\"1682354496899162.jpg\" alt=\"1111.jpg\"/></p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230425/1682354491686476.jpg\" title=\"1682354491686476.jpg\" alt=\"2222.jpg\"/></p><br/>",
+          "score": 4,
+          "new_parent_id": "363515",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>extend表示的是扩展关系。描述为：如果一个用例明显地混合了两种或两种以上的不同场景，即根据情况可能会发生多种分支，则可以将这个用例分为一个基本用例和一个或多个扩展用例，关系图示指向为扩展用例指向基本用例。</p><p>include表示的是包含关系。描述为：当可以从两个或两个以上用例中提取公共行为的时候，应该使用包含关系来表示它们。其中这个提取出来的公共用例称之为抽象用例，而把原始用例称为基本用例和扩展用例。</p>"
+          ],
+          "option": null,
+          "sort_son": "3"
+        },
+        {
+          "index": 11,
+          "belong_page": 1,
+          "question_id": 363521,
+          "question_title": "<p>[问题1]（8分）</p><p>根据以上说明和C代码，填充C代码中的空（1）～（4）。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>试题四（15分）</p><p>阅读下列说明和C代码，回答问题1至问题3，将解答写在答题纸的对应栏内。</p><p>【说明】</p><p>&nbsp;</p><p>某工程计算中经常要完成多个矩阵相乘（链乘）的计算任务，对矩阵相乘进行以下说明。</p><p>（1）两个矩阵相乘要求第一个矩阵的列数等于第二个矩阵的行数，计算量主要由进行乘法运算的次数决定，假设采用标准的矩阵相乘算法，计算Amxn*Bnxp需要m*n*p次行乘法运算的次数决定、乘法运算，即时间复杂度为O（m*n*p）。</p><p>（2）矩阵相乘满足结合律，多个矩阵相乘时不同的计算顺序会产生不同的计算量。以矩阵A15×100，A2100*8，A38x50三个矩阵相乘为例，若按（A1*A2）*A3计算，则需要进行5*100*8+5*8*50=6000次乘法运算，若按A1*（A2*A3）计算，则需要进行100*8*50+5*10</p><p>0*50=65000次乘法运算。</p><p>矩阵链乘问题可描述为：给定n个矩阵，对较大的n，可能的计算顺序数量非常庞大，用蛮力法确定计算顺序是不实际的。经过对问题进行分析，发现矩阵链乘问题具有最优子结构，即若A1*A2**An的一个最优计算顺序从第k个矩阵处断开，即分为A1*A2*…*Ak和Ak+1*Ak+2*...*An两个子问题，则该最优解应该包含A1*A2*…*Ak的一个最优计算顺序和Ak+1*Ak+2*...*An的一个最优计算顺序。据此构造递归式，</p><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230425/1682354702427588.jpg\" title=\"1682354702427588.jpg\" alt=\"1111.jpg\"/><p>其中，cost[i][j]表示Ai+1*Ai+2*...Aj+1的最优计算的计算代价。最终需要求解cost[0][n-1]。</p><p>【C代码】</p><p>算法实现采用自底向上的计算过程。首先计算两个矩阵相乘的计算量，然后依次计算3个矩阵、4个矩阵、…、n个矩阵相乘的最小计算量及最优计算顺序。下面是该算法的语言实现。</p><p>（1） 主要变量说明</p><p>n：矩阵数</p><p>seq[]：矩阵维数序列</p><p>cost[i][j]：二维数组，长度为n*n，其中元素cost[i][j]表示Ai+1*Ai+2**Aj+1的最优的计算代价。</p><p>trace[][]:二维数组，长度为n*n，其中元素trace[i][j]表示Ai+1*Ai+2**Aj+1的最优计算顺序对应的划分位置，即k。</p><p>（2）函数cmm</p><p>#define N100</p><p>int cost[N[N];</p><p>int trace[N][N];</p><p>int cmm(int n,int seq[]){</p><p>int tempCost;</p><p>int tempTrace;</p><p>int i,j,k,p;</p><p>int temp;</p><p>for( i=0;i&lt;n;i++){</p><p>cost[i][i] = 0;</p><p>}</p><p>for(p=1;p&lt;n;p++){</p><p>for(i=0; i&lt;n-p;i++){</p><p>（1）;</p><p>tempCost = -1;</p><p>for(k = i;（2）;k++){</p><p>temp=（3）;</p><p>if(tempCost==-1 || tempCost&gt;temp){</p><p>tempCost = temp;</p><p>tempTrace=k;</p><p>}</p><p>}</p><p>cost[i][j] = tempCost;</p><p>（4）;</p><p>}</p><p>}</p><p>return cost[0][n-1];</p><p>}</p><br/>",
+          "score": 8,
+          "new_parent_id": "363520",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>（1） j=i+p</p><p>（2） k&lt;j</p><p>（3） cost[i][k]+cost[k+1][j]+seq[i]*seq[k+1]*seq[j+1]</p><p>（4） trace[i][j] = tempTrace</p>"
+          ],
+          "option": null,
+          "sort_son": "1"
+        },
+        {
+          "index": 12,
+          "belong_page": 1,
+          "question_id": 363522,
+          "question_title": "<p>[问题2]（4分）</p><p>根据以上说明和C代码，该问题采用了（5）算法设计策略，时间复杂度为（6）（用O符号表示）。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>试题四（15分）</p><p>阅读下列说明和C代码，回答问题1至问题3，将解答写在答题纸的对应栏内。</p><p>【说明】</p><p>&nbsp;</p><p>某工程计算中经常要完成多个矩阵相乘（链乘）的计算任务，对矩阵相乘进行以下说明。</p><p>（1）两个矩阵相乘要求第一个矩阵的列数等于第二个矩阵的行数，计算量主要由进行乘法运算的次数决定，假设采用标准的矩阵相乘算法，计算Amxn*Bnxp需要m*n*p次行乘法运算的次数决定、乘法运算，即时间复杂度为O（m*n*p）。</p><p>（2）矩阵相乘满足结合律，多个矩阵相乘时不同的计算顺序会产生不同的计算量。以矩阵A15×100，A2100*8，A38x50三个矩阵相乘为例，若按（A1*A2）*A3计算，则需要进行5*100*8+5*8*50=6000次乘法运算，若按A1*（A2*A3）计算，则需要进行100*8*50+5*10</p><p>0*50=65000次乘法运算。</p><p>矩阵链乘问题可描述为：给定n个矩阵，对较大的n，可能的计算顺序数量非常庞大，用蛮力法确定计算顺序是不实际的。经过对问题进行分析，发现矩阵链乘问题具有最优子结构，即若A1*A2**An的一个最优计算顺序从第k个矩阵处断开，即分为A1*A2*…*Ak和Ak+1*Ak+2*...*An两个子问题，则该最优解应该包含A1*A2*…*Ak的一个最优计算顺序和Ak+1*Ak+2*...*An的一个最优计算顺序。据此构造递归式，</p><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230425/1682354702427588.jpg\" title=\"1682354702427588.jpg\" alt=\"1111.jpg\"/><p>其中，cost[i][j]表示Ai+1*Ai+2*...Aj+1的最优计算的计算代价。最终需要求解cost[0][n-1]。</p><p>【C代码】</p><p>算法实现采用自底向上的计算过程。首先计算两个矩阵相乘的计算量，然后依次计算3个矩阵、4个矩阵、…、n个矩阵相乘的最小计算量及最优计算顺序。下面是该算法的语言实现。</p><p>（1） 主要变量说明</p><p>n：矩阵数</p><p>seq[]：矩阵维数序列</p><p>cost[i][j]：二维数组，长度为n*n，其中元素cost[i][j]表示Ai+1*Ai+2**Aj+1的最优的计算代价。</p><p>trace[][]:二维数组，长度为n*n，其中元素trace[i][j]表示Ai+1*Ai+2**Aj+1的最优计算顺序对应的划分位置，即k。</p><p>（2）函数cmm</p><p>#define N100</p><p>int cost[N[N];</p><p>int trace[N][N];</p><p>int cmm(int n,int seq[]){</p><p>int tempCost;</p><p>int tempTrace;</p><p>int i,j,k,p;</p><p>int temp;</p><p>for( i=0;i&lt;n;i++){</p><p>cost[i][i] = 0;</p><p>}</p><p>for(p=1;p&lt;n;p++){</p><p>for(i=0; i&lt;n-p;i++){</p><p>（1）;</p><p>tempCost = -1;</p><p>for(k = i;（2）;k++){</p><p>temp=（3）;</p><p>if(tempCost==-1 || tempCost&gt;temp){</p><p>tempCost = temp;</p><p>tempTrace=k;</p><p>}</p><p>}</p><p>cost[i][j] = tempCost;</p><p>（4）;</p><p>}</p><p>}</p><p>return cost[0][n-1];</p><p>}</p><br/>",
+          "score": 4,
+          "new_parent_id": "363520",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["<p>问题2：<br/>（5）动态规划<br/>（6）O（n^3）</p><p><br/></p>"],
+          "option": null,
+          "sort_son": "2"
+        },
+        {
+          "index": 13,
+          "belong_page": 1,
+          "question_id": 363523,
+          "question_title": "<p>[问题3]（3分）</p><p>考虑实例n=4，各个矩阵的维数为A1为15*5，A2为5*10，A3为10*20，A4为20*25，即维度序列为15，5，10，20和25。则根据上述C代码得到的一个最优计算顺序为（7）（用加括号方式表示计算顺序），所需要的乘法运算次数为 （8）。</p><p><br/></p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>试题四（15分）</p><p>阅读下列说明和C代码，回答问题1至问题3，将解答写在答题纸的对应栏内。</p><p>【说明】</p><p>&nbsp;</p><p>某工程计算中经常要完成多个矩阵相乘（链乘）的计算任务，对矩阵相乘进行以下说明。</p><p>（1）两个矩阵相乘要求第一个矩阵的列数等于第二个矩阵的行数，计算量主要由进行乘法运算的次数决定，假设采用标准的矩阵相乘算法，计算Amxn*Bnxp需要m*n*p次行乘法运算的次数决定、乘法运算，即时间复杂度为O（m*n*p）。</p><p>（2）矩阵相乘满足结合律，多个矩阵相乘时不同的计算顺序会产生不同的计算量。以矩阵A15×100，A2100*8，A38x50三个矩阵相乘为例，若按（A1*A2）*A3计算，则需要进行5*100*8+5*8*50=6000次乘法运算，若按A1*（A2*A3）计算，则需要进行100*8*50+5*10</p><p>0*50=65000次乘法运算。</p><p>矩阵链乘问题可描述为：给定n个矩阵，对较大的n，可能的计算顺序数量非常庞大，用蛮力法确定计算顺序是不实际的。经过对问题进行分析，发现矩阵链乘问题具有最优子结构，即若A1*A2**An的一个最优计算顺序从第k个矩阵处断开，即分为A1*A2*…*Ak和Ak+1*Ak+2*...*An两个子问题，则该最优解应该包含A1*A2*…*Ak的一个最优计算顺序和Ak+1*Ak+2*...*An的一个最优计算顺序。据此构造递归式，</p><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230425/1682354702427588.jpg\" title=\"1682354702427588.jpg\" alt=\"1111.jpg\"/><p>其中，cost[i][j]表示Ai+1*Ai+2*...Aj+1的最优计算的计算代价。最终需要求解cost[0][n-1]。</p><p>【C代码】</p><p>算法实现采用自底向上的计算过程。首先计算两个矩阵相乘的计算量，然后依次计算3个矩阵、4个矩阵、…、n个矩阵相乘的最小计算量及最优计算顺序。下面是该算法的语言实现。</p><p>（1） 主要变量说明</p><p>n：矩阵数</p><p>seq[]：矩阵维数序列</p><p>cost[i][j]：二维数组，长度为n*n，其中元素cost[i][j]表示Ai+1*Ai+2**Aj+1的最优的计算代价。</p><p>trace[][]:二维数组，长度为n*n，其中元素trace[i][j]表示Ai+1*Ai+2**Aj+1的最优计算顺序对应的划分位置，即k。</p><p>（2）函数cmm</p><p>#define N100</p><p>int cost[N[N];</p><p>int trace[N][N];</p><p>int cmm(int n,int seq[]){</p><p>int tempCost;</p><p>int tempTrace;</p><p>int i,j,k,p;</p><p>int temp;</p><p>for( i=0;i&lt;n;i++){</p><p>cost[i][i] = 0;</p><p>}</p><p>for(p=1;p&lt;n;p++){</p><p>for(i=0; i&lt;n-p;i++){</p><p>（1）;</p><p>tempCost = -1;</p><p>for(k = i;（2）;k++){</p><p>temp=（3）;</p><p>if(tempCost==-1 || tempCost&gt;temp){</p><p>tempCost = temp;</p><p>tempTrace=k;</p><p>}</p><p>}</p><p>cost[i][j] = tempCost;</p><p>（4）;</p><p>}</p><p>}</p><p>return cost[0][n-1];</p><p>}</p><br/>",
+          "score": 3,
+          "new_parent_id": "363520",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["<p>【问题3】 (3分)</p><p>（7）A1*((A2*A3)*A4)</p><p>（8）5375</p>"],
+          "option": null,
+          "sort_son": "3"
+        },
+        {
+          "index": 14,
+          "belong_page": 1,
+          "question_id": 363524,
+          "question_title": "<p>试题五（15分）</p><p>阅读下列说明和C++代码。将应填入（n）处的字句写在答题纸的对应栏内。</p><p>【说明】</p><p>在软件系统中，通常都会给用户提供取消、不确定或者错误操作的选择，允许将系统恢复到原先的状态。现使用备忘录（Memento）模式实现该要求，得到如图 5-1 所示的类图。Memcnto 包含了要被恢复的状态。Originator创建并在 Memento 中存储状态。Caretaker 负责从 Memento 中恢复状态。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230425/1682355106904243.jpg\" title=\"1682355106904243.jpg\" alt=\"1111.jpg\" width=\"605\" height=\"396\"/></p><p><br/></p><p>【C++代码】</p><p>#include &lt;iostream&gt;</p><p>#include &lt;string&gt;</p><p>#inchude &lt;vector&gt;</p><p>using namespace std;</p><p>class&nbsp;Memento {</p><p>private:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;string state;</p><p>public:</p><p>Memento（string&nbsp;state）{&nbsp;&nbsp;this-&gt;state = state; &nbsp;&nbsp;&nbsp;}</p><p>String getState( ) { &nbsp;&nbsp;return state; &nbsp;}</p><p>public:</p><p>void setState(string state)(this&gt;sate-state;string getStateO{retumn state;}Memento saveStateToMemento0){</p><p>return &nbsp;&nbsp;(1）&nbsp;&nbsp;</p><p>void getStateFromMemento(Memento Memento){</p><p>state=&nbsp;&nbsp;(2) &nbsp;</p><p>class CareTaker{</p><p>private :</p><p>vector&lt;Memento&gt; mementoList;</p><p>pubilc:</p><p>void &nbsp;&nbsp;(3) &nbsp;&nbsp;{ mementoL ist.push back(state)</p><p>&nbsp;&nbsp;&nbsp;(4) &nbsp;;return mementoList(index];}</p><p>int &nbsp;mian(){</p><p>Originator* originator= new Originator();</p><p>CareTaker*careTaker= new CareTaker();</p><p>originator-&gt;setState(&quot;State #1&quot;);</p><p>originator-&gt;setState(&quot;State #2&quot;);</p><p>careTaker-&gt;add (&nbsp;&nbsp;(5) &nbsp;);</p><p>originator-&gt;setState(&quot;State #3&quot;);</p><p>careTaker-&gt;add(&nbsp;&nbsp;(6) &nbsp;);</p><p>originator-&gt;setState(&quot;State #4&quot;);</p><p>&nbsp;</p><p>cout &lt;&lt;&quot;Current State:&quot;&lt;&lt;&quot;+&quot;&lt;&lt;originator-&gt;getState()&lt;&lt;endl;</p><p>originator-&gt;getStateFromMemento(careTaker-&gt;get(0);</p><p>cout&lt;&lt;&quot;First saved State:&quot;&lt;&lt;&quot;&quot;&lt;&lt;originator&gt;getState()&lt;&lt;endl;</p><p>originator-&gt;getStateFromMemento(careTaker-&gt;get(1);</p><p>cout&lt;&lt;&quot;second save State &quot;&lt;&lt;&quot;+&quot;&lt;&lt; originator&gt;getState()&lt;&lt;endl;return 0;}</p><p><br/></p>",
+          "question_type": 5,
+          "answer_type": 5,
+          "material_text": "",
+          "score": 15,
+          "new_parent_id": "363524",
+          "show_type_name": "问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>【参考答案】：</p><p>（1）new Memento(state)</p><p>（2）Memento-&gt;getState()</p><p>（3）virtual void add(Memento * state)</p><p>（4）Memento get(int index)</p><p>（5）originator-&gt;saveStateToMemento()</p><p>（6）originator-&gt;saveStateToMemento()</p>"
+          ],
+          "option": null,
+          "sort_son": "0"
+        },
+        {
+          "index": 15,
+          "belong_page": 1,
+          "question_id": 363525,
+          "question_title": "<p><br/></p><p>试题六（15分）</p><p>阅读下列说明和Java代码，将应填入（n）处的字句写在答题纸的对应栏内。</p><p>【说明】</p><p>在软件系统中，通常都会给用户提供取消、不确定或者错误操作的选择，允许将系统恢复到原先的状态。现使用备忘录（Memento）模式实现该要求，得到如图6-1所示的类图。Memento 包含了要被恢复的状态。Originator创建并在 Memento 中存储状态。Caretaker 负责从 Memento 中恢复状态。</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230425/1682355197848133.jpg\" title=\"1682355197848133.jpg\" alt=\"1111.jpg\" width=\"536\" height=\"502\"/><p>【Java 代码】</p><p>import java.util.*；</p><p>class Memento {</p><p>private String state；</p><p>public Memento（String state）{</p><p>this.state=state;</p><p>}</p><p>public String getState（）{</p><p>return state；</p><p>}</p><p>}</p><p>class Originator{</p><p>private String state；</p><p>public void setState（String state）{</p><p>this.state=state；</p><p>}</p><p>public String getState（）{</p><p>retum state；</p><p>}</p><p>public Memento saveStateToMemento( ){</p><p>return（1）&nbsp;;</p><p>}</p><p>}</p><p>public void getStateFromMemento（Memento memento）{</p><p>state =&nbsp;（2）&nbsp;;</p><p>}</p><p>class CareTaker｛</p><p>private ListmementoList= new ArrayList();</p><p>public&nbsp;（3）&nbsp;{</p><p>mementoList.add(state);</p><p>}</p><p>public&nbsp;（4）&nbsp;{</p><p>return memensoList.get(index);</p><p>}</p><p>}</p><p>class MementoPaneDems{</p><p>public static void main(String[] args) {</p><p>Originator originator =new Originator();</p><p>CareTaker careTaker=new careTaker();</p><p>originator.setState(&quot;State #1&quot;);</p><p>originator.setState(&quot;State #2&quot;);</p><p>careTaker.add(&nbsp;（5） );</p><p>originator.setState(&quot;State #3&quot;);</p><p>careTaker.add(&nbsp;（6） );</p><p>originator.setState(&quot;State #4&quot;);</p><p>System.out.println(&quot;CurrentState&quot;+originator.getState());</p><p>originator.getStateFromMemento(careTaker.get(0));</p><p>System.out.println(&quot;Frist saved State&quot;+originator.getState());</p><p>originator.getStateFromMemento(careTaker.get(1));</p><p>System.out.println(&quot;Second saved State&quot;+originator.getState());</p><p>}</p><p>}</p><p><br/></p><br/>",
+          "question_type": 5,
+          "answer_type": 5,
+          "material_text": "",
+          "score": 15,
+          "new_parent_id": "363525",
+          "show_type_name": "问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>（1）new Memento(state)<br/></p><p>（2）memento.getState()</p><p>（3）void add(Memento state)</p><p>（4）Memento get(int index)</p><p>（5）originator.saveStateToMemento()</p><p>（6）originator.saveStateToMemento()</p>"
+          ],
+          "option": null,
+          "sort_son": "0"
+        }
+      ],
+      "summary": {
+        "radio": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "multiple": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "judge": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "fill": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "program": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "qanda": {
+          "total_question": 15,
+          "total_score": 0
+        },
+        "cloze": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "budingxiang": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "material": {
+          "total_question": 0,
+          "total_score": 0
+        }
+      },
+      "examine": {
+        "id": 16333,
+        "title": "2022年5月软件设计师案例分析",
+        "len_time": {
+          "time": 0
+        },
+        "total_question": 15,
+        "total_score": 90,
+        "submit_limit_num": "0",
+        "machine_type": "2"
+      },
+      "answer_activity_start_time": 1585828800,
+      "checkProcess": 1,
+      "process": {
+        "is_delete": false
+      },
+      "train_id": 0
+    },
+    "pagination": {
+      "curPage": 1,
+      "pageSize": 1200,
+      "total": 15,
+      "hasNextPage": false
+    },
+    "totalOrder": [
+      {
+        "index": 1,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 363505
+      },
+      {
+        "index": 2,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 363506
+      },
+      {
+        "index": 3,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 363507
+      },
+      {
+        "index": 4,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 363508
+      },
+      {
+        "index": 5,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 363511
+      },
+      {
+        "index": 6,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 363512
+      },
+      {
+        "index": 7,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 363513
+      },
+      {
+        "index": 8,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 363516
+      },
+      {
+        "index": 9,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 363517
+      },
+      {
+        "index": 10,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 363518
+      },
+      {
+        "index": 11,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 363521
+      },
+      {
+        "index": 12,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 363522
+      },
+      {
+        "index": 13,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 363523
+      },
+      {
+        "index": 14,
+        "question_type": 5,
+        "belong_page": 1,
+        "question_id": 363524
+      },
+      {
+        "index": 15,
+        "question_type": 5,
+        "belong_page": 1,
+        "question_id": 363525
+      }
+    ]
+  }
+}

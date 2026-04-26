@@ -1,0 +1,2028 @@
+{
+  "msg": "成功",
+  "status": "0",
+  "data": {
+    "data": {
+      "question": [
+        {
+          "index": 1,
+          "belong_page": 1,
+          "question_id": 354748,
+          "question_title": "<p>以下关于RISC（精简指令集计算机）特点的叙述中，错误的是&nbsp;（1）&nbsp;。</p><p><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354748",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>对存储器操作进行限制，使控制简单化</p>",
+            "<p>指令种类多，指令功能强</p>",
+            "<p>设置大量通用寄存器</p><p><br/></p>",
+            "<p>选取使用频率较高的一些指令，提高执行速度</p><p><br/></p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 2,
+          "belong_page": 1,
+          "question_id": 354749,
+          "question_title": "<p>CPU（中央处理单元）的基本组成部件不包括（2）</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354749",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>算术逻辑运算单元</p>",
+            "<p>系统总线</p>",
+            "<p>控制单元</p>",
+            "<p>寄存器组</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 3,
+          "belong_page": 1,
+          "question_id": 354750,
+          "question_title": "<p>某种部件用在2000台计算机系统中，运行工作1000小时后。其中有4台计算机的这种部件失效，则该部件的千小时可靠度R为_（3）</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354750",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>0.990</p>", "<p>0.992</p>", "<p>0.996</p>", "<p>0.998</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 4,
+          "belong_page": 1,
+          "question_id": 354751,
+          "question_title": "<p>【51CTO学堂-学员回忆版】●以下存储器中，（4）使用电容存储信息且需要周期性地进行刷新。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354751",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>DRAM</p>", "<p>EPROM</p>", "<p>SRAM</p>", "<p>EEPROM</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 5,
+          "belong_page": 1,
+          "question_id": 354752,
+          "question_title": "<p>●对于长度相同但格式不同的两种浮点数，假设前者阶码长、尾数短，后者阶码短。尾数长。其他规定都相同，则二者可表示数值的范围和精度情况为__（5）</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354752",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>二者可表示的数的范围和精度相同</p>",
+            "<p>前者所表示的数的范围更大且精度更高</p>",
+            "<p>前者所表示的数的范围更大但精度更低</p>",
+            "<p>前者所表示的数的范围更小但精度更高</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 6,
+          "belong_page": 1,
+          "question_id": 354958,
+          "question_title": "<p>&nbsp;计算机系统中采用补码表示有符号的数值，(6)</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354958",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>可以保持加法和减法运算过程与手工运算方式一致</p>",
+            "<p>可以提高运算过程和结果的精准程度</p>",
+            "<p>可以提高加法和减法运算的速度</p>",
+            "<p>可以将减法运算转化为加法运算从而简化运算器的设计</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 7,
+          "belong_page": 1,
+          "question_id": 354753,
+          "question_title": "<p>下列认证方式安全性较低的是（7）</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354753",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>生物认证</p>", "<p>多因子认证</p>", "<p>口令认证</p>", "<p>U盾认证</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 8,
+          "belong_page": 1,
+          "question_id": 354983,
+          "question_title": "<p>X.509数字证书标准推荐使用的密码算法是（1），而国密SM2数字证书采用的公钥密码算法是（2）</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354982",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>RSA</p>", "<p>DES</p>", "<p>AES</p>", "<p>ECC</p>"],
+          "sort_son": "1"
+        },
+        {
+          "index": 9,
+          "belong_page": 1,
+          "question_id": 354984,
+          "question_title": "<p>X.509数字证书标准推荐使用的密码算法是（1），而国密SM2数字证书采用的公钥密码算法是（2）</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354982",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>RSA</p>", "<p>DES</p>", "<p>AES</p>", "<p>ECC</p>"],
+          "sort_son": "2"
+        },
+        {
+          "index": 10,
+          "belong_page": 1,
+          "question_id": 354756,
+          "question_title": "<p>某单位网站首页被恶意篡改，应部署（10）设备阻止惩意攻击。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354756",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>数据库审计</p>",
+            "<p>包过滤防火墙</p>",
+            "<p>Web应用防火墙</p>",
+            "<p>入侵检测</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 11,
+          "belong_page": 1,
+          "question_id": 354757,
+          "question_title": "<p>使用漏洞扫描系统对信息系统和服务器进行定期扫描可以_（11）</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354757",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>发现高危风险和安全漏洞</p>",
+            "<p>修复高危风险和安全漏洞</p>",
+            "<p>获取系统受攻击的日志信息</p>",
+            "<p>关闭非必要的网络端口和服务</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 12,
+          "belong_page": 1,
+          "question_id": 354758,
+          "question_title": "<p>以下关于某委托开发软件的著作权归属的叙述中。正确的是（12）</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354758",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>该软件的著作权归属仅依据委托人与受托人在书面合同中的约定束确定</p>",
+            "<p>无论是否有合同约定，该软件的著作权都由委托人和受托人共同享有</p>",
+            "<p>若无书面合同或合同中未明确约定，则该软件的著作权由受托人享有</p>",
+            "<p>若无书面合同或合同中未明确约定，则该软件的著作权由委托人享有</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 13,
+          "belong_page": 1,
+          "question_id": 354759,
+          "question_title": "<p>《计算机软件保护条例》第八条第一款第八项规定的软件著作权中的翻译权是指将原软件由_（13）的权利。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354759",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>源程序语言转换成目标程序语言</p>",
+            "<p>一种程序设计语言转换成另一种程序设计语言</p>",
+            "<p>一种汇编语言转换成一种自然语言</p>",
+            "<p>一种自然语言文字转换成另一种自然语言文字</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 14,
+          "belong_page": 1,
+          "question_id": 354760,
+          "question_title": "<p>M 公司将其开发的某软件产品注册商标为S，为确保公司在市场竞争中占据优势地位，M公司对员工进行了保密约束，此情形下，该公司不享有（14）</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354760",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>软件著作权</p>", "<p>专利权</p>", "<p>商业秘密权</p>", "<p>商标权</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 15,
+          "belong_page": 1,
+          "question_id": 354761,
+          "question_title": "<p>某零件厂商的信息系统中，一个基本加工根据客户类型、订单金额、客户信用度等信息的不同采取不同的行为，此时最适宜采用（15）来描述该加工规格说明。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354761",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>自然语言</p>", "<p>流程图</p>", "<p>判断表</p>", "<p>某程序设计语言</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 16,
+          "belong_page": 1,
+          "question_id": 354762,
+          "question_title": "<p>优化模块结构时，（16）不是适当的处理方法。</p><p><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354762",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>使模块功能完整</p><p><br/></p>",
+            "<p>消除重复功能，改善软件结构</p><p><br/></p>",
+            "<p>只根据模块功能确定规模大小</p><p><br/></p>",
+            "<p>避免或减少模块之间的病态连接</p><p><br/></p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 17,
+          "belong_page": 1,
+          "question_id": 354764,
+          "question_title": "<p><br/></p><p>下图是一个软件项目的活动图，其中顶点表示项目里程碑，连接顶点的边表示包含的活动，边上的数字表示完成该活动所需要的天数。则关键路径长度为_（1）_，若在实际项目进展中。在其他活动都能正常进行的前提下，活动_（2）_一旦逾期就会影响项目的进度。</p><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230509/1683601250668232.png\" title=\"1683601250668232.png\" alt=\"image.png\"/>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354763",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>34</p>", "<p>47</p>", "54", "58"],
+          "sort_son": "1"
+        },
+        {
+          "index": 18,
+          "belong_page": 1,
+          "question_id": 354765,
+          "question_title": "<p><br/></p><p>下图是一个软件项目的活动图，其中顶点表示项目里程碑，连接顶点的边表示包含的活动，边上的数字表示完成该活动所需要的天数。则关键路径长度为_（1）_，若在实际项目进展中。在其他活动都能正常进行的前提下，活动_（2）_一旦逾期就会影响项目的进度。</p><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230509/1683601250668232.png\" title=\"1683601250668232.png\" alt=\"image.png\"/>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354763",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>A→B</p>", "<p>C→F</p>", "<p>D→F</p>", "<p>F→H</p>"],
+          "sort_son": "2"
+        },
+        {
+          "index": 19,
+          "belong_page": 1,
+          "question_id": 354766,
+          "question_title": "<p>以下关于风险管理的叙述中，不正确的是（19）</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354766",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>承认风险是客观存在的，不可能完全避免</p>",
+            "<p>同时管理所有的风险</p>",
+            "<p>风险管理应该贯穿整个项目管理过程</p>",
+            "<p>风险计划本身可能会带来新的风险</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 20,
+          "belong_page": 1,
+          "question_id": 354767,
+          "question_title": "<p>当函数调用执行时，在栈顶创建且用来支持被调用函数执行的一段存储空间称为活动记录或栈帧，栈帧中不包括__（20）</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354767",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>形参变量</p>", "<p>全局变量</p>", "<p>返回地址</p>", "<p>局部变量</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 21,
+          "belong_page": 1,
+          "question_id": 354768,
+          "question_title": "<p>编译器与解释器是程序语言翻译的两种基本形态，以下关于编译器工作方式及特点的叙述中，正确的是__（21）</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354768",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>边翻译边执行，用户程序运行效率低且可移植性差</p>",
+            "<p>先翻译后执行，用户程序运行效率高且可移植性好</p>",
+            "<p>边翻译边执行，用户程序运行效率低但可移植性好</p>",
+            "<p>先翻译后执行，用户程序运行效率高但可移植性差</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 22,
+          "belong_page": 1,
+          "question_id": 354769,
+          "question_title": "<p>对高级语言源程序进行编译或解释过程中需进行语法分析，递归子程序分析属于（22） 的分析法。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354769",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>自上而下</p>", "<p>自下而上</p>", "<p>从左至右</p>", "<p>从右至左</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 23,
+          "belong_page": 1,
+          "question_id": 354770,
+          "question_title": "<p>在计算机系统中，若P1进程正在运行，操作系统强行撤下P1进程所占用的CPU，让具有更高优先级的进程P2运行，这种调度方式称为__（23）</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354770",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>中断方式</p>",
+            "<p>先进先出方式</p>",
+            "<p>可剥夺方式</p>",
+            "<p>不可剥夺方式</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 24,
+          "belong_page": 1,
+          "question_id": 354772,
+          "question_title": "<p>进程P1、P2、P3、P4、P5和P6的前趋图如下所示。假设用PV操作来控制这6 个进程的同步与互斥的程序如下，程序中的空①和空②处应分别为_（1）。空③和空④处应分别为（2），空⑤和空⑥处应分别为（3）.<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221117/1668658569900390.png\" title=\"1668658569900390.png\" alt=\"image.png\"/></p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354771",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>V（S1）V（S2）和P（S2）P（S3）(24空)</p>",
+            "<p>V（SI）P（S2）和V（S3）P（S4）(24空)</p>",
+            "<p>V（S1）V（S2）和V（S3）V（S4）(24空)</p>",
+            "<p>P（SI）P（S2）和V（S2）V（S3）(24空)</p>"
+          ],
+          "sort_son": "1"
+        },
+        {
+          "index": 25,
+          "belong_page": 1,
+          "question_id": 354773,
+          "question_title": "<p>进程P1、P2、P3、P4、P5和P6的前趋图如下所示。假设用PV操作来控制这6 个进程的同步与互斥的程序如下，程序中的空①和空②处应分别为_（1）。空③和空④处应分别为（2），空⑤和空⑥处应分别为（3）.<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221117/1668658569900390.png\" title=\"1668658569900390.png\" alt=\"image.png\"/></p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354771",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>V（S3）和V（S6）V（S7）(25空)</p>",
+            "<p>V（S3）和V（S6）P（S7）(25空)</p>",
+            "<p>P（S3）和V（S6）V（S7）(25空)</p>",
+            "<p>P（S3）和P（S6）V（S7）(25空)</p>"
+          ],
+          "sort_son": "2"
+        },
+        {
+          "index": 26,
+          "belong_page": 1,
+          "question_id": 354965,
+          "question_title": "<p>进程P1、P2、P3、P4、P5和P6的前趋图如下所示。假设用PV操作来控制这6 个进程的同步与互斥的程序如下，程序中的空①和空②处应分别为_（1）。空③和空④处应分别为（2），空⑤和空⑥处应分别为（3）.<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221117/1668658569900390.png\" title=\"1668658569900390.png\" alt=\"image.png\"/></p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354771",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>V（S6）和P（S7）P（S8）(26空)</p><p><br/></p>",
+            "<p>P（S8）和P（S7）P（S8）(26空)</p><p><br/></p>",
+            "<p>P（S8）和P（S7）V（S8）(26空)</p>",
+            "<p>.V（S8）和P（S7）P（S8）(26空)</p><p><br/></p>"
+          ],
+          "sort_son": "3"
+        },
+        {
+          "index": 27,
+          "belong_page": 1,
+          "question_id": 354775,
+          "question_title": "<p>假设段页式存储管理系统中的地址结构如下图所示，则系统（27）。</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221117/1668658630638245.png\" title=\"1668658630638245.png\" alt=\"image.png\"/>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354775",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>最多可有512个段，每个段的大小均为2048个页，页的大小为8K</p>",
+            "<p>最多可有512个段，每个段最大允许有2048个页，页的大小为8K</p>",
+            "<p>最多可有1024个段，每个段的大小均为1024个页，页的大小为4K</p>",
+            "<p>最多可有1024个段，每个段最大允许有1024个页，页的大小为4K</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 28,
+          "belong_page": 1,
+          "question_id": 354777,
+          "question_title": "<p>假设磁盘磁头从一个磁道移至相邻磁道需要2ms，文件在磁盘上半连续存放，逻辑上相邻数据块的平均移动距离为5个磁道，每块的旋转起达时间及传输时间分别为10ms和1ms，则读取一个100块的文件需要（28）ms.</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354777",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>1100</p>", "<p>1200</p>", "<p>2100</p>", "<p>2200</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 29,
+          "belong_page": 1,
+          "question_id": 354778,
+          "question_title": "<p>以下关于快速原型模型优点的叙述中，不正确的是（29）</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354778",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>有助于满足用户的真实需求</p>",
+            "<p>适用于大型软件系统的开发</p>",
+            "<p>开发人员快速开发出原型系统，因此可以加速软件开发过程。节约开发成本</p>",
+            "<p>原型系统已经通过与用户的交互得到验证，因此对应的规格说明文档能正确</p><p>描述用户需求</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 30,
+          "belong_page": 1,
+          "question_id": 354780,
+          "question_title": "<p>以下关于三层C/S结构的叙述中，不正确的是（30）</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354780",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>允许合理划分三层结构的功能，使之在逻辑上保持相对独立性，提高系统的</p><p>可维护性和可扩展性</p>",
+            "<p>允许更灵活有效地选用相应的软硬件平台和系统</p>",
+            "<p>应用的各层可以并行开发，但需要相同的开发语言</p>",
+            "<p>利用功能层有效地隔离表示层和数据层，便于严格的安全管理</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 31,
+          "belong_page": 1,
+          "question_id": 354809,
+          "question_title": "<p>若模块A和模块B通过外部变量来交换输入、输出信息，则这两个模块的耦合类型是__（31）__耦合。</p><p><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354809",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>数据</p>", "<p>标记</p>", "<p>控制</p>", "<p>公共</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 32,
+          "belong_page": 1,
+          "question_id": 354811,
+          "question_title": "<p>软件开发的目标是开发出高质量的软件系统，这里的高质量不包括 （32）</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354811",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>软件必须满足用户规定的需求</p>",
+            "<p>软件应遵循规定标准所定义的一系列开发准则</p>",
+            "<p>软件开发应采用最新的开发技术</p>",
+            "<p>软件应满足某些隐含的需求，如可理解性、可维护性等</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 33,
+          "belong_page": 1,
+          "question_id": 354814,
+          "question_title": "<p>白盒测试技术的各种覆盖方法中， （33） 具有最弱的错误发现能力。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354814",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>判定覆盖</p>", "<p>语句覆盖</p>", "<p>条件覆盖</p>", "<p>路径覆盖</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 34,
+          "belong_page": 1,
+          "question_id": 354816,
+          "question_title": "<p>文档是软件的重要要素，关于高质量文档，以下说法不正确的是 （34）</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354816",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>不论项目规模和复杂程度如何，都要用统一的标准指定相同类型和相同要素的文档</p>",
+            "<p>应该分清读者对象</p>",
+            "<p>应当是完整的、独立的、自成体系的</p>",
+            "<p>行文应十分确切，不出现多义性描述</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 35,
+          "belong_page": 1,
+          "question_id": 354820,
+          "question_title": "<p>某财务系统的一个组件中，某个变量没有正确初始化，（35）最可能发现该错误</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354820",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>单元测试</p>", "<p>集成测试</p>", "<p>接受测试</p>", "<p>安装测试</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 36,
+          "belong_page": 1,
+          "question_id": 354821,
+          "question_title": "<p>软件交付给用户之后进入维护阶段，根据维护具体内容的不同将维护分为不同的类型，其中“采用专用的程序模块对文件或数据中的记录进行增加、修改和删除等操作”的维护属于__（36）</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354821",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>程序维护</p>", "<p>数据维护</p>", "<p>代码维护</p>", "<p>设备维护</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 37,
+          "belong_page": 1,
+          "question_id": 354826,
+          "question_title": "<p>采用面向对象方法进行某游戏设计，游戏中有野鸭、红头鸭等各种鸭子边游泳戏水边呱呱叫，不同种类的鸭子具有不同颜色，设计鸭子类负责呱呱叫和游泳方法的实现显示颜色设计为抽象方法，由野鸭和红头鸭各自具体实现，这一机制称为_（1）_。当给这些类型的一组不同对象发送同一显示颜色消息时，能实现各自显示自己不同颜色的结果，这种现象称为 （2）</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354825",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>继承</p>", "<p>聚合</p>", "<p>组合</p>", "<p>多态</p>"],
+          "sort_son": "1"
+        },
+        {
+          "index": 38,
+          "belong_page": 1,
+          "question_id": 354827,
+          "question_title": "<p>采用面向对象方法进行某游戏设计，游戏中有野鸭、红头鸭等各种鸭子边游泳戏水边呱呱叫，不同种类的鸭子具有不同颜色，设计鸭子类负责呱呱叫和游泳方法的实现显示颜色设计为抽象方法，由野鸭和红头鸭各自具体实现，这一机制称为_（1）_。当给这些类型的一组不同对象发送同一显示颜色消息时，能实现各自显示自己不同颜色的结果，这种现象称为 （2）</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354825",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>覆盖</p>", "<p>重载</p>", "<p>动态绑定</p>", "<p>多态</p>"],
+          "sort_son": "2"
+        },
+        {
+          "index": 39,
+          "belong_page": 1,
+          "question_id": 354830,
+          "question_title": "<p>采用面向对象方法分析时，首先要在应用领域中按自然存在的实体认定对象，即将自然存在的“（39）”作为一个对象。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354830",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>问题</p>", "<p>关系</p>", "<p>名词</p>", "<p>动词</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 40,
+          "belong_page": 1,
+          "question_id": 354831,
+          "question_title": "<p>进行面向对象系统设计时，修改某个类的原因有且只有一个，即一个类只做一种类型的功能，这属于（40）原则。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354831",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>单一责任</p>", "<p>开放-封闭</p>", "<p>接口分离</p>", "<p>依赖倒置</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 41,
+          "belong_page": 1,
+          "question_id": 354835,
+          "question_title": "<p>UML活动图用于建模（1）。以下活动图中，活动A1之后，可能的活动执行序列顺序是（2）<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221117/1668658726222540.png\" title=\"1668658726222540.png\" alt=\"image.png\"/></p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354834",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>系统在它的周边环境的语境中所提供的外部可见服务</p>",
+            "<p>某一时刻一组对象以及它们之间的关系</p>",
+            "<p>系统内从一个活动到另一个活动的流程</p>",
+            "<p>对象的生命周期中某个条件或者状态</p>"
+          ],
+          "sort_son": "1"
+        },
+        {
+          "index": 42,
+          "belong_page": 1,
+          "question_id": 354836,
+          "question_title": "<p>UML活动图用于建模（1）。以下活动图中，活动A1之后，可能的活动执行序列顺序是（2）<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221117/1668658726222540.png\" title=\"1668658726222540.png\" alt=\"image.png\"/></p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354834",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>A2、A3、A4和A5</p>",
+            "<p>A3、A4和A5，或A2、A4和A5</p>",
+            "<p>A2、A4和A5</p>",
+            "<p>A2或A3、A4和A5</p>"
+          ],
+          "sort_son": "2"
+        },
+        {
+          "index": 43,
+          "belong_page": 1,
+          "question_id": 354838,
+          "question_title": "<p>UML 构件图（component diagram）展现了一组构件之间的组织和依赖，专注于系统的静态（43）视图，图中通常包括构件、接口以及各种关系。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354838",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>关联</p>", "<p>实现</p>", "<p>机构</p>", "<p>行为</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 44,
+          "belong_page": 1,
+          "question_id": 354846,
+          "question_title": "<p>在某系统中，不同级别的日志信息记录方式不同，每个级别的日志处理对象根据信息级别高低，采用不同方式进行记录。每个日志处理对象检查消息的级别，如果达到它的级别则进行记录，否则不记录然后将消息传递给它的下一个日志处理对象。针对此需求，设计如下所示类图。该设计采用（1）模式使多个前后连接的对象都有机会处理请求，从而避免请求的发送者和接收者之间的耦合关系。该模式属于_（2） 模式，该模式适用于（3）。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221117/1668659562770893.png\" title=\"1668659562770893.png\" alt=\"image.png\"/></p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354845",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>责任链（Chain of Responsibility）</p>",
+            "<p>策略（Strategy）</p>",
+            "<p>过滤器（Filter）</p>",
+            "<p>备忘录（Memento）</p>"
+          ],
+          "sort_son": "1"
+        },
+        {
+          "index": 45,
+          "belong_page": 1,
+          "question_id": 354847,
+          "question_title": "<p>在某系统中，不同级别的日志信息记录方式不同，每个级别的日志处理对象根据信息级别高低，采用不同方式进行记录。每个日志处理对象检查消息的级别，如果达到它的级别则进行记录，否则不记录然后将消息传递给它的下一个日志处理对象。针对此需求，设计如下所示类图。该设计采用（1）模式使多个前后连接的对象都有机会处理请求，从而避免请求的发送者和接收者之间的耦合关系。该模式属于_（2） 模式，该模式适用于（3）。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221117/1668659562770893.png\" title=\"1668659562770893.png\" alt=\"image.png\"/></p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354845",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>行为型类</p>",
+            "<p>行为型对象</p>",
+            "<p>结构型类</p>",
+            "<p>结构型对象</p>"
+          ],
+          "sort_son": "2"
+        },
+        {
+          "index": 46,
+          "belong_page": 1,
+          "question_id": 354848,
+          "question_title": "<p>在某系统中，不同级别的日志信息记录方式不同，每个级别的日志处理对象根据信息级别高低，采用不同方式进行记录。每个日志处理对象检查消息的级别，如果达到它的级别则进行记录，否则不记录然后将消息传递给它的下一个日志处理对象。针对此需求，设计如下所示类图。该设计采用（1）模式使多个前后连接的对象都有机会处理请求，从而避免请求的发送者和接收者之间的耦合关系。该模式属于_（2） 模式，该模式适用于（3）。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221117/1668659562770893.png\" title=\"1668659562770893.png\" alt=\"image.png\"/></p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354845",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>不同的标准过滤一组对象，并通过逻辑操作以解耦的方式将它们链接起来</p>",
+            "<p>可处理一个请求的对象.集合应被动态指定</p>",
+            "<p>必须保存一个对象在某一个时刻的状态，需要时它才能恢复到先前的状态</p>",
+            "<p>一个类定义了多种行为，并且以多个条件语句的形式出现</p>"
+          ],
+          "sort_son": "3"
+        },
+        {
+          "index": 47,
+          "belong_page": 1,
+          "question_id": 354852,
+          "question_title": "<p>驱动新能源汽车的发动机时，电能和光能汽车分别采用不同驱动方法，而客户端希望使用统一的驱动方法，需定义一个统一的驱动接口屏蔽不同的驱动方法，该要求适合采用（47）模式</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354852",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>中介者（Medimtor）</p>",
+            "<p>访问者（Visitor）</p>",
+            "<p>观察者（Observer）</p>",
+            "<p>适配器（Adapter）</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 48,
+          "belong_page": 1,
+          "question_id": 354856,
+          "question_title": "<p>在 Python 3 中，（48）不是合法的异常处理结构.&nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354856",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>try....except ....</p>",
+            "<p>try....except ....finally</p>",
+            "<p>try....catch ....</p>",
+            "<p>raise</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 49,
+          "belong_page": 1,
+          "question_id": 354858,
+          "question_title": "<p>在Python3中，表达式 list(range(11))[10：0：-2]的值为（49）</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354858",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>[10,8,6,4,2,0]</p>",
+            "<p>[10,8,6,4,2]</p>",
+            "<p>[0,2,4,6,8,10]</p>",
+            "<p>[0,2,4,6,8]</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 50,
+          "belong_page": 1,
+          "question_id": 354864,
+          "question_title": "<p>在Python3中，执行语句x=input（），如果从键盘输入123并按回车键，则x 的值为（50）</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354864",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>123</p>", "<p>1,2,3</p>", "<p>1 2 3</p>", "<p>&#39;123&#39;</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 51,
+          "belong_page": 1,
+          "question_id": 354867,
+          "question_title": "<p>E-R模型向关系模型转换时，两个实体E1和E2之间的多对多联系应该转换为一个独立的关系模式，且该关系模式的关键字由__(51 )___组成。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354867",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>联系R的属性&nbsp;</p>",
+            "<p>E1或E2的关键字&nbsp;</p>",
+            "<p>E1和E2的关键字&nbsp;</p>",
+            "<p>E1和E2的关键字加上R 的属性&nbsp;</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 52,
+          "belong_page": 1,
+          "question_id": 354873,
+          "question_title": "<p>某高校人力资源管理系统的数据库中，教师关系模式为T(教师号，姓名，部门号，岗位，联系地址，薪资)，函数依赖集F={教师号→(姓名，部门号，岗位，联系地址)，岗位→薪资}。T关系的主键为&nbsp;&nbsp;&nbsp;(52 ) &nbsp;，函数依赖集F&nbsp;&nbsp;(53) &nbsp;。</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354872",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>教师号，T存在冗余以及插入异常和删除异常的问题</p>",
+            "<p>教师号，T不存在冗余以及插入异常和删除异常的问题</p>",
+            "<p>(教师号，岗位)，T存在冗余以及插入异常和删除异常的问题&nbsp;</p>",
+            "<p>(教师号，岗位)，T不存在冗余以及插入异常和删除异常的问题</p>"
+          ],
+          "sort_son": "1"
+        },
+        {
+          "index": 53,
+          "belong_page": 1,
+          "question_id": 354874,
+          "question_title": "<p>某高校人力资源管理系统的数据库中，教师关系模式为T(教师号，姓名，部门号，岗位，联系地址，薪资)，函数依赖集F={教师号→(姓名，部门号，岗位，联系地址)，岗位→薪资}。T关系的主键为&nbsp;&nbsp;&nbsp;(52 ) &nbsp;，函数依赖集F&nbsp;&nbsp;(53) &nbsp;。</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354872",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>存在传递依赖，故关系模式T最高达到1NF</p>",
+            "<p>存在传递依赖，故关系模式T最高达到2NF</p>",
+            "<p>不存在传递依赖，故关系模式T最高达到3NF&nbsp;</p>",
+            "<p>不存在传递依赖，故关系模式T最高达到4NF</p>"
+          ],
+          "sort_son": "2"
+        },
+        {
+          "index": 54,
+          "belong_page": 1,
+          "question_id": 354878,
+          "question_title": "<p>给定员工关系E(员工号,员工名,部门名，电话家庭住址)、工程关系P（工程号,工程名，前期工程号)、参与关系EP（员工号，工程号，工作量)。查询“005”员工参与了“虎头山隧道”工程的员工名、部门名、工程名、工作量的关系代数表达式如下:</p><p>π2,3,5,6(π1,2,3( &nbsp;(54) &nbsp;) ⨝（&nbsp;&nbsp;(55) &nbsp;)）。</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354877",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>δ2=‘005’(E)&nbsp;(54)&nbsp;</p>",
+            "<p>δ1=‘005’(E)&nbsp;(54)&nbsp;</p>",
+            "<p>δ2=‘005’(P)&nbsp;&nbsp;(54)&nbsp;</p>",
+            "<p>δ1=‘005’(P)&nbsp;&nbsp;(54)&nbsp;</p>"
+          ],
+          "sort_son": "1"
+        },
+        {
+          "index": 55,
+          "belong_page": 1,
+          "question_id": 354879,
+          "question_title": "<p>给定员工关系E(员工号,员工名,部门名，电话家庭住址)、工程关系P（工程号,工程名，前期工程号)、参与关系EP（员工号，工程号，工作量)。查询“005”员工参与了“虎头山隧道”工程的员工名、部门名、工程名、工作量的关系代数表达式如下:</p><p>π2,3,5,6(π1,2,3( &nbsp;(54) &nbsp;) ⨝（&nbsp;&nbsp;(55) &nbsp;)）。</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354877",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>π2,3(δ2=&#39;虎头山隧道&#39;(P))⨝EP&nbsp;&nbsp;(55)</p>",
+            "<p>π2,3(δ2=&#39;虎头山隧道&#39;(EP))⨝P&nbsp;&nbsp;(55)</p>",
+            "<p>π1,2(δ2=&#39;虎头山隧道&#39;(EP))⨝P&nbsp;&nbsp;(55)</p>",
+            "<p>π1,2(δ2=&#39;虎头山隧道&#39;(P)) ⨝EP&nbsp;&nbsp;(55)</p>"
+          ],
+          "sort_son": "2"
+        },
+        {
+          "index": 56,
+          "belong_page": 1,
+          "question_id": 355186,
+          "question_title": "<p>假设事务程序A中的表达式x/y，若y取值为0，则计算该表达式时，会产生故障。该故障属于__(56 )__。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "355186",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>系统故障</p>", "<p>事务故障</p>", "<p>介质故障</p>", "<p>死机</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 57,
+          "belong_page": 1,
+          "question_id": 354886,
+          "question_title": "<p>设栈初始时为空，对于入栈序列1,2,3,……，n，这些元素经过栈之后得到出栈序列 P1，P2，P3，…，Pn。若p3=4，则p1，p2不可能的取值为__(57 )__。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354886",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>6,5&nbsp;</p>",
+            "<p>2,3&nbsp;</p>",
+            "<p>3,1&nbsp;</p>",
+            "<p>3,5&nbsp;</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 58,
+          "belong_page": 1,
+          "question_id": 354887,
+          "question_title": "<p>设m和n是某二叉树上的两个结点，中序遍历时，n排在m之前的条件是___58__。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354887",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>m是n的祖先结点&nbsp;</p>",
+            "<p>m是n的子孙结点&nbsp;</p>",
+            "<p>m在n的左边&nbsp;</p>",
+            "<p>m在n的右边&nbsp;</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 59,
+          "belong_page": 1,
+          "question_id": 354889,
+          "question_title": "<p>若无向图G有n个顶点e条边，则G采用邻接矩阵存储时，矩阵的大小为__59___。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354889",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>n*e&nbsp;</p>", "<p>n²</p>", "<p>n²+e²</p>", "<p>(n+e)²&nbsp;</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 60,
+          "belong_page": 1,
+          "question_id": 354892,
+          "question_title": "<p>以下关于m阶B-树的说法中，错误的是___60__。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354892",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>根结点最多有m棵子树</p>",
+            "<p>所有叶子结点都在同一层次上</p>",
+            "<p>结点中的关键字有序排列</p>",
+            "<p>叶子结点通过指针链接为有序表</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 61,
+          "belong_page": 1,
+          "question_id": 354894,
+          "question_title": "<p>下列排序算法中，占用辅助存储空间最多的是__61___。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354894",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>归并排序</p>", "<p>快速排序</p>", "<p>堆排序</p>", "<p>冒泡排序</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 62,
+          "belong_page": 1,
+          "question_id": 354900,
+          "question_title": "<p>折半查找在有序数组A中查找特定的记录K:通过比较K和数组中的中间元素 A[mid]进行，如果相等，则算法结束;如果K小于A[mid]，则对数组的前半部分进行折半查找:否则对数组的后半部分进行折半查找。根据上述描述，折半查找算法采用了&nbsp;&nbsp;(62) &nbsp;算法设计策略。对有序数组(3,14,27,39,42,55,70,85,93,98)，成功查找和失败查所需要的平均比较次数分别是&nbsp;&nbsp;(63) &nbsp;&nbsp;(假设查找每个元素的概率是相同的)。</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354899",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>分治</p>", "<p>动态规划</p>", "<p>贪心</p>", "<p>回溯</p>"],
+          "sort_son": "1"
+        },
+        {
+          "index": 63,
+          "belong_page": 1,
+          "question_id": 354901,
+          "question_title": "<p>折半查找在有序数组A中查找特定的记录K:通过比较K和数组中的中间元素 A[mid]进行，如果相等，则算法结束;如果K小于A[mid]，则对数组的前半部分进行折半查找:否则对数组的后半部分进行折半查找。根据上述描述，折半查找算法采用了&nbsp;&nbsp;(62) &nbsp;算法设计策略。对有序数组(3,14,27,39,42,55,70,85,93,98)，成功查找和失败查所需要的平均比较次数分别是&nbsp;&nbsp;(63) &nbsp;&nbsp;(假设查找每个元素的概率是相同的)。</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354899",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>29/10和29/11</p>",
+            "<p>30/10和30/11</p>",
+            "<p>29/10 和39/11&nbsp;</p>",
+            "<p>30/10和40/11</p>"
+          ],
+          "sort_son": "2"
+        },
+        {
+          "index": 64,
+          "belong_page": 1,
+          "question_id": 354905,
+          "question_title": "<p><br/></p><p>采用Dijkstra算法求解下图A点到E点的最短路径，采用的算法设计策略是&nbsp;&nbsp;(64) &nbsp;。该最短路径的长度是&nbsp;&nbsp;(65)&nbsp;&nbsp;<br/></p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221117/1668659936825598.png\" title=\"1668659936825598.png\" alt=\"image.png\"/>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354904",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>分治法</p>", "<p>动态规划</p>", "<p>贪心算法</p>", "<p>回溯法</p>"],
+          "sort_son": "1"
+        },
+        {
+          "index": 65,
+          "belong_page": 1,
+          "question_id": 354906,
+          "question_title": "<p><br/></p><p>采用Dijkstra算法求解下图A点到E点的最短路径，采用的算法设计策略是&nbsp;&nbsp;(64) &nbsp;。该最短路径的长度是&nbsp;&nbsp;(65)&nbsp;&nbsp;<br/></p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221117/1668659936825598.png\" title=\"1668659936825598.png\" alt=\"image.png\"/>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354904",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>5&nbsp;</p>", "<p>6&nbsp;</p>", "<p>7&nbsp;</p>", "<p>9&nbsp;</p>"],
+          "sort_son": "2"
+        },
+        {
+          "index": 66,
+          "belong_page": 1,
+          "question_id": 354909,
+          "question_title": "<p>VLANtag在OSI参考模型的_____实现。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354909",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>网络层</p>", "<p>传输层</p>", "<p>数据链路层</p>", "<p>物理层</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 67,
+          "belong_page": 1,
+          "question_id": 354910,
+          "question_title": "<p>Telnet协议是一种__67___的远程登录协议。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354910",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>安全</p>",
+            "<p>B/S模式&nbsp;</p>",
+            "<p>基于TCP&nbsp;</p>",
+            "<p>分布式</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 68,
+          "belong_page": 1,
+          "question_id": 354912,
+          "question_title": "<p>以下关于HTTPS 和HTTP 协议的叙述中，错误的是__68___。</p><p><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354912",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>HTTPS协议使用加密传输</p>",
+            "<p>HTTPS协议默认服务端口号是443&nbsp;</p>",
+            "<p>HTTP协议默认服务端口号是80</p>",
+            "<p>电子支付类网站应使用HTTP协议</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 69,
+          "belong_page": 1,
+          "question_id": 354913,
+          "question_title": "<p>将网址转换为IP地址要使用__69___协议。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354913",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>域名解析</p>",
+            "<p>IP地址解析&nbsp;</p>",
+            "<p>路由选择</p>",
+            "<p>传输控制</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 70,
+          "belong_page": 1,
+          "question_id": 354914,
+          "question_title": "<p>下面关于IP地址和MAC 地址说法错误的是__70___。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354914",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>IP地址长度32或128位，MAC地址的长度48位</p>",
+            "<p>IP地址工作在网络层，MAC地址工作在数据链路层</p>",
+            "<p>地址的分配是基于网络拓扑，MAC 地址的分配是基于制造商&nbsp;</p>",
+            "<p>IP地址具有唯一性，MAC地址不具有唯一性</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 71,
+          "belong_page": 1,
+          "question_id": 354919,
+          "question_title": "<p>We initially described SOA without mentioning Web services, and vice versa. This is because they are orthogonal: service-orientation is an architectural&nbsp;&nbsp;(71) &nbsp;while Web services are an implementation&nbsp;&nbsp;(72) &nbsp;.The two can be used together, and they frequently are, but they are not mutually dependent.</p><p>For example, although it is widely considered to be a distributed-computing solution,SOA can be applied to advantage in a single system,where services might be individual processes with well-defined&nbsp;&nbsp;(73) &nbsp;that communicate using local channels,or in a self-contained cluster, where they might communicate across a high-speed interconnect.</p><p>Similarly, while Web services are&nbsp;&nbsp;(74) &nbsp;as the basis for a service-oriented environment, there is nothing in their definition that requires them to embody the SOA principles. While&nbsp;&nbsp;(75) &nbsp;is often held up as a key characteristic of Web services,there is no technical reason that they should be stateless-that would be a design choice of the developer,which may be dictated by the architectural style of the environment in which the service is intended to participate.</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354918",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>design&nbsp;</p>",
+            "<p>style&nbsp;</p>",
+            "<p>technology&nbsp;</p>",
+            "<p>structure&nbsp;</p>"
+          ],
+          "sort_son": "1"
+        },
+        {
+          "index": 72,
+          "belong_page": 1,
+          "question_id": 354920,
+          "question_title": "<p>We initially described SOA without mentioning Web services, and vice versa. This is because they are orthogonal: service-orientation is an architectural&nbsp;&nbsp;(71) &nbsp;while Web services are an implementation&nbsp;&nbsp;(72) &nbsp;.The two can be used together, and they frequently are, but they are not mutually dependent.</p><p>For example, although it is widely considered to be a distributed-computing solution,SOA can be applied to advantage in a single system,where services might be individual processes with well-defined&nbsp;&nbsp;(73) &nbsp;that communicate using local channels,or in a self-contained cluster, where they might communicate across a high-speed interconnect.</p><p>Similarly, while Web services are&nbsp;&nbsp;(74) &nbsp;as the basis for a service-oriented environment, there is nothing in their definition that requires them to embody the SOA principles. While&nbsp;&nbsp;(75) &nbsp;is often held up as a key characteristic of Web services,there is no technical reason that they should be stateless-that would be a design choice of the developer,which may be dictated by the architectural style of the environment in which the service is intended to participate.</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354918",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>structure&nbsp;</p>",
+            "<p>style&nbsp;</p>",
+            "<p>technology&nbsp;</p>",
+            "<p>method&nbsp;</p>"
+          ],
+          "sort_son": "2"
+        },
+        {
+          "index": 73,
+          "belong_page": 1,
+          "question_id": 354921,
+          "question_title": "<p>We initially described SOA without mentioning Web services, and vice versa. This is because they are orthogonal: service-orientation is an architectural&nbsp;&nbsp;(71) &nbsp;while Web services are an implementation&nbsp;&nbsp;(72) &nbsp;.The two can be used together, and they frequently are, but they are not mutually dependent.</p><p>For example, although it is widely considered to be a distributed-computing solution,SOA can be applied to advantage in a single system,where services might be individual processes with well-defined&nbsp;&nbsp;(73) &nbsp;that communicate using local channels,or in a self-contained cluster, where they might communicate across a high-speed interconnect.</p><p>Similarly, while Web services are&nbsp;&nbsp;(74) &nbsp;as the basis for a service-oriented environment, there is nothing in their definition that requires them to embody the SOA principles. While&nbsp;&nbsp;(75) &nbsp;is often held up as a key characteristic of Web services,there is no technical reason that they should be stateless-that would be a design choice of the developer,which may be dictated by the architectural style of the environment in which the service is intended to participate.</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354918",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>interfaces&nbsp;</p>",
+            "<p>functions&nbsp;</p>",
+            "<p>logics&nbsp;</p>",
+            "<p>formats&nbsp;</p>"
+          ],
+          "sort_son": "3"
+        },
+        {
+          "index": 74,
+          "belong_page": 1,
+          "question_id": 354922,
+          "question_title": "<p>We initially described SOA without mentioning Web services, and vice versa. This is because they are orthogonal: service-orientation is an architectural&nbsp;&nbsp;(71) &nbsp;while Web services are an implementation&nbsp;&nbsp;(72) &nbsp;.The two can be used together, and they frequently are, but they are not mutually dependent.</p><p>For example, although it is widely considered to be a distributed-computing solution,SOA can be applied to advantage in a single system,where services might be individual processes with well-defined&nbsp;&nbsp;(73) &nbsp;that communicate using local channels,or in a self-contained cluster, where they might communicate across a high-speed interconnect.</p><p>Similarly, while Web services are&nbsp;&nbsp;(74) &nbsp;as the basis for a service-oriented environment, there is nothing in their definition that requires them to embody the SOA principles. While&nbsp;&nbsp;(75) &nbsp;is often held up as a key characteristic of Web services,there is no technical reason that they should be stateless-that would be a design choice of the developer,which may be dictated by the architectural style of the environment in which the service is intended to participate.</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354918",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>regarded&nbsp;</p>",
+            "<p>well-suited&nbsp;</p>",
+            "<p>worked&nbsp;</p>",
+            "<p>used&nbsp;</p>"
+          ],
+          "sort_son": "4"
+        },
+        {
+          "index": 75,
+          "belong_page": 1,
+          "question_id": 354923,
+          "question_title": "<p>We initially described SOA without mentioning Web services, and vice versa. This is because they are orthogonal: service-orientation is an architectural&nbsp;&nbsp;(71) &nbsp;while Web services are an implementation&nbsp;&nbsp;(72) &nbsp;.The two can be used together, and they frequently are, but they are not mutually dependent.</p><p>For example, although it is widely considered to be a distributed-computing solution,SOA can be applied to advantage in a single system,where services might be individual processes with well-defined&nbsp;&nbsp;(73) &nbsp;that communicate using local channels,or in a self-contained cluster, where they might communicate across a high-speed interconnect.</p><p>Similarly, while Web services are&nbsp;&nbsp;(74) &nbsp;as the basis for a service-oriented environment, there is nothing in their definition that requires them to embody the SOA principles. While&nbsp;&nbsp;(75) &nbsp;is often held up as a key characteristic of Web services,there is no technical reason that they should be stateless-that would be a design choice of the developer,which may be dictated by the architectural style of the environment in which the service is intended to participate.</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "354918",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>distribution&nbsp;</p>",
+            "<p>interconnection&nbsp;</p>",
+            "<p>dependence&nbsp;</p>",
+            "<p>statelessness</p>"
+          ],
+          "sort_son": "5"
+        }
+      ],
+      "summary": {
+        "radio": {
+          "total_question": 75,
+          "total_score": 0
+        },
+        "multiple": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "judge": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "fill": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "program": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "qanda": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "cloze": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "budingxiang": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "material": {
+          "total_question": 0,
+          "total_score": 0
+        }
+      },
+      "examine": {
+        "id": 16055,
+        "title": "2022年11月软件设计师选择题",
+        "len_time": {
+          "time": 0
+        },
+        "total_question": 75,
+        "total_score": 75,
+        "submit_limit_num": "0",
+        "machine_type": "1"
+      },
+      "answer_activity_start_time": 1585828800,
+      "checkProcess": 1,
+      "process": {
+        "is_delete": false
+      },
+      "train_id": 0
+    },
+    "pagination": {
+      "curPage": 1,
+      "pageSize": 1200,
+      "total": 75,
+      "hasNextPage": false
+    },
+    "totalOrder": [
+      {
+        "index": 1,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354748
+      },
+      {
+        "index": 2,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354749
+      },
+      {
+        "index": 3,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354750
+      },
+      {
+        "index": 4,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354751
+      },
+      {
+        "index": 5,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354752
+      },
+      {
+        "index": 6,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354958
+      },
+      {
+        "index": 7,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354753
+      },
+      {
+        "index": 8,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 354983
+      },
+      {
+        "index": 9,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 354984
+      },
+      {
+        "index": 10,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354756
+      },
+      {
+        "index": 11,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354757
+      },
+      {
+        "index": 12,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354758
+      },
+      {
+        "index": 13,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354759
+      },
+      {
+        "index": 14,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354760
+      },
+      {
+        "index": 15,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354761
+      },
+      {
+        "index": 16,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354762
+      },
+      {
+        "index": 17,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 354764
+      },
+      {
+        "index": 18,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 354765
+      },
+      {
+        "index": 19,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354766
+      },
+      {
+        "index": 20,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354767
+      },
+      {
+        "index": 21,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354768
+      },
+      {
+        "index": 22,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354769
+      },
+      {
+        "index": 23,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354770
+      },
+      {
+        "index": 24,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 354772
+      },
+      {
+        "index": 25,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 354773
+      },
+      {
+        "index": 26,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 354965
+      },
+      {
+        "index": 27,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354775
+      },
+      {
+        "index": 28,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354777
+      },
+      {
+        "index": 29,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354778
+      },
+      {
+        "index": 30,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354780
+      },
+      {
+        "index": 31,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354809
+      },
+      {
+        "index": 32,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354811
+      },
+      {
+        "index": 33,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354814
+      },
+      {
+        "index": 34,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354816
+      },
+      {
+        "index": 35,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354820
+      },
+      {
+        "index": 36,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354821
+      },
+      {
+        "index": 37,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 354826
+      },
+      {
+        "index": 38,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 354827
+      },
+      {
+        "index": 39,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354830
+      },
+      {
+        "index": 40,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354831
+      },
+      {
+        "index": 41,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 354835
+      },
+      {
+        "index": 42,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 354836
+      },
+      {
+        "index": 43,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354838
+      },
+      {
+        "index": 44,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 354846
+      },
+      {
+        "index": 45,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 354847
+      },
+      {
+        "index": 46,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 354848
+      },
+      {
+        "index": 47,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354852
+      },
+      {
+        "index": 48,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354856
+      },
+      {
+        "index": 49,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354858
+      },
+      {
+        "index": 50,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354864
+      },
+      {
+        "index": 51,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354867
+      },
+      {
+        "index": 52,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 354873
+      },
+      {
+        "index": 53,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 354874
+      },
+      {
+        "index": 54,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 354878
+      },
+      {
+        "index": 55,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 354879
+      },
+      {
+        "index": 56,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 355186
+      },
+      {
+        "index": 57,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354886
+      },
+      {
+        "index": 58,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354887
+      },
+      {
+        "index": 59,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354889
+      },
+      {
+        "index": 60,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354892
+      },
+      {
+        "index": 61,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354894
+      },
+      {
+        "index": 62,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 354900
+      },
+      {
+        "index": 63,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 354901
+      },
+      {
+        "index": 64,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 354905
+      },
+      {
+        "index": 65,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 354906
+      },
+      {
+        "index": 66,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354909
+      },
+      {
+        "index": 67,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354910
+      },
+      {
+        "index": 68,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354912
+      },
+      {
+        "index": 69,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354913
+      },
+      {
+        "index": 70,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 354914
+      },
+      {
+        "index": 71,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 354919
+      },
+      {
+        "index": 72,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 354920
+      },
+      {
+        "index": 73,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 354921
+      },
+      {
+        "index": 74,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 354922
+      },
+      {
+        "index": 75,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 354923
+      }
+    ]
+  }
+}

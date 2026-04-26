@@ -1,0 +1,1968 @@
+{
+  "msg": "成功",
+  "status": "0",
+  "data": {
+    "data": {
+      "question": [
+        {
+          "index": 1,
+          "belong_page": 1,
+          "question_id": 34538,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">在程序运行过程中，</span>CPU<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">需要将指令从内存中取出并加以分析和执行。</span>CPU<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">依据（</span>&nbsp;<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">）来区分在内存中以二进制编码形式存放的指令和数据。</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34538",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>指令周期的不同阶段</p>",
+            "<p>指令和数据的寻址方式</p>",
+            "<p>指令操作码的译码结果</p>",
+            "<p>指令和数据所在的存储单元</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 2,
+          "belong_page": 1,
+          "question_id": 34539,
+          "question_title": "<p><span style=\"font-family: 宋体;\">计算机在一个指令周期的过程中，为从内存读取指令操作码，首先要将（</span>&nbsp; <span style=\"font-family: 宋体;\">）的内容送到地址总线上。</span><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34539",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>指令寄存器（IR）</p>",
+            "<p>通用寄存器（GR）</p>",
+            "<p>程序计数器（PC）</p>",
+            "<p>状态寄存器（PSW）</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 3,
+          "belong_page": 1,
+          "question_id": 34540,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\" style=\"background: rgb(233, 233, 233);\"><span style=\"background: #D9D9D9; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-size: 10.5pt; mso-fareast-theme-font: minor-fareast; mso-shading: white;\">设</span><span style=\"background: #D9D9D9; mso-bidi-font-size: 10.5pt; mso-shading: white; mso-pattern: gray-15 auto; mso-fareast-font-family: 宋体;\">16</span><span style=\"background: #D9D9D9; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 0pt; mso-bidi-font-size: 10.5pt; mso-pattern: gray-15 auto; mso-hansi-theme-font: minor-fareast;\">位浮点数，其中阶符</span><span style=\"background: #D9D9D9; mso-font-kerning: 0pt; mso-bidi-font-size: 10.5pt; mso-shading: white; mso-fareast-font-family: 宋体;\">1</span><span style=\"background: #D9D9D9; font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 0pt; mso-pattern: gray-15 auto; mso-hansi-theme-font: minor-fareast;\">位、阶码值</span><span style=\"background: #D9D9D9; mso-font-kerning: 0pt; mso-bidi-font-size: 10.5pt; mso-shading: white; mso-fareast-font-family: 宋体;\">6</span><span style=\"background: #D9D9D9; font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 0pt; mso-pattern: gray-15 auto; mso-hansi-theme-font: minor-fareast;\">位、数符</span><span style=\"background: #D9D9D9; mso-font-kerning: 0pt; mso-bidi-font-size: 10.5pt; mso-shading: white; mso-fareast-font-family: 宋体;\">1</span><span style=\"background: #D9D9D9; font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 0pt; mso-pattern: gray-15 auto; mso-hansi-theme-font: minor-fareast;\">位、尾数</span><span style=\"background: #D9D9D9; mso-font-kerning: 0pt; mso-bidi-font-size: 10.5pt; mso-shading: white; mso-fareast-font-family: 宋体;\">8</span><span style=\"background: #D9D9D9; font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 0pt; mso-pattern: gray-15 auto; mso-hansi-theme-font: minor-fareast;\">位。若阶码用移码表示，尾数用补码表示，则该浮点数所能表示的数值范围是（</span><span style=\"background: #D9D9D9; mso-font-kerning: 0pt; mso-bidi-font-size: 10.5pt; mso-shading: white; mso-fareast-font-family: 宋体;\">&nbsp; </span><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt; mso-shading: white; mso-pattern: gray-15 auto; mso-hansi-theme-font: minor-fareast;\">）。</span><span style=\"background: #D9D9D9; mso-font-kerning: 0pt; mso-bidi-font-size: 10.5pt; mso-fareast-theme-font: minor-fareast; mso-shading: white;\"></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34540",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>-2的64&nbsp;次方～（1-2的-8方）2的64次方</p>",
+            "<p>-2的63次方～（1-2的-8次方）2的63次方</p>",
+            "<p>-（1-2的-8次方）2的64次方&nbsp;～（1-2的-8次方）2的64次方</p>",
+            "<p>-（1-2的-8次方）2的63次方&nbsp;～（1-2的-8次方）2的63次方</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 4,
+          "belong_page": 1,
+          "question_id": 34541,
+          "question_title": "<p><span style=\"font-size: 10.5pt; mso-font-kerning: 1.0pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-bidi-font-size: 12.0pt;\">已知数据信息为</span><span style=\"font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; font-size: 10.5pt; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-bidi-language: AR-SA; mso-bidi-font-size: 12.0pt;\">16</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-font-kerning: 1.0pt; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-ansi-language: EN-US; mso-bidi-language: AR-SA; mso-bidi-font-size: 12.0pt;\">位，最少应附加（</span><span style=\"font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; font-size: 10.5pt; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-bidi-language: AR-SA; mso-bidi-font-size: 12.0pt;\">&nbsp; </span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN;\">）位校验位，以实现海明码纠错。</span><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34541",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>3</p>", "<p>4</p>", "<p>5</p>", "<p>6</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 5,
+          "belong_page": 1,
+          "question_id": 34542,
+          "question_title": "<p><span style=\"font-family: 宋体;\">将一条指令的执行过程分解为取指、分析和执行三步，按照流水方式执行，若取指时间</span>t<span style=\"font-family: 宋体;\">取指</span>=4<span style=\"font-family: 宋体;\">△</span>t<span style=\"font-family: 宋体;\">、分析时间</span>t<span style=\"font-family: 宋体;\">分析</span>=2<span style=\"font-family: 宋体;\">△</span>t<span style=\"font-family: 宋体;\">、执行时间</span>t<span style=\"font-family: 宋体;\">执行</span>=3<span style=\"font-family: 宋体;\">△</span>t<span style=\"font-family: 宋体;\">，则执行完</span>100<span style=\"font-family: 宋体;\">条指令，需要的时间为（</span>&nbsp; <span style=\"font-family: 宋体;\">）△</span>t<span style=\"font-family: 宋体;\">。</span><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34542",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>200</p>", "<p>300</p>", "<p>400</p>", "<p>405</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 6,
+          "belong_page": 1,
+          "question_id": 96977,
+          "question_title": "以下关于Cache与主存间地址映射的叙述中，正确的是（ ）。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "96977",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>操作系统负责管理Cache与主存之间的地址映射</p>",
+            "<p>程序员需要通过编程来处理Cache与主存之间的地址映射</p>",
+            "<p>应用软件对Cache与主存之间的地址映射进行调度</p>",
+            "<p>由硬件自动完成Cache与主存之间的地址映射</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 7,
+          "belong_page": 1,
+          "question_id": 34544,
+          "question_title": "<p><span style=\"font-family: 宋体;\">可用于数字签名的算法是（</span>&nbsp; <span style=\"font-family: 宋体;\">）。</span><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34544",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>RSA</p>", "<p>IDEA</p>", "<p>RC4</p>", "<p>MD5</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 8,
+          "belong_page": 1,
+          "question_id": 34545,
+          "question_title": "<p><span style=\"font-size: 10.5pt; mso-font-kerning: 1.0pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-bidi-font-size: 12.0pt;\">（</span><span style=\"font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; font-size: 10.5pt; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-bidi-language: AR-SA; mso-bidi-font-size: 12.0pt;\">&nbsp; </span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN;\">）不是数字签名的作用。</span><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34545",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>接收者可验证消息来源的真实性</p>",
+            "<p>发送者无法否认发送过该消息</p>",
+            "<p>接收者无法伪造或篡改消息</p>",
+            "<p>可验证接收者合法性</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 9,
+          "belong_page": 1,
+          "question_id": 34546,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\">在网络设计和实施过程中要采取多种安全措施，其中（</span><span style=\"font-family: &quot;Times New Roman&quot;, serif; font-size: 10.5pt;\">&nbsp; </span><span style=\"font-family: 宋体; font-size: 10.5pt;\">）是针对系统安全需求的措施。</span><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34546",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>设备防雷击</p>",
+            "<p>入侵检测</p>",
+            "<p>漏洞发现与补丁管理</p>",
+            "<p>流量控制&nbsp;</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 10,
+          "belong_page": 1,
+          "question_id": 96981,
+          "question_title": "（ ）的保护期限是可以延长的。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "96981",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>专利权</p>", "<p>商标权</p>", "<p>著作权</p>", "<p>商业秘密权</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 11,
+          "belong_page": 1,
+          "question_id": 96982,
+          "question_title": "<p>甲公司软件设计师完成了一项涉及计算机程序的发明。之后，乙公司软件设计师也完成了与甲公司软件设计师相同的涉及计算机程序的发明。甲、乙公司于同一天向专利局申请发明专利。此情形下，（ ）是专利权申请人。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "96982",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>甲公司</p>",
+            "<p>甲、乙两公司</p>",
+            "<p>乙公司</p>",
+            "<p>由甲、乙公司协商确定的公司</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 12,
+          "belong_page": 1,
+          "question_id": 34549,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\">甲、乙两厂生产的产品类似，且产品都使用“</span><span style=\"font-family: &quot;Times New Roman&quot;, serif; font-size: 10.5pt;\">B&quot;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">商标。两厂于同一天向商标局申请商标注册，且申请注册前两厂均未使用“</span><span style=\"font-family: &quot;Times New Roman&quot;, serif; font-size: 10.5pt;\">B&quot;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">商标。此情形下，（</span><span style=\"font-family: &quot;Times New Roman&quot;, serif; font-size: 10.5pt;\">&nbsp; </span><span style=\"font-family: 宋体; font-size: 10.5pt;\">）能核准注册</span><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34549",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>甲厂</p>",
+            "<p>由甲、乙厂抽签确定的厂</p>",
+            "<p>乙厂</p>",
+            "<p>甲、乙两厂</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 13,
+          "belong_page": 1,
+          "question_id": 34550,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">在</span>FM<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">方式的数字音乐合成器中，改变数字载波频率可以改变乐音的（</span>&nbsp; <span style=\"font-family: 宋体; mso-hansi-font-family: &quot;Times New Roman&quot;;\">），</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34550",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>音调</p>", "<p>音色</p>", "<p>音高</p>", "<p>音质</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 14,
+          "belong_page": 1,
+          "question_id": 34551,
+          "question_title": "<p><span style=\"font-family: 宋体;\">在</span>FM<span style=\"font-family: 宋体;\">方式的数字音乐合成器中，，改变它的信号幅度可以改变乐音的（</span>&nbsp; <span style=\"font-family: 宋体;\">）。</span><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34551",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>音调</p>", "<p>音域</p>", "<p>音高</p>", "<p>带宽</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 15,
+          "belong_page": 1,
+          "question_id": 34552,
+          "question_title": "<p><span style=\"font-size: 10.5pt; mso-font-kerning: 1.0pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-bidi-font-size: 12.0pt;\">结构化开发方法中，（</span><span style=\"font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; font-size: 10.5pt; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-bidi-language: AR-SA; mso-bidi-font-size: 12.0pt;\">&nbsp; </span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN;\">）主要包含对数据结构和算法的设计。</span><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34552",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>体系结构设计</p>",
+            "<p>数据设计</p>",
+            "<p>接口设计</p>",
+            "<p>过程设计</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 16,
+          "belong_page": 1,
+          "question_id": 34553,
+          "question_title": "<p><span style=\"font-family: 宋体;\">在敏捷过程的开发方法中，（</span>&nbsp; <span style=\"font-family: 宋体;\">）使用了迭代的方法，其中，把每段时间（</span>30<span style=\"font-family: 宋体;\">天）一次的迭代称为一个“冲刺”，并按需求的优先级别来实现产品，多个自组织和自治的小组并行地递增实现产品。</span><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34553",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>极限编程XP</p>",
+            "<p>水晶法</p>",
+            "<p>并列争球法</p>",
+            "<p>自适应软件开发</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 17,
+          "belong_page": 1,
+          "question_id": 34554,
+          "question_title": "<p><span style=\"font-size: 10.5pt; mso-font-kerning: 1.0pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-bidi-font-size: 12.0pt;\">某软件项目的活动图如下图所示，其中顶点表示项目里程碑，连接顶点的边表示包含的活动，边上的数字表示相应活动的持续时间（天），则完成该项目的最少时间为（</span><span style=\"font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; font-size: 10.5pt; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-bidi-language: AR-SA; mso-bidi-font-size: 12.0pt;\">&nbsp; </span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN;\">）天<img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201712/e4f842e20590b60d4774785e98dd4536d1b62f.png\"/></span><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34554",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>11</p>", "<p>15</p>", "<p>16</p>", "<p>18</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 18,
+          "belong_page": 1,
+          "question_id": 34555,
+          "question_title": "<p><span style=\"font-family: 宋体;\">某软件项目的活动图如下图所示，其中顶点表示项目里程碑，连接顶点的边表示包含的活动，边上的数字表示相应活动的持续时间（天），活动</span>BC<span style=\"font-family: 宋体;\">和</span>BF<span style=\"font-family: 宋体;\">最多可以晚开始（</span>&nbsp; <span style=\"font-family: 宋体;\">）天而不会影响整个项目的进度。<img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201712/244062d49652be5d1565436a94d6ae1a305e10.png\"/></span><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34555",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>0和7</p>", "<p>0和11</p>", "<p>2和7</p>", "<p>2和11</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 19,
+          "belong_page": 1,
+          "question_id": 34556,
+          "question_title": "<p><span style=\"font-family: 宋体;\">成本估算时，（</span>&nbsp; <span style=\"font-family: 宋体;\">）方法以规模作为成本的主要因素，考虑多个成本驱动因子。该方法包括三个阶段性模型，即应用组装模型、早期设计阶段模型和体系结构阶段模型。</span><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34556",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>专家估算</p>",
+            "<p>Wolverton</p>",
+            "<p>COCOMO</p>",
+            "<p>COCOMO&nbsp;Ⅱ</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 20,
+          "belong_page": 1,
+          "question_id": 34557,
+          "question_title": "<p><span style=\"font-family: 宋体;\">逻辑表达式求值时常采用短路计算方式。“</span>&amp;&amp;&quot;<span style=\"font-family: 宋体;\">、“</span>||<span style=\"font-family: 宋体;\">”、“！”分别表示逻辑与、或、非运算，“</span>&amp;&amp;<span style=\"font-family: 宋体;\">”、“</span>||<span style=\"font-family: 宋体;\">”为左结合，“！”为右结合，优先级从高到低为</span>&nbsp; <span style=\"font-family: 宋体;\">“！”、“</span>&amp;&amp;<span style=\"font-family: 宋体;\">”、“</span>||<span style=\"font-family: 宋体;\">”。对逻辑表达式“</span>x&amp;&amp;<span style=\"font-family: 宋体;\">（</span>y ||&nbsp;&nbsp;!z<span style=\"font-family: 宋体;\">）”进行短路计算方式求值时，（</span>&nbsp; <span style=\"font-family: 宋体;\">）。</span>&nbsp;&nbsp;<br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34557",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>x为真，则整个表达式的值即为真，不需要计算y和z的值</p>",
+            "<p>x为假，则整个表达式的值即为假，不需要计算y和z的值</p>",
+            "<p>x为真，再根据z的值决定是否需要计算y的值</p>",
+            "<p>x为假，再根据y的值决定是否需要计算z的值</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 21,
+          "belong_page": 1,
+          "question_id": 34558,
+          "question_title": "<p><span style=\"font-family: 宋体;\">常用的函数参数传递方式有传值与传引用两种。（</span>&nbsp; <span style=\"font-family: 宋体;\">）。</span><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34558",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>在传值方式下，形参与实参之间互相传值</p>",
+            "<p>在传值方式下，实参不能是变量</p>",
+            "<p>在传引用方式下，修改形参实质上改变了实参的值。</p>",
+            "<p>在传引用方式下，实参可以是任意的变量和表达式。</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 22,
+          "belong_page": 1,
+          "question_id": 34559,
+          "question_title": "<p><span style=\"font-family: 宋体;\">二维数组</span>a[1..N<span style=\"font-family: 宋体;\">，</span>1..N]<span style=\"font-family: 宋体;\">可以按行存储或按列存储。对于数组元素</span>a[i,j]<span style=\"font-family: 宋体;\">（</span>1&lt;=i,j&lt;=N<span style=\"font-family: 宋体;\">），当（</span>&nbsp;<span style=\"font-family: 宋体;\">）时，在按行和按列两种存储方式下，其偏移量相同。</span><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34559",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>i≠j</p>", "<p>i=j</p>", "<p>i&gt;j</p>", "<p>i&lt;j</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 23,
+          "belong_page": 1,
+          "question_id": 34560,
+          "question_title": "<p><span style=\"font-family: 宋体;\">实时操作系统主要用于有实时要求的过程控制等领域。实时系统对于来自外部的事件必须在（</span>&nbsp; <span style=\"font-family: 宋体;\">）。</span><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34560",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>一个时间片内进行处理&nbsp;</p>",
+            "<p>一个周转时间内进行处理&nbsp;&nbsp;&nbsp;</p>",
+            "<p>一个机器周期内进行处理&nbsp;</p>",
+            "<p>被控对象规定的时间内做出及时响应并对其进行处理</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 24,
+          "belong_page": 1,
+          "question_id": 34561,
+          "question_title": "<p><span style=\"background: white; font-family: 宋体;\">假设某计算机系统中只有一个</span><span style=\"background: white;\">CPU</span><span style=\"background: white; font-family: 宋体;\">、一台输入设备和一台输出设备，若系统中有四个作业</span><span style=\"background: white;\">T1</span><span style=\"background: white; font-family: 宋体;\">、</span><span style=\"background: white;\">T2</span><span style=\"background: white; font-family: 宋体;\">、</span><span style=\"background: white;\">T3</span><span style=\"background: white; font-family: 宋体;\">和</span><span style=\"background: white;\">T4</span><span style=\"background: white; font-family: 宋体;\">，系统采用优先级调度，且</span><span style=\"background: white;\">T1</span><span style=\"background: white; font-family: 宋体;\">的优先级</span><span style=\"background: white;\">&gt;T2</span><span style=\"background: white; font-family: 宋体;\">的优先级</span><span style=\"background: white;\">&gt;T3</span><span style=\"background: white; font-family: 宋体;\">的优先级</span><span style=\"background: white;\">&gt;T4</span><span style=\"background: white; font-family: 宋体;\">的优先级。每个作业</span><span style=\"background: white;\">Ti</span><span style=\"background: white; font-family: 宋体;\">具有三个程序段：输入</span><span style=\"background: white;\">I<sub>i</sub></span><span style=\"background: white; font-family: 宋体;\">、计算</span><span style=\"background: white;\">C<sub>i</sub></span><span style=\"background: white; font-family: 宋体;\">和输出</span><span style=\"background: white;\">P<sub>i</sub></span><span style=\"background: white; font-family: 宋体;\">（</span><span style=\"background: white;\">i=1</span><span style=\"background: white; font-family: 宋体;\">，</span><span style=\"background: white;\">2</span><span style=\"background: white; font-family: 宋体;\">，</span><span style=\"background: white;\">3</span><span style=\"background: white; font-family: 宋体;\">，</span><span style=\"background: white;\">4</span><span style=\"background: white; font-family: 宋体;\">），其执行顺序为</span><span style=\"background: white;\">I<sub>i</sub></span><span style=\"background: #F6FBFF;\">→</span><span style=\"background: white;\">C<sub>i</sub></span><span style=\"background: #F6FBFF;\">→</span><span style=\"background: white;\">P<sub>i</sub></span><sub><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt; mso-hansi-theme-font: minor-fareast;\">。</span></sub><span style=\"background: white; font-family: 宋体;\">这四个作业各程序段并发执行的前驱图如下所示。图中①、②分别为（</span><span style=\"background: white;\">&nbsp; </span><span style=\"background: white; font-family: 宋体;\">）</span><span style=\"background: white; font-family: 宋体;\"><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201712/835175a68c27181fe5539939038768fdf8ce74.png\"/></span><br/></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34561",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>l2、P2</p>", "<p>l2、C2</p>", "<p>C1、P2</p>", "<p>C1、P3</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 25,
+          "belong_page": 1,
+          "question_id": 34562,
+          "question_title": "<p><span style=\"background: white; font-family: 宋体;\">假设某计算机系统中只有一个</span><span style=\"background: white;\">CPU</span><span style=\"background: white; font-family: 宋体;\">、一台输入设备和一台输出设备，若系统中有四个作业</span><span style=\"background: white;\">T1</span><span style=\"background: white; font-family: 宋体;\">、</span><span style=\"background: white;\">T2</span><span style=\"background: white; font-family: 宋体;\">、</span><span style=\"background: white;\">T3</span><span style=\"background: white; font-family: 宋体;\">和</span><span style=\"background: white;\">T4</span><span style=\"background: white; font-family: 宋体;\">，系统采用优先级调度，且</span><span style=\"background: white;\">T1</span><span style=\"background: white; font-family: 宋体;\">的优先级</span><span style=\"background: white;\">&gt;T2</span><span style=\"background: white; font-family: 宋体;\">的优先级</span><span style=\"background: white;\">&gt;T3</span><span style=\"background: white; font-family: 宋体;\">的优先级</span><span style=\"background: white;\">&gt;T4</span><span style=\"background: white; font-family: 宋体;\">的优先级。每个作业</span><span style=\"background: white;\">Ti</span><span style=\"background: white; font-family: 宋体;\">具有三个程序段：输入</span><span style=\"background: white;\">I<sub>i</sub></span><span style=\"background: white; font-family: 宋体;\">、计算</span><span style=\"background: white;\">C<sub>i</sub></span><span style=\"background: white; font-family: 宋体;\">和输出</span><span style=\"background: white;\">P<sub>i</sub></span><span style=\"background: white; font-family: 宋体;\">（</span><span style=\"background: white;\">i=1</span><span style=\"background: white; font-family: 宋体;\">，</span><span style=\"background: white;\">2</span><span style=\"background: white; font-family: 宋体;\">，</span><span style=\"background: white;\">3</span><span style=\"background: white; font-family: 宋体;\">，</span><span style=\"background: white;\">4</span><span style=\"background: white; font-family: 宋体;\">），其执行顺序为</span><span style=\"background: white;\">I<sub>i</sub></span><span style=\"background: #F6FBFF;\">→</span><span style=\"background: white;\">C<sub>i</sub></span><span style=\"background: #F6FBFF;\">→</span><span style=\"background: white;\">P<sub>i</sub></span><sub><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt; mso-hansi-theme-font: minor-fareast;\">。</span></sub><span style=\"background: white; font-family: 宋体;\">这四个作业各程序段并发执行的前驱图如下所示。图中③、④、⑤分别为（</span><span style=\"background: white;\">&nbsp; </span><span style=\"background: white; font-family: 宋体;\">）。<br/></span><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1583934263216850.png\" alt=\"QQ图片20200311214404.png\" src=\"https://s2.51cto.com/images/20200311/1583934263216850.png\"/></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34562",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>C2、C4、P4</p>",
+            "<p>&nbsp;l2、l3、C4</p>",
+            "<p>I3、P3、P4</p>",
+            "<p>&nbsp;l3、C4、P4</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 26,
+          "belong_page": 1,
+          "question_id": 34563,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">假设段页式存储管理系统中的地址结构如下图所示，则系统（</span>&nbsp; <span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">）。<img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201712/47b98e220844fd0cfbf164a39c344eba187866.png\"/></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34563",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>最多可有256个段，每个段的大小均为2048个页，页的大小为8K</p>",
+            "<p>最多可有256个段，每个段最大允许有2048个页，页的大小为8K</p>",
+            "<p>最多可有512个段，每个段的大小均为1024个页，页的大小为4K</p>",
+            "<p>最多可有512个段，每个段最大允许有1024个页，页的大小为4K</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 27,
+          "belong_page": 1,
+          "question_id": 96993,
+          "question_title": "假设系统中有n个进程共享3台扫描仪，并采用PV操作实现进程同步与互斥。若系统信号量S的当前值为-1，进程P1、P2又分别执行了1次P（S）操作，那么信号量S的值应为（ ）。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "96993",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>3</p>", "<p>-3</p>", "<p>1</p>", "<p>-1</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 28,
+          "belong_page": 1,
+          "question_id": 43103,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">某字长为</span>32<span style=\"font-family: 宋体;\">位的计算机的文件管理系统采用位示图（</span><span style=\"font-family: Calibri;\">bitmap</span><span style=\"font-family: 宋体;\">）记录磁盘的使用情况。若磁盘的容量为</span><span style=\"font-family: Calibri;\">300GB</span><span style=\"font-family: 宋体;\">，物理块的大小为</span><span style=\"font-family: Calibri;\">1MB</span><span style=\"font-family: 宋体;\">，那么位示图的大小为（ &nbsp;）个字。</span></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;\"></span></p><p>&nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "43103",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>1200</p>", "<p>3200</p>", "<p>6400</p>", "<p>9600</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 29,
+          "belong_page": 1,
+          "question_id": 34566,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\">某开发小组欲为一公司开发一个产品控制软件，监控产品的生产和销售过程，从购买各种材料开始，到产品的加工和销售进行全程跟踪。购买材料的流程、产品的加工过程以及销售过程可能会发生变化。该软件的开发最不适宜采用（</span><span style=\"font-family: &quot;Times New Roman&quot;, serif; font-size: 10.5pt;\">&nbsp; </span><span style=\"font-family: 宋体; font-size: 10.5pt;\">）模型</span><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34566",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>瀑布</p>", "<p>原型</p>", "<p>增量</p>", "<p>喷泉</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 30,
+          "belong_page": 1,
+          "question_id": 34567,
+          "question_title": "<p><span style=\"font-family: 宋体;\">某开发小组欲为一公司开发一个产品控制软件，监控产品的生产和销售过程，从购买各种材料开始，到产品的加工和销售进行全程跟踪。购买材料的流程、产品的加工过程以及销售过程可能会发生变化。该软件的开发最不适宜采用一种模型，主要是因为这种模型（</span>&nbsp; <span style=\"font-family: 宋体;\">）。</span><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34567",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>不能解决风险</p>",
+            "<p>不能快速提交软件&nbsp;</p>",
+            "<p>难以适应变化的需求</p>",
+            "<p>不能理解用户的需求</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 31,
+          "belong_page": 1,
+          "question_id": 34568,
+          "question_title": "<p><span style=\"font-size: 10.5pt; mso-font-kerning: 1.0pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-bidi-font-size: 12.0pt;\">（</span><span style=\"font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; font-size: 10.5pt; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-bidi-language: AR-SA; mso-bidi-font-size: 12.0pt;\">&nbsp; </span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN;\">）不属于软件质量特性中的可移植性。</span><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34568",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>适应性</p>", "<p>易安装性</p>", "<p>易替换性</p>", "<p>易理解性</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 32,
+          "belong_page": 1,
+          "question_id": 34569,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt;\">对下图所示流程图采用白盒测试方法进行测试，若要满足路径覆盖，则至少需要（</span><span style=\"font-family: &quot;Times New Roman&quot;, serif; font-size: 10.5pt;\">&nbsp; </span><span style=\"font-family: 宋体; font-size: 10.5pt;\">）个测试用例<img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201712/29dc04b150ea3484aa363677a88765a825c775.png\"/></span><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34569",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>3</p>", "<p>4</p>", "<p>6</p>", "<p>8</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 33,
+          "belong_page": 1,
+          "question_id": 34570,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">对下图所示流程图采用</span>McCabe<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">度量法计算该程序的环路复杂性为（</span>&nbsp; <span style=\"font-family: 宋体; mso-hansi-font-family: &quot;Times New Roman&quot;;\">）。<img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201712/97c85b907e66b0f16bd397fd90ed3229d84335.png\"/></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34570",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>1</p>", "<p>2</p>", "<p>3</p>", "<p>4</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 34,
+          "belong_page": 1,
+          "question_id": 34571,
+          "question_title": "<p><span style=\"font-family: 宋体;\">计算机系统的（</span>&nbsp; <span style=\"font-family: 宋体;\">）可以用</span>MTBF/<span style=\"font-family: 宋体;\">（</span>1+MTBF<span style=\"font-family: 宋体;\">）来度量，其中</span>MTBF<span style=\"font-family: 宋体;\">为平均失效间隔时间。</span><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34571",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>可靠性&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+            "<p>可用性&nbsp;</p>",
+            "<p>可维护性&nbsp;</p>",
+            "<p>健壮性</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 35,
+          "belong_page": 1,
+          "question_id": 34572,
+          "question_title": "<p><span style=\"font-family: 宋体;\">以下关于软件测试的叙述中，不正确的是（</span>&nbsp; <span style=\"font-family: 宋体;\">）。</span><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34572",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>在设计测试用例时应考虑输入数据和预期输出结果</p>",
+            "<p>软件测试的目的是证明软件的正确性</p>",
+            "<p>在设计测试用例时，应该包括合理的输入条件&nbsp;</p>",
+            "<p>在设计测试用例时，应该包括不合理的输入条件</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 36,
+          "belong_page": 1,
+          "question_id": 34573,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">某模块中有两个处理</span>A<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">和</span>B<span style=\"mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;;\">，分别对数据结构</span>X<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">写数据和读数据，则该模块的内聚类型为（</span>&nbsp; &nbsp;<span style=\"font-family: 宋体; mso-hansi-font-family: &quot;Times New Roman&quot;;\">）内聚。</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34573",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>逻辑</p>", "<p>过程</p>", "<p>通信</p>", "<p>内容</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 37,
+          "belong_page": 1,
+          "question_id": 34574,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">在面向对象方法中，不同对象收到同一消息可以产生完全不同的结果，这一现象称为（</span>&nbsp; <span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">）。在使用时，用户可以发送一个通用的消息，而实现的细节则由接收对象自行决定。</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34574",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>接口</p>", "<p>继承</p>", "<p>覆盖</p>", "<p>多态</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 38,
+          "belong_page": 1,
+          "question_id": 34575,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">在面向对象方法中，支持多态的是（</span>&nbsp; <span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">）。</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34575",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>静态分配</p>", "<p>动态分配</p>", "<p>静态类型</p>", "<p>动态绑定</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 39,
+          "belong_page": 1,
+          "question_id": 34576,
+          "question_title": "<p><span style=\"font-size: 10.5pt; mso-font-kerning: 1.0pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-bidi-font-size: 12.0pt;\">面向对象分析的目的是为了获得对应用问题的理解，其主要活动不包括（</span><span style=\"font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; font-size: 10.5pt; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-bidi-language: AR-SA; mso-bidi-font-size: 12.0pt;\">&nbsp; </span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN;\">）。</span><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34576",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>认定并组织对象</p>",
+            "<p>描述对象间的相互作用</p>",
+            "<p>面向对象程序设计</p>",
+            "<p>确定基于对象的操作</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 40,
+          "belong_page": 1,
+          "question_id": 34577,
+          "question_title": "<p><span style=\"font-family: 宋体;\">如下所示的</span>UML<span style=\"font-family: 宋体;\">状态图中，（</span> &nbsp;<span style=\"font-family: 宋体;\">）时，不一定会离开状态</span>B<br/></p><p class=\"MsoNormal\"><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1539681738868371.png\" alt=\"1111.png\" src=\"https://s1.51ctocdn.cn//images/20181016/1539681738868371.png\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34577",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>状态B中的两个结束状态均达到</p>",
+            "<p>在当前状态为B2时，事件e2发生</p>",
+            "<p>事件e2发生</p>",
+            "<p>事件e1发生</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 41,
+          "belong_page": 1,
+          "question_id": 34578,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">以下关于</span>UML<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">状态图中转换（</span>transition<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">）的叙述中，不正确的是（</span>&nbsp; <span style=\"font-family: 宋体; mso-hansi-font-family: &quot;Times New Roman&quot;;\">）。</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34578",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>活动可以在转换时执行也可以在状态内执行</p>",
+            "<p>监护条件只有在相应的事件发生时才进行检查</p>",
+            "<p>一个转换可以有事件触发器、监护条件和一个状态</p>",
+            "<p>事件触发转换</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 42,
+          "belong_page": 1,
+          "question_id": 34579,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">下图①②③④所示是</span>UML<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">（</span> &nbsp;<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">）。现有场景：一名医生（</span>Doctor<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">）可以治疗多位病人（</span>Patient<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">），一位病人可以由多名医生治疗，一名医生可能多次治疗同一位病人。要记录哪名医生治疗哪位病人时，需要存储治疗（</span>Treatment<span style=\"font-family: 宋体; mso-hansi-font-family: &quot;Times New Roman&quot;;\">）的日期和时间。</span><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\"><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201712/828535653de159e654204717ca6a42939102e7.png\"/></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34579",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>用例图&nbsp;&nbsp;</p>",
+            "<p>对象图&nbsp;&nbsp;&nbsp;</p>",
+            "<p>类图</p>",
+            "<p>协作图</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 43,
+          "belong_page": 1,
+          "question_id": 34580,
+          "question_title": "<p><span style=\"font-family: 宋体;\">现有场景：一名医生（</span>Doctor<span style=\"font-family: 宋体;\">）可以治疗多位病人（</span>Patient<span style=\"font-family: 宋体;\">），一位病人可以由多名医生治疗，一名医生可能多次治疗同一位病人。要记录哪名医生治疗哪位病人时，需要存储治疗（</span>Treatment<span style=\"font-family: 宋体;\">）的日期和时间。以下①②③④图中（</span>&nbsp; <span style=\"font-family: 宋体;\">）。是描述此场景的模型。<img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201712/01d3bc7131645e486dc779e1d62bfba0745417.png\"/></span><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34580",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>①&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+            "<p>②&nbsp;</p>",
+            "<p>③&nbsp;&nbsp;&nbsp;</p>",
+            "<p>④</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 44,
+          "belong_page": 1,
+          "question_id": 34581,
+          "question_title": "<p><span style=\"font-size: 10.5pt; mso-font-kerning: 1.0pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-bidi-font-size: 12.0pt;\">（</span><span style=\"font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; font-size: 10.5pt; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-bidi-language: AR-SA; mso-bidi-font-size: 12.0pt;\"> &nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN;\">）模式定义一系列的算法，把它们一个个封装起来，并且使它们可以相互替换，使得算法可以独立于使用它们的客户而变化</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34581",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>命令（Command）</p>",
+            "<p>责任链（Chain&nbsp;of&nbsp;Responsibility）</p>",
+            "<p>观察者（Observer）</p>",
+            "<p>策略（Strategy）</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 45,
+          "belong_page": 1,
+          "question_id": 34582,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">某模式定义一系列的算法，把它们一个个封装起来，并且使它们可以相互替换，使得算法可以独立于使用它们的客户而变化。以下（</span>&nbsp; <span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">）情况适合选用该模式。</span></p><p class=\"MsoNormal\">&nbsp;</p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">①一个客户需要使用一组相关对象</span></p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">②一个对象的改变需要改变其它对象</span>&nbsp;&nbsp;&nbsp;</p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">③需要使用一个算法的不同变体</span></p><p>&nbsp;</p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">④许多相关的类仅仅是行为有异</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34582",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>①②&nbsp;&nbsp;</p>",
+            "<p>②③&nbsp;&nbsp;</p>",
+            "<p>③④&nbsp;</p>",
+            "<p>①④</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 46,
+          "belong_page": 1,
+          "question_id": 34583,
+          "question_title": "<p><span style=\"font-size: 10.5pt; mso-font-kerning: 1.0pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-bidi-font-size: 12.0pt;\">（</span><span style=\"font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; font-size: 10.5pt; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-bidi-language: AR-SA; mso-bidi-font-size: 12.0pt;\">&nbsp; </span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN;\">）模式将一个复杂对象的构建与其表示分离，使得同样的构建过程可以创</span><span style=\"font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; font-size: 10.5pt; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-bidi-language: AR-SA; mso-bidi-font-size: 12.0pt;\"> </span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-font-kerning: 1.0pt; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-ansi-language: EN-US; mso-bidi-language: AR-SA; mso-bidi-font-size: 12.0pt;\">建不同的表示。</span><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34583",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>生成器（Builder）</p>",
+            "<p>工厂方法（Factory&nbsp;Method）</p>",
+            "<p>原型（Prototype）</p>",
+            "<p>单例（&nbsp;Singleton）</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 47,
+          "belong_page": 1,
+          "question_id": 34584,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">某模式将一个复杂对象的构建与其表示分离，使得同样的构建过程可以创</span><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">建不同的表示。以下（</span>&nbsp; <span style=\"font-family: 宋体; mso-hansi-font-family: &quot;Times New Roman&quot;;\">）情况适合选用该模式。</span></p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">①抽象复杂对象的构建步骤</span></p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">②基于构建过程的具体实现构建复杂对象的不同表示</span></p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">③一个类仅有一个实例</span></p><p>&nbsp;</p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">④一个类的实例只能有几个不同状态组合中的一种</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34584",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>①②&nbsp;&nbsp;</p>", "<p>②③&nbsp;</p>", "<p>③④</p>", "<p>①④</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 48,
+          "belong_page": 1,
+          "question_id": 34585,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">由字符</span>a<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">、</span>b<span style=\"mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;;\">构成的字符串中，若每个</span>a<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">后至少跟一个</span>b<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">，则该字符串集合可用正规式表示为（</span>&nbsp; <span style=\"font-family: 宋体; mso-hansi-font-family: &quot;Times New Roman&quot;;\">）。</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34585",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>（b|ab）*</p>", "<p>（ab*）*</p>", "<p>（a*b*）*</p>", "<p>（a|b）*</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 49,
+          "belong_page": 1,
+          "question_id": 34586,
+          "question_title": "<p><span style=\"font-family: 宋体;\">乔姆斯基（</span>Chomsky<span style=\"font-family: 宋体;\">）将文法分为</span>4<span style=\"font-family: 宋体;\">种类型，程序设计语言的大多数语法现象可用其中的（</span>&nbsp; <span style=\"font-family: 宋体;\">）描述。</span><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34586",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>上下文有关文法</p>",
+            "<p>上下文无关文法</p>",
+            "<p>正规文法</p>",
+            "<p>短语结构文法</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 50,
+          "belong_page": 1,
+          "question_id": 34587,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">运行下面的</span>C<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">程序代码段，会出现（</span>&nbsp; <span style=\"font-family: 宋体; mso-hansi-font-family: &quot;Times New Roman&quot;;\">）错误。</span></p><p class=\"MsoNormal\">&nbsp;&nbsp;&nbsp;<br/>int k=0;</p><p class=\"MsoNormal\">&nbsp;&nbsp;&nbsp;<br/>for(;k&lt;100;);</p><p>&nbsp;</p><p class=\"MsoNormal\">&nbsp;&nbsp;&nbsp;<br/>{k++;}</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34587",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>变量未定义</p>", "<p>静态语义</p>", "<p>语法</p>", "<p>动态语义</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 51,
+          "belong_page": 1,
+          "question_id": 34588,
+          "question_title": "<p><span style=\"font-family: 宋体;\">在数据库系统中，一般由</span>DBA<span style=\"font-family: 宋体;\">使用</span>DBMS<span style=\"font-family: 宋体;\">提供的授权功能为不同用户授权，其主要目的是为了保证数据库的（</span>&nbsp; <span style=\"font-family: 宋体;\">）。</span><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34588",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>正确性</p>", "<p>安全性</p>", "<p>一致性</p>", "<p>完整性</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 52,
+          "belong_page": 1,
+          "question_id": 34589,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-fareast-theme-font: minor-fareast;\">给定关系模式</span><span style=\"font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; font-size: 10.5pt; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-fareast-theme-font: minor-fareast;\">R</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-ansi-language: EN-US; mso-bidi-language: AR-SA;\">（</span><span style=\"font-size: 10.5pt; mso-fareast-font-family: 宋体; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN;\">U, F</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-fareast-theme-font: minor-fareast;\">），其中：</span><span style=\"font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; font-size: 10.5pt; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-fareast-theme-font: minor-fareast;\">U</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-ansi-language: EN-US; mso-bidi-language: AR-SA;\">为关系模式</span><span style=\"font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; mso-fareast-font-family: 宋体; mso-ansi-language: EN-US; mso-bidi-language: AR-SA;\">R</span><span style=\"font-size: 10.5pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN;\">中的属性集，</span><span style=\"font-size: 10.5pt; mso-fareast-font-family: 宋体; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN;\">F</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-fareast-theme-font: minor-fareast;\">是</span><span style=\"font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; font-size: 10.5pt; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-fareast-theme-font: minor-fareast;\">U</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-ansi-language: EN-US; mso-bidi-language: AR-SA;\">上的一组函数依赖。假设</span><span style=\"font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; font-size: 10.5pt; mso-ansi-language: EN-US; mso-bidi-language: AR-SA; mso-fareast-theme-font: minor-fareast;\">U={A<sub>1</sub></span><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN;\">，</span><span style=\"font-size: 10.5pt; mso-fareast-font-family: 宋体; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN;\">A<sub>2</sub></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-fareast-theme-font: minor-fareast;\">，</span><span style=\"font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; font-size: 10.5pt; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-fareast-theme-font: minor-fareast;\">A<sub>3</sub></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-ansi-language: EN-US; mso-bidi-language: AR-SA;\">，</span><span style=\"font-size: 10.5pt; mso-fareast-font-family: 宋体; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN;\">A<sub>4</sub>}</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-fareast-theme-font: minor-fareast;\">，</span><span style=\"font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; font-size: 10.5pt; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-fareast-theme-font: minor-fareast;\">F={A<sub>1</sub>→A<sub>2</sub></span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-ansi-language: EN-US; mso-bidi-language: AR-SA;\">，</span><span style=\"font-size: 10.5pt; mso-fareast-font-family: 宋体; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN;\">A<sub>1</sub>A<sub>2</sub>→A<sub>3</sub></span><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN;\">，</span><span style=\"font-size: 10.5pt; mso-fareast-font-family: 宋体; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN;\">A<sub>1</sub>→A<sub>4</sub></span><span style=\"font-size: 10.5pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN;\">，</span><span style=\"font-size: 10.5pt; mso-fareast-font-family: 宋体; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN;\">A<sub>2</sub>→A<sub>4</sub>}</span><span style=\"font-size: 10.5pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN;\">，那么关系</span><span style=\"font-size: 10.5pt; mso-fareast-font-family: 宋体; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN;\">R</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-fareast-theme-font: minor-fareast;\">的主键应为（</span><span style=\"font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; font-size: 10.5pt; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-fareast-theme-font: minor-fareast;\">&nbsp; ）</span><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34589",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>A1</p>", "<p>A1A2</p>", "<p>A1A3</p>", "<p>A1A2A3</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 53,
+          "belong_page": 1,
+          "question_id": 34590,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\" style=\"background: white; line-height: 17pt;\"><span style=\"font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;;\">给定关系模式</span>R<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt;\">（</span>U, F<span style=\"font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-size: 10.5pt; mso-fareast-theme-font: minor-fareast;\">），其中：</span>U<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt;\">为关系模式</span>R<span style=\"mso-font-kerning: 0pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt;\">中的属性集，</span>F<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt;\">是</span>U<span style=\"font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-size: 10.5pt; mso-fareast-theme-font: minor-fareast;\">上的一组函数依赖。假设</span>U={A<sub>1</sub><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt;\">，</span>A<sub>2</sub><span style=\"mso-font-kerning: 0pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt; mso-fareast-theme-font: minor-fareast;\">，</span>A<sub>3</sub><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt;\">，</span>A<sub>4</sub>}<span style=\"mso-font-kerning: 0pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt; mso-fareast-theme-font: minor-fareast;\">，</span>F={A<sub>1</sub>→A<sub>2</sub><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt;\">，</span>A<sub>1</sub>A<sub>2</sub>→A<sub>3</sub><span style=\"font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;;\">，</span>A<sub>1</sub>→A<sub>4</sub><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt;\">，</span>A<sub>2</sub>→A<sub>4</sub>}<span style=\"mso-font-kerning: 0pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt;\">，函数依赖集</span>F<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt;\">中的（</span>&nbsp; <span style=\"mso-font-kerning: 0pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt;\">）是冗余的。</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34590",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>A1→A2</p>", "<p>A1A2→A3</p>", "<p>A1→A4</p>", "<p>A2→A4</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 54,
+          "belong_page": 1,
+          "question_id": 34591,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-fareast-theme-font: minor-fareast;\">给定关系</span><span style=\"font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; font-size: 10.5pt; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-fareast-theme-font: minor-fareast;\">R</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-ansi-language: EN-US; mso-bidi-language: AR-SA;\">（</span><span style=\"font-size: 10.5pt; mso-fareast-font-family: 宋体; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN;\">A </span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-fareast-theme-font: minor-fareast;\">，</span><span style=\"font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; font-size: 10.5pt; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-fareast-theme-font: minor-fareast;\"> B </span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-ansi-language: EN-US; mso-bidi-language: AR-SA;\">，</span><span style=\"font-size: 10.5pt; mso-fareast-font-family: 宋体; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN;\"> C </span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-fareast-theme-font: minor-fareast;\">，</span><span style=\"font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; font-size: 10.5pt; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-fareast-theme-font: minor-fareast;\">D</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-ansi-language: EN-US; mso-bidi-language: AR-SA;\">）和关系</span><span style=\"font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; mso-fareast-font-family: 宋体; mso-ansi-language: EN-US; mso-bidi-language: AR-SA;\">S</span><span style=\"font-size: 10.5pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN;\">（</span><span style=\"font-size: 10.5pt; mso-fareast-font-family: 宋体; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN;\">A </span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-fareast-theme-font: minor-fareast;\">，</span><span style=\"font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; font-size: 10.5pt; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-fareast-theme-font: minor-fareast;\">C </span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-ansi-language: EN-US; mso-bidi-language: AR-SA;\">，</span><span style=\"font-size: 10.5pt; mso-fareast-font-family: 宋体; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN;\">E </span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-fareast-theme-font: minor-fareast;\">，</span><span style=\"font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; font-size: 10.5pt; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-fareast-theme-font: minor-fareast;\">F</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-ansi-language: EN-US; mso-bidi-language: AR-SA;\">），对其进行自然连接运算<img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20220726/1658811011384771.png\" title=\"1658811011384771.png\" alt=\"image.png\"/></span><span style=\"font-size: 10.5pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN;\">后的属性列为（</span><span style=\"font-size: 10.5pt; mso-fareast-font-family: 宋体; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN;\">&nbsp; </span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-fareast-theme-font: minor-fareast;\">）个</span><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34591",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>4</p>", "<p>5</p>", "<p>6</p>", "<p>8</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 55,
+          "belong_page": 1,
+          "question_id": 34592,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\" style=\"background: rgb(233, 233, 233);\"><span style=\"font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-size: 10.5pt; mso-fareast-theme-font: minor-fareast;\">给定关系</span>R<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt;\">（</span>A <span style=\"font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-size: 10.5pt; mso-fareast-theme-font: minor-fareast;\">，</span> B <span style=\"font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;;\">，</span> C <span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt;\">，</span>D<span style=\"font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-size: 10.5pt; mso-fareast-theme-font: minor-fareast;\">）和关系</span>S<span style=\"font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;;\">（</span>A <span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt;\">，</span>C <span style=\"font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-size: 10.5pt; mso-fareast-theme-font: minor-fareast;\">，</span>E <span style=\"font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;;\">，</span>F<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt;\">），与</span>σ<sub>R.B&gt;S.E</sub>(R ⋈&nbsp;S)<span style=\"font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;;\">等价的关系代数表达式为（</span>&nbsp; <span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt;\">）。</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34592",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>σ2&gt;7（R&nbsp;x&nbsp;S）</p>",
+            "<p>π1,2,3,4,7,8（σ1=5^2&gt;7^3=6（R×S））</p>",
+            "<p>σ2&gt;&#39;7&#39;（R×S）</p>",
+            "<p>π1,2,3,4,7,8（σ1=5^2&gt;’7’^3=6（R×S））</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 56,
+          "belong_page": 1,
+          "question_id": 34593,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-fareast-theme-font: minor-fareast;\">下列查询</span><span style=\"font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; font-size: 10.5pt; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-fareast-theme-font: minor-fareast;\">B=“</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-ansi-language: EN-US; mso-bidi-language: AR-SA; mso-hansi-theme-font: minor-fareast;\">大数据</span><span style=\"font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; mso-fareast-font-family: 宋体; mso-ansi-language: EN-US; mso-bidi-language: AR-SA;\">”</span><span style=\"font-size: 10.5pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-hansi-theme-font: minor-fareast;\">且</span><span style=\"font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; font-size: 10.5pt; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-fareast-theme-font: minor-fareast;\">F=“</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-ansi-language: EN-US; mso-bidi-language: AR-SA; mso-hansi-theme-font: minor-fareast;\">开发平台</span><span style=\"font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; mso-fareast-font-family: 宋体; mso-ansi-language: EN-US; mso-bidi-language: AR-SA;\">”</span><span style=\"font-size: 10.5pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-hansi-theme-font: minor-fareast;\">，结果集属性列为</span><span style=\"font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; font-size: 10.5pt; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-fareast-theme-font: minor-fareast;\">A</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-ansi-language: EN-US; mso-bidi-language: AR-SA; mso-hansi-theme-font: minor-fareast;\">、</span><span style=\"font-size: 10.5pt; mso-fareast-font-family: 宋体; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN;\">B</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-ansi-language: EN-US; mso-bidi-language: AR-SA; mso-fareast-theme-font: minor-fareast;\">、</span><span style=\"font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; font-size: 10.5pt; mso-ansi-language: EN-US; mso-bidi-language: AR-SA; mso-fareast-theme-font: minor-fareast;\">C</span><span style=\"font-size: 10.5pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-hansi-theme-font: minor-fareast;\">、</span><span style=\"font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; font-size: 10.5pt; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-fareast-theme-font: minor-fareast;\">F</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-ansi-language: EN-US; mso-bidi-language: AR-SA; mso-hansi-theme-font: minor-fareast;\">的关系代数表达式中，查询效率最高的是（</span><span style=\"font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; font-size: 10.5pt; mso-ansi-language: EN-US; mso-bidi-language: AR-SA; mso-fareast-theme-font: minor-fareast;\">&nbsp; </span><span style=\"font-size: 10.5pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-hansi-theme-font: minor-fareast;\">）</span><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34593",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>π1,2,3,8&nbsp;（σ2=&#39;大数据&#39;&nbsp;&nbsp;^&nbsp;1=5&nbsp;^&nbsp;3=6&nbsp;^&nbsp;8=&#39;开发平台&#39;（R×S））&nbsp;&nbsp;</p>",
+            "<p>π1,2,3,8&nbsp;（σ1=5&nbsp;^&nbsp;3=6&nbsp;^&nbsp;8=&#39;开发平台&#39;（σ2=&#39;大数据&#39;（R）×S））</p>",
+            "<p>π1,2,3,8（σ2=&#39;大数据&#39;&nbsp;^&nbsp;1=5&nbsp;^&nbsp;3=6（R×σ4=&#39;开发平台&#39;（S））</p>",
+            "<p>π1,2,3,8（σ1=5&nbsp;^&nbsp;3=6（σ2=&#39;大数据&#39;（R）×σ4=&#39;开发平台&#39;（S）））</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 57,
+          "belong_page": 1,
+          "question_id": 34594,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">拓扑序列是有向无环图中所有顶点的一个线性序列，若有向图中存在弧</span>&lt;v<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">，</span>w&gt;<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">或存在从顶点</span>v<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">到</span>w<span style=\"mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;;\">的路径，则在该有向图的任一拓扑序列中，</span>v<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">一定在</span>w<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">之前。下面有向图的拓扑序列是（</span>&nbsp; <span style=\"font-family: 宋体; mso-hansi-font-family: &quot;Times New Roman&quot;;\">）。<img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201712/82a19fc304e190950eb9323cb5e0566bb760a8.png\"/></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34594",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>41235</p>", "<p>43125</p>", "<p>42135</p>", "<p>41325</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 58,
+          "belong_page": 1,
+          "question_id": 34595,
+          "question_title": "<p><span style=\"font-size: 10.5pt; mso-font-kerning: 1.0pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-bidi-font-size: 12.0pt;\">设有一个包含</span><span style=\"font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; font-size: 10.5pt; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-bidi-language: AR-SA; mso-bidi-font-size: 12.0pt;\">n</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-font-kerning: 1.0pt; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-ansi-language: EN-US; mso-bidi-language: AR-SA; mso-bidi-font-size: 12.0pt;\">个元素的有序线性表。在等概率情况下删除其中的一个元素，若采用顺序存储结构，则平均需要移动（</span><span style=\"font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; font-size: 10.5pt; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-bidi-language: AR-SA; mso-bidi-font-size: 12.0pt;\">&nbsp; </span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN;\">）个元素</span><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34595",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>1</p>", "<p>(n-1)/2</p>", "<p>logn</p>", "<p>n</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 59,
+          "belong_page": 1,
+          "question_id": 35512,
+          "question_title": "<p><span face=\"宋体\" style=\"font-family: 宋体; font-size: 10.5pt;\">设有一个包含</span><span face=\"Calibri\" style=\"font-size: 10.5pt;\">n</span><span face=\"宋体\" style=\"font-family: 宋体; font-size: 10.5pt;\">个元素的有序线性表。在等概率情况下删除其中的一个元素，若采用单链表存储，则平均需要移动（ ）个元素。</span><br/></p><p class=\"MsoNormal\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "35512",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>&nbsp;0&nbsp;</p>", "<p>1</p>", "<p>(n-1)/2</p>", "<p>n/2</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 60,
+          "belong_page": 1,
+          "question_id": 34597,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">具有</span>3<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">个节点的二叉树有（</span>&nbsp; <span style=\"font-family: 宋体; mso-hansi-font-family: &quot;Times New Roman&quot;;\">）种形态。</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34597",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>2</p>", "<p>3</p>", "<p>5</p>", "<p>7</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 61,
+          "belong_page": 1,
+          "question_id": 34598,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\" style=\"background: white; margin-bottom: 12pt;\"><span style=\"font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-theme-font: minor-fareast;\">以下关于二叉排序树（或二叉查找树、二叉搜索树）的叙述中，正确的是（</span>&nbsp; &nbsp;&nbsp;<span style=\"mso-font-kerning: 0pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt; mso-hansi-theme-font: minor-fareast;\">）</span>&nbsp;<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt; mso-hansi-theme-font: minor-fareast;\">。</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34598",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>对二叉排序树进行先序、中序和后序遍历，都得到结点关键字的有序序列</p>",
+            "<p>含有n个结点的二叉排序树高度为⌊log2n⌋+1</p>",
+            "<p>从根到任意一个叶子结点的路径上，结点的关键字呈现有序排列的特点</p>",
+            "<p>从左到右排列同层次的结点，其关键字呈现有序排列的特点</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 62,
+          "belong_page": 1,
+          "question_id": 34599,
+          "question_title": "<p><span style=\"font-family: 宋体;\">下表为某文件中字符的出现频率，采用霍夫曼编码对下列字符编码，则字符序列“</span>bee<span style=\"font-family: 宋体;\">”的编码为（</span>&nbsp; <span style=\"font-family: 宋体;\">）；</span><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201712/b6a642544bab402aa74987129133fa24a07def.png\"/><span style=\"font-family: 宋体;\"></span></p><p><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34599",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>10111011101</p>",
+            "<p>10111001100</p>",
+            "<p>001100100</p>",
+            "<p>110011011</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 63,
+          "belong_page": 1,
+          "question_id": 34600,
+          "question_title": "<p><span style=\"font-family: 宋体;\">下表为某文件中字符的出现频率，采用霍夫曼编码对下列字符编码，编码“</span>110001001101<span style=\"font-family: 宋体;\">”的对应的字符序列为（</span>&nbsp; <span style=\"font-family: 宋体;\">）。<img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201712/f299f8094917bae602a9300dc9cc9901fc0e12.png\"/></span><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34600",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>bad</p>", "<p>bee</p>", "<p>face</p>", "<p>bace</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 64,
+          "belong_page": 1,
+          "question_id": 34601,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\"><span style=\"background: white; font-family: 宋体; mso-bidi-font-size: 10.5pt; mso-fareast-theme-font: minor-fareast;\">两个矩阵</span><span style=\"background: white; mso-fareast-font-family: 宋体; mso-bidi-font-size: 10.5pt;\">A<sub>m*n</sub></span><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt; mso-hansi-theme-font: minor-fareast;\">和</span><span style=\"mso-bidi-font-size: 10.5pt; mso-fareast-theme-font: minor-fareast;\">B<sub>n*p</sub></span><span style=\"background: white; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt; mso-fareast-theme-font: minor-fareast;\">相乘，用基本的方法进行，则需要的乘法次数为</span><span style=\"background: white; mso-fareast-font-family: 宋体; mso-bidi-font-size: 10.5pt;\">m*n*p</span><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt; mso-hansi-theme-font: minor-fareast;\">。多个矩阵相乘满足结合律，不同的乘法顺序所需要的乘法次数不同。考虑采用动态规划方法确定</span><span style=\"background: white; mso-fareast-font-family: 宋体; mso-bidi-font-size: 10.5pt;\">M<sub>i</sub></span><sub><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt; mso-hansi-theme-font: minor-fareast;\">，</span></sub><span style=\"mso-fareast-font-family: 宋体; mso-fareast-theme-font: minor-fareast;\">M<sub>(i+1)</sub></span><span style=\"background: white; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt; mso-hansi-theme-font: minor-fareast;\">，</span><span style=\"background: white; mso-fareast-font-family: 宋体; mso-bidi-font-size: 10.5pt;\">…</span><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt; mso-hansi-theme-font: minor-fareast;\">，</span><span style=\"mso-bidi-font-size: 10.5pt; mso-fareast-theme-font: minor-fareast;\">M<sub>j</sub></span><span style=\"background: white; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt; mso-fareast-theme-font: minor-fareast;\">多个矩阵连乘的最优顺序，即所需要的乘法次数最少。最少乘法次数用</span><span style=\"background: white; mso-fareast-font-family: 宋体; mso-bidi-font-size: 10.5pt;\">m[i,j]</span><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt; mso-hansi-theme-font: minor-fareast;\">表示，其递归式定义为：<img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201712/63350a9023be0e4fce8142dc3ee14ce18dde03.png\"/></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">其中</span><span style=\"font-family: &quot;Times New Roman&quot;, serif; font-size: 10.5pt;\">i</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">、</span><span style=\"font-family: &quot;Times New Roman&quot;, serif; font-size: 10.5pt;\">j</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">和</span><span style=\"font-family: &quot;Times New Roman&quot;, serif; font-size: 10.5pt;\">k</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">为矩阵下标，矩阵序列中</span><span style=\"font-family: &quot;Times New Roman&quot;, serif; font-size: 10.5pt;\">M<sub>i</sub></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">的维度为（</span><span style=\"font-family: &quot;Times New Roman&quot;, serif; font-size: 10.5pt;\">p<sub>i-1</sub></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">）</span><span style=\"font-family: &quot;Times New Roman&quot;, serif; font-size: 10.5pt;\">*p<sub>i</sub></span><span style=\"font-family: 宋体; font-size: 10.5pt;\">采用自底向上的方法实现该算法来确定</span><span style=\"font-family: &quot;Times New Roman&quot;, serif; font-size: 10.5pt;\">n</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">个矩阵相乘的顺序，其时间复杂度为（</span><span style=\"font-family: &quot;Times New Roman&quot;, serif; font-size: 10.5pt;\">&nbsp;&nbsp; &nbsp;</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">）</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34601",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>O（n2）</p>", "<p>O（n2lgn）</p>", "<p>O（n3）</p>", "<p>O（n3lgn）</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 65,
+          "belong_page": 1,
+          "question_id": 34602,
+          "question_title": "<p><br/></p><p><br/></p><p>&nbsp;</p><p><span style=\"background: white; font-family: 宋体;\">两个矩阵</span><span style=\"background: white;\">A<sub>m*n</sub></span><span style=\"background: white; font-family: 宋体;\">和</span><span style=\"background: white;\">B<sub>n*p</sub></span><span style=\"background: white; font-family: 宋体;\">相乘，用基本的方法进行，则需要的乘法次数为</span><span style=\"background: white;\">m*n*p</span><span style=\"background: white; font-family: 宋体;\">。多个矩阵相乘满足结合律，不同的乘法顺序所需要的乘法次数不同。考虑采用动态规划方法确定</span><span style=\"background: white;\">M<sub>i</sub></span><sub><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt; mso-hansi-theme-font: minor-fareast;\">，</span></sub><span style=\"background: white;\">M<sub>(i+1)</sub></span><span style=\"background: white; font-family: 宋体;\">，</span><span style=\"background: white;\">…</span><span style=\"background: white; font-family: 宋体;\">，</span><span style=\"background: white;\">M<sub>j</sub></span><span style=\"background: white; font-family: 宋体;\">多个矩阵连乘的最优顺序，即所需要的乘法次数最少。最少乘法次数用</span><span style=\"background: white;\">m[i,j]</span><span style=\"background: white; font-family: 宋体;\">表示，其递归式定义为：</span><br/></p><p class=\"MsoNormal\"><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201712/921d5f575fd1af4027b4167c6a23aa141dc4f0.png\"/></p><p class=\"MsoNormal\" style=\"background: white;\"><span style=\"font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-size: 10.5pt; mso-fareast-theme-font: minor-fareast;\">其中</span>i<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt; mso-hansi-theme-font: minor-fareast;\">、</span>j<span style=\"font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-size: 10.5pt; mso-fareast-theme-font: minor-fareast;\">和</span>k<span style=\"mso-font-kerning: 0pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt; mso-hansi-theme-font: minor-fareast;\">为矩阵下标，矩阵序列中</span>M<sub>i</sub><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt; mso-hansi-theme-font: minor-fareast;\">的维度为（</span>p<sub>i-1</sub><span style=\"font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-theme-font: minor-fareast;\">）</span>*p<sub>i</sub><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt; mso-hansi-theme-font: minor-fareast;\">采用自底向上的方法实现该算法来确定</span>n<span style=\"font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-theme-font: minor-fareast;\">个矩阵相乘的顺序，若四个矩阵</span>M<sub>1</sub><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt; mso-hansi-theme-font: minor-fareast;\">、</span>M<sub>2</sub><span style=\"mso-font-kerning: 0pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt; mso-fareast-theme-font: minor-fareast;\">、</span>M<sub>3</sub><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt; mso-hansi-theme-font: minor-fareast;\">、</span>M<sub>4</sub><span style=\"mso-font-kerning: 0pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt; mso-fareast-theme-font: minor-fareast;\">相乘的维度序列为</span>2<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt; mso-hansi-theme-font: minor-fareast;\">、</span>6<span style=\"font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-size: 10.5pt; mso-fareast-theme-font: minor-fareast;\">、</span>3<span style=\"mso-font-kerning: 0pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt; mso-hansi-theme-font: minor-fareast;\">、</span>10、3<span style=\"font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-size: 10.5pt; mso-fareast-theme-font: minor-fareast;\">，采用上述算法求解，则乘法次数为（</span>&nbsp;&nbsp; &nbsp;<span style=\"mso-font-kerning: 0pt; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 10.5pt; mso-hansi-theme-font: minor-fareast;\">）。</span></p><p><br/></p><br/>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34602",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>156</p>", "<p>144</p>", "<p>180</p>", "<p>360</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 66,
+          "belong_page": 1,
+          "question_id": 34603,
+          "question_title": "<p><span style=\"font-size: 10.5pt; mso-font-kerning: 1.0pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-bidi-font-size: 12.0pt;\">以下协议中属于应用层协议的是（</span><span style=\"font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; font-size: 10.5pt; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-bidi-language: AR-SA; mso-bidi-font-size: 12.0pt;\">&nbsp; </span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN;\">），</span><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34603",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>SNMP</p>", "<p>ARP</p>", "<p>ICMP</p>", "<p>X.25</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 67,
+          "belong_page": 1,
+          "question_id": 34604,
+          "question_title": "<p><span style=\"font-family: 宋体;\">SNMP属于应用层协议的该协议的报文封装在（</span>&nbsp; <span style=\"font-family: 宋体;\">）。</span><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34604",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>TCP</p>", "<p>IP</p>", "<p>UDP</p>", "<p>ICMP</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 68,
+          "belong_page": 1,
+          "question_id": 34605,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">某公司内部使用</span>wb.xyz.com.cn<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">作为访问某服务器的地址，其中</span>wb<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">是（</span>&nbsp;<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">）。</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34605",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>主机名</p>", "<p>协议名</p>", "<p>目录名</p>", "<p>文件名</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 69,
+          "belong_page": 1,
+          "question_id": 34606,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">如果路由器收到了多个路由协议转发的关于某个目标的多条路由，那么决定采用哪条路由的策略是（</span>&nbsp; <span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">）。</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34606",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>选择与自己路由协议相同的</p>",
+            "<p>选择路由费用最小的</p>",
+            "<p>比较各个路由的管理距离</p>",
+            "<p>比较各个路由协议的版本</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 70,
+          "belong_page": 1,
+          "question_id": 34607,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\"><span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">与地址</span>220.112.179.92<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">匹配的路由表的表项是（</span>&nbsp; <span style=\"font-family: 宋体; mso-hansi-font-family: &quot;Times New Roman&quot;;\">）。</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34607",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>220.112.145.32/22</p>",
+            "<p>220.112.145.64/22</p>",
+            "<p>220.112.147.64/22</p>",
+            "<p>220.112.177.64/22</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 71,
+          "belong_page": 1,
+          "question_id": 34608,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\">Software entities are more complex for<br/>their size than perhaps any other human construct, because no two parts are<br/>alike (at least above the statement level). If they are, we make the two<br/>similar parts into one, a<span style=\"font-family: 宋体; mso-hansi-font-family: &quot;Times New Roman&quot;;\">（</span>71&nbsp; <span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">）</span>, open or closed.&nbsp; In this respect software systems differ<br/>profoundly from computers,buildings, or automobiles, where repeated elements<br/>abound.</p><p class=\"MsoNormal\">Digital computers are themselves more<br/>complex than most things people build; they have very large numbers of states.<br/>This makes conceiving, describing, and testing them hard. Software systems have<br/>orders of magnitude more <span style=\"font-family: 宋体; mso-hansi-font-family: &quot;Times New Roman&quot;;\">（</span>72&nbsp; <span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">）</span>than computers do.</p><p class=\"MsoNormal\">Likewise, a scaling-up of a software entity<br/>is not merely a repetition of the same elements in&nbsp; larger size; it is necessarily an increase in<br/>the number of different elements. In most cases, the elements interact with<br/>each other in some<span style=\"font-family: 宋体; mso-hansi-font-family: &quot;Times New Roman&quot;;\">（</span> 73 <span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">）</span>fashion,and<br/>the complexity of the whole increases much more than linearly.</p><p class=\"MsoNormal\">The complexity of software is a(an)<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">（</span>74&nbsp;&nbsp;<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">）</span>property, not<br/>an accidental one. Hence descriptions of a software entity that abstract away<br/>its complexity often abstract away its essence.Mathematics and the physical<br/>sciences made great strides for three centuries by constructing simplified<br/>models of complex phenomena, deriving properties from the models, and verifying<br/>those properties experimentally. This worked because the complexities<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">（</span>75&nbsp;&nbsp;<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">）</span>in the models<br/>were not the essential properties of the phenomena. It does not work when the<br/>complexities are the essence.</p><p>&nbsp;</p><p class=\"MsoNormal\">Many of the classical problems of<br/>developing software products derive from this essential&nbsp; complexity and its nonlinear increases with<br/>size. Not only technical problems but management&nbsp; problems as well come from the complexity.</p><p class=\"MsoNormal\">作答71题</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34608",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>task</p>", "<p>job</p>", "<p>subroutine</p>", "<p>program</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 72,
+          "belong_page": 1,
+          "question_id": 34609,
+          "question_title": "<p>Software entities are more complex for<br/>their size than perhaps any other human construct, because no two parts are<br/>alike (at least above the statement level). If they are, we make the two<br/>similar parts into one, a<span style=\"font-family: 宋体;\">（</span>71&nbsp; <span style=\"font-family: 宋体;\">）</span>, open or closed.&nbsp; In this respect software systems differ<br/>profoundly from computers,buildings, or automobiles, where repeated elements<br/>abound.<br/></p><p class=\"MsoNormal\">Digital computers are themselves more<br/>complex than most things people build; they have very large numbers of states.<br/>This makes conceiving, describing, and testing them hard. Software systems have<br/>orders of magnitude more <span style=\"font-family: 宋体; mso-hansi-font-family: &quot;Times New Roman&quot;;\">（</span>72&nbsp; <span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">）</span>than computers do.</p><p class=\"MsoNormal\">Likewise, a scaling-up of a software entity<br/>is not merely a repetition of the same elements in&nbsp; larger size; it is necessarily an increase in<br/>the number of different elements. In most cases, the elements interact with<br/>each other in some<span style=\"font-family: 宋体; mso-hansi-font-family: &quot;Times New Roman&quot;;\">（</span> 73 <span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">）</span>fashion,and<br/>the complexity of the whole increases much more than linearly.</p><p class=\"MsoNormal\">The complexity of software is a(an)<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">（</span>74&nbsp;&nbsp;<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">）</span>property, not<br/>an accidental one. Hence descriptions of a software entity that abstract away<br/>its complexity often abstract away its essence.Mathematics and the physical<br/>sciences made great strides for three centuries by constructing simplified<br/>models of complex phenomena, deriving properties from the models, and verifying<br/>those properties experimentally. This worked because the complexities<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">（</span>75&nbsp;&nbsp;<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">）</span>in the models<br/>were not the essential properties of the phenomena. It does not work when the<br/>complexities are the essence.</p><p class=\"MsoNormal\">Many of the classical problems of<br/>developing software products derive from this essential&nbsp; complexity and its nonlinear increases with<br/>size. Not only technical problems but management&nbsp; problems as well come from the complexity.</p><p class=\"MsoNormal\">作答72题</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34609",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>states</p>", "<p>parts</p>", "<p>conditions</p>", "<p>expressions</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 73,
+          "belong_page": 1,
+          "question_id": 34610,
+          "question_title": "<p>Software entities are more complex for<br/>their size than perhaps any other human construct, because no two parts are<br/>alike (at least above the statement level). If they are, we make the two<br/>similar parts into one, a<span style=\"font-family: 宋体;\">（</span>71&nbsp; <span style=\"font-family: 宋体;\">）</span>, open or closed.&nbsp; In this respect software systems differ<br/>profoundly from computers,buildings, or automobiles, where repeated elements<br/>abound.<br/></p><p class=\"MsoNormal\">Digital computers are themselves more<br/>complex than most things people build; they have very large numbers of states.<br/>This makes conceiving, describing, and testing them hard. Software systems have<br/>orders of magnitude more <span style=\"font-family: 宋体; mso-hansi-font-family: &quot;Times New Roman&quot;;\">（</span>72&nbsp; <span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">）</span>than computers do.</p><p class=\"MsoNormal\">Likewise, a scaling-up of a software entity<br/>is not merely a repetition of the same elements in&nbsp; larger size; it is necessarily an increase in<br/>the number of different elements. In most cases, the elements interact with<br/>each other in some<span style=\"font-family: 宋体; mso-hansi-font-family: &quot;Times New Roman&quot;;\">（</span> 73 <span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">）</span>fashion,and<br/>the complexity of the whole increases much more than linearly.</p><p class=\"MsoNormal\">The complexity of software is a(an)<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">（</span>74&nbsp;&nbsp;<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">）</span>property, not<br/>an accidental one. Hence descriptions of a software entity that abstract away<br/>its complexity often abstract away its essence.Mathematics and the physical<br/>sciences made great strides for three centuries by constructing simplified<br/>models of complex phenomena, deriving properties from the models, and verifying<br/>those properties experimentally. This worked because the complexities<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">（</span>75&nbsp;&nbsp;<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">）</span>in the models<br/>were not the essential properties of the phenomena. It does not work when the<br/>complexities are the essence.</p><p class=\"MsoNormal\">Many of the classical problems of<br/>developing software products derive from this essential&nbsp; complexity and its nonlinear increases with<br/>size. Not only technical problems but management&nbsp; problems as well come from the complexity.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p class=\"MsoNormal\">作答73题&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34610",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>linear</p>", "<p>nonlinear</p>", "<p>parallel</p>", "<p>additive</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 74,
+          "belong_page": 1,
+          "question_id": 34611,
+          "question_title": "<p>Software entities are more complex for<br/>their size than perhaps any other human construct, because no two parts are<br/>alike (at least above the statement level). If they are, we make the two<br/>similar parts into one, a<span style=\"font-family: 宋体;\">（</span>71 &nbsp;<span style=\"font-family: 宋体;\">）</span>, open or closed. &nbsp;In this respect software systems differ<br/>profoundly from computers,buildings, or automobiles, where repeated elements<br/>abound.<br/></p><p class=\"MsoNormal\">Digital computers are themselves more<br/>complex than most things people build; they have very large numbers of states.<br/>This makes conceiving, describing, and testing them hard. Software systems have<br/>orders of magnitude more <span style=\"font-family: 宋体; mso-hansi-font-family: &quot;Times New Roman&quot;;\">（</span>72 &nbsp;<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">）</span>than computers do.</p><p class=\"MsoNormal\">Likewise, a scaling-up of a software entity<br/>is not merely a repetition of the same elements in &nbsp;larger size; it is necessarily an increase in<br/>the number of different elements. In most cases, the elements interact with<br/>each other in some<span style=\"font-family: 宋体; mso-hansi-font-family: &quot;Times New Roman&quot;;\">（</span> 73 <span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">）</span>fashion,and<br/>the complexity of the whole increases much more than linearly.</p><p class=\"MsoNormal\">The complexity of software is a(an)<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">（</span>74 &nbsp;<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">）</span>property, not<br/>an accidental one. Hence descriptions of a software entity that abstract away<br/>its complexity often abstract away its essence.Mathematics and the physical<br/>sciences made great strides for three centuries by constructing simplified<br/>models of complex phenomena, deriving properties from the models, and verifying<br/>those properties experimentally. This worked because the complexities<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">（</span>75 &nbsp;<span style=\"font-family: 宋体; mso-ascii-font-family: &quot;Times New Roman&quot;;\">）</span>in the models<br/>were not the essential properties of the phenomena. It does not work when the<br/>complexities are the essence.</p><p class=\"MsoNormal\">Many of the classical problems of<br/>developing software products derive from this essential &nbsp;complexity and its nonlinear increases with<br/>size. Not only technical problems but management &nbsp;problems as well come from the complexity.</p><p class=\"MsoNormal\">作答74题 &nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34611",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>surface</p>", "<p>outside</p>", "<p>exterior</p>", "<p>essential</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 75,
+          "belong_page": 1,
+          "question_id": 34612,
+          "question_title": "<p>Software entities are more complex for<br/>their size than perhaps any other human construct, because no two parts are<br/>alike (at least above the statement level). If they are, we make the two<br/>similar parts into one, a<span style=\"font-family: 宋体;\">（</span>71 &nbsp;<span style=\"font-family: 宋体;\">）</span>, open or closed. &nbsp;In this respect software systems differ<br/>profoundly from computers,buildings, or automobiles, where repeated elements<br/>abound.<br/></p><p class=\"MsoNormal\">Digital computers are themselves more<br/>complex than most things people build; they have very large numbers of states.<br/>This makes conceiving, describing, and testing them hard. Software systems have<br/>orders of magnitude more&nbsp;<span style=\"font-family: 宋体;\">（</span>72 &nbsp;<span style=\"font-family: 宋体;\">）</span>than computers do.</p><p class=\"MsoNormal\">Likewise, a scaling-up of a software entity<br/>is not merely a repetition of the same elements in &nbsp;larger size; it is necessarily an increase in<br/>the number of different elements. In most cases, the elements interact with<br/>each other in some<span style=\"font-family: 宋体;\">（</span>&nbsp;73&nbsp;<span style=\"font-family: 宋体;\">）</span>fashion,and<br/>the complexity of the whole increases much more than linearly.</p><p class=\"MsoNormal\">The complexity of software is a(an)<span style=\"font-family: 宋体;\">（</span>74 &nbsp;<span style=\"font-family: 宋体;\">）</span>property, not<br/>an accidental one. Hence descriptions of a software entity that abstract away<br/>its complexity often abstract away its essence.Mathematics and the physical<br/>sciences made great strides for three centuries by constructing simplified<br/>models of complex phenomena, deriving properties from the models, and verifying<br/>those properties experimentally. This worked because the complexities<span style=\"font-family: 宋体;\">（</span>75 &nbsp;<span style=\"font-family: 宋体;\">）</span>in the models<br/>were not the essential properties of the phenomena. It does not work when the<br/>complexities are the essence.</p><p class=\"MsoNormal\">Many of the classical problems of<br/>developing software products derive from this essential &nbsp;complexity and its nonlinear increases with<br/>size. Not only technical problems but management &nbsp;problems as well come from the complexity.</p><p class=\"MsoNormal\">作答75题 &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "34612",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>fixed</p>", "<p>included</p>", "<p>ignored</p>", "<p>stabilized</p>"],
+          "sort_son": "0"
+        }
+      ],
+      "summary": {
+        "radio": {
+          "total_question": 75,
+          "total_score": 0
+        },
+        "multiple": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "judge": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "fill": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "program": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "qanda": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "cloze": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "budingxiang": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "material": {
+          "total_question": 0,
+          "total_score": 0
+        }
+      },
+      "examine": {
+        "id": 2403,
+        "title": "2016年11月软件设计师选择题",
+        "len_time": {
+          "time": 0
+        },
+        "total_question": 75,
+        "total_score": 75,
+        "submit_limit_num": "0",
+        "machine_type": "1"
+      },
+      "answer_activity_start_time": 1585828800,
+      "checkProcess": 1,
+      "process": {
+        "is_delete": false
+      },
+      "train_id": 0
+    },
+    "pagination": {
+      "curPage": 1,
+      "pageSize": 1200,
+      "total": 75,
+      "hasNextPage": false
+    },
+    "totalOrder": [
+      {
+        "index": 1,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34538
+      },
+      {
+        "index": 2,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34539
+      },
+      {
+        "index": 3,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34540
+      },
+      {
+        "index": 4,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34541
+      },
+      {
+        "index": 5,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34542
+      },
+      {
+        "index": 6,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 96977
+      },
+      {
+        "index": 7,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34544
+      },
+      {
+        "index": 8,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34545
+      },
+      {
+        "index": 9,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34546
+      },
+      {
+        "index": 10,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 96981
+      },
+      {
+        "index": 11,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 96982
+      },
+      {
+        "index": 12,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34549
+      },
+      {
+        "index": 13,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34550
+      },
+      {
+        "index": 14,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34551
+      },
+      {
+        "index": 15,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34552
+      },
+      {
+        "index": 16,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34553
+      },
+      {
+        "index": 17,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34554
+      },
+      {
+        "index": 18,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34555
+      },
+      {
+        "index": 19,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34556
+      },
+      {
+        "index": 20,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34557
+      },
+      {
+        "index": 21,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34558
+      },
+      {
+        "index": 22,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34559
+      },
+      {
+        "index": 23,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34560
+      },
+      {
+        "index": 24,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34561
+      },
+      {
+        "index": 25,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34562
+      },
+      {
+        "index": 26,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34563
+      },
+      {
+        "index": 27,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 96993
+      },
+      {
+        "index": 28,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 43103
+      },
+      {
+        "index": 29,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34566
+      },
+      {
+        "index": 30,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34567
+      },
+      {
+        "index": 31,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34568
+      },
+      {
+        "index": 32,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34569
+      },
+      {
+        "index": 33,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34570
+      },
+      {
+        "index": 34,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34571
+      },
+      {
+        "index": 35,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34572
+      },
+      {
+        "index": 36,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34573
+      },
+      {
+        "index": 37,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34574
+      },
+      {
+        "index": 38,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34575
+      },
+      {
+        "index": 39,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34576
+      },
+      {
+        "index": 40,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34577
+      },
+      {
+        "index": 41,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34578
+      },
+      {
+        "index": 42,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34579
+      },
+      {
+        "index": 43,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34580
+      },
+      {
+        "index": 44,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34581
+      },
+      {
+        "index": 45,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34582
+      },
+      {
+        "index": 46,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34583
+      },
+      {
+        "index": 47,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34584
+      },
+      {
+        "index": 48,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34585
+      },
+      {
+        "index": 49,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34586
+      },
+      {
+        "index": 50,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34587
+      },
+      {
+        "index": 51,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34588
+      },
+      {
+        "index": 52,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34589
+      },
+      {
+        "index": 53,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34590
+      },
+      {
+        "index": 54,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34591
+      },
+      {
+        "index": 55,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34592
+      },
+      {
+        "index": 56,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34593
+      },
+      {
+        "index": 57,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34594
+      },
+      {
+        "index": 58,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34595
+      },
+      {
+        "index": 59,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 35512
+      },
+      {
+        "index": 60,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34597
+      },
+      {
+        "index": 61,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34598
+      },
+      {
+        "index": 62,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34599
+      },
+      {
+        "index": 63,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34600
+      },
+      {
+        "index": 64,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34601
+      },
+      {
+        "index": 65,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34602
+      },
+      {
+        "index": 66,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34603
+      },
+      {
+        "index": 67,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34604
+      },
+      {
+        "index": 68,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34605
+      },
+      {
+        "index": 69,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34606
+      },
+      {
+        "index": 70,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34607
+      },
+      {
+        "index": 71,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34608
+      },
+      {
+        "index": 72,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34609
+      },
+      {
+        "index": 73,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34610
+      },
+      {
+        "index": 74,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34611
+      },
+      {
+        "index": 75,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 34612
+      }
+    ]
+  }
+}

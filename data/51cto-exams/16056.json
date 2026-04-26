@@ -1,0 +1,446 @@
+{
+  "msg": "成功",
+  "status": "0",
+  "data": {
+    "data": {
+      "question": [
+        {
+          "index": 1,
+          "belong_page": 1,
+          "question_id": 355095,
+          "question_title": "<p>【问题1】（4分）</p><p>使用说明中的词语，给出图1-1中的实体E1～E4的名称。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>试题一（共15分）<br/>阅读下列说明和图，回答问题1至问题4，将解答填入答题纸的对应栏内。</p><p>【说明】</p><p>随着新能源车数量的迅猛增长，全团各地电动汽车配套充电桩急速增长，同时也带来了充电桩计量准确性的问题。充电桩都需要配备相应的电能计量和电费计费功能，需要对充电柱计量准确性强制进行检定。现需开发计量检定云端软件，其主要功能是：</p><p>（1）数据接收。接收计量裝置上报的充电数据，即充电过程中电压、电流、电能等充电监测数据和计量数据（充电监测数据为充电桩监测的数据，计量数据为计量装置计量的数据，以秒为间隔单位)，接收计量装置心跳数据，并分别进行存储。</p><p>(2）基础数据维护。管理员对充电桩、计量检定装置等基础数据进行维护。</p><p>(3）数据分析。实现电压、电流、电能数据的对比，进行误差分析，记录充电桩的充电误差，供计量装置检定。系统根据计量检测人员给出的查询和统计条件展示查询统计结果。</p><p>（4）充电柱检定。分析充电误差：计量检测人员根据误差分析结果和检定信息记录，对充电桩进行检定，提交检定结果；系统更新充电桩中的检定信息(检定结果和检定时间并存储于检定记录。</p><p>(5）异常告警。检测计量裝置心跳，当心跳停止时，向管理员发出告警。</p><p>(6）检定信息获取。供其它与充电桩相关的第三方服务查询充电桩中的检定信息。现采用结构化方法对计量检定云端软件进行分析与设计，获得如图1-1所示的上下文数据流图和图1-2所示的口层数据流图。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221117/1668660249428374.png\" title=\"1668660249428374.png\" alt=\"image.png\"/><br/></p><p>图1-1</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221117/1668660258239386.png\" title=\"1668660258239386.png\" alt=\"image.png\"/>",
+          "score": 4,
+          "new_parent_id": "355094",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>E1计量装置 ,,</p><p>E2管理员 ,,</p><p>E3计量检测人员 ,,,</p><p>E4第三方服务</p><p><br/></p>"
+          ],
+          "option": null,
+          "sort_son": "1"
+        },
+        {
+          "index": 2,
+          "belong_page": 1,
+          "question_id": 355096,
+          "question_title": "<p>【问题2】（5分）</p><p>使用说明中的词语，给出图1-2中的数据存储D1~D5的名称。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>试题一（共15分）<br/>阅读下列说明和图，回答问题1至问题4，将解答填入答题纸的对应栏内。</p><p>【说明】</p><p>随着新能源车数量的迅猛增长，全团各地电动汽车配套充电桩急速增长，同时也带来了充电桩计量准确性的问题。充电桩都需要配备相应的电能计量和电费计费功能，需要对充电柱计量准确性强制进行检定。现需开发计量检定云端软件，其主要功能是：</p><p>（1）数据接收。接收计量裝置上报的充电数据，即充电过程中电压、电流、电能等充电监测数据和计量数据（充电监测数据为充电桩监测的数据，计量数据为计量装置计量的数据，以秒为间隔单位)，接收计量装置心跳数据，并分别进行存储。</p><p>(2）基础数据维护。管理员对充电桩、计量检定装置等基础数据进行维护。</p><p>(3）数据分析。实现电压、电流、电能数据的对比，进行误差分析，记录充电桩的充电误差，供计量装置检定。系统根据计量检测人员给出的查询和统计条件展示查询统计结果。</p><p>（4）充电柱检定。分析充电误差：计量检测人员根据误差分析结果和检定信息记录，对充电桩进行检定，提交检定结果；系统更新充电桩中的检定信息(检定结果和检定时间并存储于检定记录。</p><p>(5）异常告警。检测计量裝置心跳，当心跳停止时，向管理员发出告警。</p><p>(6）检定信息获取。供其它与充电桩相关的第三方服务查询充电桩中的检定信息。现采用结构化方法对计量检定云端软件进行分析与设计，获得如图1-1所示的上下文数据流图和图1-2所示的口层数据流图。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221117/1668660249428374.png\" title=\"1668660249428374.png\" alt=\"image.png\"/><br/></p><p>图1-1</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221117/1668660258239386.png\" title=\"1668660258239386.png\" alt=\"image.png\"/>",
+          "score": 5,
+          "new_parent_id": "355094",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>D1充电检测及计量数据文件 ,</p><p>D2基础信息文件 ,,</p><p>D3计量装置心跳数据 ,</p><p>D4充电误差信息</p><p>D5检定记录</p><p><br/></p>"
+          ],
+          "option": null,
+          "sort_son": "2"
+        },
+        {
+          "index": 3,
+          "belong_page": 1,
+          "question_id": 355097,
+          "question_title": "<p>【问题3】（4分）</p><p>根据说明和图中术语，补充图1-2中缺失的数据流及其起点和终点。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>试题一（共15分）<br/>阅读下列说明和图，回答问题1至问题4，将解答填入答题纸的对应栏内。</p><p>【说明】</p><p>随着新能源车数量的迅猛增长，全团各地电动汽车配套充电桩急速增长，同时也带来了充电桩计量准确性的问题。充电桩都需要配备相应的电能计量和电费计费功能，需要对充电柱计量准确性强制进行检定。现需开发计量检定云端软件，其主要功能是：</p><p>（1）数据接收。接收计量裝置上报的充电数据，即充电过程中电压、电流、电能等充电监测数据和计量数据（充电监测数据为充电桩监测的数据，计量数据为计量装置计量的数据，以秒为间隔单位)，接收计量装置心跳数据，并分别进行存储。</p><p>(2）基础数据维护。管理员对充电桩、计量检定装置等基础数据进行维护。</p><p>(3）数据分析。实现电压、电流、电能数据的对比，进行误差分析，记录充电桩的充电误差，供计量装置检定。系统根据计量检测人员给出的查询和统计条件展示查询统计结果。</p><p>（4）充电柱检定。分析充电误差：计量检测人员根据误差分析结果和检定信息记录，对充电桩进行检定，提交检定结果；系统更新充电桩中的检定信息(检定结果和检定时间并存储于检定记录。</p><p>(5）异常告警。检测计量裝置心跳，当心跳停止时，向管理员发出告警。</p><p>(6）检定信息获取。供其它与充电桩相关的第三方服务查询充电桩中的检定信息。现采用结构化方法对计量检定云端软件进行分析与设计，获得如图1-1所示的上下文数据流图和图1-2所示的口层数据流图。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221117/1668660249428374.png\" title=\"1668660249428374.png\" alt=\"image.png\"/><br/></p><p>图1-1</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221117/1668660258239386.png\" title=\"1668660258239386.png\" alt=\"image.png\"/>",
+          "score": 4,
+          "new_parent_id": "355094",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>E3----P3 查询和统计条件</p><p>P4----D5 更新检定信息（检定记录）</p><p>D5----P6 检定信息（检定记录）</p><p>D4----P3 充电误差信息</p>"
+          ],
+          "option": null,
+          "sort_son": "3"
+        },
+        {
+          "index": 4,
+          "belong_page": 1,
+          "question_id": 355098,
+          "question_title": "<p>【问题4】（2分）</p><p>根据说明，给出“充电监测与计量数据”数据流的组成。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>试题一（共15分）<br/>阅读下列说明和图，回答问题1至问题4，将解答填入答题纸的对应栏内。</p><p>【说明】</p><p>随着新能源车数量的迅猛增长，全团各地电动汽车配套充电桩急速增长，同时也带来了充电桩计量准确性的问题。充电桩都需要配备相应的电能计量和电费计费功能，需要对充电柱计量准确性强制进行检定。现需开发计量检定云端软件，其主要功能是：</p><p>（1）数据接收。接收计量裝置上报的充电数据，即充电过程中电压、电流、电能等充电监测数据和计量数据（充电监测数据为充电桩监测的数据，计量数据为计量装置计量的数据，以秒为间隔单位)，接收计量装置心跳数据，并分别进行存储。</p><p>(2）基础数据维护。管理员对充电桩、计量检定装置等基础数据进行维护。</p><p>(3）数据分析。实现电压、电流、电能数据的对比，进行误差分析，记录充电桩的充电误差，供计量装置检定。系统根据计量检测人员给出的查询和统计条件展示查询统计结果。</p><p>（4）充电柱检定。分析充电误差：计量检测人员根据误差分析结果和检定信息记录，对充电桩进行检定，提交检定结果；系统更新充电桩中的检定信息(检定结果和检定时间并存储于检定记录。</p><p>(5）异常告警。检测计量裝置心跳，当心跳停止时，向管理员发出告警。</p><p>(6）检定信息获取。供其它与充电桩相关的第三方服务查询充电桩中的检定信息。现采用结构化方法对计量检定云端软件进行分析与设计，获得如图1-1所示的上下文数据流图和图1-2所示的口层数据流图。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221117/1668660249428374.png\" title=\"1668660249428374.png\" alt=\"image.png\"/><br/></p><p>图1-1</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221117/1668660258239386.png\" title=\"1668660258239386.png\" alt=\"image.png\"/>",
+          "score": 2,
+          "new_parent_id": "355094",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>充电过程中电压、电流、电能等充电监测数据和计量数据（充电监测数据为充电桩监测的数据，计量数据为计量装置计量的数据，以秒为间隔单位)</p><p><br/></p>"
+          ],
+          "option": null,
+          "sort_son": "4"
+        },
+        {
+          "index": 5,
+          "belong_page": 1,
+          "question_id": 355112,
+          "question_title": "<p>【问题1】（6分）</p><p>根据需求描述，图2-1实体联系图中缺少三个联系。请在答题纸对应的实体联系图中补充三个联系及联系类型。</p><p>注：联系名可用联系1、联系2、联系3；也可根据你对题意的理解取联系名。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>试题二（共15分）<br/>阅读下列说明和图，回答问题1至问题3，将解答填入答题纸的对应栏内。</p><p>【说明】</p><p>某营销公司为了便于对各地的分公司及专卖店进行管理，拟开发一套业务管理系统，请根据下述需求描述完成该系统的数据库设计。</p><p>【需求描述】</p><p>（1）分公司信息包括：分公司编号、分公司名、地址和电话。其中，分公司编号唯一确定分公司关系的每一个元组。每个分公司拥有多家专卖店，每家专卖店只属于一个分公司。</p><p>（2）专实店信息包括：专卖店号、专卖店名、店长、分公司编号、地址、电话，其中店号唯一确定专卖店关系中的每一个元组。每家专卖店只有一名店长，负责专卖店的各项业务；每名店长只负责一家专卖店：每家专卖店有多名职员，每名职员只属于一家专卖店。</p><p>（3）职员信息包括：职员号、职员名、专卖店号、岗位、电话、薪资。其中，职员号唯一标识职员关系中的每一个元组。岗位有店长、营业员等。</p><p>【概念模型设计】</p><p>根据需求阶段收集的信息，设计的实体联系图（不完整）如图2-1所示。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221117/1668660320426182.png\" title=\"1668660320426182.png\" alt=\"image.png\"/><br/>【逻辑结构设计】根据概念模型设计阶段完成的实体联系图，得出如下关系模式（不完整）</p><p>分公司（分公司编号，分公司名，地址，电话）</p><p>专卖店（专卖店号，专卖店名，_（a），地址，电话）</p><p>职员（职员号，职员名，_（b），岗位，电话，薪资）</p>",
+          "score": 6,
+          "new_parent_id": "355111",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>联系1 &nbsp;&nbsp;分公司和专卖店：1：*（一对多）</p><p>联系2 &nbsp;&nbsp;专卖店和店长：1：1</p><p>联系3 &nbsp;&nbsp;专卖店和职员：1：*（一对多）</p><p><br/></p>"
+          ],
+          "option": null,
+          "sort_son": "1"
+        },
+        {
+          "index": 6,
+          "belong_page": 1,
+          "question_id": 355113,
+          "question_title": "<p>【问题2】（6分）</p><p>（1）&nbsp; 将关系模式中的空（a）、（b）的属性补充完整，并填入答题纸对应的位置上。</p><p>（2）&nbsp; 专卖店关系的主键：_（c）和外键：(d)<br/></p><p>f职员关系的主键：（e）和外键：（f）</p><p><br/></p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>试题二（共15分）<br/>阅读下列说明和图，回答问题1至问题3，将解答填入答题纸的对应栏内。</p><p>【说明】</p><p>某营销公司为了便于对各地的分公司及专卖店进行管理，拟开发一套业务管理系统，请根据下述需求描述完成该系统的数据库设计。</p><p>【需求描述】</p><p>（1）分公司信息包括：分公司编号、分公司名、地址和电话。其中，分公司编号唯一确定分公司关系的每一个元组。每个分公司拥有多家专卖店，每家专卖店只属于一个分公司。</p><p>（2）专实店信息包括：专卖店号、专卖店名、店长、分公司编号、地址、电话，其中店号唯一确定专卖店关系中的每一个元组。每家专卖店只有一名店长，负责专卖店的各项业务；每名店长只负责一家专卖店：每家专卖店有多名职员，每名职员只属于一家专卖店。</p><p>（3）职员信息包括：职员号、职员名、专卖店号、岗位、电话、薪资。其中，职员号唯一标识职员关系中的每一个元组。岗位有店长、营业员等。</p><p>【概念模型设计】</p><p>根据需求阶段收集的信息，设计的实体联系图（不完整）如图2-1所示。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221117/1668660320426182.png\" title=\"1668660320426182.png\" alt=\"image.png\"/><br/>【逻辑结构设计】根据概念模型设计阶段完成的实体联系图，得出如下关系模式（不完整）</p><p>分公司（分公司编号，分公司名，地址，电话）</p><p>专卖店（专卖店号，专卖店名，_（a），地址，电话）</p><p>职员（职员号，职员名，_（b），岗位，电话，薪资）</p>",
+          "score": 6,
+          "new_parent_id": "355111",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>（1）（a）店长、分公司编号 （b）专卖店号</p><p>（2）（c）专卖店号 （d）店长、 分公司编号</p><p>（3）（e）职员号（f）专卖店号</p><p><br/></p>"
+          ],
+          "option": null,
+          "sort_son": "2"
+        },
+        {
+          "index": 7,
+          "belong_page": 1,
+          "question_id": 355114,
+          "question_title": "<p>【问题3】（3分）</p><p>（1）为了在紧急情况发生时，能及时联系到职员的家人，专卖店要求每位职员至少要填写一位紧急联系人的姓名、与本人关系和联系电话。根据这种情况，在图2-1中还需添加的实体是&nbsp;（g）&nbsp;，职员关系与该实体的联系类型为&nbsp;（h）&nbsp;。</p><p>（2）给出该实体的关系模式。</p><p><br/></p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>试题二（共15分）<br/>阅读下列说明和图，回答问题1至问题3，将解答填入答题纸的对应栏内。</p><p>【说明】</p><p>某营销公司为了便于对各地的分公司及专卖店进行管理，拟开发一套业务管理系统，请根据下述需求描述完成该系统的数据库设计。</p><p>【需求描述】</p><p>（1）分公司信息包括：分公司编号、分公司名、地址和电话。其中，分公司编号唯一确定分公司关系的每一个元组。每个分公司拥有多家专卖店，每家专卖店只属于一个分公司。</p><p>（2）专实店信息包括：专卖店号、专卖店名、店长、分公司编号、地址、电话，其中店号唯一确定专卖店关系中的每一个元组。每家专卖店只有一名店长，负责专卖店的各项业务；每名店长只负责一家专卖店：每家专卖店有多名职员，每名职员只属于一家专卖店。</p><p>（3）职员信息包括：职员号、职员名、专卖店号、岗位、电话、薪资。其中，职员号唯一标识职员关系中的每一个元组。岗位有店长、营业员等。</p><p>【概念模型设计】</p><p>根据需求阶段收集的信息，设计的实体联系图（不完整）如图2-1所示。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221117/1668660320426182.png\" title=\"1668660320426182.png\" alt=\"image.png\"/><br/>【逻辑结构设计】根据概念模型设计阶段完成的实体联系图，得出如下关系模式（不完整）</p><p>分公司（分公司编号，分公司名，地址，电话）</p><p>专卖店（专卖店号，专卖店名，_（a），地址，电话）</p><p>职员（职员号，职员名，_（b），岗位，电话，薪资）</p>",
+          "score": 3,
+          "new_parent_id": "355111",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>（1）（g）紧急联系人（h）1：*（一对多）</p><p>（2）紧急联系人（紧急联系人号，职员号，紧急联系人姓名，与本人关系，联系电话）</p><p><br/></p>"
+          ],
+          "option": null,
+          "sort_son": "3"
+        },
+        {
+          "index": 8,
+          "belong_page": 1,
+          "question_id": 355128,
+          "question_title": "<p>【问题1】（4分）</p><p>根据说明中的描述，给出图3-2中U1~U4所对应的用例名。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p style=\"text-indent:32px\">试题三（15分）</p><p>阅读下列说明和图，回答问题1至问题3，将解答填入答题纸的对应栏内。</p><p>【说明】</p><p>图3-1所示为某软件系统中一个温度控制模块的界面。界面上提供了两种温度计量单位，即华氏度（Fahrenheit）和摄氏度（Celsius）。软件支持两种计量单位之间的自动换算，即若输入一个华氏度的温度，其对应的摄氏度温度值会自动出现在摄氏度的显示框内，反之亦然。</p><p>用户可以通过该界面上的按钮Raise（升高温度）和Lower（降低温度）来改变温度的值。界面右侧是一个温度计，将数字形式的温度转换成温度计上的刻度比例进行显示。当温度值改变时，温度计的显示也随之同步变化。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221117/1668660534398325.png\" title=\"1668660534398325.png\" alt=\"image.png\"/><br/>现在采用面向对象方法实现该温度控制模块，得到如图3-2所示的用例图和3-3所示的类图。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221117/1668660576458867.png\" title=\"1668660576458867.png\" alt=\"image.png\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221117/1668660583715240.png\" title=\"1668660583715240.png\" alt=\"image.png\"/><br/></p><br/>",
+          "score": 4,
+          "new_parent_id": "355127",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>U1&nbsp;&nbsp;&nbsp;显示温度</p><p>U2 &nbsp;&nbsp;显示华氏度</p><p>U3 &nbsp;&nbsp;温度计显示</p><p>U4 &nbsp;&nbsp;自动换算</p><p><br/></p>"
+          ],
+          "option": null,
+          "sort_son": "1"
+        },
+        {
+          "index": 9,
+          "belong_page": 1,
+          "question_id": 355129,
+          "question_title": "<p>【问题2】（8分）</p><p>根据说明中的描述，给出图3-3中C1~C8所对应的类名（类名使用图3-1中标注的词汇</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p style=\"text-indent:32px\">试题三（15分）</p><p>阅读下列说明和图，回答问题1至问题3，将解答填入答题纸的对应栏内。</p><p>【说明】</p><p>图3-1所示为某软件系统中一个温度控制模块的界面。界面上提供了两种温度计量单位，即华氏度（Fahrenheit）和摄氏度（Celsius）。软件支持两种计量单位之间的自动换算，即若输入一个华氏度的温度，其对应的摄氏度温度值会自动出现在摄氏度的显示框内，反之亦然。</p><p>用户可以通过该界面上的按钮Raise（升高温度）和Lower（降低温度）来改变温度的值。界面右侧是一个温度计，将数字形式的温度转换成温度计上的刻度比例进行显示。当温度值改变时，温度计的显示也随之同步变化。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221117/1668660534398325.png\" title=\"1668660534398325.png\" alt=\"image.png\"/><br/>现在采用面向对象方法实现该温度控制模块，得到如图3-2所示的用例图和3-3所示的类图。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221117/1668660576458867.png\" title=\"1668660576458867.png\" alt=\"image.png\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221117/1668660583715240.png\" title=\"1668660583715240.png\" alt=\"image.png\"/><br/></p><br/>",
+          "score": 8,
+          "new_parent_id": "355127",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p><img style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221114/1668404254561217.png\" title=\"1668404254561217.png\" alt=\"image.png\"/></p>"
+          ],
+          "option": null,
+          "sort_son": "2"
+        },
+        {
+          "index": 10,
+          "belong_page": 1,
+          "question_id": 355130,
+          "question_title": "<p>【问题3】（3分）</p><p>现需将图3-1所示的界面改造为一个更为通用的GUL应用，能够实现任意计量单位之间的换算，例如干克和磅之间的换算，厘米和英寸之间的换算等等。为了实现这个新的需求，可以在图3-3所示的类图上增加哪种设计模式？请解释选择该设计模式的原因（不超过50字）</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p style=\"text-indent:32px\">试题三（15分）</p><p>阅读下列说明和图，回答问题1至问题3，将解答填入答题纸的对应栏内。</p><p>【说明】</p><p>图3-1所示为某软件系统中一个温度控制模块的界面。界面上提供了两种温度计量单位，即华氏度（Fahrenheit）和摄氏度（Celsius）。软件支持两种计量单位之间的自动换算，即若输入一个华氏度的温度，其对应的摄氏度温度值会自动出现在摄氏度的显示框内，反之亦然。</p><p>用户可以通过该界面上的按钮Raise（升高温度）和Lower（降低温度）来改变温度的值。界面右侧是一个温度计，将数字形式的温度转换成温度计上的刻度比例进行显示。当温度值改变时，温度计的显示也随之同步变化。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221117/1668660534398325.png\" title=\"1668660534398325.png\" alt=\"image.png\"/><br/>现在采用面向对象方法实现该温度控制模块，得到如图3-2所示的用例图和3-3所示的类图。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221117/1668660576458867.png\" title=\"1668660576458867.png\" alt=\"image.png\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221117/1668660583715240.png\" title=\"1668660583715240.png\" alt=\"image.png\"/><br/></p><br/>",
+          "score": 3,
+          "new_parent_id": "355127",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>策略模式，此模式可以定义一系列的算法策略，把它们一个个封装起来，并且使它们可以相互替换。在需要指定的计量单位换算时，调用相应的算法策略即可。</p><p><br/></p>"
+          ],
+          "option": null,
+          "sort_son": "3"
+        },
+        {
+          "index": 11,
+          "belong_page": 1,
+          "question_id": 355135,
+          "question_title": "<p>【问题1】(8分)</p><p>根据以上说明和C代码，填充C代码中的空(1)~(4)。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p style=\"text-indent:32px\">试题四（15分）</p><p>阅读下列说明和C代码，回答问题1至问题3，将解答填入答题纸的对应栏内。</p><p>【说明】</p><p>排序是将一组无序的数据元素调整为非递减顺序的数据序列的过程，堆排序是一种常用的排序算法。用顺序存储结构存储堆中元素，非递减堆排序的步骤是:</p><p>（1）将含n个元素的待排序数列构造成一个初始大项堆，存储在数组R（R[1]，R[2],… R[n]）中。此时堆的规模为n，堆项元素R[1]就是序列中最大的元素，R[n]是堆中最后一个元素。</p><p>（2）将堆顶元素和堆中最后一个元素交换，最后一个元素脱离堆结构，堆的规模减1，将堆中剩余的元素调整成大顶堆;</p><p>（3）重复步骤（2），直到只剩下最后一个元素在堆结构中，此时数组R是一个非递减的数据序列。</p><p>【C代码】</p><p>下面是该算法的C语言实现。</p><p>（1）主要变量说明</p><p>n:待排序的数组长度</p><p>R[]:待排序数组，n个数放在R[1],R[2],…,R[n]中</p><p>（1）代码</p><p>#include</p><p>#define MAXITEM 100</p><p>&nbsp;</p><p>/*</p><p>调整堆</p><p>R：待排序数组；</p><p>v：节点编号，以v为根的二叉树，R[v]≥R[2v]，R[v]≥R[2v+1]，且其左子树和右子树都是大顶堆；</p><p>n：堆结构的规模，即堆中的元素数</p><p>*/</p><p>void Heapify(int R[MAXITEM], int v, int n){</p><p>&nbsp;&nbsp;&nbsp;&nbsp;inti,j;</p><p>i=v;</p><p>j=2*i;</p><p><br/></p><p>R[0]=R[i];</p><p>while(j&lt;=n){</p><p>&nbsp;&nbsp;&nbsp;&nbsp;if(j&lt;n&amp;&amp;R[j]&lt;R[j+1]){</p><p>&nbsp;&nbsp;&nbsp;&nbsp;j++;</p><p>}</p><p>if(&nbsp;&nbsp;&nbsp;&nbsp;（1） &nbsp;&nbsp;&nbsp;){</p><p>&nbsp;&nbsp;&nbsp;&nbsp;R[i]=R[j];</p><p>i=j;</p><p>j=2*i;</p><p>}</p><p>else{</p><p>&nbsp;&nbsp;&nbsp;&nbsp;j=n+1;</p><p>}</p><p>}</p><p>R[i]=R[0];</p><p>}</p><p>&nbsp;</p><p>/* 堆排序，R为待排序数组；n为数组大小 &nbsp;*/</p><p>void HeapSort(int R[MAXITEM], int n){</p><p>&nbsp;&nbsp;&nbsp;&nbsp;int i;</p><p><br/></p><p>for(i=n/2; i&gt;=1; i--){</p><p>&nbsp;&nbsp;&nbsp;&nbsp;（2） &nbsp;&nbsp;&nbsp;;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;}</p><p>for(i=n;&nbsp;&nbsp;&nbsp;&nbsp;（3） &nbsp;&nbsp;&nbsp;;i--){</p><p>R[0]=R[i];</p><p>R[i]=R[1];</p><p>&nbsp;&nbsp;&nbsp;&nbsp;（4） &nbsp;&nbsp;&nbsp;;</p><p>Heapify(R,1,i-1);</p><p>}</p><p>}</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p><br/></p>",
+          "score": 8,
+          "new_parent_id": "355134",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>（1）R[j]&gt;R[i]</p><p>（2）Heapify(R,i,n)</p><p>（3）i&gt;=1</p><p>（4）R[1]=R[0]</p><p><br/></p>"
+          ],
+          "option": null,
+          "sort_son": "1"
+        },
+        {
+          "index": 12,
+          "belong_page": 1,
+          "question_id": 355136,
+          "question_title": "<p>【问题2】(2分)</p><p>根据以上说明和C代码，算法的时间复杂度为上 (5) (用O符号表示)。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p style=\"text-indent:32px\">试题四（15分）</p><p>阅读下列说明和C代码，回答问题1至问题3，将解答填入答题纸的对应栏内。</p><p>【说明】</p><p>排序是将一组无序的数据元素调整为非递减顺序的数据序列的过程，堆排序是一种常用的排序算法。用顺序存储结构存储堆中元素，非递减堆排序的步骤是:</p><p>（1）将含n个元素的待排序数列构造成一个初始大项堆，存储在数组R（R[1]，R[2],… R[n]）中。此时堆的规模为n，堆项元素R[1]就是序列中最大的元素，R[n]是堆中最后一个元素。</p><p>（2）将堆顶元素和堆中最后一个元素交换，最后一个元素脱离堆结构，堆的规模减1，将堆中剩余的元素调整成大顶堆;</p><p>（3）重复步骤（2），直到只剩下最后一个元素在堆结构中，此时数组R是一个非递减的数据序列。</p><p>【C代码】</p><p>下面是该算法的C语言实现。</p><p>（1）主要变量说明</p><p>n:待排序的数组长度</p><p>R[]:待排序数组，n个数放在R[1],R[2],…,R[n]中</p><p>（1）代码</p><p>#include</p><p>#define MAXITEM 100</p><p>&nbsp;</p><p>/*</p><p>调整堆</p><p>R：待排序数组；</p><p>v：节点编号，以v为根的二叉树，R[v]≥R[2v]，R[v]≥R[2v+1]，且其左子树和右子树都是大顶堆；</p><p>n：堆结构的规模，即堆中的元素数</p><p>*/</p><p>void Heapify(int R[MAXITEM], int v, int n){</p><p>&nbsp;&nbsp;&nbsp;&nbsp;inti,j;</p><p>i=v;</p><p>j=2*i;</p><p><br/></p><p>R[0]=R[i];</p><p>while(j&lt;=n){</p><p>&nbsp;&nbsp;&nbsp;&nbsp;if(j&lt;n&amp;&amp;R[j]&lt;R[j+1]){</p><p>&nbsp;&nbsp;&nbsp;&nbsp;j++;</p><p>}</p><p>if(&nbsp;&nbsp;&nbsp;&nbsp;（1） &nbsp;&nbsp;&nbsp;){</p><p>&nbsp;&nbsp;&nbsp;&nbsp;R[i]=R[j];</p><p>i=j;</p><p>j=2*i;</p><p>}</p><p>else{</p><p>&nbsp;&nbsp;&nbsp;&nbsp;j=n+1;</p><p>}</p><p>}</p><p>R[i]=R[0];</p><p>}</p><p>&nbsp;</p><p>/* 堆排序，R为待排序数组；n为数组大小 &nbsp;*/</p><p>void HeapSort(int R[MAXITEM], int n){</p><p>&nbsp;&nbsp;&nbsp;&nbsp;int i;</p><p><br/></p><p>for(i=n/2; i&gt;=1; i--){</p><p>&nbsp;&nbsp;&nbsp;&nbsp;（2） &nbsp;&nbsp;&nbsp;;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;}</p><p>for(i=n;&nbsp;&nbsp;&nbsp;&nbsp;（3） &nbsp;&nbsp;&nbsp;;i--){</p><p>R[0]=R[i];</p><p>R[i]=R[1];</p><p>&nbsp;&nbsp;&nbsp;&nbsp;（4） &nbsp;&nbsp;&nbsp;;</p><p>Heapify(R,1,i-1);</p><p>}</p><p>}</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p><br/></p>",
+          "score": 2,
+          "new_parent_id": "355134",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["<p>O(nlogN)</p><p><br/></p>"],
+          "option": null,
+          "sort_son": "2"
+        },
+        {
+          "index": 13,
+          "belong_page": 1,
+          "question_id": 355137,
+          "question_title": "<p>【问题3】(5分))</p><p>考虑数据序列R=(7,10,13,15,4,20,19,8)，n=8，则构建的初始大顶堆为 (6) ,第一个元素脱离堆结构，对剩余元素再调整成大顶堆后的数组R为 (7)</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p style=\"text-indent:32px\">试题四（15分）</p><p>阅读下列说明和C代码，回答问题1至问题3，将解答填入答题纸的对应栏内。</p><p>【说明】</p><p>排序是将一组无序的数据元素调整为非递减顺序的数据序列的过程，堆排序是一种常用的排序算法。用顺序存储结构存储堆中元素，非递减堆排序的步骤是:</p><p>（1）将含n个元素的待排序数列构造成一个初始大项堆，存储在数组R（R[1]，R[2],… R[n]）中。此时堆的规模为n，堆项元素R[1]就是序列中最大的元素，R[n]是堆中最后一个元素。</p><p>（2）将堆顶元素和堆中最后一个元素交换，最后一个元素脱离堆结构，堆的规模减1，将堆中剩余的元素调整成大顶堆;</p><p>（3）重复步骤（2），直到只剩下最后一个元素在堆结构中，此时数组R是一个非递减的数据序列。</p><p>【C代码】</p><p>下面是该算法的C语言实现。</p><p>（1）主要变量说明</p><p>n:待排序的数组长度</p><p>R[]:待排序数组，n个数放在R[1],R[2],…,R[n]中</p><p>（1）代码</p><p>#include</p><p>#define MAXITEM 100</p><p>&nbsp;</p><p>/*</p><p>调整堆</p><p>R：待排序数组；</p><p>v：节点编号，以v为根的二叉树，R[v]≥R[2v]，R[v]≥R[2v+1]，且其左子树和右子树都是大顶堆；</p><p>n：堆结构的规模，即堆中的元素数</p><p>*/</p><p>void Heapify(int R[MAXITEM], int v, int n){</p><p>&nbsp;&nbsp;&nbsp;&nbsp;inti,j;</p><p>i=v;</p><p>j=2*i;</p><p><br/></p><p>R[0]=R[i];</p><p>while(j&lt;=n){</p><p>&nbsp;&nbsp;&nbsp;&nbsp;if(j&lt;n&amp;&amp;R[j]&lt;R[j+1]){</p><p>&nbsp;&nbsp;&nbsp;&nbsp;j++;</p><p>}</p><p>if(&nbsp;&nbsp;&nbsp;&nbsp;（1） &nbsp;&nbsp;&nbsp;){</p><p>&nbsp;&nbsp;&nbsp;&nbsp;R[i]=R[j];</p><p>i=j;</p><p>j=2*i;</p><p>}</p><p>else{</p><p>&nbsp;&nbsp;&nbsp;&nbsp;j=n+1;</p><p>}</p><p>}</p><p>R[i]=R[0];</p><p>}</p><p>&nbsp;</p><p>/* 堆排序，R为待排序数组；n为数组大小 &nbsp;*/</p><p>void HeapSort(int R[MAXITEM], int n){</p><p>&nbsp;&nbsp;&nbsp;&nbsp;int i;</p><p><br/></p><p>for(i=n/2; i&gt;=1; i--){</p><p>&nbsp;&nbsp;&nbsp;&nbsp;（2） &nbsp;&nbsp;&nbsp;;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;}</p><p>for(i=n;&nbsp;&nbsp;&nbsp;&nbsp;（3） &nbsp;&nbsp;&nbsp;;i--){</p><p>R[0]=R[i];</p><p>R[i]=R[1];</p><p>&nbsp;&nbsp;&nbsp;&nbsp;（4） &nbsp;&nbsp;&nbsp;;</p><p>Heapify(R,1,i-1);</p><p>}</p><p>}</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p><br/></p>",
+          "score": 5,
+          "new_parent_id": "355134",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>（6）20，15，19，10，4，13，7，8</p><p>（7）19，15，13，10，4，8，7</p><p><br/></p>"
+          ],
+          "option": null,
+          "sort_son": "3"
+        },
+        {
+          "index": 14,
+          "belong_page": 1,
+          "question_id": 355324,
+          "question_title": "<p><br/></p><p>试题五【51CTO学堂-学员回忆版】</p><p>阅读下列说明和Java代码，将应填入(n)处的字句写在答题纸的对应栏内。</p><p>【说明】</p><p>Facade(外观)模式是一种通过为多个复杂子系统提供一个一致的接口，而使这些子系统更加容易被访问的模式。以医院为例，就医时患者需要与医院不同的职能部门交互。完成挂号、门诊、取药等操作，为简化就医流程，设置了一个接待员的职位，代患者完成上述就医步骤，患者则只需与接待员交互即可。如图5-1给出了以外观模式实现该场景的类图。</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221105/1667644740541349.png\" title=\"1667644740541349.png\" alt=\"image.png\"/><br/><p>【Java 代码】</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221105/1667644757552314.png\" title=\"1667644757552314.png\" alt=\"image.png\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221105/1667644789213542.png\" title=\"1667644789213542.png\" alt=\"image.png\"/>",
+          "question_type": 5,
+          "answer_type": 5,
+          "material_text": "",
+          "score": 10,
+          "new_parent_id": "355324",
+          "show_type_name": "问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>（1）String &nbsp;getName（）</p><p>（2）void dispose（Patient &nbsp;patient）</p><p>（3）new ConcretePatient（&quot;name&quot;）</p><p>（4）Facade &nbsp;</p><p>（5）new Facade（patient）</p><p>（6）f.dispose（）</p><p><br/></p>"
+          ],
+          "option": null,
+          "sort_son": "0"
+        },
+        {
+          "index": 15,
+          "belong_page": 1,
+          "question_id": 355325,
+          "question_title": "<p>试题六【51CTO学堂-学员回忆版】<br/></p><p>阅读下列说明和C++代码，将应填入 (n) 处的字句写答纸对栏内</p><p>【说明】</p><p>Facade(外观)模式是一种通过为多个复杂子系统提供一个一致的接口，而使这些子系统更加容易被访问的模式。以医院为例，就医时患者需要与医院不同的职能部门交互完成挂号、门诊、取药等操作。为简化就医流程，设置了一个接待员的职位，代患者完成上述就医步骤，患者则只需与接待员交互即可。如图6-1给出了以外观模式实现该场景的类图。</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221105/1667644885751142.png\" title=\"1667644885751142.png\" alt=\"image.png\"/><br/><p>【C++代码】</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221105/1667644902149552.png\" title=\"1667644902149552.png\" alt=\"image.png\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20221105/1667644933154308.png\" title=\"1667644933154308.png\" alt=\"image.png\"/>",
+          "question_type": 5,
+          "answer_type": 5,
+          "material_text": "",
+          "score": 10,
+          "new_parent_id": "355325",
+          "show_type_name": "问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>（1）virtual&nbsp;string&nbsp;getName（）=0</p><p>（2）virtual&nbsp;void&nbsp;dispose（Patient&nbsp;*patient）=0</p><p>（3）new&nbsp;ConcretePatient（&quot;name&quot;）</p><p>（4）Facade&nbsp;*</p><p>（5）new&nbsp;Facade（patient）</p><p>（6）f-&gt;dispose（）</p><p><br/></p>"
+          ],
+          "option": null,
+          "sort_son": "0"
+        }
+      ],
+      "summary": {
+        "radio": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "multiple": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "judge": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "fill": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "program": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "qanda": {
+          "total_question": 15,
+          "total_score": 0
+        },
+        "cloze": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "budingxiang": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "material": {
+          "total_question": 0,
+          "total_score": 0
+        }
+      },
+      "examine": {
+        "id": 16056,
+        "title": "2022年11月软件设计师案例分析",
+        "len_time": {
+          "time": 0
+        },
+        "total_question": 15,
+        "total_score": 80,
+        "submit_limit_num": "0",
+        "machine_type": "2"
+      },
+      "answer_activity_start_time": 1585828800,
+      "checkProcess": 1,
+      "process": {
+        "is_delete": false
+      },
+      "train_id": 0
+    },
+    "pagination": {
+      "curPage": 1,
+      "pageSize": 1200,
+      "total": 15,
+      "hasNextPage": false
+    },
+    "totalOrder": [
+      {
+        "index": 1,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 355095
+      },
+      {
+        "index": 2,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 355096
+      },
+      {
+        "index": 3,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 355097
+      },
+      {
+        "index": 4,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 355098
+      },
+      {
+        "index": 5,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 355112
+      },
+      {
+        "index": 6,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 355113
+      },
+      {
+        "index": 7,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 355114
+      },
+      {
+        "index": 8,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 355128
+      },
+      {
+        "index": 9,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 355129
+      },
+      {
+        "index": 10,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 355130
+      },
+      {
+        "index": 11,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 355135
+      },
+      {
+        "index": 12,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 355136
+      },
+      {
+        "index": 13,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 355137
+      },
+      {
+        "index": 14,
+        "question_type": 5,
+        "belong_page": 1,
+        "question_id": 355324
+      },
+      {
+        "index": 15,
+        "question_type": 5,
+        "belong_page": 1,
+        "question_id": 355325
+      }
+    ]
+  }
+}

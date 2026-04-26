@@ -1,0 +1,146 @@
+{
+  "msg": "成功",
+  "status": "0",
+  "data": {
+    "data": {
+      "question": [
+        {
+          "index": 1,
+          "belong_page": 1,
+          "question_id": 375489,
+          "question_title": "<p>【问题1】&nbsp;(3分)</p><p>使&nbsp;用&nbsp;说 明 中 的&nbsp;词&nbsp;语 ，&nbsp;给 出&nbsp;图&nbsp;1&nbsp;中&nbsp;的&nbsp;实&nbsp;体 E1~E3&nbsp;的 名 称。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>【学员回忆版】</p><p>随着深度学习的广泛应用，现代聊天机器人系统需要大规模的训练数据集才能达到其最佳&nbsp;性能，而手动收集如此庞大的数据集需要耗费巨大的人力和时间成本。现欲开发一众包信息系统来辅助收集训练数据集，其主要功能是：</p><p>(1)用户管理。众包工作者提供角色和标识，并存储在用户表中。</p><p>(2)添加问题。在不同情况下接收来自众包工作者和管理员输入的问题：众包工作者输入问题&nbsp;建议，管理员负责添加初始问题。将问题和问题类别分别进行存储。问题类别说明问题是由众包工作者还是管理员提供的。</p><p>(3)答复问题。众包工作者回答或拒绝系统随机展示的5个问题。答复流程是，如果回答问 题则提供答案，如果拒绝问题则提供拒绝原因，如果回答问题数不足5个，继续展示问题，&nbsp;否则众包工作者提供问题建议。无论是回答还是拒绝，数据都存储在带有不同状态标记的答复表中。</p><p>(4)数据服务。根据其它训练平台的请求，为其提供问题、问题类别、回复的数据集。</p><p>现采用结构化方法对众包信息系统进行分析与设计，获得如图1所示的上下文数据流图和&nbsp;图2所示的0层数据流图。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20231225/1703517392333961.png\" title=\"1703517392333961.png\" alt=\"image.png\" width=\"555\" height=\"460\"/><br/><br/></p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20231225/1703517414437132.png\" title=\"1703517414437132.png\" alt=\"image.png\" width=\"516\" height=\"392\"/>",
+          "score": 1,
+          "new_parent_id": "375488",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>（1）E1:管理员，E2:众包工作者，E3:其他训练平台<br/>解析：根据“管理员负责添加初始问题”，结合初始问题数据流，可以推出E1是管理员；根据“众包工作者回答或拒绝系统随机展示的5个问题”以及问题数据流和回复数据流，可以推出E2是众包工作者；根据“根据其它训练平台的请求，为其提供问题、问题类别、回复的数据集。”以及数据集请求和数据数据流，可以推出E3为其他训练平台。</p>"
+          ],
+          "option": null,
+          "sort_son": "1"
+        },
+        {
+          "index": 2,
+          "belong_page": 1,
+          "question_id": 375490,
+          "question_title": "<p>【问题2】&nbsp;&nbsp;(&nbsp;4&nbsp;分&nbsp;)</p><p>使&nbsp;用&nbsp;说 明 中 的&nbsp;词&nbsp;语&nbsp;，&nbsp;给&nbsp;出&nbsp;图&nbsp;2&nbsp;中&nbsp;的&nbsp;数&nbsp;据&nbsp;存&nbsp;储&nbsp;D1~D4 &nbsp;&nbsp;的 名&nbsp;称</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>【学员回忆版】</p><p>随着深度学习的广泛应用，现代聊天机器人系统需要大规模的训练数据集才能达到其最佳&nbsp;性能，而手动收集如此庞大的数据集需要耗费巨大的人力和时间成本。现欲开发一众包信息系统来辅助收集训练数据集，其主要功能是：</p><p>(1)用户管理。众包工作者提供角色和标识，并存储在用户表中。</p><p>(2)添加问题。在不同情况下接收来自众包工作者和管理员输入的问题：众包工作者输入问题&nbsp;建议，管理员负责添加初始问题。将问题和问题类别分别进行存储。问题类别说明问题是由众包工作者还是管理员提供的。</p><p>(3)答复问题。众包工作者回答或拒绝系统随机展示的5个问题。答复流程是，如果回答问 题则提供答案，如果拒绝问题则提供拒绝原因，如果回答问题数不足5个，继续展示问题，&nbsp;否则众包工作者提供问题建议。无论是回答还是拒绝，数据都存储在带有不同状态标记的答复表中。</p><p>(4)数据服务。根据其它训练平台的请求，为其提供问题、问题类别、回复的数据集。</p><p>现采用结构化方法对众包信息系统进行分析与设计，获得如图1所示的上下文数据流图和&nbsp;图2所示的0层数据流图。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20231225/1703517392333961.png\" title=\"1703517392333961.png\" alt=\"image.png\" width=\"555\" height=\"460\"/><br/><br/></p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20231225/1703517414437132.png\" title=\"1703517414437132.png\" alt=\"image.png\" width=\"516\" height=\"392\"/>",
+          "score": 1,
+          "new_parent_id": "375488",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>（1）D1:用户表，D2:答复表，D3:问题类别表，D4:问题表<br/>解析：根据“众包工作者提供角色和标识，并存储在用户表中”，可以推出D1为用户表;</p><p>根据“无论是回答还是拒绝，数据都存储在带有不同状态标记的 答复表中”，可以推出D2是答复表；题干没有提及问题类别所存储的表，但数据流“问题类别”,我们可以推断D3是问题类别表；同理我们也可以推出D4是问题表。</p>"
+          ],
+          "option": null,
+          "sort_son": "2"
+        },
+        {
+          "index": 3,
+          "belong_page": 1,
+          "question_id": 375491,
+          "question_title": "<p>【问题3】&nbsp;&nbsp;(&nbsp;4 分)</p><p>根&nbsp;据&nbsp;说 明&nbsp;和 图&nbsp;中&nbsp;术&nbsp;语&nbsp;，&nbsp;补&nbsp;充&nbsp;图&nbsp;2&nbsp;中&nbsp;缺&nbsp;失&nbsp;的&nbsp;数&nbsp;据&nbsp;流&nbsp;及&nbsp;其&nbsp;起&nbsp;点&nbsp;和&nbsp;终&nbsp;点&nbsp;。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>【学员回忆版】</p><p>随着深度学习的广泛应用，现代聊天机器人系统需要大规模的训练数据集才能达到其最佳&nbsp;性能，而手动收集如此庞大的数据集需要耗费巨大的人力和时间成本。现欲开发一众包信息系统来辅助收集训练数据集，其主要功能是：</p><p>(1)用户管理。众包工作者提供角色和标识，并存储在用户表中。</p><p>(2)添加问题。在不同情况下接收来自众包工作者和管理员输入的问题：众包工作者输入问题&nbsp;建议，管理员负责添加初始问题。将问题和问题类别分别进行存储。问题类别说明问题是由众包工作者还是管理员提供的。</p><p>(3)答复问题。众包工作者回答或拒绝系统随机展示的5个问题。答复流程是，如果回答问 题则提供答案，如果拒绝问题则提供拒绝原因，如果回答问题数不足5个，继续展示问题，&nbsp;否则众包工作者提供问题建议。无论是回答还是拒绝，数据都存储在带有不同状态标记的答复表中。</p><p>(4)数据服务。根据其它训练平台的请求，为其提供问题、问题类别、回复的数据集。</p><p>现采用结构化方法对众包信息系统进行分析与设计，获得如图1所示的上下文数据流图和&nbsp;图2所示的0层数据流图。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20231225/1703517392333961.png\" title=\"1703517392333961.png\" alt=\"image.png\" width=\"555\" height=\"460\"/><br/><br/></p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20231225/1703517414437132.png\" title=\"1703517414437132.png\" alt=\"image.png\" width=\"516\" height=\"392\"/>",
+          "score": 1,
+          "new_parent_id": "375488",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["<p>E2-&gt;P2 问题建议；D4-&gt;P2 问题</p>"],
+          "option": null,
+          "sort_son": "3"
+        }
+      ],
+      "summary": {
+        "radio": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "multiple": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "judge": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "fill": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "program": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "qanda": {
+          "total_question": 3,
+          "total_score": 0
+        },
+        "cloze": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "budingxiang": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "material": {
+          "total_question": 0,
+          "total_score": 0
+        }
+      },
+      "examine": {
+        "id": 16953,
+        "title": "2023年11月软件设计师案例分析（回忆版）",
+        "len_time": {
+          "time": 0
+        },
+        "total_question": 3,
+        "total_score": 3,
+        "submit_limit_num": "0",
+        "machine_type": "2"
+      },
+      "answer_activity_start_time": 1585828800,
+      "checkProcess": 1,
+      "process": {
+        "is_delete": false
+      },
+      "train_id": 0
+    },
+    "pagination": {
+      "curPage": 1,
+      "pageSize": 1200,
+      "total": 3,
+      "hasNextPage": false
+    },
+    "totalOrder": [
+      {
+        "index": 1,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 375489
+      },
+      {
+        "index": 2,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 375490
+      },
+      {
+        "index": 3,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 375491
+      }
+    ]
+  }
+}

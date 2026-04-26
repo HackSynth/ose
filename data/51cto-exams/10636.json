@@ -1,0 +1,461 @@
+{
+  "msg": "成功",
+  "status": "0",
+  "data": {
+    "data": {
+      "question": [
+        {
+          "index": 1,
+          "belong_page": 1,
+          "question_id": 286768,
+          "question_title": "<p>【问1】使用说明中的语句对图1-1中的实体E1~E4的名称</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>案例一</p><p>某工厂制造企业为了开发软件智能检测以有效提升检测效率，节约人力资源，该系统的主要功能是：</p><p>（1）基础信息管理。管理员对检测标准和检测规则等基础信息设置。</p><p>（2）检测模型部署。管理员对常用机器学习方法建立的检测模型分布。</p><p>（3）图像采集。实时将检测多样的产品待检测建分存储，包括产品结构，生产时间，图像信号和产品图像。</p><p>（4）缺陷检测。根据检测模型和检测质量标准对图像采集所收到的产品检测信息中所有图像进行检测或所有图像检测合格。若一个产品出现一张图像检测不合格，就表示该产品不合格，对不合格产品，其检测结果包括，产品型号和不合格类型。</p><p>（5）质量检测。根据监控规则对产品质量进行监控将检测情况展示给检测业务员，若满足条件。向检测业务员发送质量检测，检测是质量发起远程控制部分，检测设备发送控制指令进行处理。</p><p>（6）模型监控。在系统中部署的模型、产品的检测信息结合基础信息进行监测分析，将模型运行情况发给监控人员。</p><p>现采用结构化方法对智能检测系统，进行分析与设计，获得如图1-1的上下文数据流图和图1-2的数据流图。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1615552444495440.png\" alt=\"企业微信截图_16155478128958.png\" src=\"https://s2.51cto.com/images/20210312/1615552444495440.png\"/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230220/1676879811686846.png\" title=\"1676879811686846.png\" alt=\"image.png\"/></p>",
+          "score": 1,
+          "new_parent_id": "286767",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["<p>E1：检测设备E2:管理员E3：检测业务员E4：监控人员</p><p><br/></p>"],
+          "option": null,
+          "sort_son": "1"
+        },
+        {
+          "index": 2,
+          "belong_page": 1,
+          "question_id": 286769,
+          "question_title": "<p>【问2】使用说明中的语句对图1-2中的数据存储D1~D3的名称</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>案例一</p><p>某工厂制造企业为了开发软件智能检测以有效提升检测效率，节约人力资源，该系统的主要功能是：</p><p>（1）基础信息管理。管理员对检测标准和检测规则等基础信息设置。</p><p>（2）检测模型部署。管理员对常用机器学习方法建立的检测模型分布。</p><p>（3）图像采集。实时将检测多样的产品待检测建分存储，包括产品结构，生产时间，图像信号和产品图像。</p><p>（4）缺陷检测。根据检测模型和检测质量标准对图像采集所收到的产品检测信息中所有图像进行检测或所有图像检测合格。若一个产品出现一张图像检测不合格，就表示该产品不合格，对不合格产品，其检测结果包括，产品型号和不合格类型。</p><p>（5）质量检测。根据监控规则对产品质量进行监控将检测情况展示给检测业务员，若满足条件。向检测业务员发送质量检测，检测是质量发起远程控制部分，检测设备发送控制指令进行处理。</p><p>（6）模型监控。在系统中部署的模型、产品的检测信息结合基础信息进行监测分析，将模型运行情况发给监控人员。</p><p>现采用结构化方法对智能检测系统，进行分析与设计，获得如图1-1的上下文数据流图和图1-2的数据流图。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1615552444495440.png\" alt=\"企业微信截图_16155478128958.png\" src=\"https://s2.51cto.com/images/20210312/1615552444495440.png\"/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230220/1676879811686846.png\" title=\"1676879811686846.png\" alt=\"image.png\"/></p>",
+          "score": 1,
+          "new_parent_id": "286767",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["<p>D1∶模型文件;D2∶产品检测信息文件;D3∶基础信息文件</p><p><br/></p>"],
+          "option": null,
+          "sort_son": "2"
+        },
+        {
+          "index": 3,
+          "belong_page": 1,
+          "question_id": 286770,
+          "question_title": "<p>【问3】根据注明和图中术语，补齐图1-2中缺失的数据及起点和终点。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>案例一</p><p>某工厂制造企业为了开发软件智能检测以有效提升检测效率，节约人力资源，该系统的主要功能是：</p><p>（1）基础信息管理。管理员对检测标准和检测规则等基础信息设置。</p><p>（2）检测模型部署。管理员对常用机器学习方法建立的检测模型分布。</p><p>（3）图像采集。实时将检测多样的产品待检测建分存储，包括产品结构，生产时间，图像信号和产品图像。</p><p>（4）缺陷检测。根据检测模型和检测质量标准对图像采集所收到的产品检测信息中所有图像进行检测或所有图像检测合格。若一个产品出现一张图像检测不合格，就表示该产品不合格，对不合格产品，其检测结果包括，产品型号和不合格类型。</p><p>（5）质量检测。根据监控规则对产品质量进行监控将检测情况展示给检测业务员，若满足条件。向检测业务员发送质量检测，检测是质量发起远程控制部分，检测设备发送控制指令进行处理。</p><p>（6）模型监控。在系统中部署的模型、产品的检测信息结合基础信息进行监测分析，将模型运行情况发给监控人员。</p><p>现采用结构化方法对智能检测系统，进行分析与设计，获得如图1-1的上下文数据流图和图1-2的数据流图。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1615552444495440.png\" alt=\"企业微信截图_16155478128958.png\" src=\"https://s2.51cto.com/images/20210312/1615552444495440.png\"/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230220/1676879811686846.png\" title=\"1676879811686846.png\" alt=\"image.png\"/></p>",
+          "score": 1,
+          "new_parent_id": "286767",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>数据流：基础信息&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;起点D3&nbsp; &nbsp; &nbsp;终点P6</p><p>数据流：远程控制命令&nbsp; &nbsp;&nbsp;&nbsp;起点E3&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;终点P5</p><p>数据流：监控规则 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;起点D3&nbsp; &nbsp; &nbsp;终点P5<br/>数据流：待测信息&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 起点P2&nbsp; &nbsp; &nbsp;终点P3<br/>数据流：检测信息&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 起点D2&nbsp;&nbsp;&nbsp;&nbsp; 终点P5<br/></p><p><br/></p>"
+          ],
+          "option": null,
+          "sort_son": "3"
+        },
+        {
+          "index": 4,
+          "belong_page": 1,
+          "question_id": 286771,
+          "question_title": "<p>【问4】根据说明，采用结构化语言对缺陷检测的加工逻辑进行描述。</p><br/><p><br/></p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>案例一</p><p>某工厂制造企业为了开发软件智能检测以有效提升检测效率，节约人力资源，该系统的主要功能是：</p><p>（1）基础信息管理。管理员对检测标准和检测规则等基础信息设置。</p><p>（2）检测模型部署。管理员对常用机器学习方法建立的检测模型分布。</p><p>（3）图像采集。实时将检测多样的产品待检测建分存储，包括产品结构，生产时间，图像信号和产品图像。</p><p>（4）缺陷检测。根据检测模型和检测质量标准对图像采集所收到的产品检测信息中所有图像进行检测或所有图像检测合格。若一个产品出现一张图像检测不合格，就表示该产品不合格，对不合格产品，其检测结果包括，产品型号和不合格类型。</p><p>（5）质量检测。根据监控规则对产品质量进行监控将检测情况展示给检测业务员，若满足条件。向检测业务员发送质量检测，检测是质量发起远程控制部分，检测设备发送控制指令进行处理。</p><p>（6）模型监控。在系统中部署的模型、产品的检测信息结合基础信息进行监测分析，将模型运行情况发给监控人员。</p><p>现采用结构化方法对智能检测系统，进行分析与设计，获得如图1-1的上下文数据流图和图1-2的数据流图。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1615552444495440.png\" alt=\"企业微信截图_16155478128958.png\" src=\"https://s2.51cto.com/images/20210312/1615552444495440.png\"/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230220/1676879811686846.png\" title=\"1676879811686846.png\" alt=\"image.png\"/></p>",
+          "score": 1,
+          "new_parent_id": "286767",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>根据说明，采用结构化语言对缺陷检测的加工逻辑进行描述。</p><p>WHILE（接收图像）</p><p>DO{</p><p>检测所收到的所有图像;</p><p>IF（出现一张图像检测不合格）</p><p>THEN{,返回产品不合格;</p><p>不合格产品检测结果=产品星号+不合格类型;</p><p>}</p><p>ENDIF</p><p>}ENDDO</p><p><br/></p>"
+          ],
+          "option": null,
+          "sort_son": "4"
+        },
+        {
+          "index": 5,
+          "belong_page": 1,
+          "question_id": 286773,
+          "question_title": "<p>【问题一】根据问题描述，补充4个联系，完善图2-1的实体联系图，联系名可用联系1、-2、-3和-4代替，联系的类型为1：1、1：n和m：n（或1：1、1：*和*：*）<br/></p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>案例二</p><p>【注明】</p><p>M集团拥有多个分公司，为了方便集团公司对各个分公司职员进行有效管理，集团公司决定构建一个信息平台以满足公司各项业务管理需求</p><p>【需求分析】</p><p>1，分公司关系模式需要记录的信息包括公司编号、名称、经理号、可联系地址和电话。分公司编号唯一标记分公司关系模式中的没一个元组，每个分公司各有一名经理，负责分公司的管理工作，每个分公司设立仅为本分公司服务的多个业务部，业务部包括：研发部、财务部、采购部、交易部等</p><p>2，业务部关系模式需要记录的信息包括业务部的编号、名称、地址、电话和分公司编号、业务编号唯一标记分公司关系模式中的每一个元素，每个业务部各有一名主管负责业务部的管理工作，每个业务部有多名职员，每个职员只能来源与一个业务部</p><p>3，职员关系模式需要记录的信息包括职员号、姓名、所属业务部编号、岗位、电话、家庭成员姓名和成员关系。其中职员、&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;职员关系、岗位包括：经理、主管、研发员、业务员等。</p><p>【关系模式】</p><p>分公司（分公司编号、名称、&nbsp;（a） 、联系地址）</p><p>业务部（业务部门编号、名称、（b）、电话）</p><p>职员（职员号、姓名、岗位、（c）、电话、家庭成员姓名、关系）</p><p>【概念模拟设计】</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1604914350320198.jpg\" alt=\"1.jpg\" src=\"https://s2.51cto.com/images/20201109/1604914350320198.jpg\"/>",
+          "score": 1,
+          "new_parent_id": "286772",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>【问题一】<br/><img style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230818/1692324949845326.png\" title=\"1692324949845326.png\" alt=\"image.png\"/></p>"
+          ],
+          "option": null,
+          "sort_son": "1"
+        },
+        {
+          "index": 6,
+          "belong_page": 1,
+          "question_id": 286774,
+          "question_title": "<p>【问题二】根据题意将以上关系模式中的空（a）~（c）的属性补充完整，并填入对应位置。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>案例二</p><p>【注明】</p><p>M集团拥有多个分公司，为了方便集团公司对各个分公司职员进行有效管理，集团公司决定构建一个信息平台以满足公司各项业务管理需求</p><p>【需求分析】</p><p>1，分公司关系模式需要记录的信息包括公司编号、名称、经理号、可联系地址和电话。分公司编号唯一标记分公司关系模式中的没一个元组，每个分公司各有一名经理，负责分公司的管理工作，每个分公司设立仅为本分公司服务的多个业务部，业务部包括：研发部、财务部、采购部、交易部等</p><p>2，业务部关系模式需要记录的信息包括业务部的编号、名称、地址、电话和分公司编号、业务编号唯一标记分公司关系模式中的每一个元素，每个业务部各有一名主管负责业务部的管理工作，每个业务部有多名职员，每个职员只能来源与一个业务部</p><p>3，职员关系模式需要记录的信息包括职员号、姓名、所属业务部编号、岗位、电话、家庭成员姓名和成员关系。其中职员、&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;职员关系、岗位包括：经理、主管、研发员、业务员等。</p><p>【关系模式】</p><p>分公司（分公司编号、名称、&nbsp;（a） 、联系地址）</p><p>业务部（业务部门编号、名称、（b）、电话）</p><p>职员（职员号、姓名、岗位、（c）、电话、家庭成员姓名、关系）</p><p>【概念模拟设计】</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1604914350320198.jpg\" alt=\"1.jpg\" src=\"https://s2.51cto.com/images/20201109/1604914350320198.jpg\"/>",
+          "score": 1,
+          "new_parent_id": "286772",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>【问题二】</p><p>a、经理号、电话</p><p>b、地址、分公司编号</p><p>c、所属业务部编号</p>"
+          ],
+          "option": null,
+          "sort_son": "2"
+        },
+        {
+          "index": 7,
+          "belong_page": 1,
+          "question_id": 286775,
+          "question_title": "<p>【问题三】（1）分析分公司关系模式的主建和外键</p><p>(2)分析业务部关系模式的主建和外键</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>案例二</p><p>【注明】</p><p>M集团拥有多个分公司，为了方便集团公司对各个分公司职员进行有效管理，集团公司决定构建一个信息平台以满足公司各项业务管理需求</p><p>【需求分析】</p><p>1，分公司关系模式需要记录的信息包括公司编号、名称、经理号、可联系地址和电话。分公司编号唯一标记分公司关系模式中的没一个元组，每个分公司各有一名经理，负责分公司的管理工作，每个分公司设立仅为本分公司服务的多个业务部，业务部包括：研发部、财务部、采购部、交易部等</p><p>2，业务部关系模式需要记录的信息包括业务部的编号、名称、地址、电话和分公司编号、业务编号唯一标记分公司关系模式中的每一个元素，每个业务部各有一名主管负责业务部的管理工作，每个业务部有多名职员，每个职员只能来源与一个业务部</p><p>3，职员关系模式需要记录的信息包括职员号、姓名、所属业务部编号、岗位、电话、家庭成员姓名和成员关系。其中职员、&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;职员关系、岗位包括：经理、主管、研发员、业务员等。</p><p>【关系模式】</p><p>分公司（分公司编号、名称、&nbsp;（a） 、联系地址）</p><p>业务部（业务部门编号、名称、（b）、电话）</p><p>职员（职员号、姓名、岗位、（c）、电话、家庭成员姓名、关系）</p><p>【概念模拟设计】</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1604914350320198.jpg\" alt=\"1.jpg\" src=\"https://s2.51cto.com/images/20201109/1604914350320198.jpg\"/>",
+          "score": 1,
+          "new_parent_id": "286772",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>【问题三】</p><p>（1）主键：分公司编号；外键：经理号</p><p>（2）主键：业务部的编号；外键：分公司编号</p>"
+          ],
+          "option": null,
+          "sort_son": "3"
+        },
+        {
+          "index": 8,
+          "belong_page": 1,
+          "question_id": 286776,
+          "question_title": "<p>【问题四】在职员关系模式中，假设每个职员有多名家属成员，那么职员关系模式存在什么问题？应如何解决？</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>案例二</p><p>【注明】</p><p>M集团拥有多个分公司，为了方便集团公司对各个分公司职员进行有效管理，集团公司决定构建一个信息平台以满足公司各项业务管理需求</p><p>【需求分析】</p><p>1，分公司关系模式需要记录的信息包括公司编号、名称、经理号、可联系地址和电话。分公司编号唯一标记分公司关系模式中的没一个元组，每个分公司各有一名经理，负责分公司的管理工作，每个分公司设立仅为本分公司服务的多个业务部，业务部包括：研发部、财务部、采购部、交易部等</p><p>2，业务部关系模式需要记录的信息包括业务部的编号、名称、地址、电话和分公司编号、业务编号唯一标记分公司关系模式中的每一个元素，每个业务部各有一名主管负责业务部的管理工作，每个业务部有多名职员，每个职员只能来源与一个业务部</p><p>3，职员关系模式需要记录的信息包括职员号、姓名、所属业务部编号、岗位、电话、家庭成员姓名和成员关系。其中职员、&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;职员关系、岗位包括：经理、主管、研发员、业务员等。</p><p>【关系模式】</p><p>分公司（分公司编号、名称、&nbsp;（a） 、联系地址）</p><p>业务部（业务部门编号、名称、（b）、电话）</p><p>职员（职员号、姓名、岗位、（c）、电话、家庭成员姓名、关系）</p><p>【概念模拟设计】</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  title=\"1604914350320198.jpg\" alt=\"1.jpg\" src=\"https://s2.51cto.com/images/20201109/1604914350320198.jpg\"/>",
+          "score": 1,
+          "new_parent_id": "286772",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>【问题四】</p><p>存在问题：存在冗余、修改操作的不一致，以及插入异常和删除异常。</p><p>解决方案：将原关系模式分解为：</p><p>职员（职员号、姓名、岗位、所属业务部编号、电话）</p><p>职员家属（职员号、家庭成员姓名、关系）</p>"
+          ],
+          "option": null,
+          "sort_son": "4"
+        },
+        {
+          "index": 9,
+          "belong_page": 1,
+          "question_id": 286778,
+          "question_title": "<p>【问题1】（4分）</p><p>&nbsp;&nbsp; &nbsp;根据[说明]中的描述，使用参与者列表的英文名称，给出ORS用例图中A1～A4所对应的参与者。</p><p><br/></p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>案例三：</p><p>阅读下列说明和图，回答问题1至问题4，将解答填入对应栏内。</p><p>【说明】</p><p>&nbsp;&nbsp; &nbsp;在线会议审稿系统(Online Reviewing System，ORS)主要处理会议前期的投稿和审稿事务，其功能描述如下：</p><p>&nbsp;&nbsp; &nbsp;1．用户（User）在初始使用系统时，必须在系统中注册(register)成为作者（Author）或审稿人（Reviewer）。</p><p>&nbsp;&nbsp; &nbsp;2．作者登录(login)后提交稿件（submit paper）和浏览稿件审阅结果（browse review results）。提交稿件必须在规定提交时间范围内，其过程为先输入标题和摘要（enter title and abstract）、选择稿件所属主题类型（select subject group ）、选择稿件所在位置 (存储位置)（select paper location）。上述几步若未完成，则重复；若完成，则上传稿件至数据库中（upload paper ），系统发送通知（send notification ）。</p><p>&nbsp;&nbsp; &nbsp;3．审稿人登录后可设置兴趣领域（set preferences ）、审阅稿件给出意见（enter review ）以及罗列录用和(或)拒绝的稿件（List&nbsp;accepted/rejected&nbsp;papers）。</p><p>&nbsp;&nbsp; &nbsp;4．会议委员会主席（PCChair）是一个特殊审稿人，可以浏览提交的稿件（browse　　　　　submitted&nbsp;papers）、给审稿人分配稿件（assign paper to reviewer ）、罗列录用和(或)拒绝的稿件以及关闭审稿过程（close reviewing process）。其中，关闭审稿过程须包括罗列录用和(或)拒绝的稿件。</p><p>系统采用面向对象方法开发，使用UML进行建模。</p><p>　　系统的部分用例图和提交稿件的活动图分别见下图。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210429/1619686068584377.png\" title=\"1619686068584377.png\" alt=\"image.png\"/></p>",
+          "score": 1,
+          "new_parent_id": "286777",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["<p>A1：User、 A2：Author、A3：Reviewer、A4：PCChair。</p><p><br/></p>"],
+          "option": null,
+          "sort_son": "1"
+        },
+        {
+          "index": 10,
+          "belong_page": 1,
+          "question_id": 286779,
+          "question_title": "<p>【问题2】（3分）</p><p>&nbsp;&nbsp; &nbsp;根据[说明]中的描述，使用用例名称列表中的英文名称，给出ORS用例图中U1一 U3所对应的用例。</p><p><br/></p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>案例三：</p><p>阅读下列说明和图，回答问题1至问题4，将解答填入对应栏内。</p><p>【说明】</p><p>&nbsp;&nbsp; &nbsp;在线会议审稿系统(Online Reviewing System，ORS)主要处理会议前期的投稿和审稿事务，其功能描述如下：</p><p>&nbsp;&nbsp; &nbsp;1．用户（User）在初始使用系统时，必须在系统中注册(register)成为作者（Author）或审稿人（Reviewer）。</p><p>&nbsp;&nbsp; &nbsp;2．作者登录(login)后提交稿件（submit paper）和浏览稿件审阅结果（browse review results）。提交稿件必须在规定提交时间范围内，其过程为先输入标题和摘要（enter title and abstract）、选择稿件所属主题类型（select subject group ）、选择稿件所在位置 (存储位置)（select paper location）。上述几步若未完成，则重复；若完成，则上传稿件至数据库中（upload paper ），系统发送通知（send notification ）。</p><p>&nbsp;&nbsp; &nbsp;3．审稿人登录后可设置兴趣领域（set preferences ）、审阅稿件给出意见（enter review ）以及罗列录用和(或)拒绝的稿件（List&nbsp;accepted/rejected&nbsp;papers）。</p><p>&nbsp;&nbsp; &nbsp;4．会议委员会主席（PCChair）是一个特殊审稿人，可以浏览提交的稿件（browse　　　　　submitted&nbsp;papers）、给审稿人分配稿件（assign paper to reviewer ）、罗列录用和(或)拒绝的稿件以及关闭审稿过程（close reviewing process）。其中，关闭审稿过程须包括罗列录用和(或)拒绝的稿件。</p><p>系统采用面向对象方法开发，使用UML进行建模。</p><p>　　系统的部分用例图和提交稿件的活动图分别见下图。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210429/1619686068584377.png\" title=\"1619686068584377.png\" alt=\"image.png\"/></p>",
+          "score": 1,
+          "new_parent_id": "286777",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>U1：list accepted/rejiected papers</p><p>U2：browse submitted papers</p><p>U3：assign paper to reviewer(U2、U3可互换)。</p><p><br/></p>"
+          ],
+          "option": null,
+          "sort_son": "2"
+        },
+        {
+          "index": 11,
+          "belong_page": 1,
+          "question_id": 286780,
+          "question_title": "<p>【问题3】（4分）</p><p>&nbsp;&nbsp; &nbsp;根据[说明]中的描述，给出ORS用例图中 &nbsp;(1) &nbsp;和 &nbsp;(2) &nbsp;所对应的关系。</p><p><br/></p><br/>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>案例三：</p><p>阅读下列说明和图，回答问题1至问题4，将解答填入对应栏内。</p><p>【说明】</p><p>&nbsp;&nbsp; &nbsp;在线会议审稿系统(Online Reviewing System，ORS)主要处理会议前期的投稿和审稿事务，其功能描述如下：</p><p>&nbsp;&nbsp; &nbsp;1．用户（User）在初始使用系统时，必须在系统中注册(register)成为作者（Author）或审稿人（Reviewer）。</p><p>&nbsp;&nbsp; &nbsp;2．作者登录(login)后提交稿件（submit paper）和浏览稿件审阅结果（browse review results）。提交稿件必须在规定提交时间范围内，其过程为先输入标题和摘要（enter title and abstract）、选择稿件所属主题类型（select subject group ）、选择稿件所在位置 (存储位置)（select paper location）。上述几步若未完成，则重复；若完成，则上传稿件至数据库中（upload paper ），系统发送通知（send notification ）。</p><p>&nbsp;&nbsp; &nbsp;3．审稿人登录后可设置兴趣领域（set preferences ）、审阅稿件给出意见（enter review ）以及罗列录用和(或)拒绝的稿件（List&nbsp;accepted/rejected&nbsp;papers）。</p><p>&nbsp;&nbsp; &nbsp;4．会议委员会主席（PCChair）是一个特殊审稿人，可以浏览提交的稿件（browse　　　　　submitted&nbsp;papers）、给审稿人分配稿件（assign paper to reviewer ）、罗列录用和(或)拒绝的稿件以及关闭审稿过程（close reviewing process）。其中，关闭审稿过程须包括罗列录用和(或)拒绝的稿件。</p><p>系统采用面向对象方法开发，使用UML进行建模。</p><p>　　系统的部分用例图和提交稿件的活动图分别见下图。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210429/1619686068584377.png\" title=\"1619686068584377.png\" alt=\"image.png\"/></p>",
+          "score": 1,
+          "new_parent_id": "286777",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["<p>（1）＜＜extend＞＞</p><p>（2）＜＜include＞＞。</p><p><br/></p>"],
+          "option": null,
+          "sort_son": "3"
+        },
+        {
+          "index": 12,
+          "belong_page": 1,
+          "question_id": 286782,
+          "question_title": "<p>【问题1】根据说明和c代码，填充c代码中的空（1）~（4）。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>案例四：</p><p>【说明】</p><p>希尔排序算法又称最小增量排序算法，其基本思想是：</p><p>步骤1：构造一个步长序列delta、deltak、deltak，其中delta1=n/2，后面的每个delta是前一个的1/2，deltak=1；</p><p>步骤2：根据步长序列、进行k趟排序；</p><p>步骤3：对第i趟排序，根据对应的步长delta；将等步长位置元素分组，对同一组内元素在原位置上进行直接插入排序。</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20201109/1604914535317184.jpg\" title=\"1604914535317184.jpg\" alt=\"1.jpg\"/><br/><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20240818/1723978672258499.png\" title=\"1723978672258499.png\" alt=\"image.png\"/></p><br/>",
+          "score": 1,
+          "new_parent_id": "286781",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>问题1：（1）k=k/2（2）k&gt;1（3）data[k]&lt;data[k-dk]（4）data[j+dk]=t</p>"
+          ],
+          "option": null,
+          "sort_son": "1"
+        },
+        {
+          "index": 13,
+          "belong_page": 1,
+          "question_id": 286783,
+          "question_title": "<p>【问题2】根据说明和c代码，该算法的时间复杂度（5）O（n²）（小于、等于或大于）。该算法是否稳定（6）（是或否）。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>案例四：</p><p>【说明】</p><p>希尔排序算法又称最小增量排序算法，其基本思想是：</p><p>步骤1：构造一个步长序列delta、deltak、deltak，其中delta1=n/2，后面的每个delta是前一个的1/2，deltak=1；</p><p>步骤2：根据步长序列、进行k趟排序；</p><p>步骤3：对第i趟排序，根据对应的步长delta；将等步长位置元素分组，对同一组内元素在原位置上进行直接插入排序。</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20201109/1604914535317184.jpg\" title=\"1604914535317184.jpg\" alt=\"1.jpg\"/><br/><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20240818/1723978672258499.png\" title=\"1723978672258499.png\" alt=\"image.png\"/></p><br/>",
+          "score": 1,
+          "new_parent_id": "286781",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["<p>问题2：（5）小于、（6）否</p>"],
+          "option": null,
+          "sort_son": "2"
+        },
+        {
+          "index": 14,
+          "belong_page": 1,
+          "question_id": 286784,
+          "question_title": "<p>【问题3】对数组（15、9、7、8、20、-1、4）用希尔排序方法进行排序，经过di一趟排序后得到的数组为（7）。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>案例四：</p><p>【说明】</p><p>希尔排序算法又称最小增量排序算法，其基本思想是：</p><p>步骤1：构造一个步长序列delta、deltak、deltak，其中delta1=n/2，后面的每个delta是前一个的1/2，deltak=1；</p><p>步骤2：根据步长序列、进行k趟排序；</p><p>步骤3：对第i趟排序，根据对应的步长delta；将等步长位置元素分组，对同一组内元素在原位置上进行直接插入排序。</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20201109/1604914535317184.jpg\" title=\"1604914535317184.jpg\" alt=\"1.jpg\"/><br/><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20240818/1723978672258499.png\" title=\"1723978672258499.png\" alt=\"image.png\"/></p><br/>",
+          "score": 1,
+          "new_parent_id": "286781",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["<p>问题3：（7）4,9,-1,8,20,7,15</p>"],
+          "option": null,
+          "sort_son": "3"
+        },
+        {
+          "index": 15,
+          "belong_page": 1,
+          "question_id": 286785,
+          "question_title": "<p>试题五：阅读下列说明和Java代码，应填入&nbsp;&nbsp;(n) &nbsp;处。</p><p>【说明】</p><p>&nbsp;&nbsp; &nbsp;某游戏公司现欲开发一款面向儿童的模拟游戏，该游戏主要模拟现实世界中各种鸭子的发声特征、飞行特征和外观特征。游戏需要模拟的鸭子种类及其特征如表所示：<img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210429/1619686388108616.png\" title=\"1619686388108616.png\" alt=\"image.png\"/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210429/1619686398889789.png\" title=\"1619686398889789.png\" alt=\"image.png\"/><br/></p><p>&nbsp;为支持将来能够模拟更多种类鸭子的特征，采用策略设计模式(Strategy)设计的类图如图所示：</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210429/1619686409107108.png\" title=\"1619686409107108.png\" alt=\"image.png\"/><br/></p><p>&nbsp;其中，Duck为抽象类，描述了抽象的鸭子，而类RubberDuck、MallardDuck、 CottonDuck和RedHeadDuck分别描述具体的鸭子种类，方法fly()、quack()和display()分别表示不同种类的鸭子都具有飞行特征、发声特征和外观特征；类FlyBehavior与 QuackBehavior为抽象类，分别用于表示抽象的飞行行为与发声行为：类FlyNoWay与 FlyWithWings分别描述不能飞行的行为和用翅膀飞行的行为；类Quack、Squeak与 QuackNoWay分别描述发出“嘎嘎”声的行为、发出橡皮与空气摩擦声的行为与不发声的行为。请填补以下代码中的空缺。</p><p>【C++代码】</p><p>&nbsp;&nbsp; &nbsp;#include＜iostream＞</p><p>using namespace&nbsp;std； &nbsp; &nbsp;</p><p>class FlyBehavior{</p><p>&nbsp;&nbsp; &nbsp;public：virtual void&nbsp;fly()=0；</p><p>&nbsp;&nbsp; &nbsp;}；</p><p>&nbsp;&nbsp; &nbsp;class QuackBehavior{</p><p>&nbsp;&nbsp; &nbsp;public：virtual void quack() = 0；</p><p>&nbsp;&nbsp; &nbsp;}；</p><p>&nbsp;&nbsp; &nbsp;class FlyWithWings：public FlyBehavior{</p><p>&nbsp;&nbsp; &nbsp;public：void fly(){ &nbsp;cout＜＜ “使用翅膀飞行 ! ” &nbsp;＜＜endl； &nbsp;}</p><p>&nbsp;&nbsp; &nbsp;}；</p><p>&nbsp;&nbsp; &nbsp;class FlyNoWay：public FlyBehavior{</p><p>&nbsp;&nbsp; &nbsp;public：void fly(){ &nbsp;cout＜＜ “不能飞行!”＜＜endl；}</p><p>&nbsp;&nbsp; &nbsp;}；</p><p>&nbsp;&nbsp; &nbsp;class Quack：public QuackBehavior{</p><p>&nbsp;&nbsp; &nbsp;public：void quack(){ &nbsp;cout＜＜“发出\\‘嘎嘎\\’声 &nbsp;!”＜＜endl； &nbsp;}</p><p>&nbsp;&nbsp; &nbsp;}；</p><p>&nbsp;&nbsp; &nbsp;class Squeak：public QuackBehavior{</p><p>&nbsp;&nbsp; &nbsp;public：void quack(){cout＜＜“发出空气与橡皮摩擦声!”＜＜endl； &nbsp; }</p><p>&nbsp;&nbsp; &nbsp;}；</p><p>&nbsp;&nbsp; &nbsp;class QuackNoWay：public QuackBehavior{</p><p>&nbsp;&nbsp; &nbsp;public：void quack &nbsp;(){ &nbsp;cout＜＜“不能发声 &nbsp;!”＜＜endl； &nbsp;}</p><p>&nbsp;&nbsp; &nbsp;}；</p><p>&nbsp;&nbsp; &nbsp;class Duck{</p><p>&nbsp;&nbsp; &nbsp;protected：</p><p>&nbsp;&nbsp; &nbsp; &nbsp;FlyBehavior*&nbsp;&nbsp;(1) &nbsp;；</p><p>&nbsp;&nbsp; &nbsp; &nbsp;QuackBehavior*&nbsp;&nbsp;(2) &nbsp;；</p><p>&nbsp;&nbsp; &nbsp;public：</p><p>&nbsp;&nbsp; &nbsp; &nbsp;void fly(){&nbsp;&nbsp;(3) &nbsp;； &nbsp;}</p><p>&nbsp;&nbsp; &nbsp; &nbsp;void quack(){&nbsp;&nbsp;(4) &nbsp;；)；</p><p>&nbsp;&nbsp; &nbsp; &nbsp;virtual void display()=0；</p><p>&nbsp;&nbsp; &nbsp;}；</p><p>&nbsp;&nbsp; &nbsp;class RubberDuck：public Duck{</p><p>&nbsp;&nbsp; &nbsp;public：</p><p>&nbsp;&nbsp; &nbsp; &nbsp;RubberDuck(){</p><p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;flyBehavior=new &nbsp;&nbsp;(5) &nbsp;；</p><p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;quackBehavior＝new&nbsp;Squeak()；</p><p>&nbsp;&nbsp; &nbsp; &nbsp;}</p><p>&nbsp;&nbsp; &nbsp; &nbsp;void display(){/*此处省略显示橡皮鸭的代码*/ &nbsp; }</p><p>&nbsp;&nbsp; &nbsp;}；</p><p>//其他代码省略</p><p><br/></p>",
+          "question_type": 5,
+          "answer_type": 5,
+          "material_text": "<p>试题五：阅读下列说明和（java++代码），将应填入（n）处的字句写在答题纸对应栏内。</p><p>[说明]在线支付是电子商务的一个重要环节，不同的电子商务平台提供不同的支付接口，现在需要给不同的商务平台的支付接口，使得客户在不同平台是购物时，不需要关系具体的支付接口。拟采用中介在（Mediator）设计模式来实现该需求，所设计的类图如图五—1所示。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20201109/1604914627838732.jpg\" title=\"1604914627838732.jpg\" alt=\"1.jpg\"/></p><p>class &nbsp;concrete service Mediator: &nbsp;public webserviceMediator{// concrete Mediator*</p><p>&nbsp;Private:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Webservice * amazon ;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Webservice * ebay ;</p><p>&nbsp;Public:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Concreteservicemediator():amazon (NULL),ebay(NULL){ }</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Void SetAmazon(Webbsewice*anazon){this-&gt;amazon=amazon;}</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Void SetEbay(webservice*ebay){</p><p>this-&gt;ebay=ebay;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Void buy(double money,webservice-&gt;service){</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If (sevice=amazon) &nbsp;amazon-&gt;search(money);</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Else ebay-&gt;search(money);</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;class Amazon: public Webservice{</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Public:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Void setmediator(webservicemediator*meditor){</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This-&gt;mediator=mediator;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Void buyservice (double money){</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cout &lt;&lt;”Amazon receive”&lt;&lt;money&lt;&lt;endl;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} ；</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Class Ebay:public Webservice{</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Public:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Void setMediator(webserriceMediator*mediator){</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this-&gt;mediator=mediator;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Void buyservice (double money){</p><p>(5)&nbsp;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>&nbsp;}</p><p>Void search(double money) {</p><p>&nbsp;&nbsp;&nbsp;Cout&lt;&lt;”Ebay receive;”&lt;&lt;money&lt;&lt;endl;</p><p>&nbsp;&nbsp;&nbsp;}</p><p>} ;</p><br/>",
+          "score": 10,
+          "new_parent_id": "286785",
+          "show_type_name": "问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>&nbsp; (1) fiyBehavior</p><p>&nbsp;&nbsp; &nbsp;(2) quackBehavior</p><p>&nbsp;&nbsp; &nbsp;(3) flyBehavior-＞fly()</p><p>&nbsp;&nbsp; &nbsp;(4) quackBehavior-＞quack()</p><p>(5) FlyNoWay()</p><p><br/></p>"
+          ],
+          "option": null,
+          "sort_son": "0"
+        },
+        {
+          "index": 16,
+          "belong_page": 1,
+          "question_id": 286786,
+          "question_title": "<p>试题六：阅读下列说明和Java代码，应填入&nbsp;&nbsp;(n) &nbsp;处。</p><p>【说明】</p><p>&nbsp;&nbsp; &nbsp;某游戏公司现欲开发一款面向儿童的模拟游戏，该游戏主要模拟现实世界中各种鸭子的发声特征、飞行特征和外观特征。游戏需要模拟的鸭子种类及其特征如下表所示：<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210429/1619686489387488.png\" title=\"1619686489387488.png\" alt=\"image.png\"/><br/></p><p>&nbsp;为支持将来能够模拟更多种类鸭子的特征，采用策略设计模式(Strategy)设计的类图如图所示：</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210429/1619686509608564.png\" title=\"1619686509608564.png\" alt=\"image.png\"/><br/></p><p>&nbsp;其中，Duck为抽象类，描述了抽象的鸭子，而类RubberDuck、MallardDuck、 CottonDuck 和 RedHeadDuck分别描述具体的鸭子种类，方法fly()、quack()和display()分别表示不同种类的鸭子都具有飞行特征、发声特征和外观特征；接口FlyBehavior与 QuackBehavior分别用于表示抽象的飞行行为与发声行为；类FlyNoWay与FlyWithWings分别描述不能飞行的行为和用翅膀飞行的行为；类Quack、Squeak与QuackNoWay分别描述发出“嘎嘎”声的行为、发出橡皮与空气摩擦声的行为与不发声的行为。请填补以下代码中的空缺。</p><p>【Java代码】</p><p>&nbsp;&nbsp; &nbsp; &nbsp;interface&nbsp;&nbsp;FlyBehavior{</p><p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; public void fly()；</p><p>&nbsp;&nbsp; &nbsp;}；</p><p>&nbsp;&nbsp; &nbsp;interface QuackBehavior{</p><p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;public void quack()；</p><p>&nbsp;&nbsp; &nbsp;}；</p><p>&nbsp;&nbsp; &nbsp;class FlyWithWings implements FlyBehavior{</p><p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;public void fly(){System.out.println(“使用翅膀飞行!”)；}</p><p>&nbsp;&nbsp; &nbsp;}；</p><p>&nbsp;&nbsp; &nbsp;class FlyNoWay implements FlyBehavior{</p><p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;public void fly(){System.out.println(“不能飞行!”)；}</p><p>&nbsp;&nbsp; &nbsp;}；</p><p>&nbsp;&nbsp; &nbsp;class Quack implements QuackBehavior{</p><p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;public void quack(){System.out.println(“发出\\‘嘎嘎\\’声!”)； }</p><p>&nbsp;&nbsp; &nbsp;}；</p><p>&nbsp;&nbsp; &nbsp;class Squeak implements QuackBehavior{</p><p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;public void quack(){System.out.println(“发出空气与橡皮摩擦声 !”)；</p><p>&nbsp;&nbsp; &nbsp;}</p><p>&nbsp;&nbsp; &nbsp;}；</p><p>&nbsp;&nbsp; &nbsp;class QuackNoWay implements QuackBehavior{</p><p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;public void quack(){System.out.println(“不能发声!”)；}</p><p>&nbsp;&nbsp; &nbsp;}；</p><p>&nbsp;&nbsp; &nbsp;abstract class Duck{</p><p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;protected &nbsp;FlyBehavior&nbsp;&nbsp;(1) &nbsp;；</p><p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;protected &nbsp;QuackBehavior&nbsp;&nbsp;(2) &nbsp;；</p><p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;public void fly(){&nbsp;&nbsp;(3) &nbsp;； &nbsp;}</p><p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;public void quack() &nbsp;{&nbsp;&nbsp;(4) &nbsp;；}；</p><p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;public abstract void display()；</p><p>&nbsp;&nbsp; &nbsp;}；</p><p>&nbsp;&nbsp; &nbsp;class RubberDuck extends Duck{</p><p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;public RubberDuck(){</p><p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;flyBehavior＝new&nbsp;&nbsp;(5) &nbsp;；</p><p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;quackBehavior＝new&nbsp;Squeak()&nbsp;；</p><p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;}</p><p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;public void display(){/*此处省略显示橡皮鸭的代码*/ &nbsp;}</p><p>&nbsp;&nbsp; &nbsp;}；</p><p>&nbsp;&nbsp; &nbsp;//其他代码省略</p><p><br/></p>",
+          "question_type": 5,
+          "answer_type": 5,
+          "material_text": "",
+          "score": 10,
+          "new_parent_id": "286786",
+          "show_type_name": "问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>(1) flyBehavior&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br/></p><p>(2) quackBehavior</p><p>(3) flyBehavior.fly() &nbsp;&nbsp;&nbsp;</p><p>(4) quackBehavior.quack()</p><p>(5)FlyNoWay()</p>"
+          ],
+          "option": null,
+          "sort_son": "0"
+        }
+      ],
+      "summary": {
+        "radio": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "multiple": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "judge": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "fill": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "program": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "qanda": {
+          "total_question": 16,
+          "total_score": 0
+        },
+        "cloze": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "budingxiang": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "material": {
+          "total_question": 0,
+          "total_score": 0
+        }
+      },
+      "examine": {
+        "id": 10636,
+        "title": "2020年11月软件设计师案例分析",
+        "len_time": {
+          "time": 0
+        },
+        "total_question": 16,
+        "total_score": 34,
+        "submit_limit_num": "0",
+        "machine_type": "2"
+      },
+      "answer_activity_start_time": 1585828800,
+      "checkProcess": 1,
+      "process": {
+        "is_delete": false
+      },
+      "train_id": 0
+    },
+    "pagination": {
+      "curPage": 1,
+      "pageSize": 1200,
+      "total": 16,
+      "hasNextPage": false
+    },
+    "totalOrder": [
+      {
+        "index": 1,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 286768
+      },
+      {
+        "index": 2,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 286769
+      },
+      {
+        "index": 3,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 286770
+      },
+      {
+        "index": 4,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 286771
+      },
+      {
+        "index": 5,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 286773
+      },
+      {
+        "index": 6,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 286774
+      },
+      {
+        "index": 7,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 286775
+      },
+      {
+        "index": 8,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 286776
+      },
+      {
+        "index": 9,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 286778
+      },
+      {
+        "index": 10,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 286779
+      },
+      {
+        "index": 11,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 286780
+      },
+      {
+        "index": 12,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 286782
+      },
+      {
+        "index": 13,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 286783
+      },
+      {
+        "index": 14,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 286784
+      },
+      {
+        "index": 15,
+        "question_type": 5,
+        "belong_page": 1,
+        "question_id": 286785
+      },
+      {
+        "index": 16,
+        "question_type": 5,
+        "belong_page": 1,
+        "question_id": 286786
+      }
+    ]
+  }
+}

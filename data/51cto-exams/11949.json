@@ -1,0 +1,1537 @@
+{
+  "msg": "成功",
+  "status": "0",
+  "data": {
+    "data": {
+      "question": [
+        {
+          "index": 1,
+          "belong_page": 1,
+          "question_id": 301164,
+          "question_title": "<p>在CPU中，用（）给出将要执行的下一条指令在内存中的地址。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301164",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>程序计数器</p>",
+            "<p>指令计数器</p>",
+            "<p>主存地址寄存</p>",
+            "<p>状态条件寄存器</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 2,
+          "belong_page": 1,
+          "question_id": 301242,
+          "question_title": "<p>在求解某问题时，经过分析发现该问题具有最优子结构和重叠子问题性，宜采用（1）算法设计策略得到最优解；若定义问题的解空间，并以广度优先的探索问题的解空间，则采用的是（2）算法设计策略。</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301241",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["（64）分治", "（64）贪心", "（64）动态规划", "（64）回溯"],
+          "sort_son": "1"
+        },
+        {
+          "index": 3,
+          "belong_page": 1,
+          "question_id": 301243,
+          "question_title": "<p>在求解某问题时，经过分析发现该问题具有最优子结构和重叠子问题性，宜采用（1）算法设计策略得到最优解；若定义问题的解空间，并以广度优先的探索问题的解空间，则采用的是（2）算法设计策略。</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301241",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["（65）动态规划", "（65）贪心", "（65）回溯", "（65）分支限界"],
+          "sort_son": "2"
+        },
+        {
+          "index": 4,
+          "belong_page": 1,
+          "question_id": 301251,
+          "question_title": "<p>Designing object -oriented software is hard,and designing (71)object -oriented software is even harder.You must find pertinent(相关的)objects,factor them into class at the right granularity,define class interfaces and inheritances,and establish key relationships among them.You design should be specific to the problem at hand,but also (72) enough &nbsp;to address future problems and requirements.You also want to avoid redesign,or at least minimize it.Experienced &nbsp;object -oriented designers will tell you that a reusable and flexible design is difficult if not impossible to get &quot;right&quot; the first time.Before a design is finished,they usually try to reuse it several times,madifring it each time.</p><p>&nbsp; &nbsp; &nbsp; Yet experienced object-oriented designers do make good designs. Meanwhile new designers are (73) by the options available and tend to fall back on non-object-oriented techniques they&#39;re used before.It takes a long time for movies to learn that good obeject-oriented design is all about. Experienced designers evidently know something inexperienced ones. What is it?</p><p>&nbsp; &nbsp; &nbsp; One thing expert desigeners know not to do is solve every problem from first principles.Rather, they reuse solutions that have worked for them in the past.When they find a good (74) .They use it again and again.Such experience is part of what makes them experts.Consequently,you&#39;ll find (75) patterns of classes and communicating objects in many object-oriented systems.</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301250",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["runnable", "right", "reusable", "pertinent"],
+          "sort_son": "1"
+        },
+        {
+          "index": 5,
+          "belong_page": 1,
+          "question_id": 301252,
+          "question_title": "<p>Designing object -oriented software is hard,and designing (71)object -oriented software is even harder.You must find pertinent(相关的)objects,factor them into class at the right granularity,define class interfaces and inheritances,and establish key relationships among them.You design should be specific to the problem at hand,but also (72) enough &nbsp;to address future problems and requirements.You also want to avoid redesign,or at least minimize it.Experienced &nbsp;object -oriented designers will tell you that a reusable and flexible design is difficult if not impossible to get &quot;right&quot; the first time.Before a design is finished,they usually try to reuse it several times,madifring it each time.</p><p>&nbsp; &nbsp; &nbsp; Yet experienced object-oriented designers do make good designs. Meanwhile new designers are (73) by the options available and tend to fall back on non-object-oriented techniques they&#39;re used before.It takes a long time for movies to learn that good obeject-oriented design is all about. Experienced designers evidently know something inexperienced ones. What is it?</p><p>&nbsp; &nbsp; &nbsp; One thing expert desigeners know not to do is solve every problem from first principles.Rather, they reuse solutions that have worked for them in the past.When they find a good (74) .They use it again and again.Such experience is part of what makes them experts.Consequently,you&#39;ll find (75) patterns of classes and communicating objects in many object-oriented systems.</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301250",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["clear", "general", "personalized", "customized"],
+          "sort_son": "2"
+        },
+        {
+          "index": 6,
+          "belong_page": 1,
+          "question_id": 301253,
+          "question_title": "<p>Designing object -oriented software is hard,and designing (71)object -oriented software is even harder.You must find pertinent(相关的)objects,factor them into class at the right granularity,define class interfaces and inheritances,and establish key relationships among them.You design should be specific to the problem at hand,but also (72) enough &nbsp;to address future problems and requirements.You also want to avoid redesign,or at least minimize it.Experienced &nbsp;object -oriented designers will tell you that a reusable and flexible design is difficult if not impossible to get &quot;right&quot; the first time.Before a design is finished,they usually try to reuse it several times,madifring it each time.</p><p>&nbsp; &nbsp; &nbsp; Yet experienced object-oriented designers do make good designs. Meanwhile new designers are (73) by the options available and tend to fall back on non-object-oriented techniques they&#39;re used before.It takes a long time for movies to learn that good obeject-oriented design is all about. Experienced designers evidently know something inexperienced ones. What is it?</p><p>&nbsp; &nbsp; &nbsp; One thing expert desigeners know not to do is solve every problem from first principles.Rather, they reuse solutions that have worked for them in the past.When they find a good (74) .They use it again and again.Such experience is part of what makes them experts.Consequently,you&#39;ll find (75) patterns of classes and communicating objects in many object-oriented systems.</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301250",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["excited", "shocken", "surprised", "overwhelmed"],
+          "sort_son": "3"
+        },
+        {
+          "index": 7,
+          "belong_page": 1,
+          "question_id": 301254,
+          "question_title": "<p>Designing object -oriented software is hard,and designing (71)object -oriented software is even harder.You must find pertinent(相关的)objects,factor them into class at the right granularity,define class interfaces and inheritances,and establish key relationships among them.You design should be specific to the problem at hand,but also (72) enough &nbsp;to address future problems and requirements.You also want to avoid redesign,or at least minimize it.Experienced &nbsp;object -oriented designers will tell you that a reusable and flexible design is difficult if not impossible to get &quot;right&quot; the first time.Before a design is finished,they usually try to reuse it several times,madifring it each time.</p><p>&nbsp; &nbsp; &nbsp; Yet experienced object-oriented designers do make good designs. Meanwhile new designers are (73) by the options available and tend to fall back on non-object-oriented techniques they&#39;re used before.It takes a long time for movies to learn that good obeject-oriented design is all about. Experienced designers evidently know something inexperienced ones. What is it?</p><p>&nbsp; &nbsp; &nbsp; One thing expert desigeners know not to do is solve every problem from first principles.Rather, they reuse solutions that have worked for them in the past.When they find a good (74) .They use it again and again.Such experience is part of what makes them experts.Consequently,you&#39;ll find (75) patterns of classes and communicating objects in many object-oriented systems.</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301250",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["tool", "component", "system", "solution"],
+          "sort_son": "4"
+        },
+        {
+          "index": 8,
+          "belong_page": 1,
+          "question_id": 301255,
+          "question_title": "<p>Designing object -oriented software is hard,and designing (71)object -oriented software is even harder.You must find pertinent(相关的)objects,factor them into class at the right granularity,define class interfaces and inheritances,and establish key relationships among them.You design should be specific to the problem at hand,but also (72) enough &nbsp;to address future problems and requirements.You also want to avoid redesign,or at least minimize it.Experienced &nbsp;object -oriented designers will tell you that a reusable and flexible design is difficult if not impossible to get &quot;right&quot; the first time.Before a design is finished,they usually try to reuse it several times,madifring it each time.</p><p>&nbsp; &nbsp; &nbsp; Yet experienced object-oriented designers do make good designs. Meanwhile new designers are (73) by the options available and tend to fall back on non-object-oriented techniques they&#39;re used before.It takes a long time for movies to learn that good obeject-oriented design is all about. Experienced designers evidently know something inexperienced ones. What is it?</p><p>&nbsp; &nbsp; &nbsp; One thing expert desigeners know not to do is solve every problem from first principles.Rather, they reuse solutions that have worked for them in the past.When they find a good (74) .They use it again and again.Such experience is part of what makes them experts.Consequently,you&#39;ll find (75) patterns of classes and communicating objects in many object-oriented systems.</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301250",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["recurring", "right", "experienced", "past"],
+          "sort_son": "5"
+        },
+        {
+          "index": 9,
+          "belong_page": 1,
+          "question_id": 301165,
+          "question_title": "<p>以下关于RISC和CISC计算机的叙述中，正确的是（）。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301165",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>RISC不采用流水线技术，CISC采用流水线技术</p>",
+            "<p>RISC使用复杂的指令，CISC使用简单的指令</p>",
+            "<p>RISC采用很少的通用寄存器，CISC采用很多的通用寄存器</p>",
+            "<p>RISC采用组合逻辑控制器，CISC普遍采用微程序控制器</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 10,
+          "belong_page": 1,
+          "question_id": 301166,
+          "question_title": "<p>采用DMA方式传送数据时，每传送一个数据都需要占用一个（）。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301166",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>指令周期</p>", "<p>总线周期</p>", "<p>存储周期</p>", "<p>机器周期</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 11,
+          "belong_page": 1,
+          "question_id": 301167,
+          "question_title": "<p>以下关于闪存（Flash Memory）的叙述中，错误的是（）</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301167",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>掉电后信息不会丢失，属于非易失性存储器</p>",
+            "<p>以块为单位进行删除操作</p>",
+            "<p>采用随机访问方式，常用来代替主存</p>",
+            "<p>在嵌入式系统中可以用Flash来代替ROM存储器</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 12,
+          "belong_page": 1,
+          "question_id": 301169,
+          "question_title": "若磁盘的转速提高一倍，则（）",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301169",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "平均存取时间减半",
+            "平均寻道时间加倍",
+            "旋转等待时间减半",
+            "数据传输速率加倍"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 13,
+          "belong_page": 1,
+          "question_id": 301170,
+          "question_title": "<p>异常是指令执行过程中在处理器内部发生的特殊事件，中断是来自处理器外部的请求事件。以下关于中断和异常的叙述中，正确的是（）。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301170",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>“DMA传送结束”、“除运算除数为0”都为中断</p>",
+            "<p>“DMA传送结束”为中断、“除运算除数为0”为异常</p>",
+            "<p>“DMA传送结束”为异常、“除运算除数为0”为中断</p>",
+            "<p>“DMA传送结束”、“除运算除数为0”都为异常</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 14,
+          "belong_page": 1,
+          "question_id": 301171,
+          "question_title": "下列协议中，属于安全远程登录协议的是（）",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301171",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["TLS", "TCP", "SSH", "TFTP"],
+          "sort_son": "0"
+        },
+        {
+          "index": 15,
+          "belong_page": 1,
+          "question_id": 301172,
+          "question_title": "下列攻击类型中，（）是以被攻击对象不能继续提供服务为首要目标。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301172",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["跨站脚本", "拒绝服务", "信息篡改", "口令猜测"],
+          "sort_son": "0"
+        },
+        {
+          "index": 16,
+          "belong_page": 1,
+          "question_id": 301174,
+          "question_title": "以下算法中属于非对称加密算法的是（）",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301174",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["DES", "RSA", "AES", "MD5"],
+          "sort_son": "0"
+        },
+        {
+          "index": 17,
+          "belong_page": 1,
+          "question_id": 301176,
+          "question_title": "SQL是一种数据库结构化查询语言，SQL注入攻击的首要目标是（）。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301176",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "破坏Web服务",
+            "窃取用户口令等机密信息",
+            "攻击用户浏览器，以获得访问权限",
+            "获得数据库的权限"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 18,
+          "belong_page": 1,
+          "question_id": 301177,
+          "question_title": "通常使用（）为IP数据报文进行加密。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301177",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["IPSec", "PP2P", "HTTPS", "TLS"],
+          "sort_son": "0"
+        },
+        {
+          "index": 19,
+          "belong_page": 1,
+          "question_id": 301178,
+          "question_title": "根据《计算机软件保护条例》的规定，对软件著作权的保护不包括（）。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301178",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["目标程序", "软件文档", "源程序", "开发软件所用的操作系统软件"],
+          "sort_son": "0"
+        },
+        {
+          "index": 20,
+          "belong_page": 1,
+          "question_id": 301186,
+          "question_title": "<p>下列关于风险的叙述中，不正确的是（）</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301186",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>风险是可能发生的事件</p>",
+            "<p>如果能预测到风险，则可以避免其发生</p>",
+            "<p>风险是可能会带来损失的事件</p>",
+            "<p>可以对风险进行干预，以期减少损失</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 21,
+          "belong_page": 1,
+          "question_id": 301187,
+          "question_title": "算术表达式a*(b+c/d)-e的后缀式为（）",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301187",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "a b c d / + * e -",
+            "a b c d e * + / -",
+            "a * b + c / d - e",
+            "a b * c d / + e -"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 22,
+          "belong_page": 1,
+          "question_id": 301188,
+          "question_title": "<p>以编译方式翻译C/C++源程序的过程中，静态检查在（）阶段处理。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301188",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>词法分析</p>",
+            "<p>语义分析</p>",
+            "<p>语法分析</p>",
+            "<p>目标代码生成</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 23,
+          "belong_page": 1,
+          "question_id": 301189,
+          "question_title": "<p>Java语言符合的特征有（）和自动的垃圾回收处理。</p><p>①　采用即时编译</p><p>②　采用静态优化编译</p><p>③　对象在堆空间分配</p><p>④　对象在栈空间分配</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301189",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>①③</p>", "<p>①④</p>", "<p>②③</p>", "<p>②④</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 24,
+          "belong_page": 1,
+          "question_id": 301190,
+          "question_title": "云计算有多种部署类型（Deployment Models）。若云的基础设施是为某个客户单用而构建的，那么该部署模型属于（）。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301190",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["公有云", "私有云", "社区云", "混合云"],
+          "sort_son": "0"
+        },
+        {
+          "index": 25,
+          "belong_page": 1,
+          "question_id": 301191,
+          "question_title": "<p>某计算机系统的字长为128位，磁盘的容量为2048GB，物理块的大小为8MB。假设文件管理系统采用位示图（bitmap）法记录该计算机系统磁盘的使用情况，那么位示图的大小需要（）个字。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301191",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>1024</p>", "<p>2048</p>", "<p>4096</p>", "<p>8192</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 26,
+          "belong_page": 1,
+          "question_id": 301193,
+          "question_title": "<p><br/></p><p>进程P有5个页面，页号为0-4，页面变换表及状态位、访问位和修改位的含义如下图所示，若系统给进程P分配了3个存储块，当访问的页面3不在内存时，应该淘汰表中页号为（）的页面。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210616/1623829787842443.jpg\" title=\"1623829787842443.jpg\" alt=\"2.jpg\"/></p><br/>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301193",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>0</p>", "<p>1</p>", "<p>2</p>", "<p>4</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 27,
+          "belong_page": 1,
+          "question_id": 301199,
+          "question_title": "模块A通过非正常入口转入模块B内部，则这两个模块之间是（）耦合。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301199",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["数据", "公开", "外部", "内容"],
+          "sort_son": "0"
+        },
+        {
+          "index": 28,
+          "belong_page": 1,
+          "question_id": 301200,
+          "question_title": "软件详细设计阶段的主要任务不包括（）",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301200",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["数据结构设计", "算法设计", "模块之间的接口设计", "数据库的物理设计"],
+          "sort_son": "0"
+        },
+        {
+          "index": 29,
+          "belong_page": 1,
+          "question_id": 301201,
+          "question_title": "以下关于文档的叙述中，不正确的是（）",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301201",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "文档也是软件产品的一部分，没有文档的软件就不能称之为软件",
+            "文档只对软件维护活动有用，对开发活动意义不大",
+            "软件文档的编制在软件开发活动中占有突出的地位和相当大的工作量",
+            "高质量文档对于发挥软件产品的效益有着重要的意义"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 30,
+          "belong_page": 1,
+          "question_id": 301203,
+          "question_title": "用白盒测试技术对下面流程图机型测试，至少采用（）个测试用例才可以实现路径覆盖。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210616/1623829993751128.jpg\" title=\"1623829993751128.jpg\" alt=\"2.jpg\"/>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301203",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["3", "4", "6", "8"],
+          "sort_son": "0"
+        },
+        {
+          "index": 31,
+          "belong_page": 1,
+          "question_id": 301204,
+          "question_title": "软件可维护性是指一个系统在特定的时间间隔内可以正常进行维护活动的概率。用MTTF和MTTR分别表示无故障时间和平均修复时间，则软件可维护性计算公式为（）",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301204",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["MTTF/(1+MTTF)", "1/(1+MTTF)", "MTTR/(1+MTTR)", "1/(1+MTTR)"],
+          "sort_son": "0"
+        },
+        {
+          "index": 32,
+          "belong_page": 1,
+          "question_id": 301205,
+          "question_title": "某搜索引擎在交付后，开发人员修改了其中的索引方法，使得用户可以更快地得到搜索结果。这种修改属于（）维护。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301205",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["正确性", "适应性", "完善性", "预防性"],
+          "sort_son": "0"
+        },
+        {
+          "index": 33,
+          "belong_page": 1,
+          "question_id": 301206,
+          "question_title": "面向对象分析时，执行的活动顺序通常是（）。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301206",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "认定对象、组织对象、描述对象间的相互作用、确定对象的操作",
+            "认定对象、定义属性、组织对象、确定对象的操作",
+            "认定对象、描述对象间的相互作用、确定对象的操作、识别包",
+            "识别类及对象、识别关系、定义属性、确定对象的操作"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 34,
+          "belong_page": 1,
+          "question_id": 301208,
+          "question_title": "<p>采用面向对象方法进行系统设计时，不应该强迫客户依赖于它们不用的方法，即：依赖于抽象，不要依赖于具体，同时在抽象级别不应该有对于细节的依赖。这属于（）原则。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301208",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>单一责任</p>", "<p>开放-封闭</p>", "<p>接口分离</p>", "<p>里氏替换</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 35,
+          "belong_page": 1,
+          "question_id": 301224,
+          "question_title": "如下图如下E-R图中，两个实体R1、R2之间有一个联系E，当E的类型为（51）时必须将E转换成一个独立的关系模式？<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210616/1623830521262934.jpg\" title=\"1623830521262934.jpg\" alt=\"2.jpg\"/>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301224",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["1：1", "1：*", "*：1", "*：*."],
+          "sort_son": "0"
+        },
+        {
+          "index": 36,
+          "belong_page": 1,
+          "question_id": 301231,
+          "question_title": "<p>设有栈S和队列Q且其初始状态为空，数据元素序列a,b,c,d,e,f依次通过栈S，且各个元素从S出栈后立即进入队列Q，若出队列的序列是b,d,f,e,c,a，则S中的元素最多时，栈底到栈顶的元素依次为（）。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301231",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>a,b,c</p>", "<p>a,c,d</p>", "<p>a,c,e,f</p>", "<p>a,d,f,e</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 37,
+          "belong_page": 1,
+          "question_id": 301232,
+          "question_title": "<p>当二叉树的结点数目确定时，（）的高度一定是最小的。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301232",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>二叉排序树</p>",
+            "<p>完全二叉树</p>",
+            "<p>线索二叉树</p>",
+            "<p>最优二叉树</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 38,
+          "belong_page": 1,
+          "question_id": 301233,
+          "question_title": "<p>（）是对稀疏矩阵进行压缩存储的方式</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301233",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>二维数组和双向链表</p>",
+            "<p>三元组顺序链表和十字链表.</p>",
+            "<p>邻接矩阵和十字链表</p>",
+            "<p>索引顺序表和双向链表</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 39,
+          "belong_page": 1,
+          "question_id": 301235,
+          "question_title": "<p>设用线性探查法解决冲突构造哈希表，且哈希函数为H(key)=key%m，若在该哈希表中查找某关键字e是成功的且与多个关键字进行了比较，则（60）。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301235",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "这些关键字形成一个有序序列",
+            "这些关键字都不是e的同义词",
+            "这些关键字都是e的同义词",
+            "这些关键字的第一个可以不是e的同义词"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 40,
+          "belong_page": 1,
+          "question_id": 301238,
+          "question_title": "<p>对于一个初始无序的关键字序列，在下面的排序方法中，（61）第一趟排序结束后，一定能将序列中的某个元素在最终有序序列中的位置确定下来</p><p>①直接插入排序②冒泡排序③简单选择排序</p><p>④堆排序⑤快速排序 &nbsp; ⑥归并排序</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301238",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["①②③⑥", "①②③⑤⑥", "②③④⑤", "③④⑤⑥"],
+          "sort_son": "0"
+        },
+        {
+          "index": 41,
+          "belong_page": 1,
+          "question_id": 301239,
+          "question_title": "<p>对数组A=（2,8,7,1,3,5,6,4）构建大顶堆为（62）（用数组表示）。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301239",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>(1,2,3,4,5,6,7,8)</p>",
+            "<p>(1,2,5,4,3,7,6,8)</p>",
+            "<p>(8,4,7,2,3,5,6,1).</p>",
+            "<p>(8,7,6,5,4,3,2,1)</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 42,
+          "belong_page": 1,
+          "question_id": 301240,
+          "question_title": "<p>最大子段和问题描述为，在n个整数（包含负数）的数组A中，求元素之和最大的非空连续子数组，如数组A=（-2，11，-4，13，-5，-2），其子数组B=（11，-4，13）具有最大子段和 20（11-4+13=20）。求解该问题时，可以将数组分为两个n/2个整数的子数组最大子段和或者在前半段，或者在后半段，或者跨越中间元素，通过该方法继续划分问题，直至最后求出最大子段和，该算法的时间复杂度为（63）。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301240",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>O(nlgn)</p>", "<p>O(n^2)</p>", "<p>O(n^2lgn)</p>", "<p>O(n^3)</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 43,
+          "belong_page": 1,
+          "question_id": 301244,
+          "question_title": "IPv6地址长度为（）bit。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301244",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["16", "32", "64", "128"],
+          "sort_son": "0"
+        },
+        {
+          "index": 44,
+          "belong_page": 1,
+          "question_id": 301245,
+          "question_title": "在地址栏中输入www.abc.com，浏览器默认的应用层协议是（）。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301245",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["HTTP", "DNS", "TCP", "FTP"],
+          "sort_son": "0"
+        },
+        {
+          "index": 45,
+          "belong_page": 1,
+          "question_id": 301246,
+          "question_title": "使用电子邮件客户端向服务器发送邮件的协议是（）。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301246",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["SMTP", "POP3", "IMAP4", "MIME"],
+          "sort_son": "0"
+        },
+        {
+          "index": 46,
+          "belong_page": 1,
+          "question_id": 301210,
+          "question_title": "<p>假设Bird和Cat是Animal的子类， Parrot是Bird的子类， bird是Bird的一个对象。cat是Cat的一个对象， parrot是Parrot的一个对象。以下叙述中， 不正确的是（1）。</p><p>假设Animal类中定义接口move（）， Bird、Cat和Parrot分别实现自己的move ()，调用move() 时， 不同对象收到同一消息可以产生各自不同的结果， 这一现象称为（2）。</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301209",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "cat和bird可看作是Animal的对象",
+            "<p>parrot和bird可看作是Animal的对象</p>",
+            "bird可以看作是Parrot的对象",
+            "parrot可以看作是Bird的对象"
+          ],
+          "sort_son": "1"
+        },
+        {
+          "index": 47,
+          "belong_page": 1,
+          "question_id": 301247,
+          "question_title": "以下Windows系统中，用于清除本地DNS缓存的命令是（）。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301247",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "ipconfig / release",
+            "ipconfig /flushdns",
+            "ipconfig /displaydns",
+            "ipconfig / registerdns"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 48,
+          "belong_page": 1,
+          "question_id": 301211,
+          "question_title": "<p>假设Bird和Cat是Animal的子类， Parrot是Bird的子类， bird是Bird的一个对象。cat是Cat的一个对象， parrot是Parrot的一个对象。以下叙述中， 不正确的是（1）。</p><p>假设Animal类中定义接口move（）， Bird、Cat和Parrot分别实现自己的move ()，调用move() 时， 不同对象收到同一消息可以产生各自不同的结果， 这一现象称为（2）。</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301209",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["封装", "继承", "消息传递", "多态"],
+          "sort_son": "2"
+        },
+        {
+          "index": 49,
+          "belong_page": 1,
+          "question_id": 301248,
+          "question_title": "在网络系统设计时，不可能使所有设计目标都能达到最优，下列措施中较为合理的是（）。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301248",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "尽量让最低建设成本目标达到最优",
+            "尽量让最短的故障时间",
+            "尽量让最大的安全性目标达到最优",
+            "尽量让优先级较高的目标达到最优"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 50,
+          "belong_page": 1,
+          "question_id": 301217,
+          "question_title": "<p>股票交易中，股票代理(Broker) 根据客户发出的股票操作指示进行股票的买卖操作，设计如下所示类图。该设计采用(44)模式将一个请求封装为一个对象，从而使得以用不同的请求对客户进行参数化；对请求排队或记录请求日志，以及支持可撤销的操作，其中，(45)声明执行操作的接口。该模式属于(46)模式，该模式适用于：(47)_。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210903/1630663350474554.png\" title=\"1630663350474554.png\" alt=\"image.png\"/></p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301216",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "命令（Command） (问题44)",
+            "观察者（Observer）&nbsp;(问题44)",
+            "状态（State）&nbsp;(问题44)",
+            "中介者（Mediator）&nbsp;(问题44)"
+          ],
+          "sort_son": "1"
+        },
+        {
+          "index": 51,
+          "belong_page": 1,
+          "question_id": 301218,
+          "question_title": "<p>股票交易中，股票代理(Broker) 根据客户发出的股票操作指示进行股票的买卖操作，设计如下所示类图。该设计采用(44)模式将一个请求封装为一个对象，从而使得以用不同的请求对客户进行参数化；对请求排队或记录请求日志，以及支持可撤销的操作，其中，(45)声明执行操作的接口。该模式属于(46)模式，该模式适用于：(47)_。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210903/1630663350474554.png\" title=\"1630663350474554.png\" alt=\"image.png\"/></p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301216",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "Operation&nbsp;&nbsp;(问题45)",
+            "SellOperation/BayOperation/ViewOperation&nbsp;&nbsp;(问题45)",
+            "Broker&nbsp;&nbsp;(问题45)",
+            "Stock&nbsp;&nbsp;(问题45)"
+          ],
+          "sort_son": "2"
+        },
+        {
+          "index": 52,
+          "belong_page": 1,
+          "question_id": 301219,
+          "question_title": "<p>股票交易中，股票代理(Broker) 根据客户发出的股票操作指示进行股票的买卖操作，设计如下所示类图。该设计采用(44)模式将一个请求封装为一个对象，从而使得以用不同的请求对客户进行参数化；对请求排队或记录请求日志，以及支持可撤销的操作，其中，(45)声明执行操作的接口。该模式属于(46)模式，该模式适用于：(47)_。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210903/1630663350474554.png\" title=\"1630663350474554.png\" alt=\"image.png\"/></p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301216",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "结构类型&nbsp;&nbsp;(问题46)",
+            "结构型对象&nbsp;(问题46)",
+            "创建类型&nbsp;(问题46)",
+            "行为型对象&nbsp;(问题46)"
+          ],
+          "sort_son": "3"
+        },
+        {
+          "index": 53,
+          "belong_page": 1,
+          "question_id": 301220,
+          "question_title": "<p>股票交易中，股票代理(Broker) 根据客户发出的股票操作指示进行股票的买卖操作，设计如下所示类图。该设计采用(44)模式将一个请求封装为一个对象，从而使得以用不同的请求对客户进行参数化；对请求排队或记录请求日志，以及支持可撤销的操作，其中，(45)声明执行操作的接口。该模式属于(46)模式，该模式适用于：(47)_。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210903/1630663350474554.png\" title=\"1630663350474554.png\" alt=\"image.png\"/></p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301216",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "一个对象必须通知其他对象，而它又不能假定其他对象是谁&nbsp;(问题47)",
+            "抽象出待执行的动作以参数化某对象&nbsp;(问题47)",
+            "一个对象的行为决定于其状态且必须在运行时刻根据状态改变行为&nbsp;(问题47)",
+            "一个对象引用其他对象并且直接与这些对象通信而导致难以复用该&nbsp;(问题47)"
+          ],
+          "sort_son": "4"
+        },
+        {
+          "index": 54,
+          "belong_page": 1,
+          "question_id": 301226,
+          "question_title": "<p>给定关系R（U,F），其中U={A,B,C,D,E,H}，F={A→B，B→DH，A→H，C→E}。关系有(52)，F中（1）</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301225",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["一个候选码A", "2个候选码A、B", "一个候选码AC", "两个候选码A、C"],
+          "sort_son": "1"
+        },
+        {
+          "index": 55,
+          "belong_page": 1,
+          "question_id": 301227,
+          "question_title": "<p>给定关系R（U,F），其中U={A,B,C,D,E,H}，F={A→B，B→DH，A→H，C→E}。关系有(52)，F中（1）</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301225",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "不存在传递依赖，但存在冗余函数依赖",
+            "既不存在传递依赖，也不存在冗余函数依赖",
+            "存在传递依赖A→D和A→H，但不存在冗余函数依赖",
+            "存在传递依赖A→D和A→H，并且还存在冗余函数依赖"
+          ],
+          "sort_son": "2"
+        },
+        {
+          "index": 56,
+          "belong_page": 1,
+          "question_id": 301237,
+          "question_title": "<p>某销售公司员工关系E（工号、姓名、部门名、电话、住址），商品关系C（商品号、商品名、库存数）和销售关系EC（工号、商品号、销售数、销售日期）。查询“销售部1”在2020年11月11日销售“HUWEI Mate40”商品的员工工号、姓名、部门名及其销售的商品名，销售数的关系代数表达式为</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210616/1623830692755446.jpg\" title=\"1623830692755446.jpg\" alt=\"2.jpg\"/></p><br/>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301236",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "&nbsp;<img style=\"max-width:100%;height:auto\" src=\"https://s2.51cto.com/images/20210616/1623831329860698.jpg\" title=\"1623831329860698.jpg\" alt=\"2.jpg\"/>",
+            "&nbsp;<img style=\"max-width:100%;height:auto\" src=\"https://s2.51cto.com/images/20210616/1623831344924743.jpg\" title=\"1623831344924743.jpg\" alt=\"2.jpg\"/>",
+            "&nbsp;<img style=\"max-width:100%;height:auto\" src=\"https://s2.51cto.com/images/20210616/1623831354960424.jpg\" title=\"1623831354960424.jpg\" alt=\"3.jpg\"/>",
+            "&nbsp;<img style=\"max-width:100%;height:auto\" src=\"https://s2.51cto.com/images/20210616/1623831365319392.jpg\" title=\"1623831365319392.jpg\" alt=\"2.jpg\"/>"
+          ],
+          "sort_son": "3"
+        },
+        {
+          "index": 57,
+          "belong_page": 1,
+          "question_id": 301229,
+          "question_title": "<p><br/></p><p>某销售公司员工关系E（工号、姓名、部门名、电话、住址），商品关系C（商品号、商品名、库存数）和销售关系EC（工号、商品号、销售数、销售日期）。查询“销售部1”在2020年11月11日销售“HUWEI Mate40”商品的员工工号、姓名、部门名及其销售的商品名，销售数的关系代数表达式为</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210616/1623830692755446.jpg\" title=\"1623830692755446.jpg\" alt=\"2.jpg\"/></p><br/>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301228",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>σ3=销售部1（E） (问题54)</p>",
+            "<p>σ3=销售部 1（C）&nbsp;(问题54)</p>",
+            "<p>σ3=&#39;销售部1&#39;（E）&nbsp;(问题54)</p>",
+            "<p>σ3=&#39;销售部1&#39;（C）&nbsp;(问题54)</p>"
+          ],
+          "sort_son": "1"
+        },
+        {
+          "index": 58,
+          "belong_page": 1,
+          "question_id": 301230,
+          "question_title": "<p><br/></p><p>某销售公司员工关系E（工号、姓名、部门名、电话、住址），商品关系C（商品号、商品名、库存数）和销售关系EC（工号、商品号、销售数、销售日期）。查询“销售部1”在2020年11月11日销售“HUWEI Mate40”商品的员工工号、姓名、部门名及其销售的商品名，销售数的关系代数表达式为</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210616/1623830692755446.jpg\" title=\"1623830692755446.jpg\" alt=\"2.jpg\"/></p><br/>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "301228",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>π2,3（σ2=&#39;HUWEI Mate40 &#39;(C)） (问题55)</p>",
+            "<p>π1,2（σ2=&#39;HUWEI Mate40 &#39;（C)) (问题55)</p>",
+            "<p>π2,3（σ2=&#39;HUWEI Mate40 &#39;（EC)) (问题55)</p>",
+            "<p>π1,2（σ2=&#39;HUWEI Mate40 &#39;(EC))&nbsp;(问题55)</p>"
+          ],
+          "sort_son": "2"
+        }
+      ],
+      "summary": {
+        "radio": {
+          "total_question": 58,
+          "total_score": 0
+        },
+        "multiple": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "judge": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "fill": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "program": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "qanda": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "cloze": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "budingxiang": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "material": {
+          "total_question": 0,
+          "total_score": 0
+        }
+      },
+      "examine": {
+        "id": 11949,
+        "title": "2021年5月软件设计师选择题",
+        "len_time": {
+          "time": 0
+        },
+        "total_question": 58,
+        "total_score": 58,
+        "submit_limit_num": "0",
+        "machine_type": "1"
+      },
+      "answer_activity_start_time": 1585828800,
+      "checkProcess": 1,
+      "process": {
+        "is_delete": false
+      },
+      "train_id": 0
+    },
+    "pagination": {
+      "curPage": 1,
+      "pageSize": 1200,
+      "total": 58,
+      "hasNextPage": false
+    },
+    "totalOrder": [
+      {
+        "index": 1,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301164
+      },
+      {
+        "index": 2,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 301242
+      },
+      {
+        "index": 3,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 301243
+      },
+      {
+        "index": 4,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 301251
+      },
+      {
+        "index": 5,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 301252
+      },
+      {
+        "index": 6,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 301253
+      },
+      {
+        "index": 7,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 301254
+      },
+      {
+        "index": 8,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 301255
+      },
+      {
+        "index": 9,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301165
+      },
+      {
+        "index": 10,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301166
+      },
+      {
+        "index": 11,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301167
+      },
+      {
+        "index": 12,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301169
+      },
+      {
+        "index": 13,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301170
+      },
+      {
+        "index": 14,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301171
+      },
+      {
+        "index": 15,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301172
+      },
+      {
+        "index": 16,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301174
+      },
+      {
+        "index": 17,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301176
+      },
+      {
+        "index": 18,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301177
+      },
+      {
+        "index": 19,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301178
+      },
+      {
+        "index": 20,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301186
+      },
+      {
+        "index": 21,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301187
+      },
+      {
+        "index": 22,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301188
+      },
+      {
+        "index": 23,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301189
+      },
+      {
+        "index": 24,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301190
+      },
+      {
+        "index": 25,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301191
+      },
+      {
+        "index": 26,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301193
+      },
+      {
+        "index": 27,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301199
+      },
+      {
+        "index": 28,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301200
+      },
+      {
+        "index": 29,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301201
+      },
+      {
+        "index": 30,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301203
+      },
+      {
+        "index": 31,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301204
+      },
+      {
+        "index": 32,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301205
+      },
+      {
+        "index": 33,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301206
+      },
+      {
+        "index": 34,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301208
+      },
+      {
+        "index": 35,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301224
+      },
+      {
+        "index": 36,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301231
+      },
+      {
+        "index": 37,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301232
+      },
+      {
+        "index": 38,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301233
+      },
+      {
+        "index": 39,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301235
+      },
+      {
+        "index": 40,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301238
+      },
+      {
+        "index": 41,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301239
+      },
+      {
+        "index": 42,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301240
+      },
+      {
+        "index": 43,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301244
+      },
+      {
+        "index": 44,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301245
+      },
+      {
+        "index": 45,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301246
+      },
+      {
+        "index": 46,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 301210
+      },
+      {
+        "index": 47,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301247
+      },
+      {
+        "index": 48,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 301211
+      },
+      {
+        "index": 49,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 301248
+      },
+      {
+        "index": 50,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 301217
+      },
+      {
+        "index": 51,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 301218
+      },
+      {
+        "index": 52,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 301219
+      },
+      {
+        "index": 53,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 301220
+      },
+      {
+        "index": 54,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 301226
+      },
+      {
+        "index": 55,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 301227
+      },
+      {
+        "index": 56,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 301237
+      },
+      {
+        "index": 57,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 301229
+      },
+      {
+        "index": 58,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 301230
+      }
+    ]
+  }
+}

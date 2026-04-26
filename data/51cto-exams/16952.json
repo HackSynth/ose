@@ -1,0 +1,996 @@
+{
+  "msg": "成功",
+  "status": "0",
+  "data": {
+    "data": {
+      "question": [
+        {
+          "index": 1,
+          "belong_page": 1,
+          "question_id": 375451,
+          "question_title": "【学员回忆版】线性表采用链表存储结构的特点中不包括(&nbsp; )。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "375451",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "所需空间大小与表长成正比",
+            "可随机访问表中的任一元素",
+            "插入和删除操作不需要移动元素",
+            "无须事先估计存储空间大小"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 2,
+          "belong_page": 1,
+          "question_id": 375452,
+          "question_title": "【学员回忆版】在双核处理器中，双核是指()。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "375452",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "执行程序时有两条指令流水线并行工作",
+            "在 一 个 CPU 中集成两个运算核心以提高运算能力",
+            "利用超线程技术实现的多任务并行处理",
+            "在主板上设置两个独立的 CPU&nbsp; 以提高处理能力"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 3,
+          "belong_page": 1,
+          "question_id": 375453,
+          "question_title": "【学员回忆版】采用贪心策略求解( )问题， 一定可以得到最优解。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "375453",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["分数背包", "0- 1 背包", "旅行商", "最长公共子序列"],
+          "sort_son": "0"
+        },
+        {
+          "index": 4,
+          "belong_page": 1,
+          "question_id": 375454,
+          "question_title": "【学员回忆版】统一过程模型的四个阶段中，在( )阶段进行需求分析和架构演进。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "375454",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["移交", "精化", "构建", "起始"],
+          "sort_son": "0"
+        },
+        {
+          "index": 5,
+          "belong_page": 1,
+          "question_id": 375455,
+          "question_title": "【学员回忆版】下列协议中，不属于安全协议的是(&nbsp; )。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "375455",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["IPsec", "SNMP", "SFTP", "HTTPS"],
+          "sort_son": "0"
+        },
+        {
+          "index": 6,
+          "belong_page": 1,
+          "question_id": 375456,
+          "question_title": "【学员回忆版】以下关于汇编语言程序的叙述中，错误的是( )。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "375456",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "汇编程序的功能是将汇编语言源程序翻译为相应的目标程序",
+            "用汇编语言编写的程序可以直接被计算机硬件执行",
+            "汇编语言是低级程序设计语言",
+            "汇编语言与计算机硬件体系结构密切相关"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 7,
+          "belong_page": 1,
+          "question_id": 375457,
+          "question_title": "【学员回忆版】以下关于方法重载 (Overload) 和方法覆盖 (Overide) 与多态的关系的叙述中，不正确的是 (&nbsp; )&nbsp; 。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "375457",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "覆盖通过动态绑定机制实现多态",
+            "重载通过动态绑定机制实现多态",
+            "重载属于编译时多态，在一个类中定义多个名称相同而参数表不同的方法",
+            "覆盖属于运行时多态，子类重新定义父类中已定义的方法"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 8,
+          "belong_page": 1,
+          "question_id": 375458,
+          "question_title": "<p>【学员回忆版】以下关于白盒测试原则的叙述中，不正确的是( )。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "375458",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>在所有的逻辑判断中，取“真”和取“假”的两种情况至少都能执行一次</p>",
+            "<p>程序模块中的所有独立路径至少执行一次</p>",
+            "<p>每个循环都应在边界条件和一般条件下各执行一次</p>",
+            "<p>在输入条件规定的取值范围的情况下，合理的输入和不合理的输入至少都能执行一次</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 9,
+          "belong_page": 1,
+          "question_id": 375459,
+          "question_title": "【学员回忆版】对采用面向对象方法开发的系统进行测试时，通常从不同层次进行测试。 对类中定义的每个方法进行测试属于( ) 层 。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "375459",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["系统", "算法", "类", "模板"],
+          "sort_son": "0"
+        },
+        {
+          "index": 10,
+          "belong_page": 1,
+          "question_id": 375460,
+          "question_title": "【学员回忆版】下列算法中，不属于公开密钥加密算法的是( )。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "375460",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["DSA", "ECC", "DES", "RSA"],
+          "sort_son": "0"
+        },
+        {
+          "index": 11,
+          "belong_page": 1,
+          "question_id": 375461,
+          "question_title": "【学员回忆版】POP3服务默认的TCP端 口 号 是 (&nbsp; ) 。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "375461",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["110", "25", "20", "80"],
+          "sort_son": "0"
+        },
+        {
+          "index": 12,
+          "belong_page": 1,
+          "question_id": 375463,
+          "question_title": "【学员回忆版】以下关于折半查找的叙述中，不正确的是&nbsp; (&nbsp; )。采用折半查找等概率查 找某个包含8个元素的有序表，查找成功的平均查找长度为(&nbsp; )。",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "375462",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "是一个分治算法",
+            "只能应用于有序表",
+            "查找成功和不成功的平均查找长度是一样的",
+            "若表长为n, 时间复杂度为0 (logn )"
+          ],
+          "sort_son": "1"
+        },
+        {
+          "index": 13,
+          "belong_page": 1,
+          "question_id": 375464,
+          "question_title": "【学员回忆版】以下关于折半查找的叙述中，不正确的是&nbsp; (&nbsp; )。采用折半查找等概率查 找某个包含8个元素的有序表，查找成功的平均查找长度为(&nbsp; )。",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "375462",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["9/8", "1/8", "20/8", "21/8"],
+          "sort_son": "2"
+        },
+        {
+          "index": 14,
+          "belong_page": 1,
+          "question_id": 375465,
+          "question_title": "【学员回忆版】某文件管理系统在磁盘上建立了位示图 (bitmap),记录滋盘的使用情况。 若计算机系统的字长为128位，磁盘的容量为1024 GB,物理块的大小为8MB,那么该位示图的大小为(&nbsp; ) 个 字 。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "375465",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["4096", "1024", "2048", "4098"],
+          "sort_son": "0"
+        },
+        {
+          "index": 15,
+          "belong_page": 1,
+          "question_id": 375466,
+          "question_title": "【学员回忆版】在项目开发过程中， (&nbsp; )不属于项目估算的主要因素。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "375466",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["规模", "类型", "成本", "工作量"],
+          "sort_son": "0"
+        },
+        {
+          "index": 16,
+          "belong_page": 1,
+          "question_id": 375467,
+          "question_title": "<p>【学员回忆版】执行以下 Python 语句之后，列表x 为 (&nbsp; )</p><p>x=[1,2,3]</p><p>x.append([4,5])</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "375467",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["[1,2,3,4,5]", "[1,2,3]", "[4,5]", "[1,2,3,[4,5]]"],
+          "sort_son": "0"
+        },
+        {
+          "index": 17,
+          "belong_page": 1,
+          "question_id": 375468,
+          "question_title": "【学员回忆版】防火墙不具备(&nbsp; ) 功 能 。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "375468",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["病毒防治", "状态检测", "代 理", "包过滤"],
+          "sort_son": "0"
+        },
+        {
+          "index": 18,
+          "belong_page": 1,
+          "question_id": 375469,
+          "question_title": "【学员回忆版】 一棵哈夫曼树共有127个结点，对其进行哈夫曼编码，共能得到(&nbsp; ) 个 字符的编码。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "375469",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["64", "127", "63", "126"],
+          "sort_son": "0"
+        },
+        {
+          "index": 19,
+          "belong_page": 1,
+          "question_id": 375470,
+          "question_title": "<p>【学员回忆版】浮点加(减)法运算过程中需要以下操作要素：</p><p>① 溢出判别</p><p>② 规格化及舍入处理</p><p>③ 尾 数 加 ( 减 ) 运 算</p><p>④ 对阶操作</p><p>正确的加(减)法操作流程是(&nbsp; )。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "375470",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>①③④②</p>", "<p>①④③②</p>", "<p>②①④③</p>", "<p>④③②①</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 20,
+          "belong_page": 1,
+          "question_id": 375471,
+          "question_title": "【学员回忆版】某队列允许在其两端进行入队操作，但仅允许在一端进行出队操作。若元 素 a 、b 、c 、d依次全部入队列，之后进行出队列操作，则不能得到的出队序列是(&nbsp; )。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "375471",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["dbac", "cabd", "acdb", "bacd"],
+          "sort_son": "0"
+        },
+        {
+          "index": 21,
+          "belong_page": 1,
+          "question_id": 375472,
+          "question_title": "【学员回忆版】以下关于基于构件的开发模型的叙述中，不正确的是()。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "375472",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "本质上是演进模型，以迭代方式构建软件",
+            "必须采用面向对象开发技术",
+            "采用预先打包的软件构件构造软件",
+            "构件可以是组织内部开发的，也可以是商品化成品软件构件"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 22,
+          "belong_page": 1,
+          "question_id": 375473,
+          "question_title": "【学员回忆版】在 C/C++ 程序中，对于函数中定义的非静态局部变量，其存储空间在(&nbsp; )分配。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "375473",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["栈区", "静态数据区", "文本区", "自由堆区"],
+          "sort_son": "0"
+        },
+        {
+          "index": 23,
+          "belong_page": 1,
+          "question_id": 375474,
+          "question_title": "【学员回忆版】以下关于测试原则的叙述中，不正确的是()。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "375474",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "充分注意测试中的群集现象",
+            "设计测试用例时，应包括合理的输入条件和不合理的输入条件",
+            "应该由程序员测试自己编写的程序",
+            "严格执行测试计划，避免测试的随意性"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 24,
+          "belong_page": 1,
+          "question_id": 375475,
+          "question_title": "【学员回忆版】在微型计算机中，管理键盘最适合采用的 I/O 控制方式是(&nbsp; ) 方 式",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "375475",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["DMA", "无条件传送", "程序查询", "中断"],
+          "sort_son": "0"
+        },
+        {
+          "index": 25,
+          "belong_page": 1,
+          "question_id": 375476,
+          "question_title": "【学员回忆版】当一棵非空二叉树的( )时，对该二叉树进行中序遍历和后序遍历所得 的序列相同。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "375476",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "每个非叶子结点都只有左子树",
+            "每个非叶子结点都只有右子树",
+            "每个非叶子结点的度都为1",
+            "每个非叶子结点的度都为2"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 26,
+          "belong_page": 1,
+          "question_id": 375477,
+          "question_title": "<p>【学员回忆版】以下关于甘特图的叙述中，不正确的是( )。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "375477",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>一种进度管理的工具</p>",
+            "<p>易于看出每个子任务的持续时间</p>",
+            "<p>易于看出目前项目的实际进度情况</p>",
+            "<p>易于看出子任务之间的衔接关系</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 27,
+          "belong_page": 1,
+          "question_id": 375478,
+          "question_title": "【学员回忆版】以下关于软件工程标准化的叙述中，不正确的是(&nbsp; )。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "375478",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "可以提高开发人员之间的沟通效率",
+            "有助于提高管理水平",
+            "有助于提高软件产品质量",
+            "可以提高每一位开发人员的开发技能"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 28,
+          "belong_page": 1,
+          "question_id": 375479,
+          "question_title": "【学员回忆版】数据库的基本表、存储文件和视图的结构分别对应( )。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "375479",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "用户视图、内部视图和概念视图",
+            "用户视图、概念视图和内部视图",
+            "概念视图、用户视图和内部视图",
+            "概念视图、内部视图和用户视图"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 29,
+          "belong_page": 1,
+          "question_id": 375480,
+          "question_title": "【学员回忆版】 (&nbsp; )模式可以给对象动态地添加一些额外的职责，而不改变该对象的结构。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "375480",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "装 饰 (Decorator)",
+            "外 观 (Facade)",
+            "组 合 (Composite )",
+            "享 元 (Flyweight)"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 30,
+          "belong_page": 1,
+          "question_id": 375481,
+          "question_title": "【学员回忆版】在 SQL 中，结束事务通常可以使用COMMIT&nbsp; &nbsp;和 ROLLBACK 语句。若某事务T 执行 了 ( ) 。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "375481",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "ROLLBACK 语句，则可将T;对数据库的更新撤销",
+            "ROLLBACK 语句，则可将T;对数据库的更新写入数据库",
+            "COMMIT 语句，则T;对数据库影响可用ROLLBACK 语句来撤销",
+            "ROLLBACK 语句，则表示T;已正确地执行完毕"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 31,
+          "belong_page": 1,
+          "question_id": 375482,
+          "question_title": "【学员回忆版】利用报文摘要算法生成报文摘要的目的是(&nbsp; )。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "375482",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "防止发送的报文被篡改",
+            "对传输数据进行加密，防止数据被窃听",
+            "验证通信对方的身份，防止假冒",
+            "防止发送方否认发送过的数据"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 32,
+          "belong_page": 1,
+          "question_id": 375483,
+          "question_title": "【学员回忆版】采用冒泡排序算法对序列(49,38,65,97,76,13,27,49)进行非降序排序，两趟后的序列为(&nbsp; )。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "375483",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "(49,38,65,13,27,49,76,97)",
+            "(38,49,65,76,13,27,49,97)",
+            "(38,49,65,13,27,49,76,97)",
+            "(49,38,65,97,76,13,27,49)"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 33,
+          "belong_page": 1,
+          "question_id": 375484,
+          "question_title": "<p>【学员回忆版】在设计模块 M 和模块N 时， (&nbsp; )是最佳的设计。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "375484",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>M 和 N 通过通信模块传送数据</p>",
+            "<p>M 和 N 通过公共数据域传送数据</p>",
+            "<p>M 和 N 通过简单数据参数交换信息</p>",
+            "<p>M 直接访问N 的数据</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 34,
+          "belong_page": 1,
+          "question_id": 375485,
+          "question_title": "<p>【学员回忆版】程序员甲将其编写完成的软件程序发给同事乙并进行讨论，之后由于甲对该程序极不满意，因此甲决定放弃该程序，后来乙将该程序稍加修改并署自己名在某技术 论坛发布。下列说法中，正确的是(&nbsp; )。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "375485",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>乙对该程序进行了修改，因此乙享有该程序的软件著作权</p>",
+            "<p>乙的行为没有侵犯甲的软件著作权，因为甲已放弃程序</p>",
+            "<p>乙的行为未侵权，因其发布的场合是以交流学习为目的的技术论坛</p>",
+            "<p>乙的行为侵犯了甲对该程序享有的软件著作权</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 35,
+          "belong_page": 1,
+          "question_id": 375486,
+          "question_title": "<p>【学员回忆版】软件文档在软件生存期中起着重要的作用，其作用不包括(&nbsp; )。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "375486",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>提高软件运行效率</p>",
+            "<p>作为开发过程的阶段工作成果和结束标记</p>",
+            "<p>提高开发过程的能见度</p>",
+            "<p>提高开发效率</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 36,
+          "belong_page": 1,
+          "question_id": 375487,
+          "question_title": "【学员回忆版】数据库概念结构设计阶段的工作步骤包括①~④,其正确的顺序为()。 ① 设计局部视图②抽象数据③修改重构消除冗余④合并取消冲突",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "375487",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["①→②→④→③", "①→②→③→④", "②→①→③→④", "②→①→④→③"],
+          "sort_son": "0"
+        }
+      ],
+      "summary": {
+        "radio": {
+          "total_question": 36,
+          "total_score": 0
+        },
+        "multiple": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "judge": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "fill": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "program": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "qanda": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "cloze": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "budingxiang": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "material": {
+          "total_question": 0,
+          "total_score": 0
+        }
+      },
+      "examine": {
+        "id": 16952,
+        "title": "2023年11月软件设计师选择题（回忆版）",
+        "len_time": {
+          "time": 0
+        },
+        "total_question": 36,
+        "total_score": 36,
+        "submit_limit_num": "0",
+        "machine_type": "1"
+      },
+      "answer_activity_start_time": 1585828800,
+      "checkProcess": 1,
+      "process": {
+        "is_delete": false
+      },
+      "train_id": 0
+    },
+    "pagination": {
+      "curPage": 1,
+      "pageSize": 1200,
+      "total": 36,
+      "hasNextPage": false
+    },
+    "totalOrder": [
+      {
+        "index": 1,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 375451
+      },
+      {
+        "index": 2,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 375452
+      },
+      {
+        "index": 3,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 375453
+      },
+      {
+        "index": 4,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 375454
+      },
+      {
+        "index": 5,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 375455
+      },
+      {
+        "index": 6,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 375456
+      },
+      {
+        "index": 7,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 375457
+      },
+      {
+        "index": 8,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 375458
+      },
+      {
+        "index": 9,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 375459
+      },
+      {
+        "index": 10,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 375460
+      },
+      {
+        "index": 11,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 375461
+      },
+      {
+        "index": 12,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 375463
+      },
+      {
+        "index": 13,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 375464
+      },
+      {
+        "index": 14,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 375465
+      },
+      {
+        "index": 15,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 375466
+      },
+      {
+        "index": 16,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 375467
+      },
+      {
+        "index": 17,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 375468
+      },
+      {
+        "index": 18,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 375469
+      },
+      {
+        "index": 19,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 375470
+      },
+      {
+        "index": 20,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 375471
+      },
+      {
+        "index": 21,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 375472
+      },
+      {
+        "index": 22,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 375473
+      },
+      {
+        "index": 23,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 375474
+      },
+      {
+        "index": 24,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 375475
+      },
+      {
+        "index": 25,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 375476
+      },
+      {
+        "index": 26,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 375477
+      },
+      {
+        "index": 27,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 375478
+      },
+      {
+        "index": 28,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 375479
+      },
+      {
+        "index": 29,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 375480
+      },
+      {
+        "index": 30,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 375481
+      },
+      {
+        "index": 31,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 375482
+      },
+      {
+        "index": 32,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 375483
+      },
+      {
+        "index": 33,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 375484
+      },
+      {
+        "index": 34,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 375485
+      },
+      {
+        "index": 35,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 375486
+      },
+      {
+        "index": 36,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 375487
+      }
+    ]
+  }
+}

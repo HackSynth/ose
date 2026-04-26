@@ -1,0 +1,1928 @@
+{
+  "msg": "成功",
+  "status": "0",
+  "data": {
+    "data": {
+      "question": [
+        {
+          "index": 1,
+          "belong_page": 1,
+          "question_id": 363416,
+          "question_title": "以下关于冯诺依曼计算机的叙述中，不正确的是 ( 1 )&nbsp; 。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363416",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "程序指令和数据都采用二进制表示",
+            "程序指令总是存储在主存中，而数据则存储在高速缓存中",
+            "程序的功能都由中央处理器（CPU）执行指令来实现",
+            "程序的执行过程由指令进行自动控制"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 2,
+          "belong_page": 1,
+          "question_id": 363417,
+          "question_title": "<p>以下关于SRAM和DRAM储存器的叙述中正确的是 ( 2 )&nbsp; 。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363417",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>与DRAM相比，SRAM集成率低，功耗大、不需要动态刷新</p>",
+            "<p>与DRAM相比，SRAM集成率高，功耗小、需要动态刷新</p>",
+            "<p>与SRAM相比，DRAM集成率高，功耗大、不需要动态刷新</p>",
+            "<p>与SRAM相比，DRAM集成率低，功耗大、需要动态刷新</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 3,
+          "belong_page": 1,
+          "question_id": 363418,
+          "question_title": "为了实现多级中断，保存程序现场信息最有效的方法是使用&nbsp; ( 3 )&nbsp; 。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363418",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["通用寄存器&nbsp;", "累加器", "堆栈", "程序计数器"],
+          "sort_son": "0"
+        },
+        {
+          "index": 4,
+          "belong_page": 1,
+          "question_id": 363419,
+          "question_title": "<p>以下关于RISC和CISC的叙述中，不正确的是&nbsp; ( 4 )&nbsp; 。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363419",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>RISC的大多数指令在一个时钟周期内空完成</p>",
+            "<p>RISC普遍采用微程序控制器，CISC则遍采用硬布线控制器</p>",
+            "<p>RISC的指令种类和寻址方式相对于CISC更少</p>",
+            "<p>RISC和CISC都采用流水线技术</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 5,
+          "belong_page": 1,
+          "question_id": 363420,
+          "question_title": "<p><br/></p><p><br/></p><p><br/></p><p>某计算机系统构成如下图所示，假设每个软件的千小时可靠度Ｒ为0.95，则该系统的千小时可靠度约为&nbsp; ( 5 )&nbsp; 。</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230424/1682348535758047.jpg\" title=\"1682348535758047.jpg\" alt=\"1111.jpg\" width=\"312\" height=\"90\"/>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363420",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>0.95x（1-(1-0.95)＾2)×0.95</p>",
+            "<p>0.95×（1-(1-0.95)＾2×0.95）</p>",
+            "<p>0.95×2×（1-0.95)×0.95</p>",
+            "<p>0.95^4×（1-0.95)^2</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 6,
+          "belong_page": 1,
+          "question_id": 363421,
+          "question_title": "以下信息交换情形中，采用异步传输方式的是&nbsp; &nbsp;( 6 )&nbsp; 。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363421",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "CPU与内存储器之间交换信息",
+            "CPU与PCI总线交换信息",
+            "CPU与I/O接口交换信息",
+            "I/O接口与打印设备间交换信息"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 7,
+          "belong_page": 1,
+          "question_id": 363422,
+          "question_title": "下列协议中，可以用于文件安全传输的是&nbsp; ( 7 )&nbsp; 。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363422",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["FTP", "SFTP&nbsp;", "TFTP&nbsp;", "ICMP"],
+          "sort_son": "0"
+        },
+        {
+          "index": 8,
+          "belong_page": 1,
+          "question_id": 352856,
+          "question_title": "<p>下列不属于计算机病毒的是(54)。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "352856",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>永恒之蓝&nbsp; &nbsp;&nbsp;</p>",
+            "<p>蠕虫</p>",
+            "<p>特洛伊木马&nbsp; &nbsp;&nbsp;</p>",
+            "<p>DDOS</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 9,
+          "belong_page": 1,
+          "question_id": 363423,
+          "question_title": "以下关于杀毒软件的描述中，错误的是&nbsp; ( 9 )&nbsp; 。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363423",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "应当为计算机安装杀毒软件并及时更新病毒",
+            "安装杀毒软件可以有效防止蠕虫病毒",
+            "安装杀毒软件可以有效防止网站信息被篡改",
+            "服务器操作系统也需要安装杀毒软件"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 10,
+          "belong_page": 1,
+          "question_id": 363424,
+          "question_title": "通过在出口防火墙上配置&nbsp; ( 10 )&nbsp; 功能可以阻止外部未授权用户访问内部网络。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363424",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["ACL", "SNAT", "入侵检测", "防病毒"],
+          "sort_son": "0"
+        },
+        {
+          "index": 11,
+          "belong_page": 1,
+          "question_id": 363425,
+          "question_title": "<p>SQL注入是常见的web攻击，以下不能够有效防御SQL注入的手段是&nbsp; (&nbsp; 11&nbsp; )&nbsp; 。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363425",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>对用户输入做关键字过滤</p>",
+            "<p>部署Web应用防火墙进行防护</p>",
+            "<p>部署入侵检测系统阻断攻击</p>",
+            "<p>定期扫描系统漏洞并及时修复</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 12,
+          "belong_page": 1,
+          "question_id": 363426,
+          "question_title": "<p>甲乙丙三者分别就相同内容的发明创造，先后向专利管理部门提出申请，(&nbsp; 12 )&nbsp; 可以获得专利申请权。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363426",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>甲乙丙均</p>", "<p>先申请者</p>", "<p>先试用者</p>", "<p>先发明者</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 13,
+          "belong_page": 1,
+          "question_id": 363427,
+          "question_title": "&nbsp;(&nbsp; 13 )&nbsp; 的保护期是可以延长的。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363427",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["著作权", "专利权", "商标权", "商业秘密权"],
+          "sort_son": "0"
+        },
+        {
+          "index": 14,
+          "belong_page": 1,
+          "question_id": 363428,
+          "question_title": "软件著作人与被许可方签订一份软件使用许可合同。若在该合同约定的时间和地域范围内，软件权利人不得再许可任何第三人以此相同的方法使用该项软件，但软件权利人可以自己使用，则该项许可使用是&nbsp; (&nbsp; 14 )&nbsp; 。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363428",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["独家许可使用", "独占许可使用", "普通许可使用", "部分许可使用"],
+          "sort_son": "0"
+        },
+        {
+          "index": 15,
+          "belong_page": 1,
+          "question_id": 363429,
+          "question_title": "<p>以下关于数据流图中基本加工的叙述，不正确的是&nbsp; (&nbsp; 15 )&nbsp; 。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363429",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>对每一个基本加工，必须有一个加工规格说明</p>",
+            "<p>加工规格说明必须描述把输入数据流变换为输出数据流的加工规则</p>",
+            "<p>加工规格说明必须描述实现加工的具体流程</p>",
+            "<p>决策表可以用来表示规格说明</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 16,
+          "belong_page": 1,
+          "question_id": 363430,
+          "question_title": "在划分模块时，一个模块的作用范围应该在其控制范围之内。若发现其作用范围不在其控制范围内，则&nbsp; (&nbsp; 16 )&nbsp; 不是适当的处理方法。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363430",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "将判定所在模块合并到父模块中，使判定处于较高层次",
+            "将受判定影响的模块下移到控制范围内",
+            "将判定上移到层次较高的位置",
+            "将父模块下移，使判定处于较高层次"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 17,
+          "belong_page": 1,
+          "question_id": 363432,
+          "question_title": "<p>下图是一个软件项目的活动图，其中顶点表示项目里程碑，连接顶点的边表示包含的活动，则里程碑&nbsp; (&nbsp; 17 )&nbsp; 在关键路径上。若在实际项目进展中，活动AD在活动AC开始3天后才开始，而完成活动DG过程中，由于有临时事件发生，实际需要15天才能完成，则完成该项目的最短时间比原计划多了&nbsp; (&nbsp; 18 )&nbsp; 天。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230424/1682349776631849.jpg\" title=\"1682349776631849.jpg\" alt=\"1111.jpg\" width=\"503\" height=\"240\"/></p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363431",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["B", "C", "<p>D</p>", "I"],
+          "sort_son": "1"
+        },
+        {
+          "index": 18,
+          "belong_page": 1,
+          "question_id": 363433,
+          "question_title": "<p>下图是一个软件项目的活动图，其中顶点表示项目里程碑，连接顶点的边表示包含的活动，则里程碑&nbsp; (&nbsp; 17 )&nbsp; 在关键路径上。若在实际项目进展中，活动AD在活动AC开始3天后才开始，而完成活动DG过程中，由于有临时事件发生，实际需要15天才能完成，则完成该项目的最短时间比原计划多了&nbsp; (&nbsp; 18 )&nbsp; 天。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230424/1682349776631849.jpg\" title=\"1682349776631849.jpg\" alt=\"1111.jpg\" width=\"503\" height=\"240\"/></p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363431",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>8</p>", "3", "<p>5</p>", "6"],
+          "sort_son": "2"
+        },
+        {
+          "index": 19,
+          "belong_page": 1,
+          "question_id": 363434,
+          "question_title": "在风险管理中，降低风险危害的策略不包括&nbsp; (&nbsp; 19 )&nbsp; &nbsp;。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363434",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["回避风险", "转移风险", "消除风险", "接受风险并控制损失"],
+          "sort_son": "0"
+        },
+        {
+          "index": 20,
+          "belong_page": 1,
+          "question_id": 6701,
+          "question_title": "<p>程序运行过程中常使用参数在函数（过程）间传递信息，引用调用传递的是实参的（）。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "6701",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>地址</p>", "<p>类型</p>", "<p>名称</p>", "<p>值</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 21,
+          "belong_page": 1,
+          "question_id": 6707,
+          "question_title": "<p>已知文法G：S-&gt;A0|B1,&nbsp;A-&gt;S1|1，B-&gt;S0|0，其中S是开始符号。从S出发可以推导出（）。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "6707",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>所有由0构成的字符串</p>",
+            "<p>所有由1构成的字符串</p>",
+            "<p>某些0和1相等的字符串</p>",
+            "<p>所有0和1个数不同的字符串</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 22,
+          "belong_page": 1,
+          "question_id": 363435,
+          "question_title": "<p>算数表达式a+(b-c)*d的后缀式是&nbsp; (&nbsp; 22 )&nbsp; 。（-、+、*表示算数的减、加、乘运算，运算符的优先级和结合性遵循惯例）。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363435",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>bc-d*a+</p>", "<p>abc-d*+</p>", "<p>ab+c-d*</p>", "<p>abcd-*+</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 23,
+          "belong_page": 1,
+          "question_id": 363436,
+          "question_title": "嵌入式操作系统的&nbsp; (&nbsp; 23 )&nbsp; 是指”从减少成本和缩短研发周期考虑要求操作系统能针对硬件变化改变进行结构与功能上的配置，以满足不同微处理器平台的要求。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363436",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["实时性", "可靠性", "可定制性", "易移植性"],
+          "sort_son": "0"
+        },
+        {
+          "index": 24,
+          "belong_page": 1,
+          "question_id": 363438,
+          "question_title": "<p>Windows文件系统的目录结构（C盘下）如下图所示，假设用户要访问文件 f2.java，则该文件的全文件名为&nbsp; (&nbsp; 24 )&nbsp; 。若系统当前工作目录为ProgramFile，那么该文件的相对路径为&nbsp; (&nbsp; 25 )&nbsp; 。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230424/1682350393543129.jpg\" title=\"1682350393543129.jpg\" alt=\"1111.jpg\" width=\"456\" height=\"253\"/></p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363437",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "C:\\f2.java",
+            "C\\Document\\java-prog\\f2.java",
+            "\\ProgramFile\\java-prog\\f2.java",
+            "C:\\ProgramFile\\java-prog\\f2.java"
+          ],
+          "sort_son": "1"
+        },
+        {
+          "index": 25,
+          "belong_page": 1,
+          "question_id": 363439,
+          "question_title": "<p>Windows文件系统的目录结构（C盘下）如下图所示，假设用户要访问文件 f2.java，则该文件的全文件名为&nbsp; (&nbsp; 24 )&nbsp; 。若系统当前工作目录为ProgramFile，那么该文件的相对路径为&nbsp; (&nbsp; 25 )&nbsp; 。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230424/1682350393543129.jpg\" title=\"1682350393543129.jpg\" alt=\"1111.jpg\" width=\"456\" height=\"253\"/></p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363437",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["\\java-prog\\", "java-prog\\", "Program\\java-prog", "\\Program\\java-prog"],
+          "sort_son": "2"
+        },
+        {
+          "index": 26,
+          "belong_page": 1,
+          "question_id": 363441,
+          "question_title": "<p>进程P1、P2、 P3、P4、P5和P6的前趋势图如下所示, 若用PV操作控制进程P1、P2、P3、P4、P5和P6并发执行的过程，则需要设置7个信号量 S1、S2、S3、S4、S5、S6和S7，且信号量S1~S7的初值都等于零。P1-P6的进程执行图中，a和b处应分别填写&nbsp; (&nbsp; 26 )&nbsp; ；c和d处应分别填写&nbsp; (&nbsp; 27 )&nbsp; ；e和f处应分别填写&nbsp; (&nbsp; 28 )&nbsp; ;g和h处应分别填写&nbsp; (&nbsp; 29 )&nbsp;&nbsp;</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230424/1682350524978516.jpg\" title=\"1682350524978516.jpg\" alt=\"1111.jpg\" width=\"591\" height=\"446\"/></p><br/>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363440",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["V(S1)和V(S2)", "P(S1)和P(S2)", "P(S1)和V(S2)", "V(S1)和P(S2)"],
+          "sort_son": "1"
+        },
+        {
+          "index": 27,
+          "belong_page": 1,
+          "question_id": 363442,
+          "question_title": "<p>进程P1、P2、 P3、P4、P5和P6的前趋势图如下所示, 若用PV操作控制进程P1、P2、P3、P4、P5和P6并发执行的过程，则需要设置7个信号量 S1、S2、S3、S4、S5、S6和S7，且信号量S1~S7的初值都等于零。P1-P6的进程执行图中，a和b处应分别填写&nbsp; (&nbsp; 26 )&nbsp; ；c和d处应分别填写&nbsp; (&nbsp; 27 )&nbsp; ；e和f处应分别填写&nbsp; (&nbsp; 28 )&nbsp; ;g和h处应分别填写&nbsp; (&nbsp; 29 )&nbsp;&nbsp;</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230424/1682350524978516.jpg\" title=\"1682350524978516.jpg\" alt=\"1111.jpg\" width=\"591\" height=\"446\"/></p><br/>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363440",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "P(S1)P(S2)和P(S3)和P(S4)",
+            "V(S1)V(S2)和V(S3)和V(S4)",
+            "P(S1)P(S2)和V(S3)和V(S4)",
+            "V(S1)V(S2)和P(S3)和P(S4)"
+          ],
+          "sort_son": "2"
+        },
+        {
+          "index": 28,
+          "belong_page": 1,
+          "question_id": 363443,
+          "question_title": "<p>进程P1、P2、 P3、P4、P5和P6的前趋势图如下所示, 若用PV操作控制进程P1、P2、P3、P4、P5和P6并发执行的过程，则需要设置7个信号量 S1、S2、S3、S4、S5、S6和S7，且信号量S1~S7的初值都等于零。P1-P6的进程执行图中，a和b处应分别填写&nbsp; (&nbsp; 26 )&nbsp; ；c和d处应分别填写&nbsp; (&nbsp; 27 )&nbsp; ；e和f处应分别填写&nbsp; (&nbsp; 28 )&nbsp; ;g和h处应分别填写&nbsp; (&nbsp; 29 )&nbsp;&nbsp;</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230424/1682350524978516.jpg\" title=\"1682350524978516.jpg\" alt=\"1111.jpg\" width=\"591\" height=\"446\"/></p><br/>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363440",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "P(S5)P(S6)和P(S4)和P(S5)",
+            "V(S5)V(S6)和V(S4)和V(S5)",
+            "P(S5)P(S6)和V(S4)和V(S5)",
+            "V(S5)V(S6)和P(S4)和P(S5)"
+          ],
+          "sort_son": "3"
+        },
+        {
+          "index": 29,
+          "belong_page": 1,
+          "question_id": 363444,
+          "question_title": "<p>进程P1、P2、 P3、P4、P5和P6的前趋势图如下所示, 若用PV操作控制进程P1、P2、P3、P4、P5和P6并发执行的过程，则需要设置7个信号量 S1、S2、S3、S4、S5、S6和S7，且信号量S1~S7的初值都等于零。P1-P6的进程执行图中，a和b处应分别填写&nbsp; (&nbsp; 26 )&nbsp; ；c和d处应分别填写&nbsp; (&nbsp; 27 )&nbsp; ；e和f处应分别填写&nbsp; (&nbsp; 28 )&nbsp; ;g和h处应分别填写&nbsp; (&nbsp; 29 )&nbsp;&nbsp;</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230424/1682350524978516.jpg\" title=\"1682350524978516.jpg\" alt=\"1111.jpg\" width=\"591\" height=\"446\"/></p><br/>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363440",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "P(S7)和P(S6)P(S7）",
+            "V(S7)和P(S6)P(S7）",
+            "P(S7)和V(S6)V(S7）",
+            "V(S7)和V(S6)V(S7）"
+          ],
+          "sort_son": "4"
+        },
+        {
+          "index": 30,
+          "belong_page": 1,
+          "question_id": 51643,
+          "question_title": "<p>假设段页式存储管理系统中的地址结构如下图所示，则系统（ ）。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s1.51ctocdn.cn//images/20190415/1555331310416136.jpg\" alt=\"1.jpg\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "51643",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>最多可有2048个段，每个段的大小均为2048个页，页的大小为2K</p>",
+            "<p>最多可有2048个段，每个段最大允许有2048个页，页的大小为2K</p>",
+            "<p>最多可有1024个段，每个段的大小均为1024个页，页的大小为4K</p>",
+            "<p>最多可有1024个段，每个段最大允许有1024个页，页的大小为4K</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 31,
+          "belong_page": 1,
+          "question_id": 363447,
+          "question_title": "<p>某文件管理系统采用位示图（bitmap）记录磁盘的使用情况。如果系统的字长为32位，磁盘物理块的大小为4MB，物理块依次编号为：0、1、2、位示图字依次编号为：0、1、2、那么16385号物理块的使用情况在位示图中的第(25)个字中描述;如果磁盘的容量为1000GB,那么位示图需要(26)个字来表示。</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363446",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["128", "256", "513", "1024"],
+          "sort_son": "1"
+        },
+        {
+          "index": 32,
+          "belong_page": 1,
+          "question_id": 363448,
+          "question_title": "<p>某文件管理系统采用位示图（bitmap）记录磁盘的使用情况。如果系统的字长为32位，磁盘物理块的大小为4MB，物理块依次编号为：0、1、2、位示图字依次编号为：0、1、2、那么16385号物理块的使用情况在位示图中的第(25)个字中描述;如果磁盘的容量为1000GB,那么位示图需要(26)个字来表示。</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363446",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["1200", "3200", "6400", "8000"],
+          "sort_son": "2"
+        },
+        {
+          "index": 33,
+          "belong_page": 1,
+          "question_id": 363449,
+          "question_title": "<p>在多态的几种不同方式中，&nbsp; (&nbsp; 33 )&nbsp; &nbsp;多态是一种特定的多态，指同一个名字在不同上下文中可代表不同的含义。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363449",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>参数</p>", "<p>包含</p>", "<p>过载</p>", "<p>强制</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 34,
+          "belong_page": 1,
+          "question_id": 363450,
+          "question_title": "(&nbsp; 34 )&nbsp; &nbsp;开发过程模型不适用于开发初期对软件需求缺乏准确全面认识的情况。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363450",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["瀑布", "演化", "螺旋", "增量"],
+          "sort_son": "0"
+        },
+        {
+          "index": 35,
+          "belong_page": 1,
+          "question_id": 341945,
+          "question_title": "<p>针对月收入小于等于3500元免征个人所得税的需求，现分别输入3499，3500和3501进行测试，则采用的测试方法&nbsp; (&nbsp; 35 )&nbsp; &nbsp;。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "341945",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>判定覆盖</p>", "<p>边界值分析</p>", "<p>路径覆盖</p>", "<p>因果图</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 36,
+          "belong_page": 1,
+          "question_id": 363451,
+          "question_title": "以下关于软件维护的叙述中，正确的是&nbsp; (&nbsp; 36 )&nbsp; 。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363451",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "工作量相对于软件开发而言要小很多",
+            "成本相对于软件开发而言要更低",
+            "时间相对于软件开发而言通常更长",
+            "只对软件代码进行修改的行为"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 37,
+          "belong_page": 1,
+          "question_id": 363452,
+          "question_title": "在运行时将调用和响应调用所需执行的代码加以结合的机制是&nbsp; (&nbsp; 37 )&nbsp; 。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363452",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["强类型", "弱类型", "静态绑定", "动态绑定"],
+          "sort_son": "0"
+        },
+        {
+          "index": 38,
+          "belong_page": 1,
+          "question_id": 363453,
+          "question_title": "进行面向对象系统设计时，在包的依赖关系图中不允许存在环，这属于&nbsp; (&nbsp; 38 )&nbsp; 原则。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363453",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["单一责任", "无环依赖", "依赖倒置", "里氏替换"],
+          "sort_son": "0"
+        },
+        {
+          "index": 39,
+          "belong_page": 1,
+          "question_id": 363456,
+          "question_title": "面向对象分析的第一项活动是&nbsp; (&nbsp; 39 ) ；面向对象程序设计语言为面向对象&nbsp; (&nbsp; 40 )&nbsp; 。",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363455",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["组织对象", "描述对象间的相互作用&nbsp;", "认定对象", "确定对象的操作"],
+          "sort_son": "1"
+        },
+        {
+          "index": 40,
+          "belong_page": 1,
+          "question_id": 363457,
+          "question_title": "面向对象分析的第一项活动是&nbsp; (&nbsp; 39 ) ；面向对象程序设计语言为面向对象&nbsp; (&nbsp; 40 )&nbsp; 。",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363455",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["用例设计", "分析", "需求分析", "实现"],
+          "sort_son": "2"
+        },
+        {
+          "index": 41,
+          "belong_page": 1,
+          "question_id": 363459,
+          "question_title": "UML序列图是业务场景的图形化表示，描述了以&nbsp; (&nbsp; 41 ) 顺序组织的对象之间的交互活动。某系统中的一个UML序列图如下图所示，&nbsp; (&nbsp; 42 )表示返回消息，Account类必须实现的方法有&nbsp; (&nbsp; 43 )。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230424/1682351733832603.jpg\" title=\"1682351733832603.jpg\" alt=\"1111.jpg\" width=\"509\" height=\"399\"/>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363458",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["活动", "时间", "消息", "调用"],
+          "sort_son": "1"
+        },
+        {
+          "index": 42,
+          "belong_page": 1,
+          "question_id": 363460,
+          "question_title": "UML序列图是业务场景的图形化表示，描述了以&nbsp; (&nbsp; 41 ) 顺序组织的对象之间的交互活动。某系统中的一个UML序列图如下图所示，&nbsp; (&nbsp; 42 )表示返回消息，Account类必须实现的方法有&nbsp; (&nbsp; 43 )。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230424/1682351733832603.jpg\" title=\"1682351733832603.jpg\" alt=\"1111.jpg\" width=\"509\" height=\"399\"/>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363458",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["tansID", "balance", "withdraw&nbsp;", "deposit"],
+          "sort_son": "2"
+        },
+        {
+          "index": 43,
+          "belong_page": 1,
+          "question_id": 363461,
+          "question_title": "UML序列图是业务场景的图形化表示，描述了以&nbsp; (&nbsp; 41 ) 顺序组织的对象之间的交互活动。某系统中的一个UML序列图如下图所示，&nbsp; (&nbsp; 42 )表示返回消息，Account类必须实现的方法有&nbsp; (&nbsp; 43 )。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230424/1682351733832603.jpg\" title=\"1682351733832603.jpg\" alt=\"1111.jpg\" width=\"509\" height=\"399\"/>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363458",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "start（）",
+            "checkBalance()和withdraw()&nbsp;",
+            "&nbsp;deposit（）",
+            "checkBalance()、withdraw()和deposit()"
+          ],
+          "sort_son": "3"
+        },
+        {
+          "index": 44,
+          "belong_page": 1,
+          "question_id": 363463,
+          "question_title": "<p>编译过程中，对高级语言程序语句的翻译主要考虑声明语句和可执行语句、对声明语句，主要是将需要的信息正确地填入合理组织的&nbsp; (&nbsp; 44 )&nbsp; 中；对可执行语句，则是&nbsp; (&nbsp; 45 )&nbsp; 。</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363462",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "&nbsp;(&nbsp; 44 )&nbsp;符号表",
+            "&nbsp;(&nbsp; 44 )&nbsp;栈",
+            "&nbsp;(&nbsp; 44 )&nbsp;队列",
+            "&nbsp;(&nbsp; 44 )&nbsp;树"
+          ],
+          "sort_son": "1"
+        },
+        {
+          "index": 45,
+          "belong_page": 1,
+          "question_id": 363464,
+          "question_title": "<p>编译过程中，对高级语言程序语句的翻译主要考虑声明语句和可执行语句、对声明语句，主要是将需要的信息正确地填入合理组织的&nbsp; (&nbsp; 44 )&nbsp; 中；对可执行语句，则是&nbsp; (&nbsp; 45 )&nbsp; 。</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363462",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "&nbsp; (&nbsp; 45 )&nbsp;&nbsp;翻译成机器代码并加以执行",
+            "&nbsp; (&nbsp; 45 )&nbsp;&nbsp;转换成语法树",
+            "&nbsp; (&nbsp; 45 )&nbsp;&nbsp;转换成中间代码或目标代码",
+            "&nbsp; (&nbsp; 45 )&nbsp;&nbsp;转换成有限自动机"
+          ],
+          "sort_son": "2"
+        },
+        {
+          "index": 46,
+          "belong_page": 1,
+          "question_id": 363466,
+          "question_title": "<p>&nbsp;(&nbsp; 46 )&nbsp; 设计模式能使一个对象的状态发生改变时通知所有依赖它的监听者。&nbsp; (&nbsp; 47 )&nbsp; 设计模式限制类的实例对象只能有一个。</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363465",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "责任链(chain of responsibility)",
+            "命令(command)",
+            "抽象工厂(abstract factory)",
+            "观察者(observer)"
+          ],
+          "sort_son": "1"
+        },
+        {
+          "index": 47,
+          "belong_page": 1,
+          "question_id": 363467,
+          "question_title": "<p>&nbsp;(&nbsp; 46 )&nbsp; 设计模式能使一个对象的状态发生改变时通知所有依赖它的监听者。&nbsp; (&nbsp; 47 )&nbsp; 设计模式限制类的实例对象只能有一个。</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363465",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "原型(prototype)",
+            "工厂方法(factory method)",
+            "单例( singleton)",
+            "生成器(builder)"
+          ],
+          "sort_son": "2"
+        },
+        {
+          "index": 48,
+          "belong_page": 1,
+          "question_id": 363468,
+          "question_title": "用pip安装numpy模块的命令为&nbsp; (&nbsp; 48 )&nbsp; 。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363468",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["pip numpy", "pip install numpy&nbsp;", "install numpy", "import num"],
+          "sort_son": "0"
+        },
+        {
+          "index": 49,
+          "belong_page": 1,
+          "question_id": 363469,
+          "question_title": "某Python程序中定义了X=[1，2]，那么X*2的值为&nbsp; (&nbsp; 49 )&nbsp; 。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363469",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["[1，2，1，2]", "[1，1，2，2]", "[2，4]", "出错"],
+          "sort_son": "0"
+        },
+        {
+          "index": 50,
+          "belong_page": 1,
+          "question_id": 363470,
+          "question_title": "在Python语言中，&nbsp; (&nbsp; 50 )&nbsp; 是一种不可变的、有序的序列结构，其中元素可以重复。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363470",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["tuple(元组)", "dict(字典)", "list(列表)&nbsp;", "set(集合)"],
+          "sort_son": "0"
+        },
+        {
+          "index": 51,
+          "belong_page": 1,
+          "question_id": 363471,
+          "question_title": "数据库中的视图是一个虚拟表。若设计师为user表创建一个user1视图，那数据字典中保存的是&nbsp; (&nbsp; 51 )&nbsp; 。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363471",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["user1查询语句", "user1视图定义", "user1查询结果", "所引用的基本表的"],
+          "sort_son": "0"
+        },
+        {
+          "index": 52,
+          "belong_page": 1,
+          "question_id": 363473,
+          "question_title": "<p>给定关系R（A，B，C，D)和关系S(A，D，E，F)，若对这两个关系进行自然连接运算RS后的属性列有&nbsp; (&nbsp; 52 )&nbsp; 个；关系代数表达式σR.B&gt;S.F(R▷◁S)与&nbsp; (&nbsp; 53 )&nbsp; 等价。</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363472",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["4", "5", "6", "8"],
+          "sort_son": "1"
+        },
+        {
+          "index": 53,
+          "belong_page": 1,
+          "question_id": 363474,
+          "question_title": "<p>给定关系R（A，B，C，D)和关系S(A，D，E，F)，若对这两个关系进行自然连接运算RS后的属性列有&nbsp; (&nbsp; 52 )&nbsp; 个；关系代数表达式σR.B&gt;S.F(R▷◁S)与&nbsp; (&nbsp; 53 )&nbsp; 等价。</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363472",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<img style=\"max-width:100%;height:auto\" src=\"https://s2.51cto.com/images/20230425/1682352434339075.jpg\" title=\"1682352434339075.jpg\" alt=\"1111.jpg\"/>",
+            "<img style=\"max-width:100%;height:auto\" src=\"https://s2.51cto.com/images/20230425/1682352439587781.jpg\" title=\"1682352439587781.jpg\" alt=\"2222.jpg\"/>",
+            "<img style=\"max-width:100%;height:auto\" src=\"https://s2.51cto.com/images/20230425/1682352462304242.jpg\" title=\"1682352462304242.jpg\" alt=\"1111.jpg\"/>",
+            "<img style=\"max-width:100%;height:auto\" src=\"https://s2.51cto.com/images/20230425/1682352466145776.jpg\" title=\"1682352466145776.jpg\" alt=\"2222.jpg\"/>"
+          ],
+          "sort_son": "2"
+        },
+        {
+          "index": 54,
+          "belong_page": 1,
+          "question_id": 363477,
+          "question_title": "<p>考虑下述背包问题的实例。有5件物品，背包容量为100，每件物品的价值和重量如下所示，并已经按照物品的单位重量价值从大到小排好序。根据物品单位重量价值大优先的策略装入背包中，则采用了&nbsp; (&nbsp; 54 )&nbsp; 设计策略。考虑0/1背包问题(每件物品或者全部装入背包或者不装入背包)和部分背包问题(物品可以部分装入背包)，求解该实例得到的最大价值分别为&nbsp; (&nbsp; 55 )&nbsp; 。</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230425/1682352530602478.jpg\" title=\"1682352530602478.jpg\" alt=\"1111.jpg\" width=\"551\" height=\"187\"/>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363476",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["分治", "贪心", "动态规划", "回溯"],
+          "sort_son": "1"
+        },
+        {
+          "index": 55,
+          "belong_page": 1,
+          "question_id": 363478,
+          "question_title": "<p>考虑下述背包问题的实例。有5件物品，背包容量为100，每件物品的价值和重量如下所示，并已经按照物品的单位重量价值从大到小排好序。根据物品单位重量价值大优先的策略装入背包中，则采用了&nbsp; (&nbsp; 54 )&nbsp; 设计策略。考虑0/1背包问题(每件物品或者全部装入背包或者不装入背包)和部分背包问题(物品可以部分装入背包)，求解该实例得到的最大价值分别为&nbsp; (&nbsp; 55 )&nbsp; 。</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230425/1682352530602478.jpg\" title=\"1682352530602478.jpg\" alt=\"1111.jpg\" width=\"551\" height=\"187\"/>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363476",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["605和630", "605和605", "430和630", "630和430"],
+          "sort_son": "2"
+        },
+        {
+          "index": 56,
+          "belong_page": 1,
+          "question_id": 363479,
+          "question_title": "一个高度为k的满二叉树的结点总数为2h-1，从根结点开始，向上而下、同层次结点从左至右，对结点按照顺序依次编号，即根结点编号为1，其左、右孩子结点编号分为2和3，再下一层从左到右的编号为4、5、6、7，依次类推。那么，在一颗满二叉树中，对于编号为m和n的两个结点，若n=2m+1，则&nbsp; (&nbsp; 56 )&nbsp; 结点。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363479",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["m是n的左孩子", "m是n的右孩子", "n是m的左孩子", "n是m的右孩子"],
+          "sort_son": "0"
+        },
+        {
+          "index": 57,
+          "belong_page": 1,
+          "question_id": 363480,
+          "question_title": "以下关于散列表（哈希表)，及其查找特点的叙述中，正确的是&nbsp; (&nbsp; 57 )&nbsp; 。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363480",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "在散列表中进行查找时，只需要与待查找关键字及其同义词进行比较",
+            "只要散列表的装填因子不大于1/2，就能避免冲突",
+            "用线性探测法解决冲突容易产生聚集问题",
+            "用链地址法解决冲突可确保平均查找长度为1"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 58,
+          "belong_page": 1,
+          "question_id": 363481,
+          "question_title": "<p>对长度为n的有序顺序进行折半查找（即二分查找）的过程可用一棵判定树表示，该判定树的形态符合&nbsp; (&nbsp; 58 )&nbsp; 的特点。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363481",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>最优二叉树（即哈夫曼树）</p>",
+            "<p>平衡二叉树</p>",
+            "<p>完全二叉树</p>",
+            "<p>最小生成树</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 59,
+          "belong_page": 1,
+          "question_id": 363482,
+          "question_title": "已知树T的度为4，且度为4的结点数为7个、度为3的结点数5个、度为2的结点数为8个、度为1的结点数为10个，那么T的叶子结点个数为&nbsp; (&nbsp; 59 )&nbsp; 。（注：树中节点个数称为结点的度，结点的度中的最大值称为树的度。)",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363482",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["30", "<p>35</p>", "40", "49"],
+          "sort_son": "0"
+        },
+        {
+          "index": 60,
+          "belong_page": 1,
+          "question_id": 363483,
+          "question_title": "排序算法的稳定性是指将待排序列排序后，能确保排序码中的相对位置保持不变。&nbsp; (&nbsp; 60 )&nbsp; 是稳定的排序算法。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363483",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["冒泡排序", "快速排序", "堆排序", "简单选择排序"],
+          "sort_son": "0"
+        },
+        {
+          "index": 61,
+          "belong_page": 1,
+          "question_id": 363484,
+          "question_title": "(&nbsp; 61 )&nbsp; 某图G的邻接表中共有奇数个表示边的表结点，则图G。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363484",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["有奇数个顶点", "有偶数个顶点", "是无向图", "是有向图"],
+          "sort_son": "0"
+        },
+        {
+          "index": 62,
+          "belong_page": 1,
+          "question_id": 363486,
+          "question_title": "<p>对n个基本有序的整数进行排序，若采用插入排序算法，则时间和空间复杂度分别为&nbsp; (&nbsp; 62 )&nbsp; ；若采用快速排序算法，则时间和空间复杂度分别为&nbsp; (&nbsp; 63 )&nbsp; 。</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363485",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["O（n^2）和O（n）", "O（n）和O（n）", "O（n^2）和O（1）", "O（n）和O（1）"],
+          "sort_son": "1"
+        },
+        {
+          "index": 63,
+          "belong_page": 1,
+          "question_id": 363487,
+          "question_title": "<p>对n个基本有序的整数进行排序，若采用插入排序算法，则时间和空间复杂度分别为&nbsp; (&nbsp; 62 )&nbsp; ；若采用快速排序算法，则时间和空间复杂度分别为&nbsp; (&nbsp; 63 )&nbsp; 。</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363485",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "O（n^2）和O（n）",
+            "O（nlgn）和O（n）",
+            "O（n^2）和O（1）",
+            "O（nlgn）和O（1）"
+          ],
+          "sort_son": "2"
+        },
+        {
+          "index": 64,
+          "belong_page": 1,
+          "question_id": 363489,
+          "question_title": "<p><br/></p><p>实现Prim算法利用的算法是(&nbsp; 64 )&nbsp; ，采用Prim算法求解下图的最小生成树，该算法的设计策树的权值是&nbsp; (&nbsp; 65 )&nbsp; 。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230425/1682353155221270.jpg\" title=\"1682353155221270.jpg\" alt=\"1111.jpg\" width=\"299\" height=\"246\"/></p><br/>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363488",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["分治法", "动态规划法", "贪心算法", "递归算法"],
+          "sort_son": "1"
+        },
+        {
+          "index": 65,
+          "belong_page": 1,
+          "question_id": 363490,
+          "question_title": "<p><br/></p><p>实现Prim算法利用的算法是(&nbsp; 64 )&nbsp; ，采用Prim算法求解下图的最小生成树，该算法的设计策树的权值是&nbsp; (&nbsp; 65 )&nbsp; 。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230425/1682353155221270.jpg\" title=\"1682353155221270.jpg\" alt=\"1111.jpg\" width=\"299\" height=\"246\"/></p><br/>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363488",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["15", "<p>18</p>", "24", "27"],
+          "sort_son": "2"
+        },
+        {
+          "index": 66,
+          "belong_page": 1,
+          "question_id": 363491,
+          "question_title": "在OSI参考模型中，&nbsp; (&nbsp; 66)&nbsp; 在物理线路上提供可靠的数据传输。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363491",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["物理层", "数据链路层", "网络层", "应用层"],
+          "sort_son": "0"
+        },
+        {
+          "index": 67,
+          "belong_page": 1,
+          "question_id": 363492,
+          "question_title": "在浏览器地址栏输入ftp∶//ftp.tsinghua.edu.cn/进行访问时执行的是&nbsp; &nbsp;(&nbsp; 67 )&nbsp; 。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363492",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["域名解析", "建立控制命令连接", "建立文件传输连接&nbsp;", "发送FTP命令"],
+          "sort_son": "0"
+        },
+        {
+          "index": 68,
+          "belong_page": 1,
+          "question_id": 363493,
+          "question_title": "在TCP/IP协议栈中，远程登录采用的协议为&nbsp; (&nbsp; 68 )&nbsp; 。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363493",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["HTTP", "TELNET", "SMTP&nbsp;", "FTP"],
+          "sort_son": "0"
+        },
+        {
+          "index": 69,
+          "belong_page": 1,
+          "question_id": 363494,
+          "question_title": "浏览器开启无痕浏览模式时，&nbsp; (&nbsp; 69 )&nbsp; 仍然会被保存。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363494",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["&nbsp;浏览历史", "搜索历史", "下载的文件", "临时文件"],
+          "sort_son": "0"
+        },
+        {
+          "index": 70,
+          "belong_page": 1,
+          "question_id": 363495,
+          "question_title": "下列不属于电子邮件收发协议的是&nbsp; (&nbsp; 70 )&nbsp; 。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363495",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["SMTP", "POP3", "IMAP", "FTP"],
+          "sort_son": "0"
+        },
+        {
+          "index": 71,
+          "belong_page": 1,
+          "question_id": 363498,
+          "question_title": "<p>Regardless of how well designed, constructed, and tested a system or application may be, errors or bugs will inevitably occur. Once a system has been&nbsp; (&nbsp; 71)&nbsp; &nbsp;, it enters operations and support.</p><p>Systems support is the ongoing technical support for user, as well as the maintenance required to fix any errors, omissions,or new requirements that may arise. Before an information system can be&nbsp; (&nbsp; 72)&nbsp; , it must be in operation. System operation is the day-to-day, week-to-week, month-to-month, and year-t-year&nbsp; (&nbsp; 73)&nbsp; of an information system&#39;s business processes and application programs.</p><p>Unlike systems analysis, design, and implementation, systems support cannot sensibly be&nbsp; (&nbsp; 74)&nbsp; into actual phases that a support project must perform. Rather, systems support consists of four ongoing activities that are program maintenance, system recovery, technical support, and system enhancement. Each activity is a type of support project that is&nbsp; (&nbsp; 75)&nbsp; &nbsp;by a particular problem, event, or opportunity encountered with the implemented system.</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363497",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["designed", "implemented", "investigated", "analyzed"],
+          "sort_son": "1"
+        },
+        {
+          "index": 72,
+          "belong_page": 1,
+          "question_id": 363499,
+          "question_title": "<p>Regardless of how well designed, constructed, and tested a system or application may be, errors or bugs will inevitably occur. Once a system has been&nbsp; (&nbsp; 71)&nbsp; &nbsp;, it enters operations and support.</p><p>Systems support is the ongoing technical support for user, as well as the maintenance required to fix any errors, omissions,or new requirements that may arise. Before an information system can be&nbsp; (&nbsp; 72)&nbsp; , it must be in operation. System operation is the day-to-day, week-to-week, month-to-month, and year-t-year&nbsp; (&nbsp; 73)&nbsp; of an information system&#39;s business processes and application programs.</p><p>Unlike systems analysis, design, and implementation, systems support cannot sensibly be&nbsp; (&nbsp; 74)&nbsp; into actual phases that a support project must perform. Rather, systems support consists of four ongoing activities that are program maintenance, system recovery, technical support, and system enhancement. Each activity is a type of support project that is&nbsp; (&nbsp; 75)&nbsp; &nbsp;by a particular problem, event, or opportunity encountered with the implemented system.</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363497",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["supported", "tested", "implemented", "constructed"],
+          "sort_son": "2"
+        },
+        {
+          "index": 73,
+          "belong_page": 1,
+          "question_id": 363500,
+          "question_title": "<p>Regardless of how well designed, constructed, and tested a system or application may be, errors or bugs will inevitably occur. Once a system has been&nbsp; (&nbsp; 71)&nbsp; &nbsp;, it enters operations and support.</p><p>Systems support is the ongoing technical support for user, as well as the maintenance required to fix any errors, omissions,or new requirements that may arise. Before an information system can be&nbsp; (&nbsp; 72)&nbsp; , it must be in operation. System operation is the day-to-day, week-to-week, month-to-month, and year-t-year&nbsp; (&nbsp; 73)&nbsp; of an information system&#39;s business processes and application programs.</p><p>Unlike systems analysis, design, and implementation, systems support cannot sensibly be&nbsp; (&nbsp; 74)&nbsp; into actual phases that a support project must perform. Rather, systems support consists of four ongoing activities that are program maintenance, system recovery, technical support, and system enhancement. Each activity is a type of support project that is&nbsp; (&nbsp; 75)&nbsp; &nbsp;by a particular problem, event, or opportunity encountered with the implemented system.</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363497",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["construction&nbsp;", "maintenance", "execution", "implementation"],
+          "sort_son": "3"
+        },
+        {
+          "index": 74,
+          "belong_page": 1,
+          "question_id": 363501,
+          "question_title": "<p>Regardless of how well designed, constructed, and tested a system or application may be, errors or bugs will inevitably occur. Once a system has been&nbsp; (&nbsp; 71)&nbsp; &nbsp;, it enters operations and support.</p><p>Systems support is the ongoing technical support for user, as well as the maintenance required to fix any errors, omissions,or new requirements that may arise. Before an information system can be&nbsp; (&nbsp; 72)&nbsp; , it must be in operation. System operation is the day-to-day, week-to-week, month-to-month, and year-t-year&nbsp; (&nbsp; 73)&nbsp; of an information system&#39;s business processes and application programs.</p><p>Unlike systems analysis, design, and implementation, systems support cannot sensibly be&nbsp; (&nbsp; 74)&nbsp; into actual phases that a support project must perform. Rather, systems support consists of four ongoing activities that are program maintenance, system recovery, technical support, and system enhancement. Each activity is a type of support project that is&nbsp; (&nbsp; 75)&nbsp; &nbsp;by a particular problem, event, or opportunity encountered with the implemented system.</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363497",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["broke&nbsp;", "formed", "composed", "decomposed"],
+          "sort_son": "4"
+        },
+        {
+          "index": 75,
+          "belong_page": 1,
+          "question_id": 363502,
+          "question_title": "<p>Regardless of how well designed, constructed, and tested a system or application may be, errors or bugs will inevitably occur. Once a system has been&nbsp; (&nbsp; 71)&nbsp; &nbsp;, it enters operations and support.</p><p>Systems support is the ongoing technical support for user, as well as the maintenance required to fix any errors, omissions,or new requirements that may arise. Before an information system can be&nbsp; (&nbsp; 72)&nbsp; , it must be in operation. System operation is the day-to-day, week-to-week, month-to-month, and year-t-year&nbsp; (&nbsp; 73)&nbsp; of an information system&#39;s business processes and application programs.</p><p>Unlike systems analysis, design, and implementation, systems support cannot sensibly be&nbsp; (&nbsp; 74)&nbsp; into actual phases that a support project must perform. Rather, systems support consists of four ongoing activities that are program maintenance, system recovery, technical support, and system enhancement. Each activity is a type of support project that is&nbsp; (&nbsp; 75)&nbsp; &nbsp;by a particular problem, event, or opportunity encountered with the implemented system.</p>",
+          "question_type": 9,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "363497",
+          "show_type_name": "完形类单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["triggered&nbsp;", "leaded&nbsp;", "caused&nbsp;", "produced"],
+          "sort_son": "5"
+        }
+      ],
+      "summary": {
+        "radio": {
+          "total_question": 75,
+          "total_score": 0
+        },
+        "multiple": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "judge": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "fill": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "program": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "qanda": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "cloze": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "budingxiang": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "material": {
+          "total_question": 0,
+          "total_score": 0
+        }
+      },
+      "examine": {
+        "id": 16321,
+        "title": "2022年5月软件设计师选择题",
+        "len_time": {
+          "time": 0
+        },
+        "total_question": 75,
+        "total_score": 75,
+        "submit_limit_num": "0",
+        "machine_type": "1"
+      },
+      "answer_activity_start_time": 1585828800,
+      "checkProcess": 1,
+      "process": {
+        "is_delete": false
+      },
+      "train_id": 0
+    },
+    "pagination": {
+      "curPage": 1,
+      "pageSize": 1200,
+      "total": 75,
+      "hasNextPage": false
+    },
+    "totalOrder": [
+      {
+        "index": 1,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363416
+      },
+      {
+        "index": 2,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363417
+      },
+      {
+        "index": 3,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363418
+      },
+      {
+        "index": 4,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363419
+      },
+      {
+        "index": 5,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363420
+      },
+      {
+        "index": 6,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363421
+      },
+      {
+        "index": 7,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363422
+      },
+      {
+        "index": 8,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 352856
+      },
+      {
+        "index": 9,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363423
+      },
+      {
+        "index": 10,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363424
+      },
+      {
+        "index": 11,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363425
+      },
+      {
+        "index": 12,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363426
+      },
+      {
+        "index": 13,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363427
+      },
+      {
+        "index": 14,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363428
+      },
+      {
+        "index": 15,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363429
+      },
+      {
+        "index": 16,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363430
+      },
+      {
+        "index": 17,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 363432
+      },
+      {
+        "index": 18,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 363433
+      },
+      {
+        "index": 19,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363434
+      },
+      {
+        "index": 20,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 6701
+      },
+      {
+        "index": 21,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 6707
+      },
+      {
+        "index": 22,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363435
+      },
+      {
+        "index": 23,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363436
+      },
+      {
+        "index": 24,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 363438
+      },
+      {
+        "index": 25,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 363439
+      },
+      {
+        "index": 26,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 363441
+      },
+      {
+        "index": 27,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 363442
+      },
+      {
+        "index": 28,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 363443
+      },
+      {
+        "index": 29,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 363444
+      },
+      {
+        "index": 30,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 51643
+      },
+      {
+        "index": 31,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 363447
+      },
+      {
+        "index": 32,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 363448
+      },
+      {
+        "index": 33,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363449
+      },
+      {
+        "index": 34,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363450
+      },
+      {
+        "index": 35,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 341945
+      },
+      {
+        "index": 36,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363451
+      },
+      {
+        "index": 37,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363452
+      },
+      {
+        "index": 38,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363453
+      },
+      {
+        "index": 39,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 363456
+      },
+      {
+        "index": 40,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 363457
+      },
+      {
+        "index": 41,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 363459
+      },
+      {
+        "index": 42,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 363460
+      },
+      {
+        "index": 43,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 363461
+      },
+      {
+        "index": 44,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 363463
+      },
+      {
+        "index": 45,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 363464
+      },
+      {
+        "index": 46,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 363466
+      },
+      {
+        "index": 47,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 363467
+      },
+      {
+        "index": 48,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363468
+      },
+      {
+        "index": 49,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363469
+      },
+      {
+        "index": 50,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363470
+      },
+      {
+        "index": 51,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363471
+      },
+      {
+        "index": 52,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 363473
+      },
+      {
+        "index": 53,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 363474
+      },
+      {
+        "index": 54,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 363477
+      },
+      {
+        "index": 55,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 363478
+      },
+      {
+        "index": 56,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363479
+      },
+      {
+        "index": 57,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363480
+      },
+      {
+        "index": 58,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363481
+      },
+      {
+        "index": 59,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363482
+      },
+      {
+        "index": 60,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363483
+      },
+      {
+        "index": 61,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363484
+      },
+      {
+        "index": 62,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 363486
+      },
+      {
+        "index": 63,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 363487
+      },
+      {
+        "index": 64,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 363489
+      },
+      {
+        "index": 65,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 363490
+      },
+      {
+        "index": 66,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363491
+      },
+      {
+        "index": 67,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363492
+      },
+      {
+        "index": 68,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363493
+      },
+      {
+        "index": 69,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363494
+      },
+      {
+        "index": 70,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 363495
+      },
+      {
+        "index": 71,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 363498
+      },
+      {
+        "index": 72,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 363499
+      },
+      {
+        "index": 73,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 363500
+      },
+      {
+        "index": 74,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 363501
+      },
+      {
+        "index": 75,
+        "question_type": 9,
+        "belong_page": 1,
+        "question_id": 363502
+      }
+    ]
+  }
+}

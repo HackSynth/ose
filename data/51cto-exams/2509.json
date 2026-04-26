@@ -1,0 +1,2048 @@
+{
+  "msg": "成功",
+  "status": "0",
+  "data": {
+    "data": {
+      "question": [
+        {
+          "index": 1,
+          "belong_page": 1,
+          "question_id": 71208,
+          "question_title": "<p>机器字长为n位的二进制数可以用补码来表示（ ）个不同的有符号定点小数。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "71208",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p><img style=\"max-width:100%;height:auto\" src=\"http://s2.51cto.com/images/20181227/1545905846759921.jpg\" title=\"1545905846759921.jpg\" alt=\"1.jpg\"/></p>",
+            "<p><img style=\"max-width:100%;height:auto\" src=\"http://s2.51cto.com/images/20181227/1545905853728497.jpg\" title=\"1545905853728497.jpg\" alt=\"2.jpg\"/></p>",
+            "<p><img style=\"max-width:100%;height:auto\" src=\"http://s2.51cto.com/images/20181227/1545905857765290.jpg\" title=\"1545905857765290.jpg\" alt=\"3.jpg\"/></p>",
+            "<p><img style=\"max-width:100%;height:auto\" src=\"http://s2.51cto.com/images/20181227/1545905864437722.jpg\" title=\"1545905864437722.jpg\" alt=\"4.jpg\"/></p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 2,
+          "belong_page": 1,
+          "question_id": 36306,
+          "question_title": "<p><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">计算机中</span>CPU<span style=\"font-family: 宋体;\">对其访问速度最快的是</span></span><span style=\"text-decoration: underline;\"><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">（</span>2<span style=\"font-family: 宋体;\">）</span></span></span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">。</span></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36306",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>内存</p>", "<p>Cache</p>", "<p>通用寄存器</p>", "<p>硬盘</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 3,
+          "belong_page": 1,
+          "question_id": 71210,
+          "question_title": "<p>Cache的地址映像方式中，发生块冲突次数最小的是（ ）。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "71210",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>全相联映像</p>",
+            "<p>组相联映像</p>",
+            "<p>直接映像</p>",
+            "<p>无法确定的</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 4,
+          "belong_page": 1,
+          "question_id": 26032,
+          "question_title": "<p>计算机中 CPU 的中断响应时间指的是( &nbsp;)的时间。<br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "26032",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>从发出中断请求到中断处理结束</p>",
+            "<p>从中断处理开始到中断处理结束</p>",
+            "<p>CPU&nbsp;分析判断中断请求</p>",
+            "<p>从发出中断请求到开始进入中断处理程序</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 5,
+          "belong_page": 1,
+          "question_id": 36309,
+          "question_title": "<p><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">总线宽度为</span>32bit<span style=\"font-family: 宋体;\">，时钟频率为</span><span style=\"font-family: Times New Roman;\">200MHz</span><span style=\"font-family: 宋体;\">，若总线上每</span><span style=\"font-family: Times New Roman;\">5</span><span style=\"font-family: 宋体;\">个时钟周期传送一个</span><span style=\"font-family: Times New Roman;\">32bit</span><span style=\"font-family: 宋体;\">的字，则该总线的带宽为</span></span><span style=\"text-decoration: underline;\"><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">（</span>5<span style=\"font-family: 宋体;\">）</span></span></span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">MB/s<span style=\"font-family: 宋体;\">。</span></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36309",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>40</p>", "<p>80&nbsp;</p>", "<p>160</p>", "<p>&nbsp;200</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 6,
+          "belong_page": 1,
+          "question_id": 71213,
+          "question_title": "<p>以下关于指令流水线性能度量的描述中，错误的是（ ）。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "71213",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>最大吞吐率取决于流水线中最慢一段所需的时间</p>",
+            "<p>如果流水线出现断流，加速比会明显下降</p>",
+            "<p>要使加速比和效率最大化应该对流水线各级采用相同的运行时间</p>",
+            "<p>流水线采用异步控制会明显提高其性能</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 7,
+          "belong_page": 1,
+          "question_id": 36311,
+          "question_title": "<p><span style=\"text-decoration: underline;\"><span style=\"font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">（</span>7<span style=\"font-family: 宋体;\">）</span></span></span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">协议在终端设备与远程站点之间建立安全连接。</span></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36311",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>ARP</p>",
+            "<p>Telnet&nbsp;</p>",
+            "<p>&nbsp;SSH&nbsp;&nbsp;</p>",
+            "<p>&nbsp;WEP</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 8,
+          "belong_page": 1,
+          "question_id": 36312,
+          "question_title": "<p><span style=\"font-family: 宋体;\">安全需求可划分为物理线路安全、网络安全、系统安全和应用安全。下面的安全需求中属于系统安全的是（回答此题</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\"></span><span style=\"font-family: 宋体;\">），属于应用安全的是（</span><span style=\"font-family: Times New Roman;\">9</span><span style=\"font-family: 宋体;\">）。</span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36312",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>机房安全</p>",
+            "<p>入侵检测</p>",
+            "<p>漏洞补丁管理</p>",
+            "<p>数据库安全</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 9,
+          "belong_page": 1,
+          "question_id": 71215,
+          "question_title": "<p>安全需求可划分为物理线路安全、网络安全、系统安全和应用安全。下面的安全需求中属于系统安全的是（请作答此空），属于应用安全的是（ ）。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "71215",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>机房安全</p>",
+            "<p>入侵检测</p>",
+            "<p>漏洞补丁管理</p>",
+            "<p>数据库安全</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 10,
+          "belong_page": 1,
+          "question_id": 36314,
+          "question_title": "<p><span style=\"font-family: 宋体;\">王某是某公司的软件设计师，每当软件开发完成后均按公司规定编写软件文档，并提交公司存档。那么该软件文档的著作权（</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">10</span><span style=\"font-family: 宋体;\">）享有。</span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36314",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>应由公司</p>",
+            "<p>应由公司和王某共同</p>",
+            "<p>应由王某</p>",
+            "<p>除署名权以外，著作权的其他权利由王某</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 11,
+          "belong_page": 1,
+          "question_id": 36315,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">甲、乙两公司的软件设计师分别完成了相同的计算机程序发明，甲公司先于乙公司完成，乙公司先于甲公司使用。甲、乙公司于同一天向专利局申请发明专利。此情形下，（</span>11<span style=\"font-family: 宋体;\">）可获得专利权。</span></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36315",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>甲公司&nbsp;</p>",
+            "<p>甲、乙公司均</p>",
+            "<p>&nbsp;乙公司&nbsp;&nbsp;</p>",
+            "<p>由甲、乙公司协商确定谁</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 12,
+          "belong_page": 1,
+          "question_id": 36316,
+          "question_title": "<p><span style=\"font-family: 宋体;\">以下媒体中，（</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">12</span><span style=\"font-family: 宋体;\">）是感觉媒体。</span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36316",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>音箱</p>", "<p>声音编码</p>", "<p>电缆</p>", "<p>&nbsp;声音</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 13,
+          "belong_page": 1,
+          "question_id": 36317,
+          "question_title": "<p><span style=\"font-family: 宋体;\">微型计算机系统中，显示器属于（</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">13</span><span style=\"font-family: 宋体;\">）。</span><br/></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36317",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>表现媒体</p>", "<p>传输媒体</p>", "<p>表示媒体</p>", "<p>存储媒体</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 14,
+          "belong_page": 1,
+          "question_id": 64821,
+          "question_title": "<p>__(　)__是表示显示器在纵向（列）上具有的像素点数目指标。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "64821",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>显示分辨率</p>",
+            "<p>水平分辨率</p>",
+            "<p>垂直分辨率</p>",
+            "<p>显示深度</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 15,
+          "belong_page": 1,
+          "question_id": 71222,
+          "question_title": "<p>软件工程的基本要素包括方法、工具和（ ）。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "71222",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>软件系统</p>", "<p>硬件系统</p>", "<p>过程</p>", "<p>人员</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 16,
+          "belong_page": 1,
+          "question_id": 71223,
+          "question_title": "<p>在（ ）设计阶段选择适当的解决方案，将系统分解为若干个子系统，建立整个系统的体系结构。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "71223",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>概要</p>", "<p>详细</p>", "<p>结构化</p>", "<p>面向对象</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 17,
+          "belong_page": 1,
+          "question_id": 36321,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\">某项目包含的活动如下表所示，完成整个项目的最短时间为（</span>17<span style=\"font-family: 宋体;\">）周。不能通过缩短活动（</span><span style=\"font-family: Times New Roman;\">18</span><span style=\"font-family: 宋体;\">）的工期，来缩短整个项目的完成时间。</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"><span style=\"font-family: 宋体;\"><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/86a6b65380bfef53cd0959107ef8154a144e3f.png\"/></span></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36321",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>16</p>", "<p>17</p>", "<p>18</p>", "<p>19</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 18,
+          "belong_page": 1,
+          "question_id": 36322,
+          "question_title": "<p><span style=\"font-family: 宋体;\">某项目包含的活动如下表所示，完成整个项目的最短时间为（</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">17</span><span style=\"font-family: 宋体;\">）周。不能通过缩短活动（</span><span style=\"font-family: Times New Roman;\">18</span><span style=\"font-family: 宋体;\">）的工期，来缩短整个项目的完成时间。</span><br/></p><p><span style=\"font-family: 宋体;\"><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/257c0e3274e09b53e16626cbb6f271ce438a9a.png\"/></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36322",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>A&nbsp;</p>", "<p>&nbsp;B</p>", "<p>&nbsp;D&nbsp;</p>", "<p>F</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 19,
+          "belong_page": 1,
+          "question_id": 36323,
+          "question_title": "<p><span style=\"font-family: 宋体;\">风险的优先级通常是根据（</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">19</span><span style=\"font-family: 宋体;\">）设定。</span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36323",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>风险影响（Risk&nbsp;Impact)</p>",
+            "<p>风险概率(Risk&nbsp;Probability)</p>",
+            "<p>风险暴露(Risk&nbsp;Exposure)</p>",
+            "<p>风险控制(Risk&nbsp;Control)</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 20,
+          "belong_page": 1,
+          "question_id": 71227,
+          "question_title": "<p>以下关于程序设计语言的叙述中，错误的是（ ）。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "71227",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>程序设计语言的基本成分包括数据、运算、控制和传输等</p>",
+            "<p>高级程序设计语言不依赖于具体的机器硬件</p>",
+            "<p>程序中局部变量的值在运行时不能改变</p>",
+            "<p>程序中常量的值在运行时不能改变</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 21,
+          "belong_page": 1,
+          "question_id": 36548,
+          "question_title": "<p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/b1ec28a61d92cb0bfde416b4981221d5148154.png\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36548",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>A</p>", "<p>B</p>", "<p>C</p>", "<p>D</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 22,
+          "belong_page": 1,
+          "question_id": 71229,
+          "question_title": "<p>程序中全局变量的存储空间在（ ）分配。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "71229",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>代码区</p>", "<p>静态数据区</p>", "<p>栈区</p>", "<p>堆区</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 23,
+          "belong_page": 1,
+          "question_id": 36327,
+          "question_title": "<p><span style=\"font-family: 宋体;\"><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/a483c5107e061220e482541d3f8ee59daf1dd7.png\"/></span><br/></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36327",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>V(S1)、P(S1)和V(S2)V(S3)&nbsp;</p>",
+            "<p>P(S1)、V&nbsp;(S1)和V(S2)V(S3)</p>",
+            "<p>V(S1)、V(S2)和P(S1)V(S3)&nbsp;&nbsp;</p>",
+            "<p>P(S1)、V(S2)和V(S1)V(S3)</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 24,
+          "belong_page": 1,
+          "question_id": 36328,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/e9184ca97750ed2d3ec18251db69f458c39eea.png\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36328",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>V(S2)和P(S4)&nbsp;&nbsp;&nbsp;</p>",
+            "<p>P(S2)和V(S4)</p>",
+            "<p>P(S2)和P(S4)&nbsp;</p>",
+            "<p>V(S2)和V(S4)</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 25,
+          "belong_page": 1,
+          "question_id": 36329,
+          "question_title": "<p>请作答（26）<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/c56893a27fbd143a6274852a406bcfc3419f59.png\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36329",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>0</p>", "<p>1</p>", "<p>2</p>", "<p>3</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 26,
+          "belong_page": 1,
+          "question_id": 36330,
+          "question_title": "<p><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">请作答（27）<br/>嵌入式系统初始化过程主要有</span>3<span style=\"font-family: 宋体;\">个环节，按照自底向上、从硬件到软件的次序依次为（</span><span style=\"font-family: Times New Roman;\">27</span><span style=\"font-family: 宋体;\">）。系统级初始化主要任务是（</span><span style=\"font-family: Times New Roman;\">28</span><span style=\"font-family: 宋体;\">）。</span></span><br/></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36330",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>&nbsp;片级初始化→系统级初始化→板级初始化</p>",
+            "<p>片级初始化→板级初始化→系统级初始化</p>",
+            "<p>系统级初始化→板级初始化→片级初始化</p>",
+            "<p>系统级初始化→片级初始化→板级初始化</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 27,
+          "belong_page": 1,
+          "question_id": 36331,
+          "question_title": "<p><span style=\"font-family: 宋体;\">请作答（28）<br/>嵌入式系统初始化过程主要有</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">3</span><span style=\"font-family: 宋体;\">个环节，按照自底向上、从硬件到软件的次序依次为（</span><span style=\"font-family: Times New Roman;\">27</span><span style=\"font-family: 宋体;\">）。系统级初始化主要任务是（</span><span style=\"font-family: Times New Roman;\">28</span><span style=\"font-family: 宋体;\">）。</span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36331",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>完成嵌入式微处理器的初始化</p>",
+            "<p>完成嵌入式微处理器以外的其他硬件设备的初始化</p>",
+            "<p>以软件初始化为主，主要进行操作系统的初始化</p>",
+            "<p>设置嵌入式微处理器的核心寄存器和控制寄存器工作状态</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 28,
+          "belong_page": 1,
+          "question_id": 36332,
+          "question_title": "<p>请作答（25）<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/b2ebdad83cdc110b007206c8e5ef36a8826361.png\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36332",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>&nbsp;P(S3)和V(S4)V(S5)</p>",
+            "<p>V(S3)和P(S4)P(S5)</p>",
+            "<p>P(S3)和P(S4)P(S5)</p>",
+            "<p>V(S3)和V(S4)V(S5)</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 29,
+          "belong_page": 1,
+          "question_id": 340428,
+          "question_title": "<p>某公司计划开发一种产品，技术含量很高，与客户相关的风险也很多，则最适于采用（32）开发过程模型。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "340428",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>瀑布</p>", "<p>原型</p>", "<p>螺旋</p>", "<p>增量</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 30,
+          "belong_page": 1,
+          "question_id": 36334,
+          "question_title": "<p><br/></p><p style=\"text-indent: 27.6px;\"><span style=\"font-family: 宋体;\">在敏捷过程的方法中（<span style=\"font-size: 14px;\">&nbsp;&nbsp;</span></span><span style=\"font-family: 宋体;\">）认为每一个不同的项目都需要一套不同的策略、约定和方法论。</span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36334",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>极限编程（XP）</p>",
+            "<p>水晶法(Crystal)</p>",
+            "<p>并列争球法(Scrum)&nbsp;</p>",
+            "<p>自适应软件开发(ASD)</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 31,
+          "belong_page": 1,
+          "question_id": 36335,
+          "question_title": "<p><span style=\"font-family: 宋体;\">软件配置管理的内容不包括（</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">31</span><span style=\"font-family: 宋体;\">）。</span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36335",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>版本控制&nbsp;</p>",
+            "<p>&nbsp;变更控制</p>",
+            "<p>过程支持&nbsp;</p>",
+            "<p>质量控制</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 32,
+          "belong_page": 1,
+          "question_id": 40587,
+          "question_title": "<p><span style=\"font-family:宋体\">某模块实现两个功能：向某个数据结构区域写数据和从该区域读数据。该模块的内聚类型为（ &nbsp;&nbsp;</span><span style=\"font-family:宋体\">）内聚。</span></p><p class=\"MsoNormal\" style=\"text-indent:20.7000pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "40587",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>过程</p>", "<p>时间</p>", "<p>逻辑&nbsp;&nbsp;</p>", "<p>通信</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 33,
+          "belong_page": 1,
+          "question_id": 36337,
+          "question_title": "<p><span style=\"font-family: 宋体;\">正式技术评审的目标是（</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">33</span><span style=\"font-family: 宋体;\">）。</span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36337",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>允许高级技术人员修改错误</p>",
+            "<p>评价程序员的工作效率</p>",
+            "<p>&nbsp;发现软件中的错误</p>",
+            "<p>记录程序员的错误情况并与绩效挂钩</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 34,
+          "belong_page": 1,
+          "question_id": 36338,
+          "question_title": "<p><span style=\"font-family: 宋体;\">自底向上的集成测试策略的优点包括（</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">34</span><span style=\"font-family: 宋体;\">）。</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36338",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>主要的设计问题可以在测试早期处理</p>",
+            "<p>不需要写驱动程序</p>",
+            "<p>不需要写桩程序&nbsp;</p>",
+            "<p>不需要进行回归测试</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 35,
+          "belong_page": 1,
+          "question_id": 19433,
+          "question_title": "<p>采用 McCabe 度量法计算下列程序图的环路复杂性为 (&nbsp; &nbsp;）。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230407/1680846602113652.png\" title=\"1680846602113652.png\" alt=\"image.png\" width=\"112\" height=\"132\"/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20230407/1680846586970460.png\" title=\"1680846586970460.png\" alt=\"image.png\" width=\"1\" height=\"1\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "19433",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>2</p>", "<p>3</p>", "<p>4</p>", "<p>5</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 36,
+          "belong_page": 1,
+          "question_id": 36340,
+          "question_title": "<p><span style=\"font-family: 宋体;\">以下关于软件可维护性的叙述中，不正确的是</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">“可维护性（</span><span style=\"font-family: Times New Roman;\">36</span><span style=\"font-family: 宋体;\">）”。</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36340",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>是衡量软件质量的一个重要特性</p>",
+            "<p>&nbsp;不受软件开发文档的影响</p>",
+            "<p>是软件开发阶段各个时期的关键目标</p>",
+            "<p>可以从可理解性、可靠性、可测试性、可行性、可移植性等方面进行度量</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 37,
+          "belong_page": 1,
+          "question_id": 91145,
+          "question_title": "对象、类、继承和消息传递是面向对象的4个核心概念。其中对象是封装（ ）的整体。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "91145",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>命名空间</p>",
+            "<p>要完成任务</p>",
+            "<p>一组数据</p>",
+            "<p>数据和行为</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 38,
+          "belong_page": 1,
+          "question_id": 36342,
+          "question_title": "<p><span style=\"font-family: 宋体;\">面向对象（</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">38</span><span style=\"font-family: 宋体;\">）选择合适的面向对象程序设计语言，将程序组织为相互协作的对象集合，每个对象表示某个类的实例，类通过继承等关系进行组织。</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36342",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>&nbsp;分析</p>", "<p>设计</p>", "<p>程序设计</p>", "<p>测试</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 39,
+          "belong_page": 1,
+          "question_id": 36343,
+          "question_title": "<p><span style=\"font-family: 宋体;\">一个类可以具有多个同名而参数类型列表不同的方法，被称为方法（</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">39</span><span style=\"font-family: 宋体;\">）。</span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36343",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>重载</p>", "<p>调用</p>", "<p>重置&nbsp;</p>", "<p>标记</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 40,
+          "belong_page": 1,
+          "question_id": 36344,
+          "question_title": "<p><span style=\"font-family: 宋体; font-size: 10.5pt; text-indent: 20.7pt;\">UML</span><span face=\"宋体\" style=\"font-family: 宋体; font-size: 10.5pt; text-indent: 20.7pt;\">中有</span><span face=\"Times New Roman\" style=\"font-size: 10.5pt; text-indent: 20.7pt;\">4</span><span face=\"宋体\" style=\"font-family: 宋体; font-size: 10.5pt; text-indent: 20.7pt;\">种关系：依赖、关联、泛化和实现。（</span><span face=\"Times New Roman\" style=\"font-size: 10.5pt; text-indent: 20.7pt;\">40</span><span face=\"宋体\" style=\"font-family: 宋体; font-size: 10.5pt; text-indent: 20.7pt;\">）是一种结构关系，描述了一组链，链是对象之间的连接；（</span><span face=\"Times New Roman\" style=\"font-size: 10.5pt; text-indent: 20.7pt;\">41</span><span face=\"宋体\" style=\"font-family: 宋体; font-size: 10.5pt; text-indent: 20.7pt;\">）是一种特殊／一般关系，使子元素共享其父元素的结构和行为。</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36344",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>依赖</p>", "<p>关联&nbsp;</p>", "<p>泛化&nbsp;&nbsp;</p>", "<p>实现</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 41,
+          "belong_page": 1,
+          "question_id": 36345,
+          "question_title": "<p><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">UML</span><span style=\"font-family: 宋体;\">中有</span><span style=\"font-family: Times New Roman;\">4</span><span style=\"font-family: 宋体;\">种关系：依赖、关联、泛化和实现。（</span><span style=\"font-family: Times New Roman;\">40</span><span style=\"font-family: 宋体;\">）是一种结构关系，描述了一组链，链是对象之间的连接；（</span><span style=\"font-family: Times New Roman;\">41</span><span style=\"font-family: 宋体;\">）是一种特殊／一般关系，使子元素共享其父元素的结构和行为。</span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36345",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>依赖</p>", "<p>关联&nbsp;</p>", "<p>泛化&nbsp;&nbsp;</p>", "<p>实现</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 42,
+          "belong_page": 1,
+          "question_id": 36346,
+          "question_title": "<p><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">UML</span><span style=\"font-family: 宋体;\">图中，对新开发系统的需求进行建模，规划开发什么功能或测试用例，采用（</span><span style=\"font-family: Times New Roman;\">42</span><span style=\"font-family: 宋体;\">）最适合。而展示交付系统的软件组件和硬件之间的关系的图是（</span><span style=\"font-family: Times New Roman;\">43</span><span style=\"font-family: 宋体;\">）。</span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36346",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>类图</p>", "<p>对象图</p>", "<p>用例图&nbsp;</p>", "<p>交互图</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 43,
+          "belong_page": 1,
+          "question_id": 36347,
+          "question_title": "<p><span style=\"font-family: 宋体;\">请作答（44）<br/>下图所示为（</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">44</span><span style=\"font-family: 宋体;\">）设计模式，属于（</span><span style=\"font-family: Times New Roman;\">45</span><span style=\"font-family: 宋体;\">）设计模式，适用于（</span><span style=\"font-family: Times New Roman;\">46</span><span style=\"font-family: 宋体;\">）。</span><br/></p><p><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/8326ba0821f00a974571921289d5dc9d199af2.png\"/></p><p><span style=\"font-family: 宋体;\"></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36347",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>代理（Proxy）&nbsp;</p>",
+            "<p>生成器（Builder)</p>",
+            "<p>&nbsp;组合(Composite)&nbsp;</p>",
+            "<p>观察者(Observer)</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 44,
+          "belong_page": 1,
+          "question_id": 36348,
+          "question_title": "<p>请作答（43）</p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">UML<span style=\"font-family: 宋体;\">图中，对新开发系统的需求进行建模，规划开发什么功能或测试用例，采用（</span><span style=\"font-family: Times New Roman;\">42</span><span style=\"font-family: 宋体;\">）最适合。而展示交付系统的软件组件和硬件之间的关系的图是（</span><span style=\"font-family: Times New Roman;\">43</span><span style=\"font-family: 宋体;\">）。</span></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36348",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>类图</p>", "<p>部署图</p>", "<p>组件图&nbsp;</p>", "<p>&nbsp;网络图</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 45,
+          "belong_page": 1,
+          "question_id": 36349,
+          "question_title": "<p><span style=\"font-family: 宋体;\">下图所示为（</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">44</span><span style=\"font-family: 宋体;\">）设计模式，属于（</span><span style=\"font-family: Times New Roman;\">45</span><span style=\"font-family: 宋体;\">）设计模式，适用于（</span><span style=\"font-family: Times New Roman;\">46</span><span style=\"font-family: 宋体;\">）。</span><br/></p><p><span style=\"font-family: 宋体;\"><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/f586eac270a42073f967435a7ca12bb9e82368.png\"/></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36349",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>（45） 创建型&nbsp;&nbsp;&nbsp;</p>",
+            "<p>（45）结构型</p>",
+            "<p>（45）行为</p>",
+            "<p>（45）结构型和行为</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 46,
+          "belong_page": 1,
+          "question_id": 158823,
+          "question_title": "下图所示为 （ ） 设计模式，属于 （ ） 设计模式，适用于 （请作答此空） 。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20191017/1571301321877250.jpg\" title=\"1571301321877250.jpg\" alt=\"2.jpg\"/>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "158823",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>表示对象的部分—整体层次结构时</p>",
+            "<p>当一个对象必须通知其他对象，而它又不能假定其他对象是谁时</p>",
+            "<p>当创建复杂对象的算法应该独立于该对象的组成部分及其装配方式时</p>",
+            "<p>在需要比较通用和复杂的对象指针代替简单的指针时</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 47,
+          "belong_page": 1,
+          "question_id": 36351,
+          "question_title": "<p><span style=\"font-family: 宋体;\">某些设计模式会引入总是被用作参数的对象。例如（</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">47</span><span style=\"font-family: 宋体;\">）对象是一个多态</span><span style=\"font-family: Times New Roman;\">accept </span><span style=\"font-family: 宋体;\">方法的参数。</span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36351",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>&nbsp;Visitor</p>",
+            "<p>Command&nbsp;&nbsp;</p>",
+            "<p>&nbsp;Memento&nbsp;</p>",
+            "<p>&nbsp;Observer</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 48,
+          "belong_page": 1,
+          "question_id": 36352,
+          "question_title": "<p><span style=\"font-family: 宋体;\">对高级语言源程序进行编译或解释的过程可以分为多个阶段，解释方式不包含（</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">48</span><span style=\"font-family: 宋体;\">）阶段。</span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36352",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>词法分析</p>",
+            "<p>语法分析&nbsp;</p>",
+            "<p>语义分析</p>",
+            "<p>目标代码生成</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 49,
+          "belong_page": 1,
+          "question_id": 36353,
+          "question_title": "<p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/f95be8b67a90bebb7735236935c61df2dd2272.png\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36353",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>A</p>", "<p>B</p>", "<p>C</p>", "<p>D</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 50,
+          "belong_page": 1,
+          "question_id": 36354,
+          "question_title": "<p><span style=\"font-family: 宋体;\">递归下降分析方法是一种（</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">50</span><span style=\"font-family: 宋体;\">）方法。</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36354",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>自底向上的语法分析</p>",
+            "<p>自上而下的语法分析</p>",
+            "<p>自底向上的词法分析</p>",
+            "<p>自上而下的词法分析</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 51,
+          "belong_page": 1,
+          "question_id": 36355,
+          "question_title": "<p><span style=\"font-family: 宋体;\">若关系</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">R (H</span><span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">L</span><span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">M</span><span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">P)</span><span style=\"font-family: 宋体;\">的主键为全码</span><span style=\"font-family: Times New Roman;\">(All-key)</span><span style=\"font-family: 宋体;\">，则关系</span><span style=\"font-family: Times New Roman;\">R</span><span style=\"font-family: 宋体;\">的主键应（</span><span style=\"font-family: Times New Roman;\">51</span><span style=\"font-family: 宋体;\">）。</span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36355",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>为HLMP</p>",
+            "<p>在集合{H，L，M，P）中任选一个</p>",
+            "<p>在集合{&nbsp;HL，HM，HP，LM，LP，MP）中任选一个</p>",
+            "<p>在集合{H&nbsp;LM，HLP，HMP，LMP）中任选一个作</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 52,
+          "belong_page": 1,
+          "question_id": 36356,
+          "question_title": "<p><span style=\"font-family: 宋体;\">给定关系模式</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">R(A1</span><span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">A2</span><span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">A3</span><span style=\"font-family: 宋体;\">，</span><span style=\"font-family: Times New Roman;\">A4)</span><span style=\"font-family: 宋体;\">上的函数依赖集</span><span style=\"font-family: Times New Roman;\">F={A1A3-&gt;A2,A2-&gt;A3}</span><span style=\"font-family: 宋体;\">。若将</span><span style=\"font-family: Times New Roman;\">R</span><span style=\"font-family: 宋体;\">分解为</span><span style=\"font-family: Times New Roman;\">p ={( A1,A2),( A1,A3)}</span><span style=\"font-family: 宋体;\">，则该分解是（</span><span style=\"font-family: Times New Roman;\">52</span><span style=\"font-family: 宋体;\">）的。</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36356",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>无损联接且不保持函数依赖</p>",
+            "<p>无损联接且保持函数依赖</p>",
+            "<p>有损联接且保持函数依赖&nbsp;</p>",
+            "<p>有损联接且不保持函数依赖</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 53,
+          "belong_page": 1,
+          "question_id": 36357,
+          "question_title": "<p><span style=\"font-family: 宋体;\">（</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">53</span><span style=\"font-family: 宋体;\">）算法采用模拟生物进化的三个基本过程“繁殖（选择）</span><span style=\"font-family: Times New Roman;\">-&gt; </span><span style=\"font-family: 宋体;\">交叉（重组）</span><span style=\"font-family: Times New Roman;\">-&gt;</span><span style=\"font-family: 宋体;\">变异（突变）”。</span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36357",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>粒子群</p>",
+            "<p>人工神经网络&nbsp;</p>",
+            "<p>遗传&nbsp;</p>",
+            "<p>蚁群</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 54,
+          "belong_page": 1,
+          "question_id": 40306,
+          "question_title": "<p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201805/233ac628849f1370fca29863c56f6c04d49ea0.png\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "40306",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>5</p>", "<p>6</p>", "<p>7</p>", "<p>8</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 55,
+          "belong_page": 1,
+          "question_id": 36359,
+          "question_title": "<p>&nbsp;</p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/44e3932708c66ca5d68643be98576919013c55.png\"/></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36359",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>1对1 （问题55）</p>",
+            "<p>&nbsp;1对多&nbsp;（问题55）</p>",
+            "<p>多对1&nbsp;&nbsp;（问题55）</p>",
+            "<p>多对多&nbsp;（问题55）</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 56,
+          "belong_page": 1,
+          "question_id": 36360,
+          "question_title": "<p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/25ac9bc39e6c66d1d9726721afb1614dc62cf3.png\"/></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36360",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>（项目名称，员工代码）</p>",
+            "<p>（项目编号，员工代码）</p>",
+            "<p>（项目名称，部门代码）</p>",
+            "<p>（项目名称，承担任务）</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 57,
+          "belong_page": 1,
+          "question_id": 36361,
+          "question_title": "<p><span style=\"font-family: 宋体;\">设某循环队列</span><span style=\"font-family: 宋体; font-size: 10.5pt;\">Q</span><span style=\"font-family: 宋体;\">的定义中有</span><span style=\"font-family: Times New Roman;\">front</span><span style=\"font-family: 宋体;\">和</span><span style=\"font-family: Times New Roman;\">rear</span><span style=\"font-family: 宋体;\">两个域变量，其中，</span><span style=\"font-family: Times New Roman;\">front</span><span style=\"font-family: 宋体;\">指示队头元素的位置，</span><span style=\"font-family: Times New Roman;\">rear</span><span style=\"font-family: 宋体;\">指示队尾元素之后的位置，如下图所示。若该队列的容量为</span><span style=\"font-family: Times New Roman;\">M</span><span style=\"font-family: 宋体;\">，则其长度为（</span><span style=\"font-family: Times New Roman;\">57</span><span style=\"font-family: 宋体;\">）。</span><br/></p><p><span style=\"font-family: 宋体;\"><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/e39ad1416e20246243a445c8ed6c105eb5bc1a.png\"/></span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36361",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>&nbsp;(Q.rear-Q.front&nbsp;+1)</p>",
+            "<p>(Q.rear-Q.front+M)</p>",
+            "<p>(Q.rear-Q.front+1)%M&nbsp;</p>",
+            "<p>(Q.rear-Q.front+M)%M</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 58,
+          "belong_page": 1,
+          "question_id": 36362,
+          "question_title": "<p><span style=\"font-family: 宋体;\">设栈</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">S</span><span style=\"font-family: 宋体;\">和队列</span><span style=\"font-family: Times New Roman;\">Q</span><span style=\"font-family: 宋体;\">的初始状态为空，元素</span><span style=\"font-family: Times New Roman;\">a b c d e f g</span><span style=\"font-family: 宋体;\">依次进入栈</span><span style=\"font-family: Times New Roman;\">S</span><span style=\"font-family: 宋体;\">。要求每个元素出栈后立即进入队列</span><span style=\"font-family: Times New Roman;\">Q</span><span style=\"font-family: 宋体;\">，若</span><span style=\"font-family: Times New Roman;\">7</span><span style=\"font-family: 宋体;\">个元素出队列的顺序为</span><span style=\"font-family: Times New Roman;\">b d f e c a g</span><span style=\"font-family: 宋体;\">，则栈</span><span style=\"font-family: Times New Roman;\">S</span><span style=\"font-family: 宋体;\">的容量最小应该是（</span><span style=\"font-family: Times New Roman;\">58</span><span style=\"font-family: 宋体;\">）。</span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36362",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": ["<p>5</p>", "<p>4</p>", "<p>3</p>", "<p>2</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 59,
+          "belong_page": 1,
+          "question_id": 151326,
+          "question_title": "某二叉树的先序遍历序列为c a b f e d g ,中序遍历序列为a b c d e f g ,则该二叉树是（ ）。",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "151326",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>完全二叉树</p>",
+            "<p>最优二叉树</p>",
+            "<p>平衡二叉树</p>",
+            "<p>满二叉树</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 60,
+          "belong_page": 1,
+          "question_id": 36364,
+          "question_title": "<p><span style=\"font-family: 宋体;\">对某有序顺序表进行折半查找时，（</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">60</span><span style=\"font-family: 宋体;\">）不可能构成查找过程中关键字的比较序列。</span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36364",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>45,10,30,18,25&nbsp;</p>",
+            "<p>45,30,18,25,10</p>",
+            "<p>10,45,18,30,25&nbsp;&nbsp;&nbsp;</p>",
+            "<p>10,18,25,30,45</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 61,
+          "belong_page": 1,
+          "question_id": 36365,
+          "question_title": "<p><span style=\"font-family: 宋体;\">用某排序方法对一元素序列进行非递减排序时，若该方法可保证在排序前后排序码相同者的相对位置不变，则称该排序方法是稳定的。简单选择排序法排序方法是不稳定的，（</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">61</span><span style=\"font-family: 宋体;\">）可以说明这个性质。</span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36365",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>21&nbsp;48&nbsp;21*&nbsp;63&nbsp;17</p>",
+            "<p>17&nbsp;21&nbsp;21*&nbsp;48&nbsp;63</p>",
+            "<p>&nbsp;63&nbsp;21&nbsp;48&nbsp;21*&nbsp;17</p>",
+            "<p>21*&nbsp;17&nbsp;48&nbsp;63&nbsp;21</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 62,
+          "belong_page": 1,
+          "question_id": 36366,
+          "question_title": "<p><span style=\"font-family: 宋体;\">优先队列通常采用（</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">62</span><span style=\"font-family: 宋体;\">）数据结构实现，向优先队列中插入—个元素的时间复杂度为（</span><span style=\"font-family: Times New Roman;\">63</span><span style=\"font-family: 宋体;\">）。</span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36366",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>（62）堆</p>",
+            "<p>（62）栈&nbsp;</p>",
+            "<p>（62）队列</p>",
+            "<p>（62）线性表</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 63,
+          "belong_page": 1,
+          "question_id": 36367,
+          "question_title": "<p><span style=\"font-family: 宋体;\">优先队列通常采用（</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">62</span><span style=\"font-family: 宋体;\">）数据结构实现，向优先队列中插入—个元素的时间复杂度为（</span><span style=\"font-family: Times New Roman;\">63</span><span style=\"font-family: 宋体;\">）。</span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36367",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>&nbsp;Θ(n)&nbsp;</p>",
+            "<p>&nbsp;Θ(1)</p>",
+            "<p>&nbsp;Θ(lgn)</p>",
+            "<p>Θ(n2)</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 64,
+          "belong_page": 1,
+          "question_id": 36368,
+          "question_title": "<p><span style=\"font-family: 宋体;\">在</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">n</span><span style=\"font-family: 宋体;\">个数的数组中确定其第</span><span style=\"font-family: Times New Roman;\">i(1</span><span style=\"font-family: 宋体;\">≤</span><span style=\"font-family: Times New Roman;\">i</span><span style=\"font-family: 宋体;\">≤</span><span style=\"font-family: Times New Roman;\">n)</span><span style=\"font-family: 宋体;\">小的数时，可以采用快速排序算法中的划分思想</span><span style=\"font-family: Times New Roman;\">,</span><span style=\"font-family: 宋体;\">对</span><span style=\"font-family: Times New Roman;\">n</span><span style=\"font-family: 宋体;\">个元素划分，先确定第</span><span style=\"font-family: Times New Roman;\">k</span><span style=\"font-family: 宋体;\">小的数，根据</span><span style=\"font-family: Times New Roman;\">i</span><span style=\"font-family: 宋体;\">和</span><span style=\"font-family: Times New Roman;\">k</span><span style=\"font-family: 宋体;\">的大小关系</span><span style=\"font-family: Times New Roman;\">,</span><span style=\"font-family: 宋体;\">进一步处理，最终得到第</span><span style=\"font-family: Times New Roman;\">i</span><span style=\"font-family: 宋体;\">小的数。划分过程中，最佳的基准元素选择的方法是选择待划分数组的（</span><span style=\"font-family: Times New Roman;\">64</span><span style=\"font-family: 宋体;\">）元素。此时，算法在最坏情况下的时间复杂度为（不考虑所有元素均相等的情况）（</span><span style=\"font-family: Times New Roman;\">65</span><span style=\"font-family: 宋体;\">）。</span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36368",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>第一个</p>",
+            "<p>最后一个</p>",
+            "<p>&nbsp;中位数&nbsp;</p>",
+            "<p>&nbsp;随机一个</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 65,
+          "belong_page": 1,
+          "question_id": 36369,
+          "question_title": "<p><span style=\"text-indent: 20.7pt; font-family: &quot;Times New Roman&quot;; font-size: 10.5pt;\">&nbsp;</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\"><span style=\"font-family: 宋体;\">在</span>n<span style=\"font-family: 宋体;\">个数的数组中确定其第</span><span style=\"font-family: Times New Roman;\">i(1</span><span style=\"font-family: 宋体;\">≤</span><span style=\"font-family: Times New Roman;\">i</span><span style=\"font-family: 宋体;\">≤</span><span style=\"font-family: Times New Roman;\">n)</span><span style=\"font-family: 宋体;\">小的数时，可以采用快速排序算法中的划分思想</span><span style=\"font-family: Times New Roman;\">,</span><span style=\"font-family: 宋体;\">对</span><span style=\"font-family: Times New Roman;\">n</span><span style=\"font-family: 宋体;\">个元素划分，先确定第</span><span style=\"font-family: Times New Roman;\">k</span><span style=\"font-family: 宋体;\">小的数，根据</span><span style=\"font-family: Times New Roman;\">i</span><span style=\"font-family: 宋体;\">和</span><span style=\"font-family: Times New Roman;\">k</span><span style=\"font-family: 宋体;\">的大小关系</span><span style=\"font-family: Times New Roman;\">,</span><span style=\"font-family: 宋体;\">进一步处理，最终得到第</span><span style=\"font-family: Times New Roman;\">i</span><span style=\"font-family: 宋体;\">小的数。划分过程中，最佳的基准元素选择的方法是选择待划分数组的（</span><span style=\"font-family: Times New Roman;\">64</span><span style=\"font-family: 宋体;\">）元素。此时，算法在最坏情况下的时间复杂度为（不考虑所有元素均相等的情况）（</span><span style=\"font-family: Times New Roman;\">65</span><span style=\"font-family: 宋体;\">）。</span></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36369",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>Θ(n)</p>", "<p>Θ(lgn)</p>", "<p>Θ(nlgn)</p>", "<p>Θ(n2)</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 66,
+          "belong_page": 1,
+          "question_id": 36370,
+          "question_title": "<p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/201802/c12170264da1e6ef406698176f0c1b81e1195b.png\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36370",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>服务器A的IP地址是广播地址</p>",
+            "<p>&nbsp;工作站B的IP地址是网络地址</p>",
+            "<p>工作站B与网关不属于同一子网&nbsp;</p>",
+            "<p>服务器A与网关不属于同一子网</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 67,
+          "belong_page": 1,
+          "question_id": 71274,
+          "question_title": "<p>以下关予VLAN的叙述中，属于其优点的是（ ）。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "71274",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>允许逻辑地划分网段</p>",
+            "<p>减少了冲突域的数量</p>",
+            "<p>增加了冲突域的大小</p>",
+            "<p>减少了广播域的数量</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 68,
+          "belong_page": 1,
+          "question_id": 71275,
+          "question_title": "<p>以下关于URL的叙述中，不正确的是（ ）。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "71275",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>使用www.abc.com和abc.com打开的是同一页面</p>",
+            "<p>在地址栏中输入www.abc.com默认使用http协议</p>",
+            "<p>www.abc.com中的“www”是主机名</p>",
+            "<p>www.abc.com中的“abc.com”是域名</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 69,
+          "belong_page": 1,
+          "question_id": 36373,
+          "question_title": "<p><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">DHCP</span><span style=\"font-family: 宋体;\">协议的功能是（</span><span style=\"font-family: Times New Roman;\">69</span><span style=\"font-family: 宋体;\">）；</span><span style=\"font-family: Times New Roman;\">FTP</span><span style=\"font-family: 宋体;\">使用的传输层协议为（</span><span style=\"font-family: Times New Roman;\">70</span><span style=\"font-family: 宋体;\">）。</span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36373",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>&nbsp;WINS名字解析 （问题69）</p>",
+            "<p>静态地址分配&nbsp;（问题69）</p>&nbsp;",
+            "<p>DNS名字登录&nbsp;（问题69）</p>",
+            "<p>自动分配IP地址&nbsp;（问题69）</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 70,
+          "belong_page": 1,
+          "question_id": 36374,
+          "question_title": "<p><span style=\"text-indent: 20.7pt; font-family: &quot;Times New Roman&quot;; font-size: 10.5pt;\">&nbsp;</span><span style=\"text-indent: 20.7pt; font-family: 宋体; font-size: 10.5pt;\">DHCP<span style=\"font-family: 宋体;\">协议的功能是（</span><span style=\"font-family: Times New Roman;\">69</span><span style=\"font-family: 宋体;\">）；</span><span style=\"font-family: Times New Roman;\">FTP</span><span style=\"font-family: 宋体;\">使用的传输层协议为（回答该空&nbsp;</span><span style=\"font-family: Times New Roman;\">70</span><span style=\"font-family: 宋体;\">）。</span></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36374",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>&nbsp;TCP</p>", "<p>&nbsp;IP</p>", "<p>UDP&nbsp;</p>", "<p>HDLC</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 71,
+          "belong_page": 1,
+          "question_id": 36375,
+          "question_title": "<p><span style=\"text-indent: 20.7pt; font-family: &quot;Times New Roman&quot;; font-size: 10.5pt;\">Why Have Formal Documents?</span><br/></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">Finally, writing the decisions down is essential. Only when one writes do the gaps appear and the (71) protrude(<span style=\"font-family: 宋体;\">突出</span><span style=\"font-family: Times New Roman;\">). The act of writing turns out to require hundreds of mini-decisions, and it is the existence of these that distinguishes clear, exact polici</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">es from fuzzy ones.</span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">Second, the documents will communicate the decisions to others. The manager will be continually amazed that policies he took for common knowledge are totally unknown by some member of his team. Since his fundamental job is to keep everybody going in the (72) direction, his chief daily task will be communication, not decision-making, and his documents will immensely (73) this load.</span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">Finally, a manager’s documents give him a data base and checklist. By reviewing them (74) he sees where he is, and he sees what changes of emphasis or shifts in direction are needed.</span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">The task of the manager is to develop a plan and then to realize it. But only the written plan is precise and communicable. Such a plan consists of documents on what, when, how much, where, and who. This small set of critical documents (75) much of the manager’s work. If their comprehensive and critical nature is recognized in the beginning, the manager can approach them as friendly tools rather than annoying busywork. He will set his direction much more crisply and quickly by doing so.</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">.</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36375",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>&nbsp;inconsistencies （问题71）</p>",
+            "<p>consistencies&nbsp; &nbsp; &nbsp;（问题71）</p>",
+            "<p>steadiness&nbsp; &nbsp; &nbsp;（问题71）</p>",
+            "<p>&nbsp;adaptability&nbsp;（问题71）</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 72,
+          "belong_page": 1,
+          "question_id": 36376,
+          "question_title": "<p><span style=\"text-indent: 20.7pt; font-family: &quot;Times New Roman&quot;; font-size: 10.5pt;\">Why Have Formal Documents?</span><br/></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">Finally, writing the decisions down is essential. Only when one writes do the gaps appear and the (71) protrude(<span style=\"font-family: 宋体;\">突出</span><span style=\"font-family: Times New Roman;\">). The act of writing turns out to require hundreds of mini-decisions, and it is the existence of these that distinguishes clear, exact polici</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">es from fuzzy ones.</span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">Second, the documents will communicate the decisions to others. The manager will be continually amazed that policies he took for common knowledge are totally unknown by some member of his team. Since his fundamental job is to keep everybody going in the (作答此空) direction, his chief daily task will be communication, not decision-making, and his documents will immensely (73) this load.</span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">Finally, a manager’s documents give him a data base and checklist. By reviewing them (74) he sees where he is, and he sees what changes of emphasis or shifts in direction are needed.</span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">The task of the manager is to develop a plan and then to realize it. But only the written plan is precise and communicable. Such a plan consists of documents on what, when, how much, where, and who. This small set of critical documents (75) much of the manager’s work. If their comprehensive and critical nature is recognized in the beginning, the manager can approach them as friendly tools rather than annoying busywork. He will set his direction much more crisply and quickly by doing so.</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">.</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36376",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>other&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+            "<p>&nbsp;different&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+            "<p>&nbsp;another</p>",
+            "<p>&nbsp;same</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 73,
+          "belong_page": 1,
+          "question_id": 36377,
+          "question_title": "<p><span style=\"text-indent: 20.7pt; font-family: &quot;Times New Roman&quot;; font-size: 10.5pt;\">&nbsp;Why Have Formal Documents?</span><br/></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">Finally, writing the decisions down is essential. Only when one writes do the gaps appear and the (71) protrude(<span style=\"font-family: 宋体;\">突出</span><span style=\"font-family: Times New Roman;\">). The act of writing turns out to require hundreds of mini-decisions, and it is the existence of these that distinguishes clear, exact polici</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">es from fuzzy ones.</span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">Second, the documents will communicate the decisions to others. The manager will be continually amazed that policies he took for common knowledge are totally unknown by some member of his team. Since his fundamental job is to keep everybody going in the (72) direction, his chief daily task will be communication, not decision-making, and his documents will immensely (73) this load.</span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">Finally, a manager’s documents give him a data base and checklist. By reviewing them (74) he sees where he is, and he sees what changes of emphasis or shifts in direction are needed.</span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">The task of the manager is to develop a plan and then to realize it. But only the written plan is precise and communicable. Such a plan consists of documents on what, when, how much, where, and who. This small set of critical documents (75) much of the manager’s work. If their comprehensive and critical nature is recognized in the beginning, the manager can approach them as friendly tools rather than annoying busywork. He will set his direction much more crisply and quickly by doing so.</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">.</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36377",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>extend</p>",
+            "<p>&nbsp;broaden&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+            "<p>&nbsp;lighten</p>",
+            "<p>&nbsp;release</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 74,
+          "belong_page": 1,
+          "question_id": 36378,
+          "question_title": "<p><span style=\"text-indent: 20.7pt; font-family: &quot;Times New Roman&quot;; font-size: 10.5pt;\">Why Have Formal Documents?</span><br/></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">Finally, writing the decisions down is essential. Only when one writes do the gaps appear and the (71) protrude(<span style=\"font-family: 宋体;\">突出</span><span style=\"font-family: Times New Roman;\">). The act of writing turns out to require hundreds of mini-decisions, and it is the existence of these that distinguishes clear, exact polici</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">es from fuzzy ones.</span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">Second, the documents will communicate the decisions to others. The manager will be continually amazed that policies he took for common knowledge are totally unknown by some member of his team. Since his fundamental job is to keep everybody going in the (72) direction, his chief daily task will be communication, not decision-making, and his documents will immensely (73) this load.</span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">Finally, a manager’s documents give him a data base and checklist. By reviewing them (74) he sees where he is, and he sees what changes of emphasis or shifts in direction are needed.</span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\"></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">The task of the manager is to develop a plan and then to realize it. But only the written plan is precise and communicable. Such a plan consists of documents on what, when, how much, where, and who. This small set of critical documents (75) much of the manager’s work. If their comprehensive and critical nature is recognized in the beginning, the manager can approach them as friendly tools rather than annoying busywork. He will set his direction much more crisply and quickly by doing so.</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;\">.</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36378",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>&nbsp;&nbsp;periodically</p>",
+            "<p>occasionally&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+            "<p>&nbsp;infrequently&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+            "<p>&nbsp;rarely</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 75,
+          "belong_page": 1,
+          "question_id": 36379,
+          "question_title": "<p><span style=\"text-indent: 20.7pt; font-family: &quot;Times New Roman&quot;; font-size: 10.5pt;\">Why Have Formal Documents?</span><br/></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: 宋体; font-size: 10.5pt; mso-font-kerning: 1.0000pt; mso-spacerun: &quot;yes&quot;;\">Finally, writing the decisions down is essential. Only when one writes do the gaps appear and the (71) protrude(<span style=\"font-family: 宋体;\">突出</span><span style=\"font-family: Times New Roman;\">). The act of writing turns out to require hundreds of mini-decisions, and it is the existence of these that distinguishes clear, exact polici</span></span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-font-kerning: 1.0000pt; mso-spacerun: &quot;yes&quot;;\">es from fuzzy ones.</span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-font-kerning: 1.0000pt; mso-spacerun: &quot;yes&quot;;\"></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-font-kerning: 1.0000pt; mso-spacerun: &quot;yes&quot;;\">Second, the documents will communicate the decisions to others. The manager will be continually amazed that policies he took for common knowledge are totally unknown by some member of his team. Since his fundamental job is to keep everybody going in the (72) direction, his chief daily task will be communication, not decision-making, and his documents will immensely (73) this load.</span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-font-kerning: 1.0000pt; mso-spacerun: &quot;yes&quot;;\"></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-font-kerning: 1.0000pt; mso-spacerun: &quot;yes&quot;;\">Finally, a manager’s documents give him a data base and checklist. By reviewing them (74) he sees where he is, and he sees what changes of emphasis or shifts in direction are needed.</span><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-font-kerning: 1.0000pt; mso-spacerun: &quot;yes&quot;;\"></span></p><p class=\"MsoNormal\" style=\"text-indent: 20.7pt;\"><span style=\"font-family: &quot;Times New Roman&quot;; font-size: 10.5pt; mso-font-kerning: 1.0000pt; mso-spacerun: &quot;yes&quot;;\">The task of the manager is to develop a plan and then to realize it. But only the written plan is precise and communicable. Such a plan consists of documents on what, when, how much, where, and who. This small set of critical documents (请作答此空) much of the manager’s work. If their comprehensive and critical nature is recognized in the beginning, the manager can approach them as friendly tools rather than annoying busywork. He will set his direction much more crisply and quickly by doing so.</span><span style=\"font-family: 宋体; font-size: 10.5pt; mso-font-kerning: 1.0000pt; mso-spacerun: &quot;yes&quot;;\">.</span></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "36379",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>decides</p>",
+            "<p>encapsulates</p>",
+            "<p>&nbsp;realizes</p>",
+            "<p>&nbsp;recognizes</p>"
+          ],
+          "sort_son": "0"
+        }
+      ],
+      "summary": {
+        "radio": {
+          "total_question": 75,
+          "total_score": 0
+        },
+        "multiple": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "judge": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "fill": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "program": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "qanda": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "cloze": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "budingxiang": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "material": {
+          "total_question": 0,
+          "total_score": 0
+        }
+      },
+      "examine": {
+        "id": 2509,
+        "title": "2015年5月软件设计师选择题",
+        "len_time": {
+          "time": 0
+        },
+        "total_question": 75,
+        "total_score": 75,
+        "submit_limit_num": "0",
+        "machine_type": "1"
+      },
+      "answer_activity_start_time": 1585828800,
+      "checkProcess": 1,
+      "process": {
+        "is_delete": false
+      },
+      "train_id": 0
+    },
+    "pagination": {
+      "curPage": 1,
+      "pageSize": 1200,
+      "total": 75,
+      "hasNextPage": false
+    },
+    "totalOrder": [
+      {
+        "index": 1,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 71208
+      },
+      {
+        "index": 2,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36306
+      },
+      {
+        "index": 3,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 71210
+      },
+      {
+        "index": 4,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 26032
+      },
+      {
+        "index": 5,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36309
+      },
+      {
+        "index": 6,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 71213
+      },
+      {
+        "index": 7,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36311
+      },
+      {
+        "index": 8,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36312
+      },
+      {
+        "index": 9,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 71215
+      },
+      {
+        "index": 10,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36314
+      },
+      {
+        "index": 11,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36315
+      },
+      {
+        "index": 12,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36316
+      },
+      {
+        "index": 13,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36317
+      },
+      {
+        "index": 14,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 64821
+      },
+      {
+        "index": 15,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 71222
+      },
+      {
+        "index": 16,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 71223
+      },
+      {
+        "index": 17,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36321
+      },
+      {
+        "index": 18,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36322
+      },
+      {
+        "index": 19,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36323
+      },
+      {
+        "index": 20,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 71227
+      },
+      {
+        "index": 21,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36548
+      },
+      {
+        "index": 22,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 71229
+      },
+      {
+        "index": 23,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36327
+      },
+      {
+        "index": 24,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36328
+      },
+      {
+        "index": 25,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36329
+      },
+      {
+        "index": 26,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36330
+      },
+      {
+        "index": 27,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36331
+      },
+      {
+        "index": 28,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36332
+      },
+      {
+        "index": 29,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 340428
+      },
+      {
+        "index": 30,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36334
+      },
+      {
+        "index": 31,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36335
+      },
+      {
+        "index": 32,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 40587
+      },
+      {
+        "index": 33,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36337
+      },
+      {
+        "index": 34,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36338
+      },
+      {
+        "index": 35,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 19433
+      },
+      {
+        "index": 36,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36340
+      },
+      {
+        "index": 37,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 91145
+      },
+      {
+        "index": 38,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36342
+      },
+      {
+        "index": 39,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36343
+      },
+      {
+        "index": 40,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36344
+      },
+      {
+        "index": 41,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36345
+      },
+      {
+        "index": 42,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36346
+      },
+      {
+        "index": 43,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36347
+      },
+      {
+        "index": 44,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36348
+      },
+      {
+        "index": 45,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36349
+      },
+      {
+        "index": 46,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 158823
+      },
+      {
+        "index": 47,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36351
+      },
+      {
+        "index": 48,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36352
+      },
+      {
+        "index": 49,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36353
+      },
+      {
+        "index": 50,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36354
+      },
+      {
+        "index": 51,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36355
+      },
+      {
+        "index": 52,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36356
+      },
+      {
+        "index": 53,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36357
+      },
+      {
+        "index": 54,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 40306
+      },
+      {
+        "index": 55,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36359
+      },
+      {
+        "index": 56,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36360
+      },
+      {
+        "index": 57,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36361
+      },
+      {
+        "index": 58,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36362
+      },
+      {
+        "index": 59,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 151326
+      },
+      {
+        "index": 60,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36364
+      },
+      {
+        "index": 61,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36365
+      },
+      {
+        "index": 62,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36366
+      },
+      {
+        "index": 63,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36367
+      },
+      {
+        "index": 64,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36368
+      },
+      {
+        "index": 65,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36369
+      },
+      {
+        "index": 66,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36370
+      },
+      {
+        "index": 67,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 71274
+      },
+      {
+        "index": 68,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 71275
+      },
+      {
+        "index": 69,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36373
+      },
+      {
+        "index": 70,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36374
+      },
+      {
+        "index": 71,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36375
+      },
+      {
+        "index": 72,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36376
+      },
+      {
+        "index": 73,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36377
+      },
+      {
+        "index": 74,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36378
+      },
+      {
+        "index": 75,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 36379
+      }
+    ]
+  }
+}

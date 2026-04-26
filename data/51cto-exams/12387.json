@@ -1,0 +1,394 @@
+{
+  "msg": "成功",
+  "status": "0",
+  "data": {
+    "data": {
+      "question": [
+        {
+          "index": 1,
+          "belong_page": 1,
+          "question_id": 308284,
+          "question_title": "<p>【问题1】（5分）</p><p>使用说明中的词语，给出图1-1中的实体E1~E5的名称。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>案例一（15分）</p><p>阅读下列说明和图回答问题1至问题4，将解答填入答题纸的对应栏内。</p><p>【说明】某停车场运营方为了降低运营成本，减员增效，提供良好的停车体验，欲开发无人值守停车系统，该系统的主要功能是：</p><p>1、 信息维护。管理人员对车位（总数、空余车位数等）、计费规则等基础信息进行设置。</p><p>2、 会员注册。车主提供手机号、车牌号等信息进行注册，提交充值信息（等级、绑定并授权支付系统进行充值或交费的支付账号）不同级别和充值额度享受不同停车折扣点。</p><p>3、 车牌识别。当车辆进入停车场时，若有（空余车位数大于1），自动识别车牌号后进行道闸控制，当车主开车离开停车场时，识别车牌号，计费成功后，请求道闸控制。</p><p>4、 计费。更新车辆离场时间，根据计费规则计算出停车费用，若车主是会员，提示停车费用：若储存余额够本次停车费用，自动扣费，更新余额，若储值余额不足，自动使用授权缴费账号请求支付系统进行支付，获取支付状态。若非会员临时停车，提示停车费用，车主通过扫描费用信息中的支付码调用支付系统自助交费，获取支付状态。</p><p>5、 道闸控制。根据道闸控制请求向道闸控制系统发送若干执行指令和接收道闸执行状态。若道闸执行状态为正常放行时，对入场车辆，将车牌号及其入场时间信息存入停车记录，修改空余车位数；对出厂车辆更新停车状态，修改空余车位数。当因道闸重置系统出现问题（断网断电或是故障为枱杆等情况），而无法在规定的时间内接收到其返回的执行状态正常放行时，系统向管理人员发送异常告警信息，之后管理人员安排故障排查处理，确保车辆有序出入停车场。</p><p>现采用结构化方法对无人值守停车系统进行分析与设计，获得如图1-1所示的上下文数据流图和图1-2所示的0层数据流图。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567076505209.jpg\" title=\"1630567076505209.jpg\" alt=\"1.jpg\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567082343930.jpg\" title=\"1630567082343930.jpg\" alt=\"2.jpg\"/><br/></p>",
+          "score": 5,
+          "new_parent_id": "308283",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>问题1：</p><p>E1：车辆；E2：车主；E3：支付系统；E4：管理人员；E5：道闸控制系统</p>"
+          ],
+          "option": null,
+          "sort_son": "1"
+        },
+        {
+          "index": 2,
+          "belong_page": 1,
+          "question_id": 308285,
+          "question_title": "<p>【问题2】（3分）</p><p>使用说明中的词语，给出图1-2中的数据存储D1~D3的名称。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>案例一（15分）</p><p>阅读下列说明和图回答问题1至问题4，将解答填入答题纸的对应栏内。</p><p>【说明】某停车场运营方为了降低运营成本，减员增效，提供良好的停车体验，欲开发无人值守停车系统，该系统的主要功能是：</p><p>1、 信息维护。管理人员对车位（总数、空余车位数等）、计费规则等基础信息进行设置。</p><p>2、 会员注册。车主提供手机号、车牌号等信息进行注册，提交充值信息（等级、绑定并授权支付系统进行充值或交费的支付账号）不同级别和充值额度享受不同停车折扣点。</p><p>3、 车牌识别。当车辆进入停车场时，若有（空余车位数大于1），自动识别车牌号后进行道闸控制，当车主开车离开停车场时，识别车牌号，计费成功后，请求道闸控制。</p><p>4、 计费。更新车辆离场时间，根据计费规则计算出停车费用，若车主是会员，提示停车费用：若储存余额够本次停车费用，自动扣费，更新余额，若储值余额不足，自动使用授权缴费账号请求支付系统进行支付，获取支付状态。若非会员临时停车，提示停车费用，车主通过扫描费用信息中的支付码调用支付系统自助交费，获取支付状态。</p><p>5、 道闸控制。根据道闸控制请求向道闸控制系统发送若干执行指令和接收道闸执行状态。若道闸执行状态为正常放行时，对入场车辆，将车牌号及其入场时间信息存入停车记录，修改空余车位数；对出厂车辆更新停车状态，修改空余车位数。当因道闸重置系统出现问题（断网断电或是故障为枱杆等情况），而无法在规定的时间内接收到其返回的执行状态正常放行时，系统向管理人员发送异常告警信息，之后管理人员安排故障排查处理，确保车辆有序出入停车场。</p><p>现采用结构化方法对无人值守停车系统进行分析与设计，获得如图1-1所示的上下文数据流图和图1-2所示的0层数据流图。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567076505209.jpg\" title=\"1630567076505209.jpg\" alt=\"1.jpg\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567082343930.jpg\" title=\"1630567082343930.jpg\" alt=\"2.jpg\"/><br/></p>",
+          "score": 3,
+          "new_parent_id": "308283",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["<p>问题2：</p><p>D1：,停车记录表,,D2：会员信息表,D3：,基础信息</p>"],
+          "option": null,
+          "sort_son": "2"
+        },
+        {
+          "index": 3,
+          "belong_page": 1,
+          "question_id": 308286,
+          "question_title": "<p>【问题3】（4分）</p><p>根据说明和图中术语，补充图1-2中缺失的数据流及其起点和终点。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>案例一（15分）</p><p>阅读下列说明和图回答问题1至问题4，将解答填入答题纸的对应栏内。</p><p>【说明】某停车场运营方为了降低运营成本，减员增效，提供良好的停车体验，欲开发无人值守停车系统，该系统的主要功能是：</p><p>1、 信息维护。管理人员对车位（总数、空余车位数等）、计费规则等基础信息进行设置。</p><p>2、 会员注册。车主提供手机号、车牌号等信息进行注册，提交充值信息（等级、绑定并授权支付系统进行充值或交费的支付账号）不同级别和充值额度享受不同停车折扣点。</p><p>3、 车牌识别。当车辆进入停车场时，若有（空余车位数大于1），自动识别车牌号后进行道闸控制，当车主开车离开停车场时，识别车牌号，计费成功后，请求道闸控制。</p><p>4、 计费。更新车辆离场时间，根据计费规则计算出停车费用，若车主是会员，提示停车费用：若储存余额够本次停车费用，自动扣费，更新余额，若储值余额不足，自动使用授权缴费账号请求支付系统进行支付，获取支付状态。若非会员临时停车，提示停车费用，车主通过扫描费用信息中的支付码调用支付系统自助交费，获取支付状态。</p><p>5、 道闸控制。根据道闸控制请求向道闸控制系统发送若干执行指令和接收道闸执行状态。若道闸执行状态为正常放行时，对入场车辆，将车牌号及其入场时间信息存入停车记录，修改空余车位数；对出厂车辆更新停车状态，修改空余车位数。当因道闸重置系统出现问题（断网断电或是故障为枱杆等情况），而无法在规定的时间内接收到其返回的执行状态正常放行时，系统向管理人员发送异常告警信息，之后管理人员安排故障排查处理，确保车辆有序出入停车场。</p><p>现采用结构化方法对无人值守停车系统进行分析与设计，获得如图1-1所示的上下文数据流图和图1-2所示的0层数据流图。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567076505209.jpg\" title=\"1630567076505209.jpg\" alt=\"1.jpg\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567082343930.jpg\" title=\"1630567082343930.jpg\" alt=\"2.jpg\"/><br/></p>",
+          "score": 4,
+          "new_parent_id": "308283",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>问题3：</p><p>P3到D2：更新余额</p><p>P5到D3：更新车位信息</p><p>P1到P5：道闸控制请求,</p><p>D3到P3,：计费规则</p>"
+          ],
+          "option": null,
+          "sort_son": "3"
+        },
+        {
+          "index": 4,
+          "belong_page": 1,
+          "question_id": 308287,
+          "question_title": "<p>【问题4】（3分）</p><p>根据说明，采用结构化语言对“道闸控制”的加工逻辑进行描述。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>案例一（15分）</p><p>阅读下列说明和图回答问题1至问题4，将解答填入答题纸的对应栏内。</p><p>【说明】某停车场运营方为了降低运营成本，减员增效，提供良好的停车体验，欲开发无人值守停车系统，该系统的主要功能是：</p><p>1、 信息维护。管理人员对车位（总数、空余车位数等）、计费规则等基础信息进行设置。</p><p>2、 会员注册。车主提供手机号、车牌号等信息进行注册，提交充值信息（等级、绑定并授权支付系统进行充值或交费的支付账号）不同级别和充值额度享受不同停车折扣点。</p><p>3、 车牌识别。当车辆进入停车场时，若有（空余车位数大于1），自动识别车牌号后进行道闸控制，当车主开车离开停车场时，识别车牌号，计费成功后，请求道闸控制。</p><p>4、 计费。更新车辆离场时间，根据计费规则计算出停车费用，若车主是会员，提示停车费用：若储存余额够本次停车费用，自动扣费，更新余额，若储值余额不足，自动使用授权缴费账号请求支付系统进行支付，获取支付状态。若非会员临时停车，提示停车费用，车主通过扫描费用信息中的支付码调用支付系统自助交费，获取支付状态。</p><p>5、 道闸控制。根据道闸控制请求向道闸控制系统发送若干执行指令和接收道闸执行状态。若道闸执行状态为正常放行时，对入场车辆，将车牌号及其入场时间信息存入停车记录，修改空余车位数；对出厂车辆更新停车状态，修改空余车位数。当因道闸重置系统出现问题（断网断电或是故障为枱杆等情况），而无法在规定的时间内接收到其返回的执行状态正常放行时，系统向管理人员发送异常告警信息，之后管理人员安排故障排查处理，确保车辆有序出入停车场。</p><p>现采用结构化方法对无人值守停车系统进行分析与设计，获得如图1-1所示的上下文数据流图和图1-2所示的0层数据流图。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567076505209.jpg\" title=\"1630567076505209.jpg\" alt=\"1.jpg\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567082343930.jpg\" title=\"1630567082343930.jpg\" alt=\"2.jpg\"/><br/></p>",
+          "score": 3,
+          "new_parent_id": "308283",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>问题4：</p><p>if,,道闸执行状态正常</p><p>,,,,,,if,车辆入场，then,,将车牌号及其入场时间信息存入停车记录,修改空余车位数</p><p>,,,,,,else,,if,,,车辆出厂，then,,更新停车状态，修改空余车位数</p><p>else,,,,系统向管理人员发送异常告警信息</p>"
+          ],
+          "option": null,
+          "sort_son": "4"
+        },
+        {
+          "index": 5,
+          "belong_page": 1,
+          "question_id": 308289,
+          "question_title": "<p>【问题1】（6分）</p><p>根据问题描述，补充2-1的实体联系图</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>案例二（15分）</p><p>阅读下列说明，回答问题1至问题3，将解答填入答题纸的对应栏内。</p><p>【说明】</p><p>某社区蔬菜团购网站，为规范商品收发流程，便于查询客户订单情况，需要开发一个信息系统，请根据下列需求描述完成该系统的数据库设计。</p><p>【需求描述】</p><p>（1） 记录蔬菜供应商的信息，包括供应商编号，地址和一个电话</p><p>（2） 记录社区团购点的信息，包括团购点编号、地址和一个电话。</p><p>（3） 记录客户信息，包括包括客户姓名和一个电话，客户可以在不同的社区团购点下订单，不直接与蔬菜供应商发生联系。</p><p>（4） 记录客户订单信息，包括订单编号、团购点编号、客户电话、订单内容和日期。</p><p>【概念模型设计】</p><p>根据需求阶段收集的信息，设计的实体联系图（不完整）如图2-1所示。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567207350758.jpg\" title=\"1630567207350758.jpg\" alt=\"1.jpg\"/><br/><br/></p><p>【逻辑结构设计】</p><p>根据概念模型设计阶段完成的实体联系图，得出如下关系模型（不完整）：</p><p>蔬菜供应商 （供应商编号，地址，电话）</p><p>社区团购店点 （团购点编号，地址，电话）</p><p>供货（供货商编号，（a））</p><p>客户（姓名，客户电话）</p><p>订单（订单编号，团购点编号，（b），订单内容，日期）</p>",
+          "score": 6,
+          "new_parent_id": "308288",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "【问题1】<br/><img style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567286503778.jpg\" title=\"1630567286503778.jpg\" alt=\"1.jpg\"/>"
+          ],
+          "option": null,
+          "sort_son": "1"
+        },
+        {
+          "index": 6,
+          "belong_page": 1,
+          "question_id": 308290,
+          "question_title": "<p>【问题2】（4分）</p><p>补充逻辑结构设计结构中的（a）（b）两处空缺及完整性的约束关系</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>案例二（15分）</p><p>阅读下列说明，回答问题1至问题3，将解答填入答题纸的对应栏内。</p><p>【说明】</p><p>某社区蔬菜团购网站，为规范商品收发流程，便于查询客户订单情况，需要开发一个信息系统，请根据下列需求描述完成该系统的数据库设计。</p><p>【需求描述】</p><p>（1） 记录蔬菜供应商的信息，包括供应商编号，地址和一个电话</p><p>（2） 记录社区团购点的信息，包括团购点编号、地址和一个电话。</p><p>（3） 记录客户信息，包括包括客户姓名和一个电话，客户可以在不同的社区团购点下订单，不直接与蔬菜供应商发生联系。</p><p>（4） 记录客户订单信息，包括订单编号、团购点编号、客户电话、订单内容和日期。</p><p>【概念模型设计】</p><p>根据需求阶段收集的信息，设计的实体联系图（不完整）如图2-1所示。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567207350758.jpg\" title=\"1630567207350758.jpg\" alt=\"1.jpg\"/><br/><br/></p><p>【逻辑结构设计】</p><p>根据概念模型设计阶段完成的实体联系图，得出如下关系模型（不完整）：</p><p>蔬菜供应商 （供应商编号，地址，电话）</p><p>社区团购店点 （团购点编号，地址，电话）</p><p>供货（供货商编号，（a））</p><p>客户（姓名，客户电话）</p><p>订单（订单编号，团购点编号，（b），订单内容，日期）</p>",
+          "score": 4,
+          "new_parent_id": "308288",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>【问题2】</p><p>a：团购点编号 &nbsp; &nbsp;b：客户电话</p><p>供货关系主键：（团购点编号、供货商编号）；外键：团购点编号、供货商编号</p><p>订单关系主键：订单编号；外键：团购点编号、客户电话</p>"
+          ],
+          "option": null,
+          "sort_son": "2"
+        },
+        {
+          "index": 7,
+          "belong_page": 1,
+          "question_id": 308291,
+          "question_title": "<p>【问题3】（5分）</p><p>若社区蔬菜团购网站还将有代收快递的业务，请增加新的“快递”实体，并给出客户实体和快递实体之间的“收取”联系，对图2-1进行补充，“快递”关系模式包括快递编号、客户电话和日期。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>案例二（15分）</p><p>阅读下列说明，回答问题1至问题3，将解答填入答题纸的对应栏内。</p><p>【说明】</p><p>某社区蔬菜团购网站，为规范商品收发流程，便于查询客户订单情况，需要开发一个信息系统，请根据下列需求描述完成该系统的数据库设计。</p><p>【需求描述】</p><p>（1） 记录蔬菜供应商的信息，包括供应商编号，地址和一个电话</p><p>（2） 记录社区团购点的信息，包括团购点编号、地址和一个电话。</p><p>（3） 记录客户信息，包括包括客户姓名和一个电话，客户可以在不同的社区团购点下订单，不直接与蔬菜供应商发生联系。</p><p>（4） 记录客户订单信息，包括订单编号、团购点编号、客户电话、订单内容和日期。</p><p>【概念模型设计】</p><p>根据需求阶段收集的信息，设计的实体联系图（不完整）如图2-1所示。<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567207350758.jpg\" title=\"1630567207350758.jpg\" alt=\"1.jpg\"/><br/><br/></p><p>【逻辑结构设计】</p><p>根据概念模型设计阶段完成的实体联系图，得出如下关系模型（不完整）：</p><p>蔬菜供应商 （供应商编号，地址，电话）</p><p>社区团购店点 （团购点编号，地址，电话）</p><p>供货（供货商编号，（a））</p><p>客户（姓名，客户电话）</p><p>订单（订单编号，团购点编号，（b），订单内容，日期）</p>",
+          "score": 5,
+          "new_parent_id": "308288",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "【问题3】<br/><img style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567335664771.jpg\" title=\"1630567335664771.jpg\" alt=\"1.jpg\"/>"
+          ],
+          "option": null,
+          "sort_son": "3"
+        },
+        {
+          "index": 8,
+          "belong_page": 1,
+          "question_id": 308293,
+          "question_title": "<p>【问题1】（7分）</p><p>根据说明中的描述，给出图 3-1中 A1~A3 所对应的参与者名称和U1~U4处所对应的用例名称。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>案例三（15分）</p><p>阅读下列说明和图，回答问题1至问题3，将解答填入答题纸的对应栏内。</p><p>【说明】</p><p>某中医医院拟开发一套线上抓药APP，允许患者凭借该医院医生开具的处方线上抓药，并提供免费送药上门服务。该系统的主要功能描述如下：</p><p>（1）注册。患者扫描医院提供的二维码进行注册，注册过程中，患者需提供其病历号，系统根据病历号自动获取患者基本信息。</p><p>（2）登录。已注册的患者可以登录系统进行线上抓药，未注册的患者系统拒绝其登陆。</p><p>（3）确认处方。患者登录后，可以查看医生开具的所有处方。患者选择需要抓药的处方和数量（需要抓几副药），同时说明是否需要煎制。选择取药方式：自行到店取药或者送药上门，若选择送药上门，患者需要提供提供收货人姓名、联系方式和收货地址。系统自动计算本次抓药的费用，患者可以使用微信或支付宝等支付方式支付费用。支付成功之后，处方被发送给药师进行药品配制。</p><p>（4）处理处方。药师根据处方配置好药品。若患者要求煎制，药师对配置好的药品进煎制。煎制完成，药师将该处方设置为已完成。若患者选择的是自行取药，取药后确认已取药。</p><p>（5）药品派送。处方完成后，对于选择送药上门的患者，系统将给快递人员发送药品配送信息，等待快递人员取药；并给患者发送收货验证码。</p><p>（6）送药上门。快递人员将配制好的药品送到患者指定的收货地址。患者收货时，向快递人员出示收货验证码，快递人员使用该验证码确认药品已送到。</p><p>现采用面向对象分析与设计方法开发上述系统，得到如图3-1所示的用例图以及图3-2所示的类图。</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567452364427.jpg\" title=\"1630567452364427.jpg\" alt=\"1.jpg\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567457336141.jpg\" title=\"1630567457336141.jpg\" alt=\"2.jpg\"/><p><br/></p><br/>",
+          "score": 7,
+          "new_parent_id": "308292",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>【问题1】</p><p>A1：患者；A2：快递员；A3：药师</p><p>U1：确认处方；U2：支付；U3：微信支付；U4：支付宝支付</p>"
+          ],
+          "option": null,
+          "sort_son": "1"
+        },
+        {
+          "index": 9,
+          "belong_page": 1,
+          "question_id": 308294,
+          "question_title": "<p>【问题2】（5分）</p><p>根据说明中的描述，给出图 3-2中 C1~C5 所对应的类名。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>案例三（15分）</p><p>阅读下列说明和图，回答问题1至问题3，将解答填入答题纸的对应栏内。</p><p>【说明】</p><p>某中医医院拟开发一套线上抓药APP，允许患者凭借该医院医生开具的处方线上抓药，并提供免费送药上门服务。该系统的主要功能描述如下：</p><p>（1）注册。患者扫描医院提供的二维码进行注册，注册过程中，患者需提供其病历号，系统根据病历号自动获取患者基本信息。</p><p>（2）登录。已注册的患者可以登录系统进行线上抓药，未注册的患者系统拒绝其登陆。</p><p>（3）确认处方。患者登录后，可以查看医生开具的所有处方。患者选择需要抓药的处方和数量（需要抓几副药），同时说明是否需要煎制。选择取药方式：自行到店取药或者送药上门，若选择送药上门，患者需要提供提供收货人姓名、联系方式和收货地址。系统自动计算本次抓药的费用，患者可以使用微信或支付宝等支付方式支付费用。支付成功之后，处方被发送给药师进行药品配制。</p><p>（4）处理处方。药师根据处方配置好药品。若患者要求煎制，药师对配置好的药品进煎制。煎制完成，药师将该处方设置为已完成。若患者选择的是自行取药，取药后确认已取药。</p><p>（5）药品派送。处方完成后，对于选择送药上门的患者，系统将给快递人员发送药品配送信息，等待快递人员取药；并给患者发送收货验证码。</p><p>（6）送药上门。快递人员将配制好的药品送到患者指定的收货地址。患者收货时，向快递人员出示收货验证码，快递人员使用该验证码确认药品已送到。</p><p>现采用面向对象分析与设计方法开发上述系统，得到如图3-1所示的用例图以及图3-2所示的类图。</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567452364427.jpg\" title=\"1630567452364427.jpg\" alt=\"1.jpg\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567457336141.jpg\" title=\"1630567457336141.jpg\" alt=\"2.jpg\"/><p><br/></p><br/>",
+          "score": 5,
+          "new_parent_id": "308292",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>【问题2】</p><p>C1：支付方式 C2 ：微信支付 C3：支付宝支付 C4 ：处方 C5：药品</p>"
+          ],
+          "option": null,
+          "sort_son": "2"
+        },
+        {
+          "index": 10,
+          "belong_page": 1,
+          "question_id": 308295,
+          "question_title": "<p>【问题 3】（3 分）</p><p>简要解释用例之间的 include， extend 和 generalie 关系的内涵。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>案例三（15分）</p><p>阅读下列说明和图，回答问题1至问题3，将解答填入答题纸的对应栏内。</p><p>【说明】</p><p>某中医医院拟开发一套线上抓药APP，允许患者凭借该医院医生开具的处方线上抓药，并提供免费送药上门服务。该系统的主要功能描述如下：</p><p>（1）注册。患者扫描医院提供的二维码进行注册，注册过程中，患者需提供其病历号，系统根据病历号自动获取患者基本信息。</p><p>（2）登录。已注册的患者可以登录系统进行线上抓药，未注册的患者系统拒绝其登陆。</p><p>（3）确认处方。患者登录后，可以查看医生开具的所有处方。患者选择需要抓药的处方和数量（需要抓几副药），同时说明是否需要煎制。选择取药方式：自行到店取药或者送药上门，若选择送药上门，患者需要提供提供收货人姓名、联系方式和收货地址。系统自动计算本次抓药的费用，患者可以使用微信或支付宝等支付方式支付费用。支付成功之后，处方被发送给药师进行药品配制。</p><p>（4）处理处方。药师根据处方配置好药品。若患者要求煎制，药师对配置好的药品进煎制。煎制完成，药师将该处方设置为已完成。若患者选择的是自行取药，取药后确认已取药。</p><p>（5）药品派送。处方完成后，对于选择送药上门的患者，系统将给快递人员发送药品配送信息，等待快递人员取药；并给患者发送收货验证码。</p><p>（6）送药上门。快递人员将配制好的药品送到患者指定的收货地址。患者收货时，向快递人员出示收货验证码，快递人员使用该验证码确认药品已送到。</p><p>现采用面向对象分析与设计方法开发上述系统，得到如图3-1所示的用例图以及图3-2所示的类图。</p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567452364427.jpg\" title=\"1630567452364427.jpg\" alt=\"1.jpg\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567457336141.jpg\" title=\"1630567457336141.jpg\" alt=\"2.jpg\"/><p><br/></p><br/>",
+          "score": 3,
+          "new_parent_id": "308292",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>【问题3】</p><p>答案：包含(include)： include为包含关系，当两个或多个用例中共用一组相同的动作，这时可以将这组相同的动作抽出来作为一个独立的子用例，供多个基用例所共享。因为子用例被抽出，基用例并非一个完整的用例，所以include关系中的基用例必须和子用例一起使用才够完整，子用例也必然被执行。include关系在用例图中使用带箭头的虚线表示(在线上标注&lt;&lt;include&gt;&gt;)，箭头从基用例指向子用例。</p><p>扩展(extend)： extend关系是对基用例的扩展，基用例是一个完整的用例，即使没有子用例的参与，也可以完成一个完整的功能。extend的基用例中将存在一个扩展点，只有当扩展点被激活时，子用例才会被执行。 extend关系在用例图中使用带箭头的虚线表示(在线上标注&lt;&lt;extend&gt;&gt;)，箭头从子用例指向基用例。</p><p>泛化(generalization)：泛化关系是一种继承关系，子用例将继承基用例的所有行为，关系和通信关系，也就是说在任何使用基用例的地方都可以用子用例来代替。泛化关系在用例图中使用空心的箭头表示，箭头方向从子用例指向基用例。<br/><img style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567527194126.jpg\" title=\"1630567527194126.jpg\" alt=\"1.jpg\"/><br/><img style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567532439983.jpg\" title=\"1630567532439983.jpg\" alt=\"2.jpg\"/></p>"
+          ],
+          "option": null,
+          "sort_son": "3"
+        },
+        {
+          "index": 11,
+          "belong_page": 1,
+          "question_id": 308297,
+          "question_title": "<p>【问题1】（8分）</p><p>根据说明和C代码，填充C代码中的空（1）~（4）。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>案例四（15分）<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567619671196.jpg\" title=\"1630567619671196.jpg\" alt=\"1.jpg\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567622682511.jpg\" title=\"1630567622682511.jpg\" alt=\"2.jpg\"/></p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567628482801.jpg\" title=\"1630567628482801.jpg\" alt=\"3.jpg\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567648572569.jpg\" title=\"1630567648572569.jpg\" alt=\"1.jpg\"/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567665767073.jpg\" title=\"1630567665767073.jpg\" alt=\"1.jpg\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567677710135.jpg\" title=\"1630567677710135.jpg\" alt=\"1.jpg\"/>11<br/><br/><br/><br/>",
+          "score": 8,
+          "new_parent_id": "308296",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>【问题1】</p><p>（1）r&lt;=N</p><p>（2）,j,=,i+r,-1;</p><p>（3）temp,&lt;,m[i][j]</p><p>（4）s[i][j],+,1,,,j</p>"
+          ],
+          "option": null,
+          "sort_son": "1"
+        },
+        {
+          "index": 12,
+          "belong_page": 1,
+          "question_id": 308298,
+          "question_title": "<p>【问题2】（7分）</p><p>根据说明和C代码，该算法采用的设计策略为 （5） ，算法的时间复杂度为 （6） ，空间复杂度为 （7） （用O表示）。</p>",
+          "question_type": 14,
+          "answer_type": 5,
+          "material_text": "<p>案例四（15分）<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567619671196.jpg\" title=\"1630567619671196.jpg\" alt=\"1.jpg\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567622682511.jpg\" title=\"1630567622682511.jpg\" alt=\"2.jpg\"/></p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567628482801.jpg\" title=\"1630567628482801.jpg\" alt=\"3.jpg\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567648572569.jpg\" title=\"1630567648572569.jpg\" alt=\"1.jpg\"/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567665767073.jpg\" title=\"1630567665767073.jpg\" alt=\"1.jpg\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567677710135.jpg\" title=\"1630567677710135.jpg\" alt=\"1.jpg\"/>11<br/><br/><br/><br/>",
+          "score": 7,
+          "new_parent_id": "308296",
+          "show_type_name": "[材料型]问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["【问题2】<br/>（5）动态规划<p>（6）O(n^3)</p><p>（7）O(n^2)</p>"],
+          "option": null,
+          "sort_son": "2"
+        },
+        {
+          "index": 13,
+          "belong_page": 1,
+          "question_id": 308299,
+          "question_title": "<p>案例六（15分）</p><p>阅读下列说明和Java代码，将应填入（n)处的字句写在答题纸的对应栏内。</p><p>【说明】</p><p>层叠菜单是窗口风格的软件系统中经常采用的一种系统功能组织方式。层叠菜单（如图6-1示例）中包含的可能是一个菜单项（直接对应某个功能），也可能是一个子菜单，现在采用组合（composite）设计模式实现层叠菜单，得到如图6-2所示的类图。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567937436503.jpg\" title=\"1630567937436503.jpg\" alt=\"1.jpg\"/></p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567948428246.jpg\" title=\"1630567948428246.jpg\" alt=\"2.jpg\"/>Composite组合模式：</p><p>将对象组合成树形结构以表示“部分-整体”的层次结构。Composite使得客户对单个对象和复合对象的使用具有一致性。</p><p>组合模式描述了如何将容器对象和叶子对象进行递归组合，使得用户在使用时无须对它们进行区分，可以一致地对待容器对象和叶子对象。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567972994725.jpg\" title=\"1630567972994725.jpg\" alt=\"1.jpg\"/><br/>Composite组合模式：<br/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567991514284.jpg\" title=\"1630567991514284.jpg\" alt=\"1.jpg\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630568008288920.jpg\" title=\"1630568008288920.jpg\" alt=\"1.jpg\"/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630568021191118.jpg\" title=\"1630568021191118.jpg\" alt=\"1.jpg\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630568036995078.jpg\" title=\"1630568036995078.jpg\" alt=\"1.jpg\"/></p>",
+          "question_type": 5,
+          "answer_type": 5,
+          "material_text": "<p>案例六（15分）</p><p>阅读下列说明和Java代码，将应填入（n)处的字句写在答题纸的对应栏内。</p><p>【说明】</p><p>层叠菜单是窗口风格的软件系统中经常采用的一种系统功能组织方式。层叠菜单（如图6-1示例）中包含的可能是一个菜单项（直接对应某个功能），也可能是一个子菜单，现在采用组合（composite）设计模式实现层叠菜单，得到如图6-2所示的类图。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567937436503.jpg\" title=\"1630567937436503.jpg\" alt=\"1.jpg\"/></p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567948428246.jpg\" title=\"1630567948428246.jpg\" alt=\"2.jpg\"/>Composite组合模式：</p><p>将对象组合成树形结构以表示“部分-整体”的层次结构。Composite使得客户对单个对象和复合对象的使用具有一致性。</p><p>组合模式描述了如何将容器对象和叶子对象进行递归组合，使得用户在使用时无须对它们进行区分，可以一致地对待容器对象和叶子对象。</p><p><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567972994725.jpg\" title=\"1630567972994725.jpg\" alt=\"1.jpg\"/><br/>Composite组合模式：<br/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630567991514284.jpg\" title=\"1630567991514284.jpg\" alt=\"1.jpg\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630568008288920.jpg\" title=\"1630568008288920.jpg\" alt=\"1.jpg\"/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630568021191118.jpg\" title=\"1630568021191118.jpg\" alt=\"1.jpg\"/><br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630568036995078.jpg\" title=\"1630568036995078.jpg\" alt=\"1.jpg\"/><br/></p>",
+          "score": 15,
+          "new_parent_id": "308299",
+          "show_type_name": "问答题",
+          "analyze": "",
+          "like": 0,
+          "answer": [
+            "<p>&nbsp;<img style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20210902/1630568066782463.jpg\" title=\"1630568066782463.jpg\" alt=\"1.jpg\"/></p>"
+          ],
+          "option": null,
+          "sort_son": "0"
+        }
+      ],
+      "summary": {
+        "radio": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "multiple": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "judge": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "fill": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "program": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "qanda": {
+          "total_question": 13,
+          "total_score": 0
+        },
+        "cloze": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "budingxiang": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "material": {
+          "total_question": 0,
+          "total_score": 0
+        }
+      },
+      "examine": {
+        "id": 12387,
+        "title": "2021年5月软件设计师案例分析",
+        "len_time": {
+          "time": 0
+        },
+        "total_question": 13,
+        "total_score": 75,
+        "submit_limit_num": "0",
+        "machine_type": "2"
+      },
+      "answer_activity_start_time": 1585828800,
+      "checkProcess": 1,
+      "process": {
+        "is_delete": false
+      },
+      "train_id": 0
+    },
+    "pagination": {
+      "curPage": 1,
+      "pageSize": 1200,
+      "total": 13,
+      "hasNextPage": false
+    },
+    "totalOrder": [
+      {
+        "index": 1,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 308284
+      },
+      {
+        "index": 2,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 308285
+      },
+      {
+        "index": 3,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 308286
+      },
+      {
+        "index": 4,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 308287
+      },
+      {
+        "index": 5,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 308289
+      },
+      {
+        "index": 6,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 308290
+      },
+      {
+        "index": 7,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 308291
+      },
+      {
+        "index": 8,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 308293
+      },
+      {
+        "index": 9,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 308294
+      },
+      {
+        "index": 10,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 308295
+      },
+      {
+        "index": 11,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 308297
+      },
+      {
+        "index": 12,
+        "question_type": 14,
+        "belong_page": 1,
+        "question_id": 308298
+      },
+      {
+        "index": 13,
+        "question_type": 5,
+        "belong_page": 1,
+        "question_id": 308299
+      }
+    ]
+  }
+}

@@ -1,0 +1,916 @@
+{
+  "msg": "成功",
+  "status": "0",
+  "data": {
+    "data": {
+      "question": [
+        {
+          "index": 1,
+          "belong_page": 1,
+          "question_id": 534826,
+          "question_title": "<p>在详细设计结束后，以下选项中不是重点审查内容的是(&nbsp; )。&nbsp; &nbsp;&nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "534826",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>数据流图</p>", "<p>软件界面</p>", "<p>算法</p>", "<p>数据结构</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 2,
+          "belong_page": 1,
+          "question_id": 534827,
+          "question_title": "<p>利用栈对算术表达式a*(b+c)-e求值,设栈初始时为空,则暂存操作数(或运算结果)的栈中最多需存放(&nbsp; )个操作数(或运算结果)。 &nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "534827",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": ["<p>3</p>", "<p>1</p>", "<p>2</p>", "<p>4</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 3,
+          "belong_page": 1,
+          "question_id": 534828,
+          "question_title": "<p>在二维平面最近点对问题中,分治法的步骤不包括以下()。&nbsp; &nbsp;&nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "534828",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>计算所有点对的欧氏距离</p>",
+            "<p>递归求解左右两半中点集的最近点对问题</p>",
+            "<p>按x坐标排序并将点集划分为左右两半</p>",
+            "<p>合并时仅需检查距离中线8范围内的点</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 4,
+          "belong_page": 1,
+          "question_id": 534829,
+          "question_title": "<p>已知字符集为{a,b,c,d,e,f,g,h}，若各字符的哈夫曼编码如下表所，则对编码序列010101100011001001001111的译码结果为（）。&nbsp; &nbsp;<br/>&nbsp;<img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20251017/1760684310540516.png\" title=\"1760684310540516.png\" alt=\"image.png\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "534829",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>daceabdg</p>", "<p>dabccabg</p>", "<p>dfhbabfg</p>", "<p>dfaecbfg</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 5,
+          "belong_page": 1,
+          "question_id": 534831,
+          "question_title": "<p>在以阶段划分的编译器中，语义分析阶段的任务包括（）。<br/>①识别记号 ②识别句子结构 ③检查程序中的语法错误④填写符号表 ⑤生成中间代码&nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "534831",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": ["<p>②③</p>", "<p>③④</p>", "<p>①②</p>", "<p>④⑤&nbsp; &nbsp;&nbsp;</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 6,
+          "belong_page": 1,
+          "question_id": 534832,
+          "question_title": "<p>浮点数加减运算时，（）不会导致阶码上溢或下溢。&nbsp; &nbsp;&nbsp;</p><p><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "534832",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>右规</p>",
+            "<p>对阶</p>",
+            "<p>尾数运算</p>",
+            "<p>左规&nbsp; &nbsp;&nbsp;</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 7,
+          "belong_page": 1,
+          "question_id": 534833,
+          "question_title": "<p>（）用于在网络中向一组特定的设备发送数据包。&nbsp; &nbsp;&nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "534833",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>网络地址</p>",
+            "<p>广播地址</p>",
+            "<p>组播地址</p>",
+            "<p>单播地址&nbsp; &nbsp;&nbsp;</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 8,
+          "belong_page": 1,
+          "question_id": 534834,
+          "question_title": "<p>某软件系统在测试过程中，（）最适合发现模块之间的接口问题。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "534834",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>单元测试</p>",
+            "<p>系统测试</p>",
+            "<p>验收测试</p>",
+            "<p>集成测试&nbsp; &nbsp;&nbsp;</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 9,
+          "belong_page": 1,
+          "question_id": 534835,
+          "question_title": "<p>用户A通过SMTP/MINE协议在邮件客户端（如Outlook）中撰写邮件正文，并添加一个Excel附件（财务数据）发送给用户B，该邮件采用的是（）。&nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "534835",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>正文加密，附件明文传输</p>",
+            "<p>正文、附件均加密传输</p>",
+            "<p>正文明文，附件加密传输</p>",
+            "<p>正文、附件明文传输 &nbsp;&nbsp;</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 10,
+          "belong_page": 1,
+          "question_id": 534836,
+          "question_title": "<p>对某有序表进行折半查找时，参与比较的关键字顺序不可能是（）。&nbsp; &nbsp;&nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "534836",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>43，65，99，85，78</p>",
+            "<p>99，85，78，65，43</p>",
+            "<p>43，99，85，65，78</p>",
+            "<p>99，85，65，78，43&nbsp; &nbsp;&nbsp;</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 11,
+          "belong_page": 1,
+          "question_id": 534837,
+          "question_title": "<p>用数据流图对某医院挂号系统如下需求进行建模：<br/>（1）患者通过终端提交挂号请求；<br/>（2）系统验证患者信息；<br/>（3）系统生成挂号单，并存储到挂号记录。<br/>以下（）不是数据流。 &nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "534837",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": ["<p>挂号请求</p>", "<p>患者信息</p>", "<p>挂号记录</p>", "<p>挂号单</p>"],
+          "sort_son": "0"
+        },
+        {
+          "index": 12,
+          "belong_page": 1,
+          "question_id": 534838,
+          "question_title": "<p>设链队列Q用含头结点的循环单链表表示，且仅设尾指针rear，假设队列中有n个元素结点，则入队列和出队列运算的时间复杂度分别为（）。&nbsp; &nbsp;&nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "534838",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>O(1)、O(1)</p>",
+            "<p>O(1)、O(n)</p>",
+            "<p>O(n)、O(1)</p>",
+            "<p>O(n)、O(n)&nbsp; &nbsp;&nbsp;</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 13,
+          "belong_page": 1,
+          "question_id": 534839,
+          "question_title": "<p>编译器将频繁使用的临时变量（如循环计数器）优化到（）中，可以提升访问速度。&nbsp; &nbsp;&nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "534839",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>栈</p>",
+            "<p>堆</p>",
+            "<p>静态存储区</p>",
+            "<p>寄存器&nbsp; &nbsp;&nbsp;</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 14,
+          "belong_page": 1,
+          "question_id": 534840,
+          "question_title": "<p>QoS是网络的一种安全机制，确保重要业务量不会延迟或丢弃。通常情况下QoS被部署在（）上保证网络的高效运行。&nbsp; &nbsp;&nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "534840",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>网闸</p>",
+            "<p>防火墙</p>",
+            "<p>路由器</p>",
+            "<p>IDS&nbsp; &nbsp;&nbsp;</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 15,
+          "belong_page": 1,
+          "question_id": 534841,
+          "question_title": "<p>下列各项中，具有法定时间性的知识产权是（）。<br/>①商业秘密权 ②专利权 ③商标权 ④著作权&nbsp;</p><p><br/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "534841",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>仅①③</p>",
+            "<p>仅②④</p>",
+            "<p>①②③④</p>",
+            "<p>仅②③④&nbsp; &nbsp;&nbsp;</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 16,
+          "belong_page": 1,
+          "question_id": 534842,
+          "question_title": "<p>在一个气象监测系统中，天气变化会影响多种显示设备（如PC应用和手机应用）。这些设备需要及时更新。这一需求适合采用（）设计模式进行设计。&nbsp; &nbsp;&nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "534842",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>观察者（Observer）</p>",
+            "<p>备忘录（Memento）</p>",
+            "<p>策略（Strategy）</p>",
+            "<p>状态（State）&nbsp; &nbsp;&nbsp;</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 17,
+          "belong_page": 1,
+          "question_id": 534843,
+          "question_title": "<p>在分页管理系统中，逻辑地址由页面编号和偏移值构成。如下所示的逻辑地址表示，（）。&nbsp; &nbsp;&nbsp;<br/><img style=\"max-width:100%;height:auto\"  style=\"max-width:100%;height:auto\"  src=\"https://s2.51cto.com/images/20251017/1760686028272249.png\" title=\"1760686028272249.png\" alt=\"image.png\"/></p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "534843",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>页面大小为2K，每个页面最大为8M</p>",
+            "<p>页面大小为4K，每个页面最大为1M</p>",
+            "<p>页面大小为8K，每个页面最大为2M</p>",
+            "<p>页面大小为1K，每个页面最大为16M&nbsp; &nbsp;&nbsp;</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 18,
+          "belong_page": 1,
+          "question_id": 534844,
+          "question_title": "<p>关于开源软件的著作权，以下说法正确的是（）。&nbsp; &nbsp;&nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "534844",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>开源软件不涉及著作权问题</p>",
+            "<p>开源软件的著作权归使用者所有</p>",
+            "<p>开源软件的著作权归开发者所有，使用者不能进行任何修改</p>",
+            "<p>开源软件的著作权归开发者所有，但使用者可以自由使用、修改和分发&nbsp;&nbsp;</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 19,
+          "belong_page": 1,
+          "question_id": 534845,
+          "question_title": "<p>以下关于数据流图分层结构的叙述中，不正确的是（）。&nbsp; &nbsp;&nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "534845",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>各层数据流图之间应该保持“平衡”关系</p>",
+            "<p>顶层数据流图只包含一个处理框，表示待开发的系统</p>",
+            "<p>数据流图的层次越多，细节程度越低</p>",
+            "<p>分层的数据流图可以清晰的表达系统的层次结构，使得系统更易于理解&nbsp;&nbsp;</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 20,
+          "belong_page": 1,
+          "question_id": 534846,
+          "question_title": "<p>（）攻击的技术实现路径主要是通过合法开发流程渗透，利用代码混淆、数字证书伪装绕过审查。&nbsp; &nbsp;&nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "534846",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>零日漏洞</p>",
+            "<p>撞库攻击</p>",
+            "<p>供应链投毒</p>",
+            "<p>AI赋能攻击&nbsp; &nbsp;&nbsp;</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 21,
+          "belong_page": 1,
+          "question_id": 534847,
+          "question_title": "<p>在关系数据库中，第三范式的主要目的是消除（ ）类型的问题。&nbsp; &nbsp;&nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "534847",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>多值依赖</p>",
+            "<p>传递依赖</p>",
+            "<p>外键冗余</p>",
+            "<p>主键冗余&nbsp; &nbsp;&nbsp;</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 22,
+          "belong_page": 1,
+          "question_id": 534848,
+          "question_title": "<p>某模块的各个部分，前一部分处理的输出是后一部分处理的输入，则该模块的内聚类型为（ ）。 &nbsp; &nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "534848",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["A"],
+          "option": [
+            "<p>顺序内聚</p>",
+            "<p>功能内聚</p>",
+            "<p>通信内聚</p>",
+            "<p>巧合内聚&nbsp; &nbsp;&nbsp;</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 23,
+          "belong_page": 1,
+          "question_id": 534849,
+          "question_title": "<p>下列事件中，会触发软件中断的是（ ）。&nbsp; &nbsp;&nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "534849",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>电源故障</p>",
+            "<p>按键输入</p>",
+            "<p>除零错误</p>",
+            "<p>定时器溢出&nbsp; &nbsp;&nbsp;</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 24,
+          "belong_page": 1,
+          "question_id": 534850,
+          "question_title": "<p>某递归算法的时间复杂度计算公式为T（n）=4T （n/2）+nlgn，其中n为问题规模，则该算法的时间复杂度是（ ）。</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "534850",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>⊙（nlgn）</p>",
+            "<p>⊙（n³）</p>",
+            "<p>⊙（n²&nbsp;）</p>",
+            "<p>⊙（n²&nbsp;lgn）&nbsp;&nbsp;</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 25,
+          "belong_page": 1,
+          "question_id": 534851,
+          "question_title": "<p>某银行开发核心交易系统，需严格遵循监管审计且需求变更极少，最适合的开发模型是（ ）。&nbsp; &nbsp;&nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "534851",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>敏捷开发（Scrum）</p>",
+            "<p>快速应用开发（RAD）</p>",
+            "<p>增量模型</p>",
+            "<p>瀑布模型&nbsp; &nbsp;&nbsp;</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 26,
+          "belong_page": 1,
+          "question_id": 534852,
+          "question_title": "<p>在软件项目团队中，成员的技能水平和协作能力差异较大，导致项目进度受阻。为提高团队整体效率，项目经理应优先考虑（ ）。&nbsp; &nbsp;&nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "534852",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>重新分配团队成员任务</p>",
+            "<p>引入外部专家指导</p>",
+            "<p>增加项目奖励机制</p>",
+            "<p>开展内部技能分享与培训&nbsp;&nbsp;</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 27,
+          "belong_page": 1,
+          "question_id": 534853,
+          "question_title": "<p>以下问题中，肯定可以用贪心算法求得最优解的是（ ）。&nbsp; &nbsp;&nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "534853",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["C"],
+          "option": [
+            "<p>旅行商问题（TSP）</p>",
+            "<p>最大公共子序列（LCS）</p>",
+            "<p>部分（分数）背包问题</p>",
+            "<p>0-1背包问题 &nbsp;&nbsp;</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 28,
+          "belong_page": 1,
+          "question_id": 534854,
+          "question_title": "<p>采用面向对象设计方法开发电商平台，设计负责处理用户订单的类OrderService，它不仅处理订单创建，还负责记录订单日志和发送确认邮件。OrderService类违反了面向对象设计（ ）原则。&nbsp; &nbsp;&nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "534854",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["B"],
+          "option": [
+            "<p>里氏替换</p>",
+            "<p>单一职责</p>",
+            "<p>接口隔离</p>",
+            "<p>开放-封闭&nbsp; &nbsp;&nbsp;</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 29,
+          "belong_page": 1,
+          "question_id": 534855,
+          "question_title": "<p>对n阶上三角矩阵A按行压缩存储，将元素A （0≤i,j＜n且i≤j）存储在B[k] （k≥1） 中，则k的值为（）。&nbsp; &nbsp;&nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "534855",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>-i /2+(n+1/2)i+j-n</p>",
+            "<p>-i /2+(n+1/2)i+j-1</p>",
+            "<p>-i /2+(n-1/2)i+j</p>",
+            "<p>-i /2+(n-1/2)i+j+1&nbsp; &nbsp;&nbsp;</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 30,
+          "belong_page": 1,
+          "question_id": 534856,
+          "question_title": "<p>某电商平台“将订单处理、支付网关集成、物流跟踪等功能拆分为独 立服务。每个服务通过API通信”，这是采用了（ ）。&nbsp; &nbsp;&nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "534856",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>分层架构</p>",
+            "<p>件驱动架构</p>",
+            "<p>面向对象架构</p>",
+            "<p>微服务架构&nbsp; &nbsp;&nbsp;</p>"
+          ],
+          "sort_son": "0"
+        },
+        {
+          "index": 31,
+          "belong_page": 1,
+          "question_id": 534857,
+          "question_title": "<p>ISO/IEC 25010：2023标准中，（ ）不属于可维护性的子特性。&nbsp; &nbsp;&nbsp;</p>",
+          "question_type": 1,
+          "answer_type": 1,
+          "material_text": "",
+          "score": 1,
+          "new_parent_id": "534857",
+          "show_type_name": "单选题",
+          "analyze": "",
+          "like": 0,
+          "answer": ["D"],
+          "option": [
+            "<p>可修改性（Modifiability）</p>",
+            "<p>可分析性（Analysability）</p>",
+            "<p>模块化（Modularity）</p>",
+            "<p>容错性（Fault Tolerance）&nbsp; &nbsp;&nbsp;</p>"
+          ],
+          "sort_son": "0"
+        }
+      ],
+      "summary": {
+        "radio": {
+          "total_question": 31,
+          "total_score": 0
+        },
+        "multiple": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "judge": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "fill": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "program": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "qanda": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "cloze": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "budingxiang": {
+          "total_question": 0,
+          "total_score": 0
+        },
+        "material": {
+          "total_question": 0,
+          "total_score": 0
+        }
+      },
+      "examine": {
+        "id": 19183,
+        "title": "2025年5月软件设计师选择题（回忆版）",
+        "len_time": {
+          "time": 0
+        },
+        "total_question": 31,
+        "total_score": 31,
+        "submit_limit_num": "0",
+        "machine_type": "1"
+      },
+      "answer_activity_start_time": 1585828800,
+      "checkProcess": 1,
+      "process": {
+        "is_delete": false
+      },
+      "train_id": 0
+    },
+    "pagination": {
+      "curPage": 1,
+      "pageSize": 1200,
+      "total": 31,
+      "hasNextPage": false
+    },
+    "totalOrder": [
+      {
+        "index": 1,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 534826
+      },
+      {
+        "index": 2,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 534827
+      },
+      {
+        "index": 3,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 534828
+      },
+      {
+        "index": 4,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 534829
+      },
+      {
+        "index": 5,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 534831
+      },
+      {
+        "index": 6,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 534832
+      },
+      {
+        "index": 7,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 534833
+      },
+      {
+        "index": 8,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 534834
+      },
+      {
+        "index": 9,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 534835
+      },
+      {
+        "index": 10,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 534836
+      },
+      {
+        "index": 11,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 534837
+      },
+      {
+        "index": 12,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 534838
+      },
+      {
+        "index": 13,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 534839
+      },
+      {
+        "index": 14,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 534840
+      },
+      {
+        "index": 15,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 534841
+      },
+      {
+        "index": 16,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 534842
+      },
+      {
+        "index": 17,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 534843
+      },
+      {
+        "index": 18,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 534844
+      },
+      {
+        "index": 19,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 534845
+      },
+      {
+        "index": 20,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 534846
+      },
+      {
+        "index": 21,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 534847
+      },
+      {
+        "index": 22,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 534848
+      },
+      {
+        "index": 23,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 534849
+      },
+      {
+        "index": 24,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 534850
+      },
+      {
+        "index": 25,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 534851
+      },
+      {
+        "index": 26,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 534852
+      },
+      {
+        "index": 27,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 534853
+      },
+      {
+        "index": 28,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 534854
+      },
+      {
+        "index": 29,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 534855
+      },
+      {
+        "index": 30,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 534856
+      },
+      {
+        "index": 31,
+        "question_type": 1,
+        "belong_page": 1,
+        "question_id": 534857
+      }
+    ]
+  }
+}
