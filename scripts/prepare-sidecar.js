@@ -92,6 +92,11 @@ function writeAndroidWebviewEntry() {
   const outDir = path.join(root, 'out');
   const mobileUrl = process.env.OSE_MOBILE_URL || process.env.NEXT_PUBLIC_OSE_MOBILE_URL || '';
   fs.mkdirSync(outDir, { recursive: true });
+  fs.mkdirSync(standaloneTarget, { recursive: true });
+  fs.writeFileSync(
+    path.join(standaloneTarget, 'mobile-placeholder.txt'),
+    'Android builds do not use the desktop Next.js sidecar.\n'
+  );
 
   if (mobileUrl) {
     fs.writeFileSync(
