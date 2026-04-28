@@ -22,6 +22,20 @@ const components: Components = {
   ),
 };
 
+function readHtmlAttribute(tag: string, name: string) {
+  const match = new RegExp(`${name}\\s*=\\s*(?:"([^"]*)"|'([^']*)'|([^\\s>]+))`, 'i').exec(tag);
+  return (match?.[1] ?? match?.[2] ?? match?.[3] ?? '').replaceAll('&amp;', '&');
+}
+
+function normalizeMarkdown(content: string) {
+  return content.replace(/<br\s*\/?>/gi, '\n').replace(/<img\b[^>]*>/gi, (tag) => {
+    const src = readHtmlAttribute(tag, 'src');
+    if (!src) return '';
+    const alt = readHtmlAttribute(tag, 'alt').replaceAll('[', '').replaceAll(']', '');
+    return `![${alt}](${src})`;
+  });
+}
+
 function MarkdownRendererImpl({ content, className }: { content: string; className?: string }) {
   return (
     <div
@@ -31,7 +45,7 @@ function MarkdownRendererImpl({ content, className }: { content: string; classNa
       )}
     >
       <ReactMarkdown remarkPlugins={[remarkGfm]} components={components}>
-        {content}
+        {normalizeMarkdown(content)}
       </ReactMarkdown>
     </div>
   );

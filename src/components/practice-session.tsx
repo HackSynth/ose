@@ -302,7 +302,10 @@ export function PracticeSession() {
                 >
                   {option.label}
                 </span>
-                <span className="pt-1 font-bold leading-relaxed text-navy">{option.content}</span>
+                <MarkdownRenderer
+                  content={option.content}
+                  className="min-w-0 flex-1 pt-1 font-bold leading-relaxed text-navy prose-p:my-0 prose-img:my-2 prose-img:max-h-80 prose-img:rounded-xl"
+                />
               </button>
             );
           })}
@@ -333,20 +336,26 @@ export function PracticeSession() {
             <ArrowLeft className="h-4 w-4" />
             上一题
           </Button>
-          {!result ? (
+          <div className="grid gap-3 sm:flex sm:w-auto">
+            {!result ? (
+              <Button
+                onClick={submitAnswer}
+                disabled={!selectedOptionId || submitting}
+                className="w-full sm:w-auto"
+              >
+                {submitting ? <Loader2 className="h-4 w-4 animate-spin" /> : null}确认作答
+              </Button>
+            ) : null}
             <Button
-              onClick={submitAnswer}
-              disabled={!selectedOptionId || submitting}
+              onClick={nextQuestion}
+              variant={result ? 'default' : 'secondary'}
+              disabled={submitting}
               className="w-full sm:w-auto"
             >
-              {submitting ? <Loader2 className="h-4 w-4 animate-spin" /> : null}确认作答
-            </Button>
-          ) : (
-            <Button onClick={nextQuestion} className="w-full sm:w-auto">
               {index === questions.length - 1 ? '查看总结' : '下一题'}
               <ArrowRight className="h-4 w-4" />
             </Button>
-          )}
+          </div>
         </div>
       </Card>
     </main>
