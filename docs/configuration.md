@@ -52,3 +52,10 @@ Examples include Ollama, DeepSeek, Qwen, vLLM, LM Studio, LocalAI, and Azure Ope
 ## Desktop Runtime
 
 The Tauri desktop app starts a bundled Next.js standalone server. It sets `PORT`, `HOSTNAME`, `DATABASE_URL`, `AUTH_URL`, and `NEXTAUTH_URL` at runtime.
+
+## Android Runtime
+
+- `OSE_MOBILE_URL`: HTTPS URL of a deployed OSE web service for the Android APK WebView.
+- `NEXT_PUBLIC_OSE_MOBILE_URL`: fallback name for the same value.
+
+The Android APK does not run the desktop Node.js/Prisma sidecar inside Android. Configure `OSE_MOBILE_URL` as a GitHub Actions repository variable or secret before building release APKs.

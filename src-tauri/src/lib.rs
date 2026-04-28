@@ -50,7 +50,6 @@ pub fn run() {
         ])
         .setup(|app| {
             if let Some(window) = app.get_webview_window("main") {
-                let app_handle = app.handle().clone();
                 let close_handle = app.handle().clone();
 
                 window.on_window_event(move |event| {
@@ -59,7 +58,20 @@ pub fn run() {
                     }
                 });
 
+                #[cfg(mobile)]
+                if let Some(url) = option_env!("OSE_MOBILE_URL")
+                    .or(option_env!("NEXT_PUBLIC_OSE_MOBILE_URL"))
+                    .filter(|value| !value.is_empty())
+                {
+                    if let Err(error) = window.navigate(url.parse().expect("valid mobile URL")) {
+                        show_error_page(&window, &format!("加载移动端服务失败：{error}"));
+                    }
+                }
+
+                #[cfg(not(mobile))]
+                let app_handle = app.handle().clone();
                 #[cfg(not(debug_assertions))]
+                #[cfg(not(mobile))]
                 thread::spawn(move || match start_next_server(&app_handle) {
                     Ok(port) => {
                         let url = format!("http://127.0.0.1:{port}");
