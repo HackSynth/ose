@@ -203,6 +203,22 @@ export async function getCurrentWrongNoteImageGeneration(userId: string, wrongNo
   return findLatestGeneration(userId, wrongNoteId, fingerprint);
 }
 
+export async function getLatestWrongNoteImageGeneration(userId: string, wrongNoteId: string) {
+  const generations = await prisma.aIImageGeneration.findMany({
+    where: { userId, wrongNoteId },
+    orderBy: { updatedAt: 'desc' },
+    take: 10,
+  });
+  return (
+    generations.find(
+      (generation) => generation.status === 'PENDING' || generation.status === 'RUNNING'
+    ) ??
+    generations.find((generation) => generation.status === 'COMPLETED' && generation.imagePath) ??
+    generations.find((generation) => generation.status === 'FAILED') ??
+    null
+  );
+}
+
 export async function prepareWrongNoteImageGeneration(params: {
   userId: string;
   wrongNoteId: string;

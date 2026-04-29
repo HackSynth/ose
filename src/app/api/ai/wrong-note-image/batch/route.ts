@@ -7,7 +7,7 @@ import {
 } from '@/lib/ai/wrong-note-image-queue';
 import { getAIErrorDetails } from '@/lib/ai/utils';
 import {
-  getCurrentWrongNoteImageGeneration,
+  getLatestWrongNoteImageGeneration,
   prepareWrongNoteImageGeneration,
   serializeImageGeneration,
 } from '@/lib/ai/wrong-note-image';
@@ -59,7 +59,7 @@ export async function GET(request: Request) {
   const items = await Promise.all(
     wrongNoteIds.map(async (wrongNoteId) => {
       try {
-        const generation = await getCurrentWrongNoteImageGeneration(userId, wrongNoteId);
+        const generation = await getLatestWrongNoteImageGeneration(userId, wrongNoteId);
         return {
           wrongNoteId,
           generation: generation ? serializeImageGeneration(generation) : null,

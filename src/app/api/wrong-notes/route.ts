@@ -1,26 +1,27 @@
-import { NextResponse } from "next/server";
-import { auth } from "@/lib/auth";
-import { prisma } from "@/lib/prisma";
-import { clampInt } from "@/lib/validate";
-import { getDescendantTopicIds } from "@/lib/knowledge-stats";
-import { PAGE_SIZE_DEFAULT, PAGE_SIZE_MAX } from "@/lib/constants";
+import { NextResponse } from 'next/server';
+import { auth } from '@/lib/auth';
+import { prisma } from '@/lib/prisma';
+import { clampInt } from '@/lib/validate';
+import { getDescendantTopicIds } from '@/lib/knowledge-stats';
+import { PAGE_SIZE_DEFAULT, PAGE_SIZE_MAX } from '@/lib/constants';
+import { imageUrlFor } from '@/lib/ai/wrong-note-image';
 
 function getStatusFilter(status: string | null) {
-  if (status === "mastered") return { markedMastered: true };
-  if (status === "unmastered") return { markedMastered: false };
+  if (status === 'mastered') return { markedMastered: true };
+  if (status === 'unmastered') return { markedMastered: false };
   return {};
 }
 
 export async function GET(request: Request) {
   const session = await auth();
-  if (!session?.user?.id) return NextResponse.json({ message: "请先登录" }, { status: 401 });
+  if (!session?.user?.id) return NextResponse.json({ message: '请先登录' }, { status: 401 });
   const userId = session.user.id;
 
   const { searchParams } = new URL(request.url);
-  const page = clampInt(searchParams.get("page"), 1, 10_000, 1);
-  const pageSize = clampInt(searchParams.get("pageSize"), 1, PAGE_SIZE_MAX, PAGE_SIZE_DEFAULT);
-  const status = searchParams.get("status");
-  const knowledgePointId = searchParams.get("knowledgePointId");
+  const page = clampInt(searchParams.get('page'), 1, 10_000, 1);
+  const pageSize = clampInt(searchParams.get('pageSize'), 1, PAGE_SIZE_MAX, PAGE_SIZE_DEFAULT);
+  const status = searchParams.get('status');
+  const knowledgePointId = searchParams.get('knowledgePointId');
   const topicIds = knowledgePointId ? await getDescendantTopicIds(knowledgePointId) : undefined;
 
   const where = {
@@ -36,7 +37,7 @@ export async function GET(request: Request) {
     prisma.wrongNote.count({ where: { userId, markedMastered: true } }),
     prisma.wrongNote.findMany({
       where,
-      orderBy: { updatedAt: "desc" },
+      orderBy: { updatedAt: 'desc' },
       skip: (page - 1) * pageSize,
       take: pageSize,
       select: {
@@ -54,14 +55,16 @@ export async function GET(request: Request) {
             questionNumber: true,
             year: true,
             session: true,
-            knowledgePoint: { select: { id: true, name: true, parent: { select: { id: true, name: true } } } },
+            knowledgePoint: {
+              select: { id: true, name: true, parent: { select: { id: true, name: true } } },
+            },
             options: {
-              orderBy: { label: "asc" },
+              orderBy: { label: 'asc' },
               select: { id: true, label: true, content: true, isCorrect: true },
             },
             userAnswers: {
               where: { userId },
-              orderBy: { createdAt: "desc" },
+              orderBy: { createdAt: 'desc' },
               take: 5,
               select: {
                 id: true,
@@ -76,15 +79,47 @@ export async function GET(request: Request) {
       },
     }),
     prisma.knowledgePoint.findMany({
-      orderBy: [{ parentId: "asc" }, { sortOrder: "asc" }],
+      orderBy: [{ parentId: 'asc' }, { sortOrder: 'asc' }],
       select: { id: true, name: true, parentId: true },
     }),
   ]);
+
+  const wrongNoteIds = notes.map((note) => note.id);
+  const imageGenerations = wrongNoteIds.length
+    ? await prisma.aIImageGeneration.findMany({
+        where: { userId, wrongNoteId: { in: wrongNoteIds } },
+        orderBy: { updatedAt: 'desc' },
+        select: {
+          id: true,
+          wrongNoteId: true,
+          status: true,
+          imagePath: true,
+          errorMessage: true,
+          updatedAt: true,
+        },
+      })
+    : [];
+  const imageGenerationsByWrongNote = new Map<string, typeof imageGenerations>();
+  for (const generation of imageGenerations) {
+    if (!generation.wrongNoteId) continue;
+    imageGenerationsByWrongNote.set(generation.wrongNoteId, [
+      ...(imageGenerationsByWrongNote.get(generation.wrongNoteId) ?? []),
+      generation,
+    ]);
+  }
 
   const items = notes.map((note) => {
     const wrongAnswers = note.question.userAnswers.filter((answer) => !answer.isCorrect);
     const latestWrong = wrongAnswers[0] ?? note.question.userAnswers[0];
     const correctOption = note.question.options.find((option) => option.isCorrect);
+    const generations = imageGenerationsByWrongNote.get(note.id) ?? [];
+    const imageGeneration =
+      generations.find(
+        (generation) => generation.status === 'PENDING' || generation.status === 'RUNNING'
+      ) ??
+      generations.find((generation) => generation.status === 'COMPLETED' && generation.imagePath) ??
+      generations.find((generation) => generation.status === 'FAILED') ??
+      null;
     return {
       id: note.id,
       note: note.note,
@@ -95,7 +130,20 @@ export async function GET(request: Request) {
       lastWrongAt: latestWrong?.createdAt ?? note.updatedAt,
       wrongOptionId: latestWrong?.selectedOptionId,
       wrongOption: latestWrong?.selectedOption,
-      correctOption: correctOption ? { id: correctOption.id, label: correctOption.label, content: correctOption.content } : undefined,
+      correctOption: correctOption
+        ? { id: correctOption.id, label: correctOption.label, content: correctOption.content }
+        : undefined,
+      imageGeneration: imageGeneration
+        ? {
+            id: imageGeneration.id,
+            status: imageGeneration.status,
+            imageUrl:
+              imageGeneration.status === 'COMPLETED' && imageGeneration.imagePath
+                ? imageUrlFor(imageGeneration)
+                : null,
+            errorMessage: imageGeneration.errorMessage,
+          }
+        : null,
       question: {
         id: note.question.id,
         content: note.question.content,
@@ -114,6 +162,11 @@ export async function GET(request: Request) {
     stats: { total, unmastered, mastered },
     topics,
     items,
-    pagination: { page, pageSize, total: filteredTotal, totalPages: Math.max(1, Math.ceil(filteredTotal / pageSize)) },
+    pagination: {
+      page,
+      pageSize,
+      total: filteredTotal,
+      totalPages: Math.max(1, Math.ceil(filteredTotal / pageSize)),
+    },
   });
 }

@@ -25,6 +25,11 @@ type Generation = {
   errorMessage: string | null;
 };
 
+type AIWrongNoteImageButtonProps = {
+  wrongNoteId: string;
+  onGenerationChange?: (generation: Generation | null) => void;
+};
+
 function isActiveStatus(status: GenerationStatus | undefined) {
   return status === 'PENDING' || status === 'RUNNING';
 }
@@ -37,7 +42,10 @@ function statusLabel(status: GenerationStatus | undefined) {
   return '';
 }
 
-export function AIWrongNoteImageButton({ wrongNoteId }: { wrongNoteId: string }) {
+export function AIWrongNoteImageButton({
+  wrongNoteId,
+  onGenerationChange,
+}: AIWrongNoteImageButtonProps) {
   const [configured, setConfigured] = useState(true);
   const [message, setMessage] = useState('');
   const [generation, setGeneration] = useState<Generation | null>(null);
@@ -65,9 +73,10 @@ export function AIWrongNoteImageButton({ wrongNoteId }: { wrongNoteId: string })
         }
         setConfigured(Boolean((data as { configured?: boolean }).configured));
         setMessage((data as { message?: string }).message || '');
-        setGeneration(
-          ((data as { generation?: Generation | null }).generation ?? null) as Generation | null
-        );
+        const nextGeneration = ((data as { generation?: Generation | null }).generation ??
+          null) as Generation | null;
+        setGeneration(nextGeneration);
+        onGenerationChange?.(nextGeneration);
       } catch (error) {
         if ((error as { name?: string })?.name === 'AbortError') return;
         setMessage('讲解图状态加载失败');
@@ -76,7 +85,7 @@ export function AIWrongNoteImageButton({ wrongNoteId }: { wrongNoteId: string })
         if (!options?.silent) setLoading(false);
       }
     },
-    [wrongNoteId]
+    [onGenerationChange, wrongNoteId]
   );
 
   useEffect(() => {
@@ -110,6 +119,7 @@ export function AIWrongNoteImageButton({ wrongNoteId }: { wrongNoteId: string })
       }
       const nextGeneration = (data as { generation: Generation }).generation;
       setGeneration(nextGeneration);
+      onGenerationChange?.(nextGeneration);
       setConfigured(true);
       showToast({
         title:
