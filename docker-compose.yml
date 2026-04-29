@@ -12,6 +12,7 @@ services:
       - NEXTAUTH_SECRET=change-me-in-production
       - AUTH_URL=http://localhost:3000
       - AUTH_SECRET=change-me-in-production
+      - AI_IMAGE_STORAGE_DIR=/data/ai-images
       # AI configuration is optional.
       - AI_PROVIDER=claude
       - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
