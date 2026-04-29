@@ -85,6 +85,8 @@ Users can also configure image provider, model, key, base URL, size, quality, fo
 
 Wrong-note image generation is asynchronous. Single and batch requests create tasks first, then a process-local worker queue runs image jobs with `AI_IMAGE_QUEUE_CONCURRENCY` concurrent workers. `AI_IMAGE_BATCH_MAX` controls the maximum wrong notes accepted by one batch request.
 
+Each card style has a checked-in anchor image under `public/ai-image-anchors/`. When a wrong-note image is generated, OSE sends the selected style anchor as the reference image and asks the image model to keep its layout, visual language, and hierarchy while replacing the sample content with the current wrong-note explanation.
+
 ## Safety Notes
 
 - Do not commit real API keys.

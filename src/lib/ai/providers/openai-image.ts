@@ -1,5 +1,9 @@
+import { createReadStream } from 'fs';
 import OpenAI from 'openai';
-import type { ImageGenerateParamsNonStreaming } from 'openai/resources/images';
+import type {
+  ImageEditParamsNonStreaming,
+  ImageGenerateParamsNonStreaming,
+} from 'openai/resources/images';
 
 import type { AIImageConfig, AIImageProvider } from '@/lib/ai/image-types';
 import { getSanitizedEndpoint } from '@/lib/ai/utils';
@@ -23,6 +27,39 @@ async function bufferFromImageResult(image: { b64_json?: string; url?: string },
   return Buffer.from(arrayBuffer);
 }
 
+function buildGenerateRequest(
+  model: string,
+  params: Parameters<AIImageProvider['generateImage']>[0]
+): ImageGenerateParamsNonStreaming {
+  return {
+    model,
+    prompt: params.prompt,
+    n: 1,
+    size: params.size,
+    quality: params.quality,
+    output_format: params.outputFormat,
+    user: params.user,
+  };
+}
+
+function buildEditRequest(
+  model: string,
+  params: Parameters<AIImageProvider['generateImage']>[0]
+): ImageEditParamsNonStreaming {
+  if (!params.referenceImagePath) throw new Error('缺少生图参考图');
+  return {
+    model,
+    image: createReadStream(params.referenceImagePath),
+    prompt: params.prompt,
+    n: 1,
+    size: params.size,
+    quality: params.quality,
+    output_format: params.outputFormat,
+    input_fidelity: params.inputFidelity ?? 'high',
+    user: params.user,
+  };
+}
+
 export function createOpenAIImageProvider(config: AIImageConfig): AIImageProvider {
   const apiKey = config.apiKey?.trim();
   const model = config.model?.trim() || defaultModel;
@@ -44,16 +81,9 @@ export function createOpenAIImageProvider(config: AIImageConfig): AIImageProvide
     },
     async generateImage(params) {
       const mimeType = mimeTypeFor(params.outputFormat);
-      const request: ImageGenerateParamsNonStreaming = {
-        model,
-        prompt: params.prompt,
-        n: 1,
-        size: params.size,
-        quality: params.quality,
-        output_format: params.outputFormat,
-        user: params.user,
-      };
-      const response = await getClient().images.generate(request);
+      const response = params.referenceImagePath
+        ? await getClient().images.edit(buildEditRequest(model, params))
+        : await getClient().images.generate(buildGenerateRequest(model, params));
       const image = response.data?.[0];
       if (!image) throw new Error('图片模型没有返回结果');
       return {
@@ -92,16 +122,9 @@ export function createCustomImageProvider(config: AIImageConfig): AIImageProvide
     },
     async generateImage(params) {
       const mimeType = mimeTypeFor(params.outputFormat);
-      const request: ImageGenerateParamsNonStreaming = {
-        model,
-        prompt: params.prompt,
-        n: 1,
-        size: params.size,
-        quality: params.quality,
-        output_format: params.outputFormat,
-        user: params.user,
-      };
-      const response = await getClient().images.generate(request);
+      const response = params.referenceImagePath
+        ? await getClient().images.edit(buildEditRequest(model, params))
+        : await getClient().images.generate(buildGenerateRequest(model, params));
       const image = response.data?.[0];
       if (!image) throw new Error('图片模型没有返回结果');
       return {

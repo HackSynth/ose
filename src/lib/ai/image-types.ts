@@ -27,6 +27,8 @@ export interface ImageGenerationParams {
   size: AIImageSize;
   quality: AIImageQuality;
   outputFormat: AIImageOutputFormat;
+  referenceImagePath?: string;
+  inputFidelity?: 'high' | 'low';
   user?: string;
 }
 
@@ -66,8 +68,24 @@ export const AI_IMAGE_OUTPUT_FORMAT_OPTIONS: Array<{ value: AIImageOutputFormat;
     { value: 'jpeg', label: 'JPEG' },
   ];
 
-export const AI_IMAGE_STYLE_OPTIONS: Array<{ value: AIImageStyle; label: string }> = [
-  { value: 'clean_education_card', label: '清爽复盘卡' },
-  { value: 'flowchart', label: '流程图风格' },
-  { value: 'hand_drawn', label: '手绘草图风格' },
+export const AI_IMAGE_STYLE_OPTIONS: Array<{
+  value: AIImageStyle;
+  label: string;
+  anchorUrl: string;
+}> = [
+  {
+    value: 'clean_education_card',
+    label: '清爽复盘卡',
+    anchorUrl: '/ai-image-anchors/clean-education-card.png',
+  },
+  {
+    value: 'flowchart',
+    label: '流程图风格',
+    anchorUrl: '/ai-image-anchors/flowchart.png',
+  },
+  {
+    value: 'hand_drawn',
+    label: '手绘草图风格',
+    anchorUrl: '/ai-image-anchors/hand-drawn.png',
+  },
 ];

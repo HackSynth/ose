@@ -1,6 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useMemo, useState, type FormEvent } from 'react';
+import Image from 'next/image';
 import { CheckCircle2, ImageIcon, Loader2, RefreshCw, Save, Trash2, Zap } from 'lucide-react';
 
 import { useAIStatus } from '@/components/ai-status-context';
@@ -89,6 +90,10 @@ export function AISettingsCard() {
   const [testingImage, setTestingImage] = useState(false);
 
   const busy = loading || saving || loadingModels || loadingImageModels || testing || testingImage;
+  const selectedImageStyle =
+    AI_IMAGE_STYLE_OPTIONS.find(
+      (option) => option.value === (settings.imageStyle || 'clean_education_card')
+    ) ?? AI_IMAGE_STYLE_OPTIONS[0];
 
   const requestPayload = useMemo(() => {
     const payload: Record<string, unknown> = {
@@ -620,6 +625,15 @@ export function AISettingsCard() {
               disabled={busy}
               onChange={(imageStyle) => setSettings((prev) => ({ ...prev, imageStyle }))}
             />
+            <div className="overflow-hidden rounded-2xl border border-orange-100 bg-white">
+              <Image
+                src={selectedImageStyle.anchorUrl}
+                alt={selectedImageStyle.label}
+                width={1024}
+                height={1536}
+                className="block aspect-[2/3] w-full object-cover object-top"
+              />
+            </div>
           </div>
         </div>
 

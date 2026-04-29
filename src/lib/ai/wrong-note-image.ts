@@ -11,10 +11,14 @@ import {
   buildWrongNoteImagePromptUserMessage,
   WRONG_NOTE_IMAGE_PROMPT_SYSTEM_PROMPT,
 } from '@/lib/ai/prompts';
+import {
+  getWrongNoteImageStyleAnchor,
+  type WrongNoteImageStyleAnchor,
+} from '@/lib/ai/wrong-note-image-style-anchors';
 import { normalizeErrorMessage } from '@/lib/ai/utils';
 import { prisma } from '@/lib/prisma';
 
-export const WRONG_NOTE_IMAGE_TEMPLATE_VERSION = '2026-04-29-v4-async-final-model';
+export const WRONG_NOTE_IMAGE_TEMPLATE_VERSION = '2026-04-29-v5-style-anchor-reference';
 
 type WrongNoteImagePromptResponse = {
   imagePrompt?: string;
@@ -143,6 +147,7 @@ function buildFingerprint(params: {
   imageQuality: string;
   imageOutputFormat: string;
   imageStyle: string;
+  styleAnchorVersion: string;
   templateVersion: string;
 }) {
   return crypto.createHash('sha256').update(JSON.stringify(params)).digest('hex');
@@ -160,10 +165,16 @@ async function findLatestGeneration(userId: string, wrongNoteId: string, fingerp
   });
 }
 
-function normalizeFinalImagePrompt(value: WrongNoteImagePromptResponse) {
+function normalizeFinalImagePrompt(
+  value: WrongNoteImagePromptResponse,
+  styleAnchor: WrongNoteImageStyleAnchor
+) {
   const prompt = typeof value.imagePrompt === 'string' ? value.imagePrompt.trim() : '';
   if (prompt.length < 80) throw new Error('AI 没有返回有效生图提示词');
   return `${prompt}
+
+风格锚定：本次请求会附带一张「${styleAnchor.label}」锚定图作为参考输入。${styleAnchor.promptInstruction}
+参考图只用于学习版式、线条、色彩、卡片比例和信息层级；不要复刻参考图里的示例题、数字、文字或内容。
 
 硬性要求：只生成一张最终成品图，不要留白过多，不要生成中间素材。固定版式为左侧形象化解题过程图、右侧四个讲解框；四个框标题必须是「考点」「易错点」「正确思路」「记忆钩子」。左侧图必须具体表现本题解题动作，禁止抽象装饰图。中文必须清晰可读，不要水印、不要多余 logo、不要完整复刻原题和所有选项。`.slice(
     0,
@@ -174,6 +185,7 @@ function normalizeFinalImagePrompt(value: WrongNoteImagePromptResponse) {
 export async function getCurrentWrongNoteImageGeneration(userId: string, wrongNoteId: string) {
   const { wrongOptionId } = await getWrongNoteContext(userId, wrongNoteId);
   const runtime = await getRuntime(userId);
+  const styleAnchor = getWrongNoteImageStyleAnchor(runtime.imageConfig.style);
   const fingerprint = buildFingerprint({
     wrongNoteId,
     wrongOptionId,
@@ -185,6 +197,7 @@ export async function getCurrentWrongNoteImageGeneration(userId: string, wrongNo
     imageQuality: runtime.imageConfig.quality,
     imageOutputFormat: runtime.imageConfig.outputFormat,
     imageStyle: runtime.imageConfig.style,
+    styleAnchorVersion: styleAnchor.version,
     templateVersion: WRONG_NOTE_IMAGE_TEMPLATE_VERSION,
   });
   return findLatestGeneration(userId, wrongNoteId, fingerprint);
@@ -197,6 +210,7 @@ export async function prepareWrongNoteImageGeneration(params: {
 }) {
   const { note, wrongOptionId } = await getWrongNoteContext(params.userId, params.wrongNoteId);
   const runtime = await getRuntime(params.userId);
+  const styleAnchor = getWrongNoteImageStyleAnchor(runtime.imageConfig.style);
   const fingerprint = buildFingerprint({
     wrongNoteId: params.wrongNoteId,
     wrongOptionId,
@@ -208,6 +222,7 @@ export async function prepareWrongNoteImageGeneration(params: {
     imageQuality: runtime.imageConfig.quality,
     imageOutputFormat: runtime.imageConfig.outputFormat,
     imageStyle: runtime.imageConfig.style,
+    styleAnchorVersion: styleAnchor.version,
     templateVersion: WRONG_NOTE_IMAGE_TEMPLATE_VERSION,
   });
 
@@ -243,6 +258,7 @@ export async function prepareWrongNoteImageGeneration(params: {
       imageQuality: runtime.imageConfig.quality,
       imageOutputFormat: runtime.imageConfig.outputFormat,
       imageStyle: runtime.imageConfig.style,
+      sourceImagePath: styleAnchor.publicPath,
       fingerprint,
     },
   });
@@ -266,25 +282,30 @@ export async function runWrongNoteImageGeneration(generationId: string) {
       generation.wrongNoteId
     );
     const runtime = await getRuntime(generation.userId);
+    const styleAnchor = getWrongNoteImageStyleAnchor(runtime.imageConfig.style);
     const promptRaw = await runtime.promptProvider.createCompletion({
       systemPrompt: WRONG_NOTE_IMAGE_PROMPT_SYSTEM_PROMPT,
       userMessage: `${buildWrongNoteImagePromptUserMessage(note.question, wrongAnswerLabel)}
 
 ## 生图设置
 - 目标尺寸：${runtime.imageConfig.size}
-- 卡片风格：${runtime.imageConfig.style}
+- 卡片风格：${styleAnchor.label}（${runtime.imageConfig.style}）
+- 风格锚定：${styleAnchor.promptInstruction}
 - 生成方式：只输出一个 imagePrompt，由生图模型一次性生成最终错题复盘卡。`,
       maxTokens: 1200,
       temperature: 0.25,
     });
     const imagePrompt = normalizeFinalImagePrompt(
-      parseAIJson<WrongNoteImagePromptResponse>(promptRaw)
+      parseAIJson<WrongNoteImagePromptResponse>(promptRaw),
+      styleAnchor
     );
     const finalImage = await runtime.imageProvider.generateImage({
       prompt: imagePrompt,
       size: runtime.imageConfig.size,
       quality: runtime.imageConfig.quality,
       outputFormat: runtime.imageConfig.outputFormat,
+      referenceImagePath: styleAnchor.filePath,
+      inputFidelity: 'high',
       user: generation.userId,
     });
     const imagePath = await writeAIImageFile({
@@ -302,6 +323,7 @@ export async function runWrongNoteImageGeneration(generationId: string) {
         promptPayload: { imagePrompt } as unknown as Prisma.InputJsonValue,
         imagePrompt,
         imagePath,
+        sourceImagePath: styleAnchor.publicPath,
         completedAt: new Date(),
       },
     });
