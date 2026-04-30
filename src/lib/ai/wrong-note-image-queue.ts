@@ -3,6 +3,7 @@ import { runWrongNoteImageGeneration } from '@/lib/ai/wrong-note-image';
 type QueueState = {
   queue: string[];
   queuedIds: Set<string>;
+  activeIds: Set<string>;
   active: number;
 };
 
@@ -11,7 +12,14 @@ const globalKey = '__oseWrongNoteImageQueue';
 function queueState(): QueueState {
   const globalWithQueue = globalThis as typeof globalThis & { [globalKey]?: QueueState };
   if (!globalWithQueue[globalKey]) {
-    globalWithQueue[globalKey] = { queue: [], queuedIds: new Set(), active: 0 };
+    globalWithQueue[globalKey] = {
+      queue: [],
+      queuedIds: new Set(),
+      activeIds: new Set(),
+      active: 0,
+    };
+  } else if (!globalWithQueue[globalKey].activeIds) {
+    globalWithQueue[globalKey].activeIds = new Set();
   }
   return globalWithQueue[globalKey];
 }
@@ -29,11 +37,13 @@ function schedule() {
     const generationId = state.queue.shift();
     if (!generationId) return;
     state.queuedIds.delete(generationId);
+    state.activeIds.add(generationId);
     state.active += 1;
     void runWrongNoteImageGeneration(generationId)
       .catch(() => undefined)
       .finally(() => {
         state.active -= 1;
+        state.activeIds.delete(generationId);
         schedule();
       });
   }
@@ -57,5 +67,7 @@ export function getWrongNoteImageQueueStats() {
     queued: state.queue.length,
     running: state.active,
     concurrency: queueConcurrency(),
+    queuedIds: [...state.queue],
+    runningIds: [...state.activeIds],
   };
 }

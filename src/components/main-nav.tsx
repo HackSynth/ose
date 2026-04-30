@@ -23,6 +23,7 @@ const navItems = [
   { href: '/plan', label: '学习计划' },
   { href: '/analysis', label: '学情诊断' },
   { href: '/wrong-notes', label: '错题本' },
+  { href: '/tasks', label: '任务队列' },
   { href: '/profile', label: '个人中心' },
 ];
 
@@ -56,7 +57,7 @@ export function MainNav({ userName, userEmail }: { userName: string; userEmail?:
         </span>
       </Link>
 
-      <nav className="hidden items-center gap-2 md:flex">
+      <nav className="hidden items-center gap-1 md:flex lg:gap-2">
         {navItems.map((item) => {
           const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
           return (
@@ -64,7 +65,7 @@ export function MainNav({ userName, userEmail }: { userName: string; userEmail?:
               key={item.href}
               href={item.href}
               className={cn(
-                'rounded-2xl px-4 py-2 text-sm font-extrabold text-muted transition hover:bg-primary-soft hover:text-navy',
+                'rounded-2xl px-3 py-2 text-sm font-extrabold text-muted transition hover:bg-primary-soft hover:text-navy lg:px-4',
                 active && 'bg-primary-soft text-primary ring-2 ring-primary/10'
               )}
             >
