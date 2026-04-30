@@ -93,9 +93,19 @@ export async function GET(request: Request) {
           id: true,
           wrongNoteId: true,
           status: true,
+          provider: true,
+          model: true,
+          promptProvider: true,
+          promptModel: true,
+          imageSize: true,
+          imageQuality: true,
+          imageOutputFormat: true,
+          imageStyle: true,
           imagePath: true,
           errorMessage: true,
+          createdAt: true,
           updatedAt: true,
+          completedAt: true,
         },
       })
     : [];
@@ -141,7 +151,18 @@ export async function GET(request: Request) {
               imageGeneration.status === 'COMPLETED' && imageGeneration.imagePath
                 ? imageUrlFor(imageGeneration)
                 : null,
+            provider: imageGeneration.provider,
+            model: imageGeneration.model,
+            promptProvider: imageGeneration.promptProvider,
+            promptModel: imageGeneration.promptModel,
+            imageSize: imageGeneration.imageSize,
+            imageQuality: imageGeneration.imageQuality,
+            imageOutputFormat: imageGeneration.imageOutputFormat,
+            imageStyle: imageGeneration.imageStyle,
             errorMessage: imageGeneration.errorMessage,
+            createdAt: imageGeneration.createdAt,
+            updatedAt: imageGeneration.updatedAt,
+            completedAt: imageGeneration.completedAt,
           }
         : null,
       question: {

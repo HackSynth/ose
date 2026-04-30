@@ -8,6 +8,7 @@ import {
 import { createAIErrorResponse } from '@/lib/ai/utils';
 import {
   getCurrentWrongNoteImageGeneration,
+  getLatestWrongNoteImageGeneration,
   prepareWrongNoteImageGeneration,
   serializeImageGeneration,
 } from '@/lib/ai/wrong-note-image';
@@ -21,7 +22,9 @@ export async function GET(request: Request) {
   if (!wrongNoteId) return NextResponse.json({ message: '参数不完整' }, { status: 400 });
 
   try {
-    const generation = await getCurrentWrongNoteImageGeneration(userId, wrongNoteId);
+    const generation =
+      (await getCurrentWrongNoteImageGeneration(userId, wrongNoteId)) ??
+      (await getLatestWrongNoteImageGeneration(userId, wrongNoteId));
     return NextResponse.json({
       configured: true,
       generation: generation ? serializeImageGeneration(generation) : null,

@@ -6,6 +6,7 @@ import { Download, ImageIcon, Loader2, RefreshCw } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import { AI_IMAGE_STYLE_OPTIONS } from '@/lib/ai/image-types';
 import { showToast } from '@/lib/toast-client';
 import { cn } from '@/lib/utils';
 
@@ -41,6 +42,10 @@ function statusLabel(status: GenerationStatus | undefined) {
   if (status === 'COMPLETED') return '讲解图已生成';
   if (status === 'FAILED') return '讲解图生成失败';
   return '';
+}
+
+function imageStyleLabel(style: string | undefined) {
+  return AI_IMAGE_STYLE_OPTIONS.find((option) => option.value === style)?.label ?? style;
 }
 
 export function AIWrongNoteImageButton({
@@ -165,6 +170,7 @@ export function AIWrongNoteImageButton({
         : message;
   const completedMeta = [
     [completedGeneration?.provider, completedGeneration?.model].filter(Boolean).join(' / '),
+    imageStyleLabel(completedGeneration?.imageStyle),
     completedGeneration?.imageSize,
     completedGeneration?.imageQuality,
   ]

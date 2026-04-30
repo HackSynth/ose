@@ -50,6 +50,17 @@ type WrongNoteImageGeneration = {
   id: string;
   status: WrongNoteImageStatus;
   imageUrl: string | null;
+  createdAt?: string;
+  updatedAt?: string;
+  completedAt?: string | null;
+  provider?: string;
+  model?: string;
+  promptProvider?: string;
+  promptModel?: string;
+  imageSize?: string;
+  imageQuality?: string;
+  imageOutputFormat?: string;
+  imageStyle?: string;
   errorMessage: string | null;
 };
 type WrongNoteImageBatchItem = {

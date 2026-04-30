@@ -2,7 +2,14 @@ import crypto from 'crypto';
 import type { Prisma } from '@prisma/client';
 
 import { buildAIProvider, resolveAIConfig } from '@/lib/ai';
-import { buildAIImageProvider, resolveAIImageConfig } from '@/lib/ai/image';
+import {
+  buildAIImageProvider,
+  normalizeImageOutputFormat,
+  normalizeImageQuality,
+  normalizeImageSize,
+  normalizeImageStyle,
+  resolveAIImageConfig,
+} from '@/lib/ai/image';
 import { parseAIJson } from '@/lib/ai/json';
 import { extensionForMimeType, writeAIImageFile } from '@/lib/ai/image-storage';
 import { checkAIImageRateLimit } from '@/lib/ai/image-rate-limit';
@@ -298,14 +305,26 @@ export async function runWrongNoteImageGeneration(generationId: string) {
       generation.wrongNoteId
     );
     const runtime = await getRuntime(generation.userId);
-    const styleAnchor = getWrongNoteImageStyleAnchor(runtime.imageConfig.style);
+    const imageSize = normalizeImageSize(generation.imageSize);
+    const imageQuality = normalizeImageQuality(generation.imageQuality);
+    const imageOutputFormat = normalizeImageOutputFormat(generation.imageOutputFormat);
+    const imageStyle = normalizeImageStyle(generation.imageStyle);
+    const imageProvider = buildAIImageProvider({
+      ...runtime.imageConfig,
+      model: generation.model || runtime.imageConfig.model,
+      size: imageSize,
+      quality: imageQuality,
+      outputFormat: imageOutputFormat,
+      style: imageStyle,
+    });
+    const styleAnchor = getWrongNoteImageStyleAnchor(imageStyle);
     const promptRaw = await runtime.promptProvider.createCompletion({
       systemPrompt: WRONG_NOTE_IMAGE_PROMPT_SYSTEM_PROMPT,
       userMessage: `${buildWrongNoteImagePromptUserMessage(note.question, wrongAnswerLabel)}
 
 ## 生图设置
-- 目标尺寸：${runtime.imageConfig.size}
-- 卡片风格：${styleAnchor.label}（${runtime.imageConfig.style}）
+- 目标尺寸：${imageSize}
+- 卡片风格：${styleAnchor.label}（${imageStyle}）
 - 风格锚定：${styleAnchor.promptInstruction}
 - 生成方式：只输出一个 imagePrompt，由生图模型一次性生成最终错题复盘卡。`,
       maxTokens: 1200,
@@ -315,11 +334,11 @@ export async function runWrongNoteImageGeneration(generationId: string) {
       parseAIJson<WrongNoteImagePromptResponse>(promptRaw),
       styleAnchor
     );
-    const finalImage = await runtime.imageProvider.generateImage({
+    const finalImage = await imageProvider.generateImage({
       prompt: imagePrompt,
-      size: runtime.imageConfig.size,
-      quality: runtime.imageConfig.quality,
-      outputFormat: runtime.imageConfig.outputFormat,
+      size: imageSize,
+      quality: imageQuality,
+      outputFormat: imageOutputFormat,
       referenceImagePath: styleAnchor.filePath,
       inputFidelity: 'high',
       user: generation.userId,
