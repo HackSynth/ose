@@ -11,6 +11,7 @@ import {
   Loader2,
   RefreshCw,
   Rows3,
+  Trash2,
   XCircle,
   type LucideIcon,
 } from 'lucide-react';
@@ -19,6 +20,7 @@ import { OSESelect } from '@/components/ose-select';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { AI_IMAGE_STYLE_OPTIONS } from '@/lib/ai/image-types';
+import { showToast } from '@/lib/toast-client';
 import { cn } from '@/lib/utils';
 
 type TaskStatus = 'PENDING' | 'RUNNING' | 'COMPLETED' | 'FAILED';
@@ -178,6 +180,7 @@ export function AITaskQueueClient() {
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
+  const [clearingFailed, setClearingFailed] = useState(false);
   const [message, setMessage] = useState('');
 
   const activeCount = (data?.queue.queued ?? 0) + (data?.queue.running ?? 0);
@@ -226,6 +229,39 @@ export function AITaskQueueClient() {
     return () => window.clearInterval(timer);
   }, [load, shouldPoll]);
 
+  async function clearFailedTasks() {
+    const failedCount = data?.counts.FAILED ?? 0;
+    if (!failedCount) return;
+    const confirmed = window.confirm(
+      `确认清除 ${failedCount} 个失败任务？此操作不会删除已生成图片。`
+    );
+    if (!confirmed) return;
+
+    setClearingFailed(true);
+    setMessage('');
+    try {
+      const response = await fetch('/api/ai/task-queue', { method: 'DELETE' });
+      const json = (await response.json().catch(() => ({}))) as {
+        deleted?: number;
+        message?: string;
+      };
+      if (!response.ok) {
+        const nextMessage = json.message || '失败任务清除失败';
+        setMessage(nextMessage);
+        showToast({ title: '清除失败', description: nextMessage });
+        return;
+      }
+      showToast({ title: '已清除失败任务', description: `已清除 ${json.deleted ?? 0} 个任务` });
+      if (page === 1) await load(true);
+      else setPage(1);
+    } catch {
+      setMessage('网络异常，失败任务清除失败');
+      showToast({ title: '网络异常', description: '失败任务清除失败' });
+    } finally {
+      setClearingFailed(false);
+    }
+  }
+
   const summary = useMemo(() => {
     const counts = data?.counts ?? { PENDING: 0, RUNNING: 0, COMPLETED: 0, FAILED: 0 };
     return [
@@ -266,7 +302,7 @@ export function AITaskQueueClient() {
               type="button"
               variant="secondary"
               onClick={() => load(true)}
-              disabled={refreshing}
+              disabled={refreshing || clearingFailed}
             >
               {refreshing ? (
                 <Loader2 className="h-4 w-4 animate-spin" />
@@ -274,6 +310,20 @@ export function AITaskQueueClient() {
                 <RefreshCw className="h-4 w-4" />
               )}
               刷新
+            </Button>
+            <Button
+              type="button"
+              variant="secondary"
+              onClick={clearFailedTasks}
+              disabled={clearingFailed || loading || !(data?.counts.FAILED ?? 0)}
+              className="bg-red-50 text-red-700 shadow-none hover:bg-red-100"
+            >
+              {clearingFailed ? (
+                <Loader2 className="h-4 w-4 animate-spin" />
+              ) : (
+                <Trash2 className="h-4 w-4" />
+              )}
+              清除失败任务
             </Button>
           </div>
         </div>

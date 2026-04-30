@@ -118,3 +118,17 @@ export async function GET(request: Request) {
     },
   });
 }
+
+export async function DELETE() {
+  const session = await auth();
+  if (!session?.user?.id) return NextResponse.json({ message: '请先登录' }, { status: 401 });
+
+  const result = await prisma.aIImageGeneration.deleteMany({
+    where: {
+      userId: session.user.id,
+      status: 'FAILED',
+    },
+  });
+
+  return NextResponse.json({ ok: true, deleted: result.count });
+}
