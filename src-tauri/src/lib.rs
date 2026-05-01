@@ -107,7 +107,10 @@ fn start_next_server(app: &AppHandle) -> Result<u16, String> {
     let port = pick_port()?;
     let database_url = format!("file:{}", data_dir.join("ose.db").to_string_lossy());
 
-    let mut child = Command::new("node")
+    let node_binary = resolve_node_binary(&standalone_dir);
+    let using_bundled = node_binary != PathBuf::from("node");
+
+    let mut child = Command::new(&node_binary)
         .arg(&start_script)
         .current_dir(&standalone_dir)
         .env("PORT", port.to_string())
@@ -119,7 +122,16 @@ fn start_next_server(app: &AppHandle) -> Result<u16, String> {
         .stdout(Stdio::piped())
         .stderr(Stdio::piped())
         .spawn()
-        .map_err(|error| format!("启动 Node.js 失败：{error}。请确认已安装 Node.js 20+ 并加入 PATH。"))?;
+        .map_err(|error| {
+            if using_bundled {
+                format!(
+                    "启动打包的 Node.js 失败：{error}。可执行文件位置：{}",
+                    node_binary.display()
+                )
+            } else {
+                format!("启动 Node.js 失败：{error}。请安装 Node.js 20+ 并加入 PATH，或使用 BUNDLE_NODE=1 重新打包。")
+            }
+        })?;
 
     pipe_process_output(child.stdout.take(), "next:stdout");
     pipe_process_output(child.stderr.take(), "next:stderr");
@@ -154,6 +166,20 @@ fn stop_next_server(app: &AppHandle) {
         let _ = child.wait();
     }
     runtime.port = None;
+}
+
+fn resolve_node_binary(standalone_dir: &PathBuf) -> PathBuf {
+    let runtime_dir = standalone_dir.join("runtime");
+    let bundled = if cfg!(windows) {
+        runtime_dir.join("node.exe")
+    } else {
+        runtime_dir.join("node")
+    };
+    if bundled.exists() {
+        bundled
+    } else {
+        PathBuf::from("node")
+    }
 }
 
 fn resolve_data_dir(app: &AppHandle) -> Result<PathBuf, String> {
