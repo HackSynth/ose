@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const { execFileSync } = require('node:child_process');
+const crypto = require('node:crypto');
 const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
@@ -9,7 +10,10 @@ const root = path.resolve(__dirname, '..');
 const tauriDir = path.join(root, 'src-tauri');
 const binariesDir = path.join(tauriDir, 'binaries');
 const standaloneTarget = path.join(binariesDir, 'standalone');
+const runtimeTarget = path.join(standaloneTarget, 'runtime');
 const schemaPath = path.join(root, 'src', 'prisma', 'schema.prisma');
+
+const BUNDLED_NODE_VERSION = process.env.BUNDLED_NODE_VERSION || 'v20.18.1';
 
 function run(command, args, options = {}) {
   console.log(`> ${command} ${args.join(' ')}`);
@@ -79,6 +83,134 @@ function detectTargetTriple() {
   return `${arch}-${process.platform}`;
 }
 
+function nodeArchiveDescriptor() {
+  const platformMap = { win32: 'win', darwin: 'darwin', linux: 'linux' };
+  const archMap = { x64: 'x64', arm64: 'arm64' };
+
+  const platform = platformMap[process.platform];
+  const arch = archMap[process.arch];
+  if (!platform || !arch) {
+    throw new Error(
+      `Unsupported platform/arch combination for bundled Node.js: ${process.platform}/${process.arch}`
+    );
+  }
+
+  const ext = platform === 'win' ? 'zip' : 'tar.xz';
+  const baseName = `node-${BUNDLED_NODE_VERSION}-${platform}-${arch}`;
+  return {
+    baseName,
+    fileName: `${baseName}.${ext}`,
+    url: `https://nodejs.org/dist/${BUNDLED_NODE_VERSION}/${baseName}.${ext}`,
+  };
+}
+
+async function downloadFile(url, destination) {
+  fs.mkdirSync(path.dirname(destination), { recursive: true });
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`Download failed (${response.status} ${response.statusText}): ${url}`);
+  }
+  const buffer = Buffer.from(await response.arrayBuffer());
+  fs.writeFileSync(destination, buffer);
+}
+
+async function fetchExpectedSha256(fileName) {
+  const url = `https://nodejs.org/dist/${BUNDLED_NODE_VERSION}/SHASUMS256.txt`;
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch SHASUMS256.txt (${response.status}): ${url}`);
+  }
+  const body = await response.text();
+  for (const line of body.split('\n')) {
+    const match = line.trim().match(/^([a-f0-9]{64})\s+(\S+)$/);
+    if (match && match[2] === fileName) {
+      return match[1];
+    }
+  }
+  throw new Error(`No SHA-256 entry for ${fileName} in ${url}`);
+}
+
+function sha256OfFile(filePath) {
+  const hash = crypto.createHash('sha256');
+  hash.update(fs.readFileSync(filePath));
+  return hash.digest('hex');
+}
+
+// On Windows, prefer the bundled bsdtar at System32\tar.exe.
+// PATH-based `tar` may resolve to GNU tar (msys/Git Bash), which
+// misinterprets paths like `C:\Users\...` as `host:path`.
+function tarExecutable() {
+  if (process.platform === 'win32') {
+    const systemRoot = process.env.SystemRoot || 'C:\\Windows';
+    const candidate = path.join(systemRoot, 'System32', 'tar.exe');
+    if (fs.existsSync(candidate)) return candidate;
+  }
+  return 'tar';
+}
+
+async function bundleNodeRuntime() {
+  const descriptor = nodeArchiveDescriptor();
+  const cacheDir = path.join(os.tmpdir(), 'ose-node-cache');
+  const archivePath = path.join(cacheDir, descriptor.fileName);
+
+  console.log(`Verifying SHA-256 for ${descriptor.fileName} ...`);
+  const expectedSha = await fetchExpectedSha256(descriptor.fileName);
+
+  if (fs.existsSync(archivePath) && sha256OfFile(archivePath) === expectedSha) {
+    console.log(`Using cached ${archivePath} (sha256 verified).`);
+  } else {
+    if (fs.existsSync(archivePath)) {
+      console.log('Cached archive failed sha256 check; redownloading.');
+      fs.rmSync(archivePath, { force: true });
+    }
+    console.log(`Downloading ${descriptor.url} ...`);
+    await downloadFile(descriptor.url, archivePath);
+    const actualSha = sha256OfFile(archivePath);
+    if (actualSha !== expectedSha) {
+      fs.rmSync(archivePath, { force: true });
+      throw new Error(
+        `SHA-256 mismatch for ${descriptor.fileName}: expected ${expectedSha}, got ${actualSha}`
+      );
+    }
+    console.log('SHA-256 verified.');
+  }
+
+  const extractDir = path.join(cacheDir, `${descriptor.baseName}-extract`);
+  fs.rmSync(extractDir, { recursive: true, force: true });
+  fs.mkdirSync(extractDir, { recursive: true });
+
+  console.log(`Extracting ${descriptor.fileName} ...`);
+  // Both Windows 10+ (bsdtar via System32\tar.exe) and POSIX systems ship a
+  // `tar` that handles .zip and .tar.xz natively.
+  execFileSync(tarExecutable(), ['-xf', archivePath, '-C', extractDir], { stdio: 'inherit' });
+
+  const extractedRoot = path.join(extractDir, descriptor.baseName);
+  if (!fs.existsSync(extractedRoot)) {
+    throw new Error(`Extraction did not produce expected directory: ${extractedRoot}`);
+  }
+
+  fs.rmSync(runtimeTarget, { recursive: true, force: true });
+  fs.mkdirSync(runtimeTarget, { recursive: true });
+
+  if (process.platform === 'win32') {
+    fs.copyFileSync(path.join(extractedRoot, 'node.exe'), path.join(runtimeTarget, 'node.exe'));
+  } else {
+    const sourceBinary = path.join(extractedRoot, 'bin', 'node');
+    const targetBinary = path.join(runtimeTarget, 'node');
+    fs.copyFileSync(sourceBinary, targetBinary);
+    fs.chmodSync(targetBinary, 0o755);
+  }
+
+  fs.writeFileSync(
+    path.join(runtimeTarget, 'VERSION'),
+    `${BUNDLED_NODE_VERSION}\n${process.platform}-${process.arch}\n`
+  );
+
+  console.log(
+    `Bundled Node.js ${BUNDLED_NODE_VERSION} (${process.platform}-${process.arch}) into ${runtimeTarget}.`
+  );
+}
+
 function writeFrontendPlaceholder() {
   const outDir = path.join(root, 'out');
   fs.mkdirSync(outDir, { recursive: true });
@@ -113,21 +245,34 @@ function writeAndroidWebviewEntry() {
 }
 
 function writeStartScript() {
+  // Resolves the Node.js binary that should run the prisma CLI: prefer the bundled
+  // runtime sibling to start.js, fall back to the parent process node (i.e. whatever
+  // launched start.js — also our bundled binary when invoked via Tauri).
   const script = `const { spawnSync } = require("node:child_process");
+const fs = require("node:fs");
 const path = require("node:path");
 
 process.env.PORT = process.env.PORT || "3000";
 process.env.HOSTNAME = process.env.HOSTNAME || "127.0.0.1";
 
-const prismaBin = process.platform === "win32"
-  ? path.join(__dirname, "node_modules", ".bin", "prisma.cmd")
-  : path.join(__dirname, "node_modules", ".bin", "prisma");
+const bundledNode = process.platform === "win32"
+  ? path.join(__dirname, "runtime", "node.exe")
+  : path.join(__dirname, "runtime", "node");
+const nodeBinary = fs.existsSync(bundledNode) ? bundledNode : process.execPath;
 
-const migrate = spawnSync(prismaBin, ["migrate", "deploy", "--schema", path.join(__dirname, "src", "prisma", "schema.prisma")], {
+const prismaCli = path.join(__dirname, "node_modules", "prisma", "build", "index.js");
+const prismaArgs = [
+  prismaCli,
+  "migrate",
+  "deploy",
+  "--schema",
+  path.join(__dirname, "src", "prisma", "schema.prisma"),
+];
+
+const migrate = spawnSync(nodeBinary, prismaArgs, {
   cwd: __dirname,
   env: process.env,
   stdio: "inherit",
-  shell: process.platform === "win32",
 });
 
 if (migrate.status !== 0) {
@@ -139,7 +284,7 @@ require("./server.js");
   fs.writeFileSync(path.join(standaloneTarget, 'start.js'), script);
 }
 
-function main() {
+async function main() {
   if (process.env.TAURI_MOBILE_BUILD === '1') {
     writeAndroidWebviewEntry();
     console.log('Prepared OSE Android WebView entry.');
@@ -185,12 +330,25 @@ function main() {
   console.log(`Prepared OSE sidecar for ${triple}.`);
 
   if (process.env.BUNDLE_NODE === '1') {
-    console.warn(
-      'BUNDLE_NODE=1 is reserved for full runtime bundling. Current script uses PATH Node.js mode by default.'
-    );
+    await bundleNodeRuntime();
   } else {
-    console.log('Using PATH Node.js mode. Install Node.js 20+ on target machines.');
+    fs.rmSync(runtimeTarget, { recursive: true, force: true });
+    console.log(
+      'Using PATH Node.js mode. Install Node.js 20+ on target machines, or set BUNDLE_NODE=1 to ship a bundled runtime.'
+    );
   }
 }
 
-main();
+if (require.main === module) {
+  main().catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
+}
+
+module.exports = {
+  bundleNodeRuntime,
+  nodeArchiveDescriptor,
+  runtimeTarget,
+  BUNDLED_NODE_VERSION,
+};

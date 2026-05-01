@@ -14,12 +14,11 @@ Open-source AI-powered exam preparation platform for China's Software Profession
 [![GitHub Stars](https://img.shields.io/github/stars/hacksynth/ose?style=social)](https://github.com/hacksynth/ose/stargazers)
 [![License: AGPL-3.0](https://img.shields.io/badge/license-AGPL--3.0-blue.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Discord](https://img.shields.io/badge/Discord-join%20community-5865F2.svg)](https://discord.gg/ose)
 [![CI](https://github.com/hacksynth/ose/actions/workflows/ci.yml/badge.svg)](https://github.com/hacksynth/ose/actions/workflows/ci.yml)
 
 [中文文档](README_CN.md)
 
-![OSE landing page screenshot](docs/assets/screenshots/landing.png)
+Screenshots coming soon
 
 ## What is OSE?
 
@@ -36,7 +35,7 @@ The core promise is simple: **AI-Powered**, **Open Source**, and **Self-hostable
 - 📊 **Learning analytics**: mastery heatmaps, weak-area diagnosis, predicted scores, and pass probability evaluation.
 - 📝 **Mock exams**: realistic exam sessions with countdown timers, answer sheets, and result reports.
 - 🧭 **Smart study plans**: AI-generated personalized preparation plans based on target date and current progress.
-- 🖥️ **Multi-platform**: Web app plus Tauri desktop packaging.
+- 🖥️ **Multi-platform**: Web app, Tauri desktop installer (Windows/Linux/macOS), and Android-ready PWA.
 - 🔌 **Multi-provider AI**: Claude, OpenAI, Gemini, and OpenAI-compatible custom APIs.
 
 ## Tech Stack
@@ -96,13 +95,13 @@ node scripts/capture-screenshots.mjs
 - [x] Phase 1: 选择题题库 + 练习 + 错题本
 - [x] Phase 2: 案例分析题 + 模拟考试 + 知识点体系
 - [x] Phase 3: AI 辅助（讲解/批改/出题/诊断/学习计划）
-- [x] Tauri 桌面版
+- [x] Tauri 桌面版（支持 BUNDLE_NODE=1 自包含 Node.js）
 - [ ] 更多软考科目支持（信息系统项目管理师等）
 - [x] 历年真题内置(2014–2025,41 套,1579 题)
 - [ ] PostgreSQL 生产部署支持
 - [ ] Docker Compose 一键部署
 - [ ] 国际化（i18n）
-- [ ] 移动端 PWA / React Native
+- [x] 移动端 PWA（Android / 桌面浏览器）
 - [ ] 社区讨论/评论功能
 - [ ] 题库贡献平台
 
@@ -113,13 +112,3 @@ We welcome code, documentation, question bank data, issue triage, translations, 
 ## License
 
 OSE is licensed under the [AGPL-3.0](LICENSE). If you modify and provide OSE as a network service, your modified source code must also be made available under the same license.
-
-## Star History
-
-> Star history chart placeholder. Add a star-history.com chart after the repository gains public traction.
-
-## Contributors
-
-<!-- ALL-CONTRIBUTORS-LIST:START -->
-<!-- Add contributors with: npx all-contributors add <username> code,doc,data -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
