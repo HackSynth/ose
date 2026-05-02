@@ -378,8 +378,8 @@ fn resolve_or_create_auth_secret(data_dir: &PathBuf) -> Result<String, String> {
     let secret_path = data_dir.join("auth.secret");
 
     if secret_path.exists() {
-        let content = fs::read_to_string(&secret_path)
-            .map_err(|e| format!("读取 auth.secret 失败：{e}"))?;
+        let content =
+            fs::read_to_string(&secret_path).map_err(|e| format!("读取 auth.secret 失败：{e}"))?;
         let trimmed = content.trim().to_string();
         if !trimmed.is_empty() {
             return Ok(trimmed);
@@ -416,14 +416,13 @@ fn write_secret_atomic(secret_path: &PathBuf, secret: &str) -> Result<(), String
     let tmp_path = secret_path.with_file_name("auth.secret.tmp");
     // Remove any leftover temp file so create_new(true) can succeed.
     let _ = fs::remove_file(&tmp_path);
-    let mut file = create_secret_file(&tmp_path)
-        .map_err(|e| format!("创建临时 secret 文件失败：{e}"))?;
+    let mut file =
+        create_secret_file(&tmp_path).map_err(|e| format!("创建临时 secret 文件失败：{e}"))?;
     file.write_all(secret.as_bytes())
         .map_err(|e| format!("写入 secret 失败：{e}"))?;
     drop(file);
     if secret_path.exists() {
-        fs::remove_file(secret_path)
-            .map_err(|e| format!("移除旧 secret 文件失败：{e}"))?;
+        fs::remove_file(secret_path).map_err(|e| format!("移除旧 secret 文件失败：{e}"))?;
     }
     fs::rename(&tmp_path, secret_path).map_err(|e| format!("移动 secret 文件失败：{e}"))
 }
