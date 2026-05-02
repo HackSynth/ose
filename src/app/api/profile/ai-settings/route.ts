@@ -13,6 +13,11 @@ import {
   DEFAULT_AI_IMAGE_RATE_LIMIT_HOURLY,
   DEFAULT_AI_IMAGE_RATE_LIMIT_PER_MINUTE,
 } from '@/lib/ai/image-rate-limit';
+import {
+  encryptSecret,
+  isEncryptionEnabled,
+  resolveSecret,
+} from '@/lib/crypto/secrets';
 
 const ALLOWED_PROVIDERS = new Set(['claude', 'openai', 'gemini', 'custom']);
 
@@ -40,18 +45,27 @@ export async function GET() {
   const session = await auth();
   if (!session?.user?.id) return NextResponse.json({ message: '请先登录' }, { status: 401 });
   const settings = await prisma.userAISettings.findUnique({ where: { userId: session.user.id } });
+
+  // Resolve effective key values for display (decrypt if encrypted)
+  const effectiveApiKey = settings
+    ? resolveSecret(settings.apiKeyEncrypted, settings.apiKey)
+    : null;
+  const effectiveImageApiKey = settings
+    ? resolveSecret(settings.imageApiKeyEncrypted, settings.imageApiKey)
+    : null;
+
   return NextResponse.json({
     provider: settings?.provider ?? null,
     model: settings?.model ?? null,
     baseUrl: settings?.baseUrl ?? null,
-    apiKeyMasked: maskApiKey(settings?.apiKey),
-    hasApiKey: Boolean(settings?.apiKey),
+    apiKeyMasked: maskApiKey(effectiveApiKey),
+    hasApiKey: Boolean(effectiveApiKey),
     visionSupport: settings?.visionSupport ?? null,
     imageProvider: settings?.imageProvider ?? null,
     imageModel: settings?.imageModel ?? null,
     imageBaseUrl: settings?.imageBaseUrl ?? null,
-    imageApiKeyMasked: maskApiKey(settings?.imageApiKey),
-    hasImageApiKey: Boolean(settings?.imageApiKey),
+    imageApiKeyMasked: maskApiKey(effectiveImageApiKey),
+    hasImageApiKey: Boolean(effectiveImageApiKey),
     imageSize: settings?.imageSize ?? null,
     imageQuality: settings?.imageQuality ?? null,
     imageOutputFormat: settings?.imageOutputFormat ?? null,
@@ -80,7 +94,7 @@ export async function PUT(request: Request) {
   const baseUrl = hasOwn(body, 'baseUrl')
     ? trimString(body.baseUrl, 500)
     : (existing?.baseUrl ?? '');
-  const apiKeyRaw = typeof body.apiKey === 'string' ? body.apiKey : '';
+  const apiKeyRaw = typeof body.apiKey === 'string' ? body.apiKey.trim().slice(0, 500) : '';
   const clearApiKey = body.apiKey === null;
 
   if (provider === 'custom' && !baseUrl) {
@@ -91,11 +105,32 @@ export async function PUT(request: Request) {
   const modelChanged = model !== (existing?.model ?? '');
   const nextVisionSupport = providerChanged || modelChanged ? null : (existing?.visionSupport ?? null);
 
-  const nextApiKey = clearApiKey
-    ? null
-    : apiKeyRaw
-      ? apiKeyRaw.trim().slice(0, 500)
-      : (existing?.apiKey ?? null);
+  // Determine encrypted/plaintext columns for text AI key
+  let nextApiKeyEncrypted: string | null;
+  let nextApiKeyPlain: string | null;
+
+  if (clearApiKey) {
+    nextApiKeyEncrypted = null;
+    nextApiKeyPlain = null;
+  } else if (apiKeyRaw) {
+    // User is setting a new key — encryption is mandatory
+    if (!isEncryptionEnabled()) {
+      return NextResponse.json(
+        {
+          message:
+            '服务器未配置加密密钥 (OSE_ENCRYPTION_KEY)，无法安全保存 API Key，请联系管理员配置后重试',
+        },
+        { status: 503 },
+      );
+    }
+    nextApiKeyEncrypted = encryptSecret(apiKeyRaw);
+    nextApiKeyPlain = null;
+  } else {
+    // Key unchanged — preserve existing values
+    nextApiKeyEncrypted = existing?.apiKeyEncrypted ?? null;
+    nextApiKeyPlain = existing?.apiKey ?? null;
+  }
+
   const imageProvider = hasOwn(body, 'imageProvider')
     ? normalizeImageProvider(body.imageProvider)
     : normalizeImageProvider(existing?.imageProvider);
@@ -108,13 +143,36 @@ export async function PUT(request: Request) {
   const imageBaseUrl = hasOwn(body, 'imageBaseUrl')
     ? trimString(body.imageBaseUrl, 500)
     : (existing?.imageBaseUrl ?? '');
-  const imageApiKeyRaw = typeof body.imageApiKey === 'string' ? body.imageApiKey : '';
+  const imageApiKeyRaw =
+    typeof body.imageApiKey === 'string' ? body.imageApiKey.trim().slice(0, 500) : '';
   const clearImageApiKey = body.imageApiKey === null;
-  const nextImageApiKey = clearImageApiKey
-    ? null
-    : imageApiKeyRaw
-      ? imageApiKeyRaw.trim().slice(0, 500)
-      : (existing?.imageApiKey ?? null);
+
+  // Determine encrypted/plaintext columns for image AI key
+  let nextImageApiKeyEncrypted: string | null;
+  let nextImageApiKeyPlain: string | null;
+
+  if (clearImageApiKey) {
+    nextImageApiKeyEncrypted = null;
+    nextImageApiKeyPlain = null;
+  } else if (imageApiKeyRaw) {
+    // User is setting a new image key — encryption is mandatory
+    if (!isEncryptionEnabled()) {
+      return NextResponse.json(
+        {
+          message:
+            '服务器未配置加密密钥 (OSE_ENCRYPTION_KEY)，无法安全保存生图 API Key，请联系管理员配置后重试',
+        },
+        { status: 503 },
+      );
+    }
+    nextImageApiKeyEncrypted = encryptSecret(imageApiKeyRaw);
+    nextImageApiKeyPlain = null;
+  } else {
+    // Key unchanged — preserve existing values
+    nextImageApiKeyEncrypted = existing?.imageApiKeyEncrypted ?? null;
+    nextImageApiKeyPlain = existing?.imageApiKey ?? null;
+  }
+
   const imageSize = hasOwn(body, 'imageSize')
     ? normalizeImageSize(body.imageSize)
     : normalizeImageSize(existing?.imageSize);
@@ -147,12 +205,14 @@ export async function PUT(request: Request) {
       provider: provider || null,
       model: model || null,
       baseUrl: baseUrl || null,
-      apiKey: nextApiKey,
+      apiKeyEncrypted: nextApiKeyEncrypted,
+      apiKey: nextApiKeyPlain,
       visionSupport: nextVisionSupport,
       imageProvider: imageProvider || null,
       imageModel: imageModel || null,
       imageBaseUrl: imageBaseUrl || null,
-      imageApiKey: nextImageApiKey,
+      imageApiKeyEncrypted: nextImageApiKeyEncrypted,
+      imageApiKey: nextImageApiKeyPlain,
       imageSize,
       imageQuality,
       imageOutputFormat,
@@ -166,12 +226,14 @@ export async function PUT(request: Request) {
       provider: provider || null,
       model: model || null,
       baseUrl: baseUrl || null,
-      apiKey: nextApiKey,
+      apiKeyEncrypted: nextApiKeyEncrypted,
+      apiKey: nextApiKeyPlain,
       visionSupport: nextVisionSupport,
       imageProvider: imageProvider || null,
       imageModel: imageModel || null,
       imageBaseUrl: imageBaseUrl || null,
-      imageApiKey: nextImageApiKey,
+      imageApiKeyEncrypted: nextImageApiKeyEncrypted,
+      imageApiKey: nextImageApiKeyPlain,
       imageSize,
       imageQuality,
       imageOutputFormat,

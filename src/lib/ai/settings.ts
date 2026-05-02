@@ -6,6 +6,7 @@ import { buildAIProvider, resolveAIConfig } from "@/lib/ai";
 import type { AIConfig, AIProviderKey } from "@/lib/ai/types";
 import { normalizeErrorMessage } from "@/lib/ai/utils";
 import { prisma } from "@/lib/prisma";
+import { resolveSecret } from "@/lib/crypto/secrets";
 
 const DEFAULT_MODELS: Record<AIProviderKey, string> = {
   claude: "claude-sonnet-4-5-20250929",
@@ -43,7 +44,10 @@ export async function resolveAIConfigFromRequest(userId: string, body: unknown):
 
   const existing = await prisma.userAISettings.findUnique({ where: { userId } });
   const apiKeyDraft = trimString(data.apiKey, 500);
-  const apiKey = apiKeyDraft || (existing?.provider === requestedProvider ? existing.apiKey ?? undefined : undefined);
+  const storedApiKey = existing?.provider === requestedProvider
+    ? (resolveSecret(existing.apiKeyEncrypted, existing.apiKey) ?? undefined)
+    : undefined;
+  const apiKey = apiKeyDraft || storedApiKey;
   const model = trimString(data.model, 200) || undefined;
   const baseUrl = trimString(data.baseUrl, 500) || undefined;
 

@@ -4,6 +4,7 @@ import { createOpenAIProvider } from "@/lib/ai/providers/openai";
 import { createGeminiProvider } from "@/lib/ai/providers/gemini";
 import { createCustomProvider } from "@/lib/ai/providers/custom";
 import { prisma } from "@/lib/prisma";
+import { encryptSecret, isEncryptionEnabled, resolveSecret } from "@/lib/crypto/secrets";
 
 function envConfigFor(provider: AIProviderKey): AIConfig | null {
   if (provider === "claude") {
@@ -49,16 +50,35 @@ function normalizeProvider(raw: string | null | undefined): AIProviderKey | null
   return null;
 }
 
+function lazyMigrateApiKey(userId: string, plaintext: string): void {
+  void (async () => {
+    try {
+      const encrypted = encryptSecret(plaintext);
+      await prisma.userAISettings.update({
+        where: { userId },
+        data: { apiKeyEncrypted: encrypted, apiKey: null },
+      });
+    } catch {
+      // Silently swallow — migration retries on next request
+    }
+  })();
+}
+
 export async function resolveAIConfig(userId?: string | null): Promise<AIConfig | null> {
   if (userId) {
     const settings = await prisma.userAISettings.findUnique({ where: { userId } });
     const provider = normalizeProvider(settings?.provider ?? null);
     if (provider) {
-      const hasRequired = provider === "custom" ? Boolean(settings?.baseUrl) : Boolean(settings?.apiKey);
+      const apiKey = resolveSecret(settings?.apiKeyEncrypted, settings?.apiKey);
+      const hasRequired = provider === "custom" ? Boolean(settings?.baseUrl) : Boolean(apiKey);
       if (hasRequired) {
+        // Lazy-migrate legacy plaintext key to encrypted storage
+        if (settings && !settings.apiKeyEncrypted && settings.apiKey && isEncryptionEnabled()) {
+          lazyMigrateApiKey(userId, settings.apiKey);
+        }
         return {
           provider,
-          apiKey: settings?.apiKey ?? undefined,
+          apiKey: apiKey ?? undefined,
           model: settings?.model ?? undefined,
           baseUrl: settings?.baseUrl ?? undefined,
           visionSupport: settings?.visionSupport ?? null,
@@ -113,6 +133,7 @@ async function getConfigSource(userId?: string | null) {
   if (!userId) return "env" as const;
   const settings = await prisma.userAISettings.findUnique({ where: { userId } });
   if (!settings?.provider) return "env" as const;
-  const hasRequired = settings.provider === "custom" ? Boolean(settings.baseUrl) : Boolean(settings.apiKey);
+  const hasApiKey = Boolean(resolveSecret(settings.apiKeyEncrypted, settings.apiKey));
+  const hasRequired = settings.provider === "custom" ? Boolean(settings.baseUrl) : hasApiKey;
   return hasRequired ? ("user" as const) : ("env" as const);
 }

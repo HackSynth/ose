@@ -12,6 +12,7 @@ import type {
   AIImageStyle,
 } from '@/lib/ai/image-types';
 import { prisma } from '@/lib/prisma';
+import { encryptSecret, isEncryptionEnabled, resolveSecret } from '@/lib/crypto/secrets';
 
 export const DEFAULT_IMAGE_MODEL = 'gpt-image-2';
 export const DEFAULT_IMAGE_SIZE: AIImageSize = '1024x1536';
@@ -107,17 +108,36 @@ function resolveEnvImageConfig(): AIImageConfig | null {
   return null;
 }
 
+function lazyMigrateImageApiKey(userId: string, plaintext: string): void {
+  void (async () => {
+    try {
+      const encrypted = encryptSecret(plaintext);
+      await prisma.userAISettings.update({
+        where: { userId },
+        data: { imageApiKeyEncrypted: encrypted, imageApiKey: null },
+      });
+    } catch {
+      // Silently swallow — migration retries on next request
+    }
+  })();
+}
+
 export async function resolveAIImageConfig(userId?: string | null): Promise<AIImageConfig | null> {
   if (userId) {
     const settings = await prisma.userAISettings.findUnique({ where: { userId } });
     const provider = normalizeImageProvider(settings?.imageProvider);
     if (provider) {
+      const imageApiKey = resolveSecret(settings?.imageApiKeyEncrypted, settings?.imageApiKey);
       const hasRequired =
-        provider === 'custom' ? Boolean(settings?.imageBaseUrl) : Boolean(settings?.imageApiKey);
+        provider === 'custom' ? Boolean(settings?.imageBaseUrl) : Boolean(imageApiKey);
       if (hasRequired) {
+        // Lazy-migrate legacy plaintext key to encrypted storage
+        if (settings && !settings.imageApiKeyEncrypted && settings.imageApiKey && isEncryptionEnabled()) {
+          lazyMigrateImageApiKey(userId, settings.imageApiKey);
+        }
         return {
           provider,
-          apiKey: settings?.imageApiKey ?? undefined,
+          apiKey: imageApiKey ?? undefined,
           model: settings?.imageModel ?? DEFAULT_IMAGE_MODEL,
           baseUrl: settings?.imageBaseUrl ?? undefined,
           size: normalizeImageSize(settings?.imageSize),
@@ -146,11 +166,10 @@ export async function resolveAIImageConfigFromRequest(
 
   const existing = await prisma.userAISettings.findUnique({ where: { userId } });
   const imageApiKeyDraft = trimString(data.imageApiKey, 500);
-  const apiKey =
-    imageApiKeyDraft ||
-    (existing?.imageProvider === requestedProvider
-      ? (existing.imageApiKey ?? undefined)
-      : undefined);
+  const storedImageApiKey = existing?.imageProvider === requestedProvider
+    ? (resolveSecret(existing.imageApiKeyEncrypted, existing.imageApiKey) ?? undefined)
+    : undefined;
+  const apiKey = imageApiKeyDraft || storedImageApiKey;
   const model = trimString(data.imageModel, 200) || undefined;
   const baseUrl = trimString(data.imageBaseUrl, 500) || undefined;
 
@@ -244,7 +263,8 @@ async function getImageConfigSource(userId?: string | null) {
   const settings = await prisma.userAISettings.findUnique({ where: { userId } });
   const provider = normalizeImageProvider(settings?.imageProvider);
   if (!provider) return 'env' as const;
+  const hasImageApiKey = Boolean(resolveSecret(settings?.imageApiKeyEncrypted, settings?.imageApiKey));
   const hasRequired =
-    provider === 'custom' ? Boolean(settings?.imageBaseUrl) : Boolean(settings?.imageApiKey);
+    provider === 'custom' ? Boolean(settings?.imageBaseUrl) : hasImageApiKey;
   return hasRequired ? ('user' as const) : ('env' as const);
 }
