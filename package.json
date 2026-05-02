@@ -50,6 +50,7 @@
     "tauri:android:build:apk": "node scripts/build-android-apk.js",
     "tauri:prepare": "node scripts/prepare-sidecar.js",
     "tauri:icons": "tauri icon src-tauri/icons/app-icon.png",
+    "verify:portable": "node scripts/verify-portable.js",
     "screenshots": "node scripts/capture-screenshots.mjs",
     "prepare": "husky && npx prisma generate"
   },

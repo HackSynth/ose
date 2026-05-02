@@ -65,9 +65,71 @@ In production desktop mode, Tauri:
 5. Polls `/api/ai/status` until the Next.js server is ready.
 6. Navigates the WebView to `http://127.0.0.1:<port>`.
 
+## Portable Zip (Windows)
+
+The Windows portable zip is assembled by the release workflow from the Tauri build output. It is not a native Tauri installer target and has additional requirements compared to the MSI/NSIS installers.
+
+### Required build flags
+
+The portable zip must be built with `BUNDLE_NODE=1` so it ships its own Node.js runtime:
+
+```bash
+BUNDLE_NODE=1 npm run tauri:prepare
+npm run tauri:build
+```
+
+Without `BUNDLE_NODE=1` the zip depends on `node` from the user's `PATH`, which may be absent, the wrong version, or blocked by system policy.
+
+### Verifying the portable bundle
+
+After `tauri:prepare`, run:
+
+```bash
+npm run verify:portable
+```
+
+This checks that all required artifacts are present (`runtime/node.exe`, `start.js`, `server.js`, Prisma engine, migrations, `.next/static`, `public`) and that the bundled Node.js is executable. The release workflow should fail if this check fails.
+
+### Portable zip layout
+
+```
+OSE-Portable/
+  OSE.exe
+  portable.ini
+  README.txt
+  resources/
+    binaries/
+      standalone/
+        runtime/
+          node.exe        ← bundled Node.js (BUNDLE_NODE=1 required)
+        start.js
+        server.js
+        .next/static/
+        public/
+        src/prisma/
+        node_modules/
+```
+
+### Known limitations of the portable zip
+
+- **App data is not portable.** OSE still writes to `%AppData%\com.ose.softwareexam` and the WebView data cache. Deleting the zip does not remove user data. Multiple extracted versions share the same data directory.
+- **WebView2 is not bundled.** The app requires WebView2 Runtime (pre-installed on Windows 11 and updated Windows 10). On machines without it the window will fail to open. Document this in the release notes and consider linking to the WebView2 Evergreen installer.
+- **No updater integration.** There is no automatic update path for the portable zip.
+- **Path sensitivity.** Test extraction paths with spaces, non-ASCII characters, and paths longer than 260 characters (long path support must be enabled on older Windows).
+
 ## Troubleshooting
 
-- **Server startup timeout**: verify Node.js is installed and available in `PATH`, or rebuild with `BUNDLE_NODE=1`.
+- **Server startup timeout**: verify Node.js is installed and available in `PATH`, or rebuild with `BUNDLE_NODE=1`. Check the startup log (see below).
 - **Prisma errors**: run `npm run tauri:prepare` again and confirm migrations were copied.
 - **Port issues**: OSE picks an unused port automatically.
 - **Windows localhost issues**: the desktop app uses `127.0.0.1` to avoid IPv4/IPv6 mismatch.
+
+### Startup log
+
+On every launch the desktop app writes a `startup.log` file to the app data directory:
+
+- **Windows**: `%AppData%\com.ose.softwareexam\startup.log`
+- **macOS**: `~/Library/Application Support/com.ose.softwareexam/startup.log`
+- **Linux**: `~/.local/share/com.ose.softwareexam/startup.log`
+
+The log records the resolved standalone directory, Node.js binary path (bundled or system), selected port, database path, all sidecar stdout/stderr lines, and the final ready or timeout result. Share this file when reporting startup issues.

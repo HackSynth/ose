@@ -5,9 +5,9 @@ use std::{
     net::TcpStream,
     path::PathBuf,
     process::{Child, Command, Stdio},
-    sync::Mutex,
+    sync::{Arc, Mutex},
     thread,
-    time::{Duration, Instant},
+    time::{Duration, Instant, SystemTime, UNIX_EPOCH},
 };
 
 #[cfg(windows)]
@@ -104,6 +104,14 @@ fn start_next_server(app: &AppHandle) -> Result<u16, String> {
     let data_dir = resolve_data_dir(app)?;
     fs::create_dir_all(&data_dir).map_err(|error| format!("创建数据目录失败：{error}"))?;
 
+    let log_path = data_dir.join("startup.log");
+    let log: Option<Arc<Mutex<fs::File>>> = fs::OpenOptions::new()
+        .create(true)
+        .append(true)
+        .open(&log_path)
+        .ok()
+        .map(|f| Arc::new(Mutex::new(f)));
+
     let standalone_dir = resolve_standalone_dir(app)?;
     let start_script = standalone_dir.join("start.js");
     if !start_script.exists() {
@@ -114,10 +122,20 @@ fn start_next_server(app: &AppHandle) -> Result<u16, String> {
     }
 
     let port = pick_port()?;
-    let database_url = format!("file:{}", data_dir.join("ose.db").to_string_lossy());
-
+    let database_path = data_dir.join("ose.db");
+    let database_url = format!("file:{}", database_path.to_string_lossy());
     let node_binary = resolve_node_binary(&standalone_dir);
     let using_bundled = node_binary != PathBuf::from("node");
+
+    write_startup_header(
+        log.as_ref(),
+        &standalone_dir,
+        &node_binary,
+        using_bundled,
+        port,
+        &database_path,
+        &log_path,
+    );
 
     let mut cmd = Command::new(&node_binary);
     cmd.arg(&start_script)
@@ -138,18 +156,20 @@ fn start_next_server(app: &AppHandle) -> Result<u16, String> {
     cmd.creation_flags(0x08000000); // CREATE_NO_WINDOW
 
     let mut child = cmd.spawn().map_err(|error| {
-        if using_bundled {
+        let msg = if using_bundled {
             format!(
                 "启动打包的 Node.js 失败：{error}。可执行文件位置：{}",
                 node_binary.display()
             )
         } else {
             format!("启动 Node.js 失败：{error}。请安装 Node.js 20+ 并加入 PATH，或使用 BUNDLE_NODE=1 重新打包。")
-        }
+        };
+        log_line(log.as_ref(), &format!("[startup] spawn error: {msg}"));
+        msg
     })?;
 
-    pipe_process_output(child.stdout.take(), "next:stdout");
-    pipe_process_output(child.stderr.take(), "next:stderr");
+    pipe_process_output(child.stdout.take(), "next:stdout", log.clone());
+    pipe_process_output(child.stderr.take(), "next:stderr", log.clone());
 
     {
         let state = app.state::<ServerState>();
@@ -163,10 +183,16 @@ fn start_next_server(app: &AppHandle) -> Result<u16, String> {
     }
 
     if wait_until_ready(port, Duration::from_secs(60)) {
+        log_line(log.as_ref(), "[startup] server ready");
         Ok(port)
     } else {
         stop_next_server(app);
-        Err("服务器启动超时，请检查 Node.js、Prisma 或端口占用状态。".to_string())
+        let msg = format!(
+            "服务器启动超时，请检查 Node.js、Prisma 或端口占用状态。启动日志：{}",
+            log_path.display()
+        );
+        log_line(log.as_ref(), "[startup] timeout: server did not become ready within 60s");
+        Err(msg)
     }
 }
 
@@ -181,6 +207,42 @@ fn stop_next_server(app: &AppHandle) {
         let _ = child.wait();
     }
     runtime.port = None;
+}
+
+fn log_line(log: Option<&Arc<Mutex<fs::File>>>, message: &str) {
+    if let Some(log) = log {
+        if let Ok(mut f) = log.lock() {
+            let _ = writeln!(f, "{message}");
+        }
+    }
+}
+
+fn write_startup_header(
+    log: Option<&Arc<Mutex<fs::File>>>,
+    standalone_dir: &PathBuf,
+    node_binary: &PathBuf,
+    using_bundled: bool,
+    port: u16,
+    database_path: &PathBuf,
+    log_path: &PathBuf,
+) {
+    let ts = SystemTime::now()
+        .duration_since(UNIX_EPOCH)
+        .map(|d| d.as_secs())
+        .unwrap_or(0);
+    log_line(log, &format!("=== OSE startup (unix={ts}) ==="));
+    log_line(log, &format!("log:          {}", log_path.display()));
+    log_line(log, &format!("standalone:   {}", standalone_dir.display()));
+    log_line(
+        log,
+        &format!(
+            "node:         {} (bundled={})",
+            node_binary.display(),
+            using_bundled
+        ),
+    );
+    log_line(log, &format!("port:         {port}"));
+    log_line(log, &format!("database:     {}", database_path.display()));
 }
 
 fn resolve_node_binary(standalone_dir: &PathBuf) -> PathBuf {
@@ -271,7 +333,7 @@ fn health_check(port: u16) -> bool {
     BufReader::new(stream).read_line(&mut first_line).is_ok() && first_line.contains("200")
 }
 
-fn pipe_process_output<T>(pipe: Option<T>, label: &'static str)
+fn pipe_process_output<T>(pipe: Option<T>, label: &'static str, log: Option<Arc<Mutex<fs::File>>>)
 where
     T: std::io::Read + Send + 'static,
 {
@@ -279,6 +341,11 @@ where
         thread::spawn(move || {
             for line in BufReader::new(pipe).lines().map_while(Result::ok) {
                 println!("[{label}] {line}");
+                if let Some(ref log) = log {
+                    if let Ok(mut f) = log.lock() {
+                        let _ = writeln!(f, "[{label}] {line}");
+                    }
+                }
             }
         });
     }
