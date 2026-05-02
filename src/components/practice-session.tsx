@@ -36,6 +36,38 @@ type Summary = {
   timeSpent: number;
   weakTopics: Array<{ name: string; wrong: number }>;
 };
+type QuestionHistoryEntry = {
+  attempts: number;
+  correctCount: number;
+  lastIsCorrect: boolean;
+  lastSelectedOptionLabel: string;
+};
+
+function QuestionHistoryChip({
+  entry,
+  showOption,
+}: {
+  entry: QuestionHistoryEntry | undefined;
+  showOption: boolean;
+}) {
+  if (!entry) {
+    return (
+      <span className="rounded-full bg-muted/10 px-2 py-0.5 text-xs font-bold text-muted">
+        未做过
+      </span>
+    );
+  }
+  return (
+    <span
+      className={`rounded-full px-2 py-0.5 text-xs font-bold ${
+        entry.lastIsCorrect ? 'bg-green-50 text-green-700' : 'bg-amber-50 text-amber-700'
+      }`}
+    >
+      做过 {entry.attempts} 次 · 上次{entry.lastIsCorrect ? '答对' : '答错'}
+      {showOption ? ` · 上次选了 ${entry.lastSelectedOptionLabel}` : ''}
+    </span>
+  );
+}
 
 function formatSeconds(seconds: number) {
   const minutes = Math.floor(seconds / 60)
@@ -59,6 +91,8 @@ export function PracticeSession() {
   const [elapsed, setElapsed] = useState(0);
   const [submitting, setSubmitting] = useState(false);
   const [summary, setSummary] = useState<Summary | null>(null);
+  const [mode, setMode] = useState('');
+  const [history, setHistory] = useState<Record<string, QuestionHistoryEntry>>({});
 
   useEffect(() => {
     if (!sessionId) {
@@ -66,6 +100,21 @@ export function PracticeSession() {
       return;
     }
     let cancelled = false;
+
+    async function loadHistory() {
+      try {
+        const res = await fetch(`/api/practice/history?sessionId=${sessionId}`);
+        const data = await res.json().catch(() => ({}));
+        if (cancelled) return;
+        if (res.ok) {
+          setMode(data.mode ?? '');
+          setHistory(data.history ?? {});
+        }
+      } catch {
+        // history is non-critical; silently ignore
+      }
+    }
+
     const raw = sessionStorage.getItem(`ose-practice-${sessionId}`);
     if (raw) {
       try {
@@ -73,6 +122,7 @@ export function PracticeSession() {
         if (Array.isArray(parsed) && parsed.length) {
           setQuestions(parsed);
           setStartedAt(Date.now());
+          loadHistory();
           return;
         }
       } catch {
@@ -92,6 +142,7 @@ export function PracticeSession() {
         setQuestions(data.questions);
         setStartedAt(Date.now());
         if (data.results && typeof data.results === 'object') setResults(data.results);
+        loadHistory();
       } catch {
         if (!cancelled) router.replace('/practice');
       }
@@ -266,9 +317,12 @@ export function PracticeSession() {
       </Card>
 
       <Card className="p-5 sm:p-7 md:p-10">
-        <p className="mb-4 text-sm font-black text-muted">
-          2023 上午 · 第 {question.questionNumber} 题 · 难度 {question.difficulty}
-        </p>
+        <div className="mb-4 flex flex-wrap items-center gap-2">
+          <p className="text-sm font-black text-muted">
+            2023 上午 · 第 {question.questionNumber} 题 · 难度 {question.difficulty}
+          </p>
+          {mode !== 'exam' && mode !== 'mock' && <QuestionHistoryChip entry={history[question.id]} showOption={Boolean(result)} />}
+        </div>
         <MarkdownRenderer
           content={question.content}
           className="text-xl font-black leading-relaxed text-navy md:text-3xl [&_img]:my-3 [&_img]:rounded-2xl"
