@@ -305,8 +305,9 @@ describe('GET /api/practice/summary', () => {
 
     await testApiHandler({
       appHandler,
+      url: `/?sessionId=${practiceSession.id}`,
       async test({ fetch }) {
-        const response = await fetch(`/?sessionId=${practiceSession.id}`);
+        const response = await fetch();
 
         expect(response.status).toBe(200);
         const body = await response.json();
@@ -340,8 +341,9 @@ describe('GET /api/practice/summary', () => {
 
     await testApiHandler({
       appHandler,
+      url: `/?sessionId=${practiceSession.id}`,
       async test({ fetch }) {
-        const response = await fetch(`/?sessionId=${practiceSession.id}`);
+        const response = await fetch();
         expect(response.status).toBe(404);
       },
     });
@@ -352,8 +354,9 @@ describe('GET /api/practice/summary', () => {
 
     await testApiHandler({
       appHandler,
+      url: '/?sessionId=any-session-id',
       async test({ fetch }) {
-        const response = await fetch('/?sessionId=any-session-id');
+        const response = await fetch();
         expect(response.status).toBe(401);
       },
     });
