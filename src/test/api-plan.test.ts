@@ -54,6 +54,8 @@ describe('POST /api/plan/generate', () => {
     });
     const appHandler = await mockAIPlanGenerate(sessionFor(user), aiJson);
 
+    let planId!: string;
+
     await testApiHandler({
       appHandler,
       async test({ fetch }) {
@@ -65,15 +67,20 @@ describe('POST /api/plan/generate', () => {
 
         expect(response.status).toBe(200);
         const body = await response.json();
-        expect(body.plan).toBeDefined();
-        expect(body.plan.userId).toBe(user.id);
-        expect(body.plan.days.length).toBeGreaterThan(0);
+        expect(body.planId).toBeDefined();
+        expect(body.content).toBe('Test study plan overview');
+        planId = body.planId as string;
       },
     });
 
-    const saved = await prisma.studyPlan.findFirst({ where: { userId: user.id } });
+    const saved = await prisma.studyPlan.findUnique({
+      where: { id: planId },
+      include: { days: true },
+    });
     expect(saved).not.toBeNull();
-    expect(saved?.content).toBe('Test study plan overview');
+    expect(saved!.userId).toBe(user.id);
+    expect(saved!.days.length).toBeGreaterThan(0);
+    expect(saved!.content).toBe('Test study plan overview');
   });
 
   it('falls back to markdown parsing when AI returns non-JSON', async () => {
@@ -93,8 +100,13 @@ describe('POST /api/plan/generate', () => {
 
         expect(response.status).toBe(200);
         const body = await response.json();
-        expect(body.plan).toBeDefined();
-        expect(body.plan.days.length).toBeGreaterThan(0);
+        expect(body.planId).toBeDefined();
+        const saved = await prisma.studyPlan.findUnique({
+          where: { id: body.planId as string },
+          include: { days: true },
+        });
+        expect(saved).not.toBeNull();
+        expect(saved!.days.length).toBeGreaterThan(0);
       },
     });
   });
