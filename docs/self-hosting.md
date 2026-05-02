@@ -19,6 +19,13 @@ Minimum production environment:
 DATABASE_URL=file:/data/ose.db
 NEXTAUTH_URL=https://your-domain.example
 NEXTAUTH_SECRET=replace-with-openssl-rand-base64-32
+OSE_ENCRYPTION_KEY=replace-with-openssl-rand-base64-32
+```
+
+`OSE_ENCRYPTION_KEY` is required to allow users to save their AI API keys. Without it, the settings API returns HTTP 503 when a user tries to store a key. Generate it with:
+
+```bash
+openssl rand -base64 32
 ```
 
 Optional AI variables can be added to `.env` or the Compose environment section.
@@ -40,7 +47,7 @@ npx prisma migrate deploy
 
 ## VPS Manual Deployment
 
-Install Node.js 20, clone the repository, then:
+Install Node.js 22 LTS, clone the repository, then:
 
 ```bash
 npm ci
@@ -132,3 +139,32 @@ explicit request/body model > saved user setting > DEFAULT_<PROVIDER>_MODEL env 
 ```
 
 This means a user's saved model preference always wins, and the env override only applies when no model has been saved by the user.
+
+## Encryption Key (`OSE_ENCRYPTION_KEY`)
+
+User-provided AI API keys (e.g. Anthropic, OpenAI, Gemini, custom provider) are encrypted at rest using AES-256-GCM before being written to the database. The `OSE_ENCRYPTION_KEY` environment variable supplies the 32-byte key.
+
+**Generating the key:**
+
+```bash
+openssl rand -base64 32
+```
+
+**Behavior without the key:**
+
+- Saving a new API key via the settings page returns HTTP 503 and the key is not persisted.
+- Any legacy plaintext keys already in the database are treated as unconfigured until you set the key and they are migrated.
+
+**Lazy migration of existing plaintext keys:**
+
+If you upgrade from a deployment that stored keys in plaintext, existing `apiKey` / `imageApiKey` values are automatically encrypted on first use once `OSE_ENCRYPTION_KEY` is set. The plaintext column is cleared immediately after encryption. No manual migration step is required.
+
+**Key rotation:**
+
+1. Add a migration script that re-encrypts all stored keys with the new key.
+2. Replace `OSE_ENCRYPTION_KEY` in your environment with the new value.
+3. If you rotate without re-encrypting, users will need to re-enter their API keys.
+
+**Backup:**
+
+Back up `OSE_ENCRYPTION_KEY` separately from the database. Losing the key makes all stored user API keys permanently unreadable.

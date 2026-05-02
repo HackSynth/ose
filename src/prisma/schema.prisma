@@ -89,11 +89,13 @@ model UserAISettings {
   provider                String?
   model                   String?
   apiKey                  String?
+  apiKeyEncrypted         String?
   baseUrl                 String?
   visionSupport           Boolean?
   imageProvider           String?
   imageModel              String?
   imageApiKey             String?
+  imageApiKeyEncrypted    String?
   imageBaseUrl            String?
   imageSize               String?
   imageQuality            String?
