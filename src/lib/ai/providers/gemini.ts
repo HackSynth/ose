@@ -1,8 +1,7 @@
 import { GoogleGenAI } from "@google/genai";
 import type { AIConfig, AIProvider, CompletionParams } from "@/lib/ai/types";
-import { fetchImageAsBase64, getSanitizedEndpoint } from "@/lib/ai/utils";
+import { fetchImageAsBase64, getSanitizedEndpoint, resolveDefaultModel } from "@/lib/ai/utils";
 
-const defaultModel = "gemini-2.5-flash";
 const defaultBaseUrl = "https://generativelanguage.googleapis.com";
 
 function parseDataUrl(url: string): { mimeType: string; base64: string } | null {
@@ -36,7 +35,7 @@ async function buildContents(params: CompletionParams) {
 
 export function createGeminiProvider(config: AIConfig): AIProvider {
   const apiKey = config.apiKey;
-  const model = config.model || defaultModel;
+  const model = config.model || resolveDefaultModel("gemini");
   const baseUrl = config.baseUrl?.trim();
 
   function getClient() {

@@ -125,3 +125,24 @@ server {
 ```
 
 Set `NEXTAUTH_URL=https://ose.example.com` when using HTTPS.
+
+## AI Model Defaults
+
+Built-in default models are updated periodically as providers release new generations, but self-hosted operators can override defaults without waiting for a release.
+
+Set any of these environment variables to pin a specific model for that provider:
+
+```env
+DEFAULT_CLAUDE_MODEL=claude-sonnet-4-6
+DEFAULT_OPENAI_MODEL=gpt-5-mini
+DEFAULT_GEMINI_MODEL=gemini-3-flash-preview
+DEFAULT_CUSTOM_MODEL=default
+```
+
+Model selection follows this precedence order:
+
+```
+explicit request/body model > saved user setting > DEFAULT_<PROVIDER>_MODEL env > built-in fallback
+```
+
+This means a user's saved model preference always wins, and the env override only applies when no model has been saved by the user.

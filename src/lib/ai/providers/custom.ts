@@ -1,9 +1,7 @@
 import OpenAI from "openai";
 import type { ChatCompletionContentPart, ChatCompletionMessageParam } from "openai/resources/chat/completions";
 import type { AIConfig, AIProvider, CompletionParams } from "@/lib/ai/types";
-import { getSanitizedEndpoint, normalizeErrorMessage } from "@/lib/ai/utils";
-
-const defaultModel = "default";
+import { getSanitizedEndpoint, normalizeErrorMessage, resolveDefaultModel } from "@/lib/ai/utils";
 
 function buildMessages(params: CompletionParams): ChatCompletionMessageParam[] {
   if (params.messages?.length) {
@@ -36,7 +34,7 @@ function shouldRetryWithoutMaxTokens(error: unknown) {
 
 export function createCustomProvider(config: AIConfig): AIProvider {
   const baseUrl = config.baseUrl?.trim();
-  const model = config.model?.trim() || defaultModel;
+  const model = config.model?.trim() || resolveDefaultModel("custom");
   const configuredKey = config.apiKey?.trim();
 
   function getClient() {

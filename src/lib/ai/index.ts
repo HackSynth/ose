@@ -3,28 +3,29 @@ import { createClaudeProvider } from "@/lib/ai/providers/claude";
 import { createOpenAIProvider } from "@/lib/ai/providers/openai";
 import { createGeminiProvider } from "@/lib/ai/providers/gemini";
 import { createCustomProvider } from "@/lib/ai/providers/custom";
+import { resolveDefaultModel } from "@/lib/ai/utils";
 import { prisma } from "@/lib/prisma";
 
 function envConfigFor(provider: AIProviderKey): AIConfig | null {
   if (provider === "claude") {
     const apiKey = process.env.ANTHROPIC_API_KEY;
     if (!apiKey) return null;
-    return { provider, apiKey, model: process.env.ANTHROPIC_MODEL, baseUrl: process.env.ANTHROPIC_BASE_URL };
+    return { provider, apiKey, model: process.env.ANTHROPIC_MODEL || resolveDefaultModel("claude"), baseUrl: process.env.ANTHROPIC_BASE_URL };
   }
   if (provider === "openai") {
     const apiKey = process.env.OPENAI_API_KEY;
     if (!apiKey) return null;
-    return { provider, apiKey, model: process.env.OPENAI_MODEL, baseUrl: process.env.OPENAI_BASE_URL };
+    return { provider, apiKey, model: process.env.OPENAI_MODEL || resolveDefaultModel("openai"), baseUrl: process.env.OPENAI_BASE_URL };
   }
   if (provider === "gemini") {
     const apiKey = process.env.GEMINI_API_KEY;
     if (!apiKey) return null;
-    return { provider, apiKey, model: process.env.GEMINI_MODEL, baseUrl: process.env.GEMINI_BASE_URL };
+    return { provider, apiKey, model: process.env.GEMINI_MODEL || resolveDefaultModel("gemini"), baseUrl: process.env.GEMINI_BASE_URL };
   }
   if (provider === "custom") {
     const baseUrl = process.env.CUSTOM_BASE_URL;
     if (!baseUrl) return null;
-    return { provider, apiKey: process.env.CUSTOM_API_KEY, model: process.env.CUSTOM_MODEL, baseUrl };
+    return { provider, apiKey: process.env.CUSTOM_API_KEY, model: process.env.CUSTOM_MODEL || resolveDefaultModel("custom"), baseUrl };
   }
   return null;
 }
@@ -59,7 +60,7 @@ export async function resolveAIConfig(userId?: string | null): Promise<AIConfig 
         return {
           provider,
           apiKey: settings?.apiKey ?? undefined,
-          model: settings?.model ?? undefined,
+          model: settings?.model || resolveDefaultModel(provider),
           baseUrl: settings?.baseUrl ?? undefined,
           visionSupport: settings?.visionSupport ?? null,
         };

@@ -4,15 +4,8 @@ import OpenAI from "openai";
 
 import { buildAIProvider, resolveAIConfig } from "@/lib/ai";
 import type { AIConfig, AIProviderKey } from "@/lib/ai/types";
-import { normalizeErrorMessage } from "@/lib/ai/utils";
+import { normalizeErrorMessage, resolveDefaultModel } from "@/lib/ai/utils";
 import { prisma } from "@/lib/prisma";
-
-const DEFAULT_MODELS: Record<AIProviderKey, string> = {
-  claude: "claude-sonnet-4-5-20250929",
-  openai: "gpt-4o-mini",
-  gemini: "gemini-2.5-flash",
-  custom: "default",
-};
 
 const DEFAULT_BASE_URLS: Record<AIProviderKey, string | undefined> = {
   claude: "https://api.anthropic.com",
@@ -80,7 +73,7 @@ export async function testAIConfig(config: AIConfig) {
   const startedAt = Date.now();
   const provider = buildAIProvider({
     ...config,
-    model: config.model || DEFAULT_MODELS[config.provider],
+    model: config.model || resolveDefaultModel(config.provider),
   });
   const content = await provider.createCompletion({
     systemPrompt: "You are a connectivity checker. Reply with exactly: OK",
@@ -106,7 +99,7 @@ export async function testVisionCapability(config: AIConfig): Promise<{ supports
   const startedAt = Date.now();
   const provider = buildAIProvider({
     ...config,
-    model: config.model || DEFAULT_MODELS[config.provider],
+    model: config.model || resolveDefaultModel(config.provider),
     visionSupport: null,
   });
   try {
