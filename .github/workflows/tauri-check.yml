@@ -24,6 +24,14 @@ on:
 permissions:
   contents: read
 
+env:
+  DATABASE_URL: file:./src/prisma/dev.db
+  NEXTAUTH_URL: http://localhost:3000
+  NEXTAUTH_SECRET: tauri-ci-secret
+  AUTH_URL: http://localhost:3000
+  AUTH_SECRET: tauri-ci-secret
+  NEXT_TELEMETRY_DISABLED: 1
+
 concurrency:
   group: tauri-check-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
@@ -70,6 +78,7 @@ jobs:
       - run: npm ci
       - run: npm run tauri:icons
       - run: cargo fmt --manifest-path src-tauri/Cargo.toml -- --check
+      - run: npm run tauri:prepare
       - run: cargo check --manifest-path src-tauri/Cargo.toml --all-targets
 
       - name: Clippy advisory
