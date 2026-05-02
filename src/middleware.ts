@@ -11,7 +11,7 @@ const protectedRoutes = [
   '/knowledge',
   '/analysis',
 ];
-const authRoutes = ['/login', '/register'];
+const authRoutes = ['/login', '/register', '/reset-password'];
 
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
