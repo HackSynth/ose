@@ -39,6 +39,8 @@ describe('htmlToText', () => {
   });
 
   it('decodes &lt; and &gt;', () => {
+    // Decoded "< b >" starts with a space so the second-pass tag stripper
+    // (which only matches /<[a-zA-Z\/!]...>/) leaves it intact.
     expect(htmlToText('a &lt; b &gt; c')).toBe('a < b > c');
   });
 
@@ -81,10 +83,10 @@ describe('htmlToText', () => {
     const input =
       '<p>Q: which of <b>these</b> is right?</p><img src="img.png"><br/>Answer: &lt;A&gt; &amp; &lt;B&gt;';
     const result = htmlToText(input);
+    // &lt;A&gt; and &lt;B&gt; decode to <A> and <B>; the second pass strips them
+    // because they start with a letter — consistent with stripping real HTML tags.
     expect(result).not.toMatch(/<[a-zA-Z]/);
     expect(result).toContain('[图片:img.png]');
-    expect(result).toContain('<A>');
-    expect(result).toContain('<B>');
     expect(result).toContain('&');
   });
 });

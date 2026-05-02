@@ -4,6 +4,8 @@
  * Safety properties:
  *  - Two-pass tag stripping: once before and once after entity decoding,
  *    so entities like &lt;script&gt; cannot survive as tags in the output.
+ *  - Second pass uses /<[a-zA-Z\/!][^>]*>/g so only valid tag starters are
+ *    stripped; decoded text like "< b >" (space-leading) is preserved as-is.
  *  - &amp; is decoded last, preventing double-unescaping of sequences like
  *    &amp;lt; (which would otherwise become < via &amp;→& then &lt;→<).
  *  - <img> src is preserved as a [图片:URL] placeholder.
@@ -20,5 +22,5 @@ export function htmlToText(html: string): string {
     .replace(/&quot;/gi, '"')
     .replace(/&#39;/gi, "'")
     .replace(/&amp;/gi, '&')
-    .replace(/<[^>]+>/g, ' ');
+    .replace(/<[a-zA-Z\/!][^>]*>/g, ' ');
 }
