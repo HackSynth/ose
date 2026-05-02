@@ -30,6 +30,7 @@ import {
 import { loadKnowledgeTree, rollupStats, getTopicAnswerStats } from '@/lib/knowledge-stats';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import { TodayPlanDiagnosisButton } from '@/components/today-plan-diagnosis-button';
 import {
   CASE_PASS_RATIO,
   RECENT_ANSWERS_COUNT,
@@ -224,13 +225,14 @@ export default async function DashboardPage() {
     },
   ];
 
-  const todayKey = new Date().toISOString().slice(0, 10);
+  const todayKey = getChinaDateKey(new Date());
+  const todayPlanDay =
+    activePlan?.days.find((day) => getChinaDateKey(day.date) === todayKey) ??
+    activePlan?.days.find((day) => !day.completed) ??
+    activePlan?.days[0] ??
+    null;
   const todayTasks = (
-    (activePlan?.days.find((day) => day.date.toISOString().slice(0, 10) === todayKey)?.tasks as
-      | string[]
-      | undefined) ??
-    (activePlan?.days[0]?.tasks as string[] | undefined) ??
-    []
+    Array.isArray(todayPlanDay?.tasks) ? (todayPlanDay.tasks as string[]) : []
   ).slice(0, 4);
 
   return (
@@ -313,9 +315,19 @@ export default async function DashboardPage() {
               <li key={index}>{task}</li>
             ))}
           </ul>
-          <Button asChild className="mt-5">
-            <Link href={`/plan/${activePlan.id}`}>查看计划</Link>
-          </Button>
+          <div className="mt-5 flex flex-wrap gap-3">
+            <Button asChild>
+              <Link href={`/plan/${activePlan.id}`}>查看计划</Link>
+            </Button>
+            {todayPlanDay ? (
+              <TodayPlanDiagnosisButton
+                planId={activePlan.id}
+                planTitle={activePlan.title}
+                dayNumber={todayPlanDay.dayNumber}
+                date={getChinaDateKey(todayPlanDay.date)}
+              />
+            ) : null}
+          </div>
         </Card>
       ) : null}
 
