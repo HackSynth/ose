@@ -15,7 +15,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
-import { AIExplainButton } from '@/components/ai-explain-button';
+import { AIWrongNoteExplanationButton } from '@/components/ai-wrong-note-explanation-button';
 import { AIWrongNoteImageButton } from '@/components/ai-wrong-note-image-button';
 import { MarkdownRenderer } from '@/components/markdown-renderer';
 import { OSESelect } from '@/components/ose-select';
@@ -23,6 +23,18 @@ import { showToast } from '@/lib/toast-client';
 import { WRONG_NOTE_PREVIEW_LENGTH } from '@/lib/constants';
 
 type Topic = { id: string; name: string; parentId?: string | null };
+type WrongNoteExplanationStatus = 'PENDING' | 'RUNNING' | 'COMPLETED' | 'FAILED';
+type WrongNoteExplanationGeneration = {
+  id: string;
+  status: WrongNoteExplanationStatus;
+  content?: string | null;
+  provider?: string;
+  model?: string;
+  errorMessage: string | null;
+  createdAt?: string;
+  updatedAt?: string;
+  completedAt?: string | null;
+};
 type WrongItem = {
   id: string;
   markedMastered: boolean;
@@ -31,6 +43,7 @@ type WrongItem = {
   wrongOptionId?: string;
   correctOption?: { id: string; label: string; content: string };
   imageGeneration: WrongNoteImageGeneration | null;
+  explanationGeneration: WrongNoteExplanationGeneration | null;
   question: {
     id: string;
     content: string;
@@ -96,6 +109,25 @@ function imageStatusLabel(generation?: WrongNoteImageGeneration | null) {
 function imageStatusClass(generation?: WrongNoteImageGeneration | null) {
   if (generation?.status === 'COMPLETED') return 'bg-green-100 text-green-700';
   if (isActiveImageStatus(generation?.status)) return 'bg-amber-100 text-amber-700';
+  if (generation?.status === 'FAILED') return 'bg-red-100 text-red-600';
+  return 'bg-gray-100 text-muted';
+}
+
+function isActiveExplanationStatus(status: WrongNoteExplanationStatus | undefined) {
+  return status === 'PENDING' || status === 'RUNNING';
+}
+
+function explanationStatusLabel(generation?: WrongNoteExplanationGeneration | null) {
+  if (generation?.status === 'PENDING') return 'AI 讲解排队中';
+  if (generation?.status === 'RUNNING') return 'AI 讲解生成中';
+  if (generation?.status === 'COMPLETED') return '已有 AI 讲解';
+  if (generation?.status === 'FAILED') return 'AI 讲解失败';
+  return '暂无 AI 讲解';
+}
+
+function explanationStatusClass(generation?: WrongNoteExplanationGeneration | null) {
+  if (generation?.status === 'COMPLETED') return 'bg-blue-100 text-blue-700';
+  if (isActiveExplanationStatus(generation?.status)) return 'bg-amber-100 text-amber-700';
   if (generation?.status === 'FAILED') return 'bg-red-100 text-red-600';
   return 'bg-gray-100 text-muted';
 }
@@ -314,6 +346,24 @@ export function WrongNotesClient() {
     []
   );
 
+  const updateExplanationGeneration = useCallback(
+    (id: string, generation: WrongNoteExplanationGeneration | null) => {
+      setData((prev) =>
+        prev
+          ? {
+              ...prev,
+              items: prev.items.map((item) =>
+                item.id === id && generation
+                  ? { ...item, explanationGeneration: generation }
+                  : item
+              ),
+            }
+          : prev
+      );
+    },
+    []
+  );
+
   async function retryAll() {
     try {
       const response = await fetch('/api/wrong-notes/retry', { method: 'POST' });
@@ -441,6 +491,7 @@ export function WrongNotesClient() {
             key={item.id}
             item={item}
             onImageGenerationChange={updateImageGeneration}
+            onExplanationGenerationChange={updateExplanationGeneration}
             onToggle={patchNote}
             onDelete={deleteNote}
           />
@@ -474,6 +525,10 @@ export function WrongNotesClient() {
 type RowProps = {
   item: WrongItem;
   onImageGenerationChange: (id: string, generation: WrongNoteImageGeneration | null) => void;
+  onExplanationGenerationChange: (
+    id: string,
+    generation: WrongNoteExplanationGeneration | null
+  ) => void;
   onToggle: (id: string, mastered: boolean) => void;
   onDelete: (id: string) => void;
 };
@@ -481,6 +536,7 @@ type RowProps = {
 const WrongNoteRow = memo(function WrongNoteRow({
   item,
   onImageGenerationChange,
+  onExplanationGenerationChange,
   onToggle,
   onDelete,
 }: RowProps) {
@@ -506,6 +562,13 @@ const WrongNoteRow = memo(function WrongNoteRow({
       onImageGenerationChange(item.id, generation);
     },
     [item.id, onImageGenerationChange]
+  );
+
+  const handleExplanationGenerationChange = useCallback(
+    (generation: WrongNoteExplanationGeneration | null) => {
+      onExplanationGenerationChange(item.id, generation);
+    },
+    [item.id, onExplanationGenerationChange]
   );
 
   async function submitRetry() {
@@ -559,6 +622,15 @@ const WrongNoteRow = memo(function WrongNoteRow({
               title={item.imageGeneration?.errorMessage ?? undefined}
             >
               {imageStatusLabel(item.imageGeneration)}
+            </span>
+            <span
+              className={cn(
+                'rounded-full px-3 py-1 text-xs font-black',
+                explanationStatusClass(item.explanationGeneration)
+              )}
+              title={item.explanationGeneration?.errorMessage ?? undefined}
+            >
+              {explanationStatusLabel(item.explanationGeneration)}
             </span>
           </div>
           <h2 className="font-black leading-relaxed text-navy">{preview}</h2>
@@ -645,9 +717,12 @@ const WrongNoteRow = memo(function WrongNoteRow({
             <div className="mt-5 rounded-3xl bg-white p-5 shadow-soft">
               <p className="font-black text-navy">解析</p>
               <p className="mt-2 font-semibold leading-7 text-muted">{item.question.explanation}</p>
-              <AIExplainButton
+              <AIWrongNoteExplanationButton
+                wrongNoteId={item.id}
                 questionId={item.question.id}
                 userAnswerOptionId={item.wrongOptionId}
+                initialGeneration={item.explanationGeneration}
+                onGenerationChange={handleExplanationGenerationChange}
               />
               <AIWrongNoteImageButton
                 wrongNoteId={item.id}

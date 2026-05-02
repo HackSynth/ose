@@ -53,6 +53,13 @@ enum AIImageGenerationStatus {
   FAILED
 }
 
+enum AIExplanationStatus {
+  PENDING
+  RUNNING
+  COMPLETED
+  FAILED
+}
+
 model User {
   id                  String                 @id @default(cuid())
   email               String                 @unique
@@ -67,9 +74,10 @@ model User {
   caseAnswers         UserCaseAnswer[]
   examAttempts        ExamAttempt[]
   studyPlans          StudyPlan[]
-  aiGenerations       AIQuestionGeneration[]
-  aiImageGenerations  AIImageGeneration[]
-  aiChatSessions      AIChatSession[]
+  aiGenerations            AIQuestionGeneration[]
+  aiImageGenerations       AIImageGeneration[]
+  aiExplanationGenerations AIExplanationGeneration[]
+  aiChatSessions           AIChatSession[]
   aiSettings          UserAISettings?
   passwordResetTokens PasswordResetToken[]
 
@@ -141,8 +149,9 @@ model Question {
   options            QuestionOption[]
   userAnswers        UserAnswer[]
   wrongNotes         WrongNote[]
-  aiImageGenerations AIImageGeneration[]
-  practiceSessions   PracticeSessionQuestion[]
+  aiImageGenerations       AIImageGeneration[]
+  aiExplanationGenerations AIExplanationGeneration[]
+  practiceSessions         PracticeSessionQuestion[]
   caseScenario       CaseScenario?
   examQuestions      ExamQuestion[]
   examAnswers        ExamAnswer[]
@@ -257,7 +266,8 @@ model WrongNote {
   updatedAt          DateTime            @updatedAt
   user               User                @relation(fields: [userId], references: [id], onDelete: Cascade)
   question           Question            @relation(fields: [questionId], references: [id], onDelete: Cascade)
-  aiImageGenerations AIImageGeneration[]
+  aiImageGenerations       AIImageGeneration[]
+  aiExplanationGenerations AIExplanationGeneration[]
 
   @@unique([userId, questionId])
   @@index([userId, markedMastered])
@@ -297,6 +307,29 @@ model AIImageGeneration {
   @@index([questionId])
   @@index([wrongNoteId, status, createdAt])
   @@index([fingerprint])
+}
+
+model AIExplanationGeneration {
+  id            String              @id @default(cuid())
+  userId        String
+  questionId    String
+  wrongNoteId   String?
+  wrongOptionId String?
+  status        AIExplanationStatus @default(PENDING)
+  provider      String
+  model         String
+  content       String?
+  errorMessage  String?
+  createdAt     DateTime            @default(now())
+  updatedAt     DateTime            @updatedAt
+  completedAt   DateTime?
+  user          User                @relation(fields: [userId], references: [id], onDelete: Cascade)
+  question      Question            @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  wrongNote     WrongNote?          @relation(fields: [wrongNoteId], references: [id], onDelete: SetNull)
+
+  @@index([userId, createdAt])
+  @@index([questionId])
+  @@index([wrongNoteId, status, createdAt])
 }
 
 model CaseScenario {

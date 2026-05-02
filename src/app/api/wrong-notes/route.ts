@@ -85,35 +85,62 @@ export async function GET(request: Request) {
   ]);
 
   const wrongNoteIds = notes.map((note) => note.id);
-  const imageGenerations = wrongNoteIds.length
-    ? await prisma.aIImageGeneration.findMany({
-        where: { userId, wrongNoteId: { in: wrongNoteIds } },
-        orderBy: { updatedAt: 'desc' },
-        select: {
-          id: true,
-          wrongNoteId: true,
-          status: true,
-          provider: true,
-          model: true,
-          promptProvider: true,
-          promptModel: true,
-          imageSize: true,
-          imageQuality: true,
-          imageOutputFormat: true,
-          imageStyle: true,
-          imagePath: true,
-          errorMessage: true,
-          createdAt: true,
-          updatedAt: true,
-          completedAt: true,
-        },
-      })
-    : [];
+  const [imageGenerations, explanationGenerations] = wrongNoteIds.length
+    ? await Promise.all([
+        prisma.aIImageGeneration.findMany({
+          where: { userId, wrongNoteId: { in: wrongNoteIds } },
+          orderBy: { updatedAt: 'desc' },
+          select: {
+            id: true,
+            wrongNoteId: true,
+            status: true,
+            provider: true,
+            model: true,
+            promptProvider: true,
+            promptModel: true,
+            imageSize: true,
+            imageQuality: true,
+            imageOutputFormat: true,
+            imageStyle: true,
+            imagePath: true,
+            errorMessage: true,
+            createdAt: true,
+            updatedAt: true,
+            completedAt: true,
+          },
+        }),
+        prisma.aIExplanationGeneration.findMany({
+          where: { userId, wrongNoteId: { in: wrongNoteIds } },
+          orderBy: { updatedAt: 'desc' },
+          select: {
+            id: true,
+            wrongNoteId: true,
+            status: true,
+            provider: true,
+            model: true,
+            errorMessage: true,
+            createdAt: true,
+            updatedAt: true,
+            completedAt: true,
+          },
+        }),
+      ])
+    : [[], []];
+
   const imageGenerationsByWrongNote = new Map<string, typeof imageGenerations>();
   for (const generation of imageGenerations) {
     if (!generation.wrongNoteId) continue;
     imageGenerationsByWrongNote.set(generation.wrongNoteId, [
       ...(imageGenerationsByWrongNote.get(generation.wrongNoteId) ?? []),
+      generation,
+    ]);
+  }
+
+  const explanationGenerationsByWrongNote = new Map<string, typeof explanationGenerations>();
+  for (const generation of explanationGenerations) {
+    if (!generation.wrongNoteId) continue;
+    explanationGenerationsByWrongNote.set(generation.wrongNoteId, [
+      ...(explanationGenerationsByWrongNote.get(generation.wrongNoteId) ?? []),
       generation,
     ]);
   }
@@ -129,6 +156,13 @@ export async function GET(request: Request) {
       ) ??
       generations.find((generation) => generation.status === 'COMPLETED' && generation.imagePath) ??
       generations.find((generation) => generation.status === 'FAILED') ??
+      null;
+
+    const expGenerations = explanationGenerationsByWrongNote.get(note.id) ?? [];
+    const explanationGeneration =
+      expGenerations.find((g) => g.status === 'PENDING' || g.status === 'RUNNING') ??
+      expGenerations.find((g) => g.status === 'COMPLETED') ??
+      expGenerations.find((g) => g.status === 'FAILED') ??
       null;
     return {
       id: note.id,
@@ -163,6 +197,18 @@ export async function GET(request: Request) {
             createdAt: imageGeneration.createdAt,
             updatedAt: imageGeneration.updatedAt,
             completedAt: imageGeneration.completedAt,
+          }
+        : null,
+      explanationGeneration: explanationGeneration
+        ? {
+            id: explanationGeneration.id,
+            status: explanationGeneration.status,
+            provider: explanationGeneration.provider,
+            model: explanationGeneration.model,
+            errorMessage: explanationGeneration.errorMessage,
+            createdAt: explanationGeneration.createdAt,
+            updatedAt: explanationGeneration.updatedAt,
+            completedAt: explanationGeneration.completedAt,
           }
         : null,
       question: {
