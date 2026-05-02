@@ -19,7 +19,7 @@ Thank you for your interest in OSE. We are building an open, self-hostable, AI-p
 
 Prerequisites:
 
-- Node.js 20 recommended, Node.js 18+ supported by the project metadata.
+- Node.js 20+ supported by the project metadata; Node.js 22 LTS is recommended.
 - npm 10+.
 - Git.
 - Optional: Rust toolchain for Tauri desktop builds.

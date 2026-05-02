@@ -334,7 +334,7 @@ async function main() {
   } else {
     fs.rmSync(runtimeTarget, { recursive: true, force: true });
     console.log(
-      'Using PATH Node.js mode. Install Node.js 20+ on target machines, or set BUNDLE_NODE=1 to ship a bundled runtime.'
+      'Using PATH Node.js mode. Install Node.js 22+ on target machines, or set BUNDLE_NODE=1 to ship a bundled runtime.'
     );
   }
 }
