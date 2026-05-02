@@ -1,4 +1,4 @@
-﻿export function DecorativeBackground() {
+export function DecorativeBackground() {
   return (
     <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
       <div className="ose-orb -left-24 top-20 h-72 w-72 bg-softYellow" />

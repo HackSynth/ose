@@ -1,4 +1,4 @@
-﻿import { Suspense } from "react";
+import { Suspense } from "react";
 import { DecorativeBackground } from "@/components/decorative-background";
 import { LoginForm } from "@/components/login-form";
 

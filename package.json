@@ -52,6 +52,7 @@
     "tauri:icons": "tauri icon src-tauri/icons/app-icon.png",
     "verify:portable": "node scripts/verify-portable.js",
     "screenshots": "node scripts/capture-screenshots.mjs",
+    "check:bom": "node scripts/check-no-bom.js",
     "prepare": "husky && npx prisma generate --schema src/prisma/schema.prisma"
   },
   "prisma": {
@@ -59,6 +60,9 @@
     "seed": "tsx src/prisma/seed.ts"
   },
   "lint-staged": {
+    "*.{ts,tsx,mjs,cjs,js,json,css,md,yml,yaml,d.ts}": [
+      "node scripts/check-no-bom.js"
+    ],
     "*.{ts,tsx}": [
       "eslint --fix",
       "prettier --write"
