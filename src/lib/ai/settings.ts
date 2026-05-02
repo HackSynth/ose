@@ -1,56 +1,70 @@
-import Anthropic from "@anthropic-ai/sdk";
-import { GoogleGenAI } from "@google/genai";
-import OpenAI from "openai";
+import Anthropic from '@anthropic-ai/sdk';
+import { GoogleGenAI } from '@google/genai';
+import OpenAI from 'openai';
 
-import { buildAIProvider, resolveAIConfig } from "@/lib/ai";
-import type { AIConfig, AIProviderKey } from "@/lib/ai/types";
-import { normalizeErrorMessage, resolveDefaultModel } from "@/lib/ai/utils";
-import { prisma } from "@/lib/prisma";
+import { buildAIProvider, resolveAIConfig } from '@/lib/ai';
+import type { AIConfig, AIProviderKey } from '@/lib/ai/types';
+import { normalizeErrorMessage, resolveDefaultModel } from '@/lib/ai/utils';
+import { prisma } from '@/lib/prisma';
+import { resolveSecret } from '@/lib/crypto/secrets';
 
 const DEFAULT_BASE_URLS: Record<AIProviderKey, string | undefined> = {
-  claude: "https://api.anthropic.com",
-  openai: "https://api.openai.com/v1",
+  claude: 'https://api.anthropic.com',
+  openai: 'https://api.openai.com/v1',
   gemini: undefined,
   custom: undefined,
 };
 
 function normalizeProvider(value: unknown): AIProviderKey | null {
-  const provider = String(value ?? "").toLowerCase();
-  if (provider === "claude" || provider === "openai" || provider === "gemini" || provider === "custom") return provider;
+  const provider = String(value ?? '').toLowerCase();
+  if (
+    provider === 'claude' ||
+    provider === 'openai' ||
+    provider === 'gemini' ||
+    provider === 'custom'
+  )
+    return provider;
   return null;
 }
 
 function trimString(value: unknown, maxLength: number) {
-  return typeof value === "string" ? value.trim().slice(0, maxLength) : "";
+  return typeof value === 'string' ? value.trim().slice(0, maxLength) : '';
 }
 
 export async function resolveAIConfigFromRequest(userId: string, body: unknown): Promise<AIConfig> {
-  const data = body && typeof body === "object" ? body as Record<string, unknown> : {};
+  const data = body && typeof body === 'object' ? (body as Record<string, unknown>) : {};
   const requestedProvider = normalizeProvider(data.provider);
 
   if (!requestedProvider) {
     const config = await resolveAIConfig(userId);
-    if (!config) throw new Error("未找到可用的 AI 配置");
+    if (!config) throw new Error('未找到可用的 AI 配置');
     return config;
   }
 
   const existing = await prisma.userAISettings.findUnique({ where: { userId } });
   const apiKeyDraft = trimString(data.apiKey, 500);
-  const apiKey = apiKeyDraft || (existing?.provider === requestedProvider ? existing.apiKey ?? undefined : undefined);
+  const storedApiKey =
+    existing?.provider === requestedProvider
+      ? (resolveSecret(existing.apiKeyEncrypted, existing.apiKey) ?? undefined)
+      : undefined;
+  const apiKey = apiKeyDraft || storedApiKey;
   const model = trimString(data.model, 200) || undefined;
   const baseUrl = trimString(data.baseUrl, 500) || undefined;
 
-  if (requestedProvider === "custom" && !baseUrl) {
-    throw new Error("自定义供应商需要填写 Base URL");
+  if (requestedProvider === 'custom' && !baseUrl) {
+    throw new Error('自定义供应商需要填写 Base URL');
   }
 
-  if (requestedProvider !== "custom" && !apiKey) {
-    throw new Error("请先填写或保存 API Key");
+  if (requestedProvider !== 'custom' && !apiKey) {
+    throw new Error('请先填写或保存 API Key');
   }
 
-  const visionSupport = "visionSupport" in data
-    ? (data.visionSupport === true || data.visionSupport === false ? data.visionSupport : null)
-    : null;
+  const visionSupport =
+    'visionSupport' in data
+      ? data.visionSupport === true || data.visionSupport === false
+        ? data.visionSupport
+        : null
+      : null;
 
   return {
     provider: requestedProvider,
@@ -62,10 +76,11 @@ export async function resolveAIConfigFromRequest(userId: string, body: unknown):
 }
 
 export async function listAIModels(config: AIConfig) {
-  if (config.provider === "openai") return listOpenAICompatibleModels(config, DEFAULT_BASE_URLS.openai);
-  if (config.provider === "custom") return listOpenAICompatibleModels(config, config.baseUrl);
-  if (config.provider === "claude") return listClaudeModels(config);
-  if (config.provider === "gemini") return listGeminiModels(config);
+  if (config.provider === 'openai')
+    return listOpenAICompatibleModels(config, DEFAULT_BASE_URLS.openai);
+  if (config.provider === 'custom') return listOpenAICompatibleModels(config, config.baseUrl);
+  if (config.provider === 'claude') return listClaudeModels(config);
+  if (config.provider === 'gemini') return listGeminiModels(config);
   return [];
 }
 
@@ -76,8 +91,8 @@ export async function testAIConfig(config: AIConfig) {
     model: config.model || resolveDefaultModel(config.provider),
   });
   const content = await provider.createCompletion({
-    systemPrompt: "You are a connectivity checker. Reply with exactly: OK",
-    userMessage: "Reply with OK only.",
+    systemPrompt: 'You are a connectivity checker. Reply with exactly: OK',
+    userMessage: 'Reply with OK only.',
     maxTokens: 12,
     temperature: 0,
   });
@@ -93,9 +108,11 @@ export async function testAIConfig(config: AIConfig) {
 
 // Minimal 1×1 transparent PNG encoded as a data URL for vision smoke tests.
 const VISION_TEST_IMAGE =
-  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==";
+  'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==';
 
-export async function testVisionCapability(config: AIConfig): Promise<{ supportsVision: boolean; latencyMs: number }> {
+export async function testVisionCapability(
+  config: AIConfig
+): Promise<{ supportsVision: boolean; latencyMs: number }> {
   const startedAt = Date.now();
   const provider = buildAIProvider({
     ...config,
@@ -104,8 +121,8 @@ export async function testVisionCapability(config: AIConfig): Promise<{ supports
   });
   try {
     await provider.createCompletion({
-      systemPrompt: "You are a vision checker. If you can see images, reply with exactly: OK",
-      userMessage: "Reply with OK only.",
+      systemPrompt: 'You are a vision checker. If you can see images, reply with exactly: OK',
+      userMessage: 'Reply with OK only.',
       imageUrls: [VISION_TEST_IMAGE],
       maxTokens: 12,
       temperature: 0,
@@ -117,15 +134,18 @@ export async function testVisionCapability(config: AIConfig): Promise<{ supports
 }
 
 async function listOpenAICompatibleModels(config: AIConfig, fallbackBaseUrl: string | undefined) {
-  const baseUrl = (config.baseUrl || fallbackBaseUrl || "").replace(/\/$/, "");
-  if (!baseUrl) throw new Error("请填写 Base URL");
+  const baseUrl = (config.baseUrl || fallbackBaseUrl || '').replace(/\/$/, '');
+  if (!baseUrl) throw new Error('请填写 Base URL');
 
-  const headers: Record<string, string> = { Accept: "application/json" };
+  const headers: Record<string, string> = { Accept: 'application/json' };
   if (config.apiKey) headers.Authorization = `Bearer ${config.apiKey}`;
 
-  const response = await fetch(`${baseUrl}/models`, { headers, cache: "no-store" });
+  const response = await fetch(`${baseUrl}/models`, { headers, cache: 'no-store' });
   if (!response.ok) throw new Error(`模型列表获取失败：HTTP ${response.status}`);
-  const data = await response.json() as { data?: Array<{ id?: string; name?: string }>; models?: Array<{ id?: string; name?: string }>; };
+  const data = (await response.json()) as {
+    data?: Array<{ id?: string; name?: string }>;
+    models?: Array<{ id?: string; name?: string }>;
+  };
   const rawModels = data.data ?? data.models ?? [];
   return uniqueSorted(rawModels.map((item) => item.id || item.name).filter(Boolean) as string[]);
 }
@@ -140,15 +160,20 @@ async function listClaudeModels(config: AIConfig) {
 }
 
 async function listGeminiModels(config: AIConfig) {
-  if (!config.apiKey) throw new Error("请先填写 Gemini API Key");
-  const client = new GoogleGenAI(config.baseUrl ? { apiKey: config.apiKey, httpOptions: { baseUrl: config.baseUrl } } : { apiKey: config.apiKey });
+  if (!config.apiKey) throw new Error('请先填写 Gemini API Key');
+  const client = new GoogleGenAI(
+    config.baseUrl
+      ? { apiKey: config.apiKey, httpOptions: { baseUrl: config.baseUrl } }
+      : { apiKey: config.apiKey }
+  );
   const pager = await client.models.list({ config: { pageSize: 100 } });
   const models: string[] = [];
 
   for await (const model of pager) {
-    const supportsGenerate = !model.supportedActions?.length || model.supportedActions.includes("generateContent");
+    const supportsGenerate =
+      !model.supportedActions?.length || model.supportedActions.includes('generateContent');
     if (!supportsGenerate) continue;
-    const name = model.name?.replace(/^models\//, "") || model.displayName;
+    const name = model.name?.replace(/^models\//, '') || model.displayName;
     if (name) models.push(name);
   }
 
@@ -156,9 +181,11 @@ async function listGeminiModels(config: AIConfig) {
 }
 
 function uniqueSorted(models: string[]) {
-  return [...new Set(models.map((model) => model.trim()).filter(Boolean))].sort((first, second) => first.localeCompare(second));
+  return [...new Set(models.map((model) => model.trim()).filter(Boolean))].sort((first, second) =>
+    first.localeCompare(second)
+  );
 }
 
 export function aiSettingsError(error: unknown) {
-  return normalizeErrorMessage(error) || "AI 操作失败";
+  return normalizeErrorMessage(error) || 'AI 操作失败';
 }
