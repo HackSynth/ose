@@ -3,15 +3,13 @@ import {
   BookOpenCheck,
   ClipboardPenLine,
   Layers3,
-  Shuffle,
-  ListOrdered,
   Sparkles,
 } from 'lucide-react';
 import { prisma } from '@/lib/prisma';
 import { auth } from '@/lib/auth';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { StartPracticeButton } from '@/components/start-practice-button';
+import { PracticeFilterCards } from '@/components/practice-filter-cards';
 import { getTopicAnswerStats, loadKnowledgeTree, rollupStats } from '@/lib/knowledge-stats';
 
 const colorClasses = ['bg-softYellow', 'bg-softBlue', 'bg-softRose', 'bg-softGreen'];
@@ -56,26 +54,7 @@ export default async function PracticePage() {
               </Button>
             </div>
           </Card>
-          <Card className="bg-softBlue p-6 sm:p-7">
-            <Shuffle className="h-10 w-10 text-primary" />
-            <h2 className="mt-5 text-2xl font-black text-navy">随机练习</h2>
-            <p className="mt-2 font-semibold text-muted">从题库随机抽取 20 题，适合快速热身。</p>
-            <div className="mt-6">
-              <StartPracticeButton payload={{ mode: 'random', limit: 20 }}>
-                开始随机练习
-              </StartPracticeButton>
-            </div>
-          </Card>
-          <Card className="bg-softGreen p-6 sm:p-7">
-            <ListOrdered className="h-10 w-10 text-primary" />
-            <h2 className="mt-5 text-2xl font-black text-navy">顺序练习</h2>
-            <p className="mt-2 font-semibold text-muted">按年份和题号顺序推进，适合系统训练。</p>
-            <div className="mt-6">
-              <StartPracticeButton payload={{ mode: 'sequential', limit: 20 }} variant="secondary">
-                开始顺序练习
-              </StartPracticeButton>
-            </div>
-          </Card>
+          <PracticeFilterCards />
           <Card className="bg-[#E9D5FF]/70 p-6 sm:p-7">
             <ClipboardPenLine className="h-10 w-10 text-primary" />
             <h2 className="mt-5 text-2xl font-black text-navy">案例分析练习</h2>

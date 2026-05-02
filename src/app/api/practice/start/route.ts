@@ -8,6 +8,7 @@ import { PRACTICE_AI_MAX_IDS, PRACTICE_DEFAULT_LIMIT, PRACTICE_MAX_LIMIT } from 
 import type { Prisma } from "@prisma/client";
 
 const ALLOWED_MODES = new Set(["random", "topic", "sequential", "ai"]);
+const ALLOWED_FILTERS = new Set(["all", "unanswered", "wrong-only"]);
 
 export async function POST(request: Request) {
   const session = await auth();
@@ -17,6 +18,9 @@ export async function POST(request: Request) {
   const body = await request.json().catch(() => ({}));
   const mode = String(body.mode ?? "random");
   if (!ALLOWED_MODES.has(mode)) return NextResponse.json({ message: "mode 参数不合法" }, { status: 400 });
+
+  const rawFilter = String(body.filter ?? "all");
+  const filter = ALLOWED_FILTERS.has(rawFilter) ? rawFilter : "all";
 
   const limit = clampInt(body.limit, 1, PRACTICE_MAX_LIMIT, PRACTICE_DEFAULT_LIMIT);
   const topicId = body.topicId ? String(body.topicId) : undefined;
@@ -40,6 +44,27 @@ export async function POST(request: Request) {
     orderBy = { questionNumber: "asc" };
   } else if (mode === "sequential") {
     orderBy = { questionNumber: "asc" };
+  }
+
+  if (mode !== "ai" && filter !== "all") {
+    if (filter === "unanswered") {
+      const answered = await prisma.userAnswer.findMany({
+        where: { userId },
+        select: { questionId: true },
+        distinct: ["questionId"],
+      });
+      const answeredIds = answered.map((a) => a.questionId);
+      where = { ...where, id: { notIn: answeredIds } };
+    } else if (filter === "wrong-only") {
+      const latestAnswers = await prisma.userAnswer.findMany({
+        where: { userId },
+        orderBy: { createdAt: "desc" },
+        distinct: ["questionId"],
+        select: { questionId: true, isCorrect: true },
+      });
+      const wrongIds = latestAnswers.filter((a) => !a.isCorrect).map((a) => a.questionId);
+      where = { ...where, id: { in: wrongIds } };
+    }
   }
 
   let selected;

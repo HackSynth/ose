@@ -11,6 +11,7 @@ type StartPayload = {
   topicId?: string;
   limit?: number;
   questionIds?: string[];
+  filter?: 'all' | 'unanswered' | 'wrong-only';
 };
 
 export function StartPracticeButton({
