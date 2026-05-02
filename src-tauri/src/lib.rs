@@ -138,6 +138,8 @@ fn start_next_server(app: &AppHandle) -> Result<u16, String> {
         &log_path,
     );
 
+    let auth_secret = resolve_or_create_auth_secret(&data_dir)?;
+
     let mut cmd = Command::new(&node_binary);
     cmd.arg(&start_script)
         .current_dir(&standalone_dir)
@@ -146,6 +148,8 @@ fn start_next_server(app: &AppHandle) -> Result<u16, String> {
         .env("DATABASE_URL", database_url)
         .env("AUTH_URL", format!("http://127.0.0.1:{port}"))
         .env("NEXTAUTH_URL", format!("http://127.0.0.1:{port}"))
+        .env("AUTH_SECRET", &auth_secret)
+        .env("NEXTAUTH_SECRET", &auth_secret)
         .env("NODE_ENV", "production")
         .stdout(Stdio::piped())
         .stderr(Stdio::piped());
@@ -316,6 +320,65 @@ fn resolve_standalone_dir(app: &AppHandle) -> Result<PathBuf, String> {
         .collect::<Vec<_>>()
         .join("；");
     Err(format!("获取 standalone 目录失败，已检查：{checked}"))
+}
+
+fn resolve_or_create_auth_secret(data_dir: &PathBuf) -> Result<String, String> {
+    let secret_path = data_dir.join("auth.secret");
+
+    if secret_path.exists() {
+        let secret = fs::read_to_string(&secret_path)
+            .map_err(|e| format!("读取 auth.secret 失败：{e}"))?;
+        let secret = secret.trim().to_string();
+        if !secret.is_empty() {
+            return Ok(secret);
+        }
+    }
+
+    let mut raw = [0u8; 32];
+    getrandom::getrandom(&mut raw).map_err(|e| format!("生成随机密钥失败：{e}"))?;
+
+    use base64::{engine::general_purpose::STANDARD, Engine as _};
+    let secret = STANDARD.encode(raw);
+
+    write_secret_atomic(&secret_path, &secret)?;
+    Ok(secret)
+}
+
+// Creates the file with owner-only permissions from the start to avoid a
+// write-then-chmod race, then atomically renames it to the final path.
+fn write_secret_atomic(path: &PathBuf, secret: &str) -> Result<(), String> {
+    let tmp_path = path.with_extension("tmp");
+    let _ = fs::remove_file(&tmp_path);
+
+    {
+        let mut file = create_secret_file(&tmp_path)
+            .map_err(|e| format!("创建临时密钥文件失败：{e}"))?;
+        file.write_all(secret.as_bytes())
+            .map_err(|e| format!("写入临时密钥文件失败：{e}"))?;
+    }
+
+    fs::rename(&tmp_path, path).map_err(|e| {
+        let _ = fs::remove_file(&tmp_path);
+        format!("写入 auth.secret 失败：{e}")
+    })
+}
+
+#[cfg(unix)]
+fn create_secret_file(path: &std::path::Path) -> std::io::Result<fs::File> {
+    use std::os::unix::fs::OpenOptionsExt;
+    fs::OpenOptions::new()
+        .write(true)
+        .create_new(true)
+        .mode(0o600)
+        .open(path)
+}
+
+#[cfg(not(unix))]
+fn create_secret_file(path: &std::path::Path) -> std::io::Result<fs::File> {
+    fs::OpenOptions::new()
+        .write(true)
+        .create_new(true)
+        .open(path)
 }
 
 fn pick_port() -> Result<u16, String> {

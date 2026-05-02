@@ -60,10 +60,43 @@ In production desktop mode, Tauri:
 
 1. Selects an available local port.
 2. Creates an app data directory.
-3. Sets `DATABASE_URL` to the local SQLite database.
-4. Starts `node start.js` — preferring the bundled `runtime/node[.exe]` when present, otherwise `node` from `PATH`.
-5. Polls `/api/ai/status` until the Next.js server is ready.
-6. Navigates the WebView to `http://127.0.0.1:<port>`.
+3. Resolves or generates the per-install auth secret (see [Auth Secret](#auth-secret) below).
+4. Sets `DATABASE_URL` to the local SQLite database.
+5. Starts `node start.js` — preferring the bundled `runtime/node[.exe]` when present, otherwise `node` from `PATH`.
+6. Polls `/api/ai/status` until the Next.js server is ready.
+7. Navigates the WebView to `http://127.0.0.1:<port>`.
+
+## Auth Secret
+
+Each desktop installation generates a unique auth secret the first time the app starts. This secret is used to sign Auth.js / NextAuth JWT session tokens. It is **not** shared across installations and **not** included in the app bundle or repository.
+
+### Storage location
+
+The secret is stored as a plain text file named `auth.secret` inside the app data directory:
+
+| Platform | Path |
+|----------|------|
+| Windows | `%AppData%\com.ose.softwareexam\auth.secret` |
+| macOS | `~/Library/Application Support/com.ose.softwareexam/auth.secret` |
+| Linux | `~/.local/share/com.ose.softwareexam/auth.secret` |
+
+On Unix-like platforms the file is created with `0600` (owner-read/write only) permissions. The file contains a 44-character Base64-encoded string derived from 32 cryptographically random bytes.
+
+### Secret reuse across restarts
+
+If `auth.secret` already exists when the app starts, the existing value is reused. Sessions remain valid across app restarts as long as the file is present.
+
+### Losing or deleting the secret
+
+If `auth.secret` is deleted or the app data directory is wiped:
+
+- A new secret is generated on the next launch.
+- All existing sessions signed with the old secret become invalid — users will be logged out.
+- No data is lost; only session validity is affected.
+
+### Development mode
+
+The `auth.secret` generation path only runs in release builds (`#[cfg(not(debug_assertions))]`). For `tauri dev`, set `AUTH_SECRET` and `NEXTAUTH_SECRET` in a `.env.local` file (already gitignored).
 
 ## Portable Zip (Windows)
 
