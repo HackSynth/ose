@@ -117,6 +117,62 @@ OSE-Portable/
 - **No updater integration.** There is no automatic update path for the portable zip.
 - **Path sensitivity.** Test extraction paths with spaces, non-ASCII characters, and paths longer than 260 characters (long path support must be enabled on older Windows).
 
+## Content Security Policy
+
+The desktop WebView uses a restrictive Content Security Policy (CSP) defined in `src-tauri/tauri.conf.json`. Tauri only applies CSP protection when it is explicitly configured; without it the WebView has no guardrail against web vulnerabilities such as XSS.
+
+### Active policy
+
+```
+default-src 'self';
+script-src 'self';
+style-src 'self' 'unsafe-inline';
+img-src 'self' data: https:;
+connect-src 'self' http://127.0.0.1:*;
+font-src 'self' data:
+```
+
+### Directive rationale and exceptions
+
+#### `script-src 'self'` — no inline or eval scripts
+
+Scripts are restricted to same-origin files only. `'unsafe-inline'` and `'unsafe-eval'` are intentionally absent. The Next.js standalone build emits all JavaScript as static files served from `http://127.0.0.1:<port>`, so no inline script execution is required. This is the strictest setting and must not be relaxed.
+
+#### `style-src 'self' 'unsafe-inline'` — inline styles (interim)
+
+`'unsafe-inline'` is required because Tailwind CSS v3 injects utility classes as inline `<style>` blocks at runtime in the current build. Removing it breaks all component styling. This is a known interim exception: once the project migrates to Tailwind v4 (which uses a CSS file import model) or adopts a nonce-based CSP approach, `'unsafe-inline'` should be removed from `style-src`.
+
+#### `img-src 'self' data: https:` — data URIs and external CDN images
+
+Two sources beyond `'self'` are needed:
+
+- **`data:`** — the `CaseFigures` component (`src/components/case-figures.tsx`) accepts figure values that may be base64-encoded data URIs (`data:image/...`). Blocking `data:` would prevent embedded figures from rendering in case-study questions.
+- **`https:`** — question bank stems and AI explanations include images hosted on external CDNs (e.g. 51CTO image servers). The `MarkdownRenderer` component (`src/components/markdown-renderer.tsx`) renders these images via `react-markdown`. Restricting to `'self'` would break all question images. Allowing only `https:` (not `http:`) limits this to encrypted origins.
+
+#### `connect-src 'self' http://127.0.0.1:*` — localhost sidecar communication
+
+The Next.js sidecar does not run on a fixed port. At startup, `pick_port()` in `src-tauri/src/lib.rs` uses `portpicker::pick_unused_port()` to select any available ephemeral port, then starts the Node.js process bound to `127.0.0.1:<port>`. The WebView navigates to that address and makes all API calls against it. Because the port number is not known at build time, the wildcard `http://127.0.0.1:*` is required. All traffic stays on the loopback interface and never leaves the local machine.
+
+#### `font-src 'self' data:` — local fonts only
+
+No external font CDNs (e.g. Google Fonts) are used. `data:` is retained to accommodate any base64-encoded fonts that may be inlined by the build toolchain. If audits confirm no `data:` fonts are present, this can be tightened to `font-src 'self'`.
+
+### Testing the CSP against a packaged build
+
+The CSP is enforced by the Tauri WebView in production builds, not by the browser dev server. Always smoke-test the packaged app after any CSP change:
+
+```bash
+npm run tauri:prepare
+npm run tauri:build
+# Open the packaged binary and exercise:
+# - Question rendering (images from CDN)
+# - AI explanations (markdown with images)
+# - Case-study figures (data: URIs)
+# - Navigation and API calls
+```
+
+Open the browser DevTools console in the WebView (right-click → Inspect) and confirm there are no CSP violation errors. Any `Refused to load` messages indicate a source that needs to be either added to the policy or removed from the application.
+
 ## Troubleshooting
 
 - **Server startup timeout**: verify Node.js is installed and available in `PATH`, or rebuild with `BUNDLE_NODE=1`. Check the startup log (see below).
