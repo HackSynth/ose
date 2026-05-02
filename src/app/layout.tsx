@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import { Nunito } from 'next/font/google';
 import type { Viewport } from 'next';
 import './globals.css';

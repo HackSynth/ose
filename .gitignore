@@ -1,4 +1,4 @@
-﻿# 本地运行时产物（包括 .env.local、storage/、备份目录）一律不要提交。
+# 本地运行时产物（包括 .env.local、storage/、备份目录）一律不要提交。
 
 node_modules
 .next

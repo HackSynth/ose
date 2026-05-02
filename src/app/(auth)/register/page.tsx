@@ -1,4 +1,4 @@
-﻿import { DecorativeBackground } from "@/components/decorative-background";
+import { DecorativeBackground } from "@/components/decorative-background";
 import { RegisterForm } from "@/components/register-form";
 
 export default function RegisterPage() {

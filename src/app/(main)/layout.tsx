@@ -1,4 +1,4 @@
-﻿import { redirect } from "next/navigation";
+import { redirect } from "next/navigation";
 import { auth } from "@/lib/auth";
 import { MainNav } from "@/components/main-nav";
 import { DecorativeBackground } from "@/components/decorative-background";
