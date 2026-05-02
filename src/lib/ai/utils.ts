@@ -1,5 +1,20 @@
 import { NextResponse } from "next/server";
 
+const BUILT_IN_DEFAULT_MODELS: Record<string, string> = {
+  claude: "claude-sonnet-4-6",
+  openai: "gpt-5-mini",
+  gemini: "gemini-3-flash-preview",
+  custom: "default",
+};
+
+export function resolveDefaultModel(provider: string): string {
+  return (
+    process.env[`DEFAULT_${provider.toUpperCase()}_MODEL`] ||
+    BUILT_IN_DEFAULT_MODELS[provider] ||
+    "default"
+  );
+}
+
 type AIErrorDetails = {
   message: string;
   status: number;

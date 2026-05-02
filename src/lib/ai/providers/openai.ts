@@ -1,10 +1,9 @@
 import OpenAI from "openai";
 import type { ChatCompletionContentPart, ChatCompletionMessageParam } from "openai/resources/chat/completions";
 import type { AIConfig, AIProvider, CompletionParams } from "@/lib/ai/types";
-import { getSanitizedEndpoint } from "@/lib/ai/utils";
+import { getSanitizedEndpoint, resolveDefaultModel } from "@/lib/ai/utils";
 
 const defaultBaseUrl = "https://api.openai.com/v1";
-const defaultModel = "gpt-4o-mini";
 
 function isVisionCapableModel(model: string): boolean {
   const m = model.toLowerCase();
@@ -45,7 +44,7 @@ function buildMessages(params: CompletionParams): ChatCompletionMessageParam[] {
 
 export function createOpenAIProvider(config: AIConfig): AIProvider {
   const apiKey = config.apiKey;
-  const model = config.model || defaultModel;
+  const model = config.model || resolveDefaultModel("openai");
   const baseUrl = config.baseUrl;
 
   function getClient() {

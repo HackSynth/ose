@@ -1,9 +1,8 @@
 import Anthropic from "@anthropic-ai/sdk";
 import type { AIConfig, AIProvider, CompletionParams } from "@/lib/ai/types";
-import { getSanitizedEndpoint } from "@/lib/ai/utils";
+import { getSanitizedEndpoint, resolveDefaultModel } from "@/lib/ai/utils";
 
 const defaultBaseUrl = "https://api.anthropic.com";
-const defaultModel = "claude-sonnet-4-5-20250929";
 
 function parseDataUrl(url: string): { mediaType: "image/jpeg" | "image/png" | "image/gif" | "image/webp"; data: string } | null {
   const match = url.match(/^data:(image\/(?:jpeg|png|gif|webp));base64,(.+)$/);
@@ -37,7 +36,7 @@ function buildMessages(params: CompletionParams): Anthropic.MessageParam[] {
 
 export function createClaudeProvider(config: AIConfig): AIProvider {
   const apiKey = config.apiKey;
-  const model = config.model || defaultModel;
+  const model = config.model || resolveDefaultModel("claude");
   const baseUrl = config.baseUrl;
 
   function getClient() {
