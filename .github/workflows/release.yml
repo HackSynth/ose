@@ -240,7 +240,7 @@ jobs:
         run: ls -la release-assets
 
       - name: Upload release artifacts to workflow
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: ${{ matrix.artifact-name }}
           path: release-assets/*
@@ -345,7 +345,7 @@ jobs:
           bash scripts/sign-android-apks.sh src-tauri/gen/android release-assets "OSE-${GITHUB_REF_NAME}-Android"
 
       - name: Upload Android release artifacts to workflow
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: release-assets-android-apk
           path: release-assets/*.apk
