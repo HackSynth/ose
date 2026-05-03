@@ -75,6 +75,7 @@ jobs:
             curl \
             wget \
             file \
+            libfuse2 \
             patchelf \
             libssl-dev \
             rpm \
