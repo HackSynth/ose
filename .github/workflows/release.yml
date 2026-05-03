@@ -105,7 +105,12 @@ jobs:
 
       - name: Build Tauri app for Linux
         if: runner.os == 'Linux'
-        run: npm run tauri:build -- --bundles appimage,deb,rpm
+        run: npm run tauri:build -- --bundles deb,rpm
+
+      - name: Build Linux AppImage
+        if: runner.os == 'Linux'
+        continue-on-error: true
+        run: npm run tauri:build -- --bundles appimage
 
       - name: Prepare Windows assets
         if: runner.os == 'Windows'
@@ -398,7 +403,7 @@ jobs:
 
             - Windows: `OSE-${{ github.ref_name }}-Windows-x64.msi`, `OSE-${{ github.ref_name }}-Windows-x64-Setup.exe`, or `OSE-${{ github.ref_name }}-Windows-x64-Portable.zip`
             - macOS: `OSE-${{ github.ref_name }}-macOS-universal.dmg` or `OSE-${{ github.ref_name }}-macOS-universal.zip`
-            - Linux: `OSE-${{ github.ref_name }}-Linux-x86_64.AppImage`, `.deb`, or `.rpm`
+            - Linux: `OSE-${{ github.ref_name }}-Linux-x86_64.deb` or `OSE-${{ github.ref_name }}-Linux-x86_64.rpm`
             - Android: `OSE-${{ github.ref_name }}-Android.apk`
 
             Windows portable builds require Node.js 22+ in PATH because the Next.js standalone server is launched locally.
